@@ -10,13 +10,13 @@ on:
       - 'tests/test_drive_plated_sync.py'
       - '.github/workflows/plated-import.yml'
   schedule:
-    - cron: '40 4 * * *'
+    - cron: '40 */4 * * *'
   workflow_dispatch:
     inputs:
       batch_size:
-        description: 'Aantal PDF-bestanden per run (1-30)'
+        description: 'Aantal PDF-bestanden per run (1-80)'
         required: false
-        default: '12'
+        default: '60'
 permissions:
   contents: write
 concurrency:
@@ -41,9 +41,9 @@ jobs:
           pip install 'gdown>=5.2,<6'
       - name: Verwerk Plated PDF's vanaf de gedeelde Drive-map
         if: hashFiles('plated_drive_manifest.json') != ''
-        run: python import_plated_public_drive.py --batch "${{ github.event.inputs.batch_size || '12' }}"
+        run: python import_plated_public_drive.py --batch "${{ github.event.inputs.batch_size || '60' }}"
       - name: Verwerk eventuele PDF uploads naar GitHub
-        run: python import_plated_from_repo.py --folder plated_pdfs --batch "${{ github.event.inputs.batch_size || '12' }}"
+        run: python import_plated_from_repo.py --folder plated_pdfs --batch "${{ github.event.inputs.batch_size || '60' }}"
       - name: Beveilig prijsdata tegen OCR fouten
         run: |
           python - <<'PY'
