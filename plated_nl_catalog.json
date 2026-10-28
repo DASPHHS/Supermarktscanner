@@ -1,10 +1,11 @@
 {
   "metadata": {
-    "source": "Plated review queue; Dutch glossary; NOT human validated",
+    "source": "Plated original + focused rescan; Dutch glossary; NOT human validated",
     "records": 205,
-    "without_ingredients": 141,
+    "without_ingredients": 140,
+    "rescanned_ingredient_candidates": 1,
     "ingredient_translations_exact": 253,
-    "ingredient_translations_unknown": 122,
+    "ingredient_translations_unknown": 128,
     "pricing_eligible": 0
   },
   "recipes": [
@@ -18,6 +19,8 @@
         {
           "original_name": "butter",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomboter",
           "canonical_nl": "roomboter",
           "type": "dairy",
@@ -30,6 +33,8 @@
         {
           "original_name": "Gala apples",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gala-appels",
           "canonical_nl": "gala-appels",
           "type": "fruit",
@@ -42,6 +47,8 @@
         {
           "original_name": "cherries",
           "original_quantity_4p": "2 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kersen",
           "canonical_nl": "kersen",
           "type": "fruit",
@@ -54,6 +61,8 @@
         {
           "original_name": "aluminum tin",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "aluminium bakvorm",
           "canonical_nl": "aluminium bakvorm",
           "type": "nonfood",
@@ -67,6 +76,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -80,6 +90,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -93,6 +104,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "4 cloves",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -105,6 +118,8 @@
         {
           "original_name": "Yukon Gold potatoes",
           "original_quantity_4p": "20 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Yukon Gold-aardappelen",
           "canonical_nl": "Yukon Gold-aardappelen",
           "type": "vegetable",
@@ -117,6 +132,8 @@
         {
           "original_name": "scallions, divided",
           "original_quantity_4p": "8 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bosui",
           "canonical_nl": "bosui",
           "type": "vegetable",
@@ -129,6 +146,8 @@
         {
           "original_name": "broccoli",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "broccoli",
           "canonical_nl": "broccoli",
           "type": "vegetable",
@@ -141,6 +160,8 @@
         {
           "original_name": "ground beef",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rundergehakt",
           "canonical_nl": "rundergehakt",
           "type": "meat",
@@ -153,6 +174,8 @@
         {
           "original_name": "soy sauce",
           "original_quantity_4p": "4 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sojasaus",
           "canonical_nl": "sojasaus",
           "type": "sauce",
@@ -165,6 +188,8 @@
         {
           "original_name": "sesame oil, divided",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sesamolie",
           "canonical_nl": "sesamolie",
           "type": "sauce",
@@ -178,6 +203,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -191,6 +217,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -204,6 +231,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -217,6 +245,8 @@
         {
           "original_name": "dried Mission figs",
           "original_quantity_4p": "2 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gedroogde vijgen",
           "canonical_nl": "gedroogde vijgen",
           "type": "fruit",
@@ -229,6 +259,8 @@
         {
           "original_name": "baking powder",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bakpoeder",
           "canonical_nl": "bakpoeder",
           "type": "pantry",
@@ -241,6 +273,8 @@
         {
           "original_name": "sugar, divided",
           "original_quantity_4p": "3 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "suiker",
           "canonical_nl": "suiker",
           "type": "pantry",
@@ -253,6 +287,8 @@
         {
           "original_name": "container heavy cream, divided",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "slagroom",
           "canonical_nl": "slagroom",
           "type": "dairy",
@@ -265,6 +301,8 @@
         {
           "original_name": "pistachios",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pistachenoten",
           "canonical_nl": "pistachenoten",
           "type": "nuts",
@@ -277,6 +315,8 @@
         {
           "original_name": "parchment paper",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bakpapier",
           "canonical_nl": "bakpapier",
           "type": "nonfood",
@@ -290,6 +330,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -303,6 +344,8 @@
         {
           "original_name": "green beans",
           "original_quantity_4p": "12 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sperziebonen",
           "canonical_nl": "sperziebonen",
           "type": "vegetable",
@@ -315,6 +358,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -327,6 +372,8 @@
         {
           "original_name": "boneless skinless chicken breasts",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kipfilet",
           "canonical_nl": "kipfilet",
           "type": "meat",
@@ -339,6 +386,8 @@
         {
           "original_name": "balsamic vinegar",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "balsamicoazijn",
           "canonical_nl": "balsamicoazijn",
           "type": "sauce",
@@ -351,6 +400,8 @@
         {
           "original_name": "Dijon mustard",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dijonmosterd",
           "canonical_nl": "dijonmosterd",
           "type": "sauce",
@@ -363,6 +414,8 @@
         {
           "original_name": "herbes de Provence",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Provençaalse kruiden",
           "canonical_nl": "Provençaalse kruiden",
           "type": "spice",
@@ -375,6 +428,8 @@
         {
           "original_name": "honey, divided",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "honing",
           "canonical_nl": "honing",
           "type": "sauce",
@@ -387,6 +442,8 @@
         {
           "original_name": "crumbled bleu cheese",
           "original_quantity_4p": "5/2 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "verkruimelde blauwe kaas",
           "canonical_nl": "verkruimelde blauwe kaas",
           "type": "dairy",
@@ -400,6 +457,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -413,6 +471,8 @@
         {
           "original_name": "Marcona almonds",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Marcona almonds",
           "canonical_nl": null,
           "type": "unknown",
@@ -425,6 +485,8 @@
         {
           "original_name": "head butter lettuce",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "head butter lettuce",
           "canonical_nl": null,
           "type": "unknown",
@@ -437,6 +499,8 @@
         {
           "original_name": "mache",
           "original_quantity_4p": "2 ounce",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "mache",
           "canonical_nl": null,
           "type": "unknown",
@@ -449,6 +513,8 @@
         {
           "original_name": "green beans",
           "original_quantity_4p": "10 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sperziebonen",
           "canonical_nl": "sperziebonen",
           "type": "vegetable",
@@ -461,6 +527,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -473,6 +541,8 @@
         {
           "original_name": "boneless skinless chicken breasts",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kipfilet",
           "canonical_nl": "kipfilet",
           "type": "meat",
@@ -485,6 +555,8 @@
         {
           "original_name": "balsamic vinegar",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "balsamicoazijn",
           "canonical_nl": "balsamicoazijn",
           "type": "sauce",
@@ -497,6 +569,8 @@
         {
           "original_name": "Dijon mustard",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dijonmosterd",
           "canonical_nl": "dijonmosterd",
           "type": "sauce",
@@ -509,6 +583,8 @@
         {
           "original_name": "herbes de Provence",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Provençaalse kruiden",
           "canonical_nl": "Provençaalse kruiden",
           "type": "spice",
@@ -521,6 +597,8 @@
         {
           "original_name": "honey, divided",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "honing",
           "canonical_nl": "honing",
           "type": "sauce",
@@ -534,6 +612,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -547,6 +626,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -560,6 +640,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -573,6 +654,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -586,6 +668,8 @@
         {
           "original_name": "broccoli",
           "original_quantity_4p": "18 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "broccoli",
           "canonical_nl": "broccoli",
           "type": "vegetable",
@@ -598,6 +682,8 @@
         {
           "original_name": "sweet potatoes",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "zoete aardappelen",
           "canonical_nl": "zoete aardappelen",
           "type": "vegetable",
@@ -610,6 +696,8 @@
         {
           "original_name": "yellow onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gele ui",
           "canonical_nl": "gele ui",
           "type": "vegetable",
@@ -622,6 +710,8 @@
         {
           "original_name": "chipotle pepper in adobo",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "chipotlepeper in adobosaus",
           "canonical_nl": "chipotlepeper in adobosaus",
           "type": "sauce",
@@ -634,6 +724,8 @@
         {
           "original_name": "tomato paste",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "tomatenpuree",
           "canonical_nl": "tomatenpuree",
           "type": "sauce",
@@ -646,6 +738,8 @@
         {
           "original_name": "Worcestershire sauce",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "worcestersaus",
           "canonical_nl": "worcestersaus",
           "type": "sauce",
@@ -659,6 +753,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -672,6 +767,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -685,6 +781,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -698,6 +795,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -711,6 +809,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -724,6 +823,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -737,6 +837,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -750,6 +851,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -763,6 +865,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -776,6 +879,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -789,6 +893,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -802,6 +907,8 @@
         {
           "original_name": "yellow beets",
           "original_quantity_4p": "12 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gele bieten",
           "canonical_nl": "gele bieten",
           "type": "vegetable",
@@ -814,6 +921,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "2 clove",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -826,6 +935,8 @@
         {
           "original_name": "lime",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "limoen",
           "canonical_nl": "limoen",
           "type": "fruit",
@@ -838,6 +949,8 @@
         {
           "original_name": "ground beef",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rundergehakt",
           "canonical_nl": "rundergehakt",
           "type": "meat",
@@ -850,6 +963,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -862,6 +977,8 @@
         {
           "original_name": "cancrushed tomatoes",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "cancrushed tomatoes",
           "canonical_nl": null,
           "type": "unknown",
@@ -874,6 +991,8 @@
         {
           "original_name": "masa herina",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "masa herina",
           "canonical_nl": null,
           "type": "unknown",
@@ -886,6 +1005,8 @@
         {
           "original_name": "aluminum tins",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "aluminium bakvormen",
           "canonical_nl": "aluminium bakvormen",
           "type": "nonfood",
@@ -899,6 +1020,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -912,6 +1034,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -925,6 +1048,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -938,6 +1062,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -951,6 +1076,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -964,6 +1090,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -977,6 +1104,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -990,6 +1118,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -999,10 +1128,102 @@
       "title_original": "Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR",
       "title_nl": "Beef_Balsamic Marinated Steak Tacos met Chimichurri Sauce_OCR",
       "title_translation_status": "partial_machine_glossary",
-      "ingredients_nl": [],
+      "ingredients_nl": [
+        {
+          "original_name": "",
+          "original_quantity_4p": null,
+          "source_quantity": "",
+          "quantity_basis": "source_servings_not_verified",
+          "provenance": "second_pass_ocr_left_page_2_300dpi",
+          "name_nl": "",
+          "canonical_nl": null,
+          "type": "unknown",
+          "translation_status": "original_english_unmatched",
+          "quantity_display_nl": "",
+          "quantity_metric": null,
+          "unit_metric": null,
+          "conversion_status": "unparsed"
+        },
+        {
+          "original_name": "",
+          "original_quantity_4p": null,
+          "source_quantity": "",
+          "quantity_basis": "source_servings_not_verified",
+          "provenance": "second_pass_ocr_left_page_2_300dpi",
+          "name_nl": "",
+          "canonical_nl": null,
+          "type": "unknown",
+          "translation_status": "original_english_unmatched",
+          "quantity_display_nl": "",
+          "quantity_metric": null,
+          "unit_metric": null,
+          "conversion_status": "unparsed"
+        },
+        {
+          "original_name": "",
+          "original_quantity_4p": null,
+          "source_quantity": "",
+          "quantity_basis": "source_servings_not_verified",
+          "provenance": "second_pass_ocr_left_page_2_300dpi",
+          "name_nl": "",
+          "canonical_nl": null,
+          "type": "unknown",
+          "translation_status": "original_english_unmatched",
+          "quantity_display_nl": "",
+          "quantity_metric": null,
+          "unit_metric": null,
+          "conversion_status": "unparsed"
+        },
+        {
+          "original_name": "",
+          "original_quantity_4p": null,
+          "source_quantity": "",
+          "quantity_basis": "source_servings_not_verified",
+          "provenance": "second_pass_ocr_left_page_2_300dpi",
+          "name_nl": "",
+          "canonical_nl": null,
+          "type": "unknown",
+          "translation_status": "original_english_unmatched",
+          "quantity_display_nl": "",
+          "quantity_metric": null,
+          "unit_metric": null,
+          "conversion_status": "unparsed"
+        },
+        {
+          "original_name": "",
+          "original_quantity_4p": null,
+          "source_quantity": "",
+          "quantity_basis": "source_servings_not_verified",
+          "provenance": "second_pass_ocr_left_page_2_300dpi",
+          "name_nl": "",
+          "canonical_nl": null,
+          "type": "unknown",
+          "translation_status": "original_english_unmatched",
+          "quantity_display_nl": "",
+          "quantity_metric": null,
+          "unit_metric": null,
+          "conversion_status": "unparsed"
+        },
+        {
+          "original_name": "",
+          "original_quantity_4p": null,
+          "source_quantity": "",
+          "quantity_basis": "source_servings_not_verified",
+          "provenance": "second_pass_ocr_left_page_2_300dpi",
+          "name_nl": "",
+          "canonical_nl": null,
+          "type": "unknown",
+          "translation_status": "original_english_unmatched",
+          "quantity_display_nl": "",
+          "quantity_metric": null,
+          "unit_metric": null,
+          "conversion_status": "unparsed"
+        }
+      ],
       "servings_source": 2,
       "servings_4p_unverified": 4,
-      "ingredient_ocr_missing": true,
+      "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": true,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1016,6 +1237,8 @@
         {
           "original_name": "cauliflower",
           "original_quantity_4p": "2 pound",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloemkool",
           "canonical_nl": "bloemkool",
           "type": "vegetable",
@@ -1028,6 +1251,8 @@
         {
           "original_name": "shallot",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sjalot",
           "canonical_nl": "sjalot",
           "type": "vegetable",
@@ -1040,6 +1265,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "2 clove",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -1052,6 +1279,8 @@
         {
           "original_name": "sesame oil",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sesamolie",
           "canonical_nl": "sesamolie",
           "type": "sauce",
@@ -1064,6 +1293,8 @@
         {
           "original_name": "gluten-free soy sauce",
           "original_quantity_4p": "4 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gluten-free soy sauce",
           "canonical_nl": null,
           "type": "unknown",
@@ -1076,6 +1307,8 @@
         {
           "original_name": "honey",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "honing",
           "canonical_nl": "honing",
           "type": "sauce",
@@ -1089,6 +1322,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1102,6 +1336,8 @@
         {
           "original_name": "yellow onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gele ui",
           "canonical_nl": "gele ui",
           "type": "vegetable",
@@ -1114,6 +1350,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "4 cloves",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -1126,6 +1364,8 @@
         {
           "original_name": "carrot",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "carrot",
           "canonical_nl": null,
           "type": "unknown",
@@ -1138,6 +1378,8 @@
         {
           "original_name": "spaghetti squash",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "spaghettipompoen",
           "canonical_nl": "spaghettipompoen",
           "type": "vegetable",
@@ -1150,6 +1392,8 @@
         {
           "original_name": "ground beef",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rundergehakt",
           "canonical_nl": "rundergehakt",
           "type": "meat",
@@ -1162,6 +1406,8 @@
         {
           "original_name": "heavy cream",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "slagroom",
           "canonical_nl": "slagroom",
           "type": "dairy",
@@ -1174,6 +1420,8 @@
         {
           "original_name": "grated pecorino",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "grated pecorino",
           "canonical_nl": null,
           "type": "unknown",
@@ -1187,6 +1435,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1200,6 +1449,8 @@
         {
           "original_name": "baby spinach",
           "original_quantity_4p": "2 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "babyspinazie",
           "canonical_nl": "babyspinazie",
           "type": "vegetable",
@@ -1212,6 +1463,8 @@
         {
           "original_name": "carrots",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "wortelen",
           "canonical_nl": "wortelen",
           "type": "vegetable",
@@ -1224,6 +1477,8 @@
         {
           "original_name": "cauliflower",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloemkool",
           "canonical_nl": "bloemkool",
           "type": "vegetable",
@@ -1236,6 +1491,8 @@
         {
           "original_name": "black beans",
           "original_quantity_4p": "2 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "zwarte bonen",
           "canonical_nl": "zwarte bonen",
           "type": "legumes",
@@ -1248,6 +1505,8 @@
         {
           "original_name": "ground beef",
           "original_quantity_4p": "20 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rundergehakt",
           "canonical_nl": "rundergehakt",
           "type": "meat",
@@ -1260,6 +1519,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -1272,6 +1533,8 @@
         {
           "original_name": "salsa, divided",
           "original_quantity_4p": "2 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "salsa, divided",
           "canonical_nl": null,
           "type": "unknown",
@@ -1284,6 +1547,8 @@
         {
           "original_name": "cheese mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "cheese mix",
           "canonical_nl": null,
           "type": "unknown",
@@ -1297,6 +1562,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1310,6 +1576,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -1322,6 +1590,8 @@
         {
           "original_name": "red bell pepper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode paprika",
           "canonical_nl": "rode paprika",
           "type": "vegetable",
@@ -1334,6 +1604,8 @@
         {
           "original_name": "red onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode ui",
           "canonical_nl": "rode ui",
           "type": "vegetable",
@@ -1346,6 +1618,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -1358,6 +1632,8 @@
         {
           "original_name": "Worcestershire sauce",
           "original_quantity_4p": "4 teaspoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "worcestersaus",
           "canonical_nl": "worcestersaus",
           "type": "sauce",
@@ -1370,6 +1646,8 @@
         {
           "original_name": "apple cider vinegar",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "appelazijn",
           "canonical_nl": "appelazijn",
           "type": "sauce",
@@ -1382,6 +1660,8 @@
         {
           "original_name": "French bread rolls",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "French bread rolls",
           "canonical_nl": null,
           "type": "unknown",
@@ -1395,6 +1675,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1408,6 +1689,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1421,6 +1703,8 @@
         {
           "original_name": "flat iron steaks",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "flat iron steaks",
           "canonical_nl": null,
           "type": "unknown",
@@ -1433,6 +1717,8 @@
         {
           "original_name": "tomatillos",
           "original_quantity_4p": "10 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "tomatillo's",
           "canonical_nl": "tomatillo's",
           "type": "vegetable",
@@ -1445,6 +1731,8 @@
         {
           "original_name": "plum tomatoes",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pruimtomaten",
           "canonical_nl": "pruimtomaten",
           "type": "vegetable",
@@ -1457,6 +1745,8 @@
         {
           "original_name": "romaine heart",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "romaine heart",
           "canonical_nl": null,
           "type": "unknown",
@@ -1469,6 +1759,8 @@
         {
           "original_name": "poblano pepper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "poblanopeper",
           "canonical_nl": "poblanopeper",
           "type": "vegetable",
@@ -1481,6 +1773,8 @@
         {
           "original_name": "red wine vinegar",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode wijnazijn",
           "canonical_nl": "rode wijnazijn",
           "type": "sauce",
@@ -1493,6 +1787,8 @@
         {
           "original_name": "ground cumin",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gemalen komijn",
           "canonical_nl": "gemalen komijn",
           "type": "spice",
@@ -1506,6 +1802,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1519,6 +1816,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1532,6 +1830,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -1544,6 +1844,8 @@
         {
           "original_name": "whole milk",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "volle melk",
           "canonical_nl": "volle melk",
           "type": "dairy",
@@ -1556,6 +1858,8 @@
         {
           "original_name": "breadcrumbs",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "paneermeel",
           "canonical_nl": "paneermeel",
           "type": "pantry",
@@ -1568,6 +1872,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -1580,6 +1886,8 @@
         {
           "original_name": "chicken stock",
           "original_quantity_4p": "64 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kippenbouillon",
           "canonical_nl": "kippenbouillon",
           "type": "sauce",
@@ -1593,6 +1901,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1606,6 +1915,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1619,6 +1929,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1632,6 +1943,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1645,6 +1957,8 @@
         {
           "original_name": "red onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode ui",
           "canonical_nl": "rode ui",
           "type": "vegetable",
@@ -1657,6 +1971,8 @@
         {
           "original_name": "cremini mushrooms",
           "original_quantity_4p": "8 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kastanjechampignons",
           "canonical_nl": "kastanjechampignons",
           "type": "vegetable",
@@ -1669,6 +1985,8 @@
         {
           "original_name": "red bell pepper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode paprika",
           "canonical_nl": "rode paprika",
           "type": "vegetable",
@@ -1681,6 +1999,8 @@
         {
           "original_name": "poblano pepper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "poblanopeper",
           "canonical_nl": "poblanopeper",
           "type": "vegetable",
@@ -1693,6 +2013,8 @@
         {
           "original_name": "French bread rolls",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "French bread rolls",
           "canonical_nl": null,
           "type": "unknown",
@@ -1705,6 +2027,8 @@
         {
           "original_name": "Worcestershire sauce",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "worcestersaus",
           "canonical_nl": "worcestersaus",
           "type": "sauce",
@@ -1717,6 +2041,8 @@
         {
           "original_name": "slices provolone cheese",
           "original_quantity_4p": "6 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "slices provolone cheese",
           "canonical_nl": null,
           "type": "unknown",
@@ -1730,6 +2056,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1743,6 +2070,8 @@
         {
           "original_name": "red onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode ui",
           "canonical_nl": "rode ui",
           "type": "vegetable",
@@ -1755,6 +2084,8 @@
         {
           "original_name": "cremini mushrooms",
           "original_quantity_4p": "8 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kastanjechampignons",
           "canonical_nl": "kastanjechampignons",
           "type": "vegetable",
@@ -1767,6 +2098,8 @@
         {
           "original_name": "red bell pepper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode paprika",
           "canonical_nl": "rode paprika",
           "type": "vegetable",
@@ -1779,6 +2112,8 @@
         {
           "original_name": "poblano pepper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "poblanopeper",
           "canonical_nl": "poblanopeper",
           "type": "vegetable",
@@ -1791,6 +2126,8 @@
         {
           "original_name": "inside round steak",
           "original_quantity_4p": "20 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "inside round steak",
           "canonical_nl": null,
           "type": "unknown",
@@ -1804,6 +2141,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1817,6 +2155,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -1829,6 +2169,8 @@
         {
           "original_name": "plum tomatoes",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pruimtomaten",
           "canonical_nl": "pruimtomaten",
           "type": "vegetable",
@@ -1841,6 +2183,8 @@
         {
           "original_name": "baby arugula",
           "original_quantity_4p": "8 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rucola",
           "canonical_nl": "rucola",
           "type": "vegetable",
@@ -1853,6 +2197,8 @@
         {
           "original_name": "ciabatta",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ciabatta",
           "canonical_nl": null,
           "type": "unknown",
@@ -1865,6 +2211,8 @@
         {
           "original_name": "ground beef",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rundergehakt",
           "canonical_nl": "rundergehakt",
           "type": "meat",
@@ -1878,6 +2226,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1891,6 +2240,8 @@
         {
           "original_name": "green garlic",
           "original_quantity_4p": "8 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "green garlic",
           "canonical_nl": null,
           "type": "unknown",
@@ -1903,6 +2254,8 @@
         {
           "original_name": "flowering chives",
           "original_quantity_4p": "2 ounce",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "flowering chives",
           "canonical_nl": null,
           "type": "unknown",
@@ -1915,6 +2268,8 @@
         {
           "original_name": "inside round steak",
           "original_quantity_4p": "20 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "inside round steak",
           "canonical_nl": null,
           "type": "unknown",
@@ -1927,6 +2282,8 @@
         {
           "original_name": "sugar snap peas",
           "original_quantity_4p": "8 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sugarsnaps",
           "canonical_nl": "sugarsnaps",
           "type": "vegetable",
@@ -1939,6 +2296,8 @@
         {
           "original_name": "oyster sauce",
           "original_quantity_4p": "6 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "oestersaus",
           "canonical_nl": "oestersaus",
           "type": "sauce",
@@ -1951,6 +2310,8 @@
         {
           "original_name": "soy sauce",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sojasaus",
           "canonical_nl": "sojasaus",
           "type": "sauce",
@@ -1964,6 +2325,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1977,6 +2339,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -1990,6 +2353,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2003,6 +2367,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2016,6 +2381,8 @@
         {
           "original_name": "red bell pepper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode paprika",
           "canonical_nl": "rode paprika",
           "type": "vegetable",
@@ -2028,6 +2395,8 @@
         {
           "original_name": "ground beef",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rundergehakt",
           "canonical_nl": "rundergehakt",
           "type": "meat",
@@ -2040,6 +2409,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -2053,6 +2424,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2066,6 +2438,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2079,6 +2452,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2092,6 +2466,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2105,6 +2480,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2118,6 +2494,8 @@
         {
           "original_name": "dried cherries",
           "original_quantity_4p": "3 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gedroogde kersen",
           "canonical_nl": "gedroogde kersen",
           "type": "fruit",
@@ -2130,6 +2508,8 @@
         {
           "original_name": "dark chocolate",
           "original_quantity_4p": "6 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pure chocolade",
           "canonical_nl": "pure chocolade",
           "type": "pantry",
@@ -2142,6 +2522,8 @@
         {
           "original_name": "half sticks unsalted butter",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "half sticks unsalted butter",
           "canonical_nl": null,
           "type": "unknown",
@@ -2155,6 +2537,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2168,6 +2551,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2181,6 +2565,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2194,6 +2579,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2207,6 +2593,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2220,6 +2607,8 @@
         {
           "original_name": "yellow onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gele ui",
           "canonical_nl": "gele ui",
           "type": "vegetable",
@@ -2232,6 +2621,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "2 clove",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -2244,6 +2635,8 @@
         {
           "original_name": "baby bok choy, divided",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "baby bok choy, divided",
           "canonical_nl": null,
           "type": "unknown",
@@ -2256,6 +2649,8 @@
         {
           "original_name": "butternut squash",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "flespompoen",
           "canonical_nl": "flespompoen",
           "type": "vegetable",
@@ -2269,6 +2664,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2282,6 +2678,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2295,6 +2692,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2308,6 +2706,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2321,6 +2720,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2334,6 +2734,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2347,6 +2748,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2360,6 +2762,8 @@
         {
           "original_name": "red-skinned potatoes",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "red-skinned potatoes",
           "canonical_nl": null,
           "type": "unknown",
@@ -2372,6 +2776,8 @@
         {
           "original_name": "sweet potato",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "zoete aardappel",
           "canonical_nl": "zoete aardappel",
           "type": "vegetable",
@@ -2384,6 +2790,8 @@
         {
           "original_name": "light brown sugar",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "lichte basterdsuiker",
           "canonical_nl": "lichte basterdsuiker",
           "type": "pantry",
@@ -2396,6 +2804,8 @@
         {
           "original_name": "bacon",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ontbijtspek",
           "canonical_nl": "ontbijtspek",
           "type": "meat",
@@ -2408,6 +2818,8 @@
         {
           "original_name": "herb mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "herb mix",
           "canonical_nl": null,
           "type": "unknown",
@@ -2420,6 +2832,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "4 cloves",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -2432,6 +2846,8 @@
         {
           "original_name": "unsalted butter",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ongezouten roomboter",
           "canonical_nl": "ongezouten roomboter",
           "type": "dairy",
@@ -2445,6 +2861,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2458,6 +2875,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2471,6 +2889,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "4 cloves",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -2483,6 +2903,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -2495,6 +2917,8 @@
         {
           "original_name": "head butter lettuce",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "head butter lettuce",
           "canonical_nl": null,
           "type": "unknown",
@@ -2507,6 +2931,8 @@
         {
           "original_name": "boneless skinless",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "boneless skinless",
           "canonical_nl": null,
           "type": "unknown",
@@ -2519,6 +2945,8 @@
         {
           "original_name": "crumbled blue cheese",
           "original_quantity_4p": "2 ounce",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "verkruimelde blauwe kaas",
           "canonical_nl": "verkruimelde blauwe kaas",
           "type": "dairy",
@@ -2532,6 +2960,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2545,6 +2974,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2558,6 +2988,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2571,6 +3002,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2584,6 +3016,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2597,6 +3030,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2610,6 +3044,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2623,6 +3058,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2636,6 +3072,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2649,6 +3086,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2662,6 +3100,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2675,6 +3114,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2688,6 +3128,8 @@
         {
           "original_name": "grape tomatoes",
           "original_quantity_4p": "1 pint",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "grape tomatoes",
           "canonical_nl": null,
           "type": "unknown",
@@ -2700,6 +3142,8 @@
         {
           "original_name": "avocados",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "avocados",
           "canonical_nl": null,
           "type": "unknown",
@@ -2712,6 +3156,8 @@
         {
           "original_name": "cilantro",
           "original_quantity_4p": "1/4 ounce",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "koriander",
           "canonical_nl": "koriander",
           "type": "herb",
@@ -2724,6 +3170,8 @@
         {
           "original_name": "limes",
           "original_quantity_4p": "3 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "limes",
           "canonical_nl": null,
           "type": "unknown",
@@ -2736,6 +3184,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "4 cloves",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -2748,6 +3198,8 @@
         {
           "original_name": "red onions",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "red onions",
           "canonical_nl": null,
           "type": "unknown",
@@ -2760,6 +3212,8 @@
         {
           "original_name": "steaks",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "steaks",
           "canonical_nl": null,
           "type": "unknown",
@@ -2772,6 +3226,8 @@
         {
           "original_name": "ancho chile powder",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ancho chile powder",
           "canonical_nl": null,
           "type": "unknown",
@@ -2784,6 +3240,8 @@
         {
           "original_name": "ground cumin",
           "original_quantity_4p": "2 teaspoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gemalen komijn",
           "canonical_nl": "gemalen komijn",
           "type": "spice",
@@ -2796,6 +3254,8 @@
         {
           "original_name": "garlic powder",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflookpoeder",
           "canonical_nl": "knoflookpoeder",
           "type": "spice",
@@ -2808,6 +3268,8 @@
         {
           "original_name": "dried Mexican oregano",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dried Mexican oregano",
           "canonical_nl": null,
           "type": "unknown",
@@ -2820,6 +3282,8 @@
         {
           "original_name": "onion powder",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "uienpoeder",
           "canonical_nl": "uienpoeder",
           "type": "spice",
@@ -2832,6 +3296,8 @@
         {
           "original_name": "sweet paprika",
           "original_quantity_4p": "2 teaspoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "zoete paprikapoeder",
           "canonical_nl": "zoete paprikapoeder",
           "type": "spice",
@@ -2844,6 +3310,8 @@
         {
           "original_name": "crushed red pepper",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "crushed red pepper",
           "canonical_nl": null,
           "type": "unknown",
@@ -2856,6 +3324,8 @@
         {
           "original_name": "masa harina",
           "original_quantity_4p": "2 cups",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "masa harina",
           "canonical_nl": null,
           "type": "unknown",
@@ -2868,6 +3338,8 @@
         {
           "original_name": "corn",
           "original_quantity_4p": "1 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "mais",
           "canonical_nl": "mais",
           "type": "vegetable",
@@ -2880,6 +3352,8 @@
         {
           "original_name": "queso fresco",
           "original_quantity_4p": "1/3 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "queso fresco",
           "canonical_nl": null,
           "type": "unknown",
@@ -2892,6 +3366,8 @@
         {
           "original_name": "olive oil, .25 teaspoon salt, and pepper to bow! with",
           "original_quantity_4p": "1 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "olive oil, .25 teaspoon salt, and pepper to bow! with",
           "canonical_nl": null,
           "type": "unknown",
@@ -2905,6 +3381,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2918,6 +3395,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2931,6 +3409,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2944,6 +3423,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2957,6 +3437,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2970,6 +3451,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -2983,6 +3465,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -2995,6 +3479,8 @@
         {
           "original_name": "Gala apple",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Gala apple",
           "canonical_nl": null,
           "type": "unknown",
@@ -3007,6 +3493,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -3019,6 +3507,8 @@
         {
           "original_name": "mayonnaise",
           "original_quantity_4p": "4 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "mayonaise",
           "canonical_nl": "mayonaise",
           "type": "sauce",
@@ -3031,6 +3521,8 @@
         {
           "original_name": "slices sourdough bread",
           "original_quantity_4p": "8 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "slices sourdough bread",
           "canonical_nl": null,
           "type": "unknown",
@@ -3043,6 +3535,8 @@
         {
           "original_name": "baby kale mix",
           "original_quantity_4p": "10 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "baby kale mix",
           "canonical_nl": null,
           "type": "unknown",
@@ -3056,6 +3550,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3069,6 +3564,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3082,6 +3578,8 @@
         {
           "original_name": "limes, divided",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "limes, divided",
           "canonical_nl": null,
           "type": "unknown",
@@ -3094,6 +3592,8 @@
         {
           "original_name": "red onion, divided",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode ui",
           "canonical_nl": "rode ui",
           "type": "vegetable",
@@ -3106,6 +3606,8 @@
         {
           "original_name": "tomatoes",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "tomaten",
           "canonical_nl": "tomaten",
           "type": "vegetable",
@@ -3118,6 +3620,8 @@
         {
           "original_name": "black beans",
           "original_quantity_4p": "2 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "zwarte bonen",
           "canonical_nl": "zwarte bonen",
           "type": "legumes",
@@ -3130,6 +3634,8 @@
         {
           "original_name": "jalapeño",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "jalapeño",
           "canonical_nl": "jalapeño",
           "type": "vegetable",
@@ -3142,6 +3648,8 @@
         {
           "original_name": "corn",
           "original_quantity_4p": "2 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "mais",
           "canonical_nl": "mais",
           "type": "vegetable",
@@ -3154,6 +3662,8 @@
         {
           "original_name": "flour tortillas",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloemtortilla's",
           "canonical_nl": "bloemtortilla's",
           "type": "bread",
@@ -3167,6 +3677,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3180,6 +3691,8 @@
         {
           "original_name": "boneless skinless chicken breasts",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kipfilet",
           "canonical_nl": "kipfilet",
           "type": "meat",
@@ -3192,6 +3705,8 @@
         {
           "original_name": "tomatillos",
           "original_quantity_4p": "14 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "tomatillo's",
           "canonical_nl": "tomatillo's",
           "type": "vegetable",
@@ -3204,6 +3719,8 @@
         {
           "original_name": "flour tortillas",
           "original_quantity_4p": "12 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloemtortilla's",
           "canonical_nl": "bloemtortilla's",
           "type": "bread",
@@ -3216,6 +3733,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -3228,6 +3747,8 @@
         {
           "original_name": "chili powder",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "chili powder",
           "canonical_nl": null,
           "type": "unknown",
@@ -3240,6 +3761,8 @@
         {
           "original_name": "ground cumin",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gemalen komijn",
           "canonical_nl": "gemalen komijn",
           "type": "spice",
@@ -3252,6 +3775,8 @@
         {
           "original_name": "shredded Monterey Jack",
           "original_quantity_4p": "6 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "shredded Monterey Jack",
           "canonical_nl": null,
           "type": "unknown",
@@ -3264,6 +3789,8 @@
         {
           "original_name": "aluminum tins",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "aluminium bakvormen",
           "canonical_nl": "aluminium bakvormen",
           "type": "nonfood",
@@ -3277,6 +3804,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3290,6 +3818,8 @@
         {
           "original_name": "limes, divided",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "limes, divided",
           "canonical_nl": null,
           "type": "unknown",
@@ -3302,6 +3832,8 @@
         {
           "original_name": "red bell peppers",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "red bell peppers",
           "canonical_nl": null,
           "type": "unknown",
@@ -3314,6 +3846,8 @@
         {
           "original_name": "avocado",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "avocado",
           "canonical_nl": "avocado",
           "type": "fruit",
@@ -3326,6 +3860,8 @@
         {
           "original_name": "whole milk",
           "original_quantity_4p": "2 pint",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "volle melk",
           "canonical_nl": "volle melk",
           "type": "dairy",
@@ -3338,6 +3874,8 @@
         {
           "original_name": "butter",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomboter",
           "canonical_nl": "roomboter",
           "type": "dairy",
@@ -3350,6 +3888,8 @@
         {
           "original_name": "corn",
           "original_quantity_4p": "8 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "mais",
           "canonical_nl": "mais",
           "type": "vegetable",
@@ -3362,6 +3902,8 @@
         {
           "original_name": "sugar",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "suiker",
           "canonical_nl": "suiker",
           "type": "pantry",
@@ -3374,6 +3916,8 @@
         {
           "original_name": "crumbled queso fresco",
           "original_quantity_4p": "6 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "crumbled queso fresco",
           "canonical_nl": null,
           "type": "unknown",
@@ -3387,6 +3931,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3400,6 +3945,8 @@
         {
           "original_name": "corn tortillas",
           "original_quantity_4p": "12 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "maistortilla's",
           "canonical_nl": "maistortilla's",
           "type": "bread",
@@ -3412,6 +3959,8 @@
         {
           "original_name": "butternut squash",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "flespompoen",
           "canonical_nl": "flespompoen",
           "type": "vegetable",
@@ -3424,6 +3973,8 @@
         {
           "original_name": "shallot",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sjalot",
           "canonical_nl": "sjalot",
           "type": "vegetable",
@@ -3436,6 +3987,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "2 clove",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -3448,6 +4001,8 @@
         {
           "original_name": "avocado",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "avocado",
           "canonical_nl": "avocado",
           "type": "fruit",
@@ -3461,6 +4016,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3474,6 +4030,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3487,6 +4044,8 @@
         {
           "original_name": "cream cheese",
           "original_quantity_4p": "3 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomkaas",
           "canonical_nl": "roomkaas",
           "type": "dairy",
@@ -3499,6 +4058,8 @@
         {
           "original_name": "graham cracker crusts",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "graham cracker crusts",
           "canonical_nl": null,
           "type": "unknown",
@@ -3511,6 +4072,8 @@
         {
           "original_name": "white wine",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "white wine",
           "canonical_nl": null,
           "type": "unknown",
@@ -3523,6 +4086,8 @@
         {
           "original_name": "cherries",
           "original_quantity_4p": "1 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kersen",
           "canonical_nl": "kersen",
           "type": "fruit",
@@ -3535,6 +4100,8 @@
         {
           "original_name": "sour cream",
           "original_quantity_4p": "1 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "zure room",
           "canonical_nl": "zure room",
           "type": "dairy",
@@ -3548,6 +4115,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3561,6 +4129,8 @@
         {
           "original_name": "biscuits",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "biscuits",
           "canonical_nl": null,
           "type": "unknown",
@@ -3573,6 +4143,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -3585,6 +4157,8 @@
         {
           "original_name": "cherries",
           "original_quantity_4p": "2 cups",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kersen",
           "canonical_nl": "kersen",
           "type": "fruit",
@@ -3597,6 +4171,8 @@
         {
           "original_name": "flour",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloem",
           "canonical_nl": "bloem",
           "type": "pantry",
@@ -3609,6 +4185,8 @@
         {
           "original_name": "white chocolate chips",
           "original_quantity_4p": "2 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "white chocolate chips",
           "canonical_nl": null,
           "type": "unknown",
@@ -3622,6 +4200,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3635,6 +4214,8 @@
         {
           "original_name": "shallot",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sjalot",
           "canonical_nl": "sjalot",
           "type": "vegetable",
@@ -3647,6 +4228,8 @@
         {
           "original_name": "cheese tortellini",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "cheese tortellini",
           "canonical_nl": null,
           "type": "unknown",
@@ -3659,6 +4242,8 @@
         {
           "original_name": "grated pecorino cheese",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "grated pecorino cheese",
           "canonical_nl": null,
           "type": "unknown",
@@ -3672,6 +4257,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3685,6 +4271,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3698,6 +4285,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3711,6 +4299,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3724,6 +4313,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3737,6 +4327,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3750,6 +4341,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3763,6 +4355,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3776,6 +4369,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3789,6 +4383,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3802,6 +4397,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3815,6 +4411,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3828,6 +4425,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3841,6 +4439,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3854,6 +4453,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3867,6 +4467,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3880,6 +4481,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3893,6 +4495,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3906,6 +4509,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3919,6 +4523,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3932,6 +4537,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3945,6 +4551,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3958,6 +4565,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3971,6 +4579,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3984,6 +4593,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -3997,6 +4607,8 @@
         {
           "original_name": "lemon",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "citroen",
           "canonical_nl": "citroen",
           "type": "fruit",
@@ -4010,6 +4622,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4023,6 +4636,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4036,6 +4650,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4049,6 +4664,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4062,6 +4678,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4075,6 +4692,8 @@
         {
           "original_name": "container nonfat Greek yogurt,",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "container nonfat Greek yogurt,",
           "canonical_nl": null,
           "type": "unknown",
@@ -4087,6 +4706,8 @@
         {
           "original_name": "tikka masala curry paste,",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "tikka masala curry paste,",
           "canonical_nl": null,
           "type": "unknown",
@@ -4099,6 +4720,8 @@
         {
           "original_name": "boneless skinless chicken breasts",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kipfilet",
           "canonical_nl": "kipfilet",
           "type": "meat",
@@ -4111,6 +4734,8 @@
         {
           "original_name": "flour tortillas",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloemtortilla's",
           "canonical_nl": "bloemtortilla's",
           "type": "bread",
@@ -4124,6 +4749,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4137,6 +4763,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4150,6 +4777,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4163,6 +4791,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4176,6 +4805,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4189,6 +4819,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4202,6 +4833,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4215,6 +4847,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4228,6 +4861,8 @@
         {
           "original_name": "jalapeño",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "jalapeño",
           "canonical_nl": "jalapeño",
           "type": "vegetable",
@@ -4240,6 +4875,8 @@
         {
           "original_name": "minute more.",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "minute more.",
           "canonical_nl": null,
           "type": "unknown",
@@ -4252,6 +4889,8 @@
         {
           "original_name": "sherry vinegar",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sherry vinegar",
           "canonical_nl": null,
           "type": "unknown",
@@ -4264,6 +4903,8 @@
         {
           "original_name": "light brown sugar",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "lichte basterdsuiker",
           "canonical_nl": "lichte basterdsuiker",
           "type": "pantry",
@@ -4276,6 +4917,8 @@
         {
           "original_name": "zucchini",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "courgette",
           "canonical_nl": "courgette",
           "type": "vegetable",
@@ -4288,6 +4931,8 @@
         {
           "original_name": "radishes",
           "original_quantity_4p": "12 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "radishes",
           "canonical_nl": null,
           "type": "unknown",
@@ -4300,6 +4945,8 @@
         {
           "original_name": "ear corn",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ear corn",
           "canonical_nl": null,
           "type": "unknown",
@@ -4312,6 +4959,8 @@
         {
           "original_name": "boneless skinless chicken breasts",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kipfilet",
           "canonical_nl": "kipfilet",
           "type": "meat",
@@ -4325,6 +4974,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4338,6 +4988,8 @@
         {
           "original_name": "flour tortillas",
           "original_quantity_4p": "12 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloemtortilla's",
           "canonical_nl": "bloemtortilla's",
           "type": "bread",
@@ -4350,6 +5002,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -4362,6 +5016,8 @@
         {
           "original_name": "chili powder",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "chili powder",
           "canonical_nl": null,
           "type": "unknown",
@@ -4374,6 +5030,8 @@
         {
           "original_name": "ground cumin",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gemalen komijn",
           "canonical_nl": "gemalen komijn",
           "type": "spice",
@@ -4386,6 +5044,8 @@
         {
           "original_name": "baby spinach",
           "original_quantity_4p": "2 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "babyspinazie",
           "canonical_nl": "babyspinazie",
           "type": "vegetable",
@@ -4398,6 +5058,8 @@
         {
           "original_name": "shredded Monterey Jack",
           "original_quantity_4p": "6 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "shredded Monterey Jack",
           "canonical_nl": null,
           "type": "unknown",
@@ -4410,6 +5072,8 @@
         {
           "original_name": "aluminum tins",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "aluminium bakvormen",
           "canonical_nl": "aluminium bakvormen",
           "type": "nonfood",
@@ -4423,6 +5087,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4436,6 +5101,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4449,6 +5115,8 @@
         {
           "original_name": "rainbow Swiss chard, divided",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rainbow Swiss chard, divided",
           "canonical_nl": null,
           "type": "unknown",
@@ -4461,6 +5129,8 @@
         {
           "original_name": "tomato",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "tomato",
           "canonical_nl": null,
           "type": "unknown",
@@ -4473,6 +5143,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "2 clove",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -4485,6 +5157,8 @@
         {
           "original_name": "lime",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "limoen",
           "canonical_nl": "limoen",
           "type": "fruit",
@@ -4497,6 +5171,8 @@
         {
           "original_name": "chipotle pepper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "chipotlepeper",
           "canonical_nl": "chipotlepeper",
           "type": "spice",
@@ -4509,6 +5185,8 @@
         {
           "original_name": "ground chicken",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kipgehakt",
           "canonical_nl": "kipgehakt",
           "type": "meat",
@@ -4521,6 +5199,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -4533,6 +5213,8 @@
         {
           "original_name": "corn tortillas",
           "original_quantity_4p": "12 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "maistortilla's",
           "canonical_nl": "maistortilla's",
           "type": "bread",
@@ -4546,6 +5228,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4559,6 +5242,8 @@
         {
           "original_name": "shallot",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sjalot",
           "canonical_nl": "sjalot",
           "type": "vegetable",
@@ -4571,6 +5256,8 @@
         {
           "original_name": "dried oregano",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dried oregano",
           "canonical_nl": null,
           "type": "unknown",
@@ -4583,6 +5270,8 @@
         {
           "original_name": "chicken stock",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kippenbouillon",
           "canonical_nl": "kippenbouillon",
           "type": "sauce",
@@ -4595,6 +5284,8 @@
         {
           "original_name": "tomatillos",
           "original_quantity_4p": "10 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "tomatillo's",
           "canonical_nl": "tomatillo's",
           "type": "vegetable",
@@ -4607,6 +5298,8 @@
         {
           "original_name": "corn tortillas",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "maistortilla's",
           "canonical_nl": "maistortilla's",
           "type": "bread",
@@ -4619,6 +5312,8 @@
         {
           "original_name": "Chobani nonfat",
           "original_quantity_4p": "6 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Chobani nonfat",
           "canonical_nl": null,
           "type": "unknown",
@@ -4632,6 +5327,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4645,6 +5341,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4658,6 +5355,8 @@
         {
           "original_name": "lime, divided",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "limoen",
           "canonical_nl": "limoen",
           "type": "fruit",
@@ -4670,6 +5369,8 @@
         {
           "original_name": "red onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode ui",
           "canonical_nl": "rode ui",
           "type": "vegetable",
@@ -4682,6 +5383,8 @@
         {
           "original_name": "garlic, divided",
           "original_quantity_4p": "4 cloves",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -4694,6 +5397,8 @@
         {
           "original_name": "jalapeño",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "jalapeño",
           "canonical_nl": "jalapeño",
           "type": "vegetable",
@@ -4706,6 +5411,8 @@
         {
           "original_name": "boneless skinless chicken",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "boneless skinless chicken",
           "canonical_nl": null,
           "type": "unknown",
@@ -4718,6 +5425,8 @@
         {
           "original_name": "avocado",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "avocado",
           "canonical_nl": "avocado",
           "type": "fruit",
@@ -4730,6 +5439,8 @@
         {
           "original_name": "parchment paper",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bakpapier",
           "canonical_nl": "bakpapier",
           "type": "nonfood",
@@ -4743,6 +5454,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4756,6 +5468,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4769,6 +5482,8 @@
         {
           "original_name": "red potatoes",
           "original_quantity_4p": "20 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "red potatoes",
           "canonical_nl": null,
           "type": "unknown",
@@ -4781,6 +5496,8 @@
         {
           "original_name": "asparagus",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "asparagus",
           "canonical_nl": null,
           "type": "unknown",
@@ -4793,6 +5510,8 @@
         {
           "original_name": "boneless skinless chicken",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "boneless skinless chicken",
           "canonical_nl": null,
           "type": "unknown",
@@ -4805,6 +5524,8 @@
         {
           "original_name": "shredded Parmesan",
           "original_quantity_4p": "6 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "shredded Parmesan",
           "canonical_nl": null,
           "type": "unknown",
@@ -4817,6 +5538,8 @@
         {
           "original_name": "butter",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomboter",
           "canonical_nl": "roomboter",
           "type": "dairy",
@@ -4830,6 +5553,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4843,6 +5567,8 @@
         {
           "original_name": "baby spinach",
           "original_quantity_4p": "8 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "babyspinazie",
           "canonical_nl": "babyspinazie",
           "type": "vegetable",
@@ -4855,6 +5581,8 @@
         {
           "original_name": "carrots",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "wortelen",
           "canonical_nl": "wortelen",
           "type": "vegetable",
@@ -4867,6 +5595,8 @@
         {
           "original_name": "chickpeas",
           "original_quantity_4p": "2 can",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kikkererwten",
           "canonical_nl": "kikkererwten",
           "type": "legumes",
@@ -4879,6 +5609,8 @@
         {
           "original_name": "container Chobani nonfat Greek",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "container Chobani nonfat Greek",
           "canonical_nl": null,
           "type": "unknown",
@@ -4892,6 +5624,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4905,6 +5638,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4918,6 +5652,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4931,6 +5666,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4944,6 +5680,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -4957,6 +5694,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "2 clove",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -4969,6 +5708,8 @@
         {
           "original_name": "lime",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "limoen",
           "canonical_nl": "limoen",
           "type": "fruit",
@@ -4981,6 +5722,8 @@
         {
           "original_name": "red radishes",
           "original_quantity_4p": "12 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "red radishes",
           "canonical_nl": null,
           "type": "unknown",
@@ -4993,6 +5736,8 @@
         {
           "original_name": "spring onions",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "spring onions",
           "canonical_nl": null,
           "type": "unknown",
@@ -5005,6 +5750,8 @@
         {
           "original_name": "ground pork",
           "original_quantity_4p": "20 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "varkensgehakt",
           "canonical_nl": "varkensgehakt",
           "type": "meat",
@@ -5017,6 +5764,8 @@
         {
           "original_name": "maple syrup",
           "original_quantity_4p": "5/2 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "maple syrup",
           "canonical_nl": null,
           "type": "unknown",
@@ -5030,6 +5779,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5043,6 +5793,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5056,6 +5807,8 @@
         {
           "original_name": "ounce                    1/4 ounce",
           "original_quantity_4p": "1/2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ounce                    1/4 ounce",
           "canonical_nl": null,
           "type": "unknown",
@@ -5069,6 +5822,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5082,6 +5836,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5095,6 +5850,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5108,6 +5864,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5121,6 +5878,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5134,6 +5892,8 @@
         {
           "original_name": "vanilla extract",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "vanille-extract",
           "canonical_nl": "vanille-extract",
           "type": "pantry",
@@ -5146,6 +5906,8 @@
         {
           "original_name": "containers nonfat Greek yogurt",
           "original_quantity_4p": "6 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "containers nonfat Greek yogurt",
           "canonical_nl": null,
           "type": "unknown",
@@ -5158,6 +5920,8 @@
         {
           "original_name": "eggs",
           "original_quantity_4p": "12 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "eggs",
           "canonical_nl": null,
           "type": "unknown",
@@ -5170,6 +5934,8 @@
         {
           "original_name": "all-purpose flour",
           "original_quantity_4p": "2 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "all-purpose flour",
           "canonical_nl": null,
           "type": "unknown",
@@ -5182,6 +5948,8 @@
         {
           "original_name": "pistachios",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pistachenoten",
           "canonical_nl": "pistachenoten",
           "type": "nuts",
@@ -5194,6 +5962,8 @@
         {
           "original_name": "raspberry-redcurrant preserves",
           "original_quantity_4p": "2 ounce",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "raspberry-redcurrant preserves",
           "canonical_nl": null,
           "type": "unknown",
@@ -5207,6 +5977,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5220,6 +5991,8 @@
         {
           "original_name": "half stick unsalted butter",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "halve staaf ongezouten boter",
           "canonical_nl": "halve staaf ongezouten boter",
           "type": "dairy",
@@ -5232,6 +6005,8 @@
         {
           "original_name": "heavy cream",
           "original_quantity_4p": "2 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "slagroom",
           "canonical_nl": "slagroom",
           "type": "dairy",
@@ -5244,6 +6019,8 @@
         {
           "original_name": "vanilla extract",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "vanille-extract",
           "canonical_nl": "vanille-extract",
           "type": "pantry",
@@ -5256,6 +6033,8 @@
         {
           "original_name": "granulated sugar",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "granulated sugar",
           "canonical_nl": null,
           "type": "unknown",
@@ -5268,6 +6047,8 @@
         {
           "original_name": "baking powder",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bakpoeder",
           "canonical_nl": "bakpoeder",
           "type": "pantry",
@@ -5280,6 +6061,8 @@
         {
           "original_name": "flour",
           "original_quantity_4p": "3/2 cups",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloem",
           "canonical_nl": "bloem",
           "type": "pantry",
@@ -5292,6 +6075,8 @@
         {
           "original_name": "parchment paper",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bakpapier",
           "canonical_nl": "bakpapier",
           "type": "nonfood",
@@ -5305,6 +6090,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5318,6 +6104,8 @@
         {
           "original_name": "unsalted butter",
           "original_quantity_4p": "4 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ongezouten roomboter",
           "canonical_nl": "ongezouten roomboter",
           "type": "dairy",
@@ -5330,6 +6118,8 @@
         {
           "original_name": "powdered sugar",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "poedersuiker",
           "canonical_nl": "poedersuiker",
           "type": "pantry",
@@ -5342,6 +6132,8 @@
         {
           "original_name": "peanut butter, divided",
           "original_quantity_4p": "4 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "peanut butter, divided",
           "canonical_nl": null,
           "type": "unknown",
@@ -5354,6 +6146,8 @@
         {
           "original_name": "light brown sugar",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "lichte basterdsuiker",
           "canonical_nl": "lichte basterdsuiker",
           "type": "pantry",
@@ -5366,6 +6160,8 @@
         {
           "original_name": "parchment paper",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bakpapier",
           "canonical_nl": "bakpapier",
           "type": "nonfood",
@@ -5379,6 +6175,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5392,6 +6189,8 @@
         {
           "original_name": "cream cheese",
           "original_quantity_4p": "3 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomkaas",
           "canonical_nl": "roomkaas",
           "type": "dairy",
@@ -5404,6 +6203,8 @@
         {
           "original_name": "roasted salted peanuts",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roasted salted peanuts",
           "canonical_nl": null,
           "type": "unknown",
@@ -5416,6 +6217,8 @@
         {
           "original_name": "powdered sugar",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "poedersuiker",
           "canonical_nl": "poedersuiker",
           "type": "pantry",
@@ -5428,6 +6231,8 @@
         {
           "original_name": "granulated sugar",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "granulated sugar",
           "canonical_nl": null,
           "type": "unknown",
@@ -5440,6 +6245,8 @@
         {
           "original_name": "dark chocolate",
           "original_quantity_4p": "2 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pure chocolade",
           "canonical_nl": "pure chocolade",
           "type": "pantry",
@@ -5453,6 +6260,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5466,6 +6274,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5479,6 +6288,8 @@
         {
           "original_name": "flour",
           "original_quantity_4p": "3/2 cups",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloem",
           "canonical_nl": "bloem",
           "type": "pantry",
@@ -5491,6 +6302,8 @@
         {
           "original_name": "sugar",
           "original_quantity_4p": "1 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "suiker",
           "canonical_nl": "suiker",
           "type": "pantry",
@@ -5503,6 +6316,8 @@
         {
           "original_name": "baking soda",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "baking soda",
           "canonical_nl": null,
           "type": "unknown",
@@ -5515,6 +6330,8 @@
         {
           "original_name": "apple cider vinegar",
           "original_quantity_4p": "1 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "appelazijn",
           "canonical_nl": "appelazijn",
           "type": "sauce",
@@ -5527,6 +6344,8 @@
         {
           "original_name": "vanilla extract",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "vanille-extract",
           "canonical_nl": "vanille-extract",
           "type": "pantry",
@@ -5539,6 +6358,8 @@
         {
           "original_name": "aluminum tin",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "aluminium bakvorm",
           "canonical_nl": "aluminium bakvorm",
           "type": "nonfood",
@@ -5552,6 +6373,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5565,6 +6387,8 @@
         {
           "original_name": "granulated sugar,",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "granulated sugar,",
           "canonical_nl": null,
           "type": "unknown",
@@ -5577,6 +6401,8 @@
         {
           "original_name": "butter",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomboter",
           "canonical_nl": "roomboter",
           "type": "dairy",
@@ -5589,6 +6415,8 @@
         {
           "original_name": "whole milk",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "volle melk",
           "canonical_nl": "volle melk",
           "type": "dairy",
@@ -5601,6 +6429,8 @@
         {
           "original_name": "dark chocolate",
           "original_quantity_4p": "4 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pure chocolade",
           "canonical_nl": "pure chocolade",
           "type": "pantry",
@@ -5614,6 +6444,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5627,6 +6458,8 @@
         {
           "original_name": "dark chocolate",
           "original_quantity_4p": "6 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pure chocolade",
           "canonical_nl": "pure chocolade",
           "type": "pantry",
@@ -5639,6 +6472,8 @@
         {
           "original_name": "condensed milk",
           "original_quantity_4p": "2 cans",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "condensed milk",
           "canonical_nl": null,
           "type": "unknown",
@@ -5651,6 +6486,8 @@
         {
           "original_name": "hazelnuts",
           "original_quantity_4p": "3 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "hazelnuts",
           "canonical_nl": null,
           "type": "unknown",
@@ -5663,6 +6500,8 @@
         {
           "original_name": "unsalted butter",
           "original_quantity_4p": "2 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ongezouten roomboter",
           "canonical_nl": "ongezouten roomboter",
           "type": "dairy",
@@ -5676,6 +6515,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5689,6 +6529,8 @@
         {
           "original_name": "dark chocolate",
           "original_quantity_4p": "1 ounce",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pure chocolade",
           "canonical_nl": "pure chocolade",
           "type": "pantry",
@@ -5701,6 +6543,8 @@
         {
           "original_name": "espresso powder",
           "original_quantity_4p": "1 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "espresso powder",
           "canonical_nl": null,
           "type": "unknown",
@@ -5713,6 +6557,8 @@
         {
           "original_name": "cream cheese",
           "original_quantity_4p": "4 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomkaas",
           "canonical_nl": "roomkaas",
           "type": "dairy",
@@ -5725,6 +6571,8 @@
         {
           "original_name": "powdered sugar",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "poedersuiker",
           "canonical_nl": "poedersuiker",
           "type": "pantry",
@@ -5737,6 +6585,8 @@
         {
           "original_name": "container heavy cream",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "slagroom",
           "canonical_nl": "slagroom",
           "type": "dairy",
@@ -5749,6 +6599,8 @@
         {
           "original_name": "graham cracker crusts",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "graham cracker crusts",
           "canonical_nl": null,
           "type": "unknown",
@@ -5762,6 +6614,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5775,6 +6628,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5788,6 +6642,8 @@
         {
           "original_name": "pizza dough",
           "original_quantity_4p": "12 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pizza dough",
           "canonical_nl": null,
           "type": "unknown",
@@ -5800,6 +6656,8 @@
         {
           "original_name": "ground cinnamon",
           "original_quantity_4p": "2 teaspoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gemalen kaneel",
           "canonical_nl": "gemalen kaneel",
           "type": "spice",
@@ -5813,6 +6671,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5826,6 +6685,8 @@
         {
           "original_name": "ground cinnamon",
           "original_quantity_4p": "2 teaspoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gemalen kaneel",
           "canonical_nl": "gemalen kaneel",
           "type": "spice",
@@ -5838,6 +6699,8 @@
         {
           "original_name": "half stick unsalted butter",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "halve staaf ongezouten boter",
           "canonical_nl": "halve staaf ongezouten boter",
           "type": "dairy",
@@ -5850,6 +6713,8 @@
         {
           "original_name": "heavy cream",
           "original_quantity_4p": "4 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "slagroom",
           "canonical_nl": "slagroom",
           "type": "dairy",
@@ -5862,6 +6727,8 @@
         {
           "original_name": "pastry bag",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pastry bag",
           "canonical_nl": null,
           "type": "unknown",
@@ -5875,6 +6742,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5888,6 +6756,7 @@
       "servings_source": 6,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5901,6 +6770,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -5914,6 +6784,8 @@
         {
           "original_name": "red onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode ui",
           "canonical_nl": "rode ui",
           "type": "vegetable",
@@ -5926,6 +6798,8 @@
         {
           "original_name": "cauliflower",
           "original_quantity_4p": "2 pound",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloemkool",
           "canonical_nl": "bloemkool",
           "type": "vegetable",
@@ -5938,6 +6812,8 @@
         {
           "original_name": "peanuts",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "peanuts",
           "canonical_nl": null,
           "type": "unknown",
@@ -5950,6 +6826,8 @@
         {
           "original_name": "light brown sugar",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "lichte basterdsuiker",
           "canonical_nl": "lichte basterdsuiker",
           "type": "pantry",
@@ -5962,6 +6840,8 @@
         {
           "original_name": "red curry paste",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "red curry paste",
           "canonical_nl": null,
           "type": "unknown",
@@ -5974,6 +6854,8 @@
         {
           "original_name": "vegetable stock",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "vegetable stock",
           "canonical_nl": null,
           "type": "unknown",
@@ -5986,6 +6868,8 @@
         {
           "original_name": "peanut butter",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "peanut butter",
           "canonical_nl": null,
           "type": "unknown",
@@ -5998,6 +6882,8 @@
         {
           "original_name": "gluten-free soy sauce",
           "original_quantity_4p": "4 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gluten-free soy sauce",
           "canonical_nl": null,
           "type": "unknown",
@@ -6010,6 +6896,8 @@
         {
           "original_name": "baby spinach",
           "original_quantity_4p": "10 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "babyspinazie",
           "canonical_nl": "babyspinazie",
           "type": "vegetable",
@@ -6023,6 +6911,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6036,6 +6925,8 @@
         {
           "original_name": "kiwi",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kiwi",
           "canonical_nl": null,
           "type": "unknown",
@@ -6048,6 +6939,8 @@
         {
           "original_name": "containers pineapple",
           "original_quantity_4p": "4 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "containers pineapple",
           "canonical_nl": null,
           "type": "unknown",
@@ -6060,6 +6953,8 @@
         {
           "original_name": "dark brown sugar",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dark brown sugar",
           "canonical_nl": null,
           "type": "unknown",
@@ -6072,6 +6967,8 @@
         {
           "original_name": "unsalted butter",
           "original_quantity_4p": "12 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ongezouten roomboter",
           "canonical_nl": "ongezouten roomboter",
           "type": "dairy",
@@ -6084,6 +6981,8 @@
         {
           "original_name": "lite coconut milk",
           "original_quantity_4p": "2 can",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "lichte kokosmelk",
           "canonical_nl": "lichte kokosmelk",
           "type": "sauce",
@@ -6097,6 +6996,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6110,6 +7010,8 @@
         {
           "original_name": "lite coconut milk",
           "original_quantity_4p": "1 can",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "lichte kokosmelk",
           "canonical_nl": "lichte kokosmelk",
           "type": "sauce",
@@ -6122,6 +7024,8 @@
         {
           "original_name": "Arborio rice",
           "original_quantity_4p": "1 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Arborio rice",
           "canonical_nl": null,
           "type": "unknown",
@@ -6134,6 +7038,8 @@
         {
           "original_name": "lime",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "limoen",
           "canonical_nl": "limoen",
           "type": "fruit",
@@ -6147,6 +7053,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6160,6 +7067,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6173,6 +7081,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6186,6 +7095,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6199,6 +7109,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6212,6 +7123,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6225,6 +7137,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6238,6 +7151,8 @@
         {
           "original_name": "garlic",
           "original_quantity_4p": "4 cloves",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "knoflook",
           "canonical_nl": "knoflook",
           "type": "vegetable",
@@ -6250,6 +7165,8 @@
         {
           "original_name": "dinosaur kale",
           "original_quantity_4p": "12 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dinosaur kale",
           "canonical_nl": null,
           "type": "unknown",
@@ -6262,6 +7179,8 @@
         {
           "original_name": "cremini mushrooms",
           "original_quantity_4p": "12 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kastanjechampignons",
           "canonical_nl": "kastanjechampignons",
           "type": "vegetable",
@@ -6274,6 +7193,8 @@
         {
           "original_name": "rigatoni",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rigatoni",
           "canonical_nl": null,
           "type": "unknown",
@@ -6287,6 +7208,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6300,6 +7222,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6313,6 +7236,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6326,6 +7250,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6339,6 +7264,8 @@
         {
           "original_name": "dark chocolate",
           "original_quantity_4p": "2 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pure chocolade",
           "canonical_nl": "pure chocolade",
           "type": "pantry",
@@ -6351,6 +7278,8 @@
         {
           "original_name": "unsalted butter",
           "original_quantity_4p": "7 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "ongezouten roomboter",
           "canonical_nl": "ongezouten roomboter",
           "type": "dairy",
@@ -6363,6 +7292,8 @@
         {
           "original_name": "cocoa powder",
           "original_quantity_4p": "2 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "cocoa powder",
           "canonical_nl": null,
           "type": "unknown",
@@ -6375,6 +7306,8 @@
         {
           "original_name": "mini marshmallows",
           "original_quantity_4p": "3 cups",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "mini marshmallows",
           "canonical_nl": null,
           "type": "unknown",
@@ -6387,6 +7320,8 @@
         {
           "original_name": "puffed rice",
           "original_quantity_4p": "3 cups",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "puffed rice",
           "canonical_nl": null,
           "type": "unknown",
@@ -6400,6 +7335,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6413,6 +7349,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6426,6 +7363,8 @@
         {
           "original_name": "canola oil in a large pan",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "canola oil in a large pan",
           "canonical_nl": null,
           "type": "unknown",
@@ -6438,6 +7377,8 @@
         {
           "original_name": "minute more per side. Transfer to a",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "minute more per side. Transfer to a",
           "canonical_nl": null,
           "type": "unknown",
@@ -6450,6 +7391,8 @@
         {
           "original_name": "red onion",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "rode ui",
           "canonical_nl": "rode ui",
           "type": "vegetable",
@@ -6462,6 +7405,8 @@
         {
           "original_name": "mizuna lettuce",
           "original_quantity_4p": "4 cups",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "mizuna lettuce",
           "canonical_nl": null,
           "type": "unknown",
@@ -6474,6 +7419,8 @@
         {
           "original_name": "tilapia",
           "original_quantity_4p": "20 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "tilapia",
           "canonical_nl": null,
           "type": "unknown",
@@ -6486,6 +7433,8 @@
         {
           "original_name": "raw sugar",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "raw sugar",
           "canonical_nl": null,
           "type": "unknown",
@@ -6498,6 +7447,8 @@
         {
           "original_name": "corn tortillas",
           "original_quantity_4p": "12 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "maistortilla's",
           "canonical_nl": "maistortilla's",
           "type": "bread",
@@ -6511,6 +7462,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6524,6 +7476,8 @@
         {
           "original_name": "shallot",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sjalot",
           "canonical_nl": "sjalot",
           "type": "vegetable",
@@ -6536,6 +7490,8 @@
         {
           "original_name": "cremini mushrooms",
           "original_quantity_4p": "12 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kastanjechampignons",
           "canonical_nl": "kastanjechampignons",
           "type": "vegetable",
@@ -6548,6 +7504,8 @@
         {
           "original_name": "delicata squash",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "delicata squash",
           "canonical_nl": null,
           "type": "unknown",
@@ -6560,6 +7518,8 @@
         {
           "original_name": "goat cheese",
           "original_quantity_4p": "6 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "goat cheese",
           "canonical_nl": null,
           "type": "unknown",
@@ -6572,6 +7532,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -6584,6 +7546,8 @@
         {
           "original_name": "baby spinach",
           "original_quantity_4p": "10 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "babyspinazie",
           "canonical_nl": "babyspinazie",
           "type": "vegetable",
@@ -6597,6 +7561,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6610,6 +7575,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6623,6 +7589,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6636,6 +7603,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6649,6 +7617,8 @@
         {
           "original_name": "shiitake mushrooms, divided",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "shiitake mushrooms, divided",
           "canonical_nl": null,
           "type": "unknown",
@@ -6661,6 +7631,8 @@
         {
           "original_name": "stalk celery",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "stalk celery",
           "canonical_nl": null,
           "type": "unknown",
@@ -6673,6 +7645,8 @@
         {
           "original_name": "green beans",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sperziebonen",
           "canonical_nl": "sperziebonen",
           "type": "vegetable",
@@ -6685,6 +7659,8 @@
         {
           "original_name": "scallions, divided",
           "original_quantity_4p": "6 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bosui",
           "canonical_nl": "bosui",
           "type": "vegetable",
@@ -6697,6 +7673,8 @@
         {
           "original_name": "smoked tofu",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "smoked tofu",
           "canonical_nl": null,
           "type": "unknown",
@@ -6709,6 +7687,8 @@
         {
           "original_name": "sesame oil, divided",
           "original_quantity_4p": "6 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sesamolie",
           "canonical_nl": "sesamolie",
           "type": "sauce",
@@ -6721,6 +7701,8 @@
         {
           "original_name": "soy sauce, divided",
           "original_quantity_4p": "8 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "sojasaus",
           "canonical_nl": "sojasaus",
           "type": "sauce",
@@ -6733,6 +7715,8 @@
         {
           "original_name": "Shaoxing rice wine,",
           "original_quantity_4p": "4 tablespoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Shaoxing rice wine,",
           "canonical_nl": null,
           "type": "unknown",
@@ -6745,6 +7729,8 @@
         {
           "original_name": "egg roll wrappers",
           "original_quantity_4p": "20 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "egg roll wrappers",
           "canonical_nl": null,
           "type": "unknown",
@@ -6757,6 +7743,8 @@
         {
           "original_name": "spice mix",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "kruidenmix",
           "canonical_nl": "kruidenmix",
           "type": "spice",
@@ -6770,6 +7758,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6783,6 +7772,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6796,6 +7786,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6809,6 +7800,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6822,6 +7814,8 @@
         {
           "original_name": "ground cumin",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "gemalen komijn",
           "canonical_nl": "gemalen komijn",
           "type": "spice",
@@ -6834,6 +7828,8 @@
         {
           "original_name": "sweet paprika",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "zoete paprikapoeder",
           "canonical_nl": "zoete paprikapoeder",
           "type": "spice",
@@ -6846,6 +7842,8 @@
         {
           "original_name": "dried thyme",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dried thyme",
           "canonical_nl": null,
           "type": "unknown",
@@ -6859,6 +7857,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6872,6 +7871,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6885,6 +7885,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6898,6 +7899,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6911,6 +7913,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6924,6 +7927,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -6937,6 +7941,8 @@
         {
           "original_name": "dark chocolate",
           "original_quantity_4p": "4 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pure chocolade",
           "canonical_nl": "pure chocolade",
           "type": "pantry",
@@ -6949,6 +7955,8 @@
         {
           "original_name": "half stick unsalted butter",
           "original_quantity_4p": "1 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "halve staaf ongezouten boter",
           "canonical_nl": "halve staaf ongezouten boter",
           "type": "dairy",
@@ -6961,6 +7969,8 @@
         {
           "original_name": "sugar",
           "original_quantity_4p": "1 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "suiker",
           "canonical_nl": "suiker",
           "type": "pantry",
@@ -6973,6 +7983,8 @@
         {
           "original_name": "vanilla extract",
           "original_quantity_4p": "1 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "vanille-extract",
           "canonical_nl": "vanille-extract",
           "type": "pantry",
@@ -6985,6 +7997,8 @@
         {
           "original_name": "flour",
           "original_quantity_4p": "1 cup",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bloem",
           "canonical_nl": "bloem",
           "type": "pantry",
@@ -6998,6 +8012,7 @@
       "servings_source": 4,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -7011,6 +8026,8 @@
         {
           "original_name": "butter",
           "original_quantity_4p": "2 packet",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomboter",
           "canonical_nl": "roomboter",
           "type": "dairy",
@@ -7023,6 +8040,8 @@
         {
           "original_name": "cream cheese",
           "original_quantity_4p": "4 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomkaas",
           "canonical_nl": "roomkaas",
           "type": "dairy",
@@ -7035,6 +8054,8 @@
         {
           "original_name": "dark chocolate",
           "original_quantity_4p": "6 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "pure chocolade",
           "canonical_nl": "pure chocolade",
           "type": "pantry",
@@ -7047,6 +8068,8 @@
         {
           "original_name": "sour cream",
           "original_quantity_4p": "4 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "zure room",
           "canonical_nl": "zure room",
           "type": "dairy",
@@ -7059,6 +8082,8 @@
         {
           "original_name": "light brown sugar",
           "original_quantity_4p": "2 tablespoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "lichte basterdsuiker",
           "canonical_nl": "lichte basterdsuiker",
           "type": "pantry",
@@ -7072,6 +8097,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -7085,6 +8111,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -7098,6 +8125,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -7111,6 +8139,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -7124,6 +8153,8 @@
         {
           "original_name": "Gala apple",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Gala apple",
           "canonical_nl": null,
           "type": "unknown",
@@ -7136,6 +8167,8 @@
         {
           "original_name": "bulb fresh fennel",
           "original_quantity_4p": "2 stuks",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "bulb fresh fennel",
           "canonical_nl": null,
           "type": "unknown",
@@ -7148,6 +8181,8 @@
         {
           "original_name": "fingerling potatoes",
           "original_quantity_4p": "16 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "fingerling potatoes",
           "canonical_nl": null,
           "type": "unknown",
@@ -7160,6 +8195,8 @@
         {
           "original_name": "Dover sole",
           "original_quantity_4p": "24 ounces",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Dover sole",
           "canonical_nl": null,
           "type": "unknown",
@@ -7172,6 +8209,8 @@
         {
           "original_name": "dried tarragon",
           "original_quantity_4p": "2 teaspoon",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dried tarragon",
           "canonical_nl": null,
           "type": "unknown",
@@ -7184,6 +8223,8 @@
         {
           "original_name": "Dijon mustard, divided",
           "original_quantity_4p": "6 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "dijonmosterd",
           "canonical_nl": "dijonmosterd",
           "type": "sauce",
@@ -7196,6 +8237,8 @@
         {
           "original_name": "butter",
           "original_quantity_4p": "6 packets",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "roomboter",
           "canonical_nl": "roomboter",
           "type": "dairy",
@@ -7208,6 +8251,8 @@
         {
           "original_name": "herbes de Provence",
           "original_quantity_4p": "4 teaspoons",
+          "quantity_basis": "unverified_4_portions_original_ocr",
+          "provenance": "first_pass_ocr",
           "name_nl": "Provençaalse kruiden",
           "canonical_nl": "Provençaalse kruiden",
           "type": "spice",
@@ -7221,6 +8266,7 @@
       "servings_source": 2,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": false,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     },
@@ -7234,6 +8280,7 @@
       "servings_source": null,
       "servings_4p_unverified": 4,
       "ingredient_ocr_missing": true,
+      "rescan_ingredient_candidates": false,
       "pricing_eligible": false,
       "review_status": "needs_manual_original_card_comparison"
     }
