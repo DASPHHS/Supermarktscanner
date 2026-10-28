@@ -1,0 +1,241 @@
+{
+  "updated_at_utc": "2026-10-28T15:37:19.307302+00:00",
+  "source": "PrijsProfeet API /deals/top",
+  "limitations": [
+    "Only promotion examples; not complete supermarket assortment",
+    "No implied recipe pricing or 1+1 calculations"
+  ],
+  "stores": {
+    "Jumbo": {
+      "updated_at": "2026-10-28T15:37:19.307302+00:00",
+      "deals": [
+        {
+          "name": "Nivea Shower Oil 200 ml",
+          "discount": "68.7% korting",
+          "brand": "Nivea",
+          "variant_count": 18
+        },
+        {
+          "name": "Odorex Deoroller Men Fresh Protection Anti-Transpirant 50ml",
+          "discount": "66.8% korting",
+          "brand": "Odorex",
+          "variant_count": 7
+        },
+        {
+          "name": "Nivea Men Derma Control Sensitive Roller 50ml",
+          "discount": "62.1% korting",
+          "brand": "Nivea for men",
+          "variant_count": 27
+        },
+        {
+          "name": "Ben & Jerry's Peanut Butter Cup 100ML",
+          "discount": "61.8% korting",
+          "brand": "Ben & Jerry's",
+          "variant_count": 7
+        },
+        {
+          "name": "Optimel Proteïne Drinkyoghurt Bosbes Vanillesmaak 0% Vet 1L",
+          "discount": "60.2% korting",
+          "brand": "Optimel",
+          "variant_count": 17
+        },
+        {
+          "name": "Febreze Badkamer Luchtverfrisser 2 Stuks",
+          "discount": "60% korting",
+          "brand": "Ambi-pur",
+          "variant_count": 16
+        },
+        {
+          "name": "Ariel Wasmiddel +Touch of Lenor Unstoppables Color 25 Wasbeurten",
+          "discount": "60% korting",
+          "brand": "Ariel",
+          "variant_count": 16
+        },
+        {
+          "name": "Dreft Platinum Plus, Citroen, Vaatwascapsules 59 X",
+          "discount": "60% korting",
+          "brand": "Dreft",
+          "variant_count": 8
+        },
+        {
+          "name": "Lenor Vloeibaar Wasverzachter Zeebries, 55 Wasbeurten",
+          "discount": "60% korting",
+          "brand": "Lenor",
+          "variant_count": 15
+        },
+        {
+          "name": "Oral-B Glamorous White Tandpasta 150ml",
+          "discount": "60% korting",
+          "brand": "Oral-B",
+          "variant_count": 12
+        },
+        {
+          "name": "Gillette Fusion Scheergel Sensitive, 200ml",
+          "discount": "50.1% korting",
+          "brand": "Gillette",
+          "variant_count": 12
+        },
+        {
+          "name": "Davitamon Junior Banaan 120 Kauwtabletten",
+          "discount": "50% korting",
+          "brand": "Davitamon",
+          "variant_count": 41
+        },
+        {
+          "name": "Neutral Vloeibaar Wasmiddel Kleur 6 x 20 wasbeurten",
+          "discount": "30% korting",
+          "brand": "Neutral",
+          "variant_count": 4
+        },
+        {
+          "name": "Gillette Venus Smooth Sensitive Voor Vrouwen, 8 Navulmesjes",
+          "discount": "50% korting",
+          "brand": "Gillette Venus",
+          "variant_count": 1
+        },
+        {
+          "name": "Andrélon Versterkende Leave-in Haarcrème Levendig Lang 200 ml",
+          "discount": "50.1% korting",
+          "brand": "Andrélon",
+          "variant_count": 53
+        },
+        {
+          "name": "Mars Minis chocolade caramel repen uitdeelzak 333g",
+          "discount": "25.1% korting",
+          "brand": "Mars",
+          "variant_count": 3
+        },
+        {
+          "name": "Bavaria Original 0.0% 6x300ML",
+          "discount": "25.1% korting",
+          "brand": "Bavaria",
+          "variant_count": 7
+        }
+      ]
+    },
+    "AH": {
+      "updated_at": "2026-10-28T15:37:19.307302+00:00",
+      "deals": [
+        {
+          "name": "Care Cardamom comfort handzeep set",
+          "discount": "86.57% korting",
+          "brand": "Care",
+          "variant_count": 18
+        },
+        {
+          "name": "Always Discreet normal broekjes maat L",
+          "discount": "71.89% korting",
+          "brand": "Always",
+          "variant_count": 35
+        },
+        {
+          "name": "Bonduelle Edamame bonen 2 mini's",
+          "discount": "66.67% korting",
+          "brand": "Bonduelle",
+          "variant_count": 30
+        },
+        {
+          "name": "Ariel 4-in-1 pods+ unstoppables wascapsules",
+          "discount": "60% korting",
+          "brand": "Ariel",
+          "variant_count": 17
+        },
+        {
+          "name": "Color Reus Wasmiddel vloeibaar gel kleur",
+          "discount": "60% korting",
+          "brand": "Color Reus",
+          "variant_count": 1
+        },
+        {
+          "name": "AH Liefde & Passie Spelt volkoren gesneden",
+          "discount": "53.3% korting",
+          "brand": "AH Liefde & Passie",
+          "variant_count": 3
+        },
+        {
+          "name": "Campina Karnemelk bosvruchten",
+          "discount": "50.3% korting",
+          "brand": "Campina",
+          "variant_count": 1
+        },
+        {
+          "name": "AH Varkensgehakt",
+          "discount": "50.2% korting",
+          "brand": "AH",
+          "variant_count": 124
+        },
+        {
+          "name": "Bifi Tasty Bites Chicken Parmesan & Thyme",
+          "discount": "50.2% korting",
+          "brand": "Bifi",
+          "variant_count": 2
+        },
+        {
+          "name": "BitesWeLove Protein bar cookies & cream",
+          "discount": "50.2% korting",
+          "brand": "BitesWeLove",
+          "variant_count": 7
+        },
+        {
+          "name": "Dreft 3in1 power spray citroen",
+          "discount": "50% korting",
+          "brand": "Dreft",
+          "variant_count": 16
+        },
+        {
+          "name": "Ecover Vloeibaar wasmiddel wol & fijnwas",
+          "discount": "25% korting",
+          "brand": "Ecover",
+          "variant_count": 14
+        },
+        {
+          "name": "Ajax Allesreiniger Eucalyptus 2-pack",
+          "discount": "50% korting",
+          "brand": "Ajax",
+          "variant_count": 21
+        },
+        {
+          "name": "Ambre Solaire Sensitive expert+ spray spf50",
+          "discount": "33.33% korting",
+          "brand": "Ambre Solaire",
+          "variant_count": 14
+        },
+        {
+          "name": "Bepanthen Baby zalf",
+          "discount": "50.1% korting",
+          "brand": "Bepanthen",
+          "variant_count": 3
+        },
+        {
+          "name": "Amstel Pilsener bier",
+          "discount": "25.5% korting",
+          "brand": "Amstel",
+          "variant_count": 26
+        },
+        {
+          "name": "Christophe Cordier Bourgogne blanc vieilles vignes",
+          "discount": "25% korting",
+          "brand": "Christophe Cordier",
+          "variant_count": 2
+        },
+        {
+          "name": "Duracell Plus 9V-alkaline batterijen 6LR61",
+          "discount": "40.1% korting",
+          "brand": "Duracell",
+          "variant_count": 21
+        }
+      ]
+    },
+    "Lidl": {
+      "updated_at": "2026-10-28T15:37:19.307302+00:00",
+      "deals": [
+        {
+          "name": "Schnittbroodje",
+          "discount": "32.1% korting",
+          "brand": null,
+          "variant_count": 10
+        }
+      ]
+    }
+  }
+}
