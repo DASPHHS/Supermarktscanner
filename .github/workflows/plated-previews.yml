@@ -34,7 +34,7 @@ jobs:
               rows=json.loads(q.read_text())['recipes']
               p=Path('hellofresh/plated_preview_manifest.json')
               existing=json.loads(p.read_text()).get('recipes',{}) if p.exists() else {}
-              needed=any('plated-release-'+r.get('source_identity','') not in existing for r in rows if r.get('source_member'))
+              needed=any(not existing.get('plated-release-'+r.get('source_identity',''),{}).get('all_pages_in_pdf') for r in rows if r.get('source_member'))
               print('needed='+str(needed).lower())
           PY
       - name: Install original PDF rendering tools
