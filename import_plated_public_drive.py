@@ -35,18 +35,25 @@ def run(manifest_path="plated_drive_manifest.json", root=".", batch=12, fetcher=
     for file in manifest["files"]:
         if not file["name"].lower().endswith(".pdf"):continue
         groups.setdefault(title_key(file["name"]),[]).append(file)
-    # Process originals before duplicate-named copies.
-    titles=sorted(groups)
+    # Filename similarity is NOT proof of identical content. Try every file;
+    # compare SHA-256 *after* download. Deprioritize prior failures so a
+    # broken Drive link cannot starve the rest of the manifest.
+    candidates=[]
+    for key in sorted(groups):
+        choices=sorted(groups[key],key=lambda f:(f["name"].lower().startswith("dupe_"),f["name"].lower()))
+        for candidate in choices:
+            candidates.append((candidate,choices))
+    candidates.sort(key=lambda pair:(state["failure_counts"].get(pair[0]["id"],0),
+                         pair[0]["name"].lower().startswith("dupe_"),title_key(pair[0]["name"]),pair[0]["name"].lower()))
     attempted=imported=exact_duplicates=0
     new_errors=[]
-    for key in titles:
-        choices=sorted(groups[key],key=lambda f:(f["name"].lower().startswith("dupe_"),f["name"].lower()))
-        candidate=choices[0]
+    for candidate,choices in candidates:
         identity=candidate["id"]
         if state["completed"].get(identity):
             old=records.get(identity)
             if old and old.get("extraction_version",0)>=EXTRACTION_VERSION:continue
-        if state["failure_counts"].get(identity,0)>=3:continue
+            # Exact duplicates may intentionally have no review record.
+            if old is None and state["completed"].get(identity):continue
         if attempted>=batch:break
         attempted+=1
         try:
@@ -56,11 +63,12 @@ def run(manifest_path="plated_drive_manifest.json", root=".", batch=12, fetcher=
                 digest=hashlib.sha256(target.read_bytes()).hexdigest()
                 if digest in hashes and identity not in records:
                     exact_duplicates+=1
+                    state.setdefault("duplicate_content",{})[identity]=digest
                 else:
                     item=inspector(target,candidate["name"],hashlib.sha256(identity.encode()).hexdigest())
                     item["source_identity"]=identity
                     item["original_filename"]=candidate["name"]
-                    item["same_title_candidates"]=[x["name"] for x in choices[1:]]
+                    item["same_title_candidates"]=[x["name"] for x in choices if x["id"] != identity]
                     item["quality"]="needs_manual_verification"
                     item["pricing_eligible"]=False
                     is_new=identity not in records
@@ -69,6 +77,7 @@ def run(manifest_path="plated_drive_manifest.json", root=".", batch=12, fetcher=
                     if is_new:imported+=1
             state["completed"][identity]=digest
             state["errors"].pop(identity,None)
+            state["failure_counts"].pop(identity,None)
         except Exception as err:
             state["failure_counts"][identity]=state["failure_counts"].get(identity,0)+1
             message=f"{candidate['name']}: {type(err).__name__}: {str(err)[:140]}"
@@ -84,7 +93,11 @@ def run(manifest_path="plated_drive_manifest.json", root=".", batch=12, fetcher=
             "attempted_this_run":attempted,"new_records_this_run":imported,
             "records_in_queue":len(records),"exact_duplicates_this_run":exact_duplicates,
             "pricing_eligible":0,"download_or_ocr_errors_this_run":new_errors[:20],
-            "blocked_after_three_failures":sum(x>=3 for x in state["failure_counts"].values()),
+            "blocked_after_three_failures":0,
+            "failures_retryable":len(state["failure_counts"]),
+            "manifest_files_attempted_or_completed":len(state["completed"])+len(state["failure_counts"]),
+            "manifest_files_completed":len(state["completed"]),
+            "distinct_source_files_in_review":len(records),
             "manual_review_required":True}
     for path,value in [(state_path,state),(queue_path,queue),(stats_path,status)]:
         path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
