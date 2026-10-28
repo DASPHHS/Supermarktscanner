@@ -78,3 +78,51 @@ def test_plated_original_four_servings_are_not_doubled():
     rows=provisional_four(["12 flour tortillas", "4 ounces salmon"],4)
     assert rows[0]["quantity_4p_source"]=="12 stuks"
     assert rows[1]["quantity_4p_source"]=="4 ounces"
+
+
+def test_bounded_page_ocr_survives_one_page_timeout(tmp_path):
+    """A heavyweight scanned page must not discard the entire recipe."""
+    import subprocess
+    from unittest.mock import patch
+    from drive_plated_sync import pdf_text
+    source=tmp_path/"oversized.pdf"
+    source.write_bytes(b"%PDF-mock")
+    invoked=[]
+    def fake_command(argv):
+        invoked.append(argv)
+        if argv[0]=="pdftotext":
+            return ""
+        if argv[0]=="pdftoppm":
+            page=argv[argv.index("-f")+1]
+            if page=="1":
+                raise subprocess.TimeoutExpired(argv,180)
+            target=Path(argv[-1]+".png")
+            target.write_bytes(b"mock")
+            return ""
+        if argv[0]=="tesseract":
+            return "INGREDIENTS\n1 pound ground beef\n2 cloves garlic"
+        raise AssertionError(argv)
+    with patch("drive_plated_sync.command",fake_command):
+        text,method=pdf_text(source)
+    assert "ground beef" in text
+    assert method=="ocr_unverified_partial"
+    assert any(a[0]=="pdftoppm" and "-scale-to" in a for a in invoked)
+
+
+def test_bounded_page_ocr_fails_explicitly_when_all_pages_unreadable(tmp_path):
+    import subprocess
+    from unittest.mock import patch
+    from drive_plated_sync import pdf_text
+    source=tmp_path/"unreadable.pdf"
+    source.write_bytes(b"%PDF-mock")
+    def fake_command(argv):
+        if argv[0]=="pdftotext":
+            return ""
+        raise subprocess.TimeoutExpired(argv,180)
+    with patch("drive_plated_sync.command",fake_command):
+        try:
+            pdf_text(source)
+        except RuntimeError as exc:
+            assert "All bounded OCR pages failed" in str(exc)
+        else:
+            raise AssertionError("An unreadable PDF must not be counted as extracted")
