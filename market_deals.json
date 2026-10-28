@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-28T15:38:22.634462+00:00",
+  "updated_at_utc": "2026-10-28T22:43:31.254857+00:00",
   "source": "PrijsProfeet API /search",
   "limitations": [
     "Food term search is a selection, not a complete assortment",
@@ -8,7 +8,7 @@
   ],
   "stores": {
     "Jumbo": {
-      "updated_at": "2026-10-28T15:38:22.634462+00:00",
+      "updated_at": "2026-10-28T22:43:31.254857+00:00",
       "deals": [
         {
           "name": "Jumbo Aardappelen Kruimig/ Stamppot 600 g",
@@ -281,6 +281,16 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "name": "Jumbo Pasta Pomodoro Verspakket 4 Personen",
+          "discount": "49.9% korting",
+          "price": 2.75,
+          "original_price": 5.49,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "pasta",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "name": "Jumbo Verse Rookworst Fijn XXL Varken 350 g",
           "discount": "49.9% korting",
           "price": 2.25,
@@ -351,6 +361,16 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "name": "Unox Extra Rijkgevuld Soep In Zak Pompoen Rode Linzen 570 ml",
+          "discount": "49.9% korting",
+          "price": 2.5,
+          "original_price": 4.99,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "pompoen",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "name": "Unox Extra Rijkgevuld Soep In Zak Tomaten Kikkererwten 570 ml",
           "discount": "49.9% korting",
           "price": 2.6,
@@ -358,6 +378,16 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "Unox Extra Rijkgevuld Soep In Zak Tomaten Pasta 570 ml",
+          "discount": "49.9% korting",
+          "price": 2.48,
+          "original_price": 4.95,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "tomaten",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -853,7 +883,7 @@
       ]
     },
     "AH": {
-      "updated_at": "2026-10-28T15:38:22.634462+00:00",
+      "updated_at": "2026-10-28T22:43:31.254857+00:00",
       "deals": [
         {
           "name": "Robijn Color kokos wasmiddel",
@@ -966,10 +996,30 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "name": "Knorr Good pasta bolognese XXL",
+          "discount": "50% korting",
+          "price": 1.4,
+          "original_price": 2.79,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "pasta",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "name": "Knorr Good pasta carbonara",
           "discount": "50% korting",
           "price": 1.09,
           "original_price": 2.19,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "pasta",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "Knorr Good pasta carbonara XXL",
+          "discount": "50% korting",
+          "price": 1.4,
+          "original_price": 2.79,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
@@ -1103,6 +1153,16 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pompoen",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "Unox Tomaten pasta soep",
+          "discount": "50% korting",
+          "price": 2.48,
+          "original_price": 4.95,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "tomaten",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1556,6 +1616,16 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "name": "Fish Tales Atlantische gerookte zalm",
+          "discount": "33.33% korting",
+          "price": 3.66,
+          "original_price": 5.49,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "zalm",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "name": "Fish Tales Wilde zalm zonder vel & graat",
           "discount": "33.33% korting",
           "price": 3.33,
@@ -1646,6 +1716,16 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "name": "AH Roerbak zalm & pangasius tuinkruiden",
+          "discount": "25% korting",
+          "price": 4.72,
+          "original_price": 6.29,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "zalm",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "name": "Ella's kitchen Kipkerrie met sperziebonen en kokos 10m+",
           "discount": "25% korting",
           "price": 2.32,
@@ -1663,6 +1743,16 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "Ella's kitchen Pasta met een heleboel groente 8m+ bio",
+          "discount": "25% korting",
+          "price": 2.32,
+          "original_price": 3.09,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "pasta",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1762,7 +1852,7 @@
           "original_price": 4.49,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "broccoli",
+          "source_term": "spinazie",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1773,6 +1863,16 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "courgette",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "AH Terra Verse pureersoep pompoen wortel",
+          "discount": "22.05% korting",
+          "price": 3.5,
+          "original_price": 4.49,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "wortel",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1803,6 +1903,16 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "Brandt & Levie Rookworst Varken",
+          "discount": "16.7% korting",
+          "price": 4.99,
+          "original_price": 5.99,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "rookworst",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1996,6 +2106,16 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "name": "AH Pasta geraspte kaas",
+          "discount": "10.39% korting",
+          "price": 2.5,
+          "original_price": 2.79,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "pasta",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "name": "AH Rijst rondjes zeezout",
           "discount": "2.37% korting",
           "price": 2.33,
@@ -2018,7 +2138,7 @@
       ]
     },
     "Lidl": {
-      "updated_at": "2026-10-28T15:38:22.634462+00:00",
+      "updated_at": "2026-10-28T22:43:31.254857+00:00",
       "deals": [
         {
           "name": "Extra mager rundergehakt",
