@@ -6,6 +6,7 @@ corrections are inferred from the image; this is original-page provenance.
 import argparse, io, json, subprocess, tempfile, zipfile
 from pathlib import Path
 from PIL import Image
+from pypdf import PdfReader, PdfWriter
 
 ASSETS={
  "hellofresh1.zip":"https://github.com/DASPHHS/Supermarktscanner/releases/download/plated-database-v1/hellofresh1.zip",
@@ -47,7 +48,7 @@ def run(archives,recipes_file,root,batch=24):
  missing=[]
  for recipe in source:
   id=recipe.get("id")
-  if id in current["recipes"]:continue
+  if id in current["recipes"] and current["recipes"][id].get("original_pdf"):continue
   filename=recipe.get("source_file","")
   choices=indexed.get(filename.casefold(),[])
   if not choices:
@@ -63,14 +64,23 @@ def run(archives,recipes_file,root,batch=24):
       chunk=fh.read(2*1024*1024)
       if not chunk:break
       out.write(chunk)
-    result={}
+    result=dict(current["recipes"].get(id,{}))
     for label,page in (("front",recipe.get("source_page_front")),("ingredients",recipe.get("source_page_ingredients"))):
      if not isinstance(page,int) or page<1:continue
      target=output/(id+"-"+label+".webp")
-     image_page(p,page,target)
+     if not target.exists():image_page(p,page,target)
      result[label]="previews/"+target.name
-    if not result:
+    if not any(k in result for k in ("front","ingredients")):
      raise ValueError("No valid source page references")
+    pages=sorted({recipe.get("source_page_front"),recipe.get("source_page_ingredients")}- {None})
+    reader=PdfReader(str(p)); writer=PdfWriter()
+    for page in pages:
+     if not isinstance(page,int) or not 1<=page<=len(reader.pages):
+      raise ValueError("Invalid source page "+str(page))
+     writer.add_page(reader.pages[page-1])
+    pdf_target=output/(id+"-origineel.pdf")
+    with pdf_target.open("wb") as out:writer.write(out)
+    result["original_pdf"]="previews/"+pdf_target.name
     current["recipes"][id]={"source_file":filename,
                             "archive":archive.name,"member":member,
                             "source_pages":{"front":recipe.get("source_page_front"),
@@ -79,10 +89,11 @@ def run(archives,recipes_file,root,batch=24):
     made+=1
   except Exception as exc:
    missing.append(filename+" ("+str(exc)[:120]+")")
-   for label in ("front","ingredients"):
-    (output/(id+"-"+label+".webp")).unlink(missing_ok=True)
+   for label in ("front","ingredients","origineel"):
+    (output/(id+"-"+label+(".pdf" if label=="origineel" else ".webp"))).unlink(missing_ok=True)
  current["metadata"]={"rendered":len(current["recipes"]),"recipes_total":len(source),
                       "missing_source_files":sorted(set(missing))[:40],
+                      "downloadable_original_pdfs":sum(bool(r.get("original_pdf")) for r in current["recipes"].values()),
                       "status":"original PDF pages rendered; OCR not manually verified"}
  manifest_file.write_text(json.dumps(current,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
  print(json.dumps({"rendered_this_run":made,"rendered_total":len(current["recipes"]),
