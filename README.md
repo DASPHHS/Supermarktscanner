@@ -44,3 +44,17 @@ python sync_prices.py
 ```
 
 **Geen prijs claimen wanneer de controle ontbreekt.** Het uiteindelijke doel is een betrouwbare ranglijst van voordelige, gezonde HelloFresh-recepten voor 2 personen × 2 dagen (4 porties) bij Lidl, Jumbo en AH.
+
+## Plated (Marc Hummel): gecontroleerde import in uitvoering
+
+De tweede bron staat in de gekoppelde Google Drive-map `Plated recipes from Marc Hummel [Download folder]`. De website ondersteunt nu een bronfilter voor **HelloFresh** en **Plated**. `plated_recipes.json` bevat voorlopig één handmatig nagekeken *voorbeeldrecord* van de zalm-kokoscurry, met ingrediënten opgeschaald van 2 naar 4 porties, bronverwijzing en expliciete kwaliteitsstatus `needs_manual_verification`. Omdat Amerikaanse maateenheden en productmatches nog niet gecontroleerd zijn, heeft dit record `pricing_eligible: false` en verschijnt er dus geen verzonnen supermarktprijs.
+
+De map bevat veel dubbele PDF-bestanden (`dupe_`) en deels gescande documenten die nog geen uitleesbare tekst opleveren. Om alles correct te importeren moeten de documenten op bestandsinhoud en recepttitel worden gededupliceerd, gescande bestanden gecontroleerd worden, hoeveelheden naar consistente metrische eenheden worden vertaald en alle ingrediënten voor vier porties gevalideerd worden. **De volledige Plated-catalogus is nog niet geïmporteerd.** Een automatische Google Drive-sync in GitHub Actions vereist aparte authenticatie en is hier nog niet geconfigureerd. Publiceer geen gekopieerde volledige receptinstructies uit derden-PDF's in de publieke repository; de website verwijst terug naar het bronbestand.
+
+### Plated-index en hercontrole, 28 oktober 2026
+
+- `plated_catalog_pending.json` inventariseert de eerste 1.000 bestanden van de gekoppelde Google Drive-map: 936 PDF's, voorlopig 861 unieke op titel gebaseerde groepen en 75 mogelijke duplicaten. **Dit is geen volledige mapinventaris en geen inhoudelijke deduplicatie.**
+- De publieke website laat voorlopige Plated-titels apart zien als **controle nodig** wanneer bron = Plated. Ze komen niet in het overzicht met volledig geprijsde gerechten.
+- `plated_import.py` kan de lokaal gedownloade PDF-map omzetten naar een overzicht met originele bestandsnamen, OCR-tekstfragmenten en review-status. Benodigd: `pdftotext`, `pdftoppm` (Poppler) en `tesseract` met Engels taalpakket. Voorbeeld: `python plated_import.py /pad/naar/plated-pdfs --out plated_import_queue.json`.
+- **Belangrijk:** deze importer leest nog geen vierportiehoeveelheden automatisch foutloos uit. OCR levert bij oude scans vaak verkeerd herkende breuken, maateenheden en tekens. Daarom blijft `pricing_eligible: false` totdat elke receptkaart zorgvuldig gecontroleerd en de Amerikaanse maateenheden naar metrisch zijn vertaald.
+- De Google Drive-connector waarmee in deze conversatie de map is gelezen, verleent niet automatisch toegang vanuit GitHub Actions. Voor echt dagelijkse import is een afzonderlijke beveiligde Drive-API-koppeling of export van de map nodig.

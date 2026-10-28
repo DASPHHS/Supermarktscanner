@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "source": "Plated recipes from Marc Hummel",
+    "status": "partial_import",
+    "imported_count": 1,
+    "notes": "Only extracted, inspected ingredients; PDF originally 2 servings, quantities doubled for 4. All units must be normalized and proofread before price ranking. Recipe steps are not republished."
+  },
+  "recipes": [
+    {
+      "id": "plated-salmon-coconut-curry",
+      "source": "Plated",
+      "title_extracted": "Salmon Coconut Curry with Roasted Cauliflower and Carrots",
+      "original_servings": 2,
+      "servings": 4,
+      "category": "vis",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "source_file": "Salmon Coconut Curry with Roasted Cauliflower and Carrots",
+      "source_page_ingredients": 1,
+      "ingredients_4p": [
+        {
+          "ingredient": "ginger",
+          "quantity_4p_source": "1/2 oz",
+          "quantity_value": "1/2",
+          "unit": "oz"
+        },
+        {
+          "ingredient": "yellow onion",
+          "quantity_4p_source": "2 stuks",
+          "quantity_value": "2",
+          "unit": "stuks"
+        },
+        {
+          "ingredient": "lite coconut milk",
+          "quantity_4p_source": "2 blikken",
+          "quantity_value": "2",
+          "unit": "blikken"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "4 tenen",
+          "quantity_value": "4",
+          "unit": "tenen"
+        },
+        {
+          "ingredient": "baby spinach",
+          "quantity_4p_source": "4 oz",
+          "quantity_value": "4",
+          "unit": "oz"
+        },
+        {
+          "ingredient": "ground turmeric",
+          "quantity_4p_source": "1/2 tl",
+          "quantity_value": "1/2",
+          "unit": "tl"
+        },
+        {
+          "ingredient": "ground cumin",
+          "quantity_4p_source": "1/2 tl",
+          "quantity_value": "1/2",
+          "unit": "tl"
+        },
+        {
+          "ingredient": "cauliflower florets",
+          "quantity_4p_source": "12 oz",
+          "quantity_value": "12",
+          "unit": "oz"
+        },
+        {
+          "ingredient": "cilantro",
+          "quantity_4p_source": "1/4 oz",
+          "quantity_value": "1/4",
+          "unit": "oz"
+        },
+        {
+          "ingredient": "jasmine rice",
+          "quantity_4p_source": "1 cup",
+          "quantity_value": "1",
+          "unit": "cup"
+        },
+        {
+          "ingredient": "carrots",
+          "quantity_4p_source": "12 oz",
+          "quantity_value": "12",
+          "unit": "oz"
+        },
+        {
+          "ingredient": "vindaloo curry paste",
+          "quantity_4p_source": "2 el",
+          "quantity_value": "2",
+          "unit": "el"
+        },
+        {
+          "ingredient": "salmon",
+          "quantity_4p_source": "20 oz",
+          "quantity_value": "20",
+          "unit": "oz"
+        },
+        {
+          "ingredient": "olive oil",
+          "quantity_4p_source": "4 el",
+          "quantity_value": "4",
+          "unit": "el"
+        },
+        {
+          "ingredient": "salt",
+          "quantity_4p_source": "naar smaak",
+          "quantity_value": "naar smaak",
+          "unit": ""
+        },
+        {
+          "ingredient": "black pepper",
+          "quantity_4p_source": "naar smaak",
+          "quantity_value": "naar smaak",
+          "unit": ""
+        }
+      ]
+    }
+  ]
+}
