@@ -1,0 +1,92 @@
+name: Originele Plated kaarten van Marc
+on:
+  push:
+    paths:
+      - 'render_plated_cards.py'
+      - '.github/workflows/plated-previews.yml'
+  schedule:
+    - cron: '20,50 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: plated-previews
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Detect new scanned Plated cards
+        id: todo
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          q=Path('plated_release_review_queue.json')
+          if not q.exists():
+              print('needed=false')
+          else:
+              rows=json.loads(q.read_text())['recipes']
+              p=Path('hellofresh/plated_preview_manifest.json')
+              existing=json.loads(p.read_text()).get('recipes',{}) if p.exists() else {}
+              needed=any('plated-release-'+r.get('source_identity','') not in existing for r in rows if r.get('source_member'))
+              print('needed='+str(needed).lower())
+          PY
+      - name: Install original PDF rendering tools
+        if: steps.todo.outputs.needed == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python -m pip install 'Pillow>=10,<13' 'pypdf>=5,<7'
+      - name: Restore cached Plated archive
+        if: steps.todo.outputs.needed == 'true'
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: plated-archive
+          key: plated-source-release-v1
+      - name: Download original Plated ZIP
+        if: steps.todo.outputs.needed == 'true' && steps.cache.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p plated-archive
+          gh release download plated-database-v1 --pattern 'Plated*.zip' --dir plated-archive --clobber
+      - name: Render source cards
+        if: steps.todo.outputs.needed == 'true'
+        run: python render_plated_cards.py --archive plated-archive/Plated*.zip --batch 20
+      - name: Publish images and PDFs with conflict-safe merge
+        if: steps.todo.outputs.needed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          mkdir -p "$RUNNER_TEMP/plated-card-results"
+          cp -a hellofresh/plated-previews "$RUNNER_TEMP/plated-card-results/"
+          cp hellofresh/plated_preview_manifest.json "$RUNNER_TEMP/plated-card-results/"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p hellofresh/plated-previews
+            cp -a "$RUNNER_TEMP/plated-card-results/plated-previews/." hellofresh/plated-previews/
+            python - <<'PY'
+          import json,os
+          from pathlib import Path
+          dest=Path('hellofresh/plated_preview_manifest.json')
+          src=Path(os.environ['RUNNER_TEMP'])/'plated-card-results/plated_preview_manifest.json'
+          new=json.loads(src.read_text())
+          old=json.loads(dest.read_text()) if dest.exists() else {'recipes':{}}
+          new['recipes']={**old['recipes'],**new['recipes']}
+          new['metadata']['rendered']=len(new['recipes'])
+          dest.write_text(json.dumps(new,ensure_ascii=False,indent=2)+'\n')
+          PY
+            git add hellofresh/plated_preview_manifest.json hellofresh/plated-previews/
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Publish original Plated source card previews'
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
