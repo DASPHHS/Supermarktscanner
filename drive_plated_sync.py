@@ -1,0 +1,142 @@
+"""Incremental Drive->Plated OCR review queue. Never approves unverified prices."""
+import argparse,hashlib,json,os,re,subprocess,tempfile,unicodedata
+from pathlib import Path
+from datetime import datetime,timezone
+from fractions import Fraction
+
+DEFAULT_FOLDER="1gXrQK_EM3QvWPMYvGDze8TmpvD0MZP3K"
+def title_key(name):
+    x=re.sub(r"^dupe_","",Path(name).stem,flags=re.I)
+    x=re.sub(r"(?:\s*\(\d+\)|_card|_ocr)+$","",x,flags=re.I)
+    x=unicodedata.normalize("NFKD",x)
+    return re.sub("[^a-z0-9]","", "".join(c for c in x if not unicodedata.combining(c)).lower())
+def command(argv):
+    p=subprocess.run(argv,capture_output=True,text=True,timeout=180)
+    if p.returncode: raise RuntimeError(argv[0]+": "+p.stderr[:200])
+    return p.stdout
+def pdf_text(path):
+    raw=command(["pdftotext","-layout",str(path),"-"])
+    if len(raw.strip())>250 and re.search(r"WHAT WE SEND|INGREDIENTS",raw,re.I):
+        return raw,"pdf_text"
+    with tempfile.TemporaryDirectory() as td:
+        command(["pdftoppm","-r","170","-f","1","-l","3","-gray","-png",str(path),str(Path(td)/"page")])
+        parts=[command(["tesseract",str(p),"stdout","-l","eng"]) for p in sorted(Path(td).glob("page-*.png"))]
+        return "\n".join(parts),"ocr_unverified"
+def serving_options(raw):
+    return sorted({int(x) for x in re.findall(r"\b([246])\s*servings?\b",raw,re.I)})
+def ingredient_lines(raw):
+    active=False; lines=[]
+    for line in raw.splitlines():
+        if re.search(r"WHAT WE SEND|INGREDIENTS\s*&\s*EQUIPMENT",line,re.I):
+            active=True; continue
+        if active and re.search(r"WHAT YOU.LL NEED|COOKING STEPS|ALLERGENS",line,re.I): break
+        if active and line.strip() and len(line.strip())<100: lines.append(line.strip())
+        if len(lines)>=80:break
+    return lines
+def provisional_four(lines,servings):
+    if servings not in (2,4):return []
+    pattern=re.compile(r"^\s*(\d+(?:[ .\/¼½¾⅓⅔⅛⅜⅝⅞]\d*)*)\s+(ounces?|oz|lbs?|cups?|tablespoons?|tbsp|teaspoons?|tsp|cloves?|cans?|pieces?|bunches?)\s+([A-Za-z].{2,65})$",re.I)
+    result=[]
+    chars={"¼":"1/4","½":"1/2","¾":"3/4","⅓":"1/3","⅔":"2/3","⅛":"1/8","⅜":"3/8","⅝":"5/8","⅞":"7/8"}
+    for line in lines:
+        m=pattern.match(line)
+        if not m:continue
+        amount=m[1]
+        for key,value in chars.items():amount=amount.replace(key," "+value)
+        try:
+            parts=amount.split()
+            quantity=sum((Fraction(p) for p in parts),Fraction(0))*Fraction(4,servings)
+        except (ValueError,ZeroDivisionError):continue
+        total=f"{quantity.numerator}" if quantity.denominator==1 else f"{quantity.numerator}/{quantity.denominator}"
+        result.append({"ingredient":m[3].strip(),"quantity_4p_source":total+" "+m[2],
+                       "original_quantity":m[1]+" "+m[2],"quality":"unverified_ocr"})
+    return result
+def inspect(pdf,name,identity):
+    raw,method=pdf_text(pdf);servings=serving_options(raw);lines=ingredient_lines(raw)
+    original=servings[0] if len(servings)==1 else None
+    return {"id":"plated-"+title_key(name)[:85],"source":"Plated",
+            "title_extracted":re.sub(r"^dupe_","",Path(name).stem,flags=re.I),
+            "source_file":name,"drive_identity_hash":identity,
+            "content_sha256":hashlib.sha256(pdf.read_bytes()).hexdigest(),
+            "ocr_method":method,"servings_original":original,"servings":4,
+            "ingredient_candidates_original":lines,"ingredients_4p":provisional_four(lines,original),
+            "quality":"needs_manual_verification","pricing_eligible":False,
+            "review_flags":["Verify original PDF ingredient columns and serving count",
+                            "Check all US units, package weights and pantry ingredients"]}
+def listing(service,folder):
+    token=None
+    while True:
+        result=service.files().list(q=f"'{folder}' in parents and trashed = false and mimeType = 'application/pdf'",
+          fields="nextPageToken,files(id,name,size,md5Checksum,modifiedTime)",pageSize=1000,pageToken=token,
+          supportsAllDrives=True,includeItemsFromAllDrives=True).execute()
+        yield from result.get("files",[])
+        token=result.get("nextPageToken")
+        if not token:break
+def download(service,id,path):
+    from googleapiclient.http import MediaIoBaseDownload
+    with path.open("wb") as dest:
+        d=MediaIoBaseDownload(dest,service.files().get_media(fileId=id,supportsAllDrives=True),chunksize=4*1024*1024)
+        finished=False
+        while not finished:_,finished=d.next_chunk(num_retries=3)
+def read(path,default):
+    p=Path(path)
+    return json.loads(p.read_text()) if p.exists() else default
+def sync(service,folder,batch=12,root=Path(".")):
+    state_path=root/"plated_sync_state.json";queue_path=root/"plated_review_queue.json";progress_path=root/"plated_sync_progress.json"
+    state=read(state_path,{"done":{},"errors":{}})
+    queue=read(queue_path,{"metadata":{},"recipes":[]})
+    existing={r["drive_identity_hash"]:r for r in queue["recipes"] if r.get("drive_identity_hash")}
+    hashes={r.get("content_sha256") for r in existing.values()}
+    allfiles=list(listing(service,folder))
+    selected=sorted(allfiles,key=lambda x:(x["name"].lower().startswith("dupe_"),x["name"].casefold()))
+    seen=set();attempted=0;imported=0;errors=[]
+    for f in selected:
+        key=title_key(f["name"])
+        if key in seen:continue
+        seen.add(key)
+        identity=hashlib.sha256(f["id"].encode()).hexdigest()
+        version=f.get("md5Checksum") or f.get("modifiedTime") or ""
+        if state["done"].get(identity)==version:continue
+        if attempted>=batch:break
+        attempted+=1
+        try:
+            with tempfile.TemporaryDirectory() as tmp:
+                pdf=Path(tmp)/"input.pdf";download(service,f["id"],pdf)
+                recipe=inspect(pdf,f["name"],identity)
+            if recipe["content_sha256"] not in hashes:
+                # Do not discard an existing manually reviewed card.
+                if existing.get(identity,{}).get("quality") in ("verified","reviewed"):
+                    recipe["review_flags"].append("Previously reviewed source changed; recheck")
+                existing[identity]=recipe;hashes.add(recipe["content_sha256"]);imported+=1
+            state["done"][identity]=version
+            state["errors"].pop(identity,None)
+        except Exception as err:
+            msg=f["name"]+": "+type(err).__name__+": "+str(err)[:160]
+            state["errors"][identity]=msg;errors.append(msg)
+    queue["recipes"]=sorted(existing.values(),key=lambda x:x["title_extracted"].casefold())
+    now=datetime.now(timezone.utc).isoformat()
+    queue["metadata"]={"source":"Plated","updated_at":now,"count":len(queue["recipes"]),
+                       "status":"unverified_extraction_not_price_eligible"}
+    progress={"updated_at":now,"total_pdf_files":len(allfiles),"unique_title_candidates":len({title_key(f["name"]) for f in allfiles}),
+              "batch_attempted":attempted,"batch_imported":imported,
+              "queue_count":len(queue["recipes"]),"price_eligible_from_queue":0,
+              "errors":errors[:20],"review_required":True}
+    for path,value in [(state_path,state),(queue_path,queue),(progress_path,progress)]:
+        path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+"\n")
+    print(json.dumps(progress,ensure_ascii=False))
+    return progress
+def drive():
+    from google.oauth2 import service_account
+    from googleapiclient.discovery import build
+    raw=os.environ.get("GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON")
+    if not raw:raise RuntimeError("GitHub secret GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON ontbreekt")
+    creds=service_account.Credentials.from_service_account_info(json.loads(raw),
+      scopes=["https://www.googleapis.com/auth/drive.readonly"])
+    return build("drive","v3",credentials=creds,cache_discovery=False)
+if __name__=="__main__":
+    p=argparse.ArgumentParser()
+    p.add_argument("--folder",default=os.environ.get("PLATED_DRIVE_FOLDER_ID") or DEFAULT_FOLDER)
+    p.add_argument("--batch",type=int,default=12)
+    args=p.parse_args()
+    if not 1<=args.batch<=30:p.error("Batch must be 1-30")
+    sync(drive(),args.folder,args.batch)
