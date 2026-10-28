@@ -1,0 +1,793 @@
+{
+  "metadata": {
+    "source": "Second-pass 300dpi Plated ingredient column OCR",
+    "review_queue_count": 205,
+    "originally_empty_ingredients": 141,
+    "rescan_with_candidate_lines": 34,
+    "attempted_this_run": 35,
+    "new_candidates_this_run": 34,
+    "errors_this_run": [],
+    "pricing_eligible": 0,
+    "status": "requires_manual_review"
+  },
+  "records": {
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Argentine Beef Empanadas (4).pdf": {
+      "status": "extracted",
+      "source_file": "Argentine Beef Empanadas (4).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Argentine Beef Empanadas (4).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "1 jar roasted red peppers",
+        "1 yellow onion",
+        "1 jalapeño",
+        "1½ pounds ground beef",
+        "1 tablespoon tomato paste",
+        "1 tablespoon adobo seasoning",
+        "2 packages empanada doughs",
+        "cheese",
+        "1 ounce parsley",
+        "2 cloves garlic"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Baba Ganoush with Roasted Root Vegetables and Za’atar Naan (2)_card.pdf": {
+      "status": "extracted",
+      "source_file": "Baba Ganoush with Roasted Root Vegetables and Za’atar Naan (2)_card.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Baba Ganoush with Roasted Root Vegetables and Za’atar Naan (2)_card.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "1 eggplant",
+        "1 clove garlic",
+        "8 ounces red beets",
+        "8 ounces carrots",
+        "1 herb mix",
+        "⅛ ounce mint",
+        "⅛ ounce parsley",
+        "2 naan breads",
+        "2 tablespoons tahini"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Baharat Chicken (4).pdf": {
+      "status": "extracted",
+      "source_file": "Baharat Chicken (4).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Baharat Chicken (4).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "4 sweet potatoes",
+        "2 tablespoons sunflower seeds",
+        "4 boneless chicken breasts",
+        "¾ teaspoon baharat spice",
+        "¼ ounce mint",
+        "¼ cup Castelvetrano olives",
+        "2 tablespoons white wine vinegar"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Balsamic-Marinated Steak (4).pdf": {
+      "status": "extracted",
+      "source_file": "Balsamic-Marinated Steak (4).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Balsamic-Marinated Steak (4).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "2 tablespoons balsamic vinegar",
+        "4 steaks",
+        "12 ounces carrots",
+        "1 pound fingerling potatoes",
+        "3 packets sour cream",
+        "2 tablespoons horseradish",
+        "¼ ounce parsley"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Barbecue Chicken.pdf": {
+      "status": "extracted",
+      "source_file": "Barbecue Chicken.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Barbecue Chicken.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "3 cloves garlic, divided",
+        "1 jalapeño",
+        "1 spice mix",
+        "¼ teaspoon ground cayenne pepper",
+        "½ teaspoon chili powder",
+        "½ teaspoon ground coriander",
+        "1 tablespoon sherry vinegar",
+        "2 tablespoons light brown sugar",
+        "12 ounces zucchini"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Barbecue Glazed Chicken Thighs.pdf": {
+      "status": "extracted",
+      "source_file": "Barbecue Glazed Chicken Thighs.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Barbecue Glazed Chicken Thighs.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "1 half stick unsalted butter",
+        "4 chicken thighs",
+        "8 ounces milk",
+        "½ cup cornmeal",
+        "½ cup flour",
+        "2 teaspoons sugar",
+        "1 teaspoon baking powder",
+        "cheese",
+        "1 scallion",
+        "3 tablespoons barbecue sauce"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Bánh Mì Turkey Burgers.pdf": {
+      "status": "extracted",
+      "source_file": "Bánh Mì Turkey Burgers.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Bánh Mì Turkey Burgers.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "2 brioche buns",
+        "3 ounces red radishes",
+        "1 herb mix",
+        "¼ ounce cilantro",
+        "¼ ounce chives, divided",
+        "1 English cucumber",
+        "1 lime, divided",
+        "1 packet soy sauce",
+        "12 ounces ground turkey"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Broccoli (3).pdf": {
+      "status": "extracted",
+      "source_file": "Beef and Broccoli (3).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Broccoli (3).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "1 cup jasmine rice",
+        "12 ounces Chinese broccoli",
+        "⅛ ounce cilantro",
+        "2 scallions, divided",
+        "1 clove garlic",
+        "3 tablespoons pine nuts",
+        "1 packet honey",
+        "¼ teaspoon crushed red pepper"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Butternut Skillet.pdf": {
+      "status": "extracted",
+      "source_file": "Beef and Butternut Skillet.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Butternut Skillet.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "1 purple sweet potato",
+        "8 ounces butternut squash",
+        "1 scallion, divided",
+        "12 ounces ground beef",
+        "1 spice mix",
+        "¼ teaspoon ancho chile powder",
+        "½ teaspoon ground cumin",
+        "½ cup corn",
+        "2 ounces shredded Monterey Jack"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Cheddar Hand Pies (4).pdf": {
+      "status": "extracted",
+      "source_file": "Beef and Cheddar Hand Pies (4).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Cheddar Hand Pies (4).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "6 5-inch squares puff pastry",
+        "5 ounces baby spinach",
+        "1 herb mix, divided",
+        "⅛ ounce mint",
+        "⅛ ounce parsley",
+        "1 lemon",
+        "1½ tablespoons Worcestershire sauce",
+        "3 ounces shredded Cheddar cheese"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Cheese Empanadas (3).pdf": {
+      "status": "extracted",
+      "source_file": "Beef and Cheese Empanadas (3).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Cheese Empanadas (3).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "1 pint grape tomatoes",
+        "1 lime",
+        "1 yellow onion, divided",
+        "4 cloves garlic, divided",
+        "1 jalapeño",
+        "1 pound ground beef",
+        "9 empanada doughs",
+        "2 ounces shredded Monterey Jack",
+        "1 parchment paper"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Roasted Carrot Ragu.pdf": {
+      "status": "extracted",
+      "source_file": "Beef and Roasted Carrot Ragu.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Roasted Carrot Ragu.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "8 ounces rainbow carrots",
+        "⅛ ounce oregano, divided",
+        "2 cloves garlic",
+        "1 slice rye bread",
+        "1 packet unsalted butter",
+        "12 ounces ground beef",
+        "6 ounces mini penne",
+        "¼ cup red wine",
+        "½ ounce grated Parmesan cheese,"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Biryani (3).pdf": {
+      "status": "extracted",
+      "source_file": "Beef Biryani (3).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Biryani (3).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "¾ cup basmati rice",
+        "¼ teaspoon ground turmeric",
+        "1 cup peas",
+        "⅛ ounce mint",
+        "¼ ounce ginger",
+        "1 red onion",
+        "1 serrano chile",
+        "2 teaspoons advieh spice mix",
+        "1 container nonfat Greek yogurt"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bolognese over Roasted Spaghetti Squash (3).pdf": {
+      "status": "extracted",
+      "source_file": "Beef Bolognese over Roasted Spaghetti Squash (3).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bolognese over Roasted Spaghetti Squash (3).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "6 ounces carrots",
+        "3½ pounds spaghetti squash",
+        "1 yellow onion",
+        "3 cloves garlic",
+        "1 spice mix",
+        "½ teaspoon dried oregano",
+        "⅓ cup red wine",
+        "8 ounces chicken stock",
+        "1 tablespoon red wine vinegar",
+        "minutes (see recipe tip). Set aside until   Cook, breaking up meat, until browned,"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bolognese with roasted zucchini steaks.pdf": {
+      "status": "extracted",
+      "source_file": "Beef Bolognese with roasted zucchini steaks.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bolognese with roasted zucchini steaks.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "12 ounces zucchini",
+        "⅛ ounce oregano",
+        "⅛ ounce basil",
+        "1 yellow onion",
+        "2 cloves garlic",
+        "12 ounces ground beef",
+        "¼ pint grape tomatoes",
+        "1 container heavy cream",
+        "½ ounce grated Parmesan cheese",
+        "chop oregano leaves, discarding stems.    up, until browned, about 5 minutes.        minutes."
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bulgogi Buns with Kimchi Slaw and Cheesy Corn (2)_card.pdf": {
+      "status": "extracted",
+      "source_file": "Beef Bulgogi Buns with Kimchi Slaw and Cheesy Corn (2)_card.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bulgogi Buns with Kimchi Slaw and Cheesy Corn (2)_card.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "2 ears corn",
+        "1 Persian cucumber",
+        "1 scallion",
+        "¼ cup kimchi",
+        "¼ cup shredded carrots",
+        "1 tablespoon rice wine vinegar",
+        "12 ounces ground beef",
+        "2 ounces shredded mozzarella cheese"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Kibbeh with Tomato-Herb Salsa and Creamy Feta (2)_card.pdf": {
+      "status": "extracted",
+      "source_file": "Beef Kibbeh with Tomato-Herb Salsa and Creamy Feta (2)_card.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Kibbeh with Tomato-Herb Salsa and Creamy Feta (2)_card.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "½ pint grape tomatoes",
+        "⅛ ounce parsley",
+        "1 lemon, divided",
+        "2 cloves garlic",
+        "1 red onion",
+        "1 tablespoon za'atar spice blend",
+        "12 ounces ground beef",
+        "1 packet sour cream",
+        "1 packet harissa",
+        "1 naan bread"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Kofta over Turmeric Rice with Spinach, Pine Nuts, and Currants.pdf": {
+      "status": "extracted",
+      "source_file": "Beef Kofta over Turmeric Rice with Spinach, Pine Nuts, and Currants.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Kofta over Turmeric Rice with Spinach, Pine Nuts, and Currants.pdf",
+      "method": "ocr_left_page_2_300dpi",
+      "ocr_ingredient_lines_unverified": [
+        "¢ 3/4 cup jasmine rice",
+        "¢ 1/4 teaspoon ground turmeric",
+        "¢ 1/8 ounce mint",
+        "e¢ 1 yellow onion",
+        "¢ 3 cloves garlic",
+        "e¢ 1 teaspoon baharat spice",
+        "¢ 1 pound ground beef",
+        "¢ 2 tablespoons pine nuts",
+        "¢ 3 ounces baby spinach",
+        "¢ 3 tablespoons currants",
+        "¢ 5 3/10 oz cups nonfat Greek yogurt",
+        "¢ olive oil",
+        "e kosher salt",
+        "¢ black pepper"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Lo Mein (4).pdf": {
+      "status": "extracted",
+      "source_file": "Beef Lo Mein (4).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Lo Mein (4).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "12 ounces Chinese broccoli",
+        "1 yellow onion",
+        "4 cloves garlic",
+        "⅔ cup dark soy sauce",
+        "⅓ cup hoisin sauce",
+        "3 tablespoons rice wine vinegar",
+        "1½ pounds ground beef",
+        "8 ounces baby corn",
+        "1 cup shredded carrots",
+        "1 tablespoon sesame seeds"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Quesadillas.pdf": {
+      "status": "extracted",
+      "source_file": "Beef Quesadillas.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Quesadillas.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "¼ ounce cilantro",
+        "1 lime",
+        "2 cloves garlic",
+        "12 ounces ground beef",
+        "2 tablespoons tomato paste",
+        "1 teaspoon Mexican spice mix",
+        "2 ounces shredded Monterey Jack",
+        "4 ounces shredded white Cheddar",
+        "cheese"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Shakshuka with Pita, Bell Pepper, and Feta.pdf": {
+      "status": "extracted",
+      "source_file": "Beef Shakshuka with Pita, Bell Pepper, and Feta.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Shakshuka with Pita, Bell Pepper, and Feta.pdf",
+      "method": "ocr_left_page_2_300dpi",
+      "ocr_ingredient_lines_unverified": [
+        "¢ 2 red bell peppers",
+        "e 1/8 ounce parsley",
+        "¢ 2 yellow onions",
+        "¢ 11/2 pounds ground beef",
+        "e¢ 1 teaspoon baharat spice",
+        "e¢ 29 ounces crushed tomatoes",
+        "e 4Apita breads",
+        "e¢ 2 ounces crumbled feta cheese",
+        "¢ olive oil",
+        "¢ 4eggs",
+        "¢ kosher salt",
+        "e black pepper"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/beef-cheeseburger.pdf": {
+      "status": "extracted",
+      "source_file": "beef-cheeseburger.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/beef-cheeseburger.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "6 brioche slider buns",
+        "4 ounces mixed lettuces",
+        "3 ounces red radishes",
+        "1 yellow onion",
+        "1 packet Dijon mustard",
+        "2 tablespoons whole-grain mustard",
+        "2 packets unsalted butter",
+        "1 tablespoon sherry vinegar",
+        "½ ounce honey",
+        "2 ounces shredded white Cheddar"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/beef-stuffed-peppers.pdf": {
+      "status": "extracted",
+      "source_file": "beef-stuffed-peppers.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/beef-stuffed-peppers.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "2 red bell peppers",
+        "3 ounces baby arugula",
+        "1 lemon",
+        "1 yellow onion",
+        "1 clove garlic",
+        "¼ cup pine nuts",
+        "12 ounces ground beef",
+        "2 ounces shredded mozzarella cheese",
+        "1 packet balsamic glaze"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR.pdf": {
+      "status": "extracted",
+      "source_file": "Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR.pdf",
+      "method": "ocr_left_page_2_300dpi",
+      "ocr_ingredient_lines_unverified": [
+        "3 ounces red radishes",
+        "% ounce fresh parsley",
+        "1% ounces pea shoots",
+        "10 ounces inside round steak",
+        "2 tablespoons balsamic vinegar",
+        "1 spice mix",
+        "Y% teaspoon garlic powder 1. Prepz",
+        "Y_ teaspoon onion powder Ri il",
+        "Y% teaspoon dried rosemary ane a",
+        "% teaspoon dried thyme Finely ch",
+        "1% tablespoons red wine vinegar stems. H",
+        "% teaspoon crushed red pepper with pap",
+        "6 flour tortillas",
+        "1 ounce crumbled goat cheese",
+        "{{ Youll Need",
+        "% cup + 1% tablespoons olive oil",
+        "kosher salt",
+        "black pepper",
+        "large resealable plastic bag",
+        "(optional)",
+        "12\" large pan",
+        "? Recipe Tips",
+        "Be sure to read through the entire",
+        "recipe before you begin cooking.",
+        "Trust us—you'll be glad you did!",
+        "Steak \"grain\" refers to the direction",
+        "of the meat's muscle fibers. Cutting",
+        "against the grain means slicing in",
+        "the opposite direction, which 4. Sear",
+        "results in tender pieces of meat.",
+        "Heat &% ti",
+        "curr recommends cooking beef to pan over",
+        ". steak fro"
+      ],
+      "quantity_candidates_unverified": [
+        {
+          "ingredient": "red radishes",
+          "quantity_4p_source": "6 ounces",
+          "original_quantity": "3 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "inside round steak",
+          "quantity_4p_source": "20 ounces",
+          "original_quantity": "10 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "balsamic vinegar",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "flour tortillas",
+          "quantity_4p_source": "12 stuks",
+          "original_quantity": "6 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "crumbled goat cheese",
+          "quantity_4p_source": "2 ounce",
+          "original_quantity": "1 ounce",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Chop Steak_OCR.pdf": {
+      "status": "extracted",
+      "source_file": "Beef_Chop Steak_OCR.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Chop Steak_OCR.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "¼ cup unsalted butter, divided                                                           \\",
+        "12 ounces baby purple potatoes",
+        "1 herb mix",
+        "⅛ ounce parsley",
+        "⅛ ounce tarragon",
+        "1 clove garlic",
+        "2 shallots, divided",
+        "12 ounces ground beef",
+        "1 teaspoon sugar"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Italian Burgers with Fresh Mozzarella and Tomato-Corn Salad_OCR.pdf": {
+      "status": "extracted",
+      "source_file": "Beef_Italian Burgers with Fresh Mozzarella and Tomato-Corn Salad_OCR.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Italian Burgers with Fresh Mozzarella and Tomato-Corn Salad_OCR.pdf",
+      "method": "ocr_left_page_2_300dpi",
+      "ocr_ingredient_lines_unverified": [
+        "Rinse all produce. Roughly chop parsley —Prehe",
+        "and oregano, discarding stems. Mince high.",
+        "garlic. Roughly chop basil leaves, trans",
+        "discarding stems. Halve mozzarella; cut pecor",
+        "/ into 2 even slices and roughly chop teasp",
+        "remainder. Thinly slice 1 tomato and your",
+        "roughly chop remainder. Shuck corn, evenl",
+        "discarding husks and silk. Slice off inch t",
+        "kernels into a medium bowl, discarding of ea",
+        "cob. Tip).",
+        "4. Make Dressing 5. Te",
+        "While burgers grill, whisk together Add «",
+        "balsamic vinegar, basil, and % chop",
+        "tablespoon olive oil in a medium bowl. dress"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Meatball Parm Heroes_OCR (1).pdf": {
+      "status": "extracted",
+      "source_file": "dupe_Beef_Meatball Parm Heroes_OCR (1).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Meatball Parm Heroes_OCR (1).pdf",
+      "method": "ocr_left_page_2_300dpi",
+      "ocr_ingredient_lines_unverified": [
+        "12 ounces broccoli florets if",
+        "Ya ounce parsley, divided",
+        "2 cloves garlic, divided",
+        "1 yellow onion",
+        "2 French bread rolls",
+        "Y ounce grated Parmesan cheese,",
+        "divided 1. Prepa",
+        "3 tablespoons breadcrumbs — |",
+        "4 ounces ricotta cheese reheat =",
+        "12 ounces ground beef, pork, and veal and cut in",
+        "Y% teaspoon crushed red pepper long stem",
+        "1 14%-ounce can fire-roasted",
+        "r |",
+        "tomatoes pa atey a",
+        "3 ounces shredded mozzarella and discarding",
+        "provolone cheese blend onion, ha",
+        "open hori"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Orange Beef with Bell Pepper and Scallion Rice_OCR (1).pdf": {
+      "status": "extracted",
+      "source_file": "dupe_Beef_Orange Beef with Bell Pepper and Scallion Rice_OCR (1).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Orange Beef with Bell Pepper and Scallion Rice_OCR (1).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "½   cup jasmine rice",
+        "1 red bell pepper",
+        "1 navel orange",
+        "2 scallions, divided",
+        "2 clo ves garlic",
+        "¼ teaspoon ground g inger",
+        "3 tablespoons gluten-free soy sauce",
+        "2 p acket s Sriracha",
+        "2 st ea ks"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Peppercorn Gravy Meatloaf_OCR.pdf": {
+      "status": "extracted",
+      "source_file": "Beef_Peppercorn Gravy Meatloaf_OCR.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Peppercorn Gravy Meatloaf_OCR.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "8 ounces dinosaur kale",
+        "1 lemon",
+        "1 yellow onion, divided",
+        "1 clove garlic",
+        "1 tablespoon Worcestershire sauce",
+        "1 teaspoon tomato paste",
+        "2 teaspoons green peppercorns",
+        "1 tablespoon flour"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Steak and Zucchini Gyros_OCR.pdf": {
+      "status": "extracted",
+      "source_file": "Beef_Steak and Zucchini Gyros_OCR.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Steak and Zucchini Gyros_OCR.pdf",
+      "method": "ocr_left_page_2_300dpi",
+      "ocr_ingredient_lines_unverified": [
+        "Rinse all produce. Mince garlic. Roughly Rinse",
+        "chop basil and oregano leaves, towe",
+        "discarding stems. Halve tomatoes. shallc",
+        "Quarter zucchini lengthwise, then cut vineg",
+        "crosswise into 1-inch pieces. Halve orege",
+        "lemon. table",
+        "shake",
+        "10-15",
+        "User",
+        "of wa",
+        "> ¢ 4 xy >",
+        "4. Cook Steak 5. W",
+        "Remove steak from marinade, allowing = While",
+        "excess to drip off, then wiping off. clean",
+        "Season on both sides with salt and Imme"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Steak Frites_OCR.pdf": {
+      "status": "extracted",
+      "source_file": "Beef_Steak Frites_OCR.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Steak Frites_OCR.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "2 russet potatoes",
+        "2 cloves garlic",
+        "1 shallot",
+        "2 steaks",
+        "5 ounces baby spinach",
+        "¼ cup white wine",
+        "¼ cup reduced-fat sour cream",
+        "1 teaspoon Maldon sea salt"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Tamarind-Glazed Steak with Crispy Curried Chickpeas_OCR.pdf": {
+      "status": "needs_manual_check",
+      "source_file": "Beef_Tamarind-Glazed Steak with Crispy Curried Chickpeas_OCR.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Tamarind-Glazed Steak with Crispy Curried Chickpeas_OCR.pdf",
+      "method": "ocr_left_page_2_300dpi",
+      "ocr_ingredient_lines_unverified": [],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Thai Beef Lettuce Wraps_OCR.pdf": {
+      "status": "extracted",
+      "source_file": "Beef_Thai Beef Lettuce Wraps_OCR.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Thai Beef Lettuce Wraps_OCR.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "½ cup jasmine rice",
+        "½ ounce ginger",
+        "3 tablespoons roasted salted peanuts",
+        "¼ cup water chestnuts",
+        "½ ounce basil",
+        "⅛ ounce cilantro",
+        "12 ounces ground beef",
+        "1 packet soy sauce",
+        "(see Recipe Tip). Remove pot from heat        discarding stems and keeping herbs"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_White Cheddar Cheeseburgers with Onion Rings_OCR (1).pdf": {
+      "status": "extracted",
+      "source_file": "Beef_White Cheddar Cheeseburgers with Onion Rings_OCR (1).pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_White Cheddar Cheeseburgers with Onion Rings_OCR (1).pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "1 head little gem lettuce",
+        "2 yellow onions",
+        "2 tablespoons flour",
+        "½ cup panko breadcrumbs",
+        "12 ounces ground beef",
+        "1 ounce shredded white Cheddar",
+        "2 packets Dijon mustard",
+        "2 packets ketchup",
+        "¼ teaspoon smoked paprika"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    },
+    "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beyond Meat® Tacos.pdf": {
+      "status": "extracted",
+      "source_file": "Beyond Meat® Tacos.pdf",
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beyond Meat® Tacos.pdf",
+      "method": "native_pdf_page_2",
+      "ocr_ingredient_lines_unverified": [
+        "¼ pint grape tomatoes",
+        "3 mini sweet peppers",
+        "1 lime",
+        "⅛ ounce cilantro",
+        "1 red onion",
+        "1 serrano chile",
+        "2 ounces sour cream",
+        "protein",
+        "1 tablespoon chorizo spice mix",
+        "roughly chop. Halve lime. Finely mince      small bowl, stir sour cream, juice of",
+        "cilantro leaves and stems. Peel red         remaining lime, half of cilantro, ⅛"
+      ],
+      "quantity_candidates_unverified": [],
+      "pricing_eligible": false,
+      "requires_original_card_review": true
+    }
+  }
+}
