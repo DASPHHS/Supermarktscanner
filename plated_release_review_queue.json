@@ -2,10 +2,10 @@
   "metadata": {
     "source": "Plated GitHub Release",
     "archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
-    "updated_at_utc": "2026-10-28T15:26:11.686238+00:00",
-    "count": 58,
+    "updated_at_utc": "2026-10-28T18:11:55.215273+00:00",
+    "count": 116,
     "status": "manual_review_required",
-    "imported": 58
+    "imported": 116
   },
   "recipes": [
     {
@@ -2668,6 +2668,2511 @@
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Broccoli Cheddar Calzones with Marinara Sauce.pdf",
       "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
       "source_member": "Plated recipes from Marc Hummel [Download folder]/Broccoli Cheddar Calzones with Marinara Sauce.pdf"
+    },
+    {
+      "id": "plated-brownbuttergnocchiwithbutternutsquash",
+      "source": "Plated",
+      "title_extracted": "Brown Butter Gnocchi with Butternut Squash",
+      "source_file": "Brown Butter Gnocchi with Butternut Squash.pdf",
+      "drive_identity_hash": "9d31651859624acaff9134cca92c07555405b72b2fce00e189d90c28adcbce2d",
+      "content_sha256": "ee7f3f37adbed55e9276d2dda87ea8e75197904e7c722bacf5bbb300065500ce",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces butternut squash",
+        "5 ounces baby kale",
+        "⅛ ounce sage",
+        "1 clove garlic",
+        "2 ounces walnuts",
+        "2 half sticks unsalted butter",
+        "2 pounds gnocchi",
+        "divided"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brown Butter Gnocchi with Butternut Squash.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Brown Butter Gnocchi with Butternut Squash.pdf"
+    },
+    {
+      "id": "plated-brownbutterquinoaandwhitebeansalad",
+      "source": "Plated",
+      "title_extracted": "Brown Butter Quinoa and White Bean Salad",
+      "source_file": "Brown Butter Quinoa and White Bean Salad.pdf",
+      "drive_identity_hash": "7dcc480a04b9661c9a6048d6ed369270e819e97ef8126e2823d4a00a74a741dd",
+      "content_sha256": "48cdc48165820081c5014868e15fcaff9655de5d006aa23fe460f6a820ae6f1c",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 rounds Brie cheese",
+        "½ cup quinoa",
+        "2 heads red endive",
+        "1 can white beans",
+        "1 shallot",
+        "2 tablespoons Champagne vinegar",
+        "¼ cup walnuts",
+        "3 ounces baby spinach"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brown Butter Quinoa and White Bean Salad.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Brown Butter Quinoa and White Bean Salad.pdf"
+    },
+    {
+      "id": "plated-brownsugarchilibaconwithfriedeggsandpotatohash",
+      "source": "Plated",
+      "title_extracted": "Brown Sugar-Chili Bacon with Fried Eggs and Potato Hash (2)_card(1)(1)",
+      "source_file": "Brown Sugar-Chili Bacon with Fried Eggs and Potato Hash (2)_card(1)(1).pdf",
+      "drive_identity_hash": "7199a868d840cb53b9f7c211520216c2fba8813d9ad6fb7a96864135b95fc125",
+      "content_sha256": "07842e77334fd697a0983490a36b3ebe8de07af1c9d41ca8a83f93be74de0cdc",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces red-skinned potatoes",
+        "1 sweet potato",
+        "2 tablespoons light brown sugar",
+        "¼ teaspoon chili powder",
+        "¼ teaspoon ground cayenne pepper",
+        "8 ounces bacon",
+        "1 herb mix",
+        "⅛ ounce rosemary",
+        "2 cloves garlic",
+        "1 packet unsalted butter"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "red-skinned potatoes",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sweet potato",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "light brown sugar",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "bacon",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "herb mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "4 cloves",
+          "original_quantity": "2 cloves",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "unsalted butter",
+          "quantity_4p_source": "2 packet",
+          "original_quantity": "1 packet",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brown Sugar-Chili Bacon with Fried Eggs and Potato Hash (2)_card(1)(1).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Brown Sugar-Chili Bacon with Fried Eggs and Potato Hash (2)_card(1)(1).pdf"
+    },
+    {
+      "id": "plated-buffalochickenmeatballsliders",
+      "source": "Plated",
+      "title_extracted": "Buffalo Chicken Meatball Sliders",
+      "source_file": "Buffalo Chicken Meatball Sliders.pdf",
+      "drive_identity_hash": "e6794781a6e2627ce17fa01d5519c80b7b931dd4ef4771f98195e711c3890a4a",
+      "content_sha256": "fc07edf219c01ab5935cdd3ac7a540de1cd82c88da4af2d9e1f69f901dc850ec",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 brioche slider buns",
+        "2 cloves garlic",
+        "1½ pounds carrots",
+        "½ ounce chives, divided",
+        "4 ounces mayonnaise",
+        "1 lemon",
+        "4 ounces shredded mozzarella cheese",
+        "10 packets Sriracha, divided"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Buffalo Chicken Meatball Sliders.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Buffalo Chicken Meatball Sliders.pdf"
+    },
+    {
+      "id": "plated-buffalochickensliderswithgreekyogurtranch",
+      "source": "Plated",
+      "title_extracted": "Buffalo Chicken Sliders with Greek Yogurt Ranch",
+      "source_file": "Buffalo Chicken Sliders with Greek Yogurt Ranch.pdf",
+      "drive_identity_hash": "2c24d14e8a15bde6d9042fb363082270546363a1eb550f43e18495ec8f06b373",
+      "content_sha256": "114ebfecd9cad760355e0dfa008019fd8d3b7975a659037f39ec501bc3ddeef5",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 cloves garlic",
+        "1 lemon",
+        "⅛ ounce fresh chives",
+        "1 head butter lettuce",
+        "12 ounces boneless skinless",
+        "1 ounce crumbled blue cheese",
+        "Greek yogurt",
+        "and no longer pink, about 6 minutes per   medium bowl, whisk together"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "4 cloves",
+          "original_quantity": "2 cloves",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "head butter lettuce",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "boneless skinless",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "crumbled blue cheese",
+          "quantity_4p_source": "2 ounce",
+          "original_quantity": "1 ounce",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Buffalo Chicken Sliders with Greek Yogurt Ranch.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Buffalo Chicken Sliders with Greek Yogurt Ranch.pdf"
+    },
+    {
+      "id": "plated-burgersaupoivre",
+      "source": "Plated",
+      "title_extracted": "Burgers au Poivre",
+      "source_file": "Burgers au Poivre.pdf",
+      "drive_identity_hash": "5a21949be9799677aa88ac6c83c89afc955fb1bcfe9250cfa7e4e2dad88cf02e",
+      "content_sha256": "34af08876fe07686eab380cbeeceba4f64ea17d4fba5458707cb2f2ba7368853",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 russet potato",
+        "⅛ ounce thyme",
+        "1 shallot, divided",
+        "2 hamburger buns",
+        "1 packet truffle zest",
+        "12 ounces ground beef",
+        "½ teaspoon cracked black peppercorns",
+        "1 container heavy cream",
+        "1 ounce baby arugula",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Burgers au Poivre.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Burgers au Poivre.pdf"
+    },
+    {
+      "id": "plated-butterbasedtilapia",
+      "source": "Plated",
+      "title_extracted": "Butter-Based Tilapia",
+      "source_file": "Butter-Based Tilapia.pdf",
+      "drive_identity_hash": "972740408aaddff525ef5add45f30fec7827779f69adcb53a387021a46163cd1",
+      "content_sha256": "7515e5428c8523894ca8874f7475b1135207efdc5a653d2f5b3ad986242ba07e",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "3 packets unsalted butter",
+        "3 ounces baby arugula",
+        "8 ounces red-skinned potatoes",
+        "1 bulb fennel",
+        "3 ounces red grapes",
+        "⅛ ounce tarragon, divided",
+        "1 clove garlic"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Butter-Based Tilapia.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Butter-Based Tilapia.pdf"
+    },
+    {
+      "id": "plated-butterbastedsteakwithsauteedescaroleandwhitebeans",
+      "source": "Plated",
+      "title_extracted": "Butter-Basted Steak with Sauteed Escarole and White Beans",
+      "source_file": "Butter-Basted Steak with Sauteed Escarole and White Beans.pdf",
+      "drive_identity_hash": "7083d29e096740a7237d00826b0fba2025573018683731aaaea7b1e67b69c94b",
+      "content_sha256": "6d717bd0c6a42d32a086894410c8611c121619c063236099d82fe3bc2ddfe8f4",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 head escarole",
+        "1 lemon",
+        "⅛ ounce thyme",
+        "2 cloves garlic",
+        "2 steaks",
+        "2 packets unsalted butter",
+        "1 can white beans"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Butter-Basted Steak with Sauteed Escarole and White Beans.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Butter-Basted Steak with Sauteed Escarole and White Beans.pdf"
+    },
+    {
+      "id": "plated-butternutsquashandblackbeantacoswithcandiedpumpkinseeds8466",
+      "source": "Plated",
+      "title_extracted": "butternut squash and black bean tacos with candied pumpkin seeds-8466",
+      "source_file": "butternut squash and black bean tacos with candied pumpkin seeds-8466.pdf",
+      "drive_identity_hash": "58a777ec6331b74b882977ddc879c0e7e223ed8f8080d31169a213f116b9be73",
+      "content_sha256": "ac9e4e4cb8c187179c052aceb966ffc28db6038bb529d997f8df3ba4de8ca21b",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 can black beans",
+        "1 lime",
+        "8 ounces butternut squash",
+        "⅛ ounce cilantro",
+        "1 clove garlic",
+        "1 teaspoon ground cumin",
+        "¼ teaspoon ancho chile powder",
+        "6 corn tortillas",
+        "2 tablespoons pumpkin seeds",
+        "1 packet turbinado sugar",
+        "garlic, 1 tablespoon olive oil, ¼                and beans have roasted for 10 minutes,"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/butternut squash and black bean tacos with candied pumpkin seeds-8466.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/butternut squash and black bean tacos with candied pumpkin seeds-8466.pdf"
+    },
+    {
+      "id": "plated-butternutsquashtostadaswithcrispymushroomsandcabbagecarrotslaw4419",
+      "source": "Plated",
+      "title_extracted": "butternut squash tostadas with crispy mushrooms and cabbage-carrot slaw-4419",
+      "source_file": "butternut squash tostadas with crispy mushrooms and cabbage-carrot slaw-4419.pdf",
+      "drive_identity_hash": "f4109d57c9e93f6c04ac01489f2446f5d9e7a9ca68bc28e1cbf45050feab9b1e",
+      "content_sha256": "3876a17e03889c7ec50fc46fb662006fc5f260b1256eba056295967dfecbc0bc",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces cremini mushrooms",
+        "⅛ ounce cilantro",
+        "1 lime",
+        "2 scallions",
+        "1 clove garlic",
+        "12 ounces butternut squash",
+        "1 teaspoon ground cumin",
+        "1 teaspoon smoked paprika",
+        "1 slaw mix",
+        "1½ cups shredded red cabbage",
+        "1 ounce shredded Monterey Jack",
+        "cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/butternut squash tostadas with crispy mushrooms and cabbage-carrot slaw-4419.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/butternut squash tostadas with crispy mushrooms and cabbage-carrot slaw-4419.pdf"
+    },
+    {
+      "id": "plated-cacioepepegnocchi",
+      "source": "Plated",
+      "title_extracted": "Cacio e Pepe Gnocchi",
+      "source_file": "Cacio e Pepe Gnocchi.pdf",
+      "drive_identity_hash": "a6053de96ba8a2281c04d86bd0e440736e3c08b7fbacc27efba561ef19cea47c",
+      "content_sha256": "573248dd7e313389a9176c18cadcc1a5917b4844c3b51035a051b3f326b50952",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 pound asparagus",
+        "⅛ ounce mint",
+        "2 shallots",
+        "4 cloves garlic",
+        "½ cup white wine",
+        "2 cups peas",
+        "6 packets unsalted butter",
+        "4 ounces grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cacio e Pepe Gnocchi.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cacio e Pepe Gnocchi.pdf"
+    },
+    {
+      "id": "plated-capresechickenandquinoabowls",
+      "source": "Plated",
+      "title_extracted": "Caprese Chicken and Quinoa Bowls",
+      "source_file": "Caprese Chicken and Quinoa Bowls.pdf",
+      "drive_identity_hash": "f577c2e656f1605798b58926f4694c8af8809ef81026733495bf701aff9e26dd",
+      "content_sha256": "3b478e528d9f626a4b43cbbd5793c055d2cacbb1d8787016d9af3ed52fe8bb86",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ cup quinoa",
+        "1 container chicken stock",
+        "½ tablespoon tomato paste",
+        "2 boneless chicken breasts",
+        "2 ounces baby spinach",
+        "⅛ ounce basil, divided",
+        "4 ounces fresh mozzarella cheese",
+        "½ ounce grated Parmesan cheese,",
+        "divided"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Caprese Chicken and Quinoa Bowls.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Caprese Chicken and Quinoa Bowls.pdf"
+    },
+    {
+      "id": "plated-capresechickenwspinachsalad",
+      "source": "Plated",
+      "title_extracted": "Caprese Chicken w spinach salad",
+      "source_file": "Caprese Chicken w spinach salad.pdf",
+      "drive_identity_hash": "ad577cdd9e0465d7ee2b2512f8ec3dd84c8c134549411bbc03007f16cbf1c73b",
+      "content_sha256": "19f7b858b745f90649fac79a6d8d86c649761e34f0a6cf65a99c223c06c34eb7",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¼ ounce basil, divided",
+        "½ pint cherry tomatoes",
+        "4 ounces fresh mozzarella",
+        "1 shallot",
+        "2 boneless skinless chicken breasts",
+        "1 tablespoon Champagne vinegar",
+        "1 packet Dijon mustard",
+        "½ cup panko breadcrumbs",
+        "1 ounce grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Caprese Chicken w spinach salad.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Caprese Chicken w spinach salad.pdf"
+    },
+    {
+      "id": "plated-caramelizedcauliflowertagliatellewithhazelnutpesto",
+      "source": "Plated",
+      "title_extracted": "Caramelized Cauliflower Tagliatelle with Hazelnut Pesto",
+      "source_file": "Caramelized Cauliflower Tagliatelle with Hazelnut Pesto.PDF",
+      "drive_identity_hash": "ddfe22f8319ea0845dab9031a03b7a6edae1a76193a36b79383234f4e9ca15eb",
+      "content_sha256": "791216c4e34281363edfa7dea386ef0a6242829bef2646893a192cb308cb17e0",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "Preheat oven to 450°F. Bring a large",
+        "pot of water to a boil over high heat.",
+        "Rinse cauliflower and break into 1-inch",
+        "florets. Rinse parsley and finely chop .",
+        "leaves, discarding stems. Halve lemon.",
+        "Rinse arugula.",
+        "2. Roast Cauliflower",
+        "On a baking sheet, toss cauliflower with",
+        "1'4 tablespoons olive oil, /% teaspoon",
+        "kosher salt, and pepper. Arrange ina",
+        "single layer, transfer to bottom rack of",
+        "oven, and roast until browned and",
+        "tender, 15-18 minutes (see Recipe Tip).",
+        "3. Make Pesto",
+        "While cauliflower roasts, add hazelnuts",
+        "to a medium pan over medium heat.",
+        "Toast until golden and fragrant, 5-7",
+        "minutes. Remove from pan and finely",
+        "chop. Add to a large bowl along with",
+        "parsley, juice of % lemon, and 3",
+        "tablespoons olive oil. Stir to combine.",
+        "Alternatively, add to a blender and",
+        "blend until smooth. Taste and add salt",
+        "and pepper as needed. Use remaining",
+        "lemon to brighten a glass of water.",
+        "4. Cook Tagliatelle",
+        "Add tagliatelle and a generous pinch",
+        "salt to pot of boiling water and cook",
+        "until al dente, 3-5 minutes. Reserve 4",
+        "cup pasta cooking water, then drain",
+        "pasta.",
+        "5. Season Tagliatelle",
+        "Add tagliatelle to bowl with pesto and",
+        "stir to combine. Add reserved pasta",
+        "cooking water, 1 tablespoon at a time,",
+        "until sauce is thick and clings to",
+        "noodles. Add roasted cauliflower and",
+        "arugula and stir until arugula is wilted.",
+        "Taste and add more salt and pepper as",
+        "needed.",
+        "6. Plate Tagliatelle",
+        "Garnish tagliatelle with pecorino and",
+        "enjoy on your favorite plates.",
+        "Join the Plated community - post your",
+        "#platedpics this week! OH ¥",
+        "Q- RECIPE TIPS",
+        "Be sure to read through the entire recipe",
+        "before you begin cooking. Trust us—you'll",
+        "be glad you did!",
+        "Arrange your cauliflower in a single layer",
+        "on the baking sheet and space the florets",
+        "apart as much as possible—doing so will",
+        "help them roast instead of steam.",
+        "1% pounds cauliflower",
+        "Ye bunch parsley",
+        "1 lemon",
+        "%& cup arugula",
+        "%& cup hazelnuts",
+        "8% ounces tagliatelle",
+        "2 tablespoons grated pecorino cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Caramelized Cauliflower Tagliatelle with Hazelnut Pesto.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Caramelized Cauliflower Tagliatelle with Hazelnut Pesto.PDF"
+    },
+    {
+      "id": "plated-caramelizedonionburgers",
+      "source": "Plated",
+      "title_extracted": "Caramelized Onion Burgers",
+      "source_file": "Caramelized Onion Burgers.pdf",
+      "drive_identity_hash": "cd1d6977f3e156e83533b23b3901d4ccc24de932e9d41927e0797142f9afe517",
+      "content_sha256": "04f889f12d9870d6c6c2def3859fd77e5ec3370054f3d736dfb995c81bdfdc95",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 red onion",
+        "1 clove garlic",
+        "½ pint grape tomatoes",
+        "¼ teaspoon smoked paprika",
+        "1 tablespoon vegetarian Worcestershire",
+        "12 ounces ground beef",
+        "2 hamburger buns",
+        "2 packets unsalted butter",
+        "1 tablespoon white wine vinegar",
+        "3 ounces mixed lettuces"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Caramelized Onion Burgers.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Caramelized Onion Burgers.pdf"
+    },
+    {
+      "id": "plated-caribbeanturkeyburgers",
+      "source": "Plated",
+      "title_extracted": "Caribbean Turkey Burgers (3)",
+      "source_file": "Caribbean Turkey Burgers (3).pdf",
+      "drive_identity_hash": "f1a69395e596e67744a915b71545d810e7a86ddcab39aeb334f3f892b917ed84",
+      "content_sha256": "21bf9de3c3a8430aa0a422ad8cf2fe2029a073e11610c1fa50040f552f66b304",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "3 Kaiser rolls",
+        "1 pound yuca",
+        "⅛ ounce cilantro, divided",
+        "1 lime, divided",
+        "¾ cup pineapple",
+        "1 red onion, divided",
+        "2 ounces mayonnaise",
+        "2 teaspoons Jamaican jerk seasoning"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Caribbean Turkey Burgers (3).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Caribbean Turkey Burgers (3).pdf"
+    },
+    {
+      "id": "plated-carneasadasopeswithavocadocornsalsaandrefriedblackbeans",
+      "source": "Plated",
+      "title_extracted": "Carne Asada Sopes with Avocado-Corn Salsa and Refried Black Beans",
+      "source_file": "Carne Asada Sopes with Avocado-Corn Salsa and Refried Black Beans.pdf",
+      "drive_identity_hash": "c384f3e4e9aeebc525ca327ff75e5b880a857d4df28cb0607dc24c8630aedb58",
+      "content_sha256": "437285da02d70d1de1a1e9f5fdc07fa1514cc63b48f1f3b8e1ad6f9fb0bb5976",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 pint grape tomatoes",
+        "2 avocados",
+        "1/4 ounce cilantro",
+        "3 limes",
+        "4 cloves garlic",
+        "2 red onions",
+        "4 steaks",
+        "1 teaspoon ancho chile powder",
+        "2 teaspoons ground cumin",
+        "1 teaspoon garlic powder",
+        "1 teaspoon dried Mexican oregano",
+        "1 teaspoon onion powder",
+        "2 teaspoons sweet paprika",
+        "1 teaspoon crushed red pepper",
+        "1 15-ounce can black beans",
+        "2 cups masa harina",
+        "1 cup corn",
+        "1/3 cup queso fresco",
+        "olive oil",
+        "kosher salt",
+        "black pepper",
+        "Search Recipes Q",
+        "Cooking Instructions",
+        "Step 1",
+        "Preheat oven to 450°F. Rinse and halve tomatoes. Halve avocados",
+        "and discard pits. Using a spoon, carefully scoop out flesh, discarding",
+        "skins. Cut into .5-inch pieces. Place in a medium bowl. Rinse",
+        "cilantro; roughly chop leaves, discarding stems. Halve 2 limes",
+        "Quarter remaining lime. Mince garlic. Peel onion and cut into small",
+        "dice. Pat steaks dry and rub with half of spice mix, 1 teaspoon salt,",
+        "and pepper. Set aside.",
+        "Step 3",
+        "Using your hands, form dough into 8 equal balls, then flatten each",
+        "to form a smooth disk, about .25-inch thick. Divide doughs between",
+        "prepared baking sheets. Working 1 at a time, pinch and crimp edges",
+        "all the way around to form a .5-inch rim (the sopes should resemble",
+        "small pie dishes), Rub sopes all over with olive oil and bake until",
+        "lightly browned, 18-20 minutes. Then, remove from oven, sprinkle",
+        "with salt, and divide among serving plates.",
+        "Step 5",
+        "While beans cook, heat 1 tablespoon olive oil in a large pan over",
+        "medium-high heat. When oil is shimmering, add corn. Cook until",
+        "lightly browned, 2-3 minutes, then transfer to bowl with salsa. Stir",
+        "to combine. Heat 2 tablespoons olive oil in pan from corn over",
+        "medium-high heat. When oil is shimmering, add steaks. Sear until",
+        "browned and medium rare, 4-5 minutes per side. Transfer steaks to",
+        "a cutting board. Set aside to rest, about 5 minutes.",
+        "& Sinin/ip Vv GQ",
+        "Step 2",
+        "Add tomatoes, half of cilantro, juice of 2 limes, .5 cup diced onion,",
+        "1 tablespoon olive oil, .25 teaspoon salt, and pepper to bow! with",
+        "avocado, stir to combine, and set aside. Rub 2 baking sheets with 1",
+        "tablespoon olive oil each. In a separate medium bowl, combine",
+        "masa harina and .5 teaspoon salt. Slowly stir in 1.33 cups water",
+        "until fully incorporated. Using your hands, knead dough until smooth",
+        "and holds together.",
+        "Step 4",
+        "While sopes bake, heat 1 tablespoon olive oil in a small pot over",
+        "medium heat. When oil is shimmering, add remaining onion. Cook",
+        "until soft, 5 minutes. Add garlic and remaining spice mix. Cook,",
+        "stirring, until fragrant, 1 minute. Add beans and .5 cup water.",
+        "Increase heat to high. Bring to a boil. Reduce heat to medium. Cook,",
+        "stirring, until thick, 15-17 minutes. Remove from heat. Using a fork,",
+        "mash until smooth. Stir in .75 teaspoon salt and pepper to",
+        "combine.",
+        "Step 6",
+        "Once steaks have rested, cut against the grain into .25-inch slices",
+        "(see Recipe Tip). Top sopes on serving plates with refried beans,",
+        "then corn salsa, then steak. Garnish with queso fresco and",
+        "remaining cilantro and serve with lime wedges for squeezing over.",
+        "Dig in!",
+        "refrigerator.",
+        "°@,+N @200 41-"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "grape tomatoes",
+          "quantity_4p_source": "1 pint",
+          "original_quantity": "1 pint",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "avocados",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cilantro",
+          "quantity_4p_source": "1/4 ounce",
+          "original_quantity": "1/4 ounce",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "limes",
+          "quantity_4p_source": "3 stuks",
+          "original_quantity": "3 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "4 cloves",
+          "original_quantity": "4 cloves",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red onions",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "steaks",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "4 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ancho chile powder",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ground cumin",
+          "quantity_4p_source": "2 teaspoons",
+          "original_quantity": "2 teaspoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic powder",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "dried Mexican oregano",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "onion powder",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sweet paprika",
+          "quantity_4p_source": "2 teaspoons",
+          "original_quantity": "2 teaspoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "crushed red pepper",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "masa harina",
+          "quantity_4p_source": "2 cups",
+          "original_quantity": "2 cups",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "corn",
+          "quantity_4p_source": "1 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "queso fresco",
+          "quantity_4p_source": "1/3 cup",
+          "original_quantity": "1/3 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "olive oil, .25 teaspoon salt, and pepper to bow! with",
+          "quantity_4p_source": "1 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Carne Asada Sopes with Avocado-Corn Salsa and Refried Black Beans.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Carne Asada Sopes with Avocado-Corn Salsa and Refried Black Beans.pdf"
+    },
+    {
+      "id": "plated-carneasadatacos",
+      "source": "Plated",
+      "title_extracted": "Carne Asada Tacos (3)",
+      "source_file": "Carne Asada Tacos (3).pdf",
+      "drive_identity_hash": "ad75d710f4395c005bbbb04e7e75ae977c94280e078acb8ed0c223aedc59852c",
+      "content_sha256": "6b36a563c7acc74914cf9d54b90ab01e5ec3b50aa1cdd7b5c00a4ead435c1709",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 limes, divided",
+        "2 cloves garlic",
+        "1 spice mix",
+        "¼ teaspoon chili powder",
+        "¼ teaspoon chipotle powder",
+        "¼ teaspoon ground cumin",
+        "⅛ teaspoon smoked paprika",
+        "2 tomatoes",
+        "⅛ ounce cilantro, divided",
+        "1 avocado"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Carne Asada Tacos (3).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Carne Asada Tacos (3).pdf"
+    },
+    {
+      "id": "plated-cashewchickenwithbokchoyandgarlicrice",
+      "source": "Plated",
+      "title_extracted": "Cashew Chicken with Bok Choy and Garlic Rice",
+      "source_file": "Cashew Chicken with Bok Choy and Garlic Rice.pdf",
+      "drive_identity_hash": "55bfdd4eecae3bb2e7cfe252f97d6e08d50abb1821dcdfaaadba4b45b3ca048f",
+      "content_sha256": "e373ed4e5ae77ff42ae971873d99b3b61a9921e1cf89a630cee51cf1f25df99f",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¾ cup jasmine rice",
+        "8 ounces baby bok choy, divided",
+        "¼ cup water chestnuts",
+        "3 tablespoons roasted salted cashews,",
+        "divided",
+        "3 cloves garlic, divided",
+        "1 tablespoon sesame oil",
+        "1 tablespoon rice wine vinegar",
+        "2 packets gluten-free soy sauce"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cashew Chicken with Bok Choy and Garlic Rice.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cashew Chicken with Bok Choy and Garlic Rice.pdf"
+    },
+    {
+      "id": "plated-cavatappiallnorma",
+      "source": "Plated",
+      "title_extracted": "Cavatappi all Norma",
+      "source_file": "Cavatappi all Norma.pdf",
+      "drive_identity_hash": "83a4a4b392de86e8d85db2b4c590ef080243b662859557efd4ed022bedf8e05c",
+      "content_sha256": "72e371842187c1a8d41a2e3217bf63fbd9698da985be317928b0c3eeb4ca7650",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 eggplants",
+        "1½ pints grape tomatoes",
+        "2 yellow onions",
+        "3 cloves garlic",
+        "½ teaspoon crushed red pepper",
+        "1 can tomato purée",
+        "1 pound cavatappi"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cavatappi all Norma.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cavatappi all Norma.pdf"
+    },
+    {
+      "id": "plated-charsiuporkbunswithgarliccashewbroccolini",
+      "source": "Plated",
+      "title_extracted": "Char Siu Pork Buns with Garlic-Cashew Broccolini (2)_card",
+      "source_file": "Char Siu Pork Buns with Garlic-Cashew Broccolini (2)_card.pdf",
+      "drive_identity_hash": "1763f89dc41fe217c854c73695da10f93b801598065ccb0fa2e5a26598d77d8e",
+      "content_sha256": "386b16959baa240428186a288c330386fe6ee8a24619e1f0809851cd073b0e74",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces pizza dough",
+        "8 ounces broccolini",
+        "2 tablespoons roasted salted cashews",
+        "2 cloves garlic",
+        "10 ounces ground pork",
+        "2 packets ketchup",
+        "1 tablespoon hoisin sauce",
+        "2 tablespoons flour",
+        "1 tablespoon toasted sesame seeds",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Char Siu Pork Buns with Garlic-Cashew Broccolini (2)_card.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Char Siu Pork Buns with Garlic-Cashew Broccolini (2)_card.pdf"
+    },
+    {
+      "id": "plated-charredlemonchicken",
+      "source": "Plated",
+      "title_extracted": "Charred Lemon Chicken",
+      "source_file": "Charred Lemon Chicken.pdf",
+      "drive_identity_hash": "4fb6811c0e0a71bf146a41d8e43bd426f4e6100207549df8b46cb975b8a43372",
+      "content_sha256": "677bfb8f3a60fa5f19ecab2ff1b92dedd6f30f8cf0aa69518431569b3fc80b01",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¼ ounce oregano, divided",
+        "6 ounces sun-dried tomatoes, divided",
+        "2 lemons",
+        "3 cloves garlic",
+        "4 boneless skinless chicken breasts",
+        "12 ounces angel hair pasta",
+        "½ cup white wine"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Charred Lemon Chicken.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Charred Lemon Chicken.pdf"
+    },
+    {
+      "id": "plated-cheddarapplegrilledcheese",
+      "source": "Plated",
+      "title_extracted": "Cheddar Apple Grilled Cheese",
+      "source_file": "Cheddar Apple Grilled Cheese.pdf",
+      "drive_identity_hash": "6747cd2e1d41b3dd3f2d8ab5aeb73cc60215d54e2a8f1f6fed22b3a5d5421973",
+      "content_sha256": "faf31e06daac63ec8e910a43a8d53a29bee9942b8cb47ab6f5f91c721516a183",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "1 Gala apple",
+        "1 spice mix",
+        "⅛ teaspoon ground cardamom",
+        "⅛ teaspoon cinnamon",
+        "⅛ teaspoon ginger",
+        "½ teaspoon sugar",
+        "2 packets mayonnaise",
+        "4 slices sourdough bread",
+        "5 ounces baby kale mix",
+        "Reduce heat to medium and simmer,            tablespoons olive oil until fully",
+        "¼ cup pumpkin seeds",
+        "breaking up apple with a spoon, until        combined. Set aside.",
+        "compote is smooth, about 3 minutes"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Gala apple",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "mayonnaise",
+          "quantity_4p_source": "4 packets",
+          "original_quantity": "2 packets",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "slices sourdough bread",
+          "quantity_4p_source": "8 stuks",
+          "original_quantity": "4 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "baby kale mix",
+          "quantity_4p_source": "10 ounces",
+          "original_quantity": "5 ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cheddar Apple Grilled Cheese.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cheddar Apple Grilled Cheese.pdf"
+    },
+    {
+      "id": "plated-cheeseburgerpretzelsliders",
+      "source": "Plated",
+      "title_extracted": "Cheeseburger Pretzel Sliders",
+      "source_file": "Cheeseburger Pretzel Sliders.pdf",
+      "drive_identity_hash": "2ff2c10fa673ec6085267a08f4008690b88c885e510de4c35025a1b7c3ba9d85",
+      "content_sha256": "81a19d31aed7740e0559c722b508c7702f2bb37bd09bae6882bde3a3905b440c",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 pretzel slider buns",
+        "3 ounces mixed lettuces",
+        "3 ounces red radishes",
+        "1 sweet onion",
+        "2 slices white Cheddar cheese",
+        "1 packet Dijon mustard",
+        "3 tablespoons whole-grain mustard",
+        "1 tablespoon Worcestershire sauce",
+        "1 tablespoon sherry vinegar",
+        "1 packet honey"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cheeseburger Pretzel Sliders.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cheeseburger Pretzel Sliders.pdf"
+    },
+    {
+      "id": "plated-cheesyblackbeanburritoswithpicodegalloandguacamole",
+      "source": "Plated",
+      "title_extracted": "Cheesy Black Bean Burritos with pico de gallo and guacamole",
+      "source_file": "Cheesy Black Bean Burritos with pico de gallo and guacamole.pdf",
+      "drive_identity_hash": "1a1261f0f518cc478538a8a769b722c3dafae3783dd7b74da7bd992f3973d852",
+      "content_sha256": "130ec7e44b1fa5f5bd32af1e18919e06a42fdd27d0229946e2e138dd94e96a1b",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 limes, divided",
+        "1 red onion, divided",
+        "2 tomatoes",
+        "¼ ounce cilantro",
+        "1 cup black beans",
+        "1 jalapeño",
+        "cheese",
+        "1 cup corn",
+        "2 flour tortillas"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "limes, divided",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red onion, divided",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tomatoes",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "black beans",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "jalapeño",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "corn",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "flour tortillas",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cheesy Black Bean Burritos with pico de gallo and guacamole.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cheesy Black Bean Burritos with pico de gallo and guacamole.pdf"
+    },
+    {
+      "id": "plated-cheesycornarepaswithroastedredpeppersalsa",
+      "source": "Plated",
+      "title_extracted": "Cheesy Corn Arepas with Roasted Red Pepper Salsa",
+      "source_file": "Cheesy Corn Arepas with Roasted Red Pepper Salsa.PDF",
+      "drive_identity_hash": "274c459168159df965f340e8c919d4fdf966c9bceacea753bf4321c92937890c",
+      "content_sha256": "8331e7ee0a08b9fefb020f304d61e4f6a14e6e553c371babbea7943d722045db",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 limes, divided",
+        "2 red bell peppers",
+        "Ya ounce cilantro",
+        "1 avocado",
+        "1 pint whole milk",
+        "2 tablespoons butter",
+        "4 cup corn",
+        "1% cups masa harina",
+        "2 tablespoons sugar",
+        "*4 cup shredded mozzarella",
+        "3 tablespoons crumbled queso fresco"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "limes, divided",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red bell peppers",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "avocado",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "whole milk",
+          "quantity_4p_source": "2 pint",
+          "original_quantity": "1 pint",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "butter",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "corn",
+          "quantity_4p_source": "8 cup",
+          "original_quantity": "4 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sugar",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "crumbled queso fresco",
+          "quantity_4p_source": "6 tablespoons",
+          "original_quantity": "3 tablespoons",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cheesy Corn Arepas with Roasted Red Pepper Salsa.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cheesy Corn Arepas with Roasted Red Pepper Salsa.PDF"
+    },
+    {
+      "id": "plated-cheesysquashchilaquiles",
+      "source": "Plated",
+      "title_extracted": "Cheesy Squash Chilaquiles",
+      "source_file": "Cheesy Squash Chilaquiles.pdf",
+      "drive_identity_hash": "e57f246696a4d4e2247792706e75aa991f82cefa91e67c79438b0ffd8dc565db",
+      "content_sha256": "7a5b699f7b1ab903eb8399d7eff5320a6730fe930eebe2f8a465a0f2f0e0d84e",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 corn tortillas",
+        "12 ounces butternut squash",
+        "1 shallot",
+        "1 clove garlic",
+        "½ bunch rainbow Swiss chard",
+        "1 avocado",
+        "¼ teaspoon ancho chile powder, divided",
+        "½ teaspoon chipotle powder, divided",
+        "cheese",
+        "¼ cup reduced fat sour cream",
+        "minutes (see Recipe Tip). Transfer          Halve 1 lime and squeeze over avocado,",
+        "tortilla chips to a plate and set aside.    slice remaining lime into wedges for"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "corn tortillas",
+          "quantity_4p_source": "12 stuks",
+          "original_quantity": "6 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "butternut squash",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "shallot",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "2 clove",
+          "original_quantity": "1 clove",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "avocado",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cheesy Squash Chilaquiles.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cheesy Squash Chilaquiles.pdf"
+    },
+    {
+      "id": "plated-cheesysweetonionpaniniwithtrufflefries",
+      "source": "Plated",
+      "title_extracted": "Cheesy Sweet Onion Panini with Truffle Fries",
+      "source_file": "Cheesy Sweet Onion Panini with Truffle Fries.pdf",
+      "drive_identity_hash": "d742acea3478e478f96b579ee42d47c8b0d5d71dff4d93f2a975a7f1412d8fd1",
+      "content_sha256": "0598052a5601c37c8943dcd7a26f0fab329067d973cdac4ff4b07c3613a2fc08",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "3 packets unsalted butter, divided",
+        "1 leek",
+        "2 russet potatoes",
+        "1 ounce baby arugula",
+        "1 sweet Vidalia onion",
+        "1 packet truffle zest, divided",
+        "1 cheese blend, divided",
+        "2 ounces shredded Fontina cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cheesy Sweet Onion Panini with Truffle Fries.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cheesy Sweet Onion Panini with Truffle Fries.pdf"
+    },
+    {
+      "id": "plated-cherrycheesecakes",
+      "source": "Plated",
+      "title_extracted": "Cherry Cheesecakes",
+      "source_file": "Cherry Cheesecakes.pdf",
+      "drive_identity_hash": "755d223213303fb94ee6177fd4d42e8435caa5349831a31e86ac36dd4fbc8450",
+      "content_sha256": "8797e5738eb993e7ccd2559e785ce1cca72c39f4d090d426076eb07cce3252a9",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "3 ounces cream cheese",
+        "4 graham cracker crusts",
+        "2 tablespoons white wine",
+        "1 cup cherries",
+        "⅔ cup granulated sugar, divided",
+        "1 packet sour cream",
+        "½ teaspoon vanilla extract"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "cream cheese",
+          "quantity_4p_source": "3 ounces",
+          "original_quantity": "3 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "graham cracker crusts",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "4 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "white wine",
+          "quantity_4p_source": "2 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cherries",
+          "quantity_4p_source": "1 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sour cream",
+          "quantity_4p_source": "1 packet",
+          "original_quantity": "1 packet",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cherry Cheesecakes.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cherry Cheesecakes.pdf"
+    },
+    {
+      "id": "plated-cherrypieshortcakeswithwhitechocolatecream",
+      "source": "Plated",
+      "title_extracted": "Cherry pie shortcakes with white chocolate cream",
+      "source_file": "Cherry pie shortcakes with white chocolate cream.pdf",
+      "drive_identity_hash": "242765a99025d39cd4c47b27be5878f509e600e25f67e32fa8e9dfd9952a32f9",
+      "content_sha256": "2753c0ab471924f86dd9517696bdccffd9f0d15893259d16bc072ca906c99ece",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 biscuits",
+        "1 lemon",
+        "2 cups cherries",
+        "½ cup powdered sugar",
+        "1 teaspoon flour",
+        "2 ounces white chocolate chips"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "biscuits",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "4 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "1 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cherries",
+          "quantity_4p_source": "2 cups",
+          "original_quantity": "2 cups",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "flour",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "white chocolate chips",
+          "quantity_4p_source": "2 ounces",
+          "original_quantity": "2 ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Cherry pie shortcakes with white chocolate cream.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Cherry pie shortcakes with white chocolate cream.pdf"
+    },
+    {
+      "id": "plated-chickenandspaghettisquashbake",
+      "source": "Plated",
+      "title_extracted": "Chicken and Spaghetti Squash Bake",
+      "source_file": "Chicken and Spaghetti Squash Bake.pdf",
+      "drive_identity_hash": "2d28e0070a25056426167a1250cee0b1513dcaff666ddc22915ae539f183a7c7",
+      "content_sha256": "6e0196bcd8b336a3bc710f6a9f1a37ff18d9ce7e79279f7b6680a809691b8ee4",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "5 pounds spaghetti squash",
+        "¼ ounce parsley",
+        "4 cloves garlic",
+        "1½ pounds ground chicken",
+        "2 cans crushed tomatoes",
+        "1 half stick unsalted butter",
+        "2 ounces grated Parmesan cheese,",
+        "2 ounces shredded mozzarella cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken and Spaghetti Squash Bake.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken and Spaghetti Squash Bake.pdf"
+    },
+    {
+      "id": "plated-chickenandwildricesoup",
+      "source": "Plated",
+      "title_extracted": "Chicken and Wild Rice Soup (4)",
+      "source_file": "Chicken and Wild Rice Soup (4).pdf",
+      "drive_identity_hash": "aec4b0310ddc581a2ef9ef15720e45a0858f8ccdefb114439941eda6531bfebe",
+      "content_sha256": "39be56f851bbcd83e85b62013ca16e92dc61d1900d9dd0f5c51e06a7fffefc53",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup wild rice",
+        "4 boneless skinless chicken breasts",
+        "2 leeks",
+        "4 ounces baby spinach",
+        "8 ounces carrots",
+        "2 celery stalks",
+        "3 cloves garlic",
+        "24 ounces milk",
+        "2 chicken bouillon cubes"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken and Wild Rice Soup (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken and Wild Rice Soup (4).pdf"
+    },
+    {
+      "id": "plated-chickenavocadoburgers",
+      "source": "Plated",
+      "title_extracted": "Chicken Avocado Burgers",
+      "source_file": "Chicken Avocado Burgers.pdf",
+      "drive_identity_hash": "9fbc4cb4930eef338d1f4ecc8016c1380a2a9d35e01f477bb26c30df77cea1f6",
+      "content_sha256": "9fc6190c4d69a359ed26b2f62a710b570fedf10342683bde78c19003029223dd",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 brioche buns",
+        "8 ounces green beans",
+        "1 avocado, divided",
+        "1 lemon, divided",
+        "2 cloves garlic, divided",
+        "12 ounces ground chicken",
+        "yogurt",
+        "¼ teaspoon Maldon sea salt"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Avocado Burgers.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Avocado Burgers.pdf"
+    },
+    {
+      "id": "plated-chickenbruschetta",
+      "source": "Plated",
+      "title_extracted": "Chicken Bruschetta",
+      "source_file": "Chicken Bruschetta.pdf",
+      "drive_identity_hash": "047838d85ffc6698246b16c245273d64fa7cfa3143d0ca70cd4da93422611d34",
+      "content_sha256": "48bcdd278e9bf4dc3808e08ac587ba79a713880074654183ed920339bdb2b8da",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 boneless chicken breasts",
+        "¼ ounce basil",
+        "2 pints grape tomatoes",
+        "1 lemon",
+        "1 red onion",
+        "3 cloves garlic",
+        "½ cup white wine",
+        "2 ounces shaved Parmesan cheese",
+        "4 packets balsamic glaze"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Bruschetta.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Bruschetta.pdf"
+    },
+    {
+      "id": "plated-chickenburritobowls",
+      "source": "Plated",
+      "title_extracted": "Chicken Burrito Bowls",
+      "source_file": "Chicken Burrito Bowls.pdf",
+      "drive_identity_hash": "e59afd0cbe1cd5e3ecc96ca9efd4c82096ae1cfeabb3592bb1b2799b919cfa44",
+      "content_sha256": "6dd3aea28ff015d1a118f44a243c1d3e7436ad756ca81e3c65874055966d5b99",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 can black beans",
+        "4 tomatoes",
+        "¼ ounce cilantro",
+        "4 limes",
+        "1 red onion",
+        "1 jalapeño",
+        "1 cup quinoa",
+        "5 ounces sour cream",
+        "2 avocados"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Burrito Bowls.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Burrito Bowls.pdf"
+    },
+    {
+      "id": "plated-chickenchasseur",
+      "source": "Plated",
+      "title_extracted": "Chicken Chasseur (4)",
+      "source_file": "Chicken Chasseur (4).pdf",
+      "drive_identity_hash": "974e0dc32c36bf146f6e9434c9bd6ca47af6feb37c50bef06f396bfa93a03b93",
+      "content_sha256": "ad090959620c699326d335cb2d1c2e5110729f932bc0d3863697217ea0010dcc",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 boneless chicken breasts",
+        "10 ounces cremini mushrooms",
+        "¼ ounce thyme",
+        "1 pound Yukon Gold potatoes",
+        "1 yellow onion",
+        "3 cloves garlic",
+        "2 tablespoons tomato paste"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Chasseur (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Chasseur (4).pdf"
+    },
+    {
+      "id": "plated-chickenchili",
+      "source": "Plated",
+      "title_extracted": "Chicken Chili",
+      "source_file": "Chicken Chili.pdf",
+      "drive_identity_hash": "a0cf8c2f6a9a2c32daff669e609fb337bc54a7ce1dab0b719cd39b07b6905cf2",
+      "content_sha256": "6fefb080b5869c24bbc5c6cc2f3181d92caf535b7108e530e21d5c24b0748688",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 can white beans",
+        "1 sweet potato",
+        "⅛ ounce parsley, divided",
+        "1 yellow onion",
+        "2 cloves garlic, divided",
+        "2 packets unsalted butter",
+        "1 teaspoon chili powder",
+        "1 demi-baguette",
+        "1 ounce shredded mozzarella cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Chili.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Chili.pdf"
+    },
+    {
+      "id": "plated-chickencurrypuffs",
+      "source": "Plated",
+      "title_extracted": "Chicken curry puffs",
+      "source_file": "Chicken curry puffs.pdf",
+      "drive_identity_hash": "7cb01aa48faabf3c89006676fe691d89ad03cc5c1c4d34e0c9cc3209b3eed6aa",
+      "content_sha256": "fe46179309a5a1060e6d6e75c201b57a38715cfce1e27d17ee4fb8c2af3ff40e",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces Yukon Gold potatoes",
+        "⅛ ounce cilantro",
+        "1 English cucumber",
+        "6 ounces carrots",
+        "1 clove garlic",
+        "1 Thai chile",
+        "¼ cup rice wine vinegar",
+        "4 puff pastry squares",
+        "12 ounces ground chicken",
+        "1 tablespoon Indonesian curry powder"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken curry puffs.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken curry puffs.pdf"
+    },
+    {
+      "id": "plated-chickenfettuccine",
+      "source": "Plated",
+      "title_extracted": "Chicken Fettuccine (4)",
+      "source_file": "Chicken Fettuccine (4).pdf",
+      "drive_identity_hash": "836857462f8a4ad58ddc535ea4d6f80ec8be1b34fb0de2e440519369542b71bb",
+      "content_sha256": "aff994721ca2c93a86c8e7706c049219fae59a4583ce86f39932c04138c26b71",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 half stick unsalted butter",
+        "4 boneless skinless chicken breasts",
+        "¼ ounce parsley",
+        "4 cloves garlic",
+        "2 tablespoons flour",
+        "12 ounces fettuccine",
+        "1 pint grape tomatoes",
+        "4 ounces grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Fettuccine (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Fettuccine (4).pdf"
+    },
+    {
+      "id": "plated-chickenhoriatiki",
+      "source": "Plated",
+      "title_extracted": "Chicken Horiatiki",
+      "source_file": "Chicken Horiatiki.pdf",
+      "drive_identity_hash": "d51fad25ad51f270bfd930715789dde496fcade5e258a3b03f77a114b9200da4",
+      "content_sha256": "90c896ba51e8799829db201c1a3d51cd6d07327f9223aae58edd30238cb39631",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 boneless chicken breasts",
+        "2 pita breads",
+        "½ English cucumber",
+        "½ pint grape tomatoes",
+        "1 herb mix",
+        "⅛ ounce dill",
+        "⅛ ounce oregano",
+        "1 container nonfat Greek yogurt",
+        "2 ounces crumbled feta cheese",
+        "sear opposite side until cooked through      lemon. Peel onion, halve, and thinly",
+        "and no longer pink, about 7 minutes          slice up to half (save remainder for"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Horiatiki.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Horiatiki.pdf"
+    },
+    {
+      "id": "plated-chickenkaleandfregolabowlswithpesto",
+      "source": "Plated",
+      "title_extracted": "Chicken kale and Fregola bowls with pesto",
+      "source_file": "Chicken kale and Fregola bowls with pesto.pdf",
+      "drive_identity_hash": "93e9da1cc631ff4abcaca7e76dc2a0479947b882326229a5174d76fddcc34b5b",
+      "content_sha256": "147585e43c097a0ef804b2bf3b0cb1ff3e299a2eea1b5c95dbc952fb80bc1cad",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "1 shallot",
+        "Y% cup fregola",
+        "Y% pint grape tomatoes",
+        "2 boneless skinless chicken breasts",
+        "Ye ounce thyme",
+        "4 ounces curly kale",
+        "3 tablespoons pesto",
+        "Ye ounce grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken kale and Fregola bowls with pesto.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken kale and Fregola bowls with pesto.pdf"
+    },
+    {
+      "id": "plated-chickenkatsu",
+      "source": "Plated",
+      "title_extracted": "Chicken Katsu (4)",
+      "source_file": "Chicken Katsu (4).pdf",
+      "drive_identity_hash": "70488941478d71811c856ceffc4f651c00d7fd57a2da460ec0ac907a24c84581",
+      "content_sha256": "7057d2702bdec24497e8c275e170a3fb66469b2e9068b65a9c7c6d45dd6678c9",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ cup jasmine rice",
+        "½ cup flour",
+        "¼ teaspoon Chinese 5-spice powder",
+        "1¼ cups panko breadcrumbs",
+        "2 boneless skinless chicken breasts",
+        "⅛ ounce cilantro",
+        "1 scallion",
+        "1 slaw mix",
+        "½ cup shredded carrots",
+        "½ cup shredded red cabbage",
+        "minutes.                                    plastic wrap (see recipe tip). Using a"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Katsu (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Katsu (4).pdf"
+    },
+    {
+      "id": "plated-chickenkatsuwithgreensandwasabiaioli",
+      "source": "Plated",
+      "title_extracted": "Chicken Katsu with Greens and Wasabi Aioli",
+      "source_file": "Chicken Katsu with Greens and Wasabi Aioli.PDF",
+      "drive_identity_hash": "f832175b305db50a7cebea5090ca306d650aa1ccf55226e7ead2104fadaf6b2a",
+      "content_sha256": "f14e51927738bd89290a4da1715acf00a9c01662998d0805e8f333c56d200944",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "cloves garlic",
+        "ounces baby bok choy, divided",
+        "ounces Chinese broccoli, divided",
+        "boneless skinless chicken breasts",
+        "tablespoon sesame oil",
+        "jar mayonnaise",
+        "packet wasabi",
+        "packets soy sauce",
+        "ounces baby spinach",
+        "cup flour",
+        "teaspoon mustard powder",
+        "cup panko breadcrumbs"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Katsu with Greens and Wasabi Aioli.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Katsu with Greens and Wasabi Aioli.PDF"
+    },
+    {
+      "id": "plated-chickenmarsalapizza",
+      "source": "Plated",
+      "title_extracted": "Chicken Marsala Pizza (4)",
+      "source_file": "Chicken Marsala Pizza (4).pdf",
+      "drive_identity_hash": "bc7cbf49b5b202eba63a0d8c027edc845d27fa4a9be8e0c151ba8a3abc2b8a17",
+      "content_sha256": "92560a9c67079df021e3e543dcd5359762813de75f1f47c97f3ddfc768b64b08",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces pizza dough",
+        "4 ounces cremini mushrooms",
+        "1 herb mix",
+        "⅛ ounce chives",
+        "⅛ ounce rosemary",
+        "2 cloves garlic",
+        "2 boneless skin-on chicken breasts",
+        "2 ounces shredded mozzarella cheese",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Marsala Pizza (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Marsala Pizza (4).pdf"
+    },
+    {
+      "id": "plated-chickenmarsalawroastedpotatoes",
+      "source": "Plated",
+      "title_extracted": "Chicken Marsala w roasted potatoes",
+      "source_file": "Chicken Marsala w roasted potatoes.pdf",
+      "drive_identity_hash": "2cfcd95ddc4882d2e8bc985c00c3678022744faa597eda9ac04c8929f566f4a3",
+      "content_sha256": "467c1ddce540a0d2bce653134f5e35ce8be3bc59b35bf015a8beef88290c34b1",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "9 ounces cremini mushrooms",
+        "8 ounces fingerling potatoes",
+        "1 herb mix",
+        "⅛ ounce parsley, divided",
+        "⅛ ounce rosemary",
+        "1 lemon",
+        "2 boneless skinless chicken breasts",
+        "½ cup dry Marsala wine",
+        "1 container chicken stock"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Marsala w roasted potatoes.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Marsala w roasted potatoes.pdf"
+    },
+    {
+      "id": "plated-chickenmeatballs",
+      "source": "Plated",
+      "title_extracted": "Chicken Meatballs",
+      "source_file": "Chicken Meatballs.pdf",
+      "drive_identity_hash": "00fc91b0d8234d2078ad73c483ec18280d0f82d2fdddb54490c72b1b0f5595e1",
+      "content_sha256": "0bec05ba0cad4071cd8169104da40029001754eab2660283efe555d6ff3095b4",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 packets unsalted butter",
+        "1 pound broccoli",
+        "½ ounce parsley, divided",
+        "1 red onion",
+        "6 cloves garlic",
+        "½ cup panko breadcrumbs",
+        "divided",
+        "1½ pounds ground chicken",
+        "provolone cheese blend"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Meatballs.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Meatballs.pdf"
+    },
+    {
+      "id": "plated-chickenmolepoblano",
+      "source": "Plated",
+      "title_extracted": "Chicken Mole Poblano",
+      "source_file": "Chicken Mole Poblano.pdf",
+      "drive_identity_hash": "a56799202747f378f424428ea691d525101cb5d4c8536cff73fa7026f0f22ad2",
+      "content_sha256": "0af0edabfcf3d81e20d6f0f14de42ae5ef6c8bff72e56c14a040d7558deb9e20",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 boneless skinless chicken breasts",
+        "1½ cups jasmine rice",
+        "½ ounce cilantro",
+        "1 lime",
+        "5 ounces baby spinach",
+        "2 red bell peppers",
+        "2 packets honey"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Mole Poblano.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Mole Poblano.pdf"
+    },
+    {
+      "id": "plated-chickenpaella",
+      "source": "Plated",
+      "title_extracted": "Chicken Paella (4)",
+      "source_file": "Chicken Paella (4).pdf",
+      "drive_identity_hash": "48b38d1425d29b5cf842b60593bb7b240244ee62cd10306cf6c2d832e227e060",
+      "content_sha256": "5a16f9332b31d56ffa27c29f633a3c70d597e20771a6e1fea577ee344b914ec6",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup Arborio rice",
+        "1 chicken bouillon cube",
+        "1 tablespoon paella spice mix",
+        "1½ pounds ground chicken",
+        "3 ounces baby spinach",
+        "1 red bell pepper",
+        "3 plum tomatoes",
+        "1 lemon"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Paella (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Paella (4).pdf"
+    },
+    {
+      "id": "plated-chickenparmesanmelts",
+      "source": "Plated",
+      "title_extracted": "Chicken Parmesan Melts (4)",
+      "source_file": "Chicken Parmesan Melts (4).pdf",
+      "drive_identity_hash": "6efa5bb4bcd74f341b6c35302b368407fb3d73b5d6da0aad0f871350c786f602",
+      "content_sha256": "d7a6415f2e649a27891e11e9d4aa97c0f8abc3f30e383664c360bd26d8de79d2",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¼ ounce basil",
+        "¾ pint grape tomatoes",
+        "2 cloves garlic",
+        "1 cup tomato purée",
+        "4 boneless skinless chicken breasts",
+        "½ cup flour",
+        "2 cups panko breadcrumbs",
+        "1 ounce grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Parmesan Melts (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Parmesan Melts (4).pdf"
+    },
+    {
+      "id": "plated-chickenpiccata",
+      "source": "Plated",
+      "title_extracted": "Chicken Piccata (4)",
+      "source_file": "Chicken Piccata (4).pdf",
+      "drive_identity_hash": "f6483d0455828f3bebd969c78a4c2d2cfa897da66140dda7349e03debd3a11a2",
+      "content_sha256": "80f21a06a4a8fd8f899639f86182ca1fc16cf6d7d1c88a39335ea57926f40456",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1¼ pounds fingerling potatoes",
+        "1 pound green beans",
+        "¼ ounce parsley",
+        "1 lemon",
+        "4 boneless skinless chicken breasts",
+        "¾ cup flour",
+        "1 cup white wine"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Piccata (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Piccata (4).pdf"
+    },
+    {
+      "id": "plated-chickensaag",
+      "source": "Plated",
+      "title_extracted": "Chicken Saag",
+      "source_file": "Chicken Saag.pdf",
+      "drive_identity_hash": "d6080a005ab7b11636ffaa0e5049ab39bce80dd3629ae94e927b86a4d1ab5636",
+      "content_sha256": "81b77d009a0ac88095fde8b83d370461c4b6f5e98e3ad63aab675fb0616ec207",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup basmati rice",
+        "3 tablespoons roasted salted almonds",
+        "12 ounces baby spinach",
+        "2 yellow onions",
+        "¼ ounce ginger",
+        "2 cloves garlic",
+        "1 jalapeño",
+        "2 teaspoons garam masala",
+        "¼ cup tomato paste",
+        "1 container heavy cream"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Saag.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Saag.pdf"
+    },
+    {
+      "id": "plated-chickensamosaswithcucumberraitasalad",
+      "source": "Plated",
+      "title_extracted": "Chicken Samosas with cucumber Raita Salad",
+      "source_file": "Chicken Samosas with cucumber Raita Salad.PDF",
+      "drive_identity_hash": "b38a5c8625169e22ecacc1fc64f0c60ceb8dfbc190d61bf99b04cfd386340703",
+      "content_sha256": "bd5c5d576362b8e2122e01d01b7de8242d4b0140968dd0ef60240390d8f58167",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 tomatoes",
+        "1 English cucumber",
+        "% ounce cilantro",
+        "2 lemons",
+        "1 red onion, divided",
+        "12 ounces low-fat yogurt",
+        "1% pounds ground chicken",
+        "2 tablespoons tikka masala curry",
+        "paste",
+        "Y% cup peas",
+        "12 empanada doughs"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Samosas with cucumber Raita Salad.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Samosas with cucumber Raita Salad.PDF"
+    },
+    {
+      "id": "plated-chickensataywithpeanutsauceandgingerrice",
+      "source": "Plated",
+      "title_extracted": "Chicken Satay with Peanut Sauce and Ginger Rice",
+      "source_file": "Chicken Satay with Peanut Sauce and Ginger Rice.PDF",
+      "drive_identity_hash": "455639e54a0fbbb71d6e97f3cf459b7aa32d491bef5e9e9731219e5bd862106b",
+      "content_sha256": "8ece08788b4eb50b9d4cbe7571ec27a4321eaa4b68ef6d97b4f6b5462e50db5a",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "% ounce ginger",
+        "1% cups jasmine rice",
+        "1 pound Chinese broccoli, divided",
+        "scallions",
+        "lime",
+        "boneless skinless chicken breasts",
+        "spice mix",
+        "% teaspoon coriander",
+        "1 teaspoon Madras curry powder",
+        "aban",
+        "% teaspoon garlic powder",
+        "% teaspoon ground ginger",
+        "packets peanut butter",
+        "packets gluten-free soy sauce",
+        "tablespoons rice wine vinegar",
+        "tablespoons sesame oil",
+        "20 wooden skewers",
+        "NVNAD",
+        "Youw’ll Need",
+        "canola oil",
+        "kosher salt",
+        "black pepper",
+        "6\" small pot with lid",
+        "12\" large pan",
+        "t",
+        "® Recipe Tips",
+        "Be sure to read through the entire",
+        "recipe before you begin cooking.",
+        "Our method for this recipe saves",
+        "time by cooking the chicken and",
+        "Chinese broccoli simultaneously in",
+        "separate pans. To save on cleanup,",
+        "cook broccoli first, stir in cooked",
+        "rice, and transfer to plates. Wipe",
+        "pan clean to cook chicken.",
+        "The chicken might have a slight",
+        "odor as a natural reaction to its",
+        "vacuum packing. USDA",
+        "recommends cooking chicken to",
+        "165°F.",
+        "Questions? Email help@plated.com",
+        "or call 855-525-2399. Visit"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Satay with Peanut Sauce and Ginger Rice.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Satay with Peanut Sauce and Ginger Rice.PDF"
+    },
+    {
+      "id": "plated-chickensausagepretzelrollswithcreamymustard",
+      "source": "Plated",
+      "title_extracted": "Chicken Sausage Pretzel Rolls with Creamy Mustard",
+      "source_file": "Chicken Sausage Pretzel Rolls with Creamy Mustard.PDF",
+      "drive_identity_hash": "8c77e461476319665a0afa140dd94bad1f72d7ee879f43b0d07a268b99644e46",
+      "content_sha256": "8e65826f69d5b6544b27151ad44835b137084e599de7ef649b53fac1481e4e23",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "x",
+        "ounce parsley",
+        "ounces green beans",
+        "red bell pepper",
+        "clove garlic",
+        "pretzel rolls",
+        "chicken sausages",
+        "tablespoon whole-grain mustard",
+        "packets mayonnaise",
+        "teaspoon apple cider vinegar",
+        "ok DO ae RIO) oe ce 00"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Sausage Pretzel Rolls with Creamy Mustard.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Sausage Pretzel Rolls with Creamy Mustard.PDF"
+    },
+    {
+      "id": "plated-chickenshawarma",
+      "source": "Plated",
+      "title_extracted": "Chicken Shawarma (3)",
+      "source_file": "Chicken Shawarma (3).pdf",
+      "drive_identity_hash": "8e2bf21a1c3252962f4c1554b86dec5e0857a1dcb84f8915a3bb83366340ca2f",
+      "content_sha256": "64360b11cda53aa92b7405d68512c3b612ee1f3b858b6062dfcdf65546b3e0ee",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1½ pints grape tomatoes",
+        "1 English cucumber",
+        "¼ ounce parsley",
+        "2 lemons, divided",
+        "2 red onions",
+        "3 cloves garlic, divided",
+        "4 boneless skinless chicken breasts",
+        "1 teaspoon smoked paprika",
+        "½ teaspoon ground turmeric",
+        "¼ teaspoon cayenne pepper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Shawarma (3).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Shawarma (3).pdf"
+    },
+    {
+      "id": "plated-chickenshawarmasalad",
+      "source": "Plated",
+      "title_extracted": "Chicken Shawarma Salad",
+      "source_file": "Chicken Shawarma Salad.pdf",
+      "drive_identity_hash": "c57740e25d29b2adcf4cde39a2d2d08d087f091e8a79ab17e6cd83539eb69f78",
+      "content_sha256": "0d098993047f45fd500c352ab53ec6a7b751f5146d644a079ff9f7c93215004c",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 lemons, divided",
+        "1 spice mix",
+        "⅛ teaspoon ground cayenne pepper",
+        "½ teaspoon ground cumin",
+        "½ teaspoon smoked paprika",
+        "¼ teaspoon ground turmeric",
+        "2 boneless skinless chicken breasts",
+        "⅛ ounce parsley",
+        "4 cornichons",
+        "1 red onion"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Shawarma Salad.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Shawarma Salad.pdf"
+    },
+    {
+      "id": "plated-chickensouvlaki",
+      "source": "Plated",
+      "title_extracted": "Chicken Souvlaki",
+      "source_file": "Chicken Souvlaki.pdf",
+      "drive_identity_hash": "e2cb30af53ccc0ff3a28680561e4706bba10d49a2c4dd12ac3f24c81af44fd0e",
+      "content_sha256": "1aa788252c50a7cd54b8a2d191570cc5575eba71e201cf33926f7607052e8ace",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 head little gem lettuce",
+        "½ pint grape tomatoes",
+        "1 herb mix",
+        "⅛ ounce dill",
+        "⅛ ounce parsley",
+        "¼ cup sliced pepperoncini",
+        "1 clove garlic",
+        "2 Persian cucumbers",
+        "1 container nonfat Greek yogurt"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Souvlaki.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Souvlaki.pdf"
+    },
+    {
+      "id": "plated-chickentikkamasalawrapswithcauliflowerandcoriander",
+      "source": "Plated",
+      "title_extracted": "Chicken Tikka Masala Wraps with cauliflower and coriander",
+      "source_file": "Chicken Tikka Masala Wraps with cauliflower and coriander.pdf",
+      "drive_identity_hash": "e6b97a7d23f4acc3bbb5b421e8c0f30264d675c65a90de2951f70164c998e7be",
+      "content_sha256": "a5a9d6477c0adec762eaff906aefff94dac510a773d88f696e243515bab0bd38",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 container nonfat Greek yogurt,",
+        "divided",
+        "1 tablespoon tikka masala curry paste,",
+        "divided",
+        "2 boneless skinless chicken breasts",
+        "⅛ ounce cilantro, divided",
+        "2 flour tortillas",
+        "¼ teaspoon ground coriander",
+        "¼ cup shredded carrots"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "container nonfat Greek yogurt,",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tikka masala curry paste,",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "boneless skinless chicken breasts",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "flour tortillas",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Chicken Tikka Masala Wraps with cauliflower and coriander.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Chicken Tikka Masala Wraps with cauliflower and coriander.pdf"
     }
   ]
 }
