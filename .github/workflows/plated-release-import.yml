@@ -68,7 +68,7 @@ jobs:
           PY
       - name: Extract next batch into review queue
         if: steps.check.outputs.needed == 'true'
-        run: python import_plated_release.py --archive plated-archive/Plated*.zip --batch 60
+        run: python import_plated_release.py --archive plated-archive/Plated*.zip --batch 100
       - name: Confirm unverified OCR quality gate
         if: steps.check.outputs.needed == 'true'
         run: |
