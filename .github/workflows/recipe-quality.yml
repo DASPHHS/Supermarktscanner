@@ -1,0 +1,36 @@
+name: Recepten kwaliteitsrapport
+on:
+  push:
+    paths:
+      - 'audit_recipe_quality.py'
+      - '.github/workflows/recipe-quality.yml'
+  schedule:
+    - cron: '18 */3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: recipe-quality-report
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Controleer volledigheid en prijsveiligheid
+        run: python audit_recipe_quality.py
+      - name: Publiceer kwaliteitsoverzicht
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          git reset --hard origin/main
+          python audit_recipe_quality.py
+          git add recipe_quality_audit.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Update verified recipe extraction quality report'
+          git push origin HEAD:main
