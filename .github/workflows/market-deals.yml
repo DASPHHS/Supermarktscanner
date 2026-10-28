@@ -1,0 +1,40 @@
+name: Actuele supermarktacties
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'sync_market_deals.py'
+      - '.github/workflows/market-deals.yml'
+  schedule:
+    - cron: '25 6,12,18 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: market-deals
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ververs controleerbare aanbiedingen
+        run: python sync_market_deals.py
+      - name: Bewaar feed zonder onbedoelde prijsclaims
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp market_deals.json "$RUNNER_TEMP/market_deals.json"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$RUNNER_TEMP/market_deals.json" market_deals.json
+            git add market_deals.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Update supermarket promotion snapshot"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
