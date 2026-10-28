@@ -135,6 +135,10 @@ UNIT_NL={
  "tbsp":"eetlepel","teaspoon":"theelepel","teaspoons":"theelepel","tsp":"theelepel",
  "clove":"teen","cloves":"tenen","packet":"zakje","packets":"zakjes",
  "can":"blik","cans":"blikken","piece":"stuk","pieces":"stuks",
+ "jar":"pot","jars":"potten","package":"verpakking","packages":"verpakkingen",
+ "slice":"plak","slices":"plakken","head":"krop","heads":"kroppen",
+ "bunch":"bos","bunches":"bossen","pint":"pint","pints":"pint",
+ "ear":"kolf","ears":"kolven",
 }
 def clean(s):
  return " ".join(unicodedata.normalize("NFKD",str(s or "")).encode("ascii","ignore").decode().lower().split())
@@ -175,14 +179,32 @@ def quantity_nl(raw):
   return {"quantity_display_nl":display,"quantity_metric":float(q),"unit_metric":"stuk","conversion_status":"count_only"}
  # Cups/tablespoons of solids cannot be turned into grams safely.
  return {"quantity_display_nl":display,"quantity_metric":None,"unit_metric":None,"conversion_status":"needs_density_or_pack_size"}
-def enrich(recipe):
+def enrich(recipe,rescan=None):
+ """Original OCR and focused page OCR stay clearly separate, both unverified."""
  title,status=translated_title(recipe.get("title_extracted",""))
  ingredients=[]
- for r in recipe.get("ingredients_4p",[]):
-  ingredients.append({"original_name":r.get("ingredient",""),
-                      "original_quantity_4p":r.get("quantity_4p_source",""),
-                      **translated_ingredient(r.get("ingredient","")),
-                      **quantity_nl(r.get("quantity_4p_source",""))})
+ primary=recipe.get("ingredients_4p",[])
+ rescan=rescan or {}
+ if primary:
+  for r in primary:
+   ingredients.append({"original_name":r.get("ingredient",""),
+                       "original_quantity_4p":r.get("quantity_4p_source",""),
+                       "quantity_basis":"unverified_4_portions_original_ocr",
+                       "provenance":"first_pass_ocr",
+                       **translated_ingredient(r.get("ingredient","")),
+                       **quantity_nl(r.get("quantity_4p_source",""))})
+ elif rescan.get("status")=="extracted":
+  for r in rescan.get("quantity_candidates_unverified",[]):
+   # These are SOURCE quantities; the source servings may be unknown.
+   # Never label them 4-portions or use them in automatic price ranking.
+   name=r.get("name_original") or ""
+   amount=r.get("quantity_source") or ""
+   ingredients.append({"original_name":name,
+                       "original_quantity_4p":None,
+                       "source_quantity":amount,
+                       "quantity_basis":"source_servings_not_verified",
+                       "provenance":"second_pass_"+rescan.get("method","unknown"),
+                       **translated_ingredient(name),**quantity_nl(amount)})
  return {"id":recipe.get("source_identity") or recipe.get("id"),
          "source_identity":recipe.get("source_identity"),
          "title_original":recipe.get("title_extracted",""),
@@ -191,13 +213,18 @@ def enrich(recipe):
          "servings_source":recipe.get("servings_original"),
          "servings_4p_unverified":recipe.get("servings",4),
          "ingredient_ocr_missing":len(ingredients)==0,
+         "rescan_ingredient_candidates":bool(not primary and ingredients),
          "pricing_eligible":False,
          "review_status":"needs_manual_original_card_comparison"}
-def run(inp="plated_release_review_queue.json",out="plated_nl_catalog.json"):
+def run(inp="plated_release_review_queue.json",out="plated_nl_catalog.json",
+        rescan_file="plated_ingredient_rescan.json"):
  d=json.loads(open(inp,encoding="utf8").read())
- enriched=[enrich(r) for r in d.get("recipes",[])]
- report={"source":"Plated review queue; Dutch glossary; NOT human validated",
-         "records":len(enriched),"without_ingredients":sum(x["ingredient_ocr_missing"] for x in enriched),
+ rescans=json.loads(open(rescan_file,encoding="utf8").read()).get("records",{}) if Path(rescan_file).exists() else {}
+ enriched=[enrich(r,rescans.get(r.get("source_identity"),{})) for r in d.get("recipes",[])]
+ report={"source":"Plated original + focused rescan; Dutch glossary; NOT human validated",
+         "records":len(enriched),
+         "without_ingredients":sum(x["ingredient_ocr_missing"] for x in enriched),
+         "rescanned_ingredient_candidates":sum(x["rescan_ingredient_candidates"] for x in enriched),
          "ingredient_translations_exact":sum(i["translation_status"]=="dictionary_exact" for r in enriched for i in r["ingredients_nl"]),
          "ingredient_translations_unknown":sum(i["translation_status"]!="dictionary_exact" for r in enriched for i in r["ingredients_nl"]),
          "pricing_eligible":0}
