@@ -3,6 +3,7 @@
     "rendered": 24,
     "recipes_total": 225,
     "missing_source_files": [],
+    "downloadable_original_pdfs": 24,
     "status": "original PDF pages rendered; OCR not manually verified"
   },
   "recipes": {
@@ -15,7 +16,8 @@
         "ingredients": 2
       },
       "front": "previews/cd468af69af3-front.webp",
-      "ingredients": "previews/cd468af69af3-ingredients.webp"
+      "ingredients": "previews/cd468af69af3-ingredients.webp",
+      "original_pdf": "previews/cd468af69af3-origineel.pdf"
     },
     "c654502dcee3": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -26,7 +28,8 @@
         "ingredients": 4
       },
       "front": "previews/c654502dcee3-front.webp",
-      "ingredients": "previews/c654502dcee3-ingredients.webp"
+      "ingredients": "previews/c654502dcee3-ingredients.webp",
+      "original_pdf": "previews/c654502dcee3-origineel.pdf"
     },
     "d68b92fe361e": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -37,7 +40,8 @@
         "ingredients": 6
       },
       "front": "previews/d68b92fe361e-front.webp",
-      "ingredients": "previews/d68b92fe361e-ingredients.webp"
+      "ingredients": "previews/d68b92fe361e-ingredients.webp",
+      "original_pdf": "previews/d68b92fe361e-origineel.pdf"
     },
     "745d923192e8": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -48,7 +52,8 @@
         "ingredients": 8
       },
       "front": "previews/745d923192e8-front.webp",
-      "ingredients": "previews/745d923192e8-ingredients.webp"
+      "ingredients": "previews/745d923192e8-ingredients.webp",
+      "original_pdf": "previews/745d923192e8-origineel.pdf"
     },
     "57fa6f7fd758": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -59,7 +64,8 @@
         "ingredients": 10
       },
       "front": "previews/57fa6f7fd758-front.webp",
-      "ingredients": "previews/57fa6f7fd758-ingredients.webp"
+      "ingredients": "previews/57fa6f7fd758-ingredients.webp",
+      "original_pdf": "previews/57fa6f7fd758-origineel.pdf"
     },
     "d10560a1450c": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -70,7 +76,8 @@
         "ingredients": 12
       },
       "front": "previews/d10560a1450c-front.webp",
-      "ingredients": "previews/d10560a1450c-ingredients.webp"
+      "ingredients": "previews/d10560a1450c-ingredients.webp",
+      "original_pdf": "previews/d10560a1450c-origineel.pdf"
     },
     "cb700a40dcc2": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -81,7 +88,8 @@
         "ingredients": 14
       },
       "front": "previews/cb700a40dcc2-front.webp",
-      "ingredients": "previews/cb700a40dcc2-ingredients.webp"
+      "ingredients": "previews/cb700a40dcc2-ingredients.webp",
+      "original_pdf": "previews/cb700a40dcc2-origineel.pdf"
     },
     "3fb963529dfa": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -92,7 +100,8 @@
         "ingredients": 16
       },
       "front": "previews/3fb963529dfa-front.webp",
-      "ingredients": "previews/3fb963529dfa-ingredients.webp"
+      "ingredients": "previews/3fb963529dfa-ingredients.webp",
+      "original_pdf": "previews/3fb963529dfa-origineel.pdf"
     },
     "06c8ab616a94": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -103,7 +112,8 @@
         "ingredients": 18
       },
       "front": "previews/06c8ab616a94-front.webp",
-      "ingredients": "previews/06c8ab616a94-ingredients.webp"
+      "ingredients": "previews/06c8ab616a94-ingredients.webp",
+      "original_pdf": "previews/06c8ab616a94-origineel.pdf"
     },
     "ea52c6f99520": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -114,7 +124,8 @@
         "ingredients": 20
       },
       "front": "previews/ea52c6f99520-front.webp",
-      "ingredients": "previews/ea52c6f99520-ingredients.webp"
+      "ingredients": "previews/ea52c6f99520-ingredients.webp",
+      "original_pdf": "previews/ea52c6f99520-origineel.pdf"
     },
     "7d5c1fd8876b": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -125,7 +136,8 @@
         "ingredients": 22
       },
       "front": "previews/7d5c1fd8876b-front.webp",
-      "ingredients": "previews/7d5c1fd8876b-ingredients.webp"
+      "ingredients": "previews/7d5c1fd8876b-ingredients.webp",
+      "original_pdf": "previews/7d5c1fd8876b-origineel.pdf"
     },
     "add0282e8b99": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -136,7 +148,8 @@
         "ingredients": 24
       },
       "front": "previews/add0282e8b99-front.webp",
-      "ingredients": "previews/add0282e8b99-ingredients.webp"
+      "ingredients": "previews/add0282e8b99-ingredients.webp",
+      "original_pdf": "previews/add0282e8b99-origineel.pdf"
     },
     "678ea2bd175a": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -147,7 +160,8 @@
         "ingredients": 26
       },
       "front": "previews/678ea2bd175a-front.webp",
-      "ingredients": "previews/678ea2bd175a-ingredients.webp"
+      "ingredients": "previews/678ea2bd175a-ingredients.webp",
+      "original_pdf": "previews/678ea2bd175a-origineel.pdf"
     },
     "835be6b5752c": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -158,7 +172,8 @@
         "ingredients": 28
       },
       "front": "previews/835be6b5752c-front.webp",
-      "ingredients": "previews/835be6b5752c-ingredients.webp"
+      "ingredients": "previews/835be6b5752c-ingredients.webp",
+      "original_pdf": "previews/835be6b5752c-origineel.pdf"
     },
     "4ca577c7b02a": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -169,7 +184,8 @@
         "ingredients": 30
       },
       "front": "previews/4ca577c7b02a-front.webp",
-      "ingredients": "previews/4ca577c7b02a-ingredients.webp"
+      "ingredients": "previews/4ca577c7b02a-ingredients.webp",
+      "original_pdf": "previews/4ca577c7b02a-origineel.pdf"
     },
     "1dad5ae6a65c": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -180,7 +196,8 @@
         "ingredients": 32
       },
       "front": "previews/1dad5ae6a65c-front.webp",
-      "ingredients": "previews/1dad5ae6a65c-ingredients.webp"
+      "ingredients": "previews/1dad5ae6a65c-ingredients.webp",
+      "original_pdf": "previews/1dad5ae6a65c-origineel.pdf"
     },
     "86c37dd6f4b7": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -191,7 +208,8 @@
         "ingredients": 34
       },
       "front": "previews/86c37dd6f4b7-front.webp",
-      "ingredients": "previews/86c37dd6f4b7-ingredients.webp"
+      "ingredients": "previews/86c37dd6f4b7-ingredients.webp",
+      "original_pdf": "previews/86c37dd6f4b7-origineel.pdf"
     },
     "cdb8a954e89c": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -202,7 +220,8 @@
         "ingredients": 36
       },
       "front": "previews/cdb8a954e89c-front.webp",
-      "ingredients": "previews/cdb8a954e89c-ingredients.webp"
+      "ingredients": "previews/cdb8a954e89c-ingredients.webp",
+      "original_pdf": "previews/cdb8a954e89c-origineel.pdf"
     },
     "8c1e058d53be": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -213,7 +232,8 @@
         "ingredients": 38
       },
       "front": "previews/8c1e058d53be-front.webp",
-      "ingredients": "previews/8c1e058d53be-ingredients.webp"
+      "ingredients": "previews/8c1e058d53be-ingredients.webp",
+      "original_pdf": "previews/8c1e058d53be-origineel.pdf"
     },
     "94ce40e63eaf": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -224,7 +244,8 @@
         "ingredients": 40
       },
       "front": "previews/94ce40e63eaf-front.webp",
-      "ingredients": "previews/94ce40e63eaf-ingredients.webp"
+      "ingredients": "previews/94ce40e63eaf-ingredients.webp",
+      "original_pdf": "previews/94ce40e63eaf-origineel.pdf"
     },
     "fe2f1015110d": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -235,7 +256,8 @@
         "ingredients": 42
       },
       "front": "previews/fe2f1015110d-front.webp",
-      "ingredients": "previews/fe2f1015110d-ingredients.webp"
+      "ingredients": "previews/fe2f1015110d-ingredients.webp",
+      "original_pdf": "previews/fe2f1015110d-origineel.pdf"
     },
     "1134d72edbba": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -246,7 +268,8 @@
         "ingredients": 44
       },
       "front": "previews/1134d72edbba-front.webp",
-      "ingredients": "previews/1134d72edbba-ingredients.webp"
+      "ingredients": "previews/1134d72edbba-ingredients.webp",
+      "original_pdf": "previews/1134d72edbba-origineel.pdf"
     },
     "40acea84931b": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -257,7 +280,8 @@
         "ingredients": 46
       },
       "front": "previews/40acea84931b-front.webp",
-      "ingredients": "previews/40acea84931b-ingredients.webp"
+      "ingredients": "previews/40acea84931b-ingredients.webp",
+      "original_pdf": "previews/40acea84931b-origineel.pdf"
     },
     "47004b8828d0": {
       "source_file": "14.ALL.1-32.NL.pdf",
@@ -268,7 +292,8 @@
         "ingredients": 48
       },
       "front": "previews/47004b8828d0-front.webp",
-      "ingredients": "previews/47004b8828d0-ingredients.webp"
+      "ingredients": "previews/47004b8828d0-ingredients.webp",
+      "original_pdf": "previews/47004b8828d0-origineel.pdf"
     }
   }
 }
