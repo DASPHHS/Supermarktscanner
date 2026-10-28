@@ -11,7 +11,7 @@ from pathlib import Path
 API="https://www.prijsprofeet.nl/api/v1/deals/top"
 STORES={"Jumbo":"jumbo","AH":"albert_heijn","Lidl":"lidl"}
 def fetch(store):
-    url=API+"?"+urllib.parse.urlencode({"retailer":store,"limit":80})
+    url=API+"?"+urllib.parse.urlencode({"retailer":store,"limit":10})
     req=urllib.request.Request(url,headers={"User-Agent":"HelloFresh-Supermarktscanner/1.0 (github.com/DASPHHS/Supermarktscanner)","Accept":"application/json"})
     with urllib.request.urlopen(req,timeout=25) as resp:
         return json.load(resp)
