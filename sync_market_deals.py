@@ -1,49 +1,69 @@
-"""Public, verifiable supermarket promotion snapshot for the recipe UI.
+"""Collect active food promotions for the HelloFresh and Plated recipe browser.
 
-Does NOT claim matched recipe totals. Stores only active promotions and dates.
+Source: public PrijsProfeet search API. Active promotion only, never impute shelf price.
 """
 import json
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 from pathlib import Path
 
-API="https://www.prijsprofeet.nl/api/v1/deals/top"
-STORES={"Jumbo":"jumbo","AH":"albert_heijn","Lidl":"lidl"}
-def fetch(store):
-    url=API+"?"+urllib.parse.urlencode({"retailer":store,"limit":10})
-    req=urllib.request.Request(url,headers={"User-Agent":"HelloFresh-Supermarktscanner/1.0 (github.com/DASPHHS/Supermarktscanner)","Accept":"application/json"})
-    with urllib.request.urlopen(req,timeout=25) as resp:
-        return json.load(resp)
-def extract(data):
-    result=[]
-    seen=set()
-    for label in ("top_by_percentage","top_by_amount"):
-        for deal in data.get(label,[]) or []:
-            product=deal.get("representative_product") or {}
-            name=product.get("name") or ""
-            if not name or name.casefold() in seen:continue
-            seen.add(name.casefold())
-            off=deal.get("savings_percentage")
-            amount=deal.get("savings_amount")
-            tag=("%g%% korting" % off if isinstance(off,(int,float)) and off>0 else
-                 ("€ %.2f besparing" % amount if isinstance(amount,(int,float)) and amount>0 else "Aanbieding"))
-            result.append({"name":name,"discount":tag,
-                           "brand":deal.get("brand"),"variant_count":deal.get("variant_count")})
-    return result[:80]
+BASE="https://www.prijsprofeet.nl/api/v1/search"
+TERMS=("boerenkool","rookworst","aardappelen","pompoen","sperziebonen","gehakt",
+       "bospeen","vivera","kipfilet","walnoten","champignons","spinazie",
+       "courgette","tomaten","broccoli","rijst","pasta","tofu","zalm",
+       "ui","wortel","paprika","kikkererwten","kokosmelk")
+STORES={"Jumbo":"jumbo","AH":"albertheijn","Lidl":"lidl"}
+UA="HelloFresh-Supermarktscanner/1.0 (+https://github.com/DASPHHS/Supermarktscanner)"
+def normalize(s):
+    return "".join(x for x in str(s or "").lower() if x.isalnum())
+def query(term):
+    url=BASE+"?"+urllib.parse.urlencode({"q":term,"page_size":25})
+    req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/json"})
+    with urllib.request.urlopen(req,timeout=20) as f:
+        return json.load(f)
 def main(out="market_deals.json"):
-    result={"updated_at_utc":datetime.now(timezone.utc).isoformat(),"source":"PrijsProfeet API /deals/top", "limitations":["Only promotion examples; not complete supermarket assortment","No implied recipe pricing or 1+1 calculations"],"stores":{}}
-    for name,code in STORES.items():
+    today=date.today().isoformat()
+    now=datetime.now(timezone.utc).isoformat()
+    result={"updated_at_utc":now,"source":"PrijsProfeet API /search",
+            "limitations":["Food term search is a selection, not a complete assortment",
+                           "All products must be active, not upcoming/historical",
+                           "Promotion is not automatically applied to recipe price"],
+            "stores":{k:{"updated_at":now,"deals":[]} for k in STORES}}
+    seen={k:set() for k in STORES}
+    errors=[]
+    for term in TERMS:
         try:
-            data=fetch(code)
-            result["stores"][name]={"updated_at":result["updated_at_utc"],"deals":extract(data)}
+            data=query(term)
         except Exception as exc:
-            print("PrijsProfeet fetch error for",name, type(exc).__name__,str(exc)[:250])
-            result["stores"][name]={"updated_at":None,"deals":[],"error":type(exc).__name__+": "+str(exc)[:140]}
-    print("Deal API counts:",{k:len(v["deals"]) for k,v in result["stores"].items()})
-    # Never replace a previously saved complete feed with a wholly failed snapshot.
-    if all(len(x["deals"])==0 for x in result["stores"].values()):
-        raise RuntimeError("No promotions received; retain previous snapshot")
+            errors.append(term+": "+type(exc).__name__+": "+str(exc)[:120])
+            continue
+        for p in data.get("results",[]):
+            retailer=normalize(p.get("retailer"))
+            target=next((k for k,v in STORES.items()
+                         if retailer==v or (k=="AH" and retailer in ("ah","albertheijn"))),None)
+            if not target or p.get("promotion_status")!="active":continue
+            start=str(p.get("valid_from") or "")[:10]
+            end=str(p.get("valid_until") or "")[:10]
+            if (start and start>today) or (end and end<today):continue
+            name=str(p.get("name") or "").strip()
+            if not name:continue
+            key=str(p.get("id") or (target+":"+name.casefold()))
+            if key in seen[target]:continue
+            seen[target].add(key)
+            pct=p.get("savings_percentage")
+            original=p.get("original_price")
+            price=p.get("price")
+            discount=("%g%% korting" % pct if isinstance(pct,(float,int)) and pct>0 else "Actieve aanbieding")
+            result["stores"][target]["deals"].append({"name":name,"discount":discount,
+                "price":price,"original_price":original,
+                "valid_from":start,"valid_until":end,"source_term":term,
+                "source_url":"https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"})
+    result["errors"]=errors[:25]
+    for v in result["stores"].values():
+        v["deals"].sort(key=lambda x:(-float(x["discount"].split("%")[0]) if "%" in x["discount"] else 0,x["name"]))
+    if not any(v["deals"] for v in result["stores"].values()):
+        raise RuntimeError("No active food promotions fetched; retain last successful snapshot. "+str(errors[:3]))
     Path(out).write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("Saved offer counts:",{k:len(v["deals"]) for k,v in result["stores"].items()})
+    print("Live food deals:",{k:len(v["deals"]) for k,v in result["stores"].items()},"search errors:",len(errors))
 if __name__=="__main__":main()
