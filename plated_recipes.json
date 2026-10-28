@@ -1,7 +1,6 @@
 {
   "metadata": {
     "source": "Plated recipes from Marc Hummel",
-    "drive_folder": "https://drive.google.com/drive/folders/1WgY52rPbWAdxxBv7zKkRmrCImQW6r7Db",
     "status": "partial_import",
     "imported_count": 1,
     "notes": "Only extracted, inspected ingredients; PDF originally 2 servings, quantities doubled for 4. All units must be normalized and proofread before price ranking. Recipe steps are not republished."
@@ -17,7 +16,6 @@
       "quality": "needs_manual_verification",
       "pricing_eligible": false,
       "source_file": "Salmon Coconut Curry with Roasted Cauliflower and Carrots",
-      "source_url": "https://drive.google.com/file/d/1LtOK17MvgkZJ9VrVxHJms4QQLTZnz2eW/view",
       "source_page_ingredients": 1,
       "ingredients_4p": [
         {
