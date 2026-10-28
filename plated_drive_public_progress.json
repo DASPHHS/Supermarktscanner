@@ -1,13 +1,17 @@
 {
-  "updated_at_utc": "2026-10-28T15:01:52.311621+00:00",
+  "updated_at_utc": "2026-10-28T15:17:30.217835+00:00",
   "manifest_pdf_count": 533,
   "unique_title_candidates": 505,
-  "attempted_this_run": 12,
-  "new_records_this_run": 12,
-  "records_in_queue": 48,
-  "exact_duplicates_this_run": 0,
+  "attempted_this_run": 60,
+  "new_records_this_run": 56,
+  "records_in_queue": 104,
+  "exact_duplicates_this_run": 4,
   "pricing_eligible": 0,
   "download_or_ocr_errors_this_run": [],
   "blocked_after_three_failures": 0,
-  "manual_review_required": true
+  "manual_review_required": true,
+  "failures_retryable": 0,
+  "manifest_files_attempted_or_completed": 108,
+  "manifest_files_completed": 108,
+  "distinct_source_files_in_review": 104
 }
