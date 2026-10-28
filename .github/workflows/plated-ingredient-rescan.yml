@@ -1,0 +1,69 @@
+name: Plated ontbrekende ingrediënten herscannen
+on:
+  push:
+    paths:
+      - 'rescan_plated_ingredients.py'
+      - '.github/workflows/plated-ingredient-rescan.yml'
+  schedule:
+    - cron: '12,42 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: plated-ingredient-rescan
+  cancel-in-progress: false
+jobs:
+  rescan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF/OCR tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-eng
+          python -m pip install 'Pillow>=10,<13'
+      - name: Restore source archive
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: plated-archive
+          key: plated-source-release-v1
+      - name: Download source archive if cache missing
+        if: steps.cache.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p plated-archive
+          gh release download plated-database-v1 --pattern 'Plated*.zip' --dir plated-archive --clobber
+      - name: OCR the missing ingredient columns
+        run: python rescan_plated_ingredients.py --archive plated-archive/Plated*.zip --batch 35
+      - name: Publish additive OCR review candidates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp plated_ingredient_rescan.json "$RUNNER_TEMP/plated_ingredient_rescan.json"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python - <<'PY'
+          import json,os
+          from pathlib import Path
+          src=Path(os.environ['RUNNER_TEMP'])/'plated_ingredient_rescan.json'
+          dst=Path('plated_ingredient_rescan.json')
+          new=json.loads(src.read_text())
+          old=json.loads(dst.read_text()) if dst.exists() else {'records':{}}
+          new['records']={**old.get('records',{}),**new['records']}
+          new['metadata']['rescan_with_candidate_lines']=sum(x.get('status')=='extracted' for x in new['records'].values())
+          new['metadata']['pricing_eligible']=0
+          dst.write_text(json.dumps(new,ensure_ascii=False,indent=2)+'\n')
+          PY
+            git add plated_ingredient_rescan.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update Plated OCR ingredient review candidates'
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
