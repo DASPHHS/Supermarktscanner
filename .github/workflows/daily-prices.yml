@@ -1,5 +1,10 @@
 name: Dagelijkse supermarktprijzen
 on:
+  push:
+    paths:
+      - "sync_prices.py"
+      - "recipes_extracted.json"
+      - ".github/workflows/daily-prices.yml"
   schedule:
     - cron: "15 6 * * *"
   workflow_dispatch:
@@ -19,7 +24,7 @@ jobs:
       - name: Controleer import en matching
         run: |
           python -m pip install pytest
-          pytest -q tests/test_sync_prices.py
+          PYTHONPATH=. pytest -q tests/test_sync_prices.py
       - name: Ververs gecontroleerde schapprijzen
         run: python sync_prices.py
       - name: Bewaar prijssnapshot
