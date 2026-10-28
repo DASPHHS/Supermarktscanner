@@ -1,9 +1,11 @@
 {
   "metadata": {
     "source": "Plated Google Drive (public-link download)",
-    "updated_at_utc": "2026-10-28T14:56:59.803397+00:00",
-    "imported": 24,
-    "note": "Preliminary OCR review queue only. NO prices, NO validated recipes."
+    "updated_at_utc": "2026-10-28T15:00:44.474063+00:00",
+    "imported": 36,
+    "note": "Preliminary OCR review queue only. NO prices, NO validated recipes.",
+    "count": 36,
+    "status": "manual_review_required"
   },
   "recipes": [
     {
@@ -1005,6 +1007,372 @@
       "same_title_candidates": []
     },
     {
+      "id": "plated-beefbulgogibunswithkimchislawandcheesycorn",
+      "source": "Plated",
+      "title_extracted": "Beef Bulgogi Buns with Kimchi Slaw and Cheesy Corn (2)_card",
+      "source_file": "Beef Bulgogi Buns with Kimchi Slaw and Cheesy Corn (2)_card.pdf",
+      "drive_identity_hash": "b0d9c4e4b929222682924e966fa26e8b54fc05cc63e07d973d4e668df6a49ed5",
+      "content_sha256": "7de77d35c360c5915836c49840658a2041ab88cabe0dab7ffc987f9982a31849",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 ears corn",
+        "1 Persian cucumber",
+        "1 scallion",
+        "¼ cup kimchi",
+        "¼ cup shredded carrots",
+        "1 tablespoon rice wine vinegar",
+        "12 ounces ground beef",
+        "2 ounces shredded mozzarella cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1ARgUFVUz8zpZ0NwX_LnQ4NAHUqDb-Xlb",
+      "original_filename": "Beef Bulgogi Buns with Kimchi Slaw and Cheesy Corn (2)_card.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefchiliwithcheddarandbeetchips",
+      "source": "Plated",
+      "title_extracted": "Beef Chili with Cheddar and Beet Chips",
+      "source_file": "Beef Chili with Cheddar and Beet Chips.PDF",
+      "drive_identity_hash": "32e29055edeb9095d4384aab2389bca6cc468d98639ad503597335d59de583d2",
+      "content_sha256": "bdd207ed218bc3cb7caa3177c2a641bec2e0c3a69fe3c791b890cd5f67bd763e",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "Preheat oven to 400°F. Peel beets,",
+        "halve, and slice as thinly as possible.",
+        "Mince garlic. Drain black beans and",
+        "kidney beans, then rinse both. Quarter",
+        "lime. Pat beef dry with paper towel.",
+        "2. Bake Cornbread",
+        "In a large bowl, stir together cornbread",
+        "mix and % cup water until fully",
+        "combined. Divide evenly between tins,",
+        "rehsaping if bent. Place on a baking",
+        "sheet, transfer to oven, and bake until",
+        "puffed and set, 10-15 minutes. Remove",
+        "and set aside to cool for 2-3 minutes.",
+        "Carefully invert and set aside until",
+        "ready to serve. Increase oven",
+        "temperature to 450°F.",
+        "3. Simmer Chili",
+        "While cornbread bakes, heat 1",
+        "tablespoon olive oil in a medium pot",
+        "over medium heat. When oil is",
+        "shimmering, add spice mix, garlic, beef,",
+        "and % teaspoon kosher salt and cook,",
+        "breaking up with the back of a spoon,",
+        "until meat loses its color, 3-4 minutes.",
+        "Stir in crushed tomatoes. Increase heat",
+        "to high and bring to a boil, then reduce",
+        "heat to medium and simmer until",
+        "thickened, 3-4 minutes.",
+        "4. Bake Beet Chips",
+        "Add beets to baking sheet from",
+        "cornbread and toss with 1 tablespoon",
+        "olive oil and % teaspoon kosher salt.",
+        "Arrange ina single layer, transfer to",
+        "oven, and bake until crisp, about 15",
+        "minutes.",
+        "5. Thicken Chili",
+        "While beets bake, whisk together masa",
+        "harina and % cup water in a small bowl.",
+        "Add to pot with chili over medium heat",
+        "and stir until no lumps remain. Stir in",
+        "black beans and kidney beans. Cover",
+        "pot and cook until chili is thickened and",
+        "flavors are melded, about 5 minutes",
+        "more. Remove pot from heat. Taste and",
+        "add salt and pepper as needed.",
+        "6. Plate Chili",
+        "Now for the fun part! Garnish chili with",
+        "all the things: Cheddar, beet chips, and",
+        "lime wedges. Use warm cornbread to",
+        "soak up flavors and clean your bowl.",
+        "Join the Plated community - post your",
+        "#platedpics this week!",
+        "Q- RECIPE TIPS",
+        "Be sure to read through the entire recipe",
+        "before you begin cooking.",
+        "Masa harina, or \"dough flour” in Spanish, is",
+        "a yellow corn flour used in Latin American",
+        "cooking. Here, it acts as a thickener and",
+        "balances the tomato flavor in the chili.",
+        "6 ounces yellow beets",
+        "1 clove garlic",
+        "% cup black beans",
+        "% cup kidney beans",
+        "1 lime",
+        "12 ounces ground beef",
+        "% cup cornbread mix",
+        "1 spice mix",
+        "% teaspoon chili powder",
+        "‘4s teaspoon ground cumin",
+        "‘4 teaspoon dried oregano",
+        "1 cancrushed tomatoes",
+        "2 tablespoons masa herina",
+        "% cup shredded Cheddar cheese",
+        "2 aluminum tins"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "yellow beets",
+          "quantity_4p_source": "12 ounces",
+          "original_quantity": "6 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "2 clove",
+          "original_quantity": "1 clove",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "lime",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ground beef",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cancrushed tomatoes",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "masa herina",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "aluminum tins",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1TDugrxCw4_CT7AD7IFVcMAxaRwYS3QMZ",
+      "original_filename": "Beef Chili with Cheddar and Beet Chips.PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefkibbehwithtomatoherbsalsaandcreamyfeta",
+      "source": "Plated",
+      "title_extracted": "Beef Kibbeh with Tomato-Herb Salsa and Creamy Feta (2)_card",
+      "source_file": "Beef Kibbeh with Tomato-Herb Salsa and Creamy Feta (2)_card.pdf",
+      "drive_identity_hash": "3fee46aa79c1b523889c8ad7ad74ebb1028781a26a72ddef2f771fa5fbda5b41",
+      "content_sha256": "35b5c3961043f92d62e975699bee76f87129287ffcfd632eec5b1784a344dc6f",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ pint grape tomatoes",
+        "⅛ ounce parsley",
+        "1 lemon, divided",
+        "2 cloves garlic",
+        "1 red onion",
+        "1 tablespoon za'atar spice blend",
+        "12 ounces ground beef",
+        "1 packet sour cream",
+        "1 packet harissa",
+        "1 naan bread"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1_6HwwstpHb5ZdEIs2k6xCiN_5_niOZNE",
+      "original_filename": "Beef Kibbeh with Tomato-Herb Salsa and Creamy Feta (2)_card.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefkoftaoverturmericricewithspinachpinenutsandcurrants",
+      "source": "Plated",
+      "title_extracted": "Beef Kofta over Turmeric Rice with Spinach, Pine Nuts, and Currants",
+      "source_file": "Beef Kofta over Turmeric Rice with Spinach, Pine Nuts, and Currants.pdf",
+      "drive_identity_hash": "5aafe3925bc0e9efe4591cf9b569d5d383ce40974a61d65bcad29506df9d8ffb",
+      "content_sha256": "d94bea6594cc752f956fed47b32309ed24d7976d7df774f243027adae9d3d51f",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "+ 3/4 cup jasmine rice",
+        "+ 1/4 teaspoon ground turmeric",
+        "+ 1/8 ounce mint",
+        "+ 1 yellow onion",
+        "+ 3 cloves garlic",
+        "+ 1 teaspoon baharat spice",
+        "* 1 pound ground beef",
+        "+ 2 tablespoons pine nuts",
+        "* 3 ounces baby spinach",
+        "* 3 tablespoons currants",
+        "+ 5 3/10 oz cups nonfat Greek yogurt",
+        "* olive oil",
+        "+ kosher salt",
+        "* black pepper",
+        "Search Recipes Q",
+        "Cooking Instructions",
+        "Step 1",
+        "In a small pot, combine rice, turmeric, 1.25 cups water, and .25",
+        "teaspoon salt, and bring to a boil over high heat. Stir once, reduce",
+        "heat to medium low, cover pot, and simmer until water is fully",
+        "absorbed, 10-12 minutes. Remove pot from heat and let stand, still",
+        "covered, for 10 minutes. Meanwhile, rinse all produce. Roughly chop",
+        "mint leaves, discarding stems. Peel onion and finely chop. Mince",
+        "garlic",
+        "Step 3",
+        "To large bowl with aromatics, add baharat, .75 teaspoon salt, and",
+        "pepper as desired. Pat beef dry with paper towel and add to bowl",
+        "Using your hands, mix well, then form into 9 equal logs, about 1 inch",
+        "thick. (Try to make your kofta the same width throughout, like sausage",
+        "—this will help them cook evenly.)",
+        "Step 5",
+        "Pat spinach dry with paper towel. Fluff turmeric rice with a fork. To",
+        "pan with pine nuts, still off heat, stir in currants, turmeric rice,",
+        "spinach, and reserved aromatics (from small bow!) to wilt spinach",
+        "slightly (see recipe tip). Season with salt and pepper as desired. To",
+        "small bowl from aromatics, add Greek yogurt, half of mint, 2",
+        "tablespoons water, .25 teaspoon salt, and pepper as desired and stir",
+        "until smooth and pourable.",
+        "& Sinn/pv Q",
+        "Step 2",
+        "Heat 1 tablespoon olive oil in a large pan over medium-high heat",
+        "When oil is shimmering, add onion; sauté, stirring, until soft, 3",
+        "minutes. Add garlic; sauté until fragrant, 1 minute more. Remove pan",
+        "from heat. Transfer half of aromatics to a large bowl for kofta; reserve",
+        "remainder in a small bowl for rice. Wipe pan clean for Step 4",
+        "Step 4",
+        "Return pan from aromatics to medium-high heat with 2 teaspoons",
+        "olive oil, When oil is shimmering, add kofta and sear, flipping",
+        "occasionally, until almost cooked through, 6 minutes. Scatter pine",
+        "nuts around kofta in pan; continue searing until kofta are browned all",
+        "over and medium rare and pine nuts are toasted, 2-3 minutes more",
+        "(see recipe tip). Transfer kofta to a plate to rest, leaving pine nuts",
+        "behind in pan, off heat.",
+        "Step 6",
+        "Divide turmeric rice among serving plates. Add mint-yogurt sauce to",
+        "plates and top with beef kofta. Garnish with remaining mint and",
+        "enjoy!",
+        "refrigerator.",
+        "6 B280 15",
+        "a]",
+        "8"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1d3Kwcxe8FtZdTdmBXYycpKz1I6bELDat",
+      "original_filename": "Beef Kofta over Turmeric Rice with Spinach, Pine Nuts, and Currants.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beeflomein",
+      "source": "Plated",
+      "title_extracted": "Beef Lo Mein (4)",
+      "source_file": "Beef Lo Mein (4).pdf",
+      "drive_identity_hash": "5080d986ea0bfc38178a5a5d0eed8279a373c2c1db7dbf5c51def5d6df2dee1b",
+      "content_sha256": "1a4ee3d03ae6ead93f820e6f2dc58cfe87e9243e81730b3e5a252abdd1713258",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces Chinese broccoli",
+        "1 yellow onion",
+        "4 cloves garlic",
+        "⅔ cup dark soy sauce",
+        "⅓ cup hoisin sauce",
+        "3 tablespoons rice wine vinegar",
+        "1½ pounds ground beef",
+        "8 ounces baby corn",
+        "1 cup shredded carrots",
+        "1 tablespoon sesame seeds"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1bTgNpx1jJJBZtIiBrOJBckWJTF6pTVXN",
+      "original_filename": "Beef Lo Mein (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefcheeseburger",
+      "source": "Plated",
+      "title_extracted": "beef-cheeseburger",
+      "source_file": "beef-cheeseburger.pdf",
+      "drive_identity_hash": "5e8bb816f9d56f77217b599aa640dc7750f4eb3264d316fed68a1cddd3333c3d",
+      "content_sha256": "6646a0fdbe5d9745314b123e00466631f664711468bb26ce4f7a363b21ada256",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 brioche slider buns",
+        "4 ounces mixed lettuces",
+        "3 ounces red radishes",
+        "1 yellow onion",
+        "1 packet Dijon mustard",
+        "2 tablespoons whole-grain mustard",
+        "2 packets unsalted butter",
+        "1 tablespoon sherry vinegar",
+        "½ ounce honey",
+        "2 ounces shredded white Cheddar"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1bhXswsbQ4vIAVo_6Yv8f7JZBFV4JU8jN",
+      "original_filename": "beef-cheeseburger.pdf",
+      "same_title_candidates": []
+    },
+    {
       "id": "plated-beefbalsamicmarinatedsteaktacoswithchimichurrisauce",
       "source": "Plated",
       "title_extracted": "Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR",
@@ -1171,6 +1539,368 @@
       ],
       "source_identity": "1-jW08Cm9cx0_ouR0rMencw4-LyHnxAQM",
       "original_filename": "Beef_Beef Bolognese_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefcheesyenchiladaswithbeef",
+      "source": "Plated",
+      "title_extracted": "Beef_Cheesy Enchiladas with Beef_OCR",
+      "source_file": "Beef_Cheesy Enchiladas with Beef_OCR.pdf",
+      "drive_identity_hash": "372209627b30fe615fd6ca20ab2910e8f4a3d5d30472be26114049307fda3775",
+      "content_sha256": "b2171c8e7ca85422e89750a9f547d0290ae38211a8214e2d05193568f5cbe5aa",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup baby spinach",
+        "2 carrots",
+        "8 ounces cauliflower",
+        "1 cup black beans",
+        "10 ounces ground beef",
+        "1 spice mix",
+        "1 cup salsa, divided",
+        "1 cheese mix",
+        "warm for 5-10 minutes.                      spinach, and black beans."
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "baby spinach",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "carrots",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cauliflower",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "black beans",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ground beef",
+          "quantity_4p_source": "20 ounces",
+          "original_quantity": "10 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "salsa, divided",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cheese mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1v5bGl1F1v8FCCxVLScAmu18k-tkKgq0W",
+      "original_filename": "Beef_Cheesy Enchiladas with Beef_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefcheesysteakheros",
+      "source": "Plated",
+      "title_extracted": "Beef_Cheesy Steak Heros_OCR",
+      "source_file": "Beef_Cheesy Steak Heros_OCR.pdf",
+      "drive_identity_hash": "9e2dda7eabd1836c818235f6c70506d7bf99b85135acdd5f1bfbaa40116ca8d2",
+      "content_sha256": "aac58990d31505fb0fac50175f6a28b5f5288da4b1de6afd2231f60ebf15df17",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "1 red bell pepper",
+        "1 red onion",
+        "1 spice mix",
+        "⅛   teaspoon dried basil",
+        "⅛   teaspoon ground fennel seed",
+        "⅛   teaspoon dried rosemary",
+        "¼ teaspoon dried thyme",
+        "2 teaspoons Worcestershire sauce",
+        "1 teaspoon apple cider vinegar",
+        "2 French bread rolls",
+        "sauce, stirring to evaporate. Transfer          when you melt the cheese on top, in Step",
+        "vegetables to a plate and set aside.            6). Transfer to a plate and set aside to"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red bell pepper",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red onion",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Worcestershire sauce",
+          "quantity_4p_source": "4 teaspoons",
+          "original_quantity": "2 teaspoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "apple cider vinegar",
+          "quantity_4p_source": "2 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "French bread rolls",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1DDmDUc5dMAAQSNYPIbkCZkwu7E1kKQiF",
+      "original_filename": "Beef_Cheesy Steak Heros_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefchopsteak",
+      "source": "Plated",
+      "title_extracted": "Beef_Chop Steak_OCR",
+      "source_file": "Beef_Chop Steak_OCR.pdf",
+      "drive_identity_hash": "9c94589523ab98697f40aa070ab43578e72335fd70efb371ebdffbf2ac38f839",
+      "content_sha256": "7cb8a51882a4499307e30bfd5e0c3b2838f631cd074b6a30a40c6faed2b09d82",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¼ cup unsalted butter, divided                                                           \\",
+        "12 ounces baby purple potatoes",
+        "1 herb mix",
+        "⅛ ounce parsley",
+        "⅛ ounce tarragon",
+        "1 clove garlic",
+        "2 shallots, divided",
+        "12 ounces ground beef",
+        "1 teaspoon sugar"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1W_PEkwnr3xYIqX3666bQD0jAnMigG8xO",
+      "original_filename": "Beef_Chop Steak_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefgrilledsteaktostadas",
+      "source": "Plated",
+      "title_extracted": "Beef_Grilled Steak Tostadas_OCR",
+      "source_file": "Beef_Grilled Steak Tostadas_OCR.pdf",
+      "drive_identity_hash": "e8d1feb3f411eb3b014590326d4748a6c89aac56e336ad0a31b72f481e943639",
+      "content_sha256": "07e08b7d0733ed6ead6af1bc128a88310825addc615646827b755177d84124f1",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 flat iron steaks",
+        "5 ounces tomatillos",
+        "2 plum tomatoes",
+        "1 romaine heart",
+        "1 poblano pepper",
+        "1 tablespoon red wine vinegar",
+        "1 teaspoon ground cumin",
+        "½ teaspoon garlic powder",
+        "poblano pepper lengthwise and using a       and pepper as desired. Set aside."
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "flat iron steaks",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tomatillos",
+          "quantity_4p_source": "10 ounces",
+          "original_quantity": "5 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "plum tomatoes",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "romaine heart",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "poblano pepper",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red wine vinegar",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ground cumin",
+          "quantity_4p_source": "2 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1lUq4UzleaXwlCOFQBdLAknUs2e9Eja75",
+      "original_filename": "Beef_Grilled Steak Tostadas_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefitalianburgerswithfreshmozzarellaandtomatocornsalad",
+      "source": "Plated",
+      "title_extracted": "Beef_Italian Burgers with Fresh Mozzarella and Tomato-Corn Salad_OCR",
+      "source_file": "Beef_Italian Burgers with Fresh Mozzarella and Tomato-Corn Salad_OCR.pdf",
+      "drive_identity_hash": "e5a273ee723480a0b74cb9094d734dc5284d714751f6142290d4794949e883a1",
+      "content_sha256": "1aba369e40ca60893a5fb3c2c6fa97eee8ff50f2c48f2af16859f1eb092677dc",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1sJUJGFVueMQ2d7eQwh7b1Z4A3a7uJyy0",
+      "original_filename": "Beef_Italian Burgers with Fresh Mozzarella and Tomato-Corn Salad_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefitalianmeatballsoup",
+      "source": "Plated",
+      "title_extracted": "Beef_Italian Meatball Soup_OCR",
+      "source_file": "Beef_Italian Meatball Soup_OCR.pdf",
+      "drive_identity_hash": "a2c2d0a76b9096698f085f6e4fc258a36fe98a6a853b1fc262f6609217a2364d",
+      "content_sha256": "ba3509548cede99c6621c048522e10b7a62842cd2c16d440111e4c4c735f83db",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "ensures a softer touch.",
+        "1   lemon",
+        "sheet, transfer to top rack of oven, and    12 ounces ground beef",
+        "broil until browned, about 8 minutes.        ¼ teaspoon crushed red pepper",
+        "2 tablespoons whole milk",
+        "2 tablespoons breadcrumbs",
+        "1   spice mix",
+        "½ teaspoon dried basil",
+        "¼ teaspoon dried oregano",
+        "¼ teaspoon dried parsley",
+        "¼ cup grated pecorino cheese, divided",
+        "32 ounces chicken stock",
+        "4. Simmer Soup                              5. Season Soup                            6. Plate Soup"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "whole milk",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "breadcrumbs",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "chicken stock",
+          "quantity_4p_source": "64 ounces",
+          "original_quantity": "32 ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1e5JCt-I4LHyRskQ_r4PrRXfnisL6OcBM",
+      "original_filename": "Beef_Italian Meatball Soup_OCR.pdf",
       "same_title_candidates": []
     }
   ]
