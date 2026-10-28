@@ -15,13 +15,40 @@ def command(argv):
     if p.returncode: raise RuntimeError(argv[0]+": "+p.stderr[:200])
     return p.stdout
 def pdf_text(path):
-    raw=command(["pdftotext","-layout",str(path),"-"])
-    if len(raw.strip())>250 and re.search(r"WHAT WE SEND|INGREDIENTS",raw,re.I):
-        return raw,"pdf_text"
+    """Prefer existing text, then OCR individual bounded-size pages.
+
+    Some unusually large scanned PDFs time out when Poppler rasterizes the
+    first three pages in one command. Process pages independently and preserve
+    any successful result; never imply extraction was verified.
+    """
+    try:
+        raw=command(["pdftotext","-layout",str(path),"-"])
+        if len(raw.strip())>250 and re.search(r"WHAT WE SEND|INGREDIENTS",raw,re.I):
+            return raw,"pdf_text"
+    except (subprocess.TimeoutExpired,RuntimeError):
+        raw=""
+    parts=[]
+    failures=[]
     with tempfile.TemporaryDirectory() as td:
-        command(["pdftoppm","-r","170","-f","1","-l","3","-gray","-png",str(path),str(Path(td)/"page")])
-        parts=[command(["tesseract",str(p),"stdout","-l","eng"]) for p in sorted(Path(td).glob("page-*.png"))]
-        return "\n".join(parts),"ocr_unverified"
+        # Plated ingredients are usually on the second page; first page
+        # sometimes carries the serving count, and third is a fallback.
+        for page in (2,1,3):
+            target=Path(td)/("page-"+str(page))
+            try:
+                command(["pdftoppm","-f",str(page),"-l",str(page),
+                         "-singlefile","-scale-to","1350","-gray","-png",
+                         str(path),str(target)])
+                rendered=target.with_suffix(".png")
+                text=command(["tesseract",str(rendered),"stdout","-l","eng","--psm","3"])
+                if text.strip():
+                    parts.append(text)
+            except (subprocess.TimeoutExpired,RuntimeError) as exc:
+                failures.append(str(page)+": "+type(exc).__name__)
+                continue
+    if not parts:
+        raise RuntimeError("All bounded OCR pages failed: "+", ".join(failures))
+    method="ocr_unverified_partial" if failures else "ocr_unverified"
+    return "\n".join(parts),method
 EXTRACTION_VERSION=2
 def serving_options(raw):
     candidates=re.findall(r"\b([246])\s*servings?\b|\bserves\s*:?\s*([246])\s*(?:people|persons?|servings?)?\b",raw,re.I)
