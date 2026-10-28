@@ -1,0 +1,35 @@
+{
+  "project": "Plated import en validatie",
+  "updated_on": "2026-10-28",
+  "source": "Google Drive / RECEPTEN / Plated recipes from Marc Hummel [Download folder]",
+  "approach": "batched_drive_file_import",
+  "inventory": {
+    "folder_files": 566,
+    "pdf_files": 533,
+    "title_groups": 510,
+    "duplicate_candidates_by_title": 23,
+    "inventory_complete": false
+  },
+  "review": {
+    "structured_recipe_records": 6,
+    "price_eligible": 0,
+    "reviewed_cards_need_additional_packaging_checks": true
+  },
+  "quality_gates": [
+    "deduplicate by SHA256 and normalized title; retain conflicting versions for review",
+    "verify original serving count on PDF cover",
+    "extract complete ingredient table from original PDF including pantry items",
+    "scale all ingredient amounts to exactly four servings",
+    "convert US mass and liquid units without assuming cup or piece mass",
+    "require package weights for grocery pricing",
+    "only mark pricing_eligible after ingredient and source QA"
+  ],
+  "status": "batch_process_configured",
+  "next_batch_policy": {
+    "source": "loose Drive PDFs rather than 2.12GB ZIP",
+    "mode": "incremental",
+    "batch_size": 10,
+    "write_back": "append validated recipe records and provenance to plated_recipes.json; keep uncertain entries excluded",
+    "safety": "no made-up weights, offers, or completion claims"
+  }
+}
