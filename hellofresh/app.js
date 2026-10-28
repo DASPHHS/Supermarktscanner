@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const eur=n=>new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR'}).format(n);
-const state={recipes:[],extra:[],prices:new Map(),deals:{},priceDate:null,previews:{},estimates:{},health:{},previewsProgress:{},nlCatalog:{},source:'Alle',store:'Jumbo',kind:'alle',only:'all',sort:'az',top:false,shown:36,loading:true};
+const state={recipes:[],extra:[],prices:new Map(),deals:{},priceDate:null,previews:{},estimates:{},health:{},previewsProgress:{},quality:{},nlCatalog:{},source:'Alle',store:'Jumbo',kind:'alle',only:'all',sort:'az',top:false,shown:36,loading:true};
 const kinds={'alle':'Alles','vega':'Vega','kip':'Kip','vis':'Vis','vlees':'Vlees','onbekend':'Controleren'};
 function ingredients(r){return Array.isArray(r.ingredients_4p)?r.ingredients_4p:[]}
 function dutch(r){return r.source==='Plated' ? state.nlCatalog[r.source_identity||r.id.replace(/^plated-release-/,'')]||null : null}
@@ -28,19 +28,20 @@ function updateBanners(){const total=all().length; $('total').textContent=total;
 const offers=$('offers-section');if(offers){const group=state.deals?.[state.store],today=new Date().toISOString().slice(0,10),items=(group?.deals||[]).filter(d=>(!d.valid_from||d.valid_from<=today)&&(!d.valid_until||d.valid_until>=today));offers.innerHTML='<h3>Acties deze week · '+esc(state.store)+'</h3>'+(items.length?'<p class="sub">Acties via <a href="https://www.prijsprofeet.nl" target="_blank" rel="noopener">PrijsProfeet</a>. Een productactie is nog geen berekende receptprijs.</p><div class="deals">'+items.slice(0,12).map(x=>'<div class="deal"><b>'+esc(x.name)+'</b><span>'+esc(x.discount||'Aanbieding')+'</span></div>').join('')+'</div>':'<p class="sub">Nog geen geverifieerde actieve aanbiedingen geladen voor deze winkel.</p>')+(group?.updated_at?'<p class="sub">Bronmoment: '+esc(group.updated_at)+'</p>':'')}}
 function renderHealth(){
  const el=$('progress-content');if(!el)return;
- const h=state.health, hf=state.previewsProgress.hellofresh||{},pl=state.previewsProgress.plated||{};
+ const h=state.health,q=state.quality||{}, hf=state.previewsProgress.hellofresh||{},pl=state.previewsProgress.plated||{};
  const completed=Number(h.completed_members)||0,total=Number(h.pdf_members)||533;
  const last=h.updated_at_utc?new Date(h.updated_at_utc):null;
  const hours=last?(Date.now()-last.getTime())/3600000:null;
  const status=hours===null?'Importstatus nog niet beschikbaar':hours>2?'Laatste Plated-import meer dan twee uur geleden · geplande verwerking controleren':'Recent verwerkt';
  const percent=total?Math.min(100,100*completed/total):0;
- el.innerHTML='<div class="process-grid"><div class="process-item"><small>Plated bron-PDF’s</small><strong>'+completed+' / '+total+'</strong><div class="meter"><div style="width:'+percent.toFixed(1)+'%"></div></div><small>'+esc(h.remaining_members??'—')+' nog te verwerken</small></div><div class="process-item"><small>Originele HelloFresh-kaarten</small><strong>'+esc(hf.rendered??Object.keys(state.previews).filter(x=>!x.startsWith('plated-release-')).length)+' / '+esc(hf.recipes_total??225)+'</strong><small>Met bronpagina’s en PDF-download</small></div><div class="process-item"><small>Originele Plated-kaarten</small><strong>'+esc(pl.rendered??Object.keys(state.previews).filter(x=>x.startsWith('plated-release-')).length)+'</strong><small>Met bronpagina’s en PDF-download</small></div><div class="process-item"><small>Handmatig geverifieerde recepten</small><strong>0 bevestigd</strong><small>OCR is niet hetzelfde als handmatige controle</small></div></div><p class="progress-note '+(hours>2?'stale':'')+'">'+esc(status)+(last?' · Laatste opgeslagen Plated-import: '+last.toLocaleString('nl-NL'):'')+'</p><p><a href="https://github.com/DASPHHS/Supermarktscanner/actions/workflows/plated-release-import.yml" target="_blank" rel="noopener">Bekijk importlogboek op GitHub</a></p>';
+ el.innerHTML='<div class="process-grid"><div class="process-item"><small>Plated bron-PDF’s</small><strong>'+completed+' / '+total+'</strong><div class="meter"><div style="width:'+percent.toFixed(1)+'%"></div></div><small>'+esc(h.remaining_members??'—')+' nog te verwerken</small></div><div class="process-item"><small>Originele HelloFresh-kaarten</small><strong>'+esc(hf.rendered??Object.keys(state.previews).filter(x=>!x.startsWith('plated-release-')).length)+' / '+esc(hf.recipes_total??225)+'</strong><small>Met bronpagina’s en PDF-download</small></div><div class="process-item"><small>Originele Plated-kaarten</small><strong>'+esc(pl.rendered??Object.keys(state.previews).filter(x=>x.startsWith('plated-release-')).length)+'</strong><small>Met bronpagina’s en PDF-download</small></div><div class="process-item"><small>Handmatig geverifieerde recepten</small><strong>0 bevestigd</strong><small>OCR is niet hetzelfde als handmatige controle</small></div></div><p class="progress-note '+(hours>2?'stale':'')+'">'+esc(status)+(last?' · Laatste opgeslagen Plated-import: '+last.toLocaleString('nl-NL'):'')+'</p><p class="progress-note">Kwaliteitsrapport: '+esc(q.status||'nog niet beschikbaar')+' · '+esc(q.plated_recipes_without_ingredients??'—')+' zonder ingrediënten · '+esc(q.plated_recipes_with_unconfirmed_portions??'—')+' porties niet bevestigd · '+esc(q.plated_unmapped_ingredient_labels??'—')+' ingrediënten niet gekoppeld. <a href="../recipe_quality_audit.json" target="_blank" rel="noopener">Rapport bekijken</a></p><p><a href="https://github.com/DASPHHS/Supermarktscanner/actions/workflows/plated-release-import.yml" target="_blank" rel="noopener">Bekijk importlogboek op GitHub</a></p>';
 }
 function refreshHealth(){
- Promise.allSettled([json('../plated_release_progress.json'),json('./preview_manifest.json'),json('./plated_preview_manifest.json')]).then(([a,b,c])=>{
+ Promise.allSettled([json('../plated_release_progress.json'),json('./preview_manifest.json'),json('./plated_preview_manifest.json'),json('../recipe_quality_audit.json')]).then(([a,b,c,d])=>{
  if(a.status==='fulfilled')state.health=a.value;
  if(b.status==='fulfilled')state.previewsProgress.hellofresh=b.value.metadata||{};
  if(c.status==='fulfilled')state.previewsProgress.plated=c.value.metadata||{};
+ if(d.status==='fulfilled')state.quality=d.value;
  renderHealth();
  });
 }
