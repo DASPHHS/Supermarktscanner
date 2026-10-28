@@ -4,12 +4,12 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const eur=n=>new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR'}).format(n);
-const state={recipes:[],extra:[],prices:new Map(),deals:{},priceDate:null,previews:{},estimates:{},source:'HelloFresh',store:'Jumbo',kind:'alle',only:'all',sort:'az',top:false,shown:36,loading:true};
+const state={recipes:[],extra:[],prices:new Map(),deals:{},priceDate:null,previews:{},estimates:{},source:'Alle',store:'Jumbo',kind:'alle',only:'all',sort:'az',top:false,shown:36,loading:true};
 const kinds={'alle':'Alles','vega':'Vega','kip':'Kip','vis':'Vis','vlees':'Vlees','onbekend':'Controleren'};
 function ingredients(r){return Array.isArray(r.ingredients_4p)?r.ingredients_4p:[]}
 function protein(r){let t=norm(r.title_extracted+' '+ingredients(r).map(i=>i.ingredient).join(' '));if(/kip|kalkoen|chicken/.test(t))return 'kip';if(/zalm|tonijn|garnal|heek|kabeljauw|visfilet|forel|makreel|tilapia|pangasius|schelvis|shrimp|salmon/.test(t))return 'vis';if(/gehakt|rund|varken|spek|worst|biefstuk|chorizo|hamburger|schnitzel|lams|saucijs|rookworst|ribeye|beef|pork/.test(t))return 'vlees';return ingredients(r).length?'vega':'onbekend'}
 function dish(r){let t=norm(r.title_extracted);if(/soep|ramen/.test(t))return 'Soep';if(/pasta|spaghetti|linguine|penne|tagliatelle|lasagne|orzo|orzotto|ravioli|gnocchi|macaroni/.test(t))return 'Pasta & orzo';if(/curry|dahl|daal|masala/.test(t))return 'Curry';if(/stamppot|hutspot|puree/.test(t))return 'Stamppot';if(/rijst|risotto|nasi|biryani|poke/.test(t))return 'Rijst & bowls';if(/noedel|bami|mie|udon|wok/.test(t))return 'Noedels & wok';if(/wrap|taco|tortilla|burrito|quesadilla|naan|platbrood|pizza/.test(t))return 'Wraps & pizza';if(/salade|couscous|bulgur|quinoa|bowl/.test(t))return 'Salade & granen';return 'Overige gerechten'}
-function all(){const map=new Map();for(const r of state.recipes.concat(state.extra)){const key=norm(r.title_extracted);if(key&&!map.has(key))map.set(key,r)}return [...map.values()]}
+function all(){const map=new Map();for(const r of state.recipes.concat(state.extra)){const key=(r.source||'HelloFresh')+'|'+norm(r.title_extracted);if(key&&!map.has(key))map.set(key,r)}return [...map.values()]}
 function priceRecord(r){return state.prices.get(state.store+':'+r.id)}
 function completePrice(r){const p=priceRecord(r);return r.quality==='verified' && p?.complete && Number.isFinite(p.used_cost_4p_eur)?p.used_cost_4p_eur:null}
 function priceCoverage(r){const p=priceRecord(r);return {matched:(p?.matches||[]).length,missing:(p?.missing||[]).length,total:ingredients(r).length,review:r.quality!=='verified'}}
