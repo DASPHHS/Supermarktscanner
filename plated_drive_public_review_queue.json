@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "source": "Plated Google Drive (public-link download)",
+    "updated_at_utc": "2026-10-28T12:10:39.501153+00:00",
+    "imported": 12,
+    "note": "Preliminary OCR review queue only. NO prices, NO validated recipes."
+  },
+  "recipes": [
+    {
+      "id": "plated-applecherrycobblerwithflakybiscuit",
+      "source": "Plated",
+      "title_extracted": "Apple-Cherry Cobbler with Flaky Biscuit",
+      "source_file": "Apple-Cherry Cobbler with Flaky Biscuit.PDF",
+      "drive_identity_hash": "92335c444ad6927e39edc07ea3738bf3902a526854c8be4bc6aab774951aa817",
+      "content_sha256": "320185bccf7f97c83bf6ba44b820be5518f3c3a70acfb7009c0a850b3746dfc0",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1dXB57t1O5CZa1VMRHcijcwvh5YL3M6kb",
+      "original_filename": "Apple-Cherry Cobbler with Flaky Biscuit.PDF",
+      "same_title_candidates": [
+        "dupe_Apple-Cherry Cobbler with Flaky Biscuit (1).PDF"
+      ]
+    },
+    {
+      "id": "plated-argentinebeefempanadas",
+      "source": "Plated",
+      "title_extracted": "Argentine Beef Empanadas (4)",
+      "source_file": "Argentine Beef Empanadas (4).pdf",
+      "drive_identity_hash": "8f38a06722444ab5377d236f4af41818a5b3431edc8ba127bb5cb0d7d69d87ec",
+      "content_sha256": "e2887da5848e75b505cc8da7ba501f07161105500add028ce109aaf36329f462",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1PTe_ExLmUZoociI7HInA6pysP2Ur6TPS",
+      "original_filename": "Argentine Beef Empanadas (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-asianmeatloafwithmisomashedpotatoesandroastedbroccoli",
+      "source": "Plated",
+      "title_extracted": "Asian Meatloaf with Miso Mashed Potatoes and Roasted Broccoli (1)",
+      "source_file": "dupe_Asian Meatloaf with Miso Mashed Potatoes and Roasted Broccoli (1).PDF",
+      "drive_identity_hash": "52c1a93f5dfea9078ad43f32e2e2aa757eb1a79829ecc0d85aa5543bae91bca4",
+      "content_sha256": "9310e4bd9aef00492d8020765669b027402c916a2106241d20810b77bd2f38a2",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1_gQEzflaH2vZ400LUf0qz_ZyNe6ujPup",
+      "original_filename": "dupe_Asian Meatloaf with Miso Mashed Potatoes and Roasted Broccoli (1).PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-babaganoushwithroastedrootvegetablesandzaatarnaan",
+      "source": "Plated",
+      "title_extracted": "Baba Ganoush with Roasted Root Vegetables and Za’atar Naan (2)_card",
+      "source_file": "Baba Ganoush with Roasted Root Vegetables and Za’atar Naan (2)_card.pdf",
+      "drive_identity_hash": "09f7fe2d6f91709248fa1462ef35954f074a2d61b4b5bc1b888d856f0a90fc06",
+      "content_sha256": "342a7c9d54290a5f0386d3b466ea62ae5d73b67aa9a0b3e75cc8b89e143b0ca9",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "12_Z_YDh6vh_q89g8mB_th3j64HgWsqnL",
+      "original_filename": "Baba Ganoush with Roasted Root Vegetables and Za’atar Naan (2)_card.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-baharatchicken",
+      "source": "Plated",
+      "title_extracted": "Baharat Chicken (4)",
+      "source_file": "Baharat Chicken (4).pdf",
+      "drive_identity_hash": "c8fc8b0e1cf434daa3963559d595dc298ad6680c401d6223d2d8114c7ae1896c",
+      "content_sha256": "fb247dada05b4923358ebe602b69daf11810f202f51b9b4270cb90aa6d7c4cb8",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1d6uMSEkDHYGtp6xbw6flMoLtIZJMNjOW",
+      "original_filename": "Baharat Chicken (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-balsamicfigshortcakeswithpistachiosandhoneywhippedcream4786",
+      "source": "Plated",
+      "title_extracted": "balsamic-fig shortcakes with pistachios and honey whipped cream-4786",
+      "source_file": "balsamic-fig shortcakes with pistachios and honey whipped cream-4786.pdf",
+      "drive_identity_hash": "609af73d9703cc4af6fc56a2b9669d0f2e769c1e89c90b2cf4f1bce2ab178f69",
+      "content_sha256": "db03efa6994fa32c0d72785cfe72096fca2f1b68221aecf43914a40489cfbac2",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1lCPmC1c7D1bbnlQT-UOhQ2o5YVRnJgT7",
+      "original_filename": "balsamic-fig shortcakes with pistachios and honey whipped cream-4786.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-balsamicmarinatedgrilledchickenwithbleucheeseandmarconaalmonds",
+      "source": "Plated",
+      "title_extracted": "Balsamic-Marinated Grilled Chicken with Bleu Cheese and Marcona Almonds",
+      "source_file": "Balsamic-Marinated Grilled Chicken with Bleu Cheese and Marcona Almonds.pdf",
+      "drive_identity_hash": "09e25db7dffe173c47ed9bcfe0beb062a1c3154ecd965501e0a6c3090fbb640b",
+      "content_sha256": "ab73a2bca09c921d8f5a41d6b4d5e5009d916addd96dc5c601cb316428acc3e9",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1uNJpR37jPP8uqQHQeXhDH-ZIFe6gatM8",
+      "original_filename": "Balsamic-Marinated Grilled Chicken with Bleu Cheese and Marcona Almonds.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-balsamicmarinatedgrilledchickenwithgreenbeansaladandbleucheese",
+      "source": "Plated",
+      "title_extracted": "Balsamic-Marinated Grilled Chicken with Green Bean Salad and Bleu Cheese (1)",
+      "source_file": "dupe_Balsamic-Marinated Grilled Chicken with Green Bean Salad and Bleu Cheese (1).PDF",
+      "drive_identity_hash": "30d1e025474ae1ccee380e22a6438b6ec420a3f70677752b2e04ce8bc2875a7f",
+      "content_sha256": "58438ce007d11775536b893cb2a7455b2dc58342ac76c78565825cd77e1f7f92",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "17cwA1o6GKVTSdgn0cyA0Jmvx2KIG4Lf5",
+      "original_filename": "dupe_Balsamic-Marinated Grilled Chicken with Green Bean Salad and Bleu Cheese (1).PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-balsamicmarinatedsteak",
+      "source": "Plated",
+      "title_extracted": "Balsamic-Marinated Steak (4)",
+      "source_file": "Balsamic-Marinated Steak (4).pdf",
+      "drive_identity_hash": "2f1303859fa338a4e0c76a24323ec6b281509c3f1f78611f38f8664856af5087",
+      "content_sha256": "b65935806ceb6751fe4113f48a6e347c488ca109fbc0b1d1925079b758a280a1",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1Xxtz1b9RtqEM83TEC40QDsn47lXPMGoR",
+      "original_filename": "Balsamic-Marinated Steak (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-barbecuechicken",
+      "source": "Plated",
+      "title_extracted": "Barbecue Chicken",
+      "source_file": "Barbecue Chicken.pdf",
+      "drive_identity_hash": "d2a0213f4ba68669a872720d46104529e427630c20ddcb1109a9a04db01d97c8",
+      "content_sha256": "c00c51798ed8fc93cc5271d1263d37a814c74fddb1d8414e73e17d80e4f0af87",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1KKbP-ASdI0AbQMCiobNzD6jXy-jm1SiZ",
+      "original_filename": "Barbecue Chicken.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-barbecueglazedchickenthighs",
+      "source": "Plated",
+      "title_extracted": "Barbecue Glazed Chicken Thighs",
+      "source_file": "Barbecue Glazed Chicken Thighs.pdf",
+      "drive_identity_hash": "64c6be6c602e4f2edb5b7daeb55ba6904d95fdc0b2b2917b69aebb92d232ea3c",
+      "content_sha256": "e23dca16f2eba1770e302924d9f8abd451995b823cd8b13621ffbeb8add4cab8",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1mCfMq8w13-s3eDX1POlSEUuaF1dl9gc7",
+      "original_filename": "Barbecue Glazed Chicken Thighs.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-banhmiturkeyburgers",
+      "source": "Plated",
+      "title_extracted": "Bánh Mì Turkey Burgers",
+      "source_file": "Bánh Mì Turkey Burgers.pdf",
+      "drive_identity_hash": "13dd283f5da57e603bad947ec2fee4b9acec401738fe62de765aa62766f67bd2",
+      "content_sha256": "d8912a732deee68553c556c54f82188031ab8b7d66ce0d2ef47e897bef74b51d",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1K3gpJZwlTgij0vvujcWUhUHu093nteXS",
+      "original_filename": "Bánh Mì Turkey Burgers.pdf",
+      "same_title_candidates": []
+    }
+  ]
+}
