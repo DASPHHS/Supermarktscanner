@@ -33,7 +33,7 @@ def run(archive,queue,root="hellofresh",batch=20):
    member=r.get("source_member")
    if not identity or not member:continue
    key="plated-release-"+identity
-   if key in m["recipes"]:continue
+   if key in m["recipes"] and m["recipes"][key].get("all_pages_in_pdf"):continue
    if added>=batch:break
    if member not in available:
     failures.append(member+" not found in ZIP")
@@ -55,15 +55,18 @@ def run(archive,queue,root="hellofresh",batch=20):
      preview={}
      for page,label in ((1,"front"),(2,"ingredients")):
       if page>len(reader.pages):continue
-      writer.add_page(reader.pages[page-1])
+      
       target=out/(stem+"-"+label+".webp")
       raster(path,page,target)
       preview[label]="plated-previews/"+target.name
      if not preview:raise ValueError("Empty PDF")
+     for page in reader.pages:writer.add_page(page)
+     preview["all_pages_in_pdf"]=True
+     preview["source_pdf_page_count"]=len(reader.pages)
      pdf=out/(stem+"-origineel.pdf")
      with pdf.open("wb") as file:writer.write(file)
      preview["original_pdf"]="plated-previews/"+pdf.name
-     m["recipes"][key]=preview
+     m["recipes"][key]={**m["recipes"].get(key,{}),**preview}
      added+=1
    except Exception as e:
     failures.append(member+": "+str(e)[:120])
