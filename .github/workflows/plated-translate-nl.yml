@@ -5,6 +5,7 @@ on:
       - 'plated_translate_nl.py'
       - '.github/workflows/plated-translate-nl.yml'
       - 'tests/test_plated_translate_nl.py'
+      - 'plated_ingredient_rescan.json'
   schedule:
     - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
