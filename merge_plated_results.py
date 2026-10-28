@@ -11,6 +11,7 @@ NAMES=(
     "plated_drive_public_state.json","plated_drive_public_review_queue.json",
     "plated_drive_public_progress.json","plated_local_state.json",
     "plated_local_review_queue.json","plated_local_progress.json",
+    "plated_release_state.json","plated_release_review_queue.json","plated_release_progress.json",
 )
 def read(path):
     try:return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -20,8 +21,8 @@ def write(path,content):
     Path(path).write_text(json.dumps(content,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 def merge_state(remote,local):
-    result={**remote,**{k:v for k,v in local.items() if k not in ("completed","processed","errors","failure_counts","failures")}}
-    for key in ("completed","processed"):
+    result={**remote,**{k:v for k,v in local.items() if k not in ("completed","processed","errors","failure_counts","failures","duplicates")}}
+    for key in ("completed","processed","duplicates"):
         result[key]={**remote.get(key,{}),**local.get(key,{})}
     for key in ("failure_counts",):
         values={**remote.get(key,{})}
@@ -81,11 +82,12 @@ def merge_files(source,destination=Path(".")):
         write(destination/name,merged)
     # Progress must reflect merged review queues after they are written.
     for name,queue in (("plated_drive_public_progress.json","plated_drive_public_review_queue.json"),
-                       ("plated_local_progress.json","plated_local_review_queue.json")):
+                       ("plated_local_progress.json","plated_local_review_queue.json"),
+                       ("plated_release_progress.json","plated_release_review_queue.json")):
         path=destination/name
         if path.exists():
             d=read(path);n=len(read(destination/queue).get("recipes",[]))
-            d["records_in_queue" if "drive_public" in name else "pending_review"]=n
+            d["records_in_queue" if "drive_public" in name else ("records_in_review" if "release" in name else "pending_review")]=n
             d["pricing_eligible"]=0
             write(path,d)
 
