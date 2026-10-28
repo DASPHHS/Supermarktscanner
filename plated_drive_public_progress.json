@@ -1,23 +1,13 @@
 {
-  "updated_at_utc": "2026-10-28T23:25:48.803237+00:00",
+  "updated_at_utc": "2026-10-28T23:29:51.312471+00:00",
   "manifest_pdf_count": 533,
   "unique_title_candidates": 505,
   "attempted_this_run": 60,
-  "new_records_this_run": 44,
-  "records_in_queue": 244,
+  "new_records_this_run": 54,
+  "records_in_queue": 254,
   "exact_duplicates_this_run": 1,
   "pricing_eligible": 0,
   "download_or_ocr_errors_this_run": [
-    "Korean Steak Tacos with Kimchi.PDF: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Korean Turkey Burgers.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Lamb Bolognese.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Lamb Gözleme.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Lamb Gyro Burger (3).pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Lamb Kofta with Hern Salad over Charred Naan.PDF: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "leek and gruyère galette with dijon, shallot, and pine nuts-4282.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Lemon-Honey Chicken (3).pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Lemon Poppy Seed Doughnuts.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Lemon-Roasted Cod.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
     "lemon-scallop risotto with peas and leeks-3997.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
     "Manchego-Mushroom Panini.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
     "Maple-Roasted Acorn Squash.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
@@ -26,8 +16,8 @@
   ],
   "blocked_after_three_failures": 0,
   "manual_review_required": true,
-  "failures_retryable": 35,
+  "failures_retryable": 25,
   "manifest_files_attempted_or_completed": 288,
-  "manifest_files_completed": 253,
-  "distinct_source_files_in_review": 244
+  "manifest_files_completed": 263,
+  "distinct_source_files_in_review": 254
 }
