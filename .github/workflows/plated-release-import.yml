@@ -1,0 +1,107 @@
+name: Plated Release ZIP import
+on:
+  push:
+    paths:
+      - 'import_plated_release.py'
+      - 'merge_plated_results.py'
+      - '.github/workflows/plated-release-import.yml'
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: plated-release-import
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Determine if archived PDF scan is needed
+        id: check
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          p=Path('plated_release_progress.json')
+          done=False
+          if p.exists():
+              d=json.loads(p.read_text())
+              done=d.get('complete') is True and d.get('archive','').endswith('.zip')
+          print('needed='+str(not done).lower())
+          PY
+      - name: Install OCR tools
+        if: steps.check.outputs.needed == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-eng
+      - name: Restore cached release archive
+        if: steps.check.outputs.needed == 'true'
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: plated-archive
+          key: plated-source-release-v1
+      - name: Download Plated ZIP from GitHub release
+        if: steps.check.outputs.needed == 'true' && steps.cache.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p plated-archive
+          gh release download plated-database-v1 --pattern 'Plated*.zip' --dir plated-archive --clobber
+      - name: Validate release archive
+        if: steps.check.outputs.needed == 'true'
+        run: |
+          python - <<'PY'
+          import glob,zipfile
+          files=glob.glob('plated-archive/*.zip')
+          assert len(files)==1, 'Expected exactly one Plated ZIP release asset'
+          with zipfile.ZipFile(files[0]) as archive:
+              n=sum(i.filename.lower().endswith('.pdf') for i in archive.infolist())
+              assert n>0, 'Release archive has no PDF members'
+              print(f'Found {n} PDF entries in {files[0]}')
+          PY
+      - name: Extract next batch into review queue
+        if: steps.check.outputs.needed == 'true'
+        run: python import_plated_release.py --archive plated-archive/Plated*.zip --batch 60
+      - name: Confirm unverified OCR quality gate
+        if: steps.check.outputs.needed == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('plated_release_review_queue.json',encoding='utf-8'))['recipes']
+          assert all(x.get('pricing_eligible') is False for x in r)
+          print('Unverified recipes:',len(r))
+          PY
+      - name: Save incremental results and stop frequent schedule when complete
+        if: steps.check.outputs.needed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          mkdir -p "$RUNNER_TEMP/release-results"
+          cp plated_release_state.json plated_release_review_queue.json plated_release_progress.json "$RUNNER_TEMP/release-results/"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python merge_plated_results.py --source "$RUNNER_TEMP/release-results"
+            python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('plated_release_progress.json')
+          if p.exists() and json.loads(p.read_text()).get('complete'):
+              workflow=Path('.github/workflows/plated-release-import.yml')
+              text=workflow.read_text()
+              workflow.write_text(text.replace("cron: '*/5 * * * *'", "cron: '40 */4 * * *'"))
+              print('Archive complete; reduced future check cadence to every four hours')
+          PY
+            git add plated_release_state.json plated_release_review_queue.json plated_release_progress.json .github/workflows/plated-release-import.yml
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update Plated Release OCR batches'
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
