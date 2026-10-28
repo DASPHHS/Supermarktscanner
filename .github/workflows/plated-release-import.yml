@@ -6,7 +6,7 @@ on:
       - 'merge_plated_results.py'
       - '.github/workflows/plated-release-import.yml'
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '2-59/5 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -96,7 +96,7 @@ jobs:
           if p.exists() and json.loads(p.read_text()).get('complete'):
               workflow=Path('.github/workflows/plated-release-import.yml')
               text=workflow.read_text()
-              workflow.write_text(text.replace("cron: '*/5 * * * *'", "cron: '40 */4 * * *'"))
+              workflow.write_text(text.replace("cron: '2-59/5 * * * *'", "cron: '40 */4 * * *'"))
               print('Archive complete; reduced future check cadence to every four hours')
           PY
             git add plated_release_state.json plated_release_review_queue.json plated_release_progress.json .github/workflows/plated-release-import.yml
