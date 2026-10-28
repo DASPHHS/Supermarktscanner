@@ -1,29 +1,13 @@
-# Plated: automatische PDF-import
+# Plated automatisch scannen vanuit Google Drive (actuele methode)
 
-De workflow [Plated recepten automatisch importeren](https://github.com/DASPHHS/Supermarktscanner/actions/workflows/plated-import.yml) voert dagelijks een **hervatbare batchimport** uit. De geüploade ZIP van 2,12 GB is niet nodig: de workflow gebruikt de losse pdf-bestanden in Google Drive.
+**De huidige GitHub-workflow vereist geen serviceaccount, geen sleutel en geen handmatige upload van de PDF's.** De map heeft al de instelling 'iedereen met de link: lezer'. GitHub downloadt bestanden uit het op 28 oktober 2026 vastgelegde manifest in batches naar de tijdelijke GitHub Actions-runner.
 
-## Eenmalig toegang geven (vereist)
+De workflow **Plated pdfs scannen** gebruikt `plated_drive_manifest.json` (533 PDF-id's), `import_plated_public_drive.py` en OCR met Tesseract. De originele PDF-bytes komen niet in de GitHub-repository, alleen de voorlopige OCR-resultaten en voortgangsgegevens. Alle automatisch geëxtraheerde gerechten blijven `pricing_eligible: false` totdat de ingrediënten en de vierportiehoeveelheden gecontroleerd zijn.
 
-1. Open Google Cloud Console, kies een project en schakel de **Google Drive API** in.
-2. Maak een **serviceaccount** aan en maak voor dit account een JSON-sleutel. Bewaar deze sleutel privé; zet hem nooit in een publieke repository, issue of chat.
-3. Deel de Google Drive-map **RECEPTEN / Plated recipes from Marc Hummel [Download folder]** met het e-mailadres van het serviceaccount als *Lezer*. Alleen deze map hoeft gedeeld te worden.
-4. Ga naar GitHub → **DASPHHS/Supermarktscanner** → **Settings → Secrets and variables → Actions → New repository secret**. Maak een secret met exact de naam `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` en plak de **volledige JSON-inhoud** van de sleutel in het geheime waardeveld.
-5. Optioneel: stel bij **Variables** `PLATED_DRIVE_FOLDER_ID` in op de ID van de nieuwe map: `1gXrQK_EM3QvWPMYvGDze8TmpvD0MZP3K`. Zonder die variabele gebruikt het script dezelfde standaardmap.
-6. Start via **Actions → Plated recepten automatisch importeren → Run workflow** de eerste batch. De daaropvolgende batches draaien dagelijks om 04:40 UTC. Een GitHub-schedule is best effort, niet op de minuut gegarandeerd.
+**Let op:** dit is een openbare repository. Het manifest bevat Drive-bestands-ID's; omdat de map leesbaar is voor iedereen met de link, kunnen de bronbestanden daardoor mogelijk ook voor anderen bereikbaar zijn. Wie dit privé wil houden moet de map delen met beperktere rechten en een privébron met passende authenticatie gebruiken.
 
-## Werking en controle
+Nieuwe PDF's die later aan de Drive-map worden toegevoegd komen **niet automatisch** in het huidige manifest. De manifestlijst moet dan opnieuw ververst worden. Als de Drive-downloads worden geblokkeerd of beperkt, meldt de workflow deze fouten. De acties zijn te bekijken op https://github.com/DASPHHS/Supermarktscanner/actions/workflows/plated-import.yml.
 
-- Haalt via Google Drive API alle pagina's van de folderlijst op, en verwerkt standaard 12 nieuwe unieke titels per batch.
-- Herkent identieke reeds gedownloade bestanden via SHA-256 en bestandsnaamvarianten via titel-normalisatie.
-- Leest pdf-tekst met Poppler; bij scans wordt OCR via Tesseract uitgevoerd.
-- Probeert oorspronkelijke serveergrootte, ingrediëntenregels en voorlopige hoeveelheden voor vier personen te bepalen.
-- Bewaart voortgang in `plated_sync_state.json`, OCR-resultaten in `plated_review_queue.json` en statistiek in `plated_sync_progress.json`; vervolgruns pakken de volgende documenten.
-- **Kwaliteitsgrens:** OCR is niet foutloos. Elke voorlopige ingrediëntenregel krijgt `quality: unverified_ocr`, ieder automatisch geïmporteerd recept blijft `pricing_eligible: false`. Er worden dus geen onjuiste kassabedragen gepresenteerd.
-- De zes eerder visueel gecontroleerde Plated-recepten blijven apart in `plated_recipes.json`, zonder ze door nieuwe OCR-output te overschrijven.
-- De dagelijkse winkelprijsvergelijking draait apart; zonder gecontroleerde ingrediënten en productgewichten kan deze niet betrouwbaar op alle Plated-recepten worden toegepast.
+## Alternatief: PDF's uploaden naar GitHub
 
-## Fouten oplossen
-
-Als de actie bij het controleren van de Drive-koppeling stopt, ontbreekt de secret. Bij een HTTP 403 is doorgaans de map niet met het serviceaccount gedeeld of is de Drive API niet ingeschakeld. Bij een OCR-fout verschijnt het betreffende bestand in de voortgangsrapportage; die kaart blijft voor latere controle beschikbaar.
-
-De workflow gebruikt alleen de read-only Drive-scope; de GitHub write-token is uitsluitend bedoeld voor de JSON-voortgangsbestanden. Controleer iedere scan voordat je definitieve vierportiehoeveelheden en een winkelprijs accepteert.
+PDF's die expliciet in `plated_pdfs/` worden geplaatst, worden door dezelfde workflow automatisch gescand. **Let op**: deze repository is openbaar en kan daarom ongeschikt zijn om auteursrechtelijk beschermde PDF's te uploaden. GitHub accepteert doorgaans maximaal 25 MiB per bestand via de webinterface en maximaal 100 MiB per bestand via regulier Git. De volledige collectie van ruim 2 GB hoort niet zomaar in de openbare broncoderepository.
