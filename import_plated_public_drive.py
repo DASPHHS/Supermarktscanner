@@ -6,7 +6,7 @@ unverified and never automatically eligible for pricing.
 import argparse, hashlib, json, re, tempfile
 from datetime import datetime, timezone
 from pathlib import Path
-from drive_plated_sync import inspect, title_key
+from drive_plated_sync import inspect, title_key, EXTRACTION_VERSION
 
 def load(path, fallback):
     path=Path(path)
@@ -43,7 +43,9 @@ def run(manifest_path="plated_drive_manifest.json", root=".", batch=12, fetcher=
         choices=sorted(groups[key],key=lambda f:(f["name"].lower().startswith("dupe_"),f["name"].lower()))
         candidate=choices[0]
         identity=candidate["id"]
-        if state["completed"].get(identity):continue
+        if state["completed"].get(identity):
+            old=records.get(identity)
+            if old and old.get("extraction_version",0)>=EXTRACTION_VERSION:continue
         if state["failure_counts"].get(identity,0)>=3:continue
         if attempted>=batch:break
         attempted+=1
@@ -52,7 +54,7 @@ def run(manifest_path="plated_drive_manifest.json", root=".", batch=12, fetcher=
                 target=Path(folder)/"input.pdf"
                 fetcher(identity,target)
                 digest=hashlib.sha256(target.read_bytes()).hexdigest()
-                if digest in hashes:
+                if digest in hashes and identity not in records:
                     exact_duplicates+=1
                 else:
                     item=inspector(target,candidate["name"],hashlib.sha256(identity.encode()).hexdigest())
