@@ -1,10 +1,10 @@
 {
-  "updated_at_utc": "2026-10-28T14:53:54.252457+00:00",
+  "updated_at_utc": "2026-10-28T14:56:59.803397+00:00",
   "manifest_pdf_count": 533,
   "unique_title_candidates": 505,
   "attempted_this_run": 12,
   "new_records_this_run": 12,
-  "records_in_queue": 12,
+  "records_in_queue": 24,
   "exact_duplicates_this_run": 0,
   "pricing_eligible": 0,
   "download_or_ocr_errors_this_run": [],

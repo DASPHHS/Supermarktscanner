@@ -1,8 +1,8 @@
 {
   "metadata": {
     "source": "Plated Google Drive (public-link download)",
-    "updated_at_utc": "2026-10-28T14:53:54.252457+00:00",
-    "imported": 12,
+    "updated_at_utc": "2026-10-28T14:56:59.803397+00:00",
+    "imported": 24,
     "note": "Preliminary OCR review queue only. NO prices, NO validated recipes."
   },
   "recipes": [
@@ -639,6 +639,75 @@
       "same_title_candidates": []
     },
     {
+      "id": "plated-barbecueturkeymeatloaf",
+      "source": "Plated",
+      "title_extracted": "Barbecue Turkey Meatloaf",
+      "source_file": "Barbecue Turkey Meatloaf.pdf",
+      "drive_identity_hash": "98c594a4ed1be06a866458176518a5287fa287ff9ac8be36a8a62d93ecd83d97",
+      "content_sha256": "aec7ffc75c3b682d0ced873416e835132613dd9aefa616d92542fed6fe9cb376",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "9 ounces broccoli",
+        "12 ounces sweet potatoes",
+        "1 yellow onion",
+        "1 chipotle pepper in adobo",
+        "¼ teaspoon dried thyme",
+        "1 teaspoon tomato paste",
+        "1 tablespoon Worcestershire sauce",
+        "¼ cup barbecue sauce, divided"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "broccoli",
+          "quantity_4p_source": "18 ounces",
+          "original_quantity": "9 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sweet potatoes",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "yellow onion",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "chipotle pepper in adobo",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tomato paste",
+          "quantity_4p_source": "2 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Worcestershire sauce",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1-N81uSqSyI5RK-n8h9xiiRryGcvFLzgN",
+      "original_filename": "Barbecue Turkey Meatloaf.pdf",
+      "same_title_candidates": []
+    },
+    {
       "id": "plated-banhmiturkeyburgers",
       "source": "Plated",
       "title_extracted": "Bánh Mì Turkey Burgers",
@@ -669,6 +738,439 @@
       ],
       "source_identity": "1K3gpJZwlTgij0vvujcWUhUHu093nteXS",
       "original_filename": "Bánh Mì Turkey Burgers.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefandbroccoli",
+      "source": "Plated",
+      "title_extracted": "Beef and Broccoli (3)",
+      "source_file": "Beef and Broccoli (3).pdf",
+      "drive_identity_hash": "8bf5b3828e668436fb95769424460dd5fc429fb8cbdfa813e42a92de4516de6e",
+      "content_sha256": "263f082f4d5813c4fb4da253498844a0ee6e3a44a779bf392e5a322c335c4e7d",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup jasmine rice",
+        "12 ounces Chinese broccoli",
+        "⅛ ounce cilantro",
+        "2 scallions, divided",
+        "1 clove garlic",
+        "3 tablespoons pine nuts",
+        "1 packet honey",
+        "¼ teaspoon crushed red pepper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1r3xxcNPBPR36-1EeFMS8vaBelNLoXLX2",
+      "original_filename": "Beef and Broccoli (3).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefandbutternutskillet",
+      "source": "Plated",
+      "title_extracted": "Beef and Butternut Skillet",
+      "source_file": "Beef and Butternut Skillet.pdf",
+      "drive_identity_hash": "8bd31123802a4bc50606f3611584b9ef86520178f8c6e6ac91286b748d09b84f",
+      "content_sha256": "377f2ac940e0982c47e4e17e73eeaf25f4e785f3a3bf603ca0294f5e3dd31294",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 purple sweet potato",
+        "8 ounces butternut squash",
+        "1 scallion, divided",
+        "12 ounces ground beef",
+        "1 spice mix",
+        "¼ teaspoon ancho chile powder",
+        "½ teaspoon ground cumin",
+        "½ cup corn",
+        "2 ounces shredded Monterey Jack"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1B2FWuOpGQ8pNMK2D3u4YviyO7kFCuGcl",
+      "original_filename": "Beef and Butternut Skillet.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefandcheddarhandpies",
+      "source": "Plated",
+      "title_extracted": "Beef and Cheddar Hand Pies (4)",
+      "source_file": "Beef and Cheddar Hand Pies (4).pdf",
+      "drive_identity_hash": "62781451fb4289d33c8f4010d89aea9e899ed5ad0cab8f9407c6f1df3e6092f2",
+      "content_sha256": "a64f2c2390c5903ec7a35ac891f7d26d6c9b9354a151e9fa255bb986491b3ad2",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 5-inch squares puff pastry",
+        "5 ounces baby spinach",
+        "1 herb mix, divided",
+        "⅛ ounce mint",
+        "⅛ ounce parsley",
+        "1 lemon",
+        "1½ tablespoons Worcestershire sauce",
+        "3 ounces shredded Cheddar cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1_M24ac4lOOiYrq08YuGtB9d5mDVqFwC0",
+      "original_filename": "Beef and Cheddar Hand Pies (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefandcheeseempanadas",
+      "source": "Plated",
+      "title_extracted": "Beef and Cheese Empanadas (3)",
+      "source_file": "Beef and Cheese Empanadas (3).pdf",
+      "drive_identity_hash": "cf6eef2cab0bdac40cb1e5524b5d80159a26466818f49dc0c8c85229749ad9d3",
+      "content_sha256": "5ecd41e3c2ba48c7a8b0244a8890eb4fc23222378babaf58a2b603b52d86f09e",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 pint grape tomatoes",
+        "1 lime",
+        "1 yellow onion, divided",
+        "4 cloves garlic, divided",
+        "1 jalapeño",
+        "1 pound ground beef",
+        "9 empanada doughs",
+        "2 ounces shredded Monterey Jack",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1T5sXb7-xngnuKT92JmDFqRIyTb24HvUK",
+      "original_filename": "Beef and Cheese Empanadas (3).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefandroastedcarrotragu",
+      "source": "Plated",
+      "title_extracted": "Beef and Roasted Carrot Ragu",
+      "source_file": "Beef and Roasted Carrot Ragu.pdf",
+      "drive_identity_hash": "75243c5101cb61b264269744096ff2780d4d5c55ad4c3bb39f20e0920ea9684b",
+      "content_sha256": "e9d5964d20e19cebb4554bb146d5ab406d84c1b091217b9d3c55c87a8ca584d0",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces rainbow carrots",
+        "⅛ ounce oregano, divided",
+        "2 cloves garlic",
+        "1 slice rye bread",
+        "1 packet unsalted butter",
+        "12 ounces ground beef",
+        "6 ounces mini penne",
+        "¼ cup red wine",
+        "½ ounce grated Parmesan cheese,"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "14waYVF0Y2yX2lX4l5XqTzz91H_aYG8f0",
+      "original_filename": "Beef and Roasted Carrot Ragu.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefbiryani",
+      "source": "Plated",
+      "title_extracted": "Beef Biryani (3)",
+      "source_file": "Beef Biryani (3).pdf",
+      "drive_identity_hash": "d0c1549ced28210d712159702e17cf514dbd0255cabf26442bc22ac1caecb869",
+      "content_sha256": "48f9111cb689247949a7751b58a348a292ff6d8d2dfe395ccc2c808699d6b249",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¾ cup basmati rice",
+        "¼ teaspoon ground turmeric",
+        "1 cup peas",
+        "⅛ ounce mint",
+        "¼ ounce ginger",
+        "1 red onion",
+        "1 serrano chile",
+        "2 teaspoons advieh spice mix",
+        "1 container nonfat Greek yogurt"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1S73EKNGETprRZW7mCf4fF3Ujmu7ObmcY",
+      "original_filename": "Beef Biryani (3).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefbologneseoverroastedspaghettisquash",
+      "source": "Plated",
+      "title_extracted": "Beef Bolognese over Roasted Spaghetti Squash (3)",
+      "source_file": "Beef Bolognese over Roasted Spaghetti Squash (3).pdf",
+      "drive_identity_hash": "a2d98118c5923bb253576d06c1a6baa72e668abe71ca7c50ce0a4efbb2c60330",
+      "content_sha256": "de7e2659d35d55c15979d0f0b7a9adb31c50d801f921c0799996178fd285b84a",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 ounces carrots",
+        "3½ pounds spaghetti squash",
+        "1 yellow onion",
+        "3 cloves garlic",
+        "1 spice mix",
+        "½ teaspoon dried oregano",
+        "⅓ cup red wine",
+        "8 ounces chicken stock",
+        "1 tablespoon red wine vinegar",
+        "minutes (see recipe tip). Set aside until   Cook, breaking up meat, until browned,"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1igvd2LCBWgcU5myx35ysNOaYIGqKXM6_",
+      "original_filename": "Beef Bolognese over Roasted Spaghetti Squash (3).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefbolognesewithroastedzucchinisteaks",
+      "source": "Plated",
+      "title_extracted": "Beef Bolognese with roasted zucchini steaks",
+      "source_file": "Beef Bolognese with roasted zucchini steaks.pdf",
+      "drive_identity_hash": "fe3b6e1abcbf2738765dc440d34f92427817bab766aa927f2719495770152a37",
+      "content_sha256": "2a891600fce331a9397a5ab33ed557f5f0b96f98cb148336b9dbeb7ec85a2f7c",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces zucchini",
+        "⅛ ounce oregano",
+        "⅛ ounce basil",
+        "1 yellow onion",
+        "2 cloves garlic",
+        "12 ounces ground beef",
+        "¼ pint grape tomatoes",
+        "1 container heavy cream",
+        "½ ounce grated Parmesan cheese",
+        "chop oregano leaves, discarding stems.    up, until browned, about 5 minutes.        minutes."
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "196xRFCJS7Jl0miQBMvlLElvRyCXifpHG",
+      "original_filename": "Beef Bolognese with roasted zucchini steaks.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefbalsamicmarinatedsteaktacoswithchimichurrisauce",
+      "source": "Plated",
+      "title_extracted": "Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR",
+      "source_file": "Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR.pdf",
+      "drive_identity_hash": "5e8af593bc940166ddc0955fd268f9e487c582f100bfd1f958f400e3ec2e993e",
+      "content_sha256": "b7ab91b1fc753608d9876ad153c5992244acd721429e6b94ecebf222ed0211e6",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1N-nH0p1QzjDAHoVddSc1yXzcFLNoH8nD",
+      "original_filename": "Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefbeefandcauliflowerstirfry",
+      "source": "Plated",
+      "title_extracted": "Beef_Beef and Cauliflower Stir-Fry_OCR (1)",
+      "source_file": "dupe_Beef_Beef and Cauliflower Stir-Fry_OCR (1).pdf",
+      "drive_identity_hash": "76c16b2877935667809e546f4f6e7d44919183dd7da3c0142a58c237a824e36b",
+      "content_sha256": "d3e7f77bb223bddecb610f0c5440065934b9dead9741edcf711eb9e2893f99c4",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¾ cup white rice",
+        "1 pound cauliflower",
+        "1 shallot",
+        "1 clove garlic",
+        "¼ ounce ginger",
+        "1 tablespoon sesame oil",
+        "In a small pot, combine rice, 1¼ cups",
+        "2 packets gluten-free soy sauce",
+        "1 packet honey"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "cauliflower",
+          "quantity_4p_source": "2 pound",
+          "original_quantity": "1 pound",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "shallot",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "2 clove",
+          "original_quantity": "1 clove",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sesame oil",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "gluten-free soy sauce",
+          "quantity_4p_source": "4 packets",
+          "original_quantity": "2 packets",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "honey",
+          "quantity_4p_source": "2 packet",
+          "original_quantity": "1 packet",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "10iR7K-fOGgh8RWON6PZYrb6zsMKp0Cp1",
+      "original_filename": "dupe_Beef_Beef and Cauliflower Stir-Fry_OCR (1).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefbeefbolognese",
+      "source": "Plated",
+      "title_extracted": "Beef_Beef Bolognese_OCR",
+      "source_file": "Beef_Beef Bolognese_OCR.pdf",
+      "drive_identity_hash": "e498724259b87f6ad6dc590c4908cb3d373bd1fd5d4be0cf03e66a20f88670ee",
+      "content_sha256": "489dec93b2a55f908a288630a63a590ae831e65a180f4ce8fb1053f0573cad9d",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 yellow onion",
+        "2 cloves garlic",
+        "1 carrot",
+        "1 spaghetti squash",
+        "12 ounces ground beef",
+        "½ teaspoon dried oregano",
+        "2 tablespoons heavy cream",
+        "2 tablespoons grated pecorino",
+        "until ready to use.                         browned, about 5 minutes. Stir in onion,"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "yellow onion",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "4 cloves",
+          "original_quantity": "2 cloves",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "carrot",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spaghetti squash",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ground beef",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "heavy cream",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "grated pecorino",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1-jW08Cm9cx0_ouR0rMencw4-LyHnxAQM",
+      "original_filename": "Beef_Beef Bolognese_OCR.pdf",
       "same_title_candidates": []
     }
   ]
