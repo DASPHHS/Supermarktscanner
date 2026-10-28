@@ -1,10 +1,10 @@
 {
   "metadata": {
     "source": "Plated Google Drive (public-link download)",
-    "updated_at_utc": "2026-10-28T15:00:44.474063+00:00",
-    "imported": 36,
+    "updated_at_utc": "2026-10-28T15:01:52.311621+00:00",
+    "imported": 48,
     "note": "Preliminary OCR review queue only. NO prices, NO validated recipes.",
-    "count": 36,
+    "count": 48,
     "status": "manual_review_required"
   },
   "recipes": [
@@ -1339,6 +1339,124 @@
       "same_title_candidates": []
     },
     {
+      "id": "plated-beefquesadillas",
+      "source": "Plated",
+      "title_extracted": "Beef Quesadillas",
+      "source_file": "Beef Quesadillas.pdf",
+      "drive_identity_hash": "2213533d7ef104a781fc84bc0f62dc22ee39c0fce40c655fe634e08150cf933c",
+      "content_sha256": "37b40f291a32b09e9b0386cd4ef66e12f9ab98f9ea9a31f97e9e352101dd945c",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¼ ounce cilantro",
+        "1 lime",
+        "2 cloves garlic",
+        "12 ounces ground beef",
+        "2 tablespoons tomato paste",
+        "1 teaspoon Mexican spice mix",
+        "2 ounces shredded Monterey Jack",
+        "4 ounces shredded white Cheddar",
+        "cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1nABYZ2DCa6sEDCeglszbtqw0Z-fQVVup",
+      "original_filename": "Beef Quesadillas.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefshakshukawithpitabellpepperandfeta",
+      "source": "Plated",
+      "title_extracted": "Beef Shakshuka with Pita, Bell Pepper, and Feta",
+      "source_file": "Beef Shakshuka with Pita, Bell Pepper, and Feta.pdf",
+      "drive_identity_hash": "ed513e8b8de365de3e6865772db2758985c28a8550d0cc5be9d7f8233bdb6529",
+      "content_sha256": "55d700c61b129b66a44239add5d05940796f878036d06ef36ce63cc1d0439e48",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "* 2 red bell peppers",
+        "* 1/8 ounce parsley",
+        "* 2 yellow onions",
+        "* 11/2 pounds ground beef",
+        "+ 1 teaspoon baharat spice",
+        "+ 29 ounces crushed tomatoes",
+        "+ 4 pita breads",
+        "* 2 ounces crumbled feta cheese",
+        "* olive oil",
+        "* 4eggs",
+        "* kosher salt",
+        "* black pepper",
+        "Related Recipes",
+        "% Beef Ground / Lamb - Googl",
+        "Tab Window Help",
+        "Search Recipes Q",
+        "Cooking Instructions",
+        "Step 1",
+        "Preheat oven to 450°F. Rinse all produce. Halve bell peppers",
+        "lengthwise, discarding seeds and stems; cut into .25-inch pieces.",
+        "Roughly chop parsley leaves and stems, keeping separate (the stems",
+        "of parsley are actually quite tender, so we've kept them for extra",
+        "flavor and aroma in the sauce). Peel onions, halve, and thinly slice.",
+        "Step 3",
+        "To pan with beef, still over medium-high heat, add crushed tomatoes",
+        "Cook, stirring, until liquid is slightly reduced and flavors have melded,",
+        "3-5 minutes. Meanwhile, stack pitas and wrap loosely in foil, leaving a",
+        "small opening in pouch for steam to escape—this is a great task for a",
+        "helper. Once reduced, remove pan with sauce from heat and stir in",
+        "half of feta. Taste and add salt and black pepper as desired",
+        "Step 5",
+        "Transfer shakshuka to oven, along with pita, and bake until egg",
+        "whites are just set and pita is warmed through, 6-8 minutes. (P.S. This",
+        "is a great time to set the table.)",
+        "SwzIys",
+        "§ Search Results | Safeway x — G Recipe | Safeway x  @& Recipe | Safeway",
+        "x BB @ & & Qi vpaate",
+        "& Sinn/pv Q",
+        "Step 2",
+        "Pat beef dry with paper towel. Heat 1 tablespoon olive oil in a large",
+        "ovenproof pan over medium-high heat. When oil is shimmering, add",
+        "bell peppers and onions and sauté, stirring, until begining to soften,",
+        "about 5 minutes. Stir in baharat, parsley stems, 1 teaspoon salt, and",
+        "black pepper as desired. Add beef and cook, breaking up, until",
+        "browned, 6-8 minutes.",
+        "Step 4",
+        "Create 4 small, evenly spaced pockets in sauce, still off heat. Crack 1",
+        "egg into each pocket, nestling into sauce, and season with a pinch of",
+        "salt and black pepper as desired (see recipe tip)",
+        "Step 6",
+        "Divide beef shakshuka among serving bowls, or bring the pan to the",
+        "table and serve family-style. Garnish with parsley leaves and",
+        "remaining feta (or let a helper do this part). Tear pita into large",
+        "pieces and serve with shakshuka. Enjoy!",
+        "refrigerator.",
+        "& @) 29%) Sat8:31AM Q @",
+        "ne):",
+        "a",
+        "oe",
+        "On &",
+        "8"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "15YsH9tmzOoPPIvYGSwCVpZHU9D5mQ9iz",
+      "original_filename": "Beef Shakshuka with Pita, Bell Pepper, and Feta.pdf",
+      "same_title_candidates": []
+    },
+    {
       "id": "plated-beefcheeseburger",
       "source": "Plated",
       "title_extracted": "beef-cheeseburger",
@@ -1370,6 +1488,39 @@
       ],
       "source_identity": "1bhXswsbQ4vIAVo_6Yv8f7JZBFV4JU8jN",
       "original_filename": "beef-cheeseburger.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefstuffedpeppers",
+      "source": "Plated",
+      "title_extracted": "beef-stuffed-peppers",
+      "source_file": "beef-stuffed-peppers.pdf",
+      "drive_identity_hash": "5a8fbe95811bdb34f471efa041111cb1824731c8d2495cf61dc1ac24f4387c3a",
+      "content_sha256": "c3daced53fb43dc9eb9ec1120fcc4cc439617ec984b28e9522ae894e4df0484a",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 red bell peppers",
+        "3 ounces baby arugula",
+        "1 lemon",
+        "1 yellow onion",
+        "1 clove garlic",
+        "¼ cup pine nuts",
+        "12 ounces ground beef",
+        "2 ounces shredded mozzarella cheese",
+        "1 packet balsamic glaze"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1p0CWyWLbGtkbVkPdUW1xcobijyVG9-OY",
+      "original_filename": "beef-stuffed-peppers.pdf",
       "same_title_candidates": []
     },
     {
@@ -1901,6 +2052,384 @@
       ],
       "source_identity": "1e5JCt-I4LHyRskQ_r4PrRXfnisL6OcBM",
       "original_filename": "Beef_Italian Meatball Soup_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefmeatballparmheroes",
+      "source": "Plated",
+      "title_extracted": "Beef_Meatball Parm Heroes_OCR (1)",
+      "source_file": "dupe_Beef_Meatball Parm Heroes_OCR (1).pdf",
+      "drive_identity_hash": "fe11a55b716f445cc01356fb21830bc091bde3899a400b6336f4b539b27579af",
+      "content_sha256": "69c420aa778a1f94efc455c85c0a8c296c6649ee1b493cb643232f453a21901a",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1j91TEcfcfP-rOZS9CTG_Q_J6OdGrABJk",
+      "original_filename": "dupe_Beef_Meatball Parm Heroes_OCR (1).pdf",
+      "same_title_candidates": [
+        "dupe_Beef_Meatball Parm Heroes_OCR.pdf"
+      ]
+    },
+    {
+      "id": "plated-beeforangebeefwithbellpepperandscallionrice",
+      "source": "Plated",
+      "title_extracted": "Beef_Orange Beef with Bell Pepper and Scallion Rice_OCR (1)",
+      "source_file": "dupe_Beef_Orange Beef with Bell Pepper and Scallion Rice_OCR (1).pdf",
+      "drive_identity_hash": "ca619b155dc10b12bdb1360b2b202a513e6ff7f2c1b21422d5de0adf8455862f",
+      "content_sha256": "232840a69576dcc26b0d158322e160f23018ae1b90428cecbe9e6946f537aa2d",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½   cup jasmine rice",
+        "1 red bell pepper",
+        "1 navel orange",
+        "2 scallions, divided",
+        "2 clo ves garlic",
+        "¼ teaspoon ground g inger",
+        "3 tablespoons gluten-free soy sauce",
+        "2 p acket s Sriracha",
+        "2 st ea ks"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1kWEHmxEYKLdodapAQLwcAalCiTkadK1-",
+      "original_filename": "dupe_Beef_Orange Beef with Bell Pepper and Scallion Rice_OCR (1).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefpeppercorngravymeatloaf",
+      "source": "Plated",
+      "title_extracted": "Beef_Peppercorn Gravy Meatloaf_OCR",
+      "source_file": "Beef_Peppercorn Gravy Meatloaf_OCR.pdf",
+      "drive_identity_hash": "cff9f1a158bd3b72f18530d32e85defb1da3e1cbc6a04d466177a87aceef779d",
+      "content_sha256": "ac3edbc6d6fcbad08e3bbf0709564a42cbc2a3ad1d1552ad937bc112b1b80963",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces dinosaur kale",
+        "1 lemon",
+        "1 yellow onion, divided",
+        "1 clove garlic",
+        "1 tablespoon Worcestershire sauce",
+        "1 teaspoon tomato paste",
+        "2 teaspoons green peppercorns",
+        "1 tablespoon flour"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1hlndQQ3sFQxcHnuuGGemLEhKB292vkHC",
+      "original_filename": "Beef_Peppercorn Gravy Meatloaf_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefphillystylecheesesteaks",
+      "source": "Plated",
+      "title_extracted": "Beef_Philly-Style Cheesesteaks (2)_OCR (1)",
+      "source_file": "Beef_Philly-Style Cheesesteaks (2)_OCR (1).pdf",
+      "drive_identity_hash": "ae7f0ba93dcd8d09d76729c3f4fea2aded5568833dfa4feb73f6bfed8d859f9d",
+      "content_sha256": "4c120518160e9da164c593f4a2918d97aa3e76c428ecf98cbc877f8c5b710455",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 red onion",
+        "4 ounces cremini mushrooms",
+        "1 red bell pepper",
+        "1 poblano pepper",
+        "¼ ounce parsley",
+        "2 French bread rolls",
+        "1 tablespoon Worcestershire sauce",
+        "3 slices provolone cheese"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "red onion",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cremini mushrooms",
+          "quantity_4p_source": "8 ounces",
+          "original_quantity": "4 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red bell pepper",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "poblano pepper",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "French bread rolls",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Worcestershire sauce",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "slices provolone cheese",
+          "quantity_4p_source": "6 stuks",
+          "original_quantity": "3 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1bsQGSVQ6k-kKXYIPPfv-5DFzgOoEI2rA",
+      "original_filename": "Beef_Philly-Style Cheesesteaks (2)_OCR (1).pdf",
+      "same_title_candidates": [
+        "Beef_Philly-Style Cheesesteaks_OCR.pdf"
+      ]
+    },
+    {
+      "id": "plated-beefroastbeefspicedmeatballs",
+      "source": "Plated",
+      "title_extracted": "Beef_Roast Beef-Spiced Meatballs_OCR",
+      "source_file": "Beef_Roast Beef-Spiced Meatballs_OCR.pdf",
+      "drive_identity_hash": "eb06bd86adf7bb950280c0ff5eb2f73aea1772a9e7ae1a5ceb8a449388330e37",
+      "content_sha256": "814c85773b278385189944fcf8d61509e7bf728b820be41824bd9dbff166dd30",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "2 plum tomatoes",
+        "4 ounces baby arugula",
+        "1 ciabatta",
+        "12 ounces ground beef",
+        "1 spice mix                                                                       Ciabatta",
+        "¼ teaspoon onion powder",
+        "⅛ teaspoon dried oregano",
+        "teaspoon olive oil. Season with ⅛"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "plum tomatoes",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "baby arugula",
+          "quantity_4p_source": "8 ounces",
+          "original_quantity": "4 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ciabatta",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ground beef",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1zM1wPeTBQq1uZpiSE782TmJX24g-jeZQ",
+      "original_filename": "Beef_Roast Beef-Spiced Meatballs_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefsteakandgreengarlicstirfrywtihfloweringchives",
+      "source": "Plated",
+      "title_extracted": "Beef_Steak and Green Garlic Stir-Fry wtih Flowering Chives_OCR (1)",
+      "source_file": "dupe_Beef_Steak and Green Garlic Stir-Fry wtih Flowering Chives_OCR (1).pdf",
+      "drive_identity_hash": "969219994ff73064430870422f8573ad4579fe2588457819169bd694b37a7807",
+      "content_sha256": "ba94e8d8b62e3acaa5e2165cc9c854d5f425add0309156c93b912735cb38ab1f",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 ounces green garlic",
+        "½ ounce ginger",
+        "1 ounce flowering chives",
+        "10 ounces inside round steak",
+        "cup brown rice",
+        "4 ounces sugar snap peas",
+        "3 tablespoons oyster sauce",
+        "2 tablespoons soy sauce"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "green garlic",
+          "quantity_4p_source": "8 ounces",
+          "original_quantity": "4 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "flowering chives",
+          "quantity_4p_source": "2 ounce",
+          "original_quantity": "1 ounce",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "inside round steak",
+          "quantity_4p_source": "20 ounces",
+          "original_quantity": "10 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sugar snap peas",
+          "quantity_4p_source": "8 ounces",
+          "original_quantity": "4 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "oyster sauce",
+          "quantity_4p_source": "6 tablespoons",
+          "original_quantity": "3 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "soy sauce",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1mAHjUqYJvQl2mXQqZwHOmL-dsAKNLEGf",
+      "original_filename": "dupe_Beef_Steak and Green Garlic Stir-Fry wtih Flowering Chives_OCR (1).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefsteakandzucchinigyros",
+      "source": "Plated",
+      "title_extracted": "Beef_Steak and Zucchini Gyros_OCR",
+      "source_file": "Beef_Steak and Zucchini Gyros_OCR.pdf",
+      "drive_identity_hash": "2d8f4bc316881aacc186a0782c31503e67c720c2af195fb442e502dec9d6243c",
+      "content_sha256": "3d056e1d32fb9691307a73fd0881bc6076d94e80ab9032b6528375b057291685",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "15IYkYQybLdfsdzy6Ht60J6H71RT1nwLS",
+      "original_filename": "Beef_Steak and Zucchini Gyros_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beefsteakfrites",
+      "source": "Plated",
+      "title_extracted": "Beef_Steak Frites_OCR",
+      "source_file": "Beef_Steak Frites_OCR.pdf",
+      "drive_identity_hash": "05880a0f2449343de54627d1f8278f706bda7581515063ba26b6b7ee36c325ce",
+      "content_sha256": "292b91858c882fa5dda97f2f4689f747c4c3a21cd745a0fffc9d8af7d1c0fc19",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 russet potatoes",
+        "2 cloves garlic",
+        "1 shallot",
+        "2 steaks",
+        "5 ounces baby spinach",
+        "¼ cup white wine",
+        "¼ cup reduced-fat sour cream",
+        "1 teaspoon Maldon sea salt"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1tQLEJpWCuLRZYPJZAdTZub8KA4JYHm7A",
+      "original_filename": "Beef_Steak Frites_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-beeftamarindglazedsteakwithcrispycurriedchickpeas",
+      "source": "Plated",
+      "title_extracted": "Beef_Tamarind-Glazed Steak with Crispy Curried Chickpeas_OCR",
+      "source_file": "Beef_Tamarind-Glazed Steak with Crispy Curried Chickpeas_OCR.pdf",
+      "drive_identity_hash": "82963ed71ebf026d1b96a79a6694b4e5a3f7111c5a20d3ffffe98d026118eac5",
+      "content_sha256": "6a6b47b6c9cf166a4ee8b81fea47278b680df44ad016793c8ea2b0bffaf29321",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1XOOXFwXMghpmOXecsERZJDba0FXMsxzB",
+      "original_filename": "Beef_Tamarind-Glazed Steak with Crispy Curried Chickpeas_OCR.pdf",
       "same_title_candidates": []
     }
   ]
