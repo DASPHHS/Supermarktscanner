@@ -63,9 +63,10 @@ def run(manifest_path="plated_drive_manifest.json", root=".", batch=12, fetcher=
                     item["same_title_candidates"]=[x["name"] for x in choices[1:]]
                     item["quality"]="needs_manual_verification"
                     item["pricing_eligible"]=False
+                    is_new=identity not in records
                     records[identity]=item
                     hashes.add(digest)
-                    imported+=1
+                    if is_new:imported+=1
             state["completed"][identity]=digest
             state["errors"].pop(identity,None)
         except Exception as err:
