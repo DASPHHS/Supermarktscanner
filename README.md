@@ -58,3 +58,9 @@ De map bevat veel dubbele PDF-bestanden (`dupe_`) en deels gescande documenten d
 - `plated_import.py` kan de lokaal gedownloade PDF-map omzetten naar een overzicht met originele bestandsnamen, OCR-tekstfragmenten en review-status. Benodigd: `pdftotext`, `pdftoppm` (Poppler) en `tesseract` met Engels taalpakket. Voorbeeld: `python plated_import.py /pad/naar/plated-pdfs --out plated_import_queue.json`.
 - **Belangrijk:** deze importer leest nog geen vierportiehoeveelheden automatisch foutloos uit. OCR levert bij oude scans vaak verkeerd herkende breuken, maateenheden en tekens. Daarom blijft `pricing_eligible: false` totdat elke receptkaart zorgvuldig gecontroleerd en de Amerikaanse maateenheden naar metrisch zijn vertaald.
 - De Google Drive-connector waarmee in deze conversatie de map is gelezen, verleent niet automatisch toegang vanuit GitHub Actions. Voor echt dagelijkse import is een afzonderlijke beveiligde Drive-API-koppeling of export van de map nodig.
+
+### Plated-kwaliteitscontrole (28 oktober 2026)
+
+Zes echte Plated-recepten staan nu met ingrediënten voor vier porties in `plated_recipes.json`, waarvan vijf vanaf twee gescande pagina's visueel zijn gecontroleerd. Alle zes staan terecht op `pricing_eligible: false`: stuks, blikjes of zakjes hebben nog onduidelijke netto gewichten en kunnen nog niet verantwoord automatisch worden geprijsd. De originele vierportiekaart Teriyaki Salmon Tacos is niet opnieuw verdubbeld.
+
+`plated_validation.py` verwerkt Amerikaanse breuken, onderscheidt gewichts-oz van fl oz en cups, controleert de uitgangsporties en detecteert identieke pdf's met SHA-256. Tests draaien met `PYTHONPATH=. pytest -q`. Cups zijn volumes, geen generieke grammen. De circa 2,12 GB Drive-ZIP overschrijdt de huidige connectorlimiet van 256 MiB. De mapinventaris met 510 voorlopige titelgroepen omvat niet alle inhoudelijk gecontroleerde recepten; volledige bulkimport vergt een aparte downloadroute.
