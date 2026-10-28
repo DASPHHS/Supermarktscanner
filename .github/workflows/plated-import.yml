@@ -1,26 +1,29 @@
-name: Plated recepten automatisch importeren
+name: Plated pdfs scannen
 on:
+  push:
+    paths:
+      - 'plated_pdfs/**'
+      - 'import_plated_from_repo.py'
+      - 'drive_plated_sync.py'
+      - '.github/workflows/plated-import.yml'
   schedule:
     - cron: '40 4 * * *'
   workflow_dispatch:
     inputs:
       batch_size:
-        description: 'Aantal nieuwe pdfs per uitvoering (1-30)'
+        description: 'Aantal PDF bestanden in deze batch (1-50)'
         required: false
-        default: '12'
+        default: '20'
 permissions:
   contents: write
 concurrency:
-  group: plated-drive-import
+  group: plated-import
   cancel-in-progress: false
 jobs:
   scan:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 55
-    env:
-      GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON }}
-      PLATED_DRIVE_FOLDER_ID: ${{ vars.PLATED_DRIVE_FOLDER_ID }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,34 +31,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: OCR en Drive API installeren
+      - name: Installeer OCR voor scans
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-eng
-          pip install -r requirements-import.txt
-      - name: Beveiligde Drive koppeling controleren
-        run: |
-          if [ -z "$GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON" ]; then
-            echo "::error::Stel de GitHub secret GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON in en deel de Plated-map met het serviceaccount."
-            exit 1
-          fi
-      - name: Volgende batch PDFs uitlezen
-        run: python drive_plated_sync.py --batch "${{ github.event.inputs.batch_size || '12' }}"
-      - name: Controleer geen ongeverifieerde automatische prijzen
+      - name: Verwerk nieuwe Plated-PDF's uit GitHub
+        run: python import_plated_from_repo.py --folder plated_pdfs --batch "${{ github.event.inputs.batch_size || '20' }}"
+      - name: Behoud streng prijsveiligheidsbeleid
         run: |
           python - <<'PY'
           import json
-          q=json.load(open('plated_review_queue.json'))
-          assert all(r.get('pricing_eligible') is False for r in q['recipes'])
-          print('Geen ongeverifieerd recept prijsbaar verklaard')
+          with open('plated_local_review_queue.json', encoding='utf8') as f:
+              queue=json.load(f)
+          assert all(r.get('pricing_eligible') is False for r in queue['recipes'])
+          print('Ongecontroleerde recepten uitgesloten van definitieve prijsranking')
           PY
-      - name: Sla importstatus op
+      - name: Bewaar OCR-resultaten en status
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add plated_sync_state.json plated_review_queue.json plated_sync_progress.json
+          git add plated_local_state.json plated_local_review_queue.json plated_local_progress.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update Plated OCR review queue"
+            git commit -m "Update Plated PDF review queue"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
