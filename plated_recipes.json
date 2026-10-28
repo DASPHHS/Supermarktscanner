@@ -1,9 +1,9 @@
 {
   "metadata": {
     "source": "Plated recipes from Marc Hummel",
-    "status": "partial_import",
-    "imported_count": 1,
-    "notes": "Only extracted, inspected ingredients; PDF originally 2 servings, quantities doubled for 4. All units must be normalized and proofread before price ranking. Recipe steps are not republished."
+    "status": "five_visually_transcribed_not_price_eligible",
+    "imported_count": 6,
+    "notes": "5 original scanned recipe cards transcribed from both pages. Four-serving amounts checked against cover count (2 or 4). US container sizes and package quantities are unresolved; no recipe is approved for grocery pricing."
   },
   "recipes": [
     {
@@ -115,6 +115,469 @@
           "unit": ""
         }
       ]
+    },
+    {
+      "id": "plated-thai-peanut-chicken-curry-with-sticky-rice",
+      "source": "Plated",
+      "title_extracted": "Thai-Peanut Chicken Curry with Sticky Rice",
+      "original_servings": 2,
+      "servings": 4,
+      "category": "kip",
+      "quality": "visually_transcribed_pending_packaging_review",
+      "pricing_eligible": false,
+      "source_file": "Thai-Peanut Chicken Curry with Sticky Rice.PDF",
+      "source_page_ingredients": 2,
+      "ingredients_4p": [
+        {
+          "ingredient": "sticky rice",
+          "quantity_4p_source": "1½ cup",
+          "conversion_note": "dry grain"
+        },
+        {
+          "ingredient": "baby spinach",
+          "quantity_4p_source": "6 cups",
+          "conversion_note": "loose leaves"
+        },
+        {
+          "ingredient": "bean sprouts",
+          "quantity_4p_source": "½ cup",
+          "conversion_note": "loose"
+        },
+        {
+          "ingredient": "ginger",
+          "quantity_4p_source": "½ inch",
+          "conversion_note": "piece length"
+        },
+        {
+          "ingredient": "lime",
+          "quantity_4p_source": "2 stuks",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "boneless skinless chicken breast",
+          "quantity_4p_source": "4 stuks",
+          "conversion_note": "size unspecified"
+        },
+        {
+          "ingredient": "lite coconut milk",
+          "quantity_4p_source": "2 blik",
+          "conversion_note": "size unspecified"
+        },
+        {
+          "ingredient": "peanut butter",
+          "quantity_4p_source": "5 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "red curry paste",
+          "quantity_4p_source": "1 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "fish sauce",
+          "quantity_4p_source": "2 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "raw sugar",
+          "quantity_4p_source": "2 zakjes",
+          "conversion_note": "packet size unspecified"
+        },
+        {
+          "ingredient": "gochujang",
+          "quantity_4p_source": "2 tl",
+          "conversion_note": "teaspoons"
+        },
+        {
+          "ingredient": "water",
+          "quantity_4p_source": "2½ cups",
+          "conversion_note": "cooking"
+        },
+        {
+          "ingredient": "kosher salt",
+          "quantity_4p_source": "naar smaak",
+          "conversion_note": "pantry"
+        }
+      ],
+      "audit_flags": [
+        "Chicken breasts listed by count, not mass",
+        "Coconut milk can size unspecified",
+        "Raw sugar packet weight unspecified"
+      ],
+      "review_method": "Visual check of original PDF cover servings and ingredient list; pantry items added from you'll need section. Package weights require confirmation."
+    },
+    {
+      "id": "plated-sichuan-chicken-with-ginger-and-sesame-cucumber-salad",
+      "source": "Plated",
+      "title_extracted": "Sichuan Chicken with Ginger and Sesame Cucumber Salad",
+      "original_servings": 2,
+      "servings": 4,
+      "category": "kip",
+      "quality": "visually_transcribed_pending_packaging_review",
+      "pricing_eligible": false,
+      "source_file": "Sichuan Chicken with Ginger and Sesame Cucumber Salad.PDF",
+      "source_page_ingredients": 2,
+      "ingredients_4p": [
+        {
+          "ingredient": "boneless skinless chicken breasts",
+          "quantity_4p_source": "4 stuks",
+          "conversion_note": "size unspecified"
+        },
+        {
+          "ingredient": "sesame oil",
+          "quantity_4p_source": "6 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "Persian cucumbers",
+          "quantity_4p_source": "4 stuks",
+          "conversion_note": "size unspecified"
+        },
+        {
+          "ingredient": "scallions",
+          "quantity_4p_source": "8 stuks",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "ginger",
+          "quantity_4p_source": "1 inch",
+          "conversion_note": "piece length"
+        },
+        {
+          "ingredient": "Sichuan peppercorns crushed",
+          "quantity_4p_source": "2 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "black vinegar",
+          "quantity_4p_source": "1 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "Sambal Oelek",
+          "quantity_4p_source": "4 tl",
+          "conversion_note": "teaspoons"
+        },
+        {
+          "ingredient": "dark soy sauce",
+          "quantity_4p_source": "4 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "snow peas",
+          "quantity_4p_source": "8 oz",
+          "conversion_note": "8 oz = 226.80 g"
+        },
+        {
+          "ingredient": "arugula",
+          "quantity_4p_source": "4 oz",
+          "conversion_note": "4 oz = 113.40 g"
+        },
+        {
+          "ingredient": "black sesame seeds",
+          "quantity_4p_source": "2 tl",
+          "conversion_note": "teaspoons"
+        },
+        {
+          "ingredient": "kosher salt",
+          "quantity_4p_source": "naar smaak",
+          "conversion_note": "pantry"
+        },
+        {
+          "ingredient": "black pepper",
+          "quantity_4p_source": "naar smaak",
+          "conversion_note": "pantry"
+        }
+      ],
+      "audit_flags": [
+        "Chicken breast count without gram weights",
+        "Persian cucumber count without gram weights"
+      ],
+      "review_method": "Visual check of original PDF cover servings and ingredient list; pantry items added from you'll need section. Package weights require confirmation."
+    },
+    {
+      "id": "plated-thai-coconut-shrimp-curry-with-kaffir-lime-and-bamboo-rice",
+      "source": "Plated",
+      "title_extracted": "Thai Coconut Shrimp Curry with Kaffir Lime and Bamboo Rice",
+      "original_servings": 2,
+      "servings": 4,
+      "category": "vis",
+      "quality": "visually_transcribed_pending_packaging_review",
+      "pricing_eligible": false,
+      "source_file": "Thai Coconut Shrimp Curry with Kaffir Lime and Bamboo Rice.PDF",
+      "source_page_ingredients": 2,
+      "ingredients_4p": [
+        {
+          "ingredient": "green bamboo rice",
+          "quantity_4p_source": "1½ cups",
+          "conversion_note": "dry volume"
+        },
+        {
+          "ingredient": "ginger",
+          "quantity_4p_source": "½ oz",
+          "conversion_note": "14.17 g"
+        },
+        {
+          "ingredient": "red onion",
+          "quantity_4p_source": "2 stuks",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "baby spinach",
+          "quantity_4p_source": "4 oz",
+          "conversion_note": "113.40 g"
+        },
+        {
+          "ingredient": "tomatoes",
+          "quantity_4p_source": "4 stuks",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "shrimp",
+          "quantity_4p_source": "24 oz",
+          "conversion_note": "680.39 g"
+        },
+        {
+          "ingredient": "red curry paste",
+          "quantity_4p_source": "2 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "coconut milk",
+          "quantity_4p_source": "4 blik",
+          "conversion_note": "can size unspecified"
+        },
+        {
+          "ingredient": "chicken stock",
+          "quantity_4p_source": "16 oz",
+          "conversion_note": "liquid ounces? source says ounces"
+        },
+        {
+          "ingredient": "light brown sugar",
+          "quantity_4p_source": "2 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "fish sauce",
+          "quantity_4p_source": "2 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "kaffir lime leaves",
+          "quantity_4p_source": "½ cup",
+          "conversion_note": "volume"
+        },
+        {
+          "ingredient": "canola oil",
+          "quantity_4p_source": "2 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "water",
+          "quantity_4p_source": "2½ cups",
+          "conversion_note": "cooking"
+        },
+        {
+          "ingredient": "kosher salt",
+          "quantity_4p_source": "naar smaak",
+          "conversion_note": "pantry"
+        },
+        {
+          "ingredient": "black pepper",
+          "quantity_4p_source": "naar smaak",
+          "conversion_note": "pantry"
+        }
+      ],
+      "audit_flags": [
+        "Can size unspecified",
+        "Stock stated in ounces, confirm fluid vs mass"
+      ],
+      "review_method": "Visual check of original PDF cover servings and ingredient list; pantry items added from you'll need section. Package weights require confirmation."
+    },
+    {
+      "id": "plated-tamarind-glazed-steak-with-crispy-curried-chickpeas-and-ginger-greens",
+      "source": "Plated",
+      "title_extracted": "Tamarind-Glazed Steak with Crispy Curried Chickpeas and Ginger Greens",
+      "original_servings": 2,
+      "servings": 4,
+      "category": "vlees",
+      "quality": "visually_transcribed_pending_packaging_review",
+      "pricing_eligible": false,
+      "source_file": "Tamarind-Glazed Steak with Crispy Curried Chickpeas and Ginger Greens.PDF",
+      "source_page_ingredients": 2,
+      "ingredients_4p": [
+        {
+          "ingredient": "inside round steak",
+          "quantity_4p_source": "20 oz",
+          "conversion_note": "567.00 g"
+        },
+        {
+          "ingredient": "tamarind paste",
+          "quantity_4p_source": "¼ oz",
+          "conversion_note": "7.09 g"
+        },
+        {
+          "ingredient": "soy sauce gluten-free",
+          "quantity_4p_source": "4 zakjes",
+          "conversion_note": "packet size unspecified"
+        },
+        {
+          "ingredient": "agave syrup",
+          "quantity_4p_source": "3 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "sesame oil",
+          "quantity_4p_source": "4 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "chickpeas",
+          "quantity_4p_source": "2 cups",
+          "conversion_note": "cooked? volume"
+        },
+        {
+          "ingredient": "curry powder",
+          "quantity_4p_source": "1 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "Chinese broccoli",
+          "quantity_4p_source": "20 oz",
+          "conversion_note": "567.00 g"
+        },
+        {
+          "ingredient": "ginger",
+          "quantity_4p_source": "1 oz",
+          "conversion_note": "28.35 g"
+        },
+        {
+          "ingredient": "baby spinach",
+          "quantity_4p_source": "8 cups",
+          "conversion_note": "loose leaves"
+        },
+        {
+          "ingredient": "lite coconut milk",
+          "quantity_4p_source": "2 blik",
+          "conversion_note": "original uses half can per 2 portions; remaining conserved"
+        },
+        {
+          "ingredient": "olive oil",
+          "quantity_4p_source": "3 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "canola oil",
+          "quantity_4p_source": "1 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "kosher salt",
+          "quantity_4p_source": "naar smaak",
+          "conversion_note": "pantry"
+        },
+        {
+          "ingredient": "black pepper",
+          "quantity_4p_source": "naar smaak",
+          "conversion_note": "pantry"
+        }
+      ],
+      "audit_flags": [
+        "Soy sauce packet size unspecified",
+        "Two cans supplied in 4p but cooking instructions use only half of each can",
+        "Chickpea cooked/drained volume needs check"
+      ],
+      "review_method": "Visual check of original PDF cover servings and ingredient list; pantry items added from you'll need section. Package weights require confirmation."
+    },
+    {
+      "id": "plated-teriyaki-salmon-tacos-with-seaweed-salad",
+      "source": "Plated",
+      "title_extracted": "Teriyaki Salmon Tacos with Seaweed Salad",
+      "original_servings": 4,
+      "servings": 4,
+      "category": "vis",
+      "quality": "visually_transcribed_pending_packaging_review",
+      "pricing_eligible": false,
+      "source_file": "Teriyaki Salmon Tacos with Seaweed Salad.PDF",
+      "source_page_ingredients": 2,
+      "ingredients_4p": [
+        {
+          "ingredient": "teriyaki sauce",
+          "quantity_4p_source": "½ cup",
+          "conversion_note": "original recipe already 4 portions"
+        },
+        {
+          "ingredient": "salmon fillets",
+          "quantity_4p_source": "4 stuks",
+          "conversion_note": "weight unspecified"
+        },
+        {
+          "ingredient": "English cucumber",
+          "quantity_4p_source": "1 stuk",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "scallions",
+          "quantity_4p_source": "3 stuks",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "2 tenen",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "flour tortillas",
+          "quantity_4p_source": "12 stuks",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "Sriracha",
+          "quantity_4p_source": "4 zakjes",
+          "conversion_note": "packet size unspecified"
+        },
+        {
+          "ingredient": "mayonnaise",
+          "quantity_4p_source": "3 oz",
+          "conversion_note": "85.05 g"
+        },
+        {
+          "ingredient": "soy sauce",
+          "quantity_4p_source": "4 zakjes",
+          "conversion_note": "packet size unspecified"
+        },
+        {
+          "ingredient": "avocados",
+          "quantity_4p_source": "2 stuks",
+          "conversion_note": "whole"
+        },
+        {
+          "ingredient": "furikake",
+          "quantity_4p_source": "2 tl",
+          "conversion_note": "teaspoons"
+        },
+        {
+          "ingredient": "seaweed salad",
+          "quantity_4p_source": "2 cups",
+          "conversion_note": "volume"
+        },
+        {
+          "ingredient": "canola oil",
+          "quantity_4p_source": "2 el",
+          "conversion_note": "tablespoons"
+        },
+        {
+          "ingredient": "kosher salt",
+          "quantity_4p_source": "naar smaak",
+          "conversion_note": "pantry"
+        }
+      ],
+      "audit_flags": [
+        "Original is already 4 servings: do NOT double",
+        "Salmon filet weight unspecified",
+        "Sriracha and soy sauce packet sizes unspecified"
+      ],
+      "review_method": "Visual check of original PDF cover servings and ingredient list; pantry items added from you'll need section. Package weights require confirmation."
     }
   ]
 }
