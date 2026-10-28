@@ -22,16 +22,27 @@ def pdf_text(path):
         command(["pdftoppm","-r","170","-f","1","-l","3","-gray","-png",str(path),str(Path(td)/"page")])
         parts=[command(["tesseract",str(p),"stdout","-l","eng"]) for p in sorted(Path(td).glob("page-*.png"))]
         return "\n".join(parts),"ocr_unverified"
+EXTRACTION_VERSION=2
 def serving_options(raw):
-    return sorted({int(x) for x in re.findall(r"\b([246])\s*servings?\b",raw,re.I)})
+    candidates=re.findall(r"\b([246])\s*servings?\b|\bserves\s*:?\s*([246])\s*(?:people|persons?|servings?)?\b",raw,re.I)
+    return sorted({int(v) for pair in candidates for v in pair if v})
 def ingredient_lines(raw):
+    """Plated cards normally put INGREDIENTS *after* cooking steps and tips.
+
+    Also accepts WHAT WE SEND for web-derived cards; all ingredients remain
+    unverified until checked against the original PDF layout.
+    """
     active=False; lines=[]
-    for line in raw.splitlines():
-        if re.search(r"WHAT WE SEND|INGREDIENTS\s*&\s*EQUIPMENT",line,re.I):
-            active=True; continue
-        if active and re.search(r"WHAT YOU.LL NEED|COOKING STEPS|ALLERGENS",line,re.I): break
-        if active and line.strip() and len(line.strip())<100: lines.append(line.strip())
-        if len(lines)>=80:break
+    for rawline in raw.splitlines():
+        line=rawline.strip()
+        if re.search(r"(?:^|[^A-Z])INGREDIENTS\b|WHAT WE SEND",line,re.I) and len(line)<65:
+            active=True
+            continue
+        if active and re.search(r"YOU.LL NEED|WHAT YOU.LL NEED|ALLERGENS|QUESTIONS OR COMMENTS|COOKING STEPS",line,re.I):
+            if lines:break
+        if active and line and len(line)<100:
+            lines.append(line)
+        if len(lines)>=85:break
     return lines
 def provisional_four(lines,servings):
     if servings not in (2,4):return []
@@ -60,6 +71,7 @@ def inspect(pdf,name,identity):
             "content_sha256":hashlib.sha256(pdf.read_bytes()).hexdigest(),
             "ocr_method":method,"servings_original":original,"servings":4,
             "ingredient_candidates_original":lines,"ingredients_4p":provisional_four(lines,original),
+            "extraction_version":EXTRACTION_VERSION,
             "quality":"needs_manual_verification","pricing_eligible":False,
             "review_flags":["Verify original PDF ingredient columns and serving count",
                             "Check all US units, package weights and pantry ingredients"]}
