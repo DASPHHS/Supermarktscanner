@@ -1,0 +1,89 @@
+name: Originele HelloFresh receptkaarten
+on:
+  push:
+    paths:
+      - 'render_original_cards.py'
+      - '.github/workflows/recipe-previews.yml'
+  schedule:
+    - cron: '10,40 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: recipe-previews
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check incomplete preview generation
+        id: todo
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          recipes=json.loads(Path('recipes_extracted.json').read_text())['recipes']
+          p=Path('hellofresh/preview_manifest.json')
+          rendered=json.loads(p.read_text()).get('recipes',{}) if p.exists() else {}
+          print('needed='+str(len(rendered)<len(recipes)).lower())
+          PY
+      - name: Install rendering tools
+        if: steps.todo.outputs.needed == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python -m pip install 'Pillow>=10,<13'
+      - name: Restore HelloFresh archive cache
+        if: steps.todo.outputs.needed == 'true'
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: hellofresh-archives
+          key: hellofresh-original-pdf-archives-v1
+      - name: Download source archives from release
+        if: steps.todo.outputs.needed == 'true' && steps.cache.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p hellofresh-archives
+          gh release download plated-database-v1 -p 'hellofresh1.zip' -p 'hellofresh.2.zip' -D hellofresh-archives --clobber
+      - name: Render original card pages
+        if: steps.todo.outputs.needed == 'true'
+        run: |
+          python render_original_cards.py --archives hellofresh-archives/hellofresh1.zip hellofresh-archives/hellofresh.2.zip --batch 24
+      - name: Store previews safely
+        if: steps.todo.outputs.needed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          mkdir -p "$RUNNER_TEMP/recipe-preview-result"
+          cp -a hellofresh/previews "$RUNNER_TEMP/recipe-preview-result/"
+          cp hellofresh/preview_manifest.json "$RUNNER_TEMP/recipe-preview-result/"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p hellofresh/previews
+            cp -a "$RUNNER_TEMP/recipe-preview-result/previews/." hellofresh/previews/
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          dst=Path('hellofresh/preview_manifest.json')
+          src=Path(__import__('os').environ['RUNNER_TEMP'])/'recipe-preview-result/preview_manifest.json'
+          newer=json.loads(src.read_text())
+          previous=json.loads(dst.read_text()) if dst.exists() else {'recipes':{}}
+          merged={**previous['recipes'],**newer['recipes']}
+          newer['recipes']=merged
+          newer['metadata']['rendered']=len(merged)
+          dst.write_text(json.dumps(newer,ensure_ascii=False,indent=2)+'\n')
+          PY
+            git add hellofresh/preview_manifest.json hellofresh/previews/
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Publish original HelloFresh recipe card previews'
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
