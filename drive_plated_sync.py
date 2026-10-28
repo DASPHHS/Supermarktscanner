@@ -45,23 +45,33 @@ def ingredient_lines(raw):
         if len(lines)>=85:break
     return lines
 def provisional_four(lines,servings):
+    """Parse only unambiguous OCR quantities; preserve original US unit.
+
+    Unclear OCR fractions such as '2%' are deliberately excluded. Counts
+    without a weight remain counts and must not be priced by grams.
+    """
     if servings not in (2,4):return []
-    pattern=re.compile(r"^\s*(\d+(?:[ .\/¼½¾⅓⅔⅛⅜⅝⅞]\d*)*)\s+(ounces?|oz|lbs?|cups?|tablespoons?|tbsp|teaspoons?|tsp|cloves?|cans?|pieces?|bunches?)\s+([A-Za-z].{2,65})$",re.I)
     result=[]
     chars={"¼":"1/4","½":"1/2","¾":"3/4","⅓":"1/3","⅔":"2/3","⅛":"1/8","⅜":"3/8","⅝":"5/8","⅞":"7/8"}
+    units=r"ounces?|oz|lbs?|pounds?|cups?|tablespoons?|tbsp|teaspoons?|tsp|cloves?|cans?|packets?|pieces?|bunches?|sticks?|pints?"
+    pattern=re.compile(r"^\s*(\d+(?:\s+\d+/\d+|/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])?)\s+(?:(?P<unit>"+units+r")\s+)?(?P<name>[A-Za-z].{2,75})$",re.I)
     for line in lines:
         m=pattern.match(line)
-        if not m:continue
-        amount=m[1]
-        for key,value in chars.items():amount=amount.replace(key," "+value)
+        if not m or re.search(r"[%?]",line):continue
+        raw=m.group(1)
+        for key,value in chars.items():raw=raw.replace(key," "+value)
         try:
-            parts=amount.split()
-            quantity=sum((Fraction(p) for p in parts),Fraction(0))*Fraction(4,servings)
+            quantity=sum((Fraction(p) for p in raw.split()),Fraction(0))*Fraction(4,servings)
         except (ValueError,ZeroDivisionError):continue
-        total=f"{quantity.numerator}" if quantity.denominator==1 else f"{quantity.numerator}/{quantity.denominator}"
-        result.append({"ingredient":m[3].strip(),"quantity_4p_source":total+" "+m[2],
-                       "original_quantity":m[1]+" "+m[2],"quality":"unverified_ocr"})
+        if quantity<=0:continue
+        original_unit=m.group("unit") or "stuks"
+        total=str(quantity.numerator) if quantity.denominator==1 else f"{quantity.numerator}/{quantity.denominator}"
+        result.append({"ingredient":m.group("name").strip(),
+                       "quantity_4p_source":total+" "+original_unit,
+                       "original_quantity":m.group(1)+" "+original_unit,
+                       "quality":"unverified_ocr"})
     return result
+
 def inspect(pdf,name,identity):
     raw,method=pdf_text(pdf);servings=serving_options(raw);lines=ingredient_lines(raw)
     original=servings[0] if len(servings)==1 else None
