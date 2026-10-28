@@ -1,0 +1,47 @@
+name: Plated Nederlandse recepten
+on:
+  push:
+    paths:
+      - 'plated_translate_nl.py'
+      - '.github/workflows/plated-translate-nl.yml'
+      - 'tests/test_plated_translate_nl.py'
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: plated-translate-nl
+  cancel-in-progress: false
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Controleer veilige vertalingen
+        run: |
+          python -m pip install pytest
+          PYTHONPATH=. pytest -q tests/test_plated_translate_nl.py
+      - name: Maak Nederlandse weergave zonder brondata te wijzigen
+        run: python plated_translate_nl.py
+      - name: Sla nieuwe vertalingen op
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp plated_nl_catalog.json "$RUNNER_TEMP/plated_nl_catalog.json"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            # Translate the newest OCR queue after fetching main, rather than
+            # overwriting newer scanned records with a stale snapshot.
+            python plated_translate_nl.py
+            git add plated_nl_catalog.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Update Dutch Plated search titles and ingredient mappings"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
