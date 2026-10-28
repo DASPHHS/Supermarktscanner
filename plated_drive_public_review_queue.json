@@ -1,10 +1,10 @@
 {
   "metadata": {
     "source": "Plated Google Drive (public-link download)",
-    "updated_at_utc": "2026-10-28T15:17:30.217835+00:00",
-    "imported": 104,
+    "updated_at_utc": "2026-10-28T15:28:55.439228+00:00",
+    "imported": 156,
     "note": "Preliminary OCR review queue only. NO prices, NO validated recipes.",
-    "count": 104,
+    "count": 156,
     "status": "manual_review_required"
   },
   "recipes": [
@@ -4816,6 +4816,873 @@
       "same_title_candidates": []
     },
     {
+      "id": "plated-chickenchili",
+      "source": "Plated",
+      "title_extracted": "Chicken Chili",
+      "source_file": "Chicken Chili.pdf",
+      "drive_identity_hash": "73708fc2a3f76915b00c8d1a6bb558c75f6c42423a510bcf0757df4320eef45a",
+      "content_sha256": "6fefb080b5869c24bbc5c6cc2f3181d92caf535b7108e530e21d5c24b0748688",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 can white beans",
+        "1 sweet potato",
+        "⅛ ounce parsley, divided",
+        "1 yellow onion",
+        "2 cloves garlic, divided",
+        "2 packets unsalted butter",
+        "1 teaspoon chili powder",
+        "1 demi-baguette",
+        "1 ounce shredded mozzarella cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1pStY31n965vDADnevmye1omC19Ay-7dS",
+      "original_filename": "Chicken Chili.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickencurrypuffs",
+      "source": "Plated",
+      "title_extracted": "Chicken curry puffs",
+      "source_file": "Chicken curry puffs.pdf",
+      "drive_identity_hash": "d1857197a074a7d9adf898d81c754346bb3bcfdfbaa8fa810e6b7363e0023dd9",
+      "content_sha256": "fe46179309a5a1060e6d6e75c201b57a38715cfce1e27d17ee4fb8c2af3ff40e",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces Yukon Gold potatoes",
+        "⅛ ounce cilantro",
+        "1 English cucumber",
+        "6 ounces carrots",
+        "1 clove garlic",
+        "1 Thai chile",
+        "¼ cup rice wine vinegar",
+        "4 puff pastry squares",
+        "12 ounces ground chicken",
+        "1 tablespoon Indonesian curry powder"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1bh5mWIPkWEE-8wslQyxsoTunKNxoabYM",
+      "original_filename": "Chicken curry puffs.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenfettuccine",
+      "source": "Plated",
+      "title_extracted": "Chicken Fettuccine (4)",
+      "source_file": "Chicken Fettuccine (4).pdf",
+      "drive_identity_hash": "9c89aa6c926367d55b02f976f9e85062594f4c3865b3843a4dac9a530060eb94",
+      "content_sha256": "aff994721ca2c93a86c8e7706c049219fae59a4583ce86f39932c04138c26b71",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 half stick unsalted butter",
+        "4 boneless skinless chicken breasts",
+        "¼ ounce parsley",
+        "4 cloves garlic",
+        "2 tablespoons flour",
+        "12 ounces fettuccine",
+        "1 pint grape tomatoes",
+        "4 ounces grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1GDs22g1kPPBjvQGowAHT4u1eRvVbNOMf",
+      "original_filename": "Chicken Fettuccine (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenhoriatiki",
+      "source": "Plated",
+      "title_extracted": "Chicken Horiatiki",
+      "source_file": "Chicken Horiatiki.pdf",
+      "drive_identity_hash": "5b725bd336720a778cf5f3971152188bfb3d13808ab2050b83e67c0223a4f025",
+      "content_sha256": "90c896ba51e8799829db201c1a3d51cd6d07327f9223aae58edd30238cb39631",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 boneless chicken breasts",
+        "2 pita breads",
+        "½ English cucumber",
+        "½ pint grape tomatoes",
+        "1 herb mix",
+        "⅛ ounce dill",
+        "⅛ ounce oregano",
+        "1 container nonfat Greek yogurt",
+        "2 ounces crumbled feta cheese",
+        "sear opposite side until cooked through      lemon. Peel onion, halve, and thinly",
+        "and no longer pink, about 7 minutes          slice up to half (save remainder for"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1oKMfq4Q1t5s_TzsNEh-MC-IB2OTmLV4k",
+      "original_filename": "Chicken Horiatiki.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenkaleandfregolabowlswithpesto",
+      "source": "Plated",
+      "title_extracted": "Chicken kale and Fregola bowls with pesto",
+      "source_file": "Chicken kale and Fregola bowls with pesto.pdf",
+      "drive_identity_hash": "c8969765eee14030766b9b5119b207b430eb43b0ddb5e52187a38306f6b4dc1a",
+      "content_sha256": "147585e43c097a0ef804b2bf3b0cb1ff3e299a2eea1b5c95dbc952fb80bc1cad",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "1 shallot",
+        "Y% cup fregola",
+        "Y% pint grape tomatoes",
+        "2 boneless skinless chicken breasts",
+        "Ye ounce thyme",
+        "4 ounces curly kale",
+        "3 tablespoons pesto",
+        "Ye ounce grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1xx8GijqwDEELy4wTEVUmrJRTBpINP7Zo",
+      "original_filename": "Chicken kale and Fregola bowls with pesto.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenkatsu",
+      "source": "Plated",
+      "title_extracted": "Chicken Katsu (4)",
+      "source_file": "Chicken Katsu (4).pdf",
+      "drive_identity_hash": "8f23ddd6ac2fad372722b142946122dd3e270c8bf205d1e8a219643ebc4225d2",
+      "content_sha256": "7057d2702bdec24497e8c275e170a3fb66469b2e9068b65a9c7c6d45dd6678c9",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ cup jasmine rice",
+        "½ cup flour",
+        "¼ teaspoon Chinese 5-spice powder",
+        "1¼ cups panko breadcrumbs",
+        "2 boneless skinless chicken breasts",
+        "⅛ ounce cilantro",
+        "1 scallion",
+        "1 slaw mix",
+        "½ cup shredded carrots",
+        "½ cup shredded red cabbage",
+        "minutes.                                    plastic wrap (see recipe tip). Using a"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1F5Q03CJ88jPZS1vpumKhDFTffSk7rpha",
+      "original_filename": "Chicken Katsu (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenkatsuwithgreensandwasabiaioli",
+      "source": "Plated",
+      "title_extracted": "Chicken Katsu with Greens and Wasabi Aioli",
+      "source_file": "Chicken Katsu with Greens and Wasabi Aioli.PDF",
+      "drive_identity_hash": "a80d06cee795bca6c7a120451dd3a47a5e82380446a281e96f5af04d61473118",
+      "content_sha256": "f14e51927738bd89290a4da1715acf00a9c01662998d0805e8f333c56d200944",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "cloves garlic",
+        "ounces baby bok choy, divided",
+        "ounces Chinese broccoli, divided",
+        "boneless skinless chicken breasts",
+        "tablespoon sesame oil",
+        "jar mayonnaise",
+        "packet wasabi",
+        "packets soy sauce",
+        "ounces baby spinach",
+        "cup flour",
+        "teaspoon mustard powder",
+        "cup panko breadcrumbs"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1w2rhhJEtwpUMmjOk7koOtD9YFtq1wXf3",
+      "original_filename": "Chicken Katsu with Greens and Wasabi Aioli.PDF",
+      "same_title_candidates": [
+        "dupe_Chicken Katsu with Greens and Wasabi Aioli (1).PDF"
+      ]
+    },
+    {
+      "id": "plated-chickenmarsalapizza",
+      "source": "Plated",
+      "title_extracted": "Chicken Marsala Pizza (4)",
+      "source_file": "Chicken Marsala Pizza (4).pdf",
+      "drive_identity_hash": "6a08ee0a2291c5cb72821d46536243cd57f08c4fbf91047bbd2310d45fb2eebf",
+      "content_sha256": "92560a9c67079df021e3e543dcd5359762813de75f1f47c97f3ddfc768b64b08",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces pizza dough",
+        "4 ounces cremini mushrooms",
+        "1 herb mix",
+        "⅛ ounce chives",
+        "⅛ ounce rosemary",
+        "2 cloves garlic",
+        "2 boneless skin-on chicken breasts",
+        "2 ounces shredded mozzarella cheese",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1cj0H46eC9-R0w-cOjYZtbcL3yWQOYA6i",
+      "original_filename": "Chicken Marsala Pizza (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenmarsalawroastedpotatoes",
+      "source": "Plated",
+      "title_extracted": "Chicken Marsala w roasted potatoes",
+      "source_file": "Chicken Marsala w roasted potatoes.pdf",
+      "drive_identity_hash": "cb5bac0c25c984946025de7459ead3bedb69f89b459d14d733cdb7871d00e736",
+      "content_sha256": "467c1ddce540a0d2bce653134f5e35ce8be3bc59b35bf015a8beef88290c34b1",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "9 ounces cremini mushrooms",
+        "8 ounces fingerling potatoes",
+        "1 herb mix",
+        "⅛ ounce parsley, divided",
+        "⅛ ounce rosemary",
+        "1 lemon",
+        "2 boneless skinless chicken breasts",
+        "½ cup dry Marsala wine",
+        "1 container chicken stock"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1WxyX-_fab2yDvDH9ttb7FlTohOqBGyeH",
+      "original_filename": "Chicken Marsala w roasted potatoes.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenmeatballs",
+      "source": "Plated",
+      "title_extracted": "Chicken Meatballs",
+      "source_file": "Chicken Meatballs.pdf",
+      "drive_identity_hash": "6be8def41aa19f62490d742a6efdeba4790a54e8931eb346ff9d78ebc1499de1",
+      "content_sha256": "0bec05ba0cad4071cd8169104da40029001754eab2660283efe555d6ff3095b4",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 packets unsalted butter",
+        "1 pound broccoli",
+        "½ ounce parsley, divided",
+        "1 red onion",
+        "6 cloves garlic",
+        "½ cup panko breadcrumbs",
+        "divided",
+        "1½ pounds ground chicken",
+        "provolone cheese blend"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "16dXQtslUTKgKWWrUUUioC3nYM5wqF0id",
+      "original_filename": "Chicken Meatballs.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenmolepoblano",
+      "source": "Plated",
+      "title_extracted": "Chicken Mole Poblano",
+      "source_file": "Chicken Mole Poblano.pdf",
+      "drive_identity_hash": "a453656cc686b5d5c350d4ceec5674e8a36c530f8fe33fd1d7108d83e82bdfa3",
+      "content_sha256": "0af0edabfcf3d81e20d6f0f14de42ae5ef6c8bff72e56c14a040d7558deb9e20",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 boneless skinless chicken breasts",
+        "1½ cups jasmine rice",
+        "½ ounce cilantro",
+        "1 lime",
+        "5 ounces baby spinach",
+        "2 red bell peppers",
+        "2 packets honey"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1iFjyxlXNn-FGMoUI5VfisrRbSmnQRfj6",
+      "original_filename": "Chicken Mole Poblano.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenpaella",
+      "source": "Plated",
+      "title_extracted": "Chicken Paella (4)",
+      "source_file": "Chicken Paella (4).pdf",
+      "drive_identity_hash": "579ed22c295bcc4930d7aa5db31e9967b7fb47091d3027f39766378ec698374b",
+      "content_sha256": "5a16f9332b31d56ffa27c29f633a3c70d597e20771a6e1fea577ee344b914ec6",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup Arborio rice",
+        "1 chicken bouillon cube",
+        "1 tablespoon paella spice mix",
+        "1½ pounds ground chicken",
+        "3 ounces baby spinach",
+        "1 red bell pepper",
+        "3 plum tomatoes",
+        "1 lemon"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1mnxZ9Yg_9AJswH8j3Ad939kdckNfbFtC",
+      "original_filename": "Chicken Paella (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenparmesanmelts",
+      "source": "Plated",
+      "title_extracted": "Chicken Parmesan Melts (4)",
+      "source_file": "Chicken Parmesan Melts (4).pdf",
+      "drive_identity_hash": "19edca545d3b33ea6465f848344890eb01b0e3e8a1a67b38838b29b9c0d6d8f1",
+      "content_sha256": "d7a6415f2e649a27891e11e9d4aa97c0f8abc3f30e383664c360bd26d8de79d2",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¼ ounce basil",
+        "¾ pint grape tomatoes",
+        "2 cloves garlic",
+        "1 cup tomato purée",
+        "4 boneless skinless chicken breasts",
+        "½ cup flour",
+        "2 cups panko breadcrumbs",
+        "1 ounce grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1jFG1bS9zu9SOFsaOOYdwYhSQh5l1YqwF",
+      "original_filename": "Chicken Parmesan Melts (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenpiccata",
+      "source": "Plated",
+      "title_extracted": "Chicken Piccata (4)",
+      "source_file": "Chicken Piccata (4).pdf",
+      "drive_identity_hash": "b502cf1f9614bd5666b59671466d6d1d72912b23f161d4e5047e46e91477bb10",
+      "content_sha256": "80f21a06a4a8fd8f899639f86182ca1fc16cf6d7d1c88a39335ea57926f40456",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1¼ pounds fingerling potatoes",
+        "1 pound green beans",
+        "¼ ounce parsley",
+        "1 lemon",
+        "4 boneless skinless chicken breasts",
+        "¾ cup flour",
+        "1 cup white wine"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1ELcTY-U4UMS6jkkZzCaSQ6AbNrHcWdrB",
+      "original_filename": "Chicken Piccata (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickensaag",
+      "source": "Plated",
+      "title_extracted": "Chicken Saag",
+      "source_file": "Chicken Saag.pdf",
+      "drive_identity_hash": "b6967013ea1fe38aeba29a2a8fb336088cb11c5d4515d78b166e2e38325962e9",
+      "content_sha256": "81b77d009a0ac88095fde8b83d370461c4b6f5e98e3ad63aab675fb0616ec207",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup basmati rice",
+        "3 tablespoons roasted salted almonds",
+        "12 ounces baby spinach",
+        "2 yellow onions",
+        "¼ ounce ginger",
+        "2 cloves garlic",
+        "1 jalapeño",
+        "2 teaspoons garam masala",
+        "¼ cup tomato paste",
+        "1 container heavy cream"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "14GWu6evdgh_Ci4VFZiK5BHKuz0VvaTaQ",
+      "original_filename": "Chicken Saag.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickensamosaswithcucumberraitasalad",
+      "source": "Plated",
+      "title_extracted": "Chicken Samosas with cucumber Raita Salad",
+      "source_file": "Chicken Samosas with cucumber Raita Salad.PDF",
+      "drive_identity_hash": "4ad0c6fb96e234c2a4b47257d685039f7df28297a77230804969089811aa2c80",
+      "content_sha256": "bd5c5d576362b8e2122e01d01b7de8242d4b0140968dd0ef60240390d8f58167",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 tomatoes",
+        "1 English cucumber",
+        "% ounce cilantro",
+        "2 lemons",
+        "1 red onion, divided",
+        "12 ounces low-fat yogurt",
+        "1% pounds ground chicken",
+        "2 tablespoons tikka masala curry",
+        "paste",
+        "Y% cup peas",
+        "12 empanada doughs"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1zFQlV-FM8sN0TllQM-0WUnHVDan3QuI5",
+      "original_filename": "Chicken Samosas with cucumber Raita Salad.PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickensataywithpeanutsauceandgingerrice",
+      "source": "Plated",
+      "title_extracted": "Chicken Satay with Peanut Sauce and Ginger Rice",
+      "source_file": "Chicken Satay with Peanut Sauce and Ginger Rice.PDF",
+      "drive_identity_hash": "33406e495a7731d7f5e4118588d46bb59fc7e5e0e70509f35977061ea2398adb",
+      "content_sha256": "8ece08788b4eb50b9d4cbe7571ec27a4321eaa4b68ef6d97b4f6b5462e50db5a",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "% ounce ginger",
+        "1% cups jasmine rice",
+        "1 pound Chinese broccoli, divided",
+        "scallions",
+        "lime",
+        "boneless skinless chicken breasts",
+        "spice mix",
+        "% teaspoon coriander",
+        "1 teaspoon Madras curry powder",
+        "aban",
+        "% teaspoon garlic powder",
+        "% teaspoon ground ginger",
+        "packets peanut butter",
+        "packets gluten-free soy sauce",
+        "tablespoons rice wine vinegar",
+        "tablespoons sesame oil",
+        "20 wooden skewers",
+        "NVNAD",
+        "Youw’ll Need",
+        "canola oil",
+        "kosher salt",
+        "black pepper",
+        "6\" small pot with lid",
+        "12\" large pan",
+        "t",
+        "® Recipe Tips",
+        "Be sure to read through the entire",
+        "recipe before you begin cooking.",
+        "Our method for this recipe saves",
+        "time by cooking the chicken and",
+        "Chinese broccoli simultaneously in",
+        "separate pans. To save on cleanup,",
+        "cook broccoli first, stir in cooked",
+        "rice, and transfer to plates. Wipe",
+        "pan clean to cook chicken.",
+        "The chicken might have a slight",
+        "odor as a natural reaction to its",
+        "vacuum packing. USDA",
+        "recommends cooking chicken to",
+        "165°F.",
+        "Questions? Email help@plated.com",
+        "or call 855-525-2399. Visit"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "17X3hxH5jb8UdPSjBrKTRIBO6_LrhLBC0",
+      "original_filename": "Chicken Satay with Peanut Sauce and Ginger Rice.PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickensausagepretzelrollswithcreamymustard",
+      "source": "Plated",
+      "title_extracted": "Chicken Sausage Pretzel Rolls with Creamy Mustard",
+      "source_file": "Chicken Sausage Pretzel Rolls with Creamy Mustard.PDF",
+      "drive_identity_hash": "797fbb4ad9d7f4565141b31fc99b9741d45efc01e30c25d4bac560ce8c17b0b5",
+      "content_sha256": "8e65826f69d5b6544b27151ad44835b137084e599de7ef649b53fac1481e4e23",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "x",
+        "ounce parsley",
+        "ounces green beans",
+        "red bell pepper",
+        "clove garlic",
+        "pretzel rolls",
+        "chicken sausages",
+        "tablespoon whole-grain mustard",
+        "packets mayonnaise",
+        "teaspoon apple cider vinegar",
+        "ok DO ae RIO) oe ce 00"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1Qf1zstc9cu4pEl25nxj9YXmMXCCukeco",
+      "original_filename": "Chicken Sausage Pretzel Rolls with Creamy Mustard.PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenshawarma",
+      "source": "Plated",
+      "title_extracted": "Chicken Shawarma (3)",
+      "source_file": "Chicken Shawarma (3).pdf",
+      "drive_identity_hash": "0a97bce646b3598d826c13ce482b690805122f367babaafdfb721abcff36aa63",
+      "content_sha256": "64360b11cda53aa92b7405d68512c3b612ee1f3b858b6062dfcdf65546b3e0ee",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1½ pints grape tomatoes",
+        "1 English cucumber",
+        "¼ ounce parsley",
+        "2 lemons, divided",
+        "2 red onions",
+        "3 cloves garlic, divided",
+        "4 boneless skinless chicken breasts",
+        "1 teaspoon smoked paprika",
+        "½ teaspoon ground turmeric",
+        "¼ teaspoon cayenne pepper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1ZE7JLSgbY6o0nSlAL6ADnh19blfUxi3o",
+      "original_filename": "Chicken Shawarma (3).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenshawarmasalad",
+      "source": "Plated",
+      "title_extracted": "Chicken Shawarma Salad",
+      "source_file": "Chicken Shawarma Salad.pdf",
+      "drive_identity_hash": "f60bad4ef1afe035575a185c80b887f8f2f6baed48f17d7654825d802e717443",
+      "content_sha256": "0d098993047f45fd500c352ab53ec6a7b751f5146d644a079ff9f7c93215004c",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 lemons, divided",
+        "1 spice mix",
+        "⅛ teaspoon ground cayenne pepper",
+        "½ teaspoon ground cumin",
+        "½ teaspoon smoked paprika",
+        "¼ teaspoon ground turmeric",
+        "2 boneless skinless chicken breasts",
+        "⅛ ounce parsley",
+        "4 cornichons",
+        "1 red onion"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1N1HNm64P2OPmTtkYSBsBgVVFOlAKeXgc",
+      "original_filename": "Chicken Shawarma Salad.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickensouvlaki",
+      "source": "Plated",
+      "title_extracted": "Chicken Souvlaki",
+      "source_file": "Chicken Souvlaki.pdf",
+      "drive_identity_hash": "5a70bf7fbbd5bc9e672cefa5d319a67dbd4e49ede5ffdd3412b240525b1d8bc9",
+      "content_sha256": "1aa788252c50a7cd54b8a2d191570cc5575eba71e201cf33926f7607052e8ace",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 head little gem lettuce",
+        "½ pint grape tomatoes",
+        "1 herb mix",
+        "⅛ ounce dill",
+        "⅛ ounce parsley",
+        "¼ cup sliced pepperoncini",
+        "1 clove garlic",
+        "2 Persian cucumbers",
+        "1 container nonfat Greek yogurt"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1IZ_raX8TBwQ3BxtY5FBcs5zUxxM3R1Ql",
+      "original_filename": "Chicken Souvlaki.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickentikkamasalawrapswithcauliflowerandcoriander",
+      "source": "Plated",
+      "title_extracted": "Chicken Tikka Masala Wraps with cauliflower and coriander",
+      "source_file": "Chicken Tikka Masala Wraps with cauliflower and coriander.pdf",
+      "drive_identity_hash": "092de4456f0f62bca4f269549ac59af70845cb1d38e7b44d6379f87292c70320",
+      "content_sha256": "a5a9d6477c0adec762eaff906aefff94dac510a773d88f696e243515bab0bd38",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 container nonfat Greek yogurt,",
+        "divided",
+        "1 tablespoon tikka masala curry paste,",
+        "divided",
+        "2 boneless skinless chicken breasts",
+        "⅛ ounce cilantro, divided",
+        "2 flour tortillas",
+        "¼ teaspoon ground coriander",
+        "¼ cup shredded carrots"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "container nonfat Greek yogurt,",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tikka masala curry paste,",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "boneless skinless chicken breasts",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "flour tortillas",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "17llF49pxoeEYUvX-R8It6ooDVkfINM-T",
+      "original_filename": "Chicken Tikka Masala Wraps with cauliflower and coriander.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickentikkapizzas",
+      "source": "Plated",
+      "title_extracted": "Chicken Tikka “Pizzas”",
+      "source_file": "Chicken Tikka “Pizzas”.pdf",
+      "drive_identity_hash": "da154eaa1808510627064c7c12c91448c054fb304b984df8d783b3726e8273c6",
+      "content_sha256": "f64d1251d48e648fbb8db6572ca1be464c9541f5e092c33190e9157bd9c9d8fb",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 herb mix",
+        "⅛ ounce cilantro",
+        "⅛ ounce parsley",
+        "1 yellow onion",
+        "⅛ ounce ginger",
+        "1 clove garlic",
+        "2 boneless skinless chicken breasts",
+        "1 ounce sour cream",
+        "2 naan breads"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1DO1OLZJPHYEkS_tZ_cGasQYhcRtsB2Ly",
+      "original_filename": "Chicken Tikka “Pizzas”.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenpearandbluecheesesalad",
+      "source": "Plated",
+      "title_extracted": "Chicken, Pear, and Blue Cheese Salad",
+      "source_file": "Chicken, Pear, and Blue Cheese Salad.pdf",
+      "drive_identity_hash": "fecdc68c49ea2c89963c27d234715c6e8b6417655e92ae2d9b7bb7977e051481",
+      "content_sha256": "a8611de9e1784d6d9e959b8e2c46e81056d8b6f2830a467c2866ef481852d9d9",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 chicken thighs",
+        "4 heads little gem lettuce",
+        "2 d'Anjou pears",
+        "¼ ounce chives, divided",
+        "2 shallots",
+        "¼ cup sliced almonds",
+        "3 packets sour cream",
+        "divided"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1VJ3fO8kR3yMpcWnCx9I6uJVERlz9mGca",
+      "original_filename": "Chicken, Pear, and Blue Cheese Salad.pdf",
+      "same_title_candidates": []
+    },
+    {
       "id": "plated-chickenavocadoburgers",
       "source": "Plated",
       "title_extracted": "Chicken-Avocado Burgers",
@@ -4879,6 +5746,103 @@
       ],
       "source_identity": "1v6ibPyWqO-Cpp3Q0mbQKG2eZvZ3h0Uz9",
       "original_filename": "chicken-brie-stuffed.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickengarammasalasalad",
+      "source": "Plated",
+      "title_extracted": "chicken-garam-masala-salad",
+      "source_file": "chicken-garam-masala-salad.pdf",
+      "drive_identity_hash": "1b06a1cf77d3643a7b27a5dc1c77ad5980dd13881b2ed61b22d2c4627b6c80d3",
+      "content_sha256": "9e983137cc0106993c424c7d7f805ef638381a6909baa91df82d52e469c3ed26",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 romaine heart",
+        "8 ounces carrots",
+        "⅛ ounce cilantro",
+        "1 shallot",
+        "1 jalapeño",
+        "2 boneless skinless chicken breasts",
+        "1 teaspoon garam masala",
+        "1 tablespoon white wine vinegar",
+        "3 tablespoons golden raisins"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "16WitoxGqVYVTozYVYnFbrPEiL-scVmCP",
+      "original_filename": "chicken-garam-masala-salad.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenpestopenne",
+      "source": "Plated",
+      "title_extracted": "chicken-pesto-penne",
+      "source_file": "chicken-pesto-penne.pdf",
+      "drive_identity_hash": "e16dd4f5f7ce804f43f579f5a9785246db747c2515ab57baadc2a13c7873fa10",
+      "content_sha256": "276c63cdce9736f268fa8e51cef3cbd4e6aca3ad6c884ff5da56acc0d6b9a3e4",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "3 ounces baby spinach",
+        "¼ pint grape tomatoes",
+        "1 yellow onion",
+        "2 boneless skinless chicken breasts",
+        "6 ounces whole-wheat penne pasta",
+        "3 packets unsalted butter",
+        "¼ cup white wine",
+        "1 ounce shaved Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1wwRbCrqylDT-sIVGcqB6VwANnwk9V8-A",
+      "original_filename": "chicken-pesto-penne.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickensagebutterbasted",
+      "source": "Plated",
+      "title_extracted": "chicken-sage-butter-basted",
+      "source_file": "chicken-sage-butter-basted.pdf",
+      "drive_identity_hash": "629c4ed3530c4fc20032c41d1f9ea4eefd1b6285fe9d24420a93c0369d59e990",
+      "content_sha256": "a1a2b4dd7e6034f33e59a3db5fb62edd244a0c9504dc133521ea59785a9f3dd6",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 herb mix",
+        "⅛ ounce sage",
+        "⅛ ounce thyme",
+        "4 ounces fresh mozzarella",
+        "1 clove garlic",
+        "2 boneless skin-on chicken breasts",
+        "1 pint grape tomatoes",
+        "2 packets unsalted butter"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1Bc4purpvYNSz_K_aJnVFurJCcCI0xqOX",
+      "original_filename": "chicken-sage-butter-basted.pdf",
       "same_title_candidates": []
     },
     {
@@ -4994,6 +5958,1252 @@
       ],
       "source_identity": "1yky_BnqMcMSaJM-6Haj1WA6MRwgUhThA",
       "original_filename": "Chicken_Chicken and Monterey Jack Tortas_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenchickenandswisschardtacos",
+      "source": "Plated",
+      "title_extracted": "Chicken_Chicken and Swiss Chard Tacos_OCR",
+      "source_file": "Chicken_Chicken and Swiss Chard Tacos_OCR.pdf",
+      "drive_identity_hash": "e964a47ac34820f80fdcecd6feaed60e49677f699e79861ae4ba7852d5e56707",
+      "content_sha256": "e2de1de30022579f0524c9f34aa90ac328d8f2da70fe6f7b5b243f976b21eacb",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces rainbow Swiss chard, divided",
+        "1   tomato",
+        "1   clove garlic",
+        "1   lime",
+        "1   chipotle pepper",
+        "12 ounces ground chicken",
+        "1   spice mix",
+        "½ teaspoon chili powder",
+        "½ teaspoon ground cumin",
+        "6 corn tortillas"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "rainbow Swiss chard, divided",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tomato",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "2 clove",
+          "original_quantity": "1 clove",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "lime",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "chipotle pepper",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ground chicken",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "corn tortillas",
+          "quantity_4p_source": "12 stuks",
+          "original_quantity": "6 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "19nGIYlzY6U-D_GZghGOePXVW5ZcVVimB",
+      "original_filename": "Chicken_Chicken and Swiss Chard Tacos_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenchickenbowlswithriceandtortillas",
+      "source": "Plated",
+      "title_extracted": "Chicken_Chicken Bowls with Rice and Tortillas_OCR",
+      "source_file": "Chicken_Chicken Bowls with Rice and Tortillas_OCR.pdf",
+      "drive_identity_hash": "2c8598eb77cd2e151ae8a55ec89e27e91dd982ea8b97c4fbaa83e38bc162437c",
+      "content_sha256": "8341115d88e145d200699cd9ae70111a934f0269f53c0fa1a215bd6c06a8001b",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 shallot",
+        "1 teaspoon dried oregano",
+        "¾ cup white rice",
+        "8 ounces chicken stock",
+        "5 ounces tomatillos",
+        "2 corn tortillas",
+        "¼ teaspoon chili powder",
+        "3 tablespoons Chobani nonfat"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "shallot",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "dried oregano",
+          "quantity_4p_source": "2 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "chicken stock",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tomatillos",
+          "quantity_4p_source": "10 ounces",
+          "original_quantity": "5 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "corn tortillas",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Chobani nonfat",
+          "quantity_4p_source": "6 tablespoons",
+          "original_quantity": "3 tablespoons",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1mWJtg1APWxkwBjOsPG_fwPpw5ZFUGQr0",
+      "original_filename": "Chicken_Chicken Bowls with Rice and Tortillas_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenchickeneggrolls",
+      "source": "Plated",
+      "title_extracted": "Chicken_Chicken Egg Rolls_OCR",
+      "source_file": "Chicken_Chicken Egg Rolls_OCR.pdf",
+      "drive_identity_hash": "b3aa20d1175f2f539eff990758058683602a8b1a612fe90b3c55ed7826b45d90",
+      "content_sha256": "98235f5bf874d3227059f82c69e553d2931b19c6c6560af98d0250799e29a9d5",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 egg roll wrappers",
+        "3 ounces baby spinach",
+        "1 clove garlic",
+        "1 slaw mix",
+        "1 cup shredded green cabbage",
+        "1 cup shredded red cabbage",
+        "1 teaspoon agave",
+        "divided",
+        "3 packets soy sauce, divided",
+        "1½ ounces apricot jam",
+        "seconds. Add agave, 1 tablespoon              more."
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1c1mCbq3fmOJuYIXE6F4Rr388Moo5hOj4",
+      "original_filename": "Chicken_Chicken Egg Rolls_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenchickenempanadas",
+      "source": "Plated",
+      "title_extracted": "Chicken_Chicken Empanadas_OCR",
+      "source_file": "Chicken_Chicken Empanadas_OCR.pdf",
+      "drive_identity_hash": "5aa80e93193ca6cf4f26d140c407157d5e4840a5fb2eadeab2a52496cf57bcbe",
+      "content_sha256": "d716c0a27a1410a66bdf8b28668e8dcaa32421b91dc4fc278ab75148b6f71879",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lime, divided",
+        "1 red onion",
+        "2 cloves garlic, divided",
+        "1 jalapeño",
+        "½ ounce fresh cilantro, divided",
+        "2 boneless skinless chicken",
+        "½ teaspoon ground cumin",
+        "¼ teaspoon dried oregano",
+        "½ teaspoon smoked paprika",
+        "1 avocado",
+        "1 parchment paper",
+        "paper towel.                                until chicken is cooked through and"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "lime, divided",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red onion",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic, divided",
+          "quantity_4p_source": "4 cloves",
+          "original_quantity": "2 cloves",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "jalapeño",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "boneless skinless chicken",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "avocado",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "parchment paper",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1LKYBAo9hLlIwemCh_V4AP3161w9GNa5G",
+      "original_filename": "Chicken_Chicken Empanadas_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickenchickenmilanese",
+      "source": "Plated",
+      "title_extracted": "Chicken_Chicken Milanese_OCR",
+      "source_file": "Chicken_Chicken Milanese_OCR.pdf",
+      "drive_identity_hash": "e58e1e639947de1a1a79824682bc08ec9735584e1bd3fab90b723347b2bdfbef",
+      "content_sha256": "d7bd0f78c03ab26904d8ba6afe7cdfef86b379ee9bdf31a6b08a65dac31d9b14",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup white beans",
+        "1 lemon, divided",
+        "1 head escarole",
+        "⅛ ounce parsley",
+        "3 cloves garlic, divided",
+        "2 packets unsalted butter",
+        "¼ cup gluten-free breadcrumbs",
+        "½ ounce grated Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1AIfgcXUHzTO1_MQDQM8hTGlrW2VOCeGZ",
+      "original_filename": "Chicken_Chicken Milanese_OCR.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickpeabowlswithfriedrice",
+      "source": "Plated",
+      "title_extracted": "Chickpea Bowls with Fried Rice",
+      "source_file": "Chickpea Bowls with Fried Rice.pdf",
+      "drive_identity_hash": "b3ce7d9cc12b5bfa945766c56a9cbce864808a535f904b9ecd56811951620f85",
+      "content_sha256": "4e1177dd651d2255be3157d7a3b2c2d19e9552fb789377afe2ce460bd88a2f77",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ cup sushi rice",
+        "½ ounce ginger",
+        "4 ounces baby spinach",
+        "8 ounces carrots",
+        "1 can chickpeas",
+        "⅛ teaspoon Chinese 5 spice",
+        "1 container Chobani nonfat Greek"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "baby spinach",
+          "quantity_4p_source": "8 ounces",
+          "original_quantity": "4 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "carrots",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "chickpeas",
+          "quantity_4p_source": "2 can",
+          "original_quantity": "1 can",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "container Chobani nonfat Greek",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1v-JAQiXrxsRlxzMGx5uNilPjV0ysGIyc",
+      "original_filename": "Chickpea Bowls with Fried Rice.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickpearotini",
+      "source": "Plated",
+      "title_extracted": "Chickpea Rotini",
+      "source_file": "Chickpea Rotini.pdf",
+      "drive_identity_hash": "5843d049473dca57efae8b03025a9a5853249eb8b9905ac9dd6f712bc0bb1309",
+      "content_sha256": "faf8158283800b25e43562d785908c9031498e5c7791786ee28d9f809d1bc3b2",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "9 ounces baby spinach",
+        "3 ounces sun-dried tomatoes, divided",
+        "2 jars marinated artichoke hearts",
+        "3 tablespoons pine nuts, divided",
+        "1 pound Banza chickpea rotini",
+        "2 cloves garlic",
+        "⅓ cup roasted red peppers",
+        "divided"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1rAbUb3a7tseN6I4UHaq5x17vfn9xBWWx",
+      "original_filename": "Chickpea Rotini.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickpeasaag",
+      "source": "Plated",
+      "title_extracted": "Chickpea Saag",
+      "source_file": "Chickpea Saag.pdf",
+      "drive_identity_hash": "4612e9c93f423a711e4951ffd619ac78c90d4942afa40b34cab6d2df56805662",
+      "content_sha256": "089ad224e793989ad6c483b4b1b70424e151aa2b6e3543c54262ff5ffbdf2858",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup basmati rice",
+        "1 lime",
+        "12 ounces baby spinach",
+        "2 cans chickpeas",
+        "14 ounces feta cheese",
+        "2 yellow onions",
+        "3 cloves garlic",
+        "2 teaspoons ground coriander",
+        "2 tablespoons slivered almonds",
+        "1 packet silk chile powder"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "10urrm91ie4mR-3fqKMiQnzIF2YCZjuRG",
+      "original_filename": "Chickpea Saag.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickpeasamosas",
+      "source": "Plated",
+      "title_extracted": "Chickpea Samosas",
+      "source_file": "Chickpea Samosas.pdf",
+      "drive_identity_hash": "57ea2507dbac28d3db987df9f98c8e4cc416616a0a5467e1c682db864e8b56b8",
+      "content_sha256": "6459ebd02ccc787a881118d3b7b551827e9c4df0dbd360cd28db3b36992ddb9f",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ cup shredded carrots",
+        "2 tablespoons roasted salted cashews",
+        "1 tablespoon coconut flakes",
+        "1 yellow onion",
+        "1 serrano chile",
+        "1 can chickpeas",
+        "1 tablespoon tikka masala curry paste",
+        "1½ ounces apricot preserves",
+        "1 herb mix",
+        "¼ ounce cilantro"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1meUwy2liFCmuodHkw_m035HcWzkG9MSc",
+      "original_filename": "Chickpea Samosas.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chickpeaspinachandquinoabowls",
+      "source": "Plated",
+      "title_extracted": "Chickpea, Spinach, and Quinoa Bowls",
+      "source_file": "Chickpea, Spinach, and Quinoa Bowls.pdf",
+      "drive_identity_hash": "4b4351cb18423f7eba422ef904e1acf254a392853f22dc1373b1a4f3396d8eeb",
+      "content_sha256": "c5059691b759ac3d4cd7bc591842ca83921f6b90d546319d6f1d303395a0c4d4",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup quinoa",
+        "1 tablespoon tikka masala curry paste",
+        "2 cans chickpeas",
+        "12 ounces carrots",
+        "9 ounces baby spinach",
+        "1 lime",
+        "3 tablespoons slivered almonds",
+        "1 teaspoon ground coriander",
+        "¼ cup dried cranberries"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1r5QgFa1jC_pSTXfmupzu6iALsLBCrOCn",
+      "original_filename": "Chickpea, Spinach, and Quinoa Bowls.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chilimapleporktacoswithavocadoandspringonionsalsa",
+      "source": "Plated",
+      "title_extracted": "Chili maple pork tacos with avocado and spring onion salsa",
+      "source_file": "Chili maple pork tacos with avocado and spring onion salsa.pdf",
+      "drive_identity_hash": "c2501be17a1ec57f9d6b6fb3f2d48412bb2b361df21f5677fea4b843aa57bcca",
+      "content_sha256": "14090446951c0cd6fb0f4d03a0861e8c00ec93641e81fc37caec38ed98053b96",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 clove garlic",
+        "1 lime",
+        "6 ounces red radishes",
+        "2 spring onions",
+        "10 ounces ground pork",
+        "1¼ ounces maple syrup"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "2 clove",
+          "original_quantity": "1 clove",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "lime",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "red radishes",
+          "quantity_4p_source": "12 ounces",
+          "original_quantity": "6 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spring onions",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ground pork",
+          "quantity_4p_source": "20 ounces",
+          "original_quantity": "10 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "maple syrup",
+          "quantity_4p_source": "5/2 ounces",
+          "original_quantity": "1¼ ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1vFDmVpnJFXFrbfY9zGe_5lfeUqAqyBEO",
+      "original_filename": "Chili maple pork tacos with avocado and spring onion salsa.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chimbeefandlambnoodles",
+      "source": "Plated",
+      "title_extracted": "Chim Beef and Lamb Noodles",
+      "source_file": "Chim Beef and Lamb Noodles.pdf",
+      "drive_identity_hash": "5433e7b1625191aa7a8b528e63980ad58baacd6dad3be2fcb6feca70d4388d7e",
+      "content_sha256": "e0f311f34274bae9645d24efb150602bbddbe230989aba49b3b3249783310d51",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 celery stalks",
+        "3 scallions",
+        "2 cloves garlic",
+        "⅛ ounce ginger",
+        "1 Thai chile",
+        "7 ounces rice noodles",
+        "1 teaspoon ground cumin",
+        "10 ounces ground beef and lamb",
+        "½ tablespoon light brown sugar",
+        "2 tablespoons black vinegar"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "19oWwzXtdfFw4xYw8YQ6wmI5rWj37R3MU",
+      "original_filename": "Chim Beef and Lamb Noodles.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chimichurriscallopswithkalefregolaandroastedcarrotsplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Chimichurri Scallops with Kale, Fregola, and Roasted Carrots _ Plated _ Cook more. Live better_",
+      "source_file": "Chimichurri Scallops with Kale, Fregola, and Roasted Carrots _ Plated _ Cook more. Live better_.pdf",
+      "drive_identity_hash": "f797fe3795cefcc2b023410c4472092a2469a7bda88466d563f84ee70b44fe22",
+      "content_sha256": "fa63211712f0edc92a999daa7c990d278aeafb5f6070f3a7ec2b6361c60e7997",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                     2",
+        "servings",
+        "Our version of classic Argentine chimichurri pairs fresh cilantro",
+        "minutes",
+        "tender bay scallops before searing—the rest gets drizzled over",
+        "the final plates, perfect for scooping up with roasted carrots,",
+        "BY CHEF GIUSEPPE",
+        "approximated. See details.",
+        "W H AT W E S E N D",
+        "1/4 ounce                    1/4 ounce",
+        "parsley                      cilantro"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "ounce                    1/4 ounce",
+          "quantity_4p_source": "1/2 stuks",
+          "original_quantity": "1/4 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1FZAjEQhXxInlZWsUBE-sLpmQ97oNftde",
+      "original_filename": "Chimichurri Scallops with Kale, Fregola, and Roasted Carrots _ Plated _ Cook more. Live better_.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chinesebarbecuesalmon",
+      "source": "Plated",
+      "title_extracted": "Chinese Barbecue Salmon",
+      "source_file": "Chinese Barbecue Salmon.pdf",
+      "drive_identity_hash": "bda746e9e7017d8569b7dc74461a0ca40a78cb1a8ac1a7db781e4e3d0c70b403",
+      "content_sha256": "6c214e18939237375a3da3190284f8531f8fc9d6825643180ac3f3c9c5d13b3d",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 ounces cremini mushrooms",
+        "8 ounces carrots",
+        "1 Cara Cara orange",
+        "⅛ ounce ginger",
+        "1 clove garlic",
+        "4 ounces snow peas",
+        "2 tablespoons toasted sesame seeds",
+        "2 tablespoons hoisin sauce"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1l0bIbDC9GmeyltES9Gm7LAlLW4LJ9uQT",
+      "original_filename": "Chinese Barbecue Salmon.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chineseporklettucewraps",
+      "source": "Plated",
+      "title_extracted": "Chinese Pork Lettuce Wraps",
+      "source_file": "Chinese Pork Lettuce Wraps.pdf",
+      "drive_identity_hash": "27a2b5a5414e7b7d36ab806e75d0397de479d72f35b274d552c484b6ce42fe57",
+      "content_sha256": "98824c4d188105b0e90293aeccfcecc24228cca018e57560f7eb59e5870f52da",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ cup jasmine rice",
+        "1 yellow bell pepper",
+        "1 head Boston lettuce",
+        "2 scallions",
+        "2 tablespoons pickled ginger",
+        "10 ounces ground pork",
+        "3 tablespoons sherry vinegar",
+        "2 packets mayonnaise",
+        "1 tablespoon sesame oil",
+        "1 slaw mix"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1pw12skvNgsQTDC75jpY1UtjWecaQSNwS",
+      "original_filename": "Chinese Pork Lettuce Wraps.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chipotleturkeychili",
+      "source": "Plated",
+      "title_extracted": "Chipotle Turkey Chili",
+      "source_file": "Chipotle Turkey Chili.pdf",
+      "drive_identity_hash": "5a76e6d17555f378011087b89a2d866bbb658238a4e097e8da95e7eae845b207",
+      "content_sha256": "929c418991c1bf79d42994eb9fdec1ff0f1ce5eb12293ea93cfc26eaff279720",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 corn tortillas",
+        "1 lime",
+        "⅛ ounce cilantro",
+        "1 yellow onion",
+        "2 cloves garlic",
+        "12 ounces ground turkey",
+        "1 tablespoon chili powder",
+        "1 can black beans",
+        "¼ teaspoon ground cayenne pepper",
+        "2 ounces shredded white Cheddar"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1MOvN8ZLheYgCE1xf5FTneyfa98_dZ_1p",
+      "original_filename": "Chipotle Turkey Chili.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chipotleturkeyempanadas",
+      "source": "Plated",
+      "title_extracted": "Chipotle Turkey Empanadas",
+      "source_file": "Chipotle Turkey Empanadas.pdf",
+      "drive_identity_hash": "7545568cab940ca9523ad1d1b8c452deb545630c2b907e54375749432905c87b",
+      "content_sha256": "b319e6aed2f74487001e4869bef65641e253e3382262fb3f111f9cf434ffab1d",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 ounces baby spinach",
+        "1½ pounds broccoli florets",
+        "1 shallot",
+        "2 teaspoons chipotle paste",
+        "2 packets honey",
+        "2 teaspoons red wine vinegar",
+        "12 empanada doughs",
+        "4 ounces shredded Cheddar cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1oKwTAqs1MWR-rKGI5RiOl-x6O3YgytOb",
+      "original_filename": "Chipotle Turkey Empanadas.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chocolatechipbuckwheatmuffins",
+      "source": "Plated",
+      "title_extracted": "Chocolate Chip Buckwheat Muffins",
+      "source_file": "Chocolate Chip Buckwheat Muffins.pdf",
+      "drive_identity_hash": "d3253596933ea4fafec2a578c8becf9f400578adbcffcb91c5a56624d1285fe7",
+      "content_sha256": "688edf847c9c017324dc9bef2081352eea21b0f90370349ebe7c673451035fa8",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "⅔ cup sugar",
+        "1 teaspoon vanilla extract",
+        "3 containers nonfat Greek yogurt",
+        "6 eggs",
+        "½ cup buckwheat flour",
+        "1 cup all-purpose flour",
+        "½ cup oats",
+        "¼ cup semisweet chocolate chips",
+        "2 tablespoons pistachios",
+        "1 ounce raspberry-redcurrant preserves",
+        "in a medium bowl for the next step.       buckwheat flour, all-purpose flour,"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "vanilla extract",
+          "quantity_4p_source": "2 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "containers nonfat Greek yogurt",
+          "quantity_4p_source": "6 stuks",
+          "original_quantity": "3 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "eggs",
+          "quantity_4p_source": "12 stuks",
+          "original_quantity": "6 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "all-purpose flour",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "pistachios",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "raspberry-redcurrant preserves",
+          "quantity_4p_source": "2 ounce",
+          "original_quantity": "1 ounce",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1uHH7B2tnx-wu5kgYGk09rfU_MLbc0YL9",
+      "original_filename": "Chocolate Chip Buckwheat Muffins.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chocolatechipsconeswithraspberrypreserves",
+      "source": "Plated",
+      "title_extracted": "Chocolate Chip Scones with Raspberry Preserves",
+      "source_file": "Chocolate Chip Scones with Raspberry Preserves.pdf",
+      "drive_identity_hash": "ed881e82e344881fa04fc58b35031a66f90c1eaa8b26c8ac0a5d77ec8c1f1244",
+      "content_sha256": "725cf435e15e6a4b5baf4605b82f9af5969180f29188f44e70b174b0a28a3bd8",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 half stick unsalted butter",
+        "2 ounces heavy cream",
+        "1 teaspoon vanilla extract",
+        "2 tablespoons granulated sugar",
+        "1 teaspoon baking powder",
+        "1½ cups flour",
+        "½ cup mini semisweet chocolate chips",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "half stick unsalted butter",
+          "quantity_4p_source": "1 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "heavy cream",
+          "quantity_4p_source": "2 ounces",
+          "original_quantity": "2 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "vanilla extract",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "granulated sugar",
+          "quantity_4p_source": "2 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "baking powder",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "flour",
+          "quantity_4p_source": "3/2 cups",
+          "original_quantity": "1½ cups",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "parchment paper",
+          "quantity_4p_source": "1 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1jN_ss9SR4pxsPd9-uZXfjlOBQSzTFS0e",
+      "original_filename": "Chocolate Chip Scones with Raspberry Preserves.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chocolatecookieswithpeanutbutterfilling",
+      "source": "Plated",
+      "title_extracted": "Chocolate Cookies with peanut butter filling",
+      "source_file": "Chocolate Cookies with peanut butter filling.pdf",
+      "drive_identity_hash": "1713a9ce1d418ae88405576a954dd2637ad8db658a6d5051ff8cf5eea1998111",
+      "content_sha256": "a80c4961fbece78b8835391f41894c8ff93499d1e2f11750a9f822876ad854f1",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 packets unsalted butter",
+        "2 tablespoons powdered sugar",
+        "4 packets peanut butter, divided",
+        "2 tablespoons light brown sugar",
+        "¼ cup granulated sugar, divided",
+        "¼ teaspoon vanilla extract",
+        "⅔ cup flour",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "unsalted butter",
+          "quantity_4p_source": "4 packets",
+          "original_quantity": "4 packets",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "powdered sugar",
+          "quantity_4p_source": "2 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "peanut butter, divided",
+          "quantity_4p_source": "4 packets",
+          "original_quantity": "4 packets",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "light brown sugar",
+          "quantity_4p_source": "2 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "parchment paper",
+          "quantity_4p_source": "1 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1zYX485rnb_sP7Z_KpDJsQUl5UU3CuUV-",
+      "original_filename": "Chocolate Cookies with peanut butter filling.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chocolatepeanutbutterpies",
+      "source": "Plated",
+      "title_extracted": "Chocolate Peanut Butter Pies",
+      "source_file": "Chocolate Peanut Butter Pies.pdf",
+      "drive_identity_hash": "6df69154a0193ded97d9e2651a8021cbaf5e1d6588a244bd1648b9ffc56c3f57",
+      "content_sha256": "9ec8ebfd3f8ef5626bac08956feb6dba0ced8f3514b47d92581bb7d2e29a77c6",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "3 ounces cream cheese",
+        "⅓ cup peanut butter",
+        "2 tablespoons roasted salted peanuts",
+        "¾ cup heavy cream, divided",
+        "1 teaspoon powdered sugar",
+        "2 tablespoons granulated sugar",
+        "2 ounces dark chocolate"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "cream cheese",
+          "quantity_4p_source": "3 ounces",
+          "original_quantity": "3 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "roasted salted peanuts",
+          "quantity_4p_source": "2 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "powdered sugar",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "granulated sugar",
+          "quantity_4p_source": "2 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "dark chocolate",
+          "quantity_4p_source": "2 ounces",
+          "original_quantity": "2 ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1DqGvG0SXr6CPYDmL1eJLYqIALUAk_jfl",
+      "original_filename": "Chocolate Peanut Butter Pies.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chocolatepeppermintpatties",
+      "source": "Plated",
+      "title_extracted": "Chocolate Peppermint Patties (1)",
+      "source_file": "Chocolate Peppermint Patties (1).PDF",
+      "drive_identity_hash": "3293213484b7fb60be393b179623a35b69d49a1a46be1e35286598ec664676ff",
+      "content_sha256": "2a10ebfec48919c70571709d033577883699542634194bed1ecb4b0bd795cec1",
+      "ocr_method": "ocr_unverified",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "packet butter",
+        "cup + 1 tablespoon powdered sugar",
+        "teaspoon peppermint extract",
+        "tablespoon heavy cream",
+        "ounces bittersweet couverture",
+        "chocolate"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1_pyds4u33Hi7Unl717nu80nOUfL48Xnq",
+      "original_filename": "Chocolate Peppermint Patties (1).PDF",
+      "same_title_candidates": [
+        "Chocolate Peppermint Patties.PDF"
+      ]
+    },
+    {
+      "id": "plated-chocolatesheetcake",
+      "source": "Plated",
+      "title_extracted": "Chocolate Sheet Cake",
+      "source_file": "Chocolate Sheet Cake.pdf",
+      "drive_identity_hash": "a69dc7830d4cfba2fd61d0edaae87bc474127e4beeea0f1ad2b51aeb06df611e",
+      "content_sha256": "fb9597be5765346d1ed5fbf5cf60293cc353690c2dc5bf755d5ca265aa1faabc",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1½ cups flour",
+        "¼ cup cocoa powder",
+        "1 cup sugar",
+        "1 teaspoon baking soda",
+        "1 tablespoon apple cider vinegar",
+        "1 teaspoon vanilla extract",
+        "½ cup mini semisweet chocolate chips",
+        "1 aluminum tin"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "flour",
+          "quantity_4p_source": "3/2 cups",
+          "original_quantity": "1½ cups",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sugar",
+          "quantity_4p_source": "1 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "baking soda",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "apple cider vinegar",
+          "quantity_4p_source": "1 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "vanilla extract",
+          "quantity_4p_source": "1 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "aluminum tin",
+          "quantity_4p_source": "1 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1upiUXUTaVC1c-mZbwrAAhiCeTHA4AfWr",
+      "original_filename": "Chocolate Sheet Cake.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chocolatetartletswithcaramelandpretzelcrusts",
+      "source": "Plated",
+      "title_extracted": "Chocolate tartlets with caramel and pretzel crusts",
+      "source_file": "Chocolate tartlets with caramel and pretzel crusts.pdf",
+      "drive_identity_hash": "97648eae137bfb9083a29b7e82757c75405c57920cea40c082c9f1a1175dd461",
+      "content_sha256": "39dd11dc20e8a0640d3cdf4551b336a1090aeb28ea8998797eeed7b401f701fb",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ cup Snack Factory pretzel crisps",
+        "1 tablespoon granulated sugar,",
+        "divided",
+        "1 packet butter",
+        "2 tablespoons whole milk",
+        "2 ounces dark chocolate"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "granulated sugar,",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "butter",
+          "quantity_4p_source": "2 packet",
+          "original_quantity": "1 packet",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "whole milk",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "dark chocolate",
+          "quantity_4p_source": "4 ounces",
+          "original_quantity": "2 ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1UMEW_fLByiYgMmXBu3GVmktfTsI5LYxt",
+      "original_filename": "Chocolate tartlets with caramel and pretzel crusts.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-chocolatecrispytruffles",
+      "source": "Plated",
+      "title_extracted": "chocolate-crispy-truffles",
+      "source_file": "chocolate-crispy-truffles.pdf",
+      "drive_identity_hash": "a603fa1137863fab16d090b240fac1a53327688fdc314ed9a3392ebcd95f7ac5",
+      "content_sha256": "ae9703cdd20fdbe712d575b3cf935095089cfd6251ea3f9992fd33b61e8d72aa",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 ounces dark chocolate",
+        "2 cans condensed milk",
+        "¼ teaspoon vanilla extract",
+        "⅓ cup puffed rice",
+        "3 tablespoons hazelnuts",
+        "¼ cup milk chocolate chips",
+        "2 packets unsalted butter"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "dark chocolate",
+          "quantity_4p_source": "6 ounces",
+          "original_quantity": "6 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "condensed milk",
+          "quantity_4p_source": "2 cans",
+          "original_quantity": "2 cans",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "hazelnuts",
+          "quantity_4p_source": "3 tablespoons",
+          "original_quantity": "3 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "unsalted butter",
+          "quantity_4p_source": "2 packets",
+          "original_quantity": "2 packets",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1VG4PrX8l-9qvV7JGZmdPD0Q7te5vUHJc",
+      "original_filename": "chocolate-crispy-truffles.pdf",
       "same_title_candidates": []
     }
   ]
