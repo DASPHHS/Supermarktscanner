@@ -1,0 +1,276 @@
+{
+  "generated_at_utc": "2026-10-28T18:47:51.747683+00:00",
+  "status": "PASS_WITH_MANUAL_REVIEW",
+  "release_archive_pdfs": 533,
+  "release_completed": 220,
+  "release_pending": 313,
+  "release_exact_duplicates": 15,
+  "plated_recipes_in_review_queue": 205,
+  "plated_recipes_with_nl_record": 205,
+  "plated_recipes_without_ingredients": 111,
+  "plated_recipes_with_unconfirmed_portions": 132,
+  "plated_unmapped_ingredient_labels": 268,
+  "plated_source_cards_with_original_pdf": 20,
+  "hellofresh_recipes_in_index": 225,
+  "hellofresh_recipes_with_original_pdf": 24,
+  "verified_pricing_eligible_plated": 0,
+  "critical_faults": [],
+  "warnings": [],
+  "manual_review_queue_examples": [
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Argentine Beef Empanadas (4).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Baba Ganoush with Roasted Root Vegetables and Za’atar Naan (2)_card.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Baharat Chicken (4).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 7
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Balsamic-Marinated Steak (4).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 7
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Barbecue Chicken.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Barbecue Glazed Chicken Thighs.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Bánh Mì Turkey Burgers.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Broccoli (3).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 8
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Butternut Skillet.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Cheddar Hand Pies (4).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 7
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Cheese Empanadas (3).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef and Roasted Carrot Ragu.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Biryani (3).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bolognese over Roasted Spaghetti Squash (3).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bolognese with roasted zucchini steaks.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Bulgogi Buns with Kimchi Slaw and Cheesy Corn (2)_card.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 8
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Kibbeh with Tomato-Herb Salsa and Creamy Feta (2)_card.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 10
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Kofta over Turmeric Rice with Spinach, Pine Nuts, and Currants.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "needs_manual_check"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Lo Mein (4).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 10
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Quesadillas.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 8
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef Shakshuka with Pita, Bell Pepper, and Feta.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "needs_manual_check"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/beef-cheeseburger.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 10
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/beef-stuffed-peppers.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Balsamic Marinated Steak Tacos with Chimichurri Sauce_OCR.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 7
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Chop Steak_OCR.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Italian Burgers with Fresh Mozzarella and Tomato-Corn Salad_OCR.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "needs_manual_check"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Meatball Parm Heroes_OCR (1).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Orange Beef with Bell Pepper and Scallion Rice_OCR (1).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Peppercorn Gravy Meatloaf_OCR.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 8
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Steak and Zucchini Gyros_OCR.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "needs_manual_check"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Steak Frites_OCR.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 8
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Tamarind-Glazed Steak with Crispy Curried Chickpeas_OCR.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "needs_manual_check"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Thai Beef Lettuce Wraps_OCR.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 8
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_White Cheddar Cheeseburgers with Onion Rings_OCR (1).pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 9
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beyond Meat® Tacos.pdf",
+      "problem": "source_servings_unknown",
+      "ingredients": 8
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Black Bean Burritos.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blackened Cod.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blackened Tilapia with Dirty Rice (4).pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blue Cheese and Pear Pizza.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blue Cheese Burgers (4).pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Braised Chicken, Apricots, and Currants.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Braised Pork and Apples.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brie Crostini with Jalapeño-Apricot Jam.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Broccoli Cheddar Calzones with Marinara Sauce.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brown Butter Gnocchi with Butternut Squash.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brown Butter Quinoa and White Bean Salad.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Buffalo Chicken Meatball Sliders.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Burgers au Poivre.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Butter-Based Tilapia.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    },
+    {
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Butter-Basted Steak with Sauteed Escarole and White Beans.pdf",
+      "problem": "no_ingredient_candidates",
+      "rescan_status": "not_attempted"
+    }
+  ],
+  "notes": [
+    "Automated pass does not establish accurate OCR content.",
+    "Original PDF and ingredient/serving manual comparison required before pricing.",
+    "A recipe with no ingredients or unknown portions cannot be price verified."
+  ]
+}
