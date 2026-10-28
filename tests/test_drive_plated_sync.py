@@ -40,3 +40,41 @@ def test_incremental_resume(tmp_path):
     assert r2["batch_imported"]==0
     assert r2["queue_count"]==1
     assert r2["price_eligible_from_queue"]==0
+
+
+def test_actual_plated_ocr_footer_and_servings():
+    from drive_plated_sync import serving_options, ingredient_lines, provisional_four
+    source = """Thai-Peanut Chicken Curry
+Serves: 2 people
+1. Cook Sticky Rice
+4. Simmer Curry
+@- INGREDIENTS
+% ° cup sticky rice
+3 cups baby spinach
+2 boneless skinless chicken breasts
+1 can lite coconut milk
+2% tablespoons peanut butter
+1 packet raw sugar
+1 teaspoon gochujang
+¥- YOU'LL NEED
+kosher salt
+"""
+    assert serving_options(source)==[2]
+    entries=ingredient_lines(source)
+    assert len(entries)==7
+    parsed=provisional_four(entries,2)
+    amounts={x["ingredient"]:x["quantity_4p_source"] for x in parsed}
+    assert amounts["baby spinach"]=="6 cups"
+    assert amounts["boneless skinless chicken breasts"]=="4 stuks"
+    assert amounts["lite coconut milk"]=="2 can"
+    assert amounts["raw sugar"]=="2 packet"
+    assert amounts["gochujang"]=="2 teaspoon"
+    assert "peanut butter" not in amounts
+    assert "sticky rice" not in amounts
+
+def test_plated_original_four_servings_are_not_doubled():
+    from drive_plated_sync import serving_options, provisional_four
+    assert serving_options("Serves: 4 people")==[4]
+    rows=provisional_four(["12 flour tortillas", "4 ounces salmon"],4)
+    assert rows[0]["quantity_4p_source"]=="12 stuks"
+    assert rows[1]["quantity_4p_source"]=="4 ounces"
