@@ -6,6 +6,8 @@ on:
       - 'plated_drive_manifest.json'
       - 'import_plated_from_repo.py'
       - 'import_plated_public_drive.py'
+      - 'drive_plated_sync.py'
+      - 'tests/test_drive_plated_sync.py'
       - '.github/workflows/plated-import.yml'
   schedule:
     - cron: '40 4 * * *'
