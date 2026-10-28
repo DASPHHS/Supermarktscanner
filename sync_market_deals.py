@@ -38,7 +38,9 @@ def main(out="market_deals.json"):
             data=fetch(code)
             result["stores"][name]={"updated_at":result["updated_at_utc"],"deals":extract(data)}
         except Exception as exc:
+            print("PrijsProfeet fetch error for",name, type(exc).__name__,str(exc)[:250])
             result["stores"][name]={"updated_at":None,"deals":[],"error":type(exc).__name__+": "+str(exc)[:140]}
+    print("Deal API counts:",{k:len(v["deals"]) for k,v in result["stores"].items()})
     # Never replace a previously saved complete feed with a wholly failed snapshot.
     if all(len(x["deals"])==0 for x in result["stores"].values()):
         raise RuntimeError("No promotions received; retain previous snapshot")
