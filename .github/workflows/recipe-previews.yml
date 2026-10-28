@@ -30,14 +30,14 @@ jobs:
           recipes=json.loads(Path('recipes_extracted.json').read_text())['recipes']
           p=Path('hellofresh/preview_manifest.json')
           rendered=json.loads(p.read_text()).get('recipes',{}) if p.exists() else {}
-          print('needed='+str(len(rendered)<len(recipes)).lower())
+          print('needed='+str(len(rendered)<len(recipes) or any(not x.get('original_pdf') for x in rendered.values())).lower())
           PY
       - name: Install rendering tools
         if: steps.todo.outputs.needed == 'true'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils
-          python -m pip install 'Pillow>=10,<13'
+          python -m pip install 'Pillow>=10,<13' 'pypdf>=5,<7'
       - name: Restore HelloFresh archive cache
         if: steps.todo.outputs.needed == 'true'
         id: cache
