@@ -96,5 +96,5 @@ if __name__=="__main__":
     p.add_argument("--manifest",default="plated_drive_manifest.json")
     p.add_argument("--batch",type=int,default=12)
     options=p.parse_args()
-    if not 1<=options.batch<=30:p.error("Batch size 1-30")
+    if not 1<=options.batch<=80:p.error("Batch size 1-80")
     run(options.manifest,batch=options.batch)
