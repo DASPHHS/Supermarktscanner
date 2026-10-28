@@ -1,16 +1,18 @@
 {
-  "updated_at_utc": "2026-10-28T18:34:19.828063+00:00",
+  "updated_at_utc": "2026-10-28T22:43:29.363270+00:00",
   "archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
   "pdf_members": 533,
-  "completed_members": 220,
-  "remaining_members": 313,
+  "completed_members": 319,
+  "remaining_members": 214,
   "attempted_this_run": 100,
-  "imported_this_run": 89,
-  "duplicate_files_this_run": 11,
-  "duplicates_total": 15,
-  "records_in_review": 205,
-  "failures_pending": 0,
-  "errors_this_run": [],
+  "imported_this_run": 94,
+  "duplicate_files_this_run": 5,
+  "duplicates_total": 20,
+  "records_in_review": 299,
+  "failures_pending": 1,
+  "errors_this_run": [
+    "Plated recipes from Marc Hummel [Download folder]/Lemon Poppy Seed Doughnuts.pdf: TimeoutExpired: Command '['pdftoppm', '-r', '170', '-f', '1', '-l', '3', '-gray', '-png', '/tmp/tmp4_747v77/source.pdf', '/tmp/tmpbigoc65t/page']' timed out after 180 seconds"
+  ],
   "pricing_eligible": 0,
   "complete": false
 }
