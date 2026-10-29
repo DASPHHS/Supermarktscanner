@@ -27,4 +27,6 @@ test('beef stays beef with chicken stock; unknown is not vegetarian',()=>{
  assert.equal(L.protein('Beef Bolognese',['kippenbouillon']),'vlees');
  assert.equal(L.protein('Onbekend gerecht',['ui']),'onbekend');
  assert.equal(L.protein('Vegetarische kipburger'),'vega');
+ assert.equal(L.protein('Barbecue Chicken Barbecuekip'),'kip');
+ assert.equal(L.protein('Beef Bolognese Bolognesesaus',['kippenbouillon']),'vlees');
 });
