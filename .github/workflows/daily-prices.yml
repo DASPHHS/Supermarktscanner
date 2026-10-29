@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - "sync_prices.py"
+      - "tests/test_sync_prices.py"
       - "recipes_extracted.json"
       - ".github/workflows/daily-prices.yml"
   schedule:
@@ -31,8 +32,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add recipe_prices.json
-          if ! git diff --cached --quiet; then
+          cp recipe_prices.json "$RUNNER_TEMP/recipe_prices.json"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$RUNNER_TEMP/recipe_prices.json" recipe_prices.json
+            git add recipe_prices.json
+            if git diff --cached --quiet; then exit 0; fi
             git commit -m "Update supermarket price snapshot"
-            git push
-          fi
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
