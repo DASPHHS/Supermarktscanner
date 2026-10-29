@@ -55,3 +55,18 @@ def test_first_pass_quantities_stay_original_when_rescan_exists():
     record=enrich(original,rescanned)
     assert record["ingredients_nl"][0]["quantity_metric"]==680
     assert record["ingredients_nl"][0]["provenance"]=="first_pass_ocr"
+
+
+def test_frequent_unambiguous_ingredients_have_dutch_names():
+    from plated_translate_nl import translated_ingredient
+    for english,dutch in (
+        ("grape tomatoes","druiftomaten"),
+        ("parsley","peterselie"),
+        ("granulated sugar","kristalsuiker"),
+        ("jasmine rice","jasmijnrijst"),
+        ("boneless chicken breasts","kipfilet"),
+        ("shredded Monterey Jack","geraspte Monterey Jack"),
+    ):
+        row=translated_ingredient(english)
+        assert row["canonical_nl"]==dutch
+        assert row["translation_status"]=="dictionary_exact"
