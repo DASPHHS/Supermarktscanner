@@ -1,18 +1,18 @@
 {
-  "generated_at_utc": "2026-10-28T18:47:51.747683+00:00",
+  "generated_at_utc": "2026-10-29T00:56:18.919065+00:00",
   "status": "PASS_WITH_MANUAL_REVIEW",
   "release_archive_pdfs": 533,
-  "release_completed": 220,
-  "release_pending": 313,
-  "release_exact_duplicates": 15,
-  "plated_recipes_in_review_queue": 205,
-  "plated_recipes_with_nl_record": 205,
-  "plated_recipes_without_ingredients": 111,
-  "plated_recipes_with_unconfirmed_portions": 132,
-  "plated_unmapped_ingredient_labels": 268,
-  "plated_source_cards_with_original_pdf": 20,
+  "release_completed": 319,
+  "release_pending": 214,
+  "release_exact_duplicates": 20,
+  "plated_recipes_in_review_queue": 299,
+  "plated_recipes_with_nl_record": 299,
+  "plated_recipes_without_ingredients": 182,
+  "plated_recipes_with_unconfirmed_portions": 201,
+  "plated_unmapped_ingredient_labels": 350,
+  "plated_source_cards_with_original_pdf": 40,
   "hellofresh_recipes_in_index": 225,
-  "hellofresh_recipes_with_original_pdf": 24,
+  "hellofresh_recipes_with_original_pdf": 72,
   "verified_pricing_eligible_plated": 0,
   "critical_faults": [],
   "warnings": [],
@@ -195,77 +195,77 @@
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Black Bean Burritos.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blackened Cod.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blackened Tilapia with Dirty Rice (4).pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blue Cheese and Pear Pizza.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blue Cheese Burgers (4).pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Braised Chicken, Apricots, and Currants.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Braised Pork and Apples.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brie Crostini with Jalapeño-Apricot Jam.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Broccoli Cheddar Calzones with Marinara Sauce.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "needs_manual_check"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brown Butter Gnocchi with Butternut Squash.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brown Butter Quinoa and White Bean Salad.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Buffalo Chicken Meatball Sliders.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Burgers au Poivre.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Butter-Based Tilapia.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     },
     {
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Butter-Basted Steak with Sauteed Escarole and White Beans.pdf",
       "problem": "no_ingredient_candidates",
-      "rescan_status": "not_attempted"
+      "rescan_status": "extracted"
     }
   ],
   "notes": [
