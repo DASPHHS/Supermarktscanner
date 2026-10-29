@@ -7,13 +7,14 @@ Lidl shelf coverage, so those recipes stay explicitly unpriced.
 from __future__ import annotations
 import datetime as dt
 import json, math, os, re, unicodedata, urllib.request
+from fractions import Fraction
 from collections import defaultdict
 from pathlib import Path
 
 SOURCE = 'https://raw.githubusercontent.com/supermarkt/checkjebon/main/data/supermarkets.json'
 AGENT = 'HelloFreshSupermarktscanner/1.0 (https://github.com/DASPHHS/Supermarktscanner)'
 STORES = {'ah':'AH','jumbo':'Jumbo','lidl':'Lidl'}
-BLOCKED = {'saus','soep','maaltijd','pizza','dip','chips','wrap','quiche','poeder','smaak','puree','snack','burger','gevuld','gekruid','kruidenmix'}
+BLOCKED = {'saus','soep','maaltijd','pizza','dip','chips','wrap','quiche','poeder','smaak','puree','snack','burger','gevuld','gekruid','kruidenmix','salade','hummus','hoemoes','gebakken','geroosterd','vegetarisch','vegetarische','vegan','plantaardig','plantaardige'}
 
 def norm(text: str) -> str:
     text = unicodedata.normalize('NFKD', text.lower())
@@ -28,14 +29,26 @@ def ingredient_parts(label: str):
 
 def number(raw):
     raw=raw.strip().replace(',','.')
-    for k,v in [('½','.5'),('¼','.25'),('¾','.75')]: raw=raw.replace(k,v)
-    try: return float(raw)
-    except ValueError:return None
+    fractions={'½':.5,'¼':.25,'¾':.75,'⅓':1/3,'⅔':2/3,'⅛':.125,'⅜':.375,'⅝':.625,'⅞':.875}
+    try:
+        if raw and raw[-1] in fractions:
+            prefix=raw[:-1].strip()
+            if prefix and not re.fullmatch(r'\d+',prefix):return None
+            value=(float(prefix) if prefix else 0)+fractions[raw[-1]]
+        elif re.fullmatch(r'(?:\d+\s+)?\d+/[1-9]\d*',raw):
+            parts=raw.split();value=sum(float(Fraction(p)) for p in parts)
+        elif re.fullmatch(r'\d+(?:\.\d+)?',raw):value=float(raw)
+        else:return None
+        return value if math.isfinite(value) and value>=0 else None
+    except (ValueError,ZeroDivisionError):return None
 
 def amount(product_size):
     """Return size in g/ml/stuks, explicitly refusing ambiguous formats."""
-    s=norm(product_size)
-    for m in re.finditer(r'(\d+(?:\.\d+)?)\s*(kg|kilogram|g|gram|liter|l|ml|milliliter|stuks|stuk)',s):
+    # Normalization for product names removes decimal punctuation. Never use it
+    # for quantities: 1.5 kg otherwise becomes 5 kg, and 1,5 l becomes 5 l.
+    s=str(product_size).strip().lower().replace(',','.')
+    m=re.fullmatch(r'(\d+(?:\.\d+)?)\s*(kilogram|kg|gram|g|milliliter|ml|liter|l|stuks|stuk)',s)
+    if m:
         v=float(m.group(1));u=m.group(2)
         if u in ('kg','kilogram'):return v*1000,'g'
         if u in ('g','gram'):return v,'g'
@@ -65,7 +78,7 @@ def products(source):
             name=row.get('n');value=row.get('p');s=row.get('s')
             if not isinstance(name,str) or not isinstance(value,(int,float)) or value<=0 or value>1000:continue
             qty,u=amount(str(s or ''))
-            if qty is None:continue
+            if qty is None or qty<=0 or not math.isfinite(value):continue
             index[STORES[code]].append({'name':name,'n':norm(name),'price':round(value,2),'quantity':qty,'unit':u,'amount':s,'link':str(shop.get('u',''))+str(row.get('l','')) if row.get('l') else None})
     if not index['Jumbo'] or not index['AH']:raise ValueError('Geen actuele Jumbo/AH-productrecords; vorige snapshot behouden')
     return index
@@ -77,16 +90,26 @@ def matches(name,product_name):
     if any(t in candidate and t not in target for t in BLOCKED):return False
     return True
 
-def calculate(recipe, catalog, store):
+def calculate(recipe, catalog, store, servings=4):
+    if servings not in (2,4):raise ValueError('Alleen bronkolommen voor 2 of 4 porties worden ondersteund')
     matched=[];missing=[];used=0.;cash=0.; seen=set()
-    for ing in recipe['ingredients_4p']:
+    ingredients=recipe.get(f'ingredients_{servings}p') or []
+    if not ingredients and servings==2:
+        missing.append({'ingredient':'Bronkolom voor twee personen','reason':'ontbreekt; niet afgeleid door vierpersoonskolom te halveren'})
+    for ing in ingredients:
         label=ing['ingredient'];name,unit=ingredient_parts(label)
-        if name in seen:continue
+        if name in seen:
+            missing.append({'ingredient':label,'reason':'dubbele ingrediëntregel; broncontrole en samenvoeging nodig'})
+            continue
         seen.add(name)
-        if name.startswith('water') or name=='peper zout':
+        if name=='water':
             matched.append({'ingredient':label,'status':'voorraad','cost':0})
             continue
-        qty=number(str(ing['quantity_4p_source']));needed,u=unit_quantity(qty,unit) if qty is not None else (None,None)
+        qty=number(str(ing.get(f'quantity_{servings}p_source','')))
+        # A tablespoon of dry seasoning or butter is not 15 millilitres of a
+        # product sold by weight. Only explicit liquid spoon measures convert.
+        liquid=name in {'olijfolie','extra vierge olijfolie','zonnebloemolie','wittewijnazijn','rodewijnazijn','balsamicoazijn','sojasaus','water'}
+        needed,u=unit_quantity(qty,unit) if qty is not None and (unit not in ('el','tl') or liquid) else (None,None)
         if needed is None:
             missing.append({'ingredient':label,'reason':'eenheid/hoeveelheid controleren'})
             continue
@@ -110,14 +133,16 @@ def calculate(recipe, catalog, store):
                and recipe.get('quantities_verified') is True
                and recipe.get('servings_verified') is True
                and recipe.get('servings')==4)
-    complete=bool(recipe.get('ingredients_4p')) and not missing and validated
+    complete=bool(ingredients) and not missing and validated
     result={'recipe_id':recipe['id'],'store':store,'complete':complete,
-            'price_per_portion_eur':round(used/4,2) if complete else None,
-            'used_cost_4p_eur':round(used,2) if complete else None,
+            'servings':servings,
+            'price_per_portion_eur':round(used/servings,2) if complete else None,
+            'used_cost_eur':round(used,2) if complete else None,
+            'used_cost_4p_eur':round(used,2) if complete and servings==4 else None,
             'whole_packages_eur':round(cash,2) if complete else None,
             'known_cost_eur':round(used,2),'matches':matched,'missing':missing,
             'recipe_review_required':not validated,
-            'ingredient_matches_complete':bool(recipe.get('ingredients_4p')) and not missing}
+            'ingredient_matches_complete':bool(ingredients) and not missing}
     # Keep the large daily snapshot compact; detailed sign-off diagnostics
     # are useful only when every ingredient already has a price match.
     if result['ingredient_matches_complete'] and not validated:
@@ -135,9 +160,9 @@ def run(repo_dir:Path,source_json=None):
         request=urllib.request.Request(SOURCE,headers={'User-Agent':AGENT})
         with urllib.request.urlopen(request,timeout=45) as resp:source_json=json.load(resp)
     catalog=products(source_json)
-    output={'fetched_at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'source':'Checkjebon open product prices; NOT confirmed promotions','limitations':['No verified Lidl full assortment in Checkjebon','Prices can differ by branch','Ingredient substitutions and 4p PDF parsing require manual review','Only exact ingredient words with compatible package units are priced'],'stores':{s:len(catalog.get(s,[])) for s in STORES.values()},'results':[]}
+    output={'fetched_at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'servings':2,'location':'Bleiswijk; landelijke bronprijzen, geen filiaalbevestiging','source':'Checkjebon open product prices; NOT confirmed promotions','limitations':['No verified Lidl full assortment in Checkjebon','Prices can differ by branch','Ingredient substitutions and PDF parsing require manual review','Only exact ingredient words with compatible package units are priced','Two-person source column required; no automatic halving'],'stores':{s:len(catalog.get(s,[])) for s in STORES.values()},'results':[]}
     for r in data['recipes']:
-        for s in STORES.values():output['results'].append(calculate(r,catalog,s))
+        for s in STORES.values():output['results'].append(calculate(r,catalog,s,servings=2))
     # Protect against publishing an empty or stale price snapshot.
     if not any(x['complete'] for x in output['results']):
         # Still publish partial coverage for diagnostics; never claim full costs.

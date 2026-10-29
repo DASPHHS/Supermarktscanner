@@ -69,7 +69,10 @@ def main(out="market_deals.json"):
             if not target or p.get("promotion_status")!="active":continue
             start=str(p.get("valid_from") or "")[:10]
             end=str(p.get("valid_until") or "")[:10]
-            if (start and start>today) or (end and end<today):continue
+            try:
+                date.fromisoformat(start);date.fromisoformat(end)
+            except ValueError:continue
+            if start>today or end<today:continue
             name=str(p.get("name") or "").strip()
             if not name or not is_relevant_food(name,term):continue
             key=str(p.get("id") or (target+":"+name.casefold()))
