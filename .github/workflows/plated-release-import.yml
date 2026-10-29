@@ -6,7 +6,7 @@ on:
       - 'merge_plated_results.py'
       - '.github/workflows/plated-release-import.yml'
   schedule:
-    - cron: '7,27,47 * * * *'
+    - cron: '40 */4 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -93,17 +93,9 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python merge_plated_results.py --source "$RUNNER_TEMP/release-results"
-            python - <<'PY'
-          from pathlib import Path
-          import json
-          p=Path('plated_release_progress.json')
-          if p.exists() and json.loads(p.read_text()).get('complete'):
-              workflow=Path('.github/workflows/plated-release-import.yml')
-              text=workflow.read_text()
-              workflow.write_text(text.replace("cron: '7,27,47 * * * *'", "cron: '40 */4 * * *'"))
-              print('Archive complete; reduced future check cadence to every four hours')
-          PY
-            git add plated_release_state.json plated_release_review_queue.json plated_release_progress.json .github/workflows/plated-release-import.yml
+            # The GitHub Actions token can commit data, but cannot edit workflow
+            # files. Keep workflow schedule changes in reviewed repository commits.
+            git add plated_release_state.json plated_release_review_queue.json plated_release_progress.json
             if git diff --cached --quiet; then exit 0; fi
             git commit -m 'Update Plated Release OCR batches'
             if git push origin HEAD:main; then exit 0; fi
