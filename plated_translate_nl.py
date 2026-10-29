@@ -112,7 +112,22 @@ ALIASES.update({
  "zucchini":("courgette","vegetable"),
  "chipotle pepper":("chipotlepeper","spice"),
  "ground chicken":("kipgehakt","meat"),
- "chickpeas":("kikkererwten","legumes")
+ "chickpeas":("kikkererwten","legumes"),
+ "grape tomatoes":("druiftomaten","vegetable"),
+ "parsley":("peterselie","herb"),
+ "granulated sugar":("kristalsuiker","pantry"),
+ "jasmine rice":("jasmijnrijst","grain"),
+ "mint":("munt","herb"),
+ "basil":("basilicum","herb"),
+ "white wine":("witte wijn","pantry"),
+ "red radishes":("rode radijsjes","vegetable"),
+ "shredded carrots":("geraspte wortelen","vegetable"),
+ "boneless chicken breasts":("kipfilet","meat"),
+ "sherry vinegar":("sherryazijn","sauce"),
+ "grated Parmesan cheese":("geraspte Parmezaanse kaas","dairy"),
+ "shredded Monterey Jack":("geraspte Monterey Jack","dairy"),
+ "chili powder":("chilipoeder","spice"),
+ "French bread rolls":("Franse broodjes","bread")
 })
 TITLE_WORDS=[
  ("ground beef","rundergehakt"),("chicken thighs","kippendijen"),
