@@ -23,6 +23,15 @@ function completePrice(r,p){
  const value=p.used_cost_eur??p.used_cost_4p_eur;
  return Number.isFinite(value)&&value>=0?value:null;
 }
+function estimatePrice(e){
+ return e?.eligible===true&&Array.isArray(e.missing)&&e.missing.length===0&&e.total_ingredients>0&&e.covered_ingredients===e.total_ingredients&&Number.isFinite(e.used_total_eur)&&e.used_total_eur>=0?e.used_total_eur:null;
+}
+function estimateFor(p,cards=false){return (cards?(p?.estimate_with_cards||p?.estimate):p?.estimate)||null;}
+function selectRecord(records,cards=false){
+ const present=records.filter(Boolean);
+ const priced=present.filter(p=>estimatePrice(estimateFor(p,cards))!==null);
+ return priced.length?priced.sort((a,b)=>estimatePrice(estimateFor(a,cards))-estimatePrice(estimateFor(b,cards))||a.store.localeCompare(b.store))[0]:present.sort((a,b)=>(estimateFor(b,cards)?.covered_ingredients||0)-(estimateFor(a,cards)?.covered_ingredients||0))[0];
+}
 function protein(title,labels=[]){
  const classify=t=>{
   if(/\b(vegetarisch|vegetarische|vega|veggie|plantaardig|plantaardige|vegan|tofu|tempeh|falafel)\b/.test(t))return 'vega';
@@ -34,7 +43,7 @@ function protein(title,labels=[]){
  // Main protein in the title takes precedence over chicken stock in a beef dish.
  return classify(norm(title))||classify(norm(labels.filter(x=>!/(bouillon|stock|broth)/i.test(x)).join(' ')))||'onbekend';
 }
-const api={norm,offerMatches,activeOffer,coverage,verified,completePrice,protein};
+const api={norm,offerMatches,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;
 else root.RecipeLogic=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

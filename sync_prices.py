@@ -48,6 +48,7 @@ def amount(product_size):
     # Normalization for product names removes decimal punctuation. Never use it
     # for quantities: 1.5 kg otherwise becomes 5 kg, and 1,5 l becomes 5 l.
     s=str(product_size).strip().lower().replace(',','.')
+    if s in ('per stuk','per stuks'):return 1.,'stuk'
     m=re.fullmatch(r'(\d+(?:\.\d+)?)\s*(kilogram|kg|gram|g|milliliter|ml|liter|l|stuks|stuk)',s)
     if m:
         v=float(m.group(1));u=m.group(2)
@@ -159,14 +160,48 @@ def calculate(recipe, catalog, store, servings=4):
     return result
 
 def run(repo_dir:Path,source_json=None):
+    from indicative_prices import prepare_catalog,add_market_products,estimate_with_sensitivity,VERSION,FAMILIES,SPOONS
+    from zoneinfo import ZoneInfo
     data=json.loads((repo_dir/'recipes_extracted.json').read_text(encoding='utf8'))
     if source_json is None:
         request=urllib.request.Request(SOURCE,headers={'User-Agent':AGENT})
         with urllib.request.urlopen(request,timeout=45) as resp:source_json=json.load(resp)
     catalog=products(source_json)
+    estimate_catalog=prepare_catalog(source_json)
+    market_path=repo_dir/'market_deals.json'
+    market=json.loads(market_path.read_text()) if market_path.exists() else {}
+    try:
+        market_at=dt.datetime.fromisoformat(market['updated_at_utc'])
+        if market_at.tzinfo is None:market_at=market_at.replace(tzinfo=dt.timezone.utc)
+        if not 0<=(dt.datetime.now(dt.timezone.utc)-market_at).total_seconds()<48*3600:market={}
+    except (KeyError,ValueError,TypeError):market={}
+    today=dt.datetime.now(ZoneInfo('Europe/Amsterdam')).date()
+    add_market_products(estimate_catalog,market,today)
     output={'fetched_at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'servings':2,'location':'Bleiswijk; landelijke bronprijzen, geen filiaalbevestiging','source':'Checkjebon open product prices; NOT confirmed promotions','limitations':['No verified Lidl full assortment in Checkjebon','Prices can differ by branch','Ingredient substitutions and PDF parsing require manual review','Only exact ingredient words with compatible package units are priced','Two-person source column required; no automatic halving'],'stores':{s:len(catalog.get(s,[])) for s in STORES.values()},'results':[]}
+    output['estimate_policy']={'version':VERSION,'label':'Indicatieve prijsraming met zichtbare normgewichten',
+        'weights_g_per_piece':{f:v for f,(_,v) in FAMILIES.items() if v is not None},
+        'spoon_rules':{f:{'quantity_per_tablespoon':v,'unit':u,'note':note,'source':source} for f,(v,u,note,source) in SPOONS.items()},
+        'notes':['Alleen recepten met herstelde tweepersoonskolom kunnen volledig geraamd worden.',
+                 'Prijsramingen zijn geen handmatig geverifieerde receptprijzen.',
+                 'Onbekende ingrediënten en ontbrekende prijzen worden niet als nul gerekend.',
+                 'Verbruikskosten verdelen voordeelverpakkingen over alle gekochte inhoud; gebruik de rest ook op.',
+                 'Kassabedrag omvat hele verpakkingen; geen voorraad verondersteld. Water en energie buiten vergelijking.',
+                 'Bonus en herkenbare kaartacties tellen alleen mee met de kaartoptie aan.',
+                 'Prijs- en actiegegevens via Checkjebon en PrijsProfeet; beschikbaarheid en filiaalprijzen kunnen afwijken.']}
     for r in data['recipes']:
-        for s in STORES.values():output['results'].append(calculate(r,catalog,s,servings=2))
+        for s in STORES.values():
+            record=calculate(r,catalog,s,servings=2)
+            deals=market.get('stores',{}).get(s,{}).get('deals',[])
+            record['estimate']=estimate_with_sensitivity(r,estimate_catalog,s,deals,today,cards=False)
+            if any(d.get('card_required') or d.get('loyalty_program') or d.get('loyalty_price') is not None for d in deals):
+                with_cards=estimate_with_sensitivity(r,estimate_catalog,s,deals,today,cards=True)
+                if dict(with_cards,cards_included=False)!=record['estimate']:record['estimate_with_cards']=with_cards
+            output['results'].append(record)
+    output['estimate_counts']={s:sum(x['store']==s and x['estimate']['eligible'] for x in output['results']) for s in STORES.values()}
+    if not any(output['estimate_counts'].values()) and (repo_dir/'recipe_prices.json').exists():
+        previous=json.loads((repo_dir/'recipe_prices.json').read_text())
+        if any(previous.get('estimate_counts',{}).values()):
+            raise RuntimeError('Geen volledige ramingen in nieuwe brondata; vorige bruikbare snapshot behouden')
     # Protect against publishing an empty or stale price snapshot.
     if not any(x['complete'] for x in output['results']):
         # Still publish partial coverage for diagnostics; never claim full costs.
@@ -177,3 +212,4 @@ def run(repo_dir:Path,source_json=None):
 if __name__=='__main__':
     x=run(Path(os.environ.get('REPO_DIR','.')))
     print('Prices fetched',x['stores'],'fully matched',sum(i['complete'] for i in x['results']))
+    print('Indicatieve ramingen per winkel:',x['estimate_counts'])

@@ -1,5 +1,9 @@
 # Prijscontrole voor twee personen
 
+**Update:** de gebruiker heeft zichtbare normgewichten gekozen. De indicatieve
+prijsranglijst is nu een afzonderlijke berekening. Zie [methodiek](PRIJSRAMING_METHODIEK.md).
+De onderstaande open punten beschrijven de strengere, exacte verificatiestatus.
+
 Locatie: Bleiswijk. Winkels: AH, Jumbo en Lidl. De productfeed bevat landelijke
 bronprijzen, geen bevestigde schapprijzen van de drie plaatselijke filialen.
 

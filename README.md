@@ -1,3 +1,14 @@
+## Indicatieve prijsranglijst met normgewichten (29 oktober 2026)
+
+De HelloFresh-pagina toont nu complete **prijsramingen voor twee personen**.
+Bij elk recept staan gebruikte normgewichten, productkeuzes, kassabedragen en
+restanten. Alleen volledige ramingen tellen mee. De kaartoptie schakelt
+herkenbare Bonus-/kaartacties mee; bundels worden als hele verpakkingen berekend.
+De oude exacte verificatiestatus blijft los daarvan bestaan.
+
+Lees [de rekenmethodiek](PRIJSRAMING_METHODIEK.md). Voor controles:
+`PYTHONPATH=. pytest -q` en `npm ci && npm test`.
+
 # Supermarktscanner × HelloFresh
 
 Statische browser op **https://dasphhs.github.io/Supermarktscanner/**, plus het bestaande Streamlit-project (`app.py`).

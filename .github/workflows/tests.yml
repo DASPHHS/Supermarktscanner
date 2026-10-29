@@ -17,5 +17,9 @@ jobs:
       - run: PYTHONPATH=. pytest -q
       - run: python -m compileall -q app.py scanner.py render_original_cards.py render_plated_cards.py import_plated_release.py sync_market_deals.py
       - run: node --check hellofresh/app.js
-      - run: node --test tests/test_recipe_logic.cjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
       - run: python audit_recipe_quality.py --output /tmp/recipe_quality_audit.json

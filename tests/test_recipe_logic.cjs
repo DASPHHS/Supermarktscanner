@@ -30,3 +30,22 @@ test('beef stays beef with chicken stock; unknown is not vegetarian',()=>{
  assert.equal(L.protein('Barbecue Chicken Barbecuekip'),'kip');
  assert.equal(L.protein('Beef Bolognese Bolognesesaus',['kippenbouillon']),'vlees');
 });
+test('only complete indicative costs can enter the price ranking',()=>{
+ const e={eligible:true,missing:[],total_ingredients:1,covered_ingredients:1,used_total_eur:3};
+ assert.equal(L.estimatePrice(e),3);
+ assert.equal(L.estimatePrice({...e,eligible:false}),null);
+ assert.equal(L.estimatePrice({...e,missing:[{}]}),null);
+ assert.equal(L.estimatePrice({...e,covered_ingredients:0}),null);
+ assert.equal(L.estimatePrice({...e,used_total_eur:NaN}),null);
+});
+test('store choice and order react to prices and card promotions',()=>{
+ const e=n=>({eligible:true,missing:[],total_ingredients:1,covered_ingredients:1,used_total_eur:n});
+ const a={store:'AH',estimate:e(4),estimate_with_cards:e(2)};
+ const j={store:'Jumbo',estimate:e(3),estimate_with_cards:e(3)};
+ assert.equal(L.selectRecord([a,j],false).store,'Jumbo');
+ assert.equal(L.selectRecord([a,j],true).store,'AH');
+ j.estimate.used_total_eur=5;
+ assert.equal(L.selectRecord([a,j],false).store,'AH');
+ assert.equal(L.selectRecord([a,{store:'Lidl',estimate:{eligible:false,missing:[{}]}}],false).store,'AH');
+ assert.equal(L.estimateFor({estimate:e(3)},true).used_total_eur,3);
+});

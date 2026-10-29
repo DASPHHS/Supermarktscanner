@@ -9,12 +9,14 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone, date
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 
 BASE="https://www.prijsprofeet.nl/api/v1/search"
 TERMS=("boerenkool","rookworst","aardappelen","pompoen","sperziebonen","gehakt",
        "bospeen","vivera","kipfilet","walnoten","champignons","spinazie",
        "courgette","tomaten","broccoli","rijst","pasta","tofu","zalm",
-       "ui","wortel","paprika","kikkererwten","kokosmelk")
+       "ui","wortel","paprika","kikkererwten","kokosmelk","kaas","eieren","olijfolie","boter",
+       "witte wijnazijn","lasagnebladen","garam masala","krieltjes","Italiaanse kruiden","gemberpuree","zout","peper")
 STORES={"Jumbo":"jumbo","AH":"albertheijn","Lidl":"lidl"}
 UA="HelloFresh-Supermarktscanner/1.0 (+https://github.com/DASPHHS/Supermarktscanner)"
 def normalize(s):
@@ -53,20 +55,41 @@ def main(out="market_deals.json"):
             "limitations":["Food term search is a selection, not a complete assortment",
                            "All products must be active, not upcoming/historical",
                            "Promotion is not automatically applied to recipe price"],
-            "stores":{k:{"updated_at":now,"deals":[]} for k in STORES}}
+            "stores":{k:{"updated_at":now,"deals":[],"products":[]} for k in STORES}}
     seen={k:set() for k in STORES}
+    product_seen={k:set() for k in STORES}
     errors=[]
-    for term in TERMS:
+    def fetch_term(term):
         try:
-            data=query(term)
+            return term,query(term),None
         except Exception as exc:
-            errors.append(term+": "+type(exc).__name__+": "+str(exc)[:120])
+            return term,None,term+": "+type(exc).__name__+": "+str(exc)[:120]
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        batches=list(pool.map(fetch_term,TERMS))
+    for term,data,error in batches:
+        if error:
+            errors.append(error)
             continue
         for p in data.get("results",[]):
             retailer=normalize(p.get("retailer"))
             target=next((k for k,v in STORES.items()
                          if retailer==v or (k=="AH" and retailer in ("ah","albertheijn"))),None)
-            if not target or p.get("promotion_status")!="active":continue
+            if not target:continue
+            name=str(p.get('name') or '').strip()
+            identity=str(p.get('base_product_id') or p.get('product_id') or (name+'|'+str(p.get('quantity'))))
+            # Keep dated product records as a second price source; ingredient
+            # identity is checked again by the indicative price engine.
+            extracted=str(p.get('extracted_at') or '')[:10]
+            try:recent=0<=(date.fromisoformat(today)-date.fromisoformat(extracted)).days<=3
+            except ValueError:recent=False
+            shelf=p.get('original_price') if p.get('is_promotional') else p.get('price')
+            if recent and name and identity not in product_seen[target] and isinstance(shelf,(int,float)) and shelf>0 and p.get('quantity'):
+                product_seen[target].add(identity)
+                result['stores'][target]['products'].append({
+                    'name':name,'quantity':p['quantity'],'price':shelf,'product_url':p.get('product_url'),
+                    'product_id':p.get('product_id'),'base_product_id':p.get('base_product_id'),
+                    'extracted_at':p.get('extracted_at'),'source':'PrijsProfeet product search'})
+            if p.get("promotion_status")!="active":continue
             start=str(p.get("valid_from") or "")[:10]
             end=str(p.get("valid_until") or "")[:10]
             try:
@@ -75,14 +98,21 @@ def main(out="market_deals.json"):
             if start>today or end<today:continue
             name=str(p.get("name") or "").strip()
             if not name or not is_relevant_food(name,term):continue
-            key=str(p.get("id") or (target+":"+name.casefold()))
+            key=str(p.get("product_id") or p.get("id") or (target+":"+name.casefold()))
             if key in seen[target]:continue
             seen[target].add(key)
             pct=p.get("savings_percentage")
             original=p.get("original_price")
             price=p.get("price")
             discount=("%g%% korting" % pct if isinstance(pct,(float,int)) and pct>0 else "Actieve aanbieding")
-            result["stores"][target]["deals"].append({"name":name,"discount":discount,
+            detail={field:p.get(field) for field in (
+                'product_id','base_product_id','ean','quantity','product_url','promotion_type',
+                'multi_buy_quantity','multi_buy_price','loyalty_program','loyalty_price',
+                'max_per_customer','in_store_only','online_only','valid_until_estimated')}
+            detail['card_required']=(target=='AH' or bool(p.get('loyalty_program')) or p.get('loyalty_price') is not None
+                or any('plus' in str(x).casefold() or 'extra' in str(x).casefold() for x in p.get('promotional_keywords',[])))
+            detail['personal_offer']=any(any(word in str(x).casefold() for word in ('persoonlijk','personal','bonus box','bonusbox')) for x in p.get('promotional_keywords',[]))
+            result["stores"][target]["deals"].append({**detail,"name":name,"discount":discount,
                 "price":price,"original_price":original,
                 "valid_from":start,"valid_until":end,"source_term":term,
                 "source_url":"https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"})
