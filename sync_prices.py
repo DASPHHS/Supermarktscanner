@@ -111,9 +111,23 @@ def calculate(recipe, catalog, store):
                and recipe.get('servings_verified') is True
                and recipe.get('servings')==4)
     complete=bool(recipe.get('ingredients_4p')) and not missing and validated
-    return {'recipe_id':recipe['id'],'store':store,'complete':complete,'price_per_portion_eur':round(used/4,2) if complete else None,'used_cost_4p_eur':round(used,2) if complete else None,'whole_packages_eur':round(cash,2) if complete else None,'known_cost_eur':round(used,2),'matches':matched,'missing':missing,'recipe_review_required':not validated,
-            'ingredient_matches_complete':bool(recipe.get('ingredients_4p')) and not missing,
-            'validation_missing':[] if validated else [key for key in ('quality','pricing_eligible','ingredients_verified','quantities_verified','servings_verified','servings') if not (recipe.get(key)=='verified' if key=='quality' else recipe.get(key)==4 if key=='servings' else recipe.get(key) is True)]}
+    result={'recipe_id':recipe['id'],'store':store,'complete':complete,
+            'price_per_portion_eur':round(used/4,2) if complete else None,
+            'used_cost_4p_eur':round(used,2) if complete else None,
+            'whole_packages_eur':round(cash,2) if complete else None,
+            'known_cost_eur':round(used,2),'matches':matched,'missing':missing,
+            'recipe_review_required':not validated,
+            'ingredient_matches_complete':bool(recipe.get('ingredients_4p')) and not missing}
+    # Keep the large daily snapshot compact; detailed sign-off diagnostics
+    # are useful only when every ingredient already has a price match.
+    if result['ingredient_matches_complete'] and not validated:
+        result['validation_missing']=[key for key in
+            ('quality','pricing_eligible','ingredients_verified',
+             'quantities_verified','servings_verified','servings')
+            if not (recipe.get(key)=='verified' if key=='quality'
+                    else recipe.get(key)==4 if key=='servings'
+                    else recipe.get(key) is True)]
+    return result
 
 def run(repo_dir:Path,source_json=None):
     data=json.loads((repo_dir/'recipes_extracted.json').read_text(encoding='utf8'))
