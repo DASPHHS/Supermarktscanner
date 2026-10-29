@@ -15,6 +15,7 @@ SOURCE = 'https://raw.githubusercontent.com/supermarkt/checkjebon/main/data/supe
 AGENT = 'HelloFreshSupermarktscanner/1.0 (https://github.com/DASPHHS/Supermarktscanner)'
 STORES = {'ah':'AH','jumbo':'Jumbo','lidl':'Lidl'}
 BLOCKED = {'saus','soep','maaltijd','pizza','dip','chips','wrap','quiche','poeder','smaak','puree','snack','burger','gevuld','gekruid','kruidenmix','salade','hummus','hoemoes','gebakken','geroosterd','vegetarisch','vegetarische','vegan','plantaardig','plantaardige','chocolade','surprise','snoep','gedroogd','gedroogde','zongedroogd','zongedroogde','granulaat'}
+QUALIFIERS=set('ah jumbo lidl albert heijn biologisch biologische bio verse vers extra vierge mild milde naturel ongezouten gezouten gesneden heel hele kruimig vastkokend vastkokende fijne fijn grof grove zoutarm zoutarme g gr gram kg ml milliliter liter l stuk stuks st'.split())
 
 def norm(text: str) -> str:
     text = unicodedata.normalize('NFKD', text.lower())
@@ -89,7 +90,9 @@ def matches(name,product_name):
     if not target or not all(t in candidate for t in target):return False
     # Prevent accidental matches to soups/sauces/meal products when the recipe needs a raw item.
     if any(t in candidate and t not in target for t in BLOCKED):return False
-    return True
+    # All unexplained words matter. A one-word overlap such as 'ui' does not
+    # turn Filet Americain Ui or a Peen-en-Ui mixture into a raw onion.
+    return all(t in target or t in QUALIFIERS or re.fullmatch(r'\d+(?:g|gr|gram|kg|ml|l|st|stuks|x)?',t) for t in candidate)
 
 def calculate(recipe, catalog, store, servings=4):
     if servings not in (2,4):raise ValueError('Alleen bronkolommen voor 2 of 4 porties worden ondersteund')

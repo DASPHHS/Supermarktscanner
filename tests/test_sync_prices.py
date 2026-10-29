@@ -45,6 +45,9 @@ def test_no_raw_meat_match_to_vegan_product():
  assert not matches('kipfilet','vivera plantaardige kipfilet')
  assert not matches('ei','kinder chocolade surprise ei')
  assert not matches('tomaat','zongedroogde tomaat')
+ assert not matches('ui','jumbo filet americain ui 150 g')
+ assert not matches('ui','jumbo gesneden peen en ui hutspot 500 g')
+ assert matches('champignons','jumbo biologische champignons 250 g')
  assert unit_quantity(4,'plakje(s)')==(None,None)
 
 def test_4_portions_and_pack_cost():

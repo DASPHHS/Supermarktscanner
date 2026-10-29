@@ -4,10 +4,11 @@
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const units=/\((?:g|ml|el|tl|[^()]+\([^()]+\))\)/g;
 const blocked=new Set('saus soep maaltijd maaltijden pizza dip chips wrap quiche poeder smaak puree snack burger gevuld gekruid kruidenmix salade hummus hoemoes geroosterd gebakken vegetarisch vegetarische vegan plantaardig plantaardige chocolade surprise snoep gedroogd gedroogde zongedroogd zongedroogde granulaat'.split(' '));
+const qualifiers=new Set('ah jumbo lidl albert heijn biologisch biologische bio verse vers extra vierge mild milde naturel ongezouten gezouten gesneden heel hele kruimig vastkokend vastkokende fijne fijn grof grove zoutarm zoutarme g gr gram kg ml milliliter liter l stuk stuks st'.split(' '));
 function offerMatches(ingredient,product){
  const target=norm(String(ingredient).replace(units,'').replace(/\*/g,'' )).split(' ').filter(Boolean);
  const words=norm(product).split(' ');
- return target.length>0 && target.every(w=>words.includes(w)) && !words.some(w=>blocked.has(w)&&!target.includes(w));
+ return target.length>0 && target.every(w=>words.includes(w)) && !words.some(w=>blocked.has(w)&&!target.includes(w)) && words.every(w=>target.includes(w)||qualifiers.has(w)||/^\d+(?:g|gr|gram|kg|ml|l|st|stuks|x)?$/.test(w));
 }
 function activeOffer(d,today){return typeof d.valid_from==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d.valid_from)&&typeof d.valid_until==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d.valid_until)&&d.valid_from<=today&&d.valid_until>=today;}
 function coverage(total,p){

@@ -4,6 +4,8 @@ const L=require('../hellofresh/recipe-logic.js');
 test('ingredient words do not match processed food containing that word',()=>{
  for(const [a,b] of [['Paprika (stuk(s))',"Lay’s Paprika Chips 125 g"],['Knoflookteen (stuk(s))','Jumbo Champignons Knoflook 100 g'],['Tomaat (g)','Unox Tomaat Soep'],['Kipfilet (g)','Vivera Plantaardige Kipfilet 200 g']])assert.equal(L.offerMatches(a,b),false);
  assert.equal(L.offerMatches('Champignons (g)','Jumbo Champignons 250 g'),true);
+ assert.equal(L.offerMatches('Ui (stuk(s))','Jumbo Filet Americain Ui 150 g'),false);
+ assert.equal(L.offerMatches('Ui (stuk(s))','Jumbo Gesneden Peen en Ui Hutspot 500 g'),false);
 });
 test('no price snapshot does not imply no missing ingredients',()=>{
  assert.deepEqual(L.coverage(8,null),{matched:0,missing:8,total:8,available:false,unknown:false});

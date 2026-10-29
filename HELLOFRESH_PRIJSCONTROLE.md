@@ -21,6 +21,8 @@ bronprijzen, geen bevestigde schapprijzen van de drie plaatselijke filialen.
   niet langer stilzwijgend als gratis voorraad geteld.
 - Dubbele ingrediëntregels worden gemeld en niet stilzwijgend weggegooid.
 - Mogelijke acties vereisen alle ingrediëntwoorden en bekende begin/einddatums.
+  Elk extra productwoord moet verklaarbaar zijn als merk-, verpakkings- of toegestane kwalificatie.
+  Zo telt filet americain met ui of een peen-ui-mengsel niet als losse ui.
   Paprikachips, tomatensoep en knoflookchampignons zijn geen match voor de rauwe
   ingrediënten paprika, tomaat en knoflook. Dit blijft slechts een suggestie;
   exacte productvariant en actievoorwaarden zijn nog niet doorgerekend.
