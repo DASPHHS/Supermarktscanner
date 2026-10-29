@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'rescan_plated_ingredients.py'
+      - 'plated_release_review_queue.json'
       - '.github/workflows/plated-ingredient-rescan.yml'
   schedule:
     - cron: '12,42 * * * *'
