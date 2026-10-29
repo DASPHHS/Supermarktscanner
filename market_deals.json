@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-29T07:52:27.786961+00:00",
+  "updated_at_utc": "2026-10-29T12:03:35.536276+00:00",
   "source": "PrijsProfeet API /search",
   "limitations": [
     "Food term search is a selection, not a complete assortment",
@@ -8,7 +8,7 @@
   ],
   "stores": {
     "Jumbo": {
-      "updated_at": "2026-10-29T07:52:27.786961+00:00",
+      "updated_at": "2026-10-29T12:03:35.536276+00:00",
       "deals": [
         {
           "name": "Jumbo Aardappelen Kruimig/ Stamppot 600 g",
@@ -431,6 +431,16 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "name": "Falafel Tomaat/Paprika 250gr",
+          "discount": "49.8% korting",
+          "price": 1.5,
+          "original_price": 2.99,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "paprika",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "name": "Hak Kikkererwten & Lupine Mix 225 g",
           "discount": "49.8% korting",
           "price": 1.4,
@@ -793,7 +803,7 @@
       ]
     },
     "AH": {
-      "updated_at": "2026-10-29T07:52:27.786961+00:00",
+      "updated_at": "2026-10-29T12:03:35.536276+00:00",
       "deals": [
         {
           "name": "Bonduelle Kikkererwten 2 mini's",
@@ -1062,7 +1072,7 @@
           "original_price": 1.79,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "broccoli",
+          "source_term": "aardappelen",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1092,7 +1102,7 @@
           "original_price": 1.79,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "spinazie",
+          "source_term": "aardappelen",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1422,7 +1432,7 @@
           "original_price": 1.55,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "wortel",
+          "source_term": "aardappelen",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1756,16 +1766,6 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "Chio Red paprika",
-          "discount": "16.48% korting",
-          "price": 1.5,
-          "original_price": 1.79,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "paprika",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
           "name": "AH Rauwkost Amsterdamse ui",
           "discount": "16.32% korting",
           "price": 2.0,
@@ -1928,7 +1928,7 @@
       ]
     },
     "Lidl": {
-      "updated_at": "2026-10-29T07:52:27.786961+00:00",
+      "updated_at": "2026-10-29T12:03:35.536276+00:00",
       "deals": [
         {
           "name": "Extra mager rundergehakt",
