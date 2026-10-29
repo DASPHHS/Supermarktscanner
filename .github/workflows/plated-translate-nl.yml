@@ -7,6 +7,9 @@ on:
       - 'tests/test_plated_translate_nl.py'
       - 'plated_ingredient_rescan.json'
       - 'plated_release_review_queue.json'
+  workflow_run:
+    workflows: ['Plated Release ZIP import', 'Plated ontbrekende ingrediënten herscannen']
+    types: [completed]
   schedule:
     - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
@@ -17,6 +20,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   translate:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
