@@ -3,6 +3,12 @@ on:
   push:
     paths:
       - 'audit_recipe_quality.py'
+      - 'plated_release_progress.json'
+      - 'plated_release_review_queue.json'
+      - 'plated_nl_catalog.json'
+      - 'plated_ingredient_rescan.json'
+      - 'hellofresh/preview_manifest.json'
+      - 'hellofresh/plated_preview_manifest.json'
       - '.github/workflows/recipe-quality.yml'
   schedule:
     - cron: '18 */3 * * *'
