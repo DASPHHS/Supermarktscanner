@@ -1,27 +1,23 @@
 {
-  "updated_at_utc": "2026-10-29T06:32:18.676153+00:00",
+  "updated_at_utc": "2026-10-29T15:37:41.876560+00:00",
   "manifest_pdf_count": 533,
   "unique_title_candidates": 505,
   "attempted_this_run": 60,
-  "new_records_this_run": 49,
-  "records_in_queue": 303,
-  "exact_duplicates_this_run": 2,
+  "new_records_this_run": 52,
+  "records_in_queue": 355,
+  "exact_duplicates_this_run": 3,
   "pricing_eligible": 0,
   "download_or_ocr_errors_this_run": [
-    "Pine Nut–Crusted Tilapia over Tomato, Olive, and Feta Orzo _ Plated _ Cook more. Live better_.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Plum and Nectarine Dutch Baby.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Pork Chop Pretzel Rolls (4).pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Pork Gyros with Greek Salad and Dill-Yogurt Sauce.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Pork Gyros with Marinated Feta and Roasted Bell Pepper.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Pork Nasi Goreng.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Pork Tacos al Pastor with Pineapple Salsa.PDF: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Potato and Pea Samosas.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "Potato Latkes with Applesauce and Mixed Green Salad.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'"
+    "Seared Salmon with Creamy Mustard, Charred Lemon, and Israeli Couscous(1).pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Seared Salmon with Creamy Mustard, Charred Lemon, and Israeli Couscous.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Seared Salmon with Orange Butter Sauce.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Seared Salmon with Whole-Wheat Penne.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Seared Scallop Risotto.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'"
   ],
   "blocked_after_three_failures": 0,
   "manual_review_required": true,
-  "failures_retryable": 44,
-  "manifest_files_attempted_or_completed": 358,
-  "manifest_files_completed": 314,
-  "distinct_source_files_in_review": 303
+  "failures_retryable": 49,
+  "manifest_files_attempted_or_completed": 418,
+  "manifest_files_completed": 369,
+  "distinct_source_files_in_review": 355
 }

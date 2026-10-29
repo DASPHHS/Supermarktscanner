@@ -1,10 +1,10 @@
 {
   "metadata": {
     "source": "Plated Google Drive (public-link download)",
-    "updated_at_utc": "2026-10-29T06:32:18.676153+00:00",
-    "imported": 303,
+    "updated_at_utc": "2026-10-29T15:37:41.876560+00:00",
+    "imported": 355,
     "note": "Preliminary OCR review queue only. NO prices, NO validated recipes.",
-    "count": 303,
+    "count": 355,
     "status": "manual_review_required"
   },
   "recipes": [
@@ -14375,6 +14375,2550 @@
       "source_identity": "1X_3L6bAWJhBH8eP9RKmfRNGrwOOgSCHv",
       "original_filename": "Pimiento Grilled Cheese with Apple, Almond, and Arugula Salad _ Plated _ Cook more. Live better_.pdf",
       "same_title_candidates": []
+    },
+    {
+      "id": "plated-poundcakeparfaits",
+      "source": "Plated",
+      "title_extracted": "Pound Cake Parfaits",
+      "source_file": "Pound Cake Parfaits.pdf",
+      "drive_identity_hash": "dd55e4dde2c1e4ef4c6a1e941ff6d616b705404b4102bdbc7f26213aba656338",
+      "content_sha256": "6158bf40122582c4d8b28c4e487d807dae646a6d767a275fbcb600b8931ec857",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "1 cup blueberries",
+        "2 tablespoons granulated sugar",
+        "⅓ cup heavy cream",
+        "2 teaspoons powdered sugar"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "lemon",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "blueberries",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "granulated sugar",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "powdered sugar",
+          "quantity_4p_source": "4 teaspoons",
+          "original_quantity": "2 teaspoons",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1TefIwZ1HwTQDhaU_HeJT8d-imNOruAVk",
+      "original_filename": "Pound Cake Parfaits.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-prosciuttoandpeafarfalle",
+      "source": "Plated",
+      "title_extracted": "Prosciutto and Pea Farfalle",
+      "source_file": "Prosciutto and Pea Farfalle.pdf",
+      "drive_identity_hash": "12ebf6e576e1db85cd45db0bc86547508cc8186ac7dbf40028720674251bb37e",
+      "content_sha256": "b1ea2dc02e4e1eca1d06c253087c7d0577c6390fc4e91bf15ad92d9804573fa5",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 herb mix",
+        "⅛ ounce parsley",
+        "⅛ ounce rosemary",
+        "1 shallot",
+        "1 red onion",
+        "2 cloves garlic",
+        "2 ounces prosciutto",
+        "2 tablespoons white wine",
+        "1 packet unsalted butter",
+        "divided",
+        "1 parchment paper",
+        "and peas and return to pot, off heat. Add",
+        "1 tablespoon olive oil to pot and stir to"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "17Z8JI7E0mnvO12f-v0Ydh3k1B9GwZVNR",
+      "original_filename": "Prosciutto and Pea Farfalle.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-prosciuttoandzucchinicavatappi",
+      "source": "Plated",
+      "title_extracted": "Prosciutto and Zucchini Cavatappi",
+      "source_file": "Prosciutto and Zucchini Cavatappi.pdf",
+      "drive_identity_hash": "0875b2025c65e2c6500f815e052afff62792ebcae5a83c06c2a9203387a61d81",
+      "content_sha256": "72562b10800b11bd44e19916209485646c5cb0fae3ae60a4a9f590a142e77039",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces zucchini",
+        "⅛ ounce thyme",
+        "1 shallot",
+        "2 ounces prosciutto",
+        "8 ounces cavatappi",
+        "¼ cup panko breadcrumbs",
+        "1 ounce grated Parmesan cheese",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1SaChCeqiQbiiWww0bXdqiJPq4zwgpQdn",
+      "original_filename": "Prosciutto and Zucchini Cavatappi.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-prosciuttopizza",
+      "source": "Plated",
+      "title_extracted": "Prosciutto Pizza",
+      "source_file": "Prosciutto Pizza.pdf",
+      "drive_identity_hash": "964f0cc9616475549c35d16224b6182402ac050603aa716997263226fdae1939",
+      "content_sha256": "d5d4454193a19a84f0d6859eb456ec95271bcc3f3e42c822cb1ffc3a18b07d61",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces pizza dough",
+        "¼ pint grape tomatoes",
+        "¼ ounce basil",
+        "1 lemon",
+        "3 ounces baby arugula",
+        "2 cloves garlic",
+        "2 tablespoons flour",
+        "provolone cheese blend",
+        "2 ounces prosciutto",
+        "1 ounce shaved Parmesan cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1WSjiaeB1IgeMQlPlp6unJ1dXB2oKJ27M",
+      "original_filename": "Prosciutto Pizza.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-provencalsalmonwithratoullie",
+      "source": "Plated",
+      "title_extracted": "Provençal Salmon with ratoullie",
+      "source_file": "Provençal Salmon with ratoullie.pdf",
+      "drive_identity_hash": "37ffca02b14c7f983d5abe8a9daadf13b86ead9a2c1844d09967fd2f85bbc0ff",
+      "content_sha256": "56297b55e7f0b2782035175aad8785d0b2fa85790d133f3ddc536192bf8d1c75",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "3 mini sweet peppers",
+        "6 ounces zucchini",
+        "8 ounces Yukon Gold potatoes",
+        "1 yellow onion",
+        "2 cloves garlic",
+        "1 can diced tomatoes",
+        "10 ounces salmon"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1pdDp9uAmwxHZ2tApdLRVTYDrgIZHWJMT",
+      "original_filename": "Provençal Salmon with ratoullie.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-pumpkinfrenchtoastbake",
+      "source": "Plated",
+      "title_extracted": "Pumpkin French Toast Bake",
+      "source_file": "Pumpkin French Toast Bake.pdf",
+      "drive_identity_hash": "5357985c746b54d33a58a2167da29ade1ed7e123b031a8532d741324005b516a",
+      "content_sha256": "610995a6b387481b395a0497971d00d1e24ecc576f66f4a436174148eafe403c",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 boule loaf",
+        "3 ounces cream cheese",
+        "12 ounces milk",
+        "½ teaspoon vanilla extract",
+        "1 teaspoon pumpkin pie spice",
+        "¼ cup light brown sugar",
+        "6 eggs",
+        "2 tablespoons chopped pecans",
+        "2 tablespoons powdered sugar",
+        "1 8\" aluminum tin",
+        "remaining milk for the next step). Set      reserved ¼ cup), 3 eggs, ⅓ cup",
+        "aside to soften at room temperature (this   pumpkin purée, and ½ teaspoon salt",
+        "will make it easier to whisk in Step 5).    until fully combined (see recipe tip)."
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "boule loaf",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cream cheese",
+          "quantity_4p_source": "6 ounces",
+          "original_quantity": "3 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "milk",
+          "quantity_4p_source": "24 ounces",
+          "original_quantity": "12 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "pumpkin pie spice",
+          "quantity_4p_source": "2 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "eggs",
+          "quantity_4p_source": "12 stuks",
+          "original_quantity": "6 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "chopped pecans",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "powdered sugar",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1Jog3lU0M-TXFtC0jVEUuqD3jrBT1meT8",
+      "original_filename": "Pumpkin French Toast Bake.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-pumpkinhandpieswithmapleglaze8638",
+      "source": "Plated",
+      "title_extracted": "pumpkin hand pies with maple glaze-8638",
+      "source_file": "pumpkin hand pies with maple glaze-8638.pdf",
+      "drive_identity_hash": "488c65dc41882bac4a80964eb16080995a7a290c95c0429bd5a1051dd542f18d",
+      "content_sha256": "e96a92ed5cb43fb68f55ee1ad7f37732d59f01bfc243975b6d9e72d6f388969f",
+      "ocr_method": "pdf_text",
+      "servings_original": 4,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 5-inch puff pastry squares",
+        "1 can pumpkin purée",
+        "¼ teaspoon pumpkin pie spice",
+        "½ teaspoon vanilla extract",
+        "⅓ cup light brown sugar",
+        "½ cup powdered sugar",
+        "1 ounce sour cream"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "pumpkin purée",
+          "quantity_4p_source": "1 can",
+          "original_quantity": "1 can",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sour cream",
+          "quantity_4p_source": "1 ounce",
+          "original_quantity": "1 ounce",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1kmE6tNf-5xGCQ_2IrBOLuEhXXvMdzuFo",
+      "original_filename": "pumpkin hand pies with maple glaze-8638.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-pumpkinrisottowithroasteddelicatasquas",
+      "source": "Plated",
+      "title_extracted": "Pumpkin Risotto with Roasted Delicata Squas",
+      "source_file": "Pumpkin Risotto with Roasted Delicata Squas.pdf",
+      "drive_identity_hash": "432e598cf52319fa9d3f835366c577bee956fd5b270579cd6e42883edeca3ea2",
+      "content_sha256": "877fe04f183defe859ff6f7fdc8ab1f2b2a1e6c514951df21fb8bd5f5d5b8355",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 delicata squash",
+        "1 shallot",
+        "1 clove garlic",
+        "1 herb mix",
+        "⅛ ounce sage",
+        "⅛ ounce thyme",
+        "1 vegetable bouillon cube",
+        "produce. Halve squash lengthwise,",
+        "¼ cup white wine",
+        "1 can pumpkin purée"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1rZ0dcaXoVTzxG-2ECLnBUnc0r6QbMuit",
+      "original_filename": "Pumpkin Risotto with Roasted Delicata Squas.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-quesofundidochickenburgers",
+      "source": "Plated",
+      "title_extracted": "Queso Fundido Chicken Burgers",
+      "source_file": "Queso Fundido Chicken Burgers.pdf",
+      "drive_identity_hash": "5884deb4358d407e682187bc39d607186b0a9c09ecd715012734cb83998486ed",
+      "content_sha256": "d5f5b3256cb5819795e990691f547ea2beec5a24c0c4ddf5957ac8597dc1a5f6",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 ear corn",
+        "1 lime, divided",
+        "1 red onion",
+        "1 clove garlic",
+        "⅛ ounce cilantro, divided",
+        "1 red bell pepper",
+        "1 poblano chile",
+        "½ teaspoon dried Mexican oregano",
+        "½ teaspoon sweet paprika",
+        "cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1WpmZhW1F4FpIncUeHUR1W8VlqqLrbZVF",
+      "original_filename": "Queso Fundido Chicken Burgers.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-quinoaandburratabowl",
+      "source": "Plated",
+      "title_extracted": "Quinoa and Burrata Bowl",
+      "source_file": "Quinoa and Burrata Bowl.pdf",
+      "drive_identity_hash": "b0237b99e30f822b46c7e520fb95ea50099991d33f42878e51b63588c076344c",
+      "content_sha256": "e6e2b809c75076e3ce2a16712fc3a6fb6568cbf748a1fa5ac9b936736123f34b",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 pound rainbow carrots",
+        "3 ounces baby arugula",
+        "2 blood oranges",
+        "3 tablespoons walnuts",
+        "¼ teaspoon chili powder",
+        "⅔ cup quinoa",
+        "1¼ ounces maple syrup, divided",
+        "4 ounces burrata cheese"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "rainbow carrots",
+          "quantity_4p_source": "2 pound",
+          "original_quantity": "1 pound",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "baby arugula",
+          "quantity_4p_source": "6 ounces",
+          "original_quantity": "3 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "blood oranges",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "walnuts",
+          "quantity_4p_source": "6 tablespoons",
+          "original_quantity": "3 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "maple syrup, divided",
+          "quantity_4p_source": "5/2 ounces",
+          "original_quantity": "1¼ ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "burrata cheese",
+          "quantity_4p_source": "8 ounces",
+          "original_quantity": "4 ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1WXYqCd-Oui8MfBfbzdWxBqe_XAVmuqVK",
+      "original_filename": "Quinoa and Burrata Bowl.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-quinoasaladwithchickpeaconfitcarrotsandpistachio",
+      "source": "Plated",
+      "title_extracted": "Quinoa salad with chickpea confit, carrots, and pistachio",
+      "source_file": "Quinoa salad with chickpea confit, carrots, and pistachio.pdf",
+      "drive_identity_hash": "ffaa465e83674967da54823d119aaa3986da5d342810f7515cd3c9e419e5297e",
+      "content_sha256": "865e48504605af44282271ad858b81b1a5dfe162292d1471971999ad44913099",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "% cup quinoa and ancient grains",
+        "2 tablespoons dried mixed berries",
+        "% teaspoon Saudi Arabi",
+        "spice mix",
+        "1 lemon",
+        "1 clove garlic",
+        "1 tablespoon pistachios",
+        "1 can chickpeas",
+        "1 shallot",
+        "1 herb mix",
+        "ounces baby spinach",
+        "cup shredded carrots",
+        "3",
+        "3 ounces sour cream",
+        "%",
+        "18\" aluminum tin"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1mpdmN1yeSxhLTzuaEKaWYbknVuDSi-0j",
+      "original_filename": "Quinoa salad with chickpea confit, carrots, and pistachio.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-redthaicurrywithtilapiaandcauliflower",
+      "source": "Plated",
+      "title_extracted": "Red Thai Curry with Tilapia and Cauliflower",
+      "source_file": "Red Thai Curry with Tilapia and Cauliflower.PDF",
+      "drive_identity_hash": "a00fb17ab0461df432be5df1f899decebcba77a1a10294985e34e79bdfe86836",
+      "content_sha256": "9ec3493821df804806d96cf71178f97c671f320f9f788927b93b7da023b462d6",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "ounce ginger",
+        "6 ounces cauliflower",
+        "6 ounces Chinese broccoli",
+        "6 ounces asparagus",
+        "10 ounces tilapia",
+        "% tablespoon red curry paste",
+        "1 can lite coconut milk",
+        "8 ounces vegetable stock",
+        "1",
+        "1",
+        "Trim and discard skin of ginger and",
+        "mince. Rinse remaining produce. Break",
+        "lower into ¥é-inch florets. Cut",
+        "Chinese broccoli into t-inch pieces.",
+        "Trim and discard woody ends of",
+        "asparagus and cut into 2-inch pieces.",
+        "Rinse tilapia and pat dry with paper",
+        "towel.",
+        "tablespoon light brown sugar",
+        "tablespoon fish sauce",
+        "{ Youll Need",
+        "1 tablespoon canola oil",
+        "kosher salt",
+        "black pepper",
+        "8\" medium pot",
+        "© Recipe Tips",
+        "Be sure to read through the entire",
+        "recipe before you begin cooking",
+        "Trust us—you'll be glad you did!",
+        "Curry paste is spicy, so use only as",
+        "much as desired depending on your",
+        "spice preference,",
+        "Coconut milk separates naturally",
+        "when it cooks. It will come together",
+        "once the curry thickens.",
+        "USDA recommends cooking fish to",
+        "idle 4. Simmer Curry",
+        "Add coconut milk, vegetable stock,",
+        "brown sugar, and fish sauce to pot",
+        "with curry base and stir to combine.",
+        "Increase heat to high and bring to a boil,",
+        "then reduce heat to medium and",
+        "simmer, stirring occasionally, until curry",
+        "is thickened and flavors are melded,",
+        "about 5 minutes. Season with %",
+        "teaspoon kosher salt and pepper as",
+        "desired",
+        "Great food starts with great",
+        "you fish sourced sustainably and",
+        "domestically.",
+        "2. Sauté Vegetables",
+        "Heat 1 tablespoon canola oil in a",
+        "medium pot over medium heat. When",
+        "oil is shimmering, add cauliflower,",
+        "Chinese broccoli, and asparagus and",
+        "sauté, stirring, until beginning to soften,",
+        "about 5 minutes.",
+        "5. Cook Tilapia",
+        "Season tilapia all over with % teaspoon",
+        "kosher salt and pepper as desired. Add",
+        "to pot with curry, nestling in. Increase",
+        "heat to medium high and cook until",
+        "tilapia is opaque, about 5 minutes.",
+        "Remove pot from heat. Using a spoon,",
+        "break tilapia into smaller pieces. Taste",
+        "and add more salt and pepper as",
+        "needed",
+        "3. Make Curry Base",
+        "Add ginger to pot with vegetables and",
+        "sauté, stirring, until fragrant, 1-2",
+        "minutes. Stir in as much curry paste as",
+        "desired and cook until toasted, about 1",
+        "minute (see Recipe Tip).",
+        "6. Plate Curry",
+        "Ladle vegetables, curry, and tilapia",
+        "into bowls. Take in the fragrance, then",
+        "dig in.",
+        "Join the Plated community",
+        "Post your #platedpics this week! f ¥ @ ©",
+        "Pe",
+        "Red Thai Curry",
+        "with Tilapia 294 Cauliflower",
+        "Fragrant coconut curry and tender tilapia make this meal a must for any",
+        "night of the week. Served with cauliflower, asparagus, and Chinese",
+        "broccoli, this dish's seductive aromas are simply irresistible."
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "cauliflower",
+          "quantity_4p_source": "12 ounces",
+          "original_quantity": "6 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Chinese broccoli",
+          "quantity_4p_source": "12 ounces",
+          "original_quantity": "6 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "asparagus",
+          "quantity_4p_source": "12 ounces",
+          "original_quantity": "6 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tilapia",
+          "quantity_4p_source": "20 ounces",
+          "original_quantity": "10 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "lite coconut milk",
+          "quantity_4p_source": "2 can",
+          "original_quantity": "1 can",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "vegetable stock",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "canola oil",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1NYjN1U01ftCCfORWkmQMnUB9dbUM-UHG",
+      "original_filename": "Red Thai Curry with Tilapia and Cauliflower.PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedappleandbutternutsquashsoup",
+      "source": "Plated",
+      "title_extracted": "Roasted Apple and Butternut Squash Soup",
+      "source_file": "Roasted Apple and Butternut Squash Soup.PDF",
+      "drive_identity_hash": "d9ad66529d83f713eb83a5b35fc4c64333a25afe7f96700f90e8e578e8b6bfa2",
+      "content_sha256": "24139b9daf94d894f2aeae4620386c9a846595e66f2992732fc5638898c696c8",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "Preheat oven to 450°F. Finely chop",
+        "rosemary and sage leaves, discarding",
+        "stems. Strip thyme leaves, discarding",
+        "stems. Mince garlic. Peel onion and",
+        "mince. Peel apples and cut into %-inch",
+        "dice, discarding cores. Halve squash",
+        "cubes. Wrap baguette in foil.",
+        "4. Simmer Soup",
+        "Heat butter and 1 teaspoon olive oil ina",
+        "large pot over medium heat. When",
+        "butter is foamy, add onion and cook",
+        "until soft and translucent, about 3",
+        "minutes. Add garlic and cook until",
+        "fragrant, about 1 minute. Add roasted",
+        "apples, squash, and 2 cups water.",
+        "Increase heat to high and bring to a boil,",
+        "then reduce heat to low and simmer",
+        "until flavors are melded, about 5",
+        "minutes. Remove pot from heat.",
+        "2. Roast Apples and Squash",
+        "Ona baking sheet, toss apples and",
+        "squash with rosemary, sage, thyme, 1%",
+        "tablespoons olive oil, / teaspoon",
+        "kosher salt, and pepper. Arrange in a",
+        "single layer, transfer to oven, and roast,",
+        "flipping halfway through, until tender,",
+        "about 20 minutes total. Place baguette",
+        "in oven to warm for about 10 minutes.",
+        "Remove and set aside to cool for about",
+        "2 minutes.",
+        "5. Blend Soup",
+        "Transfer soup to a blender and blend,",
+        "working in batches if necessary, until",
+        "smooth (see Recipe Tip). Return to pot,",
+        "off heat. Stir in apple cider. Taste and",
+        "add salt and pepper as needed.",
+        "Alternatively, using a large spoon, mash",
+        "mostly smooth, then stir in apple cider",
+        "and season.",
+        "3. Toast Croutons",
+        "While apples and squash roast, cut",
+        "warmed baguette into I-inch cubes.",
+        "Heat 1 tablespoon olive oil in a medium",
+        "pan over medium heat. When oil is,",
+        "shimmering, add baguette in a single",
+        "layer and toast until golden, about 3",
+        "minutes per side. Remove from pan and",
+        "immediately season with salt and",
+        "pepper.",
+        "\\",
+        "J",
+        "pene",
+        "re",
+        "6. Serve Soup",
+        "Garnish your soup with croutons and",
+        "enjoy while it's hot.",
+        "Join the Plated community - post your",
+        "#platedpics this week! y",
+        "Q- RECIPE TIPS",
+        "Be sure to read through the entire recipe",
+        "before you begin cooking, Trust us—you'l",
+        "be glad you did!",
+        "If you're blending your soup for an extra",
+        "smooth texture, be sure not to overfill",
+        "the machine. Work in batches if",
+        "necessary.",
+        "sprig rosemary",
+        "sprig sage",
+        "sprigs thyme",
+        "1",
+        "1",
+        "4",
+        "2. cloves garlic",
+        "1 yellow onion",
+        "2 Gala apples",
+        "1 pound butternut squash cubes",
+        "1 baguette",
+        "1 packet butter",
+        "‘% cup apple cider"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "minutes.",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "yellow onion",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Gala apples",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "butternut squash cubes",
+          "quantity_4p_source": "2 pound",
+          "original_quantity": "1 pound",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "baguette",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "butter",
+          "quantity_4p_source": "2 packet",
+          "original_quantity": "1 packet",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "15DqHIgYwzUjyFuW0rtr8ZkhQ0c_eo-Cd",
+      "original_filename": "Roasted Apple and Butternut Squash Soup.PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedbroccoliandquinoabowls",
+      "source": "Plated",
+      "title_extracted": "Roasted Broccoli and Quinoa Bowls",
+      "source_file": "Roasted Broccoli and Quinoa Bowls.pdf",
+      "drive_identity_hash": "48f440cc542f1b1b8bad40f11a590dde114c7bcac451623358a63221b083fe07",
+      "content_sha256": "9501bba53f0d2735b9f709d7c99fb46de318b7374c8bc44be306c15d48dc3769",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "½ cup quinoa",
+        "12 ounces broccoli florets",
+        "¼ pint grape tomatoes",
+        "¼ ounce cilantro, divided",
+        "2 limes, divided",
+        "2 cloves garlic",
+        "1 jalapeño",
+        "¼ teaspoon ancho chile powder",
+        "¼ teaspoon ground coriander",
+        "aside, still covered, until ready to serve.   lengthwise. Using a knife tip, discard"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "121EFATtEPLTt8eX8qmzMLzNUm4xdjSmB",
+      "original_filename": "Roasted Broccoli and Quinoa Bowls.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedcarrotsandburrata",
+      "source": "Plated",
+      "title_extracted": "Roasted Carrots and Burrata",
+      "source_file": "Roasted Carrots and Burrata.pdf",
+      "drive_identity_hash": "33ce7dcaa73d158e5e69bec9063a43bae0977f4fdf5d20f4e1e298c449671fa2",
+      "content_sha256": "7107de43c87b7e004b159373e5b9161e8298df55801d72901cf2d6474ed7e356",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 pound baby carrots",
+        "3 cups baby arugula",
+        "2 blood oranges",
+        "⅙ ounce thyme",
+        "1 spice mix",
+        "1 teaspoon mustard seed",
+        "1 packet Dijon mustard",
+        "8 ounces burrata cheese",
+        "discarding stems."
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "baby carrots",
+          "quantity_4p_source": "2 pound",
+          "original_quantity": "1 pound",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "baby arugula",
+          "quantity_4p_source": "6 cups",
+          "original_quantity": "3 cups",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "blood oranges",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "mustard seed",
+          "quantity_4p_source": "2 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Dijon mustard",
+          "quantity_4p_source": "2 packet",
+          "original_quantity": "1 packet",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "burrata cheese",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1VAcqrGx9Nxop8P1JGs9j9iUfL2WwhSAT",
+      "original_filename": "Roasted Carrots and Burrata.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedcauliflowerbibimbap",
+      "source": "Plated",
+      "title_extracted": "Roasted Cauliflower Bibimbap",
+      "source_file": "Roasted Cauliflower Bibimbap.pdf",
+      "drive_identity_hash": "e8ba8a84f8267ccf2e05e92087e2c56492f1d8abe8a554d2ad15740ea150af2c",
+      "content_sha256": "a520b6bbbf542b3a7ff2a9cdb0eab7433f164e70afe9a719e5b302e8f76a7d6c",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¾ cup sushi rice",
+        "½ English cucumber",
+        "12 ounces cauliflower florets",
+        "1 clove garlic",
+        "1 tablespoon dark brown sugar",
+        "2 tablespoons gluten-free soy sauce",
+        "2 tablespoons rice wine vinegar",
+        "5 ounces baby spinach"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1GeeraM5SPU0VpOZjGdQ-zXcUrnTtNwcD",
+      "original_filename": "Roasted Cauliflower Bibimbap.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedcauliflowerpizza",
+      "source": "Plated",
+      "title_extracted": "Roasted Cauliflower Pizza",
+      "source_file": "Roasted Cauliflower Pizza.pdf",
+      "drive_identity_hash": "d9e4b60bf787df98890a8576b2ad60d26fb6217514b198b4e70d5be15ac23a32",
+      "content_sha256": "924d4221fc29434761f62bc6628012f087ad9e73ba7ad1691b9b43a1f0d0c0a2",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1½ pounds whole-wheat pizza dough",
+        "8 ounces curly kale",
+        "1 herb mix, divided",
+        "⅛ ounce rosemary",
+        "⅛ ounce thyme",
+        "1 pound cauliflower florets",
+        "1 yellow onion",
+        "8 ounces ricotta cheese",
+        "6 ounces shredded mozzarella and"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "18C-Ato4LXtNnpA7G2P4WC465nInP6VWJ",
+      "original_filename": "Roasted Cauliflower Pizza.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedchickenaujuswithdelicatasquash",
+      "source": "Plated",
+      "title_extracted": "Roasted Chicken au Jus with Delicata Squash",
+      "source_file": "Roasted Chicken au Jus with Delicata Squash.pdf",
+      "drive_identity_hash": "85e775325c723ca0f923048b6b5c3a67504a830df9bf3e5ce0a12b990e713e54",
+      "content_sha256": "4411d74c8d23833a8bb79c87ed0ed22be802c416efc0c89d7c5e6c23f9aea5c2",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "⅛ ounce chives, divided",
+        "12 ounces red-skinned potatoes",
+        "1 delicata squash",
+        "1 tablespoon flour",
+        "½ cup breadcrumbs",
+        "⅛ teaspoon garlic powder",
+        "⅛ teaspoon onion powder",
+        "⅛ teaspoon dried thyme",
+        "2 boneless skinless chicken breasts",
+        "¼ cup white wine",
+        "and pepper as desired. Set aside until"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "13FrZZfLKYe8JknsZDfo0tbsuVSRmEKr-",
+      "original_filename": "Roasted Chicken au Jus with Delicata Squash.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedchickenaujuswithorzoandpeas",
+      "source": "Plated",
+      "title_extracted": "Roasted Chicken au Jus with orzo and peas",
+      "source_file": "Roasted Chicken au Jus with orzo and peas.pdf",
+      "drive_identity_hash": "3fddb38e2856a285a5f82be296de7f4370bdf77512f160acaf0a175c641f88a1",
+      "content_sha256": "d72c96f7e24b16e430c291c0e3e1509a32425a2403ee8d55b902b425f79eb3a5",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "¼ ounce chives, divided",
+        "2 tablespoons flour",
+        "1 cup breadcrumbs",
+        "1 spice mix",
+        "¼ teaspoon dried basil",
+        "¼ teaspoon garlic powder",
+        "¼ teaspoon dried oregano",
+        "¼ teaspoon dried rosemary",
+        "1½ cups orzo",
+        "excess.                                     outside here—the chicken will finish",
+        "2 cups peas",
+        "3 packets unsalted butter, divided",
+        "cooking in the oven in Step 5). Transfer",
+        "chicken to a plate, reserving pan for",
+        "making sauce, and set aside."
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1CCaRLDKI2EK3-qxSvAaeMwO2DHA_xA7i",
+      "original_filename": "Roasted Chicken au Jus with orzo and peas.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedchickenpitas",
+      "source": "Plated",
+      "title_extracted": "Roasted Chicken Pitas",
+      "source_file": "Roasted Chicken Pitas.pdf",
+      "drive_identity_hash": "0c5ffaa36f143a25abbdda18369f8331e8c8154a689787daf3efd2773b39b8d6",
+      "content_sha256": "3c005912742e692202392c3c790c240ec211bc1899282da3d851434c19bcc658",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 English cucumber",
+        "1 yellow bell pepper",
+        "⅛ ounce dill",
+        "1 lime",
+        "1 shallot",
+        "1 clove garlic",
+        "2 boneless skinless chicken breasts",
+        "1 ounce sour cream",
+        "1 tablespoon harissa"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1eM1-wVeKN50fi3e3u1D-9lVYsyVVXyQd",
+      "original_filename": "Roasted Chicken Pitas.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedchickenthighswithlemonpotatoesandcipollinionions",
+      "source": "Plated",
+      "title_extracted": "Roasted Chicken Thighs with Lemon Potatoes and Cipollini Onions",
+      "source_file": "Roasted Chicken Thighs with Lemon Potatoes and Cipollini Onions.pdf",
+      "drive_identity_hash": "c6ac8451c20593b50f76493506174ae6c3986f77e337ffe257361b2ff45e2c99",
+      "content_sha256": "d5f4037805db6f1f4230d78c2e66db7821e5a3c96afb9e48778e482959c88924",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces Yukon Gold potatoes",
+        "1 lemon, divided",
+        "2 cloves garlic",
+        "6 ounces cipollini onions",
+        "2 ounces baby kale",
+        "4 chicken thighs",
+        "1 ounce sun-dried tomatoes"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1ZIyHxLP3wcA06fLmRYa7glmFjKDF_QNI",
+      "original_filename": "Roasted Chicken Thighs with Lemon Potatoes and Cipollini Onions.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedchickenthighswitheverythingpotatoes",
+      "source": "Plated",
+      "title_extracted": "Roasted Chicken Thighs with “Everything” Potatoes",
+      "source_file": "Roasted Chicken Thighs with “Everything” Potatoes.pdf",
+      "drive_identity_hash": "4b10e62af7be860a1e71a786b4d7dbf56a2dca6e96a555a05f79d28930b3823e",
+      "content_sha256": "ec6110bbb4eda399ecf7afca8f6b07263d6d575fb9d1055839684c1399a51fd8",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "4 chicken thighs",
+        "12 ounces red-skinned potatoes",
+        "⅛ ounce dill",
+        "2 scallions",
+        "1 ounce red radishes",
+        "3 ounces baby spinach",
+        "3 ounces sour cream",
+        "1 tablespoon everything bagel spice",
+        "mix"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1I6HnaoK6sryVHJbllz4CeZCEljrJTQXH",
+      "original_filename": "Roasted Chicken Thighs with “Everything” Potatoes.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedchickenwithcouscousspinachandprovencaltomatoes",
+      "source": "Plated",
+      "title_extracted": "Roasted Chicken with Couscous, Spinach, and Provencal Tomatoes (3)",
+      "source_file": "Roasted Chicken with Couscous, Spinach, and Provencal Tomatoes (3).pdf",
+      "drive_identity_hash": "5d5911b9230257fcebd79b2895f1b0199596d48124b4236f938afd969759017c",
+      "content_sha256": "4916d31a1442b7c2be20700e20ecf0c772b44f2895c911e60be06371430aa5a1",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "3 tomatoes",
+        "⅛ ounce parsley, divided",
+        "2 cloves garlic, divided",
+        "3 boneless chicken breasts",
+        "1 ounce grated Parmesan cheese,",
+        "divided",
+        "¾ cup Moroccan couscous",
+        "4 ounces baby spinach"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1fI0B0BgCBoh6Iwyc9bOAQeg7iXa2jgbv",
+      "original_filename": "Roasted Chicken with Couscous, Spinach, and Provencal Tomatoes (3).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedcodwithcoconutcurryriceplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Roasted Cod with Coconut Curry Rice _ Plated _ Cook more. Live better_",
+      "source_file": "Roasted Cod with Coconut Curry Rice _ Plated _ Cook more. Live better_.pdf",
+      "drive_identity_hash": "f220ab9fbf40d32c4fc8fcc96510eca6720cda74cd2f4b0d15e24060dacd5758",
+      "content_sha256": "bf32a746558e25c9e53276f0b7a373750694900e718f2033ec880d3d7d1928a5",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                     2",
+        "servings",
+        "We love the combination of aromatic spices, velvety sauces,",
+        "minutes",
+        "paste, ginger, onion, and lime juice until thick and creamy. It's",
+        "tossed with spinach and tender flakes of roasted cod, then",
+        "squeezing over.",
+        "BY CHEF GIUSEPPE",
+        "approximated. See details.",
+        "W H AT W E S E N D",
+        "1 1/2 tablespoon",
+        "1/2 ounce                       1/4 ounce                           10 ounces",
+        "tikka masala curry",
+        "coconut flakes                  ginger                              cod",
+        "paste",
+        "1/2 cup                         3 ounces",
+        "basmati rice                    baby spinach"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "tablespoon",
+          "quantity_4p_source": "3 stuks",
+          "original_quantity": "1 1/2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ounce                       1/4 ounce                           10 ounces",
+          "quantity_4p_source": "1 stuks",
+          "original_quantity": "1/2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cup                         3 ounces",
+          "quantity_4p_source": "1 stuks",
+          "original_quantity": "1/2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "17UgFkWxascHj9-rwQP83twCnCd74HSfk",
+      "original_filename": "Roasted Cod with Coconut Curry Rice _ Plated _ Cook more. Live better_.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedcodwithlemonbutersauceandparmesanmashedpotatoes",
+      "source": "Plated",
+      "title_extracted": "roasted cod with lemon buter sauce and parmesan mashed potatoes",
+      "source_file": "roasted cod with lemon buter sauce and parmesan mashed potatoes.pdf",
+      "drive_identity_hash": "e8c254278963e9fef838b114cd7a2ba9deb71aa8679ea376b10c6ae8af36081d",
+      "content_sha256": "46e1c3eb783641aa5a35ffded6666cee103ef1c2bbb1384bc22b34b7886ba5b9",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces red-skinned potatoes",
+        "3 ounces baby spinach",
+        "1 lemon",
+        "1 shallot",
+        "4 packets unsalted butter, divided",
+        "2 tablespoons sliced almonds",
+        "10 ounces cod"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1hB4eoMmZnGJK0MPbUnq7K-MNcGvdl-y5",
+      "original_filename": "roasted cod with lemon buter sauce and parmesan mashed potatoes.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedflounder",
+      "source": "Plated",
+      "title_extracted": "Roasted Flounder",
+      "source_file": "Roasted Flounder.pdf",
+      "drive_identity_hash": "f8e5349dca4ceea9bbc6b9bcaf26278b708dea868ce583c9cc523546c7276be7",
+      "content_sha256": "350a3b8da6fa26f2acb014c634e8d610279f715367ddb4b20090da90a44e9745",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 red bell pepper",
+        "1 yellow onion",
+        "½ cup jasmine rice",
+        "1 teaspoon ground annatto",
+        "2 packets unsalted butter",
+        "10 ounces flounder",
+        "2 tablespoons slivered almonds",
+        "¼ ounce parsley",
+        "1 lemon",
+        "1 clove garlic"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1T2lhwXpcPZpwa_jK-r4EDczOq3CdkDUj",
+      "original_filename": "Roasted Flounder.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedflounderwithbeurreblanc",
+      "source": "Plated",
+      "title_extracted": "Roasted Flounder with Beurre Blanc",
+      "source_file": "Roasted Flounder with Beurre Blanc.pdf",
+      "drive_identity_hash": "0dd433d69dbc13e374d468bb8a16b7c3170932e07744adb00cb7e753a488f8bd",
+      "content_sha256": "51da2b660144878f1c92cb31ac7ed1f1d48db9fe8913f3ece04496b48ba802d1",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces fingerling potatoes",
+        "8 ounces broccoli florets",
+        "⅛ ounce parsley",
+        "½ stick unsalted butter",
+        "1 clove garlic",
+        "1 shallot",
+        "1 tablespoon pine nuts",
+        "2 tablespoons white wine vinegar",
+        "1 container heavy cream",
+        "2 tablespoons currants"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1BRsPOmRtquWGd4mnyqrxmOLFmjUrcBsr",
+      "original_filename": "Roasted Flounder with Beurre Blanc.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedgrapeandbriecrostiniwithbutternutpistachioandspinachsaladplatedcookmorelivebet",
+      "source": "Plated",
+      "title_extracted": "Roasted Grape and Brie Crostini with Butternut, Pistachio, and Spinach Salad _ Plated _ Cook more. Live better_",
+      "source_file": "Roasted Grape and Brie Crostini with Butternut, Pistachio, and Spinach Salad _ Plated _ Cook more. Live better_.pdf",
+      "drive_identity_hash": "6f8738ec8223d24fca076643d635fe0ed6db34b6ab76444bbc7c6419a83f773f",
+      "content_sha256": "ff8edb40c17d02918a27143c44a8772e4ecbce6094c9861161820e4d32f19c94",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                        2",
+        "servings",
+        "These elegant crostini are so easy and impressive, you could enjoy",
+        "minutes",
+        "balsamic-roasted grapes. They're served with a seasonal salad of",
+        "spinach and roasted butternut squash.",
+        "COOKING SKILL                                      easy",
+        "Plus, we've got our chef-approved wine pairing: elegant, fresh,",
+        "bubbly Crémant d’Alsace.",
+        "BY CHEF LIZ",
+        "Vegetarian",
+        "approximated. See details.",
+        "W H AT W E S E N D"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1tcpJ1QJg9gLt5H8sjbFyp8YwwU2SO110",
+      "original_filename": "Roasted Grape and Brie Crostini with Butternut, Pistachio, and Spinach Salad _ Plated _ Cook more. Live better_.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedportobellomushroomtacoswithcreamyslawandcrispyshallots",
+      "source": "Plated",
+      "title_extracted": "Roasted Portobello Mushroom Tacos with Creamy Slaw and Crispy Shallots",
+      "source_file": "Roasted Portobello Mushroom Tacos with Creamy Slaw and Crispy Shallots.PDF",
+      "drive_identity_hash": "9cb92ee8722e3debbfd3d756ab3257d0f834edf73bb88eb8adc266cf223d708e",
+      "content_sha256": "f928db4f3660b70155773259e618f136e01c6b7a9784e69fd7bbf27ed217d82e",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "Preheat oven to 425°F. Halve lime. Peel",
+        "shallots and thinly slice into rings.",
+        "Mince garlic. Wipe mushrooms clean",
+        "with a damp paper towel and cut into",
+        "%-inch slices, discarding stems (see",
+        "Recipe Tip). Rinse cilantro and roughly",
+        "chop leaves, discarding stems. Rinse",
+        "scallions, trim and discard roots, and",
+        "thinly slice.",
+        "4. Make Slaw",
+        "While mushrooms roast, whisk together",
+        "mayonnaise, sour cream, garlic, juice",
+        "of 1 lime, andeilantro in a large bow!",
+        "until fully combined. Season with %",
+        "teaspoon salt and pepper as desired.",
+        "Add slaw mix and scallions and toss to",
+        "coat",
+        "3. Warm Tortillas",
+        "Stack tortillas, wrap in foil, and place in",
+        "oven to warm until ready to use.",
+        "2. Roast Mushrooms",
+        "Ona baking sheet, toss mushrooms",
+        "with'spice mix, 1% tablespoons olive",
+        "oil, % teaspoon salt, and pepper as",
+        "desired. Arrange in a single layer,",
+        "transfer to oven, and roast until lightly",
+        "browned and tender, about 15 minutes.",
+        "6. Plate Tacos",
+        "5. Fry Shallots",
+        "Heat 3 tablespoons canola oil in a large",
+        "pan over medium-high heat. When oil is",
+        "shimmering, add shallots in a single",
+        "layer and fry without moving until crisp",
+        "on bottom, about 1 minute, then stir and",
+        "continue cooking until crisp all over,",
+        "about 2 minutes more. Using a slotted",
+        "spoon, transfer to a paper towel-lined",
+        "plate to drain.",
+        "Top tortillas with roasted mushrooms.",
+        "Add slaw and garnish with erispy",
+        "shallots. Enjoy your killer taco night.",
+        "Join the Plated communi",
+        "Post your #platedpics this week! # ¥ @",
+        "Meaty portobello mushrooms make a super satisfying filling for these",
+        "@ Roasted Portobello Pees esa aeas Fedshodl eh oheewake temediae create:",
+        "this Mexican-inspired meal provides a serious amount of flavor and",
+        "Mushroom Tacos | eau",
+        "with Creamy Slaw 22¢ Crispy Shallots",
+        "30-40 minutes Serves2 people —_§50 calories per serving"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1fNtE3R_qqCTPJh9NI_U32LgW89RqPtFH",
+      "original_filename": "Roasted Portobello Mushroom Tacos with Creamy Slaw and Crispy Shallots.PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedsalmonwithbokchoyriceandjalapenolimeglazeplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Roasted Salmon with Bok Choy Rice and Jalapeño-Lime Glaze _ Plated _ Cook more. Live better_",
+      "source_file": "Roasted Salmon with Bok Choy Rice and Jalapeño-Lime Glaze _ Plated _ Cook more. Live better_.pdf",
+      "drive_identity_hash": "2e4d3ceacc6c0c361e967e3717e7b87e7788d682987eedfcb28a01f6574d9867",
+      "content_sha256": "822f5584501500039271f0e40f0cf2ae9e416dd7d46a015e5733358758c2a117",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                                2",
+        "servings",
+        "minutes",
+        "even further, if you're into it.)",
+        "COOKING SKILL                                             easy",
+        "No Gluten Ingredients*    < 600 Calories   Low Carb Diet   Quick Cook",
+        "BY CHEF GRACE",
+        "approximated. See details.",
+        "W H AT W E S E N D",
+        "2 packets                                       1 packet",
+        "gluten-free soy sauce                           honey"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "packets                                       1 packet",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1qT67DI-5e9PlwzKxjD06F4ymQvfDbhqb",
+      "original_filename": "Roasted Salmon with Bok Choy Rice and Jalapeño-Lime Glaze _ Plated _ Cook more. Live better_.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedsalmonwithjalapenolimeglaze",
+      "source": "Plated",
+      "title_extracted": "Roasted Salmon with Jalapeno Lime Glaze",
+      "source_file": "Roasted Salmon with Jalapeno Lime Glaze.pdf",
+      "drive_identity_hash": "aa3c8d3560f38038f194a88e85319b0d26151819c0d79ef7eb14509fdf47fbd1",
+      "content_sha256": "4fa7e8775ea440afbe9abd24111c70941e72f0998e03b1a98b3c5fa9abe13fdb",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 cup jasmine rice",
+        "1 pound baby bok choy",
+        "2 limes",
+        "¼ ounce ginger",
+        "3 scallions",
+        "4 cloves garlic",
+        "2 jalapeños",
+        "1½ ounces honey"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1HnBl7blUGkOPIzv6imOes6eqekZ8M1_L",
+      "original_filename": "Roasted Salmon with Jalapeno Lime Glaze.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedsquashandricottapizza",
+      "source": "Plated",
+      "title_extracted": "Roasted Squash and Ricotta Pizza",
+      "source_file": "Roasted Squash and Ricotta Pizza.pdf",
+      "drive_identity_hash": "a2db68a1816f0461b9329b3e4581fc89d5e51441dfb8f414fa4e1c8b39c9bd46",
+      "content_sha256": "23836de5fc68dcc5deea2846f446db396a14ff753aa6d4b2f4be2fc861917e89",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces pizza dough",
+        "1 delicata squash",
+        "1 herb mix",
+        "⅛ ounce rosemary",
+        "⅛ ounce sage",
+        "1 lemon",
+        "1 red onion",
+        "2 ounces shredded mozzarella cheese",
+        "4 ounces ricotta cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1SYTlpO_ueEH4Wigovi0quPFPKieVLhZz",
+      "original_filename": "Roasted Squash and Ricotta Pizza.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedsweetpotatopokebowl",
+      "source": "Plated",
+      "title_extracted": "Roasted Sweet Potato Poke Bowl",
+      "source_file": "Roasted Sweet Potato Poke Bowl.pdf",
+      "drive_identity_hash": "f6baa4b7776687044b9e4df775ce4a6113f0ee965e9c3c7b32c713e8b2e5aa30",
+      "content_sha256": "2b0b485750ff83c0459822d02914bf90038c2c3ff0b61d4ef02100b78869b33a",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 clove garlic",
+        "1 Persian cucumber",
+        "2 scallions",
+        "2 sweet potatoes",
+        "¾ cup brown rice",
+        "1 tablespoon sesame seeds",
+        "2 packets mayonnaise",
+        "1 packet Sriracha hot sauce"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "2 clove",
+          "original_quantity": "1 clove",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Persian cucumber",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "scallions",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sweet potatoes",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sesame seeds",
+          "quantity_4p_source": "2 tablespoon",
+          "original_quantity": "1 tablespoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "mayonnaise",
+          "quantity_4p_source": "4 packets",
+          "original_quantity": "2 packets",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Sriracha hot sauce",
+          "quantity_4p_source": "2 packet",
+          "original_quantity": "1 packet",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1oYOXNp55aE9qGa-fr9a_6TEEbX_W8FqD",
+      "original_filename": "Roasted Sweet Potato Poke Bowl.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedvegetablebowlswithsesamequinoa",
+      "source": "Plated",
+      "title_extracted": "Roasted Vegetable Bowls with Sesame Quinoa",
+      "source_file": "Roasted Vegetable Bowls with Sesame Quinoa.pdf",
+      "drive_identity_hash": "035bc2f7ec09462d7fc82997ef49b15eaa12ba5ab6b914e42349f4a56d06edc8",
+      "content_sha256": "38dcb8a42ce368c95e581010234f9a5bbdbe116144827dd1c6d8a32aaa91a65d",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 ounces parsnips",
+        "1 sweet potato",
+        "8 ounces Brussels sprouts",
+        "⅛ ounce cilantro",
+        "2 packets organic tamari",
+        "1 packet Dijon mustard",
+        "2 packets Sriracha hot sauce"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "parsnips",
+          "quantity_4p_source": "12 ounces",
+          "original_quantity": "6 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "sweet potato",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Brussels sprouts",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "organic tamari",
+          "quantity_4p_source": "4 packets",
+          "original_quantity": "2 packets",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Dijon mustard",
+          "quantity_4p_source": "2 packet",
+          "original_quantity": "1 packet",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Sriracha hot sauce",
+          "quantity_4p_source": "4 packets",
+          "original_quantity": "2 packets",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1HV1luNfZa_t6-sdGbg7RhN1avgoGmvlf",
+      "original_filename": "Roasted Vegetable Bowls with Sesame Quinoa.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedzucchinibibimbap",
+      "source": "Plated",
+      "title_extracted": "Roasted Zucchini Bibimbap",
+      "source_file": "Roasted Zucchini Bibimbap.pdf",
+      "drive_identity_hash": "b728e465107ca04b51e66b8a313839ba394e9fa1e6814d82aa7f59db2e12d442",
+      "content_sha256": "805049fcd2bca3ddcd6fa9dae50fb182e656b644688248ca4704b432d3713764",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¾ cup sticky rice",
+        "8 ounces zucchini",
+        "4 ounces baby spinach",
+        "1 clove garlic",
+        "1 tablespoon dark brown sugar",
+        "2 tablespoons gluten-free soy sauce",
+        "1 tablespoon gochujang",
+        "1 slaw mix",
+        "¼ cup shredded red cabbage",
+        "¼ cup shredded carrots",
+        "from heat and let stand, still covered, for    sesame oil until fully combined. Add",
+        "10 minutes. Fluff rice with a fork, then       zucchini and toss to coat."
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1wpHhWI8XvHe6cN3qWFYLtnWkovQ317H0",
+      "original_filename": "Roasted Zucchini Bibimbap.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-roastedchickenandtomatilloricebowlwithcrispytortillas",
+      "source": "Plated",
+      "title_extracted": "RoastedChicken and Tomatillo Rice Bowl with Crispy Tortillas",
+      "source_file": "RoastedChicken and Tomatillo Rice Bowl with Crispy Tortillas.PDF",
+      "drive_identity_hash": "c62702cd0062a45c196525bd62102c7a3d59b574d48c777fa9944595c245c101",
+      "content_sha256": "004319b6b57569ff4508b91e06a4baacf799c926ea600b0d4805ba41cf2391c6",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "While rice cooks, rinse all produce.",
+        "Shuck tomatillos if necessary,",
+        "discarding husks, then halve. Halve",
+        "poblano pepper lengthwise, discarding",
+        "seeds, then cut into %-inch strips. Halve",
+        "lime. Pick cilantro leaves, discarding",
+        "stems.",
+        "5. Make Crema and Salsa",
+        "While vegetables roast, whisk together",
+        "yogurt and juice of 1 lime in a medium",
+        "bowl to make crema. Taste and add salt",
+        "and pepper as needed. Remove",
+        "vegetables from oven, cut into %-inch",
+        "dice, and place in a separate medium",
+        "bowl to make salsa. Add cilantro and 1",
+        "tablespoon olive oil and toss to coat.",
+        "Taste and add salt and pepper as",
+        "needed.",
+        "3. Sear Chicken",
+        "Rinse chicken and pat dry with paper",
+        "towel. Season on both sides with salt",
+        "and pepper. Heat 1 tablespoon olive oil",
+        "in a medium pan over medium-high",
+        "heat. When oil is shimmering, add",
+        "chicken and sear until browned on",
+        "bottom, 5-6 minutes. Flip and sear until",
+        "chicken is cooked through and no",
+        "longer pink, 5-6 minutes more. Remove",
+        "from pan and shred into bite-size pieces",
+        "using 2 forks or tongs.",
+        "6. Plate Bowls",
+        "Taste rice and add salt and pepper as.",
+        "needed. Divide evenly between 2 bowls.",
+        "Spoon over chicken, then salsa. Dollop",
+        "over crema, garnish with tortilla strips,",
+        "and serve.",
+        "Join the Plated community - post your",
+        "#platedpics this week! OH",
+        "Q- RECIPE TIPS",
+        "Be sure to read through the entire recipe",
+        "before you begin cooking. Trust us—you'll",
+        "be glad you did!",
+        "Rinse chicken and pat dry with paper",
+        "towel. A slight odor is a natural reaction",
+        "to vacuum packing.",
+        "To prepare tomatillos, peel husks back",
+        "from the skin, remove, and discard, Be",
+        "sure to rinse well before cooking to",
+        "remove sticky film left by the husks.",
+        "1 shallot",
+        "1. teaspoon dried oregano",
+        "% cup white rice",
+        "8 ounces chicken stock",
+        "5 ounces tomatillos",
+        "poblano pepper",
+        "lime",
+        "% bunch cilantro",
+        "2 boneless chicken breasts",
+        "2. corn tortillas",
+        "% teaspoon chili powder",
+        "3. tablespoons nonfat Greek yogurt"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "shallot",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "chicken stock",
+          "quantity_4p_source": "16 ounces",
+          "original_quantity": "8 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tomatillos",
+          "quantity_4p_source": "10 ounces",
+          "original_quantity": "5 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "boneless chicken breasts",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1R118-Fq8AdjvxFOuRr9CecArdEjoLjq7",
+      "original_filename": "RoastedChicken and Tomatillo Rice Bowl with Crispy Tortillas.PDF",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-rosemaryporkchopwithfigcompoteandchivebutterpotatoes",
+      "source": "Plated",
+      "title_extracted": "Rosemary Pork Chop with Fig Compote and Chive Butter Potatoes",
+      "source_file": "Rosemary Pork Chop with Fig Compote and Chive Butter Potatoes.pdf",
+      "drive_identity_hash": "fb9901d0e5eddbb482062f4d7b017b0c8dd1e6d4b3929653018b7952956f0fc5",
+      "content_sha256": "9d9673a7d9e1e2feeace9800f0a79e65efd1528131bfda18110857a9e5e235d3",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 ounces green beans",
+        "8 ounces peanut potatoes",
+        "1 herb mix",
+        "⅛ ounce chives, divided",
+        "⅛ ounce rosemary",
+        "3 packets unsalted butter, divided",
+        "4 ounces dried Mission figs",
+        "1 tablespoon sugar",
+        "1 cinnamon stick"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1lVB37Zmgj1r_VVjeQk7V9YooDzcKLpMI",
+      "original_filename": "Rosemary Pork Chop with Fig Compote and Chive Butter Potatoes.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-sagechickenmilanese",
+      "source": "Plated",
+      "title_extracted": "Sage Chicken Milanese",
+      "source_file": "Sage Chicken Milanese.pdf",
+      "drive_identity_hash": "41cf130292b44846e165d0827b43a5b10fb9d4b174fd37179de31083c764a669",
+      "content_sha256": "faa5f97e83c13d1ab8b8d3ea8c29ece8f477a224cec6fdc4a6e3bfb8c7fc6bad",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces butternut squash",
+        "¼ ounce sage",
+        "2 cloves garlic",
+        "¼ cup plain breadcrumbs",
+        "½ cup panko breadcrumbs",
+        "1 ounce grated Parmesan cheese,",
+        "2 boneless skinless chicken breasts",
+        "2 packets unsalted butter",
+        "⅓ cup balsamic vinegar"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1RMjAeLm6az4VhrYzn39VRA9qqOCsgG_e",
+      "original_filename": "Sage Chicken Milanese.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-salmonandbokchoystirfryoverbrownrice",
+      "source": "Plated",
+      "title_extracted": "salmon and bok choy stir fry over brown rice (1)",
+      "source_file": "salmon and bok choy stir fry over brown rice (1).pdf",
+      "drive_identity_hash": "cbff8dfdd72238e99b154e9ec37766c4af87e9fc4c6912709461e2170861f781",
+      "content_sha256": "190f4ca9d8435b9e923e9c6b9e2c7aea54bfcfab0454929a5a6336c43cba5452",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces baby bok choy, divided",
+        "8 ounces broccoli",
+        "1 scallion",
+        "1 clove garlic",
+        "% ounce ginger",
+        "1 cup brown rice",
+        "2 fillets wild Alaskan salmon",
+        "1 tablespoon sesame oil, divided",
+        "3 tablespoons oyster sauce",
+        "3 packets gluten-free soy sauce",
+        "2 tablespoons rice wine vinegar",
+        "% cup shredded carrots"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1JJgrvdty6AFYxvYzzmU6lRZ0YKJbFUhT",
+      "original_filename": "salmon and bok choy stir fry over brown rice (1).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-salmoncoconutcurrywithroastedcauliflowerandcarrotsplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Salmon Coconut Curry with Roasted Cauliflower and Carrots _ Plated _ Cook more. Live better_",
+      "source_file": "Salmon Coconut Curry with Roasted Cauliflower and Carrots _ Plated _ Cook more. Live better_.pdf",
+      "drive_identity_hash": "b10a21443971b4d15f3bea98bbbfd36e67fc00bd46cba5ccf879378576219bf0",
+      "content_sha256": "7b9246efcd8cee50b888e7edd152e0bc75b1f0df052774db89395709ad8d499b",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                        2",
+        "servings",
+        "Chef Liz riffs on our creamy coconut curry with this flavorful",
+        "minutes",
+        "fish is tender and the vegetables are golden. The vegetables",
+        "are stirred into a coconut milk and vindaloo curry that's served",
+        "over top for elegant presentation.",
+        "BY CHEF LIZ",
+        "approximated. See details.",
+        "W H AT W E S E N D",
+        "10 ounces",
+        "salmon"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "ounces",
+          "quantity_4p_source": "20 stuks",
+          "original_quantity": "10 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1uaVh54xGAbujV_AHbGPZhvOW_-QNzTTk",
+      "original_filename": "Salmon Coconut Curry with Roasted Cauliflower and Carrots _ Plated _ Cook more. Live better_.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-salmonenpapillotewithfennelwhitebeansandpistachiogremolataplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Salmon en Papillote with Fennel, White Beans, and Pistachio Gremolata _ Plated _ Cook more. Live better_ (1)",
+      "source_file": "Salmon en Papillote with Fennel, White Beans, and Pistachio Gremolata _ Plated _ Cook more. Live better_ (1).pdf",
+      "drive_identity_hash": "e4c50aadc06eb93521186c853b0ca9cb0ecf5c3450875c269962c09b80edbb04",
+      "content_sha256": "1df9bd6c4bc8264ab3fe016e3844422abb28be243b23df42b4a0922a525b5542",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                     2",
+        "servings",
+        "Sometimes, an elegant meal can be the perfect pick-me-up for",
+        "minutes",
+        "olive oil, then paired with roasted carrots, fennel, and toasted",
+        "white beans. On top, pistachio gremolata provides bright color",
+        "Plus, we've got our chef-approved wine pairing: rich, buttery",
+        "California Chardonnay.",
+        "BY CHEF SHANNA",
+        "approximated. See details.",
+        "W H AT W E S E N D",
+        "1/4 ounce                     1/4 ounce                           1 packet",
+        "chives                        parsley                             unsalted butter"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "ounce                     1/4 ounce                           1 packet",
+          "quantity_4p_source": "1/2 stuks",
+          "original_quantity": "1/4 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1C0e60CJ22MAul21yy_rFQnHnPkShRgVM",
+      "original_filename": "Salmon en Papillote with Fennel, White Beans, and Pistachio Gremolata _ Plated _ Cook more. Live better_ (1).pdf",
+      "same_title_candidates": [
+        "Salmon en Papillote with Fennel, White Beans, and Pistachio Gremolata _ Plated _ Cook more. Live better_.pdf"
+      ]
+    },
+    {
+      "id": "plated-salmonnicoise",
+      "source": "Plated",
+      "title_extracted": "Salmon Nicoise",
+      "source_file": "Salmon Nicoise.pdf",
+      "drive_identity_hash": "ebdabe1348228d40d5d1f05e5859912b017d7033f155d1619c6b4c214df5e65b",
+      "content_sha256": "5b26478eb77ed6449939f1982245f52375f3b6bc26edf6245a152dfa7f711bd5",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "6 ounces green beans",
+        "½ English cucumber",
+        "1 plum tomato",
+        "1 herb mix",
+        "⅛ ounce chives",
+        "⅛ ounce parsley",
+        "1 shallot",
+        "1 tablespoon Champagne vinegar",
+        "1 packet Dijon mustard"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1imDMWa6x1zTdCJLmJLIkn-725UyokabS",
+      "original_filename": "Salmon Nicoise.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-salmonnicoisewithpurplepotatoesandharicotsverts",
+      "source": "Plated",
+      "title_extracted": "salmon nicoise with purple potatoes and haricots verts (1)",
+      "source_file": "salmon nicoise with purple potatoes and haricots verts (1).pdf",
+      "drive_identity_hash": "7a64cb9cf28153f0e81909612de3d45a7272950dd070fa0a61708044ec26258f",
+      "content_sha256": "0373679eea08aa4c850a4c45621bd947b25318a8e314076e0b4cf9e155979954",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "Preheat oven to 425°F. Rinse all",
+        "produce. Trim and discard ends of",
+        "haricots verts (see Recipe Tip). Halve",
+        "potatoes and place on a baking sheet",
+        "then set aside. Trim off % inch of dark",
+        "green tops of frisée, and trim and",
+        "discard tough stem. Cut or tear frisée",
+        "and butter lettuce into bite-size pieces.",
+        "Peel shallot and mince.",
+        "Roast Vegetables",
+        "After 10 minutes of potatoes roasting,",
+        "remove baking sheet f ar",
+        "gently push potatoes tc f",
+        "sheet, keeping cut",
+        "other half, t tomatoes haricots",
+        "verts",
+        "teaspoon salt",
+        "vith 1 teaspoon olive oil, %",
+        "pepper",
+        "2. Roast Potatoes",
+        "Toss potatoes on baking sheet with 1",
+        "tablespoon olive oil, % teaspoon salt",
+        "and pepper as desired. Arrange cut-",
+        "side down in a single layer and roast",
+        "until slightly tender, about 10 minutes",
+        "5. Sear Salmon",
+        "etables roast, pat salmon dry",
+        "paper towel and season all over",
+        "h % teaspoon salt and pepper. Wipe",
+        "allot clean and add %",
+        "tablespoon olive oil over medium heat.",
+        "9, add salmon",
+        "ar until golden on",
+        "ontinue",
+        "salmon to rest",
+        "3. Make Shallot Vinaigrette",
+        "Heat 3 tablespoons olive oil in a",
+        "medium pan over medium heat. When",
+        "oil is shimmering, add herbes de",
+        "Provence and shallot. Season with Ye",
+        "teaspoon salt and pepper as desired.",
+        "Cook, stirring, until shallot is soft and",
+        "translucent, about 3 minutes. Remove",
+        "pan from heat and transfer sautéed",
+        "shallot and oil to a large bowl,",
+        "reserving pan for Step 5. Whisk red",
+        "wine vinegar into bow! with shallot to",
+        "combine, then set aside.",
+        "6. Plate Salmon Nigoise",
+        "While salmon rests, add frisée, butter",
+        "lettuce, and roasted vegetables to",
+        "bow! with shallot vinaigrette, and toss",
+        "to coat. Divide salad between serving",
+        "plates, sprinkle over feta and olives,",
+        "and top with salmen. Enjoy your",
+        "colorful French meal!",
+        "f ¥ Join the Plated community | 2",
+        "@ uur #platedpics!",
+        "1 as prepared in Nice, a coastal city on the",
+        "Salmon Nicoise ip  enchovy. Toda",
+        "which pair brilliantly with",
+        "ans, and a delicate mix of frisée",
+        "‘ound out the pop of colors",
+        "P.",
+        "with Purple Potatoes 2% Haricots Verts"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "13hXVcYRhYyLbfrEm_rULjWuw93ltKPbL",
+      "original_filename": "salmon nicoise with purple potatoes and haricots verts (1).pdf",
+      "same_title_candidates": [
+        "salmon nicoise with purple potatoes and haricots verts.pdf"
+      ]
+    },
+    {
+      "id": "plated-salmonteriyakiwithavoicadoandcarrotgingerdressing",
+      "source": "Plated",
+      "title_extracted": "Salmon teriyaki with avoicado and carrot-ginger dressing",
+      "source_file": "Salmon teriyaki with avoicado and carrot-ginger dressing.pdf",
+      "drive_identity_hash": "bd1ebbbcb745edc5494e32cf462a9d8bab33420f4f61f8f89a0ee850adc00cfd",
+      "content_sha256": "a0fadb8730b537edb3d33eb31529786b10a5f4cd7b6e243dc71fd7bb95e19d93",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¼ cup teriyaki sauce",
+        "¼ cup hoisin sauce",
+        "2 fillets wild Alaskan salmon",
+        "½ ounce ginger",
+        "2 heads Boston lettuce",
+        "3 ounces shredded carrots",
+        "1 avocado"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "fillets wild Alaskan salmon",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "heads Boston lettuce",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "shredded carrots",
+          "quantity_4p_source": "6 ounces",
+          "original_quantity": "3 ounces",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "avocado",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1BTH9Dx0dsb3hX1fjmbhxnDg_23DP16Op",
+      "original_filename": "Salmon teriyaki with avoicado and carrot-ginger dressing.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-salmonveracruzwithcastelvetranoolivesandroastedpotatoesplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Salmon Veracruz with Castelvetrano Olives and Roasted Potatoes _ Plated _ Cook more. Live better_ (1)",
+      "source_file": "Salmon Veracruz with Castelvetrano Olives and Roasted Potatoes _ Plated _ Cook more. Live better_ (1).pdf",
+      "drive_identity_hash": "b79a90476c5fc0afcda83f12382ae79c28ddd640a91a50dfaad06421704101e3",
+      "content_sha256": "6232f9085b641627cc54ada7d29aef4f9215d450f9297826d2f50c088b8fa1ee",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                                 2",
+        "servings",
+        "The signature dish of Veracruz, Mexico, is made with a tomato-based sauce, briny from the",
+        "minutes",
+        "rice or, as we've done here, with crispy potatoes to swipe up all the sauce.",
+        "COOKING SKILL                                             Medium",
+        "BY CHEF GIUSEPPE",
+        "is approximated. See details.",
+        "W H AT W E S E N D",
+        "1",
+        "parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1UEZ1M8fLkGwgGTjw192-kCWo_ZbIMCvg",
+      "original_filename": "Salmon Veracruz with Castelvetrano Olives and Roasted Potatoes _ Plated _ Cook more. Live better_ (1).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-salmonradishandquinoabowlswithapricotjamvinaigretteplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Salmon, Radish, and Quinoa Bowls with Apricot Jam Vinaigrette _ Plated _ Cook more. Live better_ (1)",
+      "source_file": "Salmon, Radish, and Quinoa Bowls with Apricot Jam Vinaigrette _ Plated _ Cook more. Live better_ (1).pdf",
+      "drive_identity_hash": "33d8fad7619407decf79f06807e39b9abfa11049da582dba93467b4e9501bbb7",
+      "content_sha256": "f8854bb3f1da0e0d8abe661f469d2d696a8f3ea60bf303edc21590b7a2dfdb23",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "BY CHEF GIUSEPPE",
+        "approximated. See details.",
+        "W H AT W E S E N D",
+        "1                               3 ounces",
+        "lime                            baby arugula"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1ESr940tM1clEyNGlsm7Knr6CluIoHCIU",
+      "original_filename": "Salmon, Radish, and Quinoa Bowls with Apricot Jam Vinaigrette _ Plated _ Cook more. Live better_ (1).pdf",
+      "same_title_candidates": [
+        "Salmon, Radish, and Quinoa Bowls with Apricot Jam Vinaigrette _ Plated _ Cook more. Live better_.pdf"
+      ]
+    },
+    {
+      "id": "plated-salmongingercakes",
+      "source": "Plated",
+      "title_extracted": "Salmon-Ginger Cakes (4)",
+      "source_file": "Salmon-Ginger Cakes (4).pdf",
+      "drive_identity_hash": "67492269ab370751f5f548445bf0e6127af696aee4ef9fbc5ad1ef48af5b393b",
+      "content_sha256": "d147bf01e26dc2026fdc283da95c29c91940e52a0d608c113bcd80b11ec7c453",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1½ cups sticky rice",
+        "⅓ ounce ginger",
+        "2 cloves garlic",
+        "¼ cup panko breadcrumbs",
+        "1 tablespoon sesame oil",
+        "1¼ pounds ground salmon",
+        "3 Persian cucumbers",
+        "⅔ cup shredded red cabbage",
+        "⅔ cup shredded carrots",
+        "1 tablespoon miso paste"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1cvc6IrLZ5zlpadaosKVDXZtITs-bFDqc",
+      "original_filename": "Salmon-Ginger Cakes (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-saucymeatballsliders",
+      "source": "Plated",
+      "title_extracted": "Saucy Meatball Sliders (3)",
+      "source_file": "Saucy Meatball Sliders (3).pdf",
+      "drive_identity_hash": "47af1fa00a577d32a8d856842050b72d72805e4501b5c1b1052ead3fd171dad8",
+      "content_sha256": "2749518cff049e2fa54e590c66ec7af054062aaba11d4a3793ab9a2c7a88e4d8",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 romaine hearts",
+        "2 lemons",
+        "1 clove garlic",
+        "½ cup breadcrumbs",
+        "4 ounces ricotta cheese",
+        "1 16-ounce jar marinara sauce,",
+        "9 brioche slider buns",
+        "½ teaspoon anchovy paste",
+        "tough stems. Halve lemons. Mince garlic     towel. Reserve a small handful of beef"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1S5MZ0nCoPptpF2LYUX2OVJTcHUnC0Qc0",
+      "original_filename": "Saucy Meatball Sliders (3).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-scallopfradiavolowithlinguineandparmesanbreadcrumbsplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Scallop Fra Diavolo with Linguine and Parmesan Breadcrumbs _ Plated _ Cook more. Live better_",
+      "source_file": "Scallop Fra Diavolo with Linguine and Parmesan Breadcrumbs _ Plated _ Cook more. Live better_.pdf",
+      "drive_identity_hash": "14b7ee6b3c04b63fd18377cc4f5d9267340d499b86cabd8dfbda2cd256242202",
+      "content_sha256": "0ec27ec430fe84baa0d9de096a73aa5729ca54330bb24b1c5f2d2f0f3a52371f",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                                2",
+        "servings",
+        "Feeling a little devilish? Then you’ll love our latest take on Italian-American fra diavolo, or",
+        "minutes",
+        "skinny noodle just wide enough to hold onto more sauce.",
+        "COOKING SKILL                                            Medium",
+        "Stovetop Only     Quick Cook",
+        "BY CHEF SHANNA",
+        "is approximated. See details.",
+        "W H AT W E S E N D",
+        "1/2 ounce",
+        "grated Parmesan cheese"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "ounce",
+          "quantity_4p_source": "1 stuks",
+          "original_quantity": "1/2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "16Fr1CWCByPoQqzEwsJ0kUVMRdQ5kKsh-",
+      "original_filename": "Scallop Fra Diavolo with Linguine and Parmesan Breadcrumbs _ Plated _ Cook more. Live better_.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-scalloppennewithmintspinachpestoroastedmushroomsandwalnutsplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Scallop Penne with Mint-Spinach Pesto, Roasted Mushrooms, and Walnuts _ Plated _ Cook more. Live better_",
+      "source_file": "Scallop Penne with Mint-Spinach Pesto, Roasted Mushrooms, and Walnuts _ Plated _ Cook more. Live better_.pdf",
+      "drive_identity_hash": "4c3e650815e53ecb2c26f36a716c851be5b16a12d047d20b4eb785441393dc43",
+      "content_sha256": "9b9fb4dc606de681904d072a47cb18707cb08e62a2e020415d786e70e799aeb1",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                     2",
+        "servings",
+        "Ever since our kale-walnut pesto really did the trick as far as",
+        "minutes",
+        "fresh spinach for heft and extra greenery. The punchy sauce is",
+        "tossed with sweet seared scallops, al dente pasta, and smoky",
+        "Quick Cook",
+        "BY CHEF GIUSEPPE",
+        "approximated. See details.",
+        "W H AT W E S E N D",
+        "6 ounces",
+        "whole-wheat penne",
+        "pasta",
+        "1 ounce",
+        "shaved Parmesan",
+        "cheese"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "ounces",
+          "quantity_4p_source": "12 stuks",
+          "original_quantity": "6 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ounce",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1ZHUs_mPz3RTM8Nzm0Q6efPIR6b4Yyb5I",
+      "original_filename": "Scallop Penne with Mint-Spinach Pesto, Roasted Mushrooms, and Walnuts _ Plated _ Cook more. Live better_.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-scalloppiccataoverangelhairpastaandbroccoliniplatedcookmorelivebetter",
+      "source": "Plated",
+      "title_extracted": "Scallop Piccata over Angel Hair Pasta and Broccolini _ Plated _ Cook more. Live better_",
+      "source_file": "Scallop Piccata over Angel Hair Pasta and Broccolini _ Plated _ Cook more. Live better_.pdf",
+      "drive_identity_hash": "fceff4954d8f6a82245659e7bfac4d605fdd73058d9ff1562bf3948790af9f63",
+      "content_sha256": "427895e12bc560c11e81dfa59d6ac3a6a63ef85fed3f69f1b11ec3138320adc8",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "SERVING SIZE                                     2",
+        "servings",
+        "Customers raved so much about our chicken piccata that we've",
+        "minutes",
+        "bring bright and briny contrast to sweet, tender bay scallops in a",
+        "silky butter sauce. It's all served over roasted broccolini and thin",
+        "BY CHEF LIZ",
+        "approximated. See details.",
+        "W H AT W E S E N D",
+        "1 ounce",
+        "grated Parmesan",
+        "cheese",
+        "2 cloves",
+        "garlic"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "ounce",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "cloves",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1V7p72iRrmMMxnId0-S2n4jK_JejStWkL",
+      "original_filename": "Scallop Piccata over Angel Hair Pasta and Broccolini _ Plated _ Cook more. Live better_.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-searedsalmonwithcreamymustardcharredlemonandisraelicouscous",
+      "source": "Plated",
+      "title_extracted": "Seared Salmon with Creamy Mustard, Charred Lemon, and Israeli Couscous(1)(1)",
+      "source_file": "Seared Salmon with Creamy Mustard, Charred Lemon, and Israeli Couscous(1)(1).pdf",
+      "drive_identity_hash": "86bafa982f288ac6718f2fd77908d7eea433f807267e4cca59f9f7e64ef4cb36",
+      "content_sha256": "a0e1553f1ad60d50ea11ae0efa61b2d053e6a0c869e084f29a53d5e4131b99ad",
+      "ocr_method": "pdf_text",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "medium and simmer until liquid is",
+        "absorbed and couscous is tender, about       2 lemons, divided",
+        "8 minutes. Remove pan from heat.             3 sprigs thyme, divided",
+        "Taste and add salt and pepper as             8 ounces asparagus",
+        "needed.                                      2 fillets wild Alaskan salmon",
+        "2 tablespoons whole grain mustard",
+        "2 packets mayonnaise",
+        "1   cup Israeli couscous",
+        "2 containers chicken stock"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "minutes. Remove pan from heat.             3 sprigs thyme, divided",
+          "quantity_4p_source": "16 stuks",
+          "original_quantity": "8 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "whole grain mustard",
+          "quantity_4p_source": "4 tablespoons",
+          "original_quantity": "2 tablespoons",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "mayonnaise",
+          "quantity_4p_source": "4 packets",
+          "original_quantity": "2 packets",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "Israeli couscous",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "containers chicken stock",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1S1BCuHfnmcnaGN3FWA80dSgt27kUwl5X",
+      "original_filename": "Seared Salmon with Creamy Mustard, Charred Lemon, and Israeli Couscous(1)(1).pdf",
+      "same_title_candidates": [
+        "Seared Salmon with Creamy Mustard, Charred Lemon, and Israeli Couscous(1).pdf",
+        "Seared Salmon with Creamy Mustard, Charred Lemon, and Israeli Couscous.pdf"
+      ]
     }
   ]
 }
