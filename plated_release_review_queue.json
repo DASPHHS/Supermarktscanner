@@ -2,10 +2,10 @@
   "metadata": {
     "source": "Plated GitHub Release",
     "archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
-    "updated_at_utc": "2026-10-29T07:54:33.759621+00:00",
-    "count": 491,
+    "updated_at_utc": "2026-10-29T07:59:08.525173+00:00",
+    "count": 504,
     "status": "manual_review_required",
-    "imported": 491
+    "imported": 504
   },
   "recipes": [
     {
@@ -13418,6 +13418,39 @@
       "source_member": "Plated recipes from Marc Hummel [Download folder]/leek and gruyère galette with dijon, shallot, and pine nuts-4282.pdf"
     },
     {
+      "id": "plated-lemonpoppyseeddoughnuts",
+      "source": "Plated",
+      "title_extracted": "Lemon Poppy Seed Doughnuts",
+      "source_file": "Lemon Poppy Seed Doughnuts.pdf",
+      "drive_identity_hash": "f76b8063eebae02f51560f52ec06d219ed42d943748f732efb460f6288bbcfad",
+      "content_sha256": "20099ec63844805b78690b005283405590c0de608c9e7cfb9440dcdc3cbf6ee4",
+      "ocr_method": "ocr_unverified",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "2 cups powdered sugar",
+        "1 container milk",
+        "tablespoons poppy seeds",
+        "packets unsalted butter",
+        "ounces sour cream",
+        "cups flour",
+        "tablespoons granulated sugar",
+        "teaspoons baking powder"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Lemon Poppy Seed Doughnuts.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Lemon Poppy Seed Doughnuts.pdf"
+    },
+    {
       "id": "plated-lemonhoneychicken",
       "source": "Plated",
       "title_extracted": "Lemon-Honey Chicken (3)",
@@ -22924,6 +22957,484 @@
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Turkey Meatballs.pdf",
       "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
       "source_member": "Plated recipes from Marc Hummel [Download folder]/Turkey Meatballs.pdf"
+    },
+    {
+      "id": "plated-turkeyspinachburgers",
+      "source": "Plated",
+      "title_extracted": "Turkey-Spinach Burgers",
+      "source_file": "Turkey-Spinach Burgers.pdf",
+      "drive_identity_hash": "e71eaf1c52a01b8e157831c2abe2a41a6587ca91108811b11b603da58e36f9b1",
+      "content_sha256": "a4e2d420e03bc464c1d9d81abff0ff19a8b84e9393e43c25b290b74b5c9b45ad",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "1½ pounds baby carrots",
+        "2 ounces baby spinach",
+        "3 scallions",
+        "3 cloves garlic, divided",
+        "½ teaspoon ground cumin",
+        "1½ pounds ground turkey",
+        "4 brioche buns"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Turkey-Spinach Burgers.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Turkey-Spinach Burgers.pdf"
+    },
+    {
+      "id": "plated-tuscanchickenwithsundriedtomatoes",
+      "source": "Plated",
+      "title_extracted": "Tuscan Chicken with Sun-Dried Tomatoes",
+      "source_file": "Tuscan Chicken with Sun-Dried Tomatoes.pdf",
+      "drive_identity_hash": "4167ade35321fe4547bf791159b470bc07762d1fa12590860504f00d099f366c",
+      "content_sha256": "5c2f506688d4deef2b261423af8983812df5c53b2e619a2f6915ea36ad7d0cf4",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 14½-ounce cans diced tomatoes",
+        "1¼ pounds Yukon Gold potatoes",
+        "4 ounces sun-dried tomatoes",
+        "4 boneless chicken breasts",
+        "4 cloves garlic",
+        "2 tablespoons tomato paste",
+        "½ cup white wine",
+        "5 ounces baby spinach"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Tuscan Chicken with Sun-Dried Tomatoes.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Tuscan Chicken with Sun-Dried Tomatoes.pdf"
+    },
+    {
+      "id": "plated-vegetablesushibowls",
+      "source": "Plated",
+      "title_extracted": "Vegetable Sushi Bowls (4)",
+      "source_file": "Vegetable Sushi Bowls (4).pdf",
+      "drive_identity_hash": "e462910eddbbb013ee980ff7fd98ddfbb101c96c0af44bc3c5df1da605882c4d",
+      "content_sha256": "0a2a75e186807bfdef22e7d86ed5be7681319c7b320a79f65343a128a504aa4f",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1½ cups sticky rice",
+        "¼ cup rice wine vinegar",
+        "4 Persian cucumbers",
+        "6 packets gluten-free soy sauce",
+        "1 tablespoon sesame seeds",
+        "12 ounces cremini mushrooms",
+        "12 ounces carrots",
+        "8 packets mayonnaise",
+        "2 avocados",
+        "2 nori sheets"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Vegetable Sushi Bowls (4).pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Vegetable Sushi Bowls (4).pdf"
+    },
+    {
+      "id": "plated-vietnameseporkbunwithpeanuthoisinsauce",
+      "source": "Plated",
+      "title_extracted": "Vietnamese Pork Bun with Peanut Hoisin Sauce",
+      "source_file": "Vietnamese Pork Bun with Peanut Hoisin Sauce.PDF",
+      "drive_identity_hash": "a7762e17d59137a8755072b397917b6d71ee60ef33b178cf389935c4e004d772",
+      "content_sha256": "2ee2d9bcd4a2868d4c3b2fc46ab24df4f7d64457c4f58e89d42fbd2395cd9e98",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 herb mix",
+        "cup roasted salted peanuts",
+        "limes",
+        "cup sesame oil",
+        "teaspoons sugar in the raw, divided",
+        "packets peanut butter",
+        "cup hoisin sauce",
+        "BS",
+        "boneless pork chops",
+        "ounces glass noodles",
+        "ounces spring mix lettuce",
+        "cups shredded carrots",
+        "Ronarnwa"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Vietnamese Pork Bun with Peanut Hoisin Sauce.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Vietnamese Pork Bun with Peanut Hoisin Sauce.PDF"
+    },
+    {
+      "id": "plated-whitebeancrostini",
+      "source": "Plated",
+      "title_extracted": "White Bean Crostini",
+      "source_file": "White Bean Crostini.pdf",
+      "drive_identity_hash": "b0980eee47ae947d4928a5c7188614002c59615a1c158e8bec448cd4b235e52f",
+      "content_sha256": "e056bcd5c915294d339f9e3a7bdd72170d82090739b56f26dd52279be760f916",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 tablespoons unsalted butter",
+        "1 15-ounce can white beans",
+        "3 ounces baby arugula",
+        "1 pound cauliflower florets",
+        "1 lemon, divided",
+        "1 herb mix",
+        "⅛ ounce thyme, divided",
+        "1 shallot",
+        "2 cloves garlic, divided",
+        "½ teaspoon ground cumin",
+        "¼ teaspoon mustard powder",
+        "1 demi-baguette"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/White Bean Crostini.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/White Bean Crostini.pdf"
+    },
+    {
+      "id": "plated-whitebeanposolewithpoblanopeppercheddarcheeseandtortillachips",
+      "source": "Plated",
+      "title_extracted": "White Bean Posole with Poblano Pepper, Cheddar Cheese, and Tortilla Chips",
+      "source_file": "White Bean Posole with Poblano Pepper, Cheddar Cheese, and Tortilla Chips.PDF",
+      "drive_identity_hash": "2bf8ca51805ef6232f539a9f8198b52823ed55bf63309ea76772a7ccab14999b",
+      "content_sha256": "8e0d715486d4b28e0784bf50f08658808e4d28a2e3d66021a6eaafc1a911b304",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": 2,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 red onion",
+        "2 cloves garlic",
+        "1 cup hominy",
+        "1 cup white beans",
+        "1 poblano pepper",
+        "1 teaspoon tomato paste",
+        "1 spice mix",
+        "4 teaspoon ancho chili powder",
+        "‘aspoon ground cumin",
+        "aspoon dried oregano",
+        "teaspoon smoked paprika",
+        "1 can diced tomatoes",
+        "2 corn tortillas",
+        "2 containers vegetable broth",
+        "% cup shredded Cheddar cheese"
+      ],
+      "ingredients_4p": [
+        {
+          "ingredient": "red onion",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "garlic",
+          "quantity_4p_source": "4 cloves",
+          "original_quantity": "2 cloves",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "hominy",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "white beans",
+          "quantity_4p_source": "2 cup",
+          "original_quantity": "1 cup",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "poblano pepper",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "tomato paste",
+          "quantity_4p_source": "2 teaspoon",
+          "original_quantity": "1 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "spice mix",
+          "quantity_4p_source": "2 stuks",
+          "original_quantity": "1 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "ancho chili powder",
+          "quantity_4p_source": "8 teaspoon",
+          "original_quantity": "4 teaspoon",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "diced tomatoes",
+          "quantity_4p_source": "2 can",
+          "original_quantity": "1 can",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "corn tortillas",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        },
+        {
+          "ingredient": "containers vegetable broth",
+          "quantity_4p_source": "4 stuks",
+          "original_quantity": "2 stuks",
+          "quality": "unverified_ocr"
+        }
+      ],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/White Bean Posole with Poblano Pepper, Cheddar Cheese, and Tortilla Chips.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/White Bean Posole with Poblano Pepper, Cheddar Cheese, and Tortilla Chips.PDF"
+    },
+    {
+      "id": "plated-whitebeankaleandfregolasaladwithcandiedalmonds",
+      "source": "Plated",
+      "title_extracted": "White Bean, Kale, and Fregola Salad with Candied Almonds",
+      "source_file": "White Bean, Kale, and Fregola Salad with Candied Almonds.PDF",
+      "drive_identity_hash": "5469d0e2398199f232fd1b974c8e3609dfb3276fa687cda344e421c300a69e8d",
+      "content_sha256": "2a5321bad567c2f1a8ae1d5b9470840f48545ed0ec2a8e92d4e13d4cf1390bf6",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 can white beans",
+        "1 lemon",
+        "6 ounces red grapes",
+        "9 ounces dinosaur kale",
+        "1 shallot",
+        "% cup fregola",
+        "3 tablespoons sliced almonds",
+        "+ tablespoon light brown sugar",
+        "% teaspoon ground allspice",
+        "7 ounces feta cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/White Bean, Kale, and Fregola Salad with Candied Almonds.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/White Bean, Kale, and Fregola Salad with Candied Almonds.PDF"
+    },
+    {
+      "id": "plated-whitecheddarcheeseburgers",
+      "source": "Plated",
+      "title_extracted": "White Cheddar Cheeseburgers",
+      "source_file": "White Cheddar Cheeseburgers.pdf",
+      "drive_identity_hash": "62e3efef069d8d9660acadcb687299235a920ec174cd76feaa8382dde6eb8b24",
+      "content_sha256": "80b086095eab2e31aef274f4d1023d99e88ac97933b5d9e6e1435c45311d1cbe",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "⅛ ounce basil",
+        "3 packets mayonnaise",
+        "2 hamburger buns",
+        "1 red onion",
+        "1 clove garlic",
+        "1 russet potato",
+        "¼ teaspoon sweet paprika",
+        "2 ounces shredded white Cheddar",
+        "cheese"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/White Cheddar Cheeseburgers.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/White Cheddar Cheeseburgers.pdf"
+    },
+    {
+      "id": "plated-whitepizza",
+      "source": "Plated",
+      "title_extracted": "White Pizza",
+      "source_file": "White Pizza.pdf",
+      "drive_identity_hash": "e0ce543cd33ae6422787eaa369dce9cb24524451358b954e946c714deddf874d",
+      "content_sha256": "526d212672c577c49dc92e19db57a6277dd89f03375963d1b0b17e13796992b4",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces pizza dough",
+        "6 ounces broccolini",
+        "1 clove garlic",
+        "¼ cup flour",
+        "4 ounces ricotta cheese",
+        "1 ounce grated Parmesan cheese",
+        "2 packets unsalted butter",
+        "provolone cheese blend",
+        "⅛ ounce basil"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/White Pizza.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/White Pizza.pdf"
+    },
+    {
+      "id": "plated-whitepizzawithbrusselsprouts",
+      "source": "Plated",
+      "title_extracted": "White Pizza with Brussel Sprouts",
+      "source_file": "White Pizza with Brussel Sprouts.pdf",
+      "drive_identity_hash": "22059b157bbbd3985ebd92410ebf22f9b1477640e03b283eaea012fc0a5bddbf",
+      "content_sha256": "1b8288900e0cd58cc4d5fa46bbba856e7c4c99bedf7cdd09f4a209f1661a4aea",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "12 ounces pizza dough",
+        "1 red onion",
+        "¼ teaspoon crushed red pepper",
+        "6 ounces shredded Brussels sprouts",
+        "1 jar maple syrup",
+        "2 tablespoons flour",
+        "4 ounces shredded mozzarella cheese",
+        "2 packets balsamic glaze",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/White Pizza with Brussel Sprouts.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/White Pizza with Brussel Sprouts.pdf"
+    },
+    {
+      "id": "plated-zitibolognese",
+      "source": "Plated",
+      "title_extracted": "Ziti Bolognese",
+      "source_file": "Ziti Bolognese.pdf",
+      "drive_identity_hash": "d510e8225adefbb369eda85a51312f372e3cc9c4d8a0eb8fccc5caddac9a22c7",
+      "content_sha256": "aad87ce4ed6c015bb690a9f21f740c3bc0f420d1e4e0ae50b2921a17a9f37027",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "⅛ ounce basil",
+        "1 yellow onion",
+        "1 clove garlic",
+        "¼ cup tomato paste",
+        "8 ounces ziti pasta",
+        "¼ pint grape tomatoes",
+        "12 ounces ground beef, pork, and veal",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Ziti Bolognese.pdf",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Ziti Bolognese.pdf"
+    },
+    {
+      "id": "plated-zucchiniheirloomtomatopizzawithricottaandspicedhoney",
+      "source": "Plated",
+      "title_extracted": "Zucchini-Heirloom Tomato Pizza with Ricotta and Spiced Honey",
+      "source_file": "Zucchini-Heirloom Tomato Pizza with Ricotta and Spiced Honey.PDF",
+      "drive_identity_hash": "38ec73b4f37589aef2c56c644ff15b2ebf6bacedf934624789cdd2108a9a0037",
+      "content_sha256": "91061ada9c7a149a17d5e172a6b1c2d67380551b4a19b0abf7312da1044f9295",
+      "ocr_method": "ocr_unverified_partial",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 zucchini",
+        "6 ounces heirloom cherry tomatoes",
+        "Ye ounce oregano",
+        "% ounce basil",
+        "2 tablespoons flour",
+        "1 pound pizza dough",
+        "% cup shredded mozzarella cheese",
+        "2 ounces crumbled ricotta salata",
+        "2 packets honey",
+        "1 Thai chile",
+        "% cup ricotta",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Zucchini-Heirloom Tomato Pizza with Ricotta and Spiced Honey.PDF",
+      "source_archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
+      "source_member": "Plated recipes from Marc Hummel [Download folder]/Zucchini-Heirloom Tomato Pizza with Ricotta and Spiced Honey.PDF"
     }
   ]
 }

@@ -1,16 +1,16 @@
 {
-  "updated_at_utc": "2026-10-29T07:54:33.759621+00:00",
+  "updated_at_utc": "2026-10-29T07:59:08.525173+00:00",
   "archive": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip",
   "pdf_members": 533,
-  "completed_members": 519,
-  "remaining_members": 14,
-  "attempted_this_run": 100,
-  "imported_this_run": 97,
-  "duplicate_files_this_run": 3,
-  "duplicates_total": 28,
-  "records_in_review": 491,
-  "failures_pending": 1,
+  "completed_members": 533,
+  "remaining_members": 0,
+  "attempted_this_run": 14,
+  "imported_this_run": 13,
+  "duplicate_files_this_run": 1,
+  "duplicates_total": 29,
+  "records_in_review": 504,
+  "failures_pending": 0,
   "errors_this_run": [],
   "pricing_eligible": 0,
-  "complete": false
+  "complete": true
 }
