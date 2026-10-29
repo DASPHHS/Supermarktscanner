@@ -3,7 +3,7 @@
 'use strict';
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const units=/\((?:g|ml|el|tl|[^()]+\([^()]+\))\)/g;
-const blocked=new Set('saus soep maaltijd maaltijden pizza dip chips wrap quiche poeder smaak puree snack burger gevuld gekruid kruidenmix salade hummus hoemoes geroosterd gebakken vegetarisch vegetarische vegan plantaardig plantaardige'.split(' '));
+const blocked=new Set('saus soep maaltijd maaltijden pizza dip chips wrap quiche poeder smaak puree snack burger gevuld gekruid kruidenmix salade hummus hoemoes geroosterd gebakken vegetarisch vegetarische vegan plantaardig plantaardige chocolade surprise snoep gedroogd gedroogde zongedroogd zongedroogde granulaat'.split(' '));
 function offerMatches(ingredient,product){
  const target=norm(String(ingredient).replace(units,'').replace(/\*/g,'' )).split(' ').filter(Boolean);
  const words=norm(product).split(' ');

@@ -43,6 +43,9 @@ def test_duplicate_ingredients_are_not_silently_dropped():
 
 def test_no_raw_meat_match_to_vegan_product():
  assert not matches('kipfilet','vivera plantaardige kipfilet')
+ assert not matches('ei','kinder chocolade surprise ei')
+ assert not matches('tomaat','zongedroogde tomaat')
+ assert unit_quantity(4,'plakje(s)')==(None,None)
 
 def test_4_portions_and_pack_cost():
  data=[{'n':'jumbo','c':'Jumbo','d':[{'n':'Jumbo broccoli','p':1.2,'s':'500 gram'}]}, {'n':'ah','c':'AH','d':[{'n':'Broccoli','p':1.5,'s':'500 gram'}]}]

@@ -14,7 +14,7 @@ from pathlib import Path
 SOURCE = 'https://raw.githubusercontent.com/supermarkt/checkjebon/main/data/supermarkets.json'
 AGENT = 'HelloFreshSupermarktscanner/1.0 (https://github.com/DASPHHS/Supermarktscanner)'
 STORES = {'ah':'AH','jumbo':'Jumbo','lidl':'Lidl'}
-BLOCKED = {'saus','soep','maaltijd','pizza','dip','chips','wrap','quiche','poeder','smaak','puree','snack','burger','gevuld','gekruid','kruidenmix','salade','hummus','hoemoes','gebakken','geroosterd','vegetarisch','vegetarische','vegan','plantaardig','plantaardige'}
+BLOCKED = {'saus','soep','maaltijd','pizza','dip','chips','wrap','quiche','poeder','smaak','puree','snack','burger','gevuld','gekruid','kruidenmix','salade','hummus','hoemoes','gebakken','geroosterd','vegetarisch','vegetarische','vegan','plantaardig','plantaardige','chocolade','surprise','snoep','gedroogd','gedroogde','zongedroogd','zongedroogde','granulaat'}
 
 def norm(text: str) -> str:
     text = unicodedata.normalize('NFKD', text.lower())
@@ -61,7 +61,8 @@ def unit_quantity(quantity,unit):
     if unit=='g':return quantity,'g'
     if unit=='ml':return quantity,'ml'
     if unit=='stuk(s)':return quantity,'stuk'
-    if unit=='plakje(s)':return quantity,'stuk'
+    # One counted cheese block or loaf is not one slice.
+    if unit=='plakje(s)':return None,None
     if unit=='el':return quantity*15,'ml'
     if unit=='tl':return quantity*5,'ml'
     return None,None
