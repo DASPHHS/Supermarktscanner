@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-28T22:43:31.254857+00:00",
+  "updated_at_utc": "2026-10-29T07:52:27.786961+00:00",
   "source": "PrijsProfeet API /search",
   "limitations": [
     "Food term search is a selection, not a complete assortment",
@@ -8,7 +8,7 @@
   ],
   "stores": {
     "Jumbo": {
-      "updated_at": "2026-10-28T22:43:31.254857+00:00",
+      "updated_at": "2026-10-29T07:52:27.786961+00:00",
       "deals": [
         {
           "name": "Jumbo Aardappelen Kruimig/ Stamppot 600 g",
@@ -31,66 +31,6 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "Honig Bakplaat Mix Aardappel, Broccoli & Rundervink met Provençaalse Kruiden 36g",
-          "discount": "50.3% korting",
-          "price": 0.99,
-          "original_price": 1.99,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "broccoli",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Honig Bakplaat Mix Aardappel, Broccoli & Vissticks 36g",
-          "discount": "50.3% korting",
-          "price": 0.99,
-          "original_price": 1.99,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "broccoli",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Honig Bakplaat Mix Aardappel, Courgette & Kip met Mexicaanse Specerijen 36g",
-          "discount": "50.3% korting",
-          "price": 0.99,
-          "original_price": 1.99,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "courgette",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Honig Bakplaat Mix Zoete Aardappel, Paprika & Worst 36g",
-          "discount": "50.3% korting",
-          "price": 0.99,
-          "original_price": 1.99,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "paprika",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Honig Maaltijdmix voor Tomaten-Groentesoep 79 g",
-          "discount": "50.3% korting",
-          "price": 0.99,
-          "original_price": 1.99,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "tomaten",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Honig Maaltijdmix voor Tomaten-crèmesoep 112 g",
-          "discount": "50.3% korting",
-          "price": 0.99,
-          "original_price": 1.99,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "tomaten",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
           "name": "Jumbo Gesneden Boerenkool 300 g",
           "discount": "50.3% korting",
           "price": 0.99,
@@ -108,16 +48,6 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "ui",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Jumbo Peshwari Naan Kokos & Rozijnen 2 Stuks",
-          "discount": "50.3% korting",
-          "price": 0.95,
-          "original_price": 1.91,
-          "valid_from": "2026-10-21",
-          "valid_until": "2026-11-03",
-          "source_term": "kokosmelk",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -191,26 +121,6 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "Andrélon Conditioner Kokos Volume Boost 200 ml",
-          "discount": "50.1% korting",
-          "price": 3.44,
-          "original_price": 6.89,
-          "valid_from": "2026-10-21",
-          "valid_until": "2026-11-03",
-          "source_term": "kokosmelk",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Andrélon Shampoo Kokos Volume Boost 250 ml",
-          "discount": "50.1% korting",
-          "price": 3.19,
-          "original_price": 6.39,
-          "valid_from": "2026-10-21",
-          "valid_until": "2026-11-03",
-          "source_term": "kokosmelk",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
           "name": "Vivera Plantaardige Gyros 175 g",
           "discount": "50.1% korting",
           "price": 1.84,
@@ -268,16 +178,6 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "pompoen",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Andrélon Special Droogshampoo Kokos Boost 245 ml",
-          "discount": "49.9% korting",
-          "price": 4.0,
-          "original_price": 7.99,
-          "valid_from": "2026-10-21",
-          "valid_until": "2026-11-03",
-          "source_term": "kokosmelk",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -403,8 +303,8 @@
         {
           "name": "Unox Smaakfavoriet Soep In Zak Chinese Tomaten 570 ml",
           "discount": "49.9% korting",
-          "price": 1.9,
-          "original_price": 3.79,
+          "price": 1.93,
+          "original_price": 3.85,
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
@@ -531,16 +431,6 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "Falafel Tomaat/Paprika 250gr",
-          "discount": "49.8% korting",
-          "price": 1.5,
-          "original_price": 2.99,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "paprika",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
           "name": "Hak Kikkererwten & Lupine Mix 225 g",
           "discount": "49.8% korting",
           "price": 1.4,
@@ -601,6 +491,16 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "name": "Lay's Mama Mia's Paprika Kaas Chips 125 gr",
+          "discount": "39.8% korting",
+          "price": 1.5,
+          "original_price": 2.49,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "paprika",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "name": "Jumbo Gemengd Gehakt 2 x 500g",
           "discount": "37.5% korting",
           "price": 4.99,
@@ -626,8 +526,18 @@
           "price": 2.5,
           "original_price": 3.99,
           "valid_from": "2026-03-11",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "walnoten",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "Cheetos Spinners Paprika Chips 110 gr",
+          "discount": "37.2% korting",
+          "price": 1.5,
+          "original_price": 2.39,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "paprika",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -641,13 +551,13 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "B'tween Mueslireep Kokos & Chocolade 6 x 25g",
-          "discount": "33.5% korting",
-          "price": 1.63,
-          "original_price": 2.45,
+          "name": "Lay's Wokkels Paprika Chips 100 gr",
+          "discount": "34.5% korting",
+          "price": 1.5,
+          "original_price": 2.29,
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
-          "source_term": "kokosmelk",
+          "source_term": "paprika",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -686,7 +596,7 @@
           "price": 2.25,
           "original_price": 2.99,
           "valid_from": "2026-05-27",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "walnoten",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -696,8 +606,18 @@
           "price": 2.25,
           "original_price": 2.99,
           "valid_from": "2026-05-27",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "zalm",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "Jumbo Gebroken Sperziebonen 400 g",
+          "discount": "23.2% korting",
+          "price": 1.99,
+          "original_price": 2.59,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "sperziebonen",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -716,7 +636,7 @@
           "price": 2.5,
           "original_price": 3.19,
           "valid_from": "2026-01-01",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "ui",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -728,16 +648,6 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "walnoten",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Jumbo Gebroken Sperziebonen 400 g",
-          "discount": "20.1% korting",
-          "price": 1.99,
-          "original_price": 2.49,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "sperziebonen",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -766,7 +676,7 @@
           "price": 3.0,
           "original_price": 3.59,
           "valid_from": "2026-07-15",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "rookworst",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -776,7 +686,7 @@
           "price": 3.0,
           "original_price": 3.59,
           "valid_from": "2026-07-15",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "champignons",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -806,7 +716,7 @@
           "price": 2.5,
           "original_price": 2.89,
           "valid_from": "2026-03-11",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "kipfilet",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -816,7 +726,7 @@
           "price": 2.5,
           "original_price": 2.89,
           "valid_from": "2026-03-11",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "kipfilet",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -826,7 +736,7 @@
           "price": 2.5,
           "original_price": 2.89,
           "valid_from": "2026-03-11",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "kipfilet",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -836,7 +746,7 @@
           "price": 2.5,
           "original_price": 2.85,
           "valid_from": "2026-03-11",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "gehakt",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -846,7 +756,7 @@
           "price": 2.5,
           "original_price": 2.79,
           "valid_from": "2026-03-11",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "kipfilet",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -856,7 +766,7 @@
           "price": 2.5,
           "original_price": 2.74,
           "valid_from": "2026-03-11",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "kipfilet",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
@@ -876,25 +786,15 @@
           "price": 2.5,
           "original_price": 2.69,
           "valid_from": "2026-03-11",
-          "valid_until": "2026-11-17",
+          "valid_until": "2026-11-24",
           "source_term": "kipfilet",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         }
       ]
     },
     "AH": {
-      "updated_at": "2026-10-28T22:43:31.254857+00:00",
+      "updated_at": "2026-10-29T07:52:27.786961+00:00",
       "deals": [
-        {
-          "name": "Robijn Color kokos wasmiddel",
-          "discount": "65% korting",
-          "price": 6.99,
-          "original_price": 19.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "kokosmelk",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
         {
           "name": "Bonduelle Kikkererwten 2 mini's",
           "discount": "52.31% korting",
@@ -936,43 +836,13 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "Knorr Cup-a-soup Franse ui",
+          "name": "AH Pastasaus spinazie roomkaas",
           "discount": "50% korting",
-          "price": 1.07,
-          "original_price": 2.15,
+          "price": 1.25,
+          "original_price": 2.49,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "ui",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Knorr Cup-a-soup champignon crème",
-          "discount": "50% korting",
-          "price": 0.99,
-          "original_price": 1.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "champignons",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Knorr Cup-a-soup champignon crème 10-pack",
-          "discount": "50% korting",
-          "price": 3.1,
-          "original_price": 6.19,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "champignons",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Knorr Cup-a-soup champignon ham",
-          "discount": "50% korting",
-          "price": 1.07,
-          "original_price": 2.15,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "champignons",
+          "source_term": "spinazie",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1086,16 +956,6 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "Knorr Maaltijdmix broccoli ovenschotel",
-          "discount": "50% korting",
-          "price": 0.93,
-          "original_price": 1.85,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "broccoli",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
           "name": "Knorr Tomaten wraps",
           "discount": "50% korting",
           "price": 1.45,
@@ -1202,7 +1062,7 @@
           "original_price": 1.79,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "aardappelen",
+          "source_term": "broccoli",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1212,7 +1072,7 @@
           "original_price": 1.79,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "aardappelen",
+          "source_term": "pompoen",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1232,7 +1092,7 @@
           "original_price": 1.79,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "aardappelen",
+          "source_term": "spinazie",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1363,16 +1223,6 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Olvarit Kikkererwt knabbels 12m+",
-          "discount": "40% korting",
-          "price": 0.81,
-          "original_price": 1.35,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "kikkererwten",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1572,7 +1422,7 @@
           "original_price": 1.55,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "aardappelen",
+          "source_term": "wortel",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1613,6 +1463,16 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "spinazie",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "name": "AH Stoommaaltijd zalm roomsaus",
+          "discount": "33.4% korting",
+          "price": 4.99,
+          "original_price": 7.49,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "zalm",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1696,16 +1556,6 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "Upfront Overnight oats mango kokos smaak",
-          "discount": "25.1% korting",
-          "price": 1.49,
-          "original_price": 1.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "kokosmelk",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
           "name": "AH Excellent Saucisson walnoot",
           "discount": "25% korting",
           "price": 3.59,
@@ -1777,26 +1627,6 @@
         },
         {
           "name": "Chio Mixplosions paprika",
-          "discount": "24.87% korting",
-          "price": 1.5,
-          "original_price": 1.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "paprika",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Chio Oven chips paprika",
-          "discount": "24.87% korting",
-          "price": 1.5,
-          "original_price": 1.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "paprika",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "Chio Pom-bär paprika",
           "discount": "24.87% korting",
           "price": 1.5,
           "original_price": 1.99,
@@ -1906,16 +1736,6 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "name": "Brandt & Levie Rookworst Varken",
-          "discount": "16.7% korting",
-          "price": 4.99,
-          "original_price": 5.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "rookworst",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
           "name": "AH Knijpfruit mango zoete aardappel 6m+",
           "discount": "16.67% korting",
           "price": 0.83,
@@ -1943,26 +1763,6 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "paprika",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "AH Pandan kokos kruidnoten",
-          "discount": "16.39% korting",
-          "price": 2.5,
-          "original_price": 2.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "kokosmelk",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "AH Witte kokos smaak kruidnoten",
-          "discount": "16.39% korting",
-          "price": 2.5,
-          "original_price": 2.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "kokosmelk",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2033,16 +1833,6 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "name": "AH Vers geperste smoothie yoghurt kokos",
-          "discount": "16.25% korting",
-          "price": 1.67,
-          "original_price": 1.99,
-          "valid_from": "2026-10-26",
-          "valid_until": "2026-11-01",
-          "source_term": "kokosmelk",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2138,7 +1928,7 @@
       ]
     },
     "Lidl": {
-      "updated_at": "2026-10-28T22:43:31.254857+00:00",
+      "updated_at": "2026-10-29T07:52:27.786961+00:00",
       "deals": [
         {
           "name": "Extra mager rundergehakt",
