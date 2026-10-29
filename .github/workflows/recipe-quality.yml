@@ -10,6 +10,14 @@ on:
       - 'hellofresh/preview_manifest.json'
       - 'hellofresh/plated_preview_manifest.json'
       - '.github/workflows/recipe-quality.yml'
+  workflow_run:
+    workflows:
+      - 'Plated Release ZIP import'
+      - 'Plated Nederlandse recepten'
+      - 'Plated ontbrekende ingrediënten herscannen'
+      - 'Originele HelloFresh receptkaarten'
+      - 'Originele Plated kaarten van Marc'
+    types: [completed]
   schedule:
     - cron: '18 */3 * * *'
   workflow_dispatch:
@@ -20,6 +28,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   audit:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
