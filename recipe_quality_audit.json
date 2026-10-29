@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-29T18:29:17.416411+00:00",
+  "generated_at_utc": "2026-10-29T19:39:13.846076+00:00",
   "status": "PASS_WITH_MANUAL_REVIEW",
   "release_archive_pdfs": 533,
   "release_completed": 533,
@@ -12,7 +12,7 @@
   "plated_unmapped_ingredient_labels": 1476,
   "plated_source_cards_with_original_pdf": 128,
   "hellofresh_recipes_in_index": 225,
-  "hellofresh_recipes_with_original_pdf": 160,
+  "hellofresh_recipes_with_original_pdf": 192,
   "verified_pricing_eligible_plated": 0,
   "critical_faults": [],
   "warnings": [],
