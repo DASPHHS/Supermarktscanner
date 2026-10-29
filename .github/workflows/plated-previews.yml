@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'render_plated_cards.py'
+      - 'plated_release_review_queue.json'
       - '.github/workflows/plated-previews.yml'
   schedule:
     - cron: '20,50 * * * *'
@@ -59,7 +60,7 @@ jobs:
           gh release download plated-database-v1 --pattern 'Plated*.zip' --dir plated-archive --clobber
       - name: Render source cards
         if: steps.todo.outputs.needed == 'true'
-        run: python render_plated_cards.py --archive plated-archive/Plated*.zip --batch 20
+        run: python render_plated_cards.py --archive plated-archive/Plated*.zip --batch 24
       - name: Publish images and PDFs with conflict-safe merge
         if: steps.todo.outputs.needed == 'true'
         run: |
