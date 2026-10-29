@@ -5,6 +5,9 @@ on:
       - 'rescan_plated_ingredients.py'
       - 'plated_release_review_queue.json'
       - '.github/workflows/plated-ingredient-rescan.yml'
+  workflow_run:
+    workflows: ['Plated Release ZIP import']
+    types: [completed]
   schedule:
     - cron: '12,42 * * * *'
   workflow_dispatch:
@@ -15,6 +18,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   rescan:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:
