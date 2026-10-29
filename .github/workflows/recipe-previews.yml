@@ -55,7 +55,7 @@ jobs:
       - name: Render original card pages
         if: steps.todo.outputs.needed == 'true'
         run: |
-          python render_original_cards.py --archives hellofresh-archives/hellofresh1.zip hellofresh-archives/hellofresh.2.zip --batch 24
+          python render_original_cards.py --archives hellofresh-archives/hellofresh1.zip hellofresh-archives/hellofresh.2.zip --batch 32
       - name: Store previews safely
         if: steps.todo.outputs.needed == 'true'
         run: |
