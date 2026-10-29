@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 from pathlib import Path
+from sync_prices import number
 
 UNITS=r'(?:stuk\(s\)|pak\(ken\)|blik\(?:ken\)|[a-zA-Z]+\(s\)|g|ml|el|tl)'
 UNIT_RE=re.compile(r'\((?:g|ml|el|tl|[^()]+\([^()]+\))\)')
@@ -30,7 +31,10 @@ def extract_table(text):
         if not m: raise ValueError('Geen hoeveelheden voor '+label)
         values=NUMBER.findall(m.group(1))
         if len(values)!=6: raise ValueError('Geen zes eenduidige hoeveelheden voor '+label+': '+repr(values))
-        if not label or len(label)>160: raise ValueError('Ongeldig ingrediëntlabel')
+        if not label or len(label)>160 or not (label[0].isalpha() or label[0]=='['):raise ValueError('Ongeldig ingrediëntlabel: '+label[:80])
+        numeric=[number(v) for v in values]
+        if any(v is None for v in numeric) or any(a>b for a,b in zip(numeric,numeric[1:])):
+            raise ValueError('Niet-oplopende bronhoeveelheden; beschadigde breuk of kolom controleren: '+label)
         rows.append({'ingredient':label.replace('*',''),'quantities_source':values,
                      'self_add':pantry or bool(rows and rows[-1]['self_add'])})
         cursor=unit.end()+m.end()
@@ -55,9 +59,23 @@ def main():
     for r in data['recipes']:
         path=files.get(key(r.get('source_file','')))
         if not path: continue
+        # Re-running a stricter parser must not preserve an earlier repair that
+        # it now rejects. Keep the original OCR record as the explicit fallback.
+        if 'ingredients_before_table_repair' in r:
+            r['ingredients_4p']=r['ingredients_before_table_repair']
+            for field in ('ingredients_2p','ingredient_source_columns','table_repair'):r.pop(field,None)
         try:
             doc=fitz.open(path);page=int(r['source_page_ingredients'])
-            rows=extract_table(doc[page-1].get_text())
+            text=doc[page-1].get_text();rows=extract_table(text)
+            header='Ingrediënten voor 1 - 6 personen'
+            second=text.find(header,text.find(header)+len(header))
+            if second>=0:
+                try:other=extract_table(text[second:])
+                except ValueError:other=None
+                if other is not None:
+                    # '&' versus 'en' is a label-style difference, not a new item.
+                    signature=lambda table:[(key(x['ingredient'].replace('&','en')),[number(v) if v is not None else None for v in x['quantities_source']]) for x in table]
+                    if signature(rows)!=signature(other):raise ValueError('Twee PDF-tekstlagen verschillen; visuele broncontrole nodig')
         except (ValueError,KeyError,IndexError) as exc:
             rejected.append({'id':r['id'],'reason':str(exc)});continue
         r['ingredients_before_table_repair']=r.get('ingredients_before_table_repair',r['ingredients_4p'])

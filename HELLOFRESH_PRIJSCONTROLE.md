@@ -5,12 +5,13 @@ bronprijzen, geen bevestigde schapprijzen van de drie plaatselijke filialen.
 
 ## Hersteld op 29 oktober 2026
 
-- 211 van 225 HelloFresh-records opnieuw uit de aangeleverde bron-PDF's gelezen.
-  Daarbij zijn 1.277 ontbrekende ingrediëntregels teruggevonden. Het rapport
+- 150 van 225 HelloFresh-records opnieuw uit de aangeleverde bron-PDF's gelezen.
+  Daarbij zijn 912 ontbrekende ingrediëntregels teruggevonden. Het rapport
   `hellofresh_table_repair.json` vermeldt per record de oude en nieuwe telling.
+- Bij opnieuw uitleesbare tweede tekstlagen moeten namen en hoeveelheden overeenkomen. Beschadigde breuken, numerieke labelresten en afnemende kolomhoeveelheden worden afgewezen.
 - Alle zes hoeveelheidkolommen bewaard. De 2p-kolom wordt rechtstreeks gebruikt;
   hele verpakkingen worden opnieuw berekend voor twee personen.
-- 14 tabellen met onduidelijke kolommen blijven afgewezen. De oude gegevens
+- 75 tabellen met onduidelijke kolommen blijven afgewezen. De oude gegevens
   daarvan blijven zichtbaar als ongecontroleerde extractie. Het herstelproces
   kent geen verificatie toe aan OCR of automatisch herstelde gegevens.
 - Oorspronkelijke ingrediëntregels blijven als auditspoor beschikbaar.
@@ -37,7 +38,7 @@ reken- en weergaveregels; zij vervangen geen inhoudelijke broncontrole.
 Voor de definitieve rangschikking ontbreken nog:
 
 1. Controle van ingrediënten, hoeveelheden en uitgangsporties per recept.
-2. Controle van de 14 afgewezen tabellen en de scanrecepten.
+2. Controle van de 75 afgewezen tabellen en de scanrecepten.
 3. Exacte productkeuzes en betrouwbare conversies voor tenen, zakjes, pakjes,
    blikjes en ingrediënten die in stuks maar per gewicht verkocht worden.
 4. Een vastgelegde hoeveelheid voor ingrediënten 'naar smaak', of een expliciet

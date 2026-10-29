@@ -31,3 +31,7 @@ def test_unquantified_pantry_stays_visible_and_unpriced():
  rows=extract_table(TABLE.replace('Peper & zout','[Plantaardige] melk scheutje\nPeper & zout'))
  assert rows[-2]['ingredient']=='[Plantaardige] melk (scheutje)'
  assert rows[-2]['quantities_source']==[None]*6
+
+def test_broken_fraction_or_numeric_prefix_cannot_be_accepted_as_six_columns():
+ with pytest.raises(ValueError):extract_table(TABLE.replace('150 300 450 600 750 900','150 300 450 60 750 900'))
+ with pytest.raises(ValueError):extract_table(TABLE.replace('Gedroogde tijm','5 Gedroogde tijm'))
