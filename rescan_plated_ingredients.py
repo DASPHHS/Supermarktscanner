@@ -130,7 +130,7 @@ def extract(pdf, native=scan_native, ocr=scan_ocr):
         for page in (2,1,3):
             lines=ocr(pdf,page)
             candidates=[v for line in lines if (v:=candidate(line)) is not None]
-            options.append((len(candidates),page,"ocr_crop_300dpi",lines,candidates))
+            options.append((len(candidates),page,"ocr_crop_300dpi_or_1500px_fallback",lines,candidates))
             if len(candidates)>=3:
                 break
     count,page,method,lines,candidates=max(options,key=lambda x:x[0])
