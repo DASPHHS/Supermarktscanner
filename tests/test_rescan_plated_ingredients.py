@@ -96,3 +96,12 @@ def test_unreadable_page_stays_an_explicit_retryable_error(tmp_path):
     with patch("rescan_plated_ingredients.subprocess.run",timeout):
         with pytest.raises(RuntimeError,match="bounded fallback"):
             render_ingredient_page(tmp_path/"source.pdf",2,tmp_path/"page")
+
+
+def test_native_text_timeout_falls_through_to_ocr():
+    import subprocess
+    from unittest.mock import patch
+    from rescan_plated_ingredients import scan_native
+    with patch("rescan_plated_ingredients.subprocess.run",
+               side_effect=subprocess.TimeoutExpired(["pdftotext"],60)):
+        assert scan_native(Path("heavy.pdf"),2)==[]
