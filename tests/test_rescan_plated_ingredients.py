@@ -42,7 +42,7 @@ def test_ocr_fallback_when_pdf_text_is_unreadable():
     ocr=lambda p,n:["2 ounces mushrooms","1 pound ground beef",
                      "3 cups stock"] if n==2 else []
     result=extract(Path("unused.pdf"),native=native,ocr=ocr)
-    assert result["method"]=="ocr_crop_300dpi"
+    assert result["method"]=="ocr_crop_300dpi_or_1500px_fallback"
     assert result["page"]==2
     assert result["candidate_count"]==3
 
