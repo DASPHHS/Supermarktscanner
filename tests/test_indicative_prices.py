@@ -113,3 +113,46 @@ def test_volume_in_product_url_is_not_mistaken_for_a_sku():
  d=action(product_url='https://www.jumbo.com/producten/saus-120ml-987654CD',quantity='120 ml',original_price=2)
  add_market_products({'Jumbo':[p]},{'stores':{'Jumbo':{'deals':[d]}}},TODAY)
  assert p['price']==5
+
+@pytest.mark.parametrize('label,family',[
+ ('Rode cherrytomaten (g)','cherrytomaten'),('Mais in blik (g)','mais'),
+ ('Geraspte oude Goudse kaas (g)','geraspte oude goudse kaas'),
+ ('Zoutarme paddenstoelen- of groentebouillon (ml)','groentebouillon')])
+def test_expanded_families_keep_explicit_source_quantities(label,family):
+ x=requirements({'ingredient':label,'quantity_2p_source':'100'})[0]
+ assert x['family']==family
+ assert x['quantity']==(2 if family=='groentebouillon' else 100)
+
+def test_seasoned_meat_proxy_is_visible_and_still_meat():
+ r=recipe(('Rundergehakt met Italiaanse kruiden (g)','200'))
+ x=estimate_recipe(r,{'AH':[product('AH Rundergehakt',500,5)]},'AH',today=TODAY)
+ assert x['eligible'] and not x['vegetarian_ingredients']
+ assert x['lines'][0]['price_proxy'] and 'Prijsproxy' in x['assumptions'][0]['note']
+
+def test_shrimp_never_matches_seasoned_or_cocktail_products_or_vega():
+ assert not product_matches('garnalen',product('AH Cocktail garnalen'))
+ assert not product_matches('garnalen',product('AH Garnalen knoflooksaus'))
+ x=estimate_recipe(recipe(('Garnalen (g)','200')),{'AH':[product('AH Garnalen rauw en gepeld')]},'AH',today=TODAY)
+ assert x['eligible'] and not x['vegetarian_ingredients']
+
+def test_extra_virgin_oil_to_taste_has_visible_norm():
+ x=requirements({'ingredient':'Extra vierge olijfolie (naar smaak)','quantity_2p_source':''})[0]
+ assert x['quantity']==15 and x['unit']=='ml' and x['norm']
+
+def test_yoghurt_volume_conversion_does_not_admit_fruit_yoghurt():
+ from indicative_prices import product_size
+ assert product_size(product('AH Volle yoghurt',1000,1.5,'ml'),'volle yoghurt','g')==(1000,True)
+ assert not product_matches('volle yoghurt',product('AH Volle yoghurt aardbei'))
+
+def test_mixed_vegetables_preserve_source_weight_and_disclose_composition():
+ rows=requirements({'ingredient':'Rodekool, wittekool en wortel (g)','quantity_2p_source':'150'})
+ assert len(rows)==3 and sum(r['quantity'] for r in rows)==150
+ assert all(r['proxy'] and r['fixed_quantity'] and r['note'] for r in rows)
+
+def test_source_outage_preserves_existing_market_snapshot(tmp_path,monkeypatch):
+ import sync_market_deals as market
+ target=tmp_path/'market.json';target.write_text('previous snapshot')
+ def fail(term):raise OSError('source unavailable')
+ monkeypatch.setattr(market,'query',fail)
+ with pytest.raises(RuntimeError,match='bronfouten'):market.main(target)
+ assert target.read_text()=='previous snapshot'

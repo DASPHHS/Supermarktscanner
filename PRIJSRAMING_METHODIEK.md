@@ -136,3 +136,32 @@ Prijsverversing loopt dagelijks en na relevante wijzigingen. Actiegegevens ouder
 dan 48 uur worden niet door de raming gebruikt. Als een nieuwe bron plotseling
 geen bruikbare ramingen meer oplevert, wordt de vorige bruikbare snapshot behouden.
 Water, energie, bezorging, reiskosten, houdbaarheid en verspilling zijn niet geprijsd.
+
+
+## Uitbreiding 30 oktober 2026 en continuïteit
+
+De productherkenning omvat nu ook garnalen, bladgroenten, kleine tomaten,
+mais, panko, kappertjes, blauwe kaas, zachte geitenkaas en half-om-halfgehakt.
+Verse gember wordt voor een theelepel omgerekend met 2 gram; little gem met
+100 gram per stuk en kropsla met 150 gram per krop. Dit zijn werkaannames.
+Een kool-wortelmengsel wordt voor de kosten gelijk over de drie genoemde
+groenten verdeeld. De bronhoeveelheid blijft behouden en deze mengverhouding
+staat zichtbaar bij de raming.
+
+Gemberpuree kan met verse gember worden benaderd; witte balsamicoazijn met
+wittewijnazijn. Gekruid rundergehakt, gemengd gehakt en kippendijreepjes kunnen
+met de onbewerkte vleesvariant worden benaderd. Deze prijsproxy's worden
+uitdrukkelijk bij het recept vermeld; samenstelling en werkelijke kosten
+kunnen afwijken. Plantaardige alternatieven en zoutarme varianten houden
+hun bestaande zichtbare voorbehoud.
+
+De gezamenlijke verversing draait dagelijks om 06:40, 12:40 en 18:40 UTC
+(in Nederland een of twee uur later). Productzoektermen volgen nu de
+ondersteunde productgroepen. Eerst worden acties opgehaald, daarna worden
+receptprijzen opnieuw berekend, ook wanneer een botcommit geen nieuwe
+workflow start. Bij veel bronfouten wordt de eerdere actiesnapshot behouden.
+Bij een mislukte actie-ophaalstap kan de schapprijsverversing doorgaan;
+actiegegevens ouder dan 48 uur worden door de rekenmotor geweigerd.
+Een volledig weggevallen prijsdekking vervangt geen bruikbare snapshot.
+De site blijft via GitHub Pages gepubliceerd; externe storingen blijven
+mogelijk en verlopen informatie wordt niet als actueel gepresenteerd.

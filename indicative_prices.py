@@ -10,7 +10,7 @@ from datetime import date
 from decimal import Decimal, ROUND_CEILING, ROUND_HALF_UP
 from sync_prices import norm,number,amount
 
-VERSION='2026-10-29.1'
+VERSION='2026-10-30.1'
 VC='https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/hoeveel-voedingswaarden-zitten-erin/'
 WORK='Werkaanname voor prijsraming; geen exact HelloFresh-verpakkingsgewicht'
 # Canonical family: accepted names, grams per source piece (when relevant).
@@ -175,6 +175,60 @@ ALIASES.update({'warmgerookte zalmsnippers':'warmgerookte zalmsnippers','pistach
 SPICE_PROXIES={'siciliaanse kruidenmix':'italiaanse kruiden','peruaanse kruidenmix':'mexicaanse kruiden',
  'midden oosterse kruidenmix':'ras el hanout','afrikaanse kruidenmix':'ras el hanout','griekse kruidenmix':'italiaanse kruiden'}
 
+# Explicit food families; aliases never permit arbitrary prepared products.
+FAMILIES.update({
+ 'gember':(['gember'],None), 'gemberpuree':(['gemberpuree','gember puree'],None),
+ 'garnalen':(['garnalen rauw gepeld','rauwe gepelde garnalen','roerbakgarnalen','garnalen'],None),
+ 'veldsla':(['veldsla'],None),'rucola':(['rucola'],None),
+ 'rucola en veldsla':(['slamelange rucola veldsla','rucola veldsla'],None),
+ 'cherrytomaten':(['cherrytomaten','cherry tomaten','sweet cherry trostomaten'],None),
+ 'mini romatomaten':(['romaatjes','mini roma tomaten','mini romatomaten','snoeptomaatjes roma'],None),
+ 'mais':(['maiskorrels','mais korrels','mais'],None),
+ 'panko':(['panko','panko paneermeel','paneermeel panko'],None),
+ 'kappertjes':(['kappertjes'],None), 'pangasiusfilet':(['pangasiusfilet'],None),
+ 'ravigotesaus':(['ravigotesaus','ravigotte saus','ravigote saus'],None),
+ 'blauwe kaas':(['blauwe kaas','blauwekaas','danablu','danish blue'],None),
+ 'half om half gehakt':(['half om half gehakt','gemengd gehakt'],None),
+ 'aardappelblokjes':(['aardappelblokjes','aardappelen blokjes'],None),
+ 'flammkuchen':(['flammkuchen bodem','flammkuchenbodem','flammkuchen bodems'],120),
+ 'zachte geitenkaas':(['geitenkaas schijfjes naturel','zachte geitenkaas naturel','verse geitenkaas'],None),
+ 'lente ui':(['lente ui','lente uitjes','lente uien','salade ui','salade uien','salade uitjes'],100),
+})
+FAMILIES['bosui'][0].extend(FAMILIES.pop('lente ui')[0])
+FAMILIES['geraspte cheddar'][0].append('cheddar geraspte kaas')
+FAMILIES['geraspte oude goudse kaas'][0].extend(['geraspte oude goudse kaas','goudse oude geraspte kaas'])
+FAMILIES['jasmijnrijst'][0].extend(['pandan rijst','thaise pandanrijst'])
+ALIASES.update({norm(a):f for f,(names,_) in FAMILIES.items() for a in names})
+ALIASES.update({'mais in blik':'mais','rode cherrytomaten':'cherrytomaten',
+ 'blauwekaas blokjes':'blauwe kaas','verse geitenkaas':'zachte geitenkaas',
+ 'panko paneermeel':'panko','mini romatomaten':'mini romatomaten',
+ 'zoutarme paddenstoelen of groentebouillon':'groentebouillon',
+ 'geraspte oude goudse kaas':'geraspte oude goudse kaas'})
+# Small or seasoned components use explicit, visible price proxies, never silent swaps.
+FOOD_PROXIES={
+ 'rundergehakt met italiaanse kruiden':'rundergehakt',
+ 'gemengd gekruid gehakt':'half om half gehakt',
+ 'kippendijreepjes met kebabkruiden':'kippendijfilet',
+ 'gemberpuree':'gember',
+}
+SPOONS['gember']=(6,'g',WORK,None)
+QUALIFIERS.update('rauw rauwe gepeld gepelde geraspte slamelange grootverpakking kleinverpakking bodem bodems schijfjes'.split())
+BRANDS.update(['terra'])
+
+FAMILIES.update({
+ 'little gem':(['little gem','mini romaine sla','romaine mini'],100),
+ 'botersla':(['botersla','kropsla'],150),
+ 'mesclun':(['mesclun','mesclun slamelange'],None),
+ 'rodekool':(['rodekool','rode kool'],None),
+ 'wittekool':(['wittekool','witte kool'],None),
+ 'gehaktballetjes':(['gehaktballetjes naturel','gehaktballetjes rund varken','gemengde gehaktballetjes'],25),
+})
+ALIASES.update({norm(a):f for f,(names,_) in FAMILIES.items() for a in names})
+ALIASES.update({'rucola en veldsla':'rucola en veldsla','geitenkaas':'zachte geitenkaas',
+ 'botersla':'botersla','little gem':'little gem','lollo biondo':'botersla',
+ 'gehaktballetjes van varken en rund':'gehaktballetjes'})
+FOOD_PROXIES.update({'witte balsamicoazijn':'wittewijnazijn'})
+
 def prepare_catalog(raw):
  """Extend the strict catalog only with explicit name sizes or disclosed piece assumptions."""
  from sync_prices import products
@@ -260,23 +314,25 @@ def canonical(name):
 def requirements(ingredient):
  label=ingredient['ingredient'];name,unit=parts(label)
  q=number(str(ingredient.get('quantity_2p_source','')))
+ if name=='rodekool wittekool en wortel' and unit=='g' and q is not None:
+  return [dict(family=f,quantity=q/3,unit='g',norm=True,note='Gemengde groenten: elk een derde van het brongewicht; kostenbenadering, mengverhouding onbekend',source=None,proxy=True,fixed_quantity=True) for f in ('rodekool','wittekool','wortel')]
  if name in ('water','water voor saus','kokend water'):
   return [dict(family='water',quantity=0,unit='ml',norm=False,note='Leidingwater; water- en energiekosten niet meegerekend',source=None)]
  if name in ('peper zout','peper en zout') and unit=='naar smaak':
   return [dict(family=f,quantity=v,unit='g',norm=True,note='Kostenreserve voor twee porties: 1 g zout en 0,4 g peper; geen doseringsadvies',source=None) for f,v in [('zout',1),('zwarte peper',.4)]]
- proxy=SPICE_PROXIES.get(name or '')
+ proxy=SPICE_PROXIES.get(name or '') or FOOD_PROXIES.get(name or '')
  family=proxy or canonical(name or '')
  if not family or family not in FAMILIES:return None
  note=None;source=None;assumed=False
  if q is None:
-  if unit=='scheutje' and family=='melk':q=30;unit='ml';note='Scheutje melk: 30 ml voor twee porties';assumed=True
-  elif unit=='naar smaak' and family in ('mayonaise','olijfolie'):
+  if unit in ('scheutje','naar smaak') and family=='melk':q=30;unit='ml';note='Scheutje melk: 30 ml voor twee porties';assumed=True
+  elif unit=='naar smaak' and family in ('mayonaise','olijfolie','extra vierge olijfolie'):
    q=15;unit='g' if family=='mayonaise' else 'ml';note='Naar smaak: 15 '+unit+' voor twee porties';assumed=True
   else:return None
  if unit in ('g','ml'):value=q;u=unit
  elif unit in ('el','tl') and family in SPOONS:
   v,u,note,source=SPOONS[family];value=q*v/(3 if unit=='tl' else 1);assumed=True
- elif unit in ('stuk(s)','bol(len)','bosje(s)','takje(s)','plakje(s)'):
+ elif unit in ('stuk(s)','bol(len)','bosje(s)','takje(s)','plakje(s)','krop(pen)'):
   if family=='ei':value=q;u='stuk'
   elif FAMILIES[family][1] is not None:
    v=FAMILIES[family][1];value=q*v;u='g';assumed=True;note=f'1 {unit} {family} ≈ {v} g. '+WORK
@@ -303,7 +359,7 @@ def requirements(ingredient):
               source_name=name,source_unit=unit,proxy=bool(proxy))]
 
 def product_matches(family,product):
- text=norm(product['name']);words=text.split()
+ text=product.get('n') or norm(product['name']);words=text.split()
  aliases=FAMILIES[family][0]
  # All substantive product words must be explained by this family or safe qualifiers.
  for alias in aliases:
@@ -315,6 +371,7 @@ def product_matches(family,product):
     if any(w in words for w in ('blik','gedroogd','gedroogde','diepvries','vriesvers','gemalen','poeder','gerookt','gerookte','gebakken','geroosterd')):continue
    if family in ('kipfilet','kippendijfilet','zalmfilet','kabeljauwfilet','heekfilet','doradefilet','varkenshaas'):
     if any(w in words for w in ('gerookt','gerookte','gegaard','gebraden','gebakken','geroosterd','marinade','gemarineerd','plak','plakjes','vleeswaren')):continue
+   if family=='garnalen' and any(w in words for w in ('cocktail','gekookt','gekookte','hollandse','noorse')):continue
    if family=='kokosmelk' and 'light' in words:continue
    if family=='rode puntpaprika' and any(w in words for w in ('groen','groene','geel','gele')):continue
    if family=='witte kaas' and any(w in words for w in ('blokjes','kaasblokjes','brine','olie','glas')):continue
@@ -328,7 +385,7 @@ def product_size(product,family,desired_unit):
  if product['unit']==desired_unit:return product['quantity'],False
  if product['unit']=='stuk' and desired_unit=='g' and FAMILIES[family][1]:
   return product['quantity']*FAMILIES[family][1],True
- if family in ('kookroom','melk','kokosmelk','mayonaise','mosterd','zure room','creme fraiche','passata') and {product['unit'],desired_unit}=={'g','ml'}:
+ if family in ('kookroom','melk','kokosmelk','mayonaise','mosterd','zure room','creme fraiche','volle yoghurt','passata') and {product['unit'],desired_unit}=={'g','ml'}:
   return product['quantity'],True # disclosed 1 g/ml approximation, not a generic rule
  if family=='balsamicocreme' and {product['unit'],desired_unit}=={'g','ml'}:
   return product['quantity']/1.3 if desired_unit=='ml' else product['quantity']*1.3,True
@@ -387,7 +444,7 @@ def estimate_recipe(recipe,catalog,store,deals=(),today=None,cards=False,scale=1
   for req in converted:
    req=dict(req,ingredient=label)
    if req['norm']:
-    req['quantity']*=scale
+    if not req.get('fixed_quantity'):req['quantity']*=scale
     result['assumptions'].append({'ingredient':label,'note':req['note'] or WORK,'quantity':req['quantity'],'unit':req['unit'],'source':req['source']})
    reqs.append(req)
  # Aggregate the same ingredient/product family BEFORE applying package and promotion rules.
@@ -446,7 +503,7 @@ def estimate_recipe(recipe,catalog,store,deals=(),today=None,cards=False,scale=1
  result['eligible']=bool(ingredient_labels) and not result['missing']
  animal={'kipfilet','kippendijfilet','zalmfilet','kabeljauwfilet','heekfilet','doradefilet','varkenshaas',
          'warmgerookte zalmsnippers','spekreepjes','ontbijtspek','achterham','rundergehakt','varkensgehakt',
-         'kippenbouillon','runderbouillon','vissaus'}
+         'kippenbouillon','runderbouillon','vissaus','garnalen','pangasiusfilet','half om half gehakt','gehaktballetjes'}
  result['vegetarian_ingredients']=result['eligible'] and not any(x['family'] in animal for x in result['lines'])
  if result['eligible']:
   result['used_total_eur']=money(sum(x.get('_used_unrounded',0) for x in result['lines']))

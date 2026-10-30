@@ -49,7 +49,10 @@ def query(term):
     with urllib.request.urlopen(req,timeout=20) as f:
         return json.load(f)
 def main(out="market_deals.json"):
-    today=date.today().isoformat()
+    from indicative_prices import FAMILIES
+    terms=tuple(dict.fromkeys(TERMS+tuple(FAMILIES)))
+    from zoneinfo import ZoneInfo
+    today=datetime.now(ZoneInfo("Europe/Amsterdam")).date().isoformat()
     now=datetime.now(timezone.utc).isoformat()
     result={"updated_at_utc":now,"source":"PrijsProfeet API /search",
             "limitations":["Food term search is a selection, not a complete assortment",
@@ -65,7 +68,7 @@ def main(out="market_deals.json"):
         except Exception as exc:
             return term,None,term+": "+type(exc).__name__+": "+str(exc)[:120]
     with ThreadPoolExecutor(max_workers=6) as pool:
-        batches=list(pool.map(fetch_term,TERMS))
+        batches=list(pool.map(fetch_term,terms))
     for term,data,error in batches:
         if error:
             errors.append(error)
@@ -116,6 +119,8 @@ def main(out="market_deals.json"):
                 "price":price,"original_price":original,
                 "valid_from":start,"valid_until":end,"source_term":term,
                 "source_url":"https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"})
+    if len(errors)>max(3,len(terms)//5):
+        raise RuntimeError("Te veel bronfouten; vorige volledige actiesnapshot behouden. "+str(errors[:3]))
     result["errors"]=errors[:25]
     for v in result["stores"].values():
         v["deals"].sort(key=lambda x:(-float(x["discount"].split("%")[0]) if "%" in x["discount"] else 0,x["name"]))
