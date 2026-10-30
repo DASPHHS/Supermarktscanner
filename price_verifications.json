@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "notes": "Uitsluitend handmatig gecontroleerde actuele officiële supermarktprijzen. Per product: store (AH/Jumbo/Lidl), product_url (officiële HTTPS-productpagina), price_eur, quantity (bijvoorbeeld 500 g), checked_at_utc (ISO-8601 UTC), checked_by. Automatische prijsfeeds mogen deze bevestigingen nooit genereren.",
+  "products": []
+}
