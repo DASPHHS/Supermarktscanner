@@ -88,3 +88,16 @@ def test_empty_ingredients_never_count_as_complete():
            'ingredients_verified':True,'quantities_verified':True,
            'servings_verified':True,'servings':4,'ingredients_4p':[]}
  assert not calculate(verified,products(data),'Jumbo')['complete']
+
+
+def test_zero_quantity_is_never_a_free_verified_ingredient():
+ cat={'AH':[{'name':'Broccoli','n':'broccoli','unit':'g','quantity':500,
+            'price':1.5,'amount':'500 gram','link':'https://www.ah.nl/producten/product/wi1/broccoli'}]}
+ r={'id':'x','quality':'verified','pricing_eligible':True,
+    'ingredients_verified':True,'quantities_verified':True,
+    'servings_verified':True,'servings':4,
+    'ingredients_2p':[{'ingredient':'Broccoli (g)','quantity_2p_source':'0'}]}
+ result=calculate(r,cat,'AH',servings=2)
+ assert not result['complete']
+ assert result['whole_packages_eur'] is None
+ assert result['missing']
