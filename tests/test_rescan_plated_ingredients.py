@@ -66,3 +66,33 @@ def test_resume_skips_final_review_needed_and_does_not_starve_other_sources(tmp_
     assert all(x.get("pricing_eligible") is False for x in third["records"].values())
     fourth=run(zip_path,queue,out,batch=5,extractor=extract_none)
     assert fourth["metadata"]["attempted_this_run"]==0
+
+
+def test_oversized_ingredient_page_retries_at_bounded_resolution(tmp_path):
+    import subprocess
+    from unittest.mock import patch
+    from rescan_plated_ingredients import render_ingredient_page
+    calls=[]
+    def fake_run(argv,**kwargs):
+        calls.append(argv)
+        if "-r" in argv:
+            raise subprocess.TimeoutExpired(argv,kwargs["timeout"])
+        Path(argv[-1]+".png").write_bytes(b"png")
+        return subprocess.CompletedProcess(argv,0,"","")
+    with patch("rescan_plated_ingredients.subprocess.run",fake_run):
+        target=render_ingredient_page(tmp_path/"source.pdf",2,tmp_path/"page")
+    assert target.exists()
+    assert len(calls)==2
+    assert "-r" in calls[0] and "-scale-to" in calls[1]
+
+
+def test_unreadable_page_stays_an_explicit_retryable_error(tmp_path):
+    import subprocess
+    import pytest
+    from unittest.mock import patch
+    from rescan_plated_ingredients import render_ingredient_page
+    def timeout(argv,**kwargs):
+        raise subprocess.TimeoutExpired(argv,kwargs["timeout"])
+    with patch("rescan_plated_ingredients.subprocess.run",timeout):
+        with pytest.raises(RuntimeError,match="bounded fallback"):
+            render_ingredient_page(tmp_path/"source.pdf",2,tmp_path/"page")
