@@ -73,16 +73,33 @@ def scan_native(pdf,page):
         return []
     return ingredient_lines(result.stdout)
 
+def render_ingredient_page(pdf,page,stem):
+    """Retry oversized scans with bounded pixels after a 300 dpi timeout.
+
+    The source PDF is never modified. A failed rasterization remains retryable.
+    """
+    target=stem.with_suffix(".png")
+    for args,timeout in [
+        (["-r","300"],130),
+        (["-scale-to","1500","-gray"],90),
+    ]:
+        try:
+            p=subprocess.run(["pdftoppm","-f",str(page),"-l",str(page),
+                              *args,"-singlefile","-png",str(pdf),str(stem)],
+                             capture_output=True,text=True,timeout=timeout)
+            if p.returncode==0 and target.exists():
+                return target
+        except subprocess.TimeoutExpired:
+            continue
+    raise RuntimeError("PDF page rasterization failed at 300dpi and bounded fallback")
+
+
 def scan_ocr(pdf,page):
     from PIL import Image,ImageOps,ImageEnhance
     with tempfile.TemporaryDirectory() as td:
         stem=Path(td)/"page"
-        p=subprocess.run(["pdftoppm","-f",str(page),"-l",str(page),"-r","300",
-                          "-singlefile","-png",str(pdf),str(stem)],
-                         capture_output=True,text=True,timeout=130)
-        if p.returncode or not stem.with_suffix(".png").exists():
-            return []
-        with Image.open(stem.with_suffix(".png")) as im:
+        image_path=render_ingredient_page(pdf,page,stem)
+        with Image.open(image_path) as im:
             left=im.convert("L").crop((0,0,int(im.width*.36),int(im.height*.86)))
             left=ImageOps.autocontrast(left)
             left=ImageEnhance.Contrast(left).enhance(1.35)
