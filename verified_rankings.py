@@ -54,6 +54,14 @@ def official_url(url, store):
         return None
 
 
+def positive_quantity(raw):
+    try:
+        value = float(str(raw).strip().replace(",", "."))
+        return math.isfinite(value) and value > 0
+    except (TypeError, ValueError):
+        return False
+
+
 def valid_recipe(recipe):
     return (recipe.get("quality") == "verified"
             and recipe.get("pricing_eligible") is True
@@ -62,7 +70,8 @@ def valid_recipe(recipe):
             and recipe.get("servings_verified") is True
             and recipe.get("servings") == 4
             and bool(recipe.get("ingredients_2p"))
-            and all(row.get("ingredient") and row.get("quantity_2p_source")
+            and all(isinstance(row, dict) and row.get("ingredient")
+                    and positive_quantity(row.get("quantity_2p_source"))
                     for row in recipe["ingredients_2p"]))
 
 
@@ -116,6 +125,9 @@ def verdict(recipe, record, store, evidence, now):
         return "ingredienten_of_porties_onvolledig"
     matches = record.get("matches")
     if not isinstance(matches, list) or len(matches) != len(recipe["ingredients_2p"]):
+        return "ingredienten_of_porties_onvolledig"
+    if any(m.get("ingredient") != ingredient.get("ingredient")
+           for m, ingredient in zip(matches, recipe["ingredients_2p"])):
         return "ingredienten_of_porties_onvolledig"
     if not all(verified_match(m, store, evidence, now) for m in matches):
         return "actuele_officiele_prijsbevestiging_ontbreekt"
