@@ -63,3 +63,17 @@ def test_build_returns_partial_top10_and_excludes_plated(tmp_path):
     old=build(tmp_path,NOW+timedelta(days=3))
     assert old['stores']['AH']['verified_count']==0
     assert not old['price_snapshot_fresh']
+
+
+def test_invalid_quantities_rejected():
+    for value in ("0", "-1", "onbekend", "NaN", "Infinity", ""):
+        r=recipe()
+        r["ingredients_2p"][0]["quantity_2p_source"]=value
+        assert not valid_recipe(r)
+        assert verdict(r,record(),"AH",evidence(),NOW)=="recept_niet_handmatig_gevalideerd"
+
+
+def test_ingredient_identity_required():
+    x=record()
+    x["matches"][0]["ingredient"]="Wortel (g)"
+    assert verdict(recipe(),x,"AH",evidence(),NOW)=="ingredienten_of_porties_onvolledig"
