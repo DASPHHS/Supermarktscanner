@@ -5,13 +5,11 @@
     "review_queue_count": 504,
     "originally_empty_ingredients": 369,
     "rescan_with_candidate_lines": 347,
-    "rescan_checked_current_version": 368,
-    "remaining_to_attempt": 1,
+    "rescan_checked_current_version": 369,
+    "remaining_to_attempt": 0,
     "attempted_this_run": 1,
     "new_candidates_this_run": 0,
-    "errors_this_run": [
-      "Lemon Poppy Seed Doughnuts.pdf"
-    ],
+    "errors_this_run": [],
     "pricing_eligible": 0,
     "status": "candidate_extraction_not_human_verified"
   },
@@ -27299,12 +27297,17 @@
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/leek and gruyère galette with dijon, shallot, and pine nuts-4282.pdf"
     },
     "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Lemon Poppy Seed Doughnuts.pdf": {
+      "method": "pdf_text_layout",
+      "page": 2,
+      "candidate_count": 0,
+      "ocr_ingredient_lines_unverified": [],
+      "quantity_candidates_unverified": [],
+      "status": "needs_manual_check",
+      "pricing_eligible": false,
+      "requires_original_card_review": true,
       "version": 3,
-      "status": "error",
-      "error": "Command '['pdftoppm', '-f', '2', '-l', '2', '-r', '300', '-singlefile', '-png', '/tmp/tmpuogyfeyd/source.pdf', '/tmp/tmpl99n96_e/page']' timed out after 130 seconds",
-      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Lemon Poppy Seed Doughnuts.pdf",
       "source_file": "Lemon Poppy Seed Doughnuts.pdf",
-      "pricing_eligible": false
+      "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Lemon Poppy Seed Doughnuts.pdf"
     },
     "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Lemon-Honey Chicken (3).pdf": {
       "method": "pdf_text_layout",
