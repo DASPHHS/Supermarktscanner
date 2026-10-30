@@ -1,0 +1,268 @@
+{
+  "generated_at_utc": "2026-10-30T07:50:49.193308+00:00",
+  "price_snapshot_fetched_at_utc": "2026-10-30T07:49:48.296743+00:00",
+  "price_snapshot_fresh": true,
+  "policy": {
+    "ranking": "actual checkout total for all required packages, 2 people",
+    "sources": "Only individually verified recipe cards and manually checked official-store product prices",
+    "price_confirmation_max_age_hours": 48,
+    "promotions": "No promotions used without separate manual validation",
+    "missing": "Never infer missing ingredients, quantities, prices or rankings",
+    "estimates": "Indicative estimates are never included in this verified ranking"
+  },
+  "library_counts": {
+    "HelloFresh": 225,
+    "Plated": 504
+  },
+  "stores": {
+    "Lidl": {
+      "verified_count": 0,
+      "target": 10,
+      "top10": [],
+      "blocked_counts": {
+        "recept_niet_handmatig_gevalideerd": 225,
+        "plated_nog_niet_prijsgeschikt": 504
+      },
+      "missing_ingredient_examples": [
+        {
+          "recipe_id": "cd468af69af3",
+          "title": "Heekfilet à la meunière met wortel-linzenpuree",
+          "missing": [
+            "Wortel (stuk(s))",
+            "Ui (stuk(s))",
+            "Knoflookteen (stuk(s))",
+            "Citroen (stuk(s))",
+            "Rode splitlinzen (g)"
+          ]
+        },
+        {
+          "recipe_id": "c654502dcee3",
+          "title": "Orzotto met courgette en gruyère",
+          "missing": [
+            "Ui (stuk(s))",
+            "Knoflookteen (stuk(s))",
+            "Courgette (stuk(s))",
+            "Verse rozemarijn (takje(s))",
+            "Orzo (g)"
+          ]
+        },
+        {
+          "recipe_id": "d68b92fe361e",
+          "title": "Wortel-preistamppot met gehaktballetjes",
+          "missing": [
+            "Wortel (stuk(s))",
+            "Prei (stuk(s))",
+            "Gehaktballetjes van varken en rund (stuk(s))",
+            "Ketjap manis (ml)",
+            "[Plantaardige] roomboter (el)"
+          ]
+        },
+        {
+          "recipe_id": "745d923192e8",
+          "title": "Kipburger met bruschettadip",
+          "missing": [
+            "Bruschettadip (g)",
+            "Siciliaanse kruidenmix (zakje(s))",
+            "Aardappelblokjes (g)",
+            "Maanzaadbroodje (stuk(s))",
+            "Ui (stuk(s))"
+          ]
+        },
+        {
+          "recipe_id": "57fa6f7fd758",
+          "title": "Dahl met naanbrood en komkommersalsa",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "d10560a1450c",
+          "title": "Kapsalon met vegetarische döner kebab",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "cb700a40dcc2",
+          "title": "Parelcouscous met witte kaas",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "3fb963529dfa",
+          "title": "Volkoren wraps met tempeh en mangochutney",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        }
+      ]
+    },
+    "Jumbo": {
+      "verified_count": 0,
+      "target": 10,
+      "top10": [],
+      "blocked_counts": {
+        "recept_niet_handmatig_gevalideerd": 225,
+        "plated_nog_niet_prijsgeschikt": 504
+      },
+      "missing_ingredient_examples": [
+        {
+          "recipe_id": "cd468af69af3",
+          "title": "Heekfilet à la meunière met wortel-linzenpuree",
+          "missing": [
+            "Wortel (stuk(s))",
+            "Ui (stuk(s))",
+            "Knoflookteen (stuk(s))",
+            "Citroen (stuk(s))",
+            "Rode splitlinzen (g)"
+          ]
+        },
+        {
+          "recipe_id": "c654502dcee3",
+          "title": "Orzotto met courgette en gruyère",
+          "missing": [
+            "Ui (stuk(s))",
+            "Knoflookteen (stuk(s))",
+            "Courgette (stuk(s))",
+            "Verse rozemarijn (takje(s))",
+            "Orzo (g)"
+          ]
+        },
+        {
+          "recipe_id": "d68b92fe361e",
+          "title": "Wortel-preistamppot met gehaktballetjes",
+          "missing": [
+            "Wortel (stuk(s))",
+            "Prei (stuk(s))",
+            "Spekreepjes (g)",
+            "Gehaktballetjes van varken en rund (stuk(s))",
+            "[Plantaardige] roomboter (el)"
+          ]
+        },
+        {
+          "recipe_id": "745d923192e8",
+          "title": "Kipburger met bruschettadip",
+          "missing": [
+            "Bruschettadip (g)",
+            "Siciliaanse kruidenmix (zakje(s))",
+            "Aardappelblokjes (g)",
+            "Maanzaadbroodje (stuk(s))",
+            "Ui (stuk(s))"
+          ]
+        },
+        {
+          "recipe_id": "57fa6f7fd758",
+          "title": "Dahl met naanbrood en komkommersalsa",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "d10560a1450c",
+          "title": "Kapsalon met vegetarische döner kebab",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "cb700a40dcc2",
+          "title": "Parelcouscous met witte kaas",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "3fb963529dfa",
+          "title": "Volkoren wraps met tempeh en mangochutney",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        }
+      ]
+    },
+    "AH": {
+      "verified_count": 0,
+      "target": 10,
+      "top10": [],
+      "blocked_counts": {
+        "recept_niet_handmatig_gevalideerd": 225,
+        "plated_nog_niet_prijsgeschikt": 504
+      },
+      "missing_ingredient_examples": [
+        {
+          "recipe_id": "cd468af69af3",
+          "title": "Heekfilet à la meunière met wortel-linzenpuree",
+          "missing": [
+            "Wortel (stuk(s))",
+            "Ui (stuk(s))",
+            "Knoflookteen (stuk(s))",
+            "Rode splitlinzen (g)",
+            "Amandelschaafsel (g)"
+          ]
+        },
+        {
+          "recipe_id": "c654502dcee3",
+          "title": "Orzotto met courgette en gruyère",
+          "missing": [
+            "Ui (stuk(s))",
+            "Knoflookteen (stuk(s))",
+            "Verse rozemarijn (takje(s))",
+            "Amandelschaafsel (g)",
+            "Geraspte gruyère (g)"
+          ]
+        },
+        {
+          "recipe_id": "d68b92fe361e",
+          "title": "Wortel-preistamppot met gehaktballetjes",
+          "missing": [
+            "Wortel (stuk(s))",
+            "Spekreepjes (g)",
+            "Gehaktballetjes van varken en rund (stuk(s))",
+            "[Plantaardige] roomboter (el)",
+            "Zoutarm runderbouillon- blokje (stuk(s))"
+          ]
+        },
+        {
+          "recipe_id": "745d923192e8",
+          "title": "Kipburger met bruschettadip",
+          "missing": [
+            "Bruschettadip (g)",
+            "Siciliaanse kruidenmix (zakje(s))",
+            "Aardappelblokjes (g)",
+            "Maanzaadbroodje (stuk(s))",
+            "Ui (stuk(s))"
+          ]
+        },
+        {
+          "recipe_id": "57fa6f7fd758",
+          "title": "Dahl met naanbrood en komkommersalsa",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "d10560a1450c",
+          "title": "Kapsalon met vegetarische döner kebab",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "cb700a40dcc2",
+          "title": "Parelcouscous met witte kaas",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        },
+        {
+          "recipe_id": "3fb963529dfa",
+          "title": "Volkoren wraps met tempeh en mangochutney",
+          "missing": [
+            "Bronkolom voor twee personen"
+          ]
+        }
+      ]
+    }
+  }
+}
