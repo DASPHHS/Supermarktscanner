@@ -1,10 +1,10 @@
 {
   "metadata": {
     "source": "Plated Google Drive (public-link download)",
-    "updated_at_utc": "2026-10-30T15:26:30.935030+00:00",
-    "imported": 497,
+    "updated_at_utc": "2026-10-30T21:04:02.339427+00:00",
+    "imported": 504,
     "note": "Preliminary OCR review queue only. NO prices, NO validated recipes.",
-    "count": 497,
+    "count": 504,
     "status": "manual_review_required"
   },
   "recipes": [
@@ -21373,6 +21373,230 @@
       ],
       "source_identity": "1rheoWj5j6e04TQXiB7gdXhiQmIv14Pkf",
       "original_filename": "Steak and Kimchi Quesadillas.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-steakaupoivre",
+      "source": "Plated",
+      "title_extracted": "Steak au Poivre (4)",
+      "source_file": "Steak au Poivre (4).pdf",
+      "drive_identity_hash": "97f65906efcb12ef77b9087d875ae18fc21fea531eea53db218f4c379fc80b00",
+      "content_sha256": "c25c5147a3c80a287dea89bdb7af87c912b8818e96bc6c14e0c4e2c26f8bee3b",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1¼ pounds fingerling potatoes",
+        "12 ounces dinosaur kale",
+        "2 shallots",
+        "3 cloves garlic",
+        "4 steaks",
+        "1 teaspoon cracked black peppercorns",
+        "½ cup white wine"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1ZLIGG4_maIvzyOkKA7bj_GxY9hOM-Aj2",
+      "original_filename": "Steak au Poivre (4).pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-steaksherrymarinated",
+      "source": "Plated",
+      "title_extracted": "steak-sherry-marinated",
+      "source_file": "steak-sherry-marinated.pdf",
+      "drive_identity_hash": "081ef40c85304e1627729387212c01fd516a87815c02607b564eaab4b6e00105",
+      "content_sha256": "afa13c41c2947fc9046f0ad5d87aa9932433e52333692a726611ff49f496ab59",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "2 tablespoons sherry vinegar",
+        "¼ teaspoon smoked paprika",
+        "⅛ ounce thyme",
+        "2 steaks",
+        "12 ounces red-skinned potatoes",
+        "¼ pint grape tomatoes",
+        "1 yellow onion"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1twh9fJlpc9DqNImdg3KNPLnRnaVLN6Z6",
+      "original_filename": "steak-sherry-marinated.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-stickyapricotglazedsalmon",
+      "source": "Plated",
+      "title_extracted": "Sticky Apricot-Glazed Salmon",
+      "source_file": "Sticky Apricot-Glazed Salmon.pdf",
+      "drive_identity_hash": "fe339db7cc287833e607b0bebf144aceb7edaf3eba030030b7610a24ce964891",
+      "content_sha256": "df670ce63702bc5ed4a7c6cd37e8f79c439058e2bd6fe721a0aead9d1f4da1b0",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "8 ounces baby bok choy, divided",
+        "6 ounces dinosaur kale",
+        "2 scallions, divided",
+        "1 shallot",
+        "4 cloves garlic",
+        "10 ounces salmon",
+        "¾ cup jasmine rice",
+        "2 packets gluten-free soy sauce",
+        "1 teaspoon sesame seeds"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1vvAKq9VMuIRdLFRp0uw5RO1CMyZj1q80",
+      "original_filename": "Sticky Apricot-Glazed Salmon.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-stickymonkeybreadwithwalnutsandcinnamon",
+      "source": "Plated",
+      "title_extracted": "Sticky monkey bread with walnuts and cinnamon",
+      "source_file": "Sticky monkey bread with walnuts and cinnamon.pdf",
+      "drive_identity_hash": "c42e9f53f180ed1f3e6bd08b2fe99cc1495c4b88f29b0347e961fc1f7941db75",
+      "content_sha256": "caa649e50130a2c894d7c43f3dec266deb73fd3676281fa653a9e1efdda4488e",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¾ ounce walnuts",
+        "8 ounces dough",
+        "2 tablespoons butter",
+        "¼ cup light brown sugar",
+        "1 sugar mix",
+        "2 tablespoons granulated sugar",
+        "2 aluminum tins"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1tN7x_ieCAZMJbxukwwdw7B0w8G5AlV04",
+      "original_filename": "Sticky monkey bread with walnuts and cinnamon.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-stickysesamecauliflower",
+      "source": "Plated",
+      "title_extracted": "Sticky Sesame Cauliflower",
+      "source_file": "Sticky Sesame Cauliflower.pdf",
+      "drive_identity_hash": "5dba4407aab0cfd2e2b65905d4000f2e3f1ad2f4d0a61e133e3fda1409743ccd",
+      "content_sha256": "6227b936db9302da34cd40583de4f944d53fe29e2c0cccf8bfde39b9366884a3",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¾ cup basmati rice",
+        "10 ounces cauliflower florets",
+        "2 scallions, divided",
+        "½ cup flour, divided",
+        "1 tablespoon sesame oil",
+        "1 spice mix",
+        "¼ teaspoon sesame seeds",
+        "1 packet honey",
+        "2 packets Sriracha",
+        "½ cup peas",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1mjOMMZvZHRtnx6O5TS3vF7pSN1x5e2h3",
+      "original_filename": "Sticky Sesame Cauliflower.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-summerberrygalettes",
+      "source": "Plated",
+      "title_extracted": "Summer Berry Galettes",
+      "source_file": "Summer Berry Galettes.pdf",
+      "drive_identity_hash": "9d3a269e5cc5f971d2e6a6a0e32dc3cf5823359c74cae494e49f801ac9ebf299",
+      "content_sha256": "84418d09b7f134f509851d2ba118db477bc7da675780ad683d4dc82ab1532f1f",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "1 lemon",
+        "2 tablespoons cornstarch",
+        "1 cup blueberries",
+        "1 cup raspberries",
+        "3 tablespoons sugar",
+        "1 pie crust",
+        "1 parchment paper"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "1ZIpjRdAX5T0qeZxOeAG-dHZR7eXDcnSw",
+      "original_filename": "Summer Berry Galettes.pdf",
+      "same_title_candidates": []
+    },
+    {
+      "id": "plated-summerquinoabowlwithburrata",
+      "source": "Plated",
+      "title_extracted": "Summer Quinoa Bowl with Burrata",
+      "source_file": "Summer Quinoa Bowl with Burrata.pdf",
+      "drive_identity_hash": "3ca8ecbb5ef164d73f5fff39ca37549db73dccb852a8171b99f61fe26e136c88",
+      "content_sha256": "6b57f16488402c925b2da69894c46564712ff24eaa6d9a59c9140ffbbdb37f72",
+      "ocr_method": "pdf_text",
+      "servings_original": null,
+      "servings": 4,
+      "ingredient_candidates_original": [
+        "¼ cup roasted salted almonds",
+        "1¼ ounces maple syrup, divided",
+        "½ teaspoon crushed red pepper",
+        "⅔ cup red quinoa",
+        "12 ounces summer squash",
+        "1 shallot",
+        "6 ounces sugar snap peas",
+        "½ cup peas"
+      ],
+      "ingredients_4p": [],
+      "extraction_version": 2,
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "review_flags": [
+        "Verify original PDF ingredient columns and serving count",
+        "Check all US units, package weights and pantry ingredients"
+      ],
+      "source_identity": "18m_VssAmYNDKD0wzLDMdVngQOsgc55K7",
+      "original_filename": "Summer Quinoa Bowl with Burrata.pdf",
       "same_title_candidates": []
     },
     {

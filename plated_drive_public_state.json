@@ -522,7 +522,17 @@
     "1wVL4supAC1OfFxZicNv9S4-ahKuW-H7F": "06cb7503f55f56c87055405769ddd12fecdd787d1a4aeb217e522a7061cba20f",
     "1B3zZEXuzWTVYDvpj2fRhLaBbBUAjpnRa": "1a6292f41d9154ddcfd3141c48bf25f821dab41a33a590bda567444d457ad322",
     "1W3DX2TTORIhD7HyGQkrDVkRnJIKayJbK": "d80118d382dbf63454d104c790a5297c275d2fcbf10be53a03e09705eb259086",
-    "1rheoWj5j6e04TQXiB7gdXhiQmIv14Pkf": "3e883461cd0cac873dfdec152ad243235beff496cbaf35abd7ce996cae23db37"
+    "1rheoWj5j6e04TQXiB7gdXhiQmIv14Pkf": "3e883461cd0cac873dfdec152ad243235beff496cbaf35abd7ce996cae23db37",
+    "1ZLIGG4_maIvzyOkKA7bj_GxY9hOM-Aj2": "c25c5147a3c80a287dea89bdb7af87c912b8818e96bc6c14e0c4e2c26f8bee3b",
+    "1twh9fJlpc9DqNImdg3KNPLnRnaVLN6Z6": "afa13c41c2947fc9046f0ad5d87aa9932433e52333692a726611ff49f496ab59",
+    "1vvAKq9VMuIRdLFRp0uw5RO1CMyZj1q80": "df670ce63702bc5ed4a7c6cd37e8f79c439058e2bd6fe721a0aead9d1f4da1b0",
+    "1tN7x_ieCAZMJbxukwwdw7B0w8G5AlV04": "caa649e50130a2c894d7c43f3dec266deb73fd3676281fa653a9e1efdda4488e",
+    "1mjOMMZvZHRtnx6O5TS3vF7pSN1x5e2h3": "6227b936db9302da34cd40583de4f944d53fe29e2c0cccf8bfde39b9366884a3",
+    "1ZIpjRdAX5T0qeZxOeAG-dHZR7eXDcnSw": "84418d09b7f134f509851d2ba118db477bc7da675780ad683d4dc82ab1532f1f",
+    "18m_VssAmYNDKD0wzLDMdVngQOsgc55K7": "6b57f16488402c925b2da69894c46564712ff24eaa6d9a59c9140ffbbdb37f72",
+    "15RIzTxcNyOUWQh94Wl8qsDW1i64zYJ25": "f974a2c9c178f19b54b35bf4c64dd9cedf30dbc819004442fbb60a221eebf418",
+    "1X7BF9sx7D0RUy3ClFlSGNZ3aQzdzuwWV": "67cbc5edb6fecff6f700e52f02f747b63469ec27b7386654598c346485dbf8b0",
+    "1M3AXOzMfsNZnGHLefVjRqAHIxxywRoPo": "eedd50ad8536b2708307434093de7407389756492fe2af86270fe59439aec890"
   },
   "failure_counts": {
     "1evpt9yp-Xc5qw_5gBtJVw8tFdXCYxthQ": 1,
@@ -589,18 +599,7 @@
     "1X7BF9sx7D0RUy3ClFlSGNZ3aQzdzuwWV": 2,
     "1M3AXOzMfsNZnGHLefVjRqAHIxxywRoPo": 2
   },
-  "errors": {
-    "1ZLIGG4_maIvzyOkKA7bj_GxY9hOM-Aj2": "Steak au Poivre (4).pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "1twh9fJlpc9DqNImdg3KNPLnRnaVLN6Z6": "steak-sherry-marinated.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "1vvAKq9VMuIRdLFRp0uw5RO1CMyZj1q80": "Sticky Apricot-Glazed Salmon.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "1tN7x_ieCAZMJbxukwwdw7B0w8G5AlV04": "Sticky monkey bread with walnuts and cinnamon.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "1mjOMMZvZHRtnx6O5TS3vF7pSN1x5e2h3": "Sticky Sesame Cauliflower.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "1ZIpjRdAX5T0qeZxOeAG-dHZR7eXDcnSw": "Summer Berry Galettes.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "18m_VssAmYNDKD0wzLDMdVngQOsgc55K7": "Summer Quinoa Bowl with Burrata.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "15RIzTxcNyOUWQh94Wl8qsDW1i64zYJ25": "dupe_Crispy Cocoa-Marshmallow Treats with White Chocolate (4)_card.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "1X7BF9sx7D0RUy3ClFlSGNZ3aQzdzuwWV": "dupe_Crispy Fish Lettuce Wraps with Corn Salad and Lime Crema (1).PDF: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
-    "1M3AXOzMfsNZnGHLefVjRqAHIxxywRoPo": "dupe_Crispy Fish Tacos with Sriracha-Lime Crema and Pickled Onion (1).PDF: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'"
-  },
+  "errors": {},
   "processed": {},
   "failures": {},
   "duplicate_content": {
@@ -629,7 +628,10 @@
     "1a4ItNcjAdfZvbAGC14P9uOEkxuJWgWYd": "88b6f30d4d20a6fedf8450cdae82cde8f1755762aefbec9e2539a0ce007d72d5",
     "1Nl3yXgtwEGt0SnweaXI_AeuxJgEpGe4u": "435acf581ed2e65cc4ced4dacc1979db706df13a3fb5cd3519b792a505c39826",
     "17oT6LGkmnFGW8TEgMcT1Fmy7JualIrH2": "a0e1553f1ad60d50ea11ae0efa61b2d053e6a0c869e084f29a53d5e4131b99ad",
-    "1GNmRo0BQC4gHJzOI8jT9rnb4ysAzwmsc": "a0e1553f1ad60d50ea11ae0efa61b2d053e6a0c869e084f29a53d5e4131b99ad"
+    "1GNmRo0BQC4gHJzOI8jT9rnb4ysAzwmsc": "a0e1553f1ad60d50ea11ae0efa61b2d053e6a0c869e084f29a53d5e4131b99ad",
+    "15RIzTxcNyOUWQh94Wl8qsDW1i64zYJ25": "f974a2c9c178f19b54b35bf4c64dd9cedf30dbc819004442fbb60a221eebf418",
+    "1X7BF9sx7D0RUy3ClFlSGNZ3aQzdzuwWV": "67cbc5edb6fecff6f700e52f02f747b63469ec27b7386654598c346485dbf8b0",
+    "1M3AXOzMfsNZnGHLefVjRqAHIxxywRoPo": "eedd50ad8536b2708307434093de7407389756492fe2af86270fe59439aec890"
   },
   "duplicates": {}
 }
