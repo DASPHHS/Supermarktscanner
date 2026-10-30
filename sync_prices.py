@@ -115,8 +115,8 @@ def calculate(recipe, catalog, store, servings=4):
         # product sold by weight. Only explicit liquid spoon measures convert.
         liquid=name in {'olijfolie','extra vierge olijfolie','zonnebloemolie','wittewijnazijn','rodewijnazijn','balsamicoazijn','sojasaus','water'}
         needed,u=unit_quantity(qty,unit) if qty is not None and (unit not in ('el','tl') or liquid) else (None,None)
-        if needed is None:
-            missing.append({'ingredient':label,'reason':'eenheid/hoeveelheid controleren'})
+        if needed is None or not math.isfinite(needed) or needed <= 0:
+            missing.append({'ingredient':label,'reason':'eenheid/hoeveelheid controleren (positieve hoeveelheid vereist)'})
             continue
         candidates=[p for p in catalog.get(store,[]) if p['unit']==u and matches(name,p['n'])]
         if not candidates:
