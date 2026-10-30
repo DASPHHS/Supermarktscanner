@@ -1,21 +1,28 @@
 {
-  "updated_at_utc": "2026-10-30T06:32:03.993509+00:00",
+  "updated_at_utc": "2026-10-30T15:26:30.935030+00:00",
   "manifest_pdf_count": 533,
   "unique_title_candidates": 505,
-  "attempted_this_run": 60,
-  "new_records_this_run": 50,
-  "records_in_queue": 454,
-  "exact_duplicates_this_run": 7,
+  "attempted_this_run": 58,
+  "new_records_this_run": 43,
+  "records_in_queue": 497,
+  "exact_duplicates_this_run": 5,
   "pricing_eligible": 0,
   "download_or_ocr_errors_this_run": [
+    "Steak au Poivre (4).pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "steak-sherry-marinated.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Sticky Apricot-Glazed Salmon.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Sticky monkey bread with walnuts and cinnamon.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Sticky Sesame Cauliflower.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Summer Berry Galettes.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
+    "Summer Quinoa Bowl with Burrata.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
     "dupe_Crispy Cocoa-Marshmallow Treats with White Chocolate (4)_card.pdf: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
     "dupe_Crispy Fish Lettuce Wraps with Corn Salad and Lime Crema (1).PDF: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'",
     "dupe_Crispy Fish Tacos with Sriracha-Lime Crema and Pickled Onion (1).PDF: FileURLRetrievalError: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link'"
   ],
   "blocked_after_three_failures": 0,
   "manual_review_required": true,
-  "failures_retryable": 63,
-  "manifest_files_attempted_or_completed": 538,
-  "manifest_files_completed": 475,
-  "distinct_source_files_in_review": 454
+  "failures_retryable": 20,
+  "manifest_files_attempted_or_completed": 543,
+  "manifest_files_completed": 523,
+  "distinct_source_files_in_review": 497
 }
