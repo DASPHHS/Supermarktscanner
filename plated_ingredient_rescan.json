@@ -7,8 +7,8 @@
     "rescan_with_candidate_lines": 347,
     "rescan_checked_current_version": 368,
     "remaining_to_attempt": 1,
-    "attempted_this_run": 20,
-    "new_candidates_this_run": 19,
+    "attempted_this_run": 1,
+    "new_candidates_this_run": 0,
     "errors_this_run": [
       "Lemon Poppy Seed Doughnuts.pdf"
     ],
@@ -27301,7 +27301,7 @@
     "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Lemon Poppy Seed Doughnuts.pdf": {
       "version": 3,
       "status": "error",
-      "error": "Command '['pdftoppm', '-f', '2', '-l', '2', '-r', '300', '-singlefile', '-png', '/tmp/tmpub9mxfwc/source.pdf', '/tmp/tmpfwgj7_95/page']' timed out after 130 seconds",
+      "error": "Command '['pdftoppm', '-f', '2', '-l', '2', '-r', '300', '-singlefile', '-png', '/tmp/tmpofhnm05_/source.pdf', '/tmp/tmp416sbttn/page']' timed out after 130 seconds",
       "source_identity": "Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Lemon Poppy Seed Doughnuts.pdf",
       "source_file": "Lemon Poppy Seed Doughnuts.pdf",
       "pricing_eligible": false
