@@ -17,6 +17,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: daily-supermarket-prices
+  cancel-in-progress: false
 jobs:
   synchronize:
     runs-on: ubuntu-latest
