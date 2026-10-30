@@ -3,6 +3,9 @@ on:
   push:
     paths:
       - "sync_prices.py"
+      - "verified_rankings.py"
+      - "price_verifications.json"
+      - "tests/test_verified_rankings.py"
       - "indicative_prices.py"
       - "tests/test_indicative_prices.py"
       - "market_deals.json"
@@ -10,7 +13,7 @@ on:
       - "recipes_extracted.json"
       - ".github/workflows/daily-prices.yml"
   schedule:
-    - cron: "15 6 * * *"
+    - cron: "23 6 * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -28,19 +31,23 @@ jobs:
       - name: Controleer import en matching
         run: |
           python -m pip install pytest
-          PYTHONPATH=. pytest -q tests/test_sync_prices.py tests/test_indicative_prices.py
+          PYTHONPATH=. pytest -q tests/test_sync_prices.py tests/test_indicative_prices.py tests/test_verified_rankings.py
       - name: Ververs gecontroleerde schapprijzen
         run: python sync_prices.py
-      - name: Bewaar prijssnapshot
+      - name: Maak uitsluitend handmatig bevestigde top 10 voor twee personen
+        run: python verified_rankings.py
+      - name: Bewaar prijssnapshot en geverifieerde ranking
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cp recipe_prices.json "$RUNNER_TEMP/recipe_prices.json"
+          cp verified_rankings.json "$RUNNER_TEMP/verified_rankings.json"
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
             cp "$RUNNER_TEMP/recipe_prices.json" recipe_prices.json
-            git add recipe_prices.json
+            cp "$RUNNER_TEMP/verified_rankings.json" verified_rankings.json
+            git add recipe_prices.json verified_rankings.json
             if git diff --cached --quiet; then exit 0; fi
             git commit -m "Update supermarket price snapshot"
             if git push origin HEAD:main; then exit 0; fi
