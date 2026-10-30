@@ -66,9 +66,13 @@ def candidate(line):
             "source_portions_not_verified":True,"pricing_eligible":False}
 
 def scan_native(pdf,page):
-    result=subprocess.run(["pdftotext","-f",str(page),"-l",str(page),
-                           "-layout",str(pdf),"-"],
-                          capture_output=True,text=True,timeout=60)
+    try:
+        result=subprocess.run(["pdftotext","-f",str(page),"-l",str(page),
+                               "-layout",str(pdf),"-"],
+                              capture_output=True,text=True,timeout=60)
+    except subprocess.TimeoutExpired:
+        # Native extraction is optional; let the bounded image OCR try next.
+        return []
     if result.returncode:
         return []
     return ingredient_lines(result.stdout)
