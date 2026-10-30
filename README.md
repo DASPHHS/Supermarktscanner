@@ -75,3 +75,14 @@ De map bevat veel dubbele PDF-bestanden (`dupe_`) en deels gescande documenten d
 Zes echte Plated-recepten staan nu met ingrediënten voor vier porties in `plated_recipes.json`, waarvan vijf vanaf twee gescande pagina's visueel zijn gecontroleerd. Alle zes staan terecht op `pricing_eligible: false`: stuks, blikjes of zakjes hebben nog onduidelijke netto gewichten en kunnen nog niet verantwoord automatisch worden geprijsd. De originele vierportiekaart Teriyaki Salmon Tacos is niet opnieuw verdubbeld.
 
 `plated_validation.py` verwerkt Amerikaanse breuken, onderscheidt gewichts-oz van fl oz en cups, controleert de uitgangsporties en detecteert identieke pdf's met SHA-256. Tests draaien met `PYTHONPATH=. pytest -q`. Cups zijn volumes, geen generieke grammen. De circa 2,12 GB Drive-ZIP overschrijdt de huidige connectorlimiet van 256 MiB. De mapinventaris met 510 voorlopige titelgroepen omvat niet alle inhoudelijk gecontroleerde recepten; volledige bulkimport vergt een aparte downloadroute.
+
+
+## Geverifieerde top 10 voor twee personen
+
+De **definitieve** ranking staat op [Geverifieerde top 10](https://dasphhs.github.io/Supermarktscanner/hellofresh/verified-ranking.html). Het dagelijkse proces schrijft `verified_rankings.json` en rangschikt uitsluitend de **totale kassaprijs van benodigde hele verpakkingen** per supermarkt. De afzonderlijke indicatieve ramingen blijven beschikbaar in de Receptenstudio, maar worden nooit als bevestigde prijs gepresenteerd.
+
+Een recept wordt alleen toegelaten als de originele kaart handmatig is gecontroleerd (`quality=verified`, `pricing_eligible=true`, `ingredients_verified=true`, `quantities_verified=true`, `servings_verified=true`), de bronhoeveelheden voor twee personen aanwezig zijn en alle ingrediënten veilig op producten zijn gematcht. Een volledige automatische OCR- of productmatch is **geen** handmatige goedkeuring.
+
+Voeg bevestigde winkelprijzen uitsluitend handmatig toe aan `price_verifications.json` onder `products`, met per product `store` (`AH`, `Jumbo` of `Lidl`), `product_url` (officiële HTTPS-productpagina), `price_eur`, `quantity` (bijvoorbeeld `500 g`), `checked_at_utc` en `checked_by`. De ranking vergelijkt exact productadres, inhoud en prijs met de schapprijssnapshot en accepteert alleen controles van maximaal 48 uur oud. Een prijsfeed of aanbiedingszoekresultaat mag deze handmatige bevestigingen nooit automatisch aanmaken. Niet-bevestigde acties worden uitgesloten.
+
+Wanneer er minder dan tien volledig bevestigde recepten zijn, toont de definitieve ranking alleen het beschikbare aantal en de redenen waarom andere recepten ontbreken. De Plated-bronrecords blijven voorlopig buiten de prijsvergelijking totdat de originele ingrediënten, hoeveelheden en porties gecontroleerd en in het prijsmodel opgenomen zijn.
