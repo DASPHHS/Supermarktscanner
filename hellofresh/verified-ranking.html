@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Geverifieerde top 10 | Supermarktscanner</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#193b2b;background:#f7f8f3}
+body{margin:0}.wrap{max-width:1100px;margin:auto;padding:25px 20px 70px}
+header{background:#153d30;color:#fff;padding:25px 0}
+header a{color:#d8f282}h1{font:700 clamp(30px,5vw,48px) Georgia,serif;margin:15px 0 8px}
+p{line-height:1.6}.intro{color:#d7e7da;max-width:800px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+section{background:#fff;border:1px solid #e0e9de;border-radius:14px;padding:20px;min-width:0}
+h2{margin:0 0 10px;font-size:23px}h3{font-size:14px;margin-top:20px}
+small,.muted{color:#687d6f}.count{font-size:28px;font-weight:800}
+ol{padding-left:23px}li{padding:10px 0;border-bottom:1px solid #e5eee4}
+li a{color:#205b42}.price{font-weight:800;font-size:18px}
+details{margin-top:15px}summary{cursor:pointer;font-weight:700}
+.error{padding:15px;border:1px solid #e6b6a2;background:#fff1e8;border-radius:10px}
+@media(max-width:850px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="./">← Receptenstudio</a><h1>Geverifieerde top 10</h1>
+<p class="intro">Goedkoopste avondrecepten voor twee personen, per supermarkt, op basis van het echte kassabedrag voor benodigde hele verpakkingen. Alleen handmatig gecontroleerde receptgegevens én recent bevestigde prijzen op officiële productpagina’s worden gerangschikt. Indicatieve ramingen zijn uitgesloten.</p></div></header>
+<main class="wrap"><p id="status">Gecontroleerde gegevens laden…</p><div class="cards" id="stores"></div>
+<p class="muted">Reguliere prijzen worden pas opgenomen na expliciete broncontrole. Aanbiedingen worden niet automatisch overgenomen uit een zoekfeed; een niet-bevestigde korting telt niet mee. Als er minder dan tien betrouwbare recepten zijn, blijft de lijst korter.</p>
+<p><a href="./">Bekijk de volledige bibliotheek en afzonderlijk gelabelde indicatieve ramingen</a></p></main>
+<script>
+(async()=>{
+ const status=document.getElementById('status'),root=document.getElementById('stores');
+ const money=n=>new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR'}).format(n);
+ const el=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n};
+ const labels={AH:'Albert Heijn',Jumbo:'Jumbo',Lidl:'Lidl'};
+ try{
+  const response=await fetch('../verified_rankings.json',{cache:'no-store'});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const data=await response.json(),generated=new Date(data.generated_at_utc);
+  const age=Date.now()-generated.getTime();
+  const current=Number.isFinite(age)&&age>=0&&age<48*3600000&&data.price_snapshot_fresh===true;
+  status.textContent=current?'Gecontroleerd op '+generated.toLocaleString('nl-NL',{timeZone:'Europe/Amsterdam'})+' · alleen bevestigde kassaprijzen.':'De gecontroleerde prijssnapshot is niet actueel. Er worden geen oude prijzen getoond.';
+  for(const store of ['Lidl','Jumbo','AH']){
+   const info=data.stores?.[store]||{},box=el('section');
+   box.append(el('h2',labels[store]),el('div',String(current?(info.top10||[]).length:0)+' / 10','count'));
+   const list=current?(info.top10||[]):[];
+   if(list.length){
+    const ol=el('ol');
+    for(const r of list){
+     const li=el('li');
+     li.append(el('strong',r.title||'Recept'),el('div',money(r.whole_packages_eur)+' afrekenen · 2 personen','price'),el('small',money(r.used_cost_eur)+' gebruikte ingrediënten'));
+     const details=el('details'),summary=el('summary','Gecontroleerde producten'),ul=el('ul');
+     for(const p of r.products||[]){
+      const item=el('li'),link=el('a',p.product+' · '+p.packages+' × '+money(p.package_price_eur));
+      if(typeof p.product_url==='string'&&p.product_url.startsWith('https://')){link.href=p.product_url;link.target='_blank';link.rel='noopener noreferrer'}
+      item.append(link);ul.append(item);
+     }
+     details.append(summary,ul);li.append(details);ol.append(li);
+    }
+    box.append(ol);
+   }else box.append(el('p','Nog geen volledig gevalideerde recepten met actuele, individueel bevestigde productprijzen. Er wordt geen top 10 verzonnen.','muted'));
+   const blocked=info.blocked_counts||{},d=el('details'),summary=el('summary','Waarom recepten ontbreken'),ul=el('ul');
+   for(const [reason,count] of Object.entries(blocked)){if(count)ul.append(el('li',reason.replaceAll('_',' ')+' · '+count))}
+   d.append(summary,ul);box.append(d);
+   root.append(box);
+  }
+ }catch(error){status.className='error';status.textContent='De geverifieerde ranking kon niet worden geladen ('+error.message+'). Er worden geen prijzen getoond.'}
+})();
+</script>
+</body>
+</html>
