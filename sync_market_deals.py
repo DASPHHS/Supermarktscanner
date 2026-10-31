@@ -48,14 +48,14 @@ CORE_TERMS=("aardappelen","ui","wortel","kipfilet","broccoli","tomaten",
             "rijst","pasta","eieren","kaas","kikkererwten","kokosmelk")
 ROTATING_TERMS=12
 
-def select_terms(day, families):
-    """Bound requests and rotate extra ingredients without hiding partial coverage."""
+def select_terms(day, families, slot=0):
+    """Bound requests; rotate extra ingredients across daily scheduled slots."""
     all_terms=tuple(dict.fromkeys(TERMS+tuple(families)))
     core=tuple(t for t in CORE_TERMS if t in all_terms)
     others=tuple(t for t in all_terms if t not in core)
     if not others:
         return core,len(all_terms)
-    start=(day.toordinal()*ROTATING_TERMS)%len(others)
+    start=((day.toordinal()*4+slot)*ROTATING_TERMS)%len(others)
     extra=tuple(others[(start+i)%len(others)] for i in range(min(ROTATING_TERMS,len(others))))
     return core+extra,len(all_terms)
 
@@ -82,8 +82,10 @@ def query(term):
 def main(out="market_deals.json"):
     from indicative_prices import FAMILIES
     from zoneinfo import ZoneInfo
-    today=datetime.now(ZoneInfo("Europe/Amsterdam")).date().isoformat()
-    terms,all_terms_count=select_terms(date.fromisoformat(today),FAMILIES)
+    local_now=datetime.now(ZoneInfo("Europe/Amsterdam"))
+    today=local_now.date().isoformat()
+    slot=local_now.hour//6
+    terms,all_terms_count=select_terms(local_now.date(),FAMILIES,slot=slot)
     now=datetime.now(timezone.utc).isoformat()
     result={"updated_at_utc":now,"source":"PrijsProfeet API /search",
             "limitations":["Rotating partial food-term search; not a complete assortment",
@@ -91,6 +93,7 @@ def main(out="market_deals.json"):
                            "Promotion is not automatically applied to recipe price"],
             "search_coverage":{"requested_terms":len(terms),
                                "available_terms":all_terms_count,
+                               "daily_slot":slot,
                                "complete":len(terms)==all_terms_count},
             "stores":{k:{"updated_at":now,"deals":[],"products":[]} for k in STORES}}
     seen={k:set() for k in STORES}
