@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-31T07:12:04.918305+00:00",
+  "updated_at_utc": "2026-10-31T07:12:18.897579+00:00",
   "source": "PrijsProfeet API /search",
   "limitations": [
     "Rotating partial food-term search; not a complete assortment",
@@ -14,7 +14,7 @@
   },
   "stores": {
     "Jumbo": {
-      "updated_at": "2026-10-31T07:12:04.918305+00:00",
+      "updated_at": "2026-10-31T07:12:18.897579+00:00",
       "deals": [
         {
           "product_id": "jumbo_612031PAK",
@@ -1319,7 +1319,7 @@
       ]
     },
     "AH": {
-      "updated_at": "2026-10-31T07:12:04.918305+00:00",
+      "updated_at": "2026-10-31T07:12:18.897579+00:00",
       "deals": [
         {
           "product_id": "ah_wi139728_2026-10-26",
@@ -5780,7 +5780,7 @@
       ]
     },
     "Lidl": {
-      "updated_at": "2026-10-31T07:12:04.918305+00:00",
+      "updated_at": "2026-10-31T07:12:18.897579+00:00",
       "deals": [
         {
           "product_id": "lidl_11318112_2026-10-26",
