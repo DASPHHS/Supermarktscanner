@@ -7,9 +7,10 @@ import re
 import unicodedata
 import urllib.parse
 import urllib.request
+import urllib.error
+import time
 from datetime import datetime, timezone, date
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor
 
 BASE="https://www.prijsprofeet.nl/api/v1/search"
 TERMS=("boerenkool","rookworst","aardappelen","pompoen","sperziebonen","gehakt",
@@ -43,21 +44,54 @@ def is_relevant_food(name,term):
         return bool(re.search(r"(?<![a-z])ui(?![a-z])",text))
     return term in text or SINGULAR_TERMS.get(term,"\\x00") in text
 
+CORE_TERMS=("aardappelen","ui","wortel","kipfilet","broccoli","tomaten",
+            "rijst","pasta","eieren","kaas","kikkererwten","kokosmelk")
+ROTATING_TERMS=12
+
+def select_terms(day, families):
+    """Bound requests and rotate extra ingredients without hiding partial coverage."""
+    all_terms=tuple(dict.fromkeys(TERMS+tuple(families)))
+    core=tuple(t for t in CORE_TERMS if t in all_terms)
+    others=tuple(t for t in all_terms if t not in core)
+    if not others:
+        return core,len(all_terms)
+    start=(day.toordinal()*ROTATING_TERMS)%len(others)
+    extra=tuple(others[(start+i)%len(others)] for i in range(min(ROTATING_TERMS,len(others))))
+    return core+extra,len(all_terms)
+
 def query(term):
     url=BASE+"?"+urllib.parse.urlencode({"q":term,"page_size":25})
     req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/json"})
-    with urllib.request.urlopen(req,timeout=20) as f:
-        return json.load(f)
+    # Public search is rate-limited. A bounded, sequential request stream
+    # avoids the burst of parallel searches that previously caused HTTP 429.
+    time.sleep(1.5)
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req,timeout=20) as f:
+                return json.load(f)
+        except urllib.error.HTTPError as exc:
+            if exc.code!=429 or attempt==2:
+                raise
+            retry_after=exc.headers.get("Retry-After") if exc.headers else None
+            try:
+                delay=max(1.0,min(float(retry_after),15.0))
+            except (ValueError,TypeError):
+                delay=4.0*(attempt+1)
+            time.sleep(delay)
+
 def main(out="market_deals.json"):
     from indicative_prices import FAMILIES
-    terms=tuple(dict.fromkeys(TERMS+tuple(FAMILIES)))
     from zoneinfo import ZoneInfo
     today=datetime.now(ZoneInfo("Europe/Amsterdam")).date().isoformat()
+    terms,all_terms_count=select_terms(date.fromisoformat(today),FAMILIES)
     now=datetime.now(timezone.utc).isoformat()
     result={"updated_at_utc":now,"source":"PrijsProfeet API /search",
-            "limitations":["Food term search is a selection, not a complete assortment",
+            "limitations":["Rotating partial food-term search; not a complete assortment",
                            "All products must be active, not upcoming/historical",
                            "Promotion is not automatically applied to recipe price"],
+            "search_coverage":{"requested_terms":len(terms),
+                               "available_terms":all_terms_count,
+                               "complete":len(terms)==all_terms_count},
             "stores":{k:{"updated_at":now,"deals":[],"products":[]} for k in STORES}}
     seen={k:set() for k in STORES}
     product_seen={k:set() for k in STORES}
@@ -67,9 +101,8 @@ def main(out="market_deals.json"):
             return term,query(term),None
         except Exception as exc:
             return term,None,term+": "+type(exc).__name__+": "+str(exc)[:120]
-    with ThreadPoolExecutor(max_workers=6) as pool:
-        batches=list(pool.map(fetch_term,terms))
-    for term,data,error in batches:
+    for term in terms:
+        term,data,error=fetch_term(term)
         if error:
             errors.append(error)
             continue
@@ -122,6 +155,7 @@ def main(out="market_deals.json"):
     if len(errors)>max(3,len(terms)//5):
         raise RuntimeError("Te veel bronfouten; vorige volledige actiesnapshot behouden. "+str(errors[:3]))
     result["errors"]=errors[:25]
+    result["search_coverage"]["successful_terms"]=len(terms)-len(errors)
     for v in result["stores"].values():
         v["deals"].sort(key=lambda x:(-float(x["discount"].split("%")[0]) if "%" in x["discount"] else 0,x["name"]))
     if not any(v["deals"] for v in result["stores"].values()):
