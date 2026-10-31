@@ -36,9 +36,9 @@ jobs:
         run: |
           python -m pip install pytest
           PYTHONPATH=. pytest -q tests/test_sync_prices.py tests/test_indicative_prices.py tests/test_verified_rankings.py
-      - name: Ververs actuele productprijzen en aanbiedingen
-        continue-on-error: true
-        run: python sync_market_deals.py
+      # Promotion discovery has its own scheduled market-deals workflow.
+      # Avoid a second simultaneous search burst and its HTTP 429 failures.
+      # sync_prices.py consumes the last dated feed, rejecting stale entries.
       - name: Ververs gecontroleerde schapprijzen
         run: python sync_prices.py
       - name: Maak uitsluitend handmatig bevestigde top 10 voor twee personen
