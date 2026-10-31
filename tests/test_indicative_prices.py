@@ -156,3 +156,35 @@ def test_source_outage_preserves_existing_market_snapshot(tmp_path,monkeypatch):
  monkeypatch.setattr(market,'query',fail)
  with pytest.raises(RuntimeError,match='bronfouten'):market.main(target)
  assert target.read_text()=='previous snapshot'
+
+def test_rotating_market_queries_are_bounded_and_disclose_partial_coverage():
+    from sync_market_deals import select_terms, CORE_TERMS
+    from indicative_prices import FAMILIES
+    first,total=select_terms(date(2026,10,31),FAMILIES)
+    next_day,next_total=select_terms(date(2026,11,1),FAMILIES)
+    assert total==next_total and total>len(first)
+    assert len(first)<=24 and len(first)==len(set(first))
+    assert all(t in first for t in CORE_TERMS)
+    assert first!=next_day
+    assert len(next_day)<=24
+
+
+def test_market_source_http_429_is_retried_with_bounded_wait(monkeypatch):
+    import io
+    import urllib.error
+    import sync_market_deals as market
+    attempts=[]
+    waits=[]
+    class Response:
+        def __enter__(self): return io.BytesIO(b'{"results":[]}')
+        def __exit__(self,*args): return False
+    def fake_urlopen(req,timeout):
+        attempts.append(1)
+        if len(attempts)==1:
+            raise urllib.error.HTTPError(req.full_url,429,"rate limited",{"Retry-After":"2"},None)
+        return Response()
+    monkeypatch.setattr(market.urllib.request,"urlopen",fake_urlopen)
+    monkeypatch.setattr(market.time,"sleep",waits.append)
+    assert market.query("broccoli")=={"results":[]}
+    assert len(attempts)==2
+    assert waits==[1.5,2.0]
