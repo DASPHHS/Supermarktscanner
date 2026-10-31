@@ -42,13 +42,13 @@ def test_verified_cash_total_is_approved_only_with_complete_evidence():
     x=record();x['whole_packages_eur']=1.49
     assert verdict(recipe(),x,'AH',evidence(),NOW)=='prijsberekening_onconsistent'
     x=record();x['matches'][0]['packages']=0
-    assert verdict(recipe(),x,'AH',evidence(),NOW)=='actuele_officiele_prijsbevestiging_ontbreekt'
+    assert verdict(recipe(),x,'AH',evidence(),NOW)=='ingredienten_of_porties_onvolledig'
 
 def test_missing_ingredient_or_zero_quantity_is_not_a_price():
     x=record();x['missing']=[dict(ingredient='Olie',reason='geen match')]
     assert verdict(recipe(),x,'AH',evidence(),NOW)=='ingredienten_of_porties_onvolledig'
     x=record();x['matches'][0]['used_cost']=0
-    assert verdict(recipe(),x,'AH',evidence(),NOW)=='actuele_officiele_prijsbevestiging_ontbreekt'
+    assert verdict(recipe(),x,'AH',evidence(),NOW)=='ingredienten_of_porties_onvolledig'
 
 def test_build_returns_partial_top10_and_excludes_plated(tmp_path):
     (tmp_path/'recipes_extracted.json').write_text(json.dumps({'recipes':[recipe()]}))
