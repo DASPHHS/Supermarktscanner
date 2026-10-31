@@ -166,6 +166,9 @@ def test_rotating_market_queries_are_bounded_and_disclose_partial_coverage():
     assert len(first)<=24 and len(first)==len(set(first))
     assert all(t in first for t in CORE_TERMS)
     assert first!=next_day
+    same_day_other_slot,_=select_terms(date(2026,10,31),FAMILIES,slot=1)
+    assert same_day_other_slot!=first
+    assert all(t in same_day_other_slot for t in CORE_TERMS)
     assert len(next_day)<=24
 
 
