@@ -77,3 +77,37 @@ def test_ingredient_identity_required():
     x=record()
     x["matches"][0]["ingredient"]="Wortel (g)"
     assert verdict(recipe(),x,"AH",evidence(),NOW)=="ingredienten_of_porties_onvolledig"
+
+def test_verified_quantity_and_purchase_are_recomputed_from_two_person_card():
+    from verified_rankings import quantity_consistent
+    assert quantity_consistent(recipe()["ingredients_2p"][0],matched())
+    for key,value in (("quantity",200),("unit","ml"),("packages",2),
+                      ("used_cost",0.5),("package_size","250 gram")):
+        x=matched()
+        x["quantity"]=400
+        x["unit"]="g"
+        x[key]=value
+        assert not quantity_consistent(recipe()["ingredients_2p"][0],x)
+        r=record()
+        r["matches"]=[x]
+        assert verdict(recipe(),r,"AH",evidence(),NOW)=="ingredienten_of_porties_onvolledig"
+
+
+def test_verified_fractional_source_quantity_is_supported():
+    from verified_rankings import quantity_consistent
+    r=recipe()
+    r["ingredients_2p"][0]["quantity_2p_source"]="1/2"
+    m=matched()
+    m.update(quantity=0.5,packages=1,used_cost=0.0)
+    assert valid_recipe(r)
+    assert not quantity_consistent(r["ingredients_2p"][0],m)
+
+
+def test_same_sku_cannot_be_charged_as_two_independent_purchases():
+    r=recipe()
+    r["ingredients_2p"].append(dict(ingredient="Broccoli (g)",quantity_2p_source="400"))
+    x=record()
+    x["matches"]=[matched(),matched()]
+    x["whole_packages_eur"]=3.0
+    x["used_cost_eur"]=2.4
+    assert verdict(r,x,"AH",evidence(),NOW)=="prijsberekening_onconsistent"
