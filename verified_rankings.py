@@ -14,7 +14,7 @@ import math
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from sync_prices import amount
+from sync_prices import amount, ingredient_parts, number, unit_quantity
 
 STORES = ("Lidl", "Jumbo", "AH")
 OFFICIAL = {"Lidl": "lidl.nl", "Jumbo": "jumbo.com", "AH": "ah.nl"}
@@ -55,11 +55,8 @@ def official_url(url, store):
 
 
 def positive_quantity(raw):
-    try:
-        value = float(str(raw).strip().replace(",", "."))
-        return math.isfinite(value) and value > 0
-    except (TypeError, ValueError):
-        return False
+    value = number(str(raw))
+    return value is not None and math.isfinite(value) and value > 0
 
 
 def valid_recipe(recipe):
@@ -113,6 +110,48 @@ def verified_match(match, store, evidence, now):
     return False
 
 
+
+def quantity_consistent(source_row, match):
+    """Recompute the 2p quantity, units, packs and usage from the source row.
+
+    A product URL and a human-checked shelf price do not validate how much
+    of that product the recipe needs. Never trust snapshot totals alone.
+    """
+    if not isinstance(source_row, dict) or not isinstance(match, dict):
+        return False
+    label = source_row.get("ingredient")
+    if not isinstance(label, str) or match.get("ingredient") != label:
+        return False
+    name, source_unit = ingredient_parts(label)
+    if match.get("status") == "voorraad":
+        return name == "water" and match.get("cost") == 0
+    if name == "water":
+        return False
+    quantity = number(str(source_row.get("quantity_2p_source", "")))
+    if quantity is None or quantity <= 0:
+        return False
+    # Match the same conservative conversion policy as sync_prices.calculate.
+    liquid = name in {"olijfolie", "extra vierge olijfolie",
+                      "zonnebloemolie", "wittewijnazijn", "rodewijnazijn",
+                      "balsamicoazijn", "sojasaus", "water"}
+    if source_unit in ("el", "tl") and not liquid:
+        return False
+    needed, unit = unit_quantity(quantity, source_unit)
+    pack_size, pack_unit = amount(match.get("package_size"))
+    if (not finite_positive(needed) or not finite_positive(pack_size)
+            or unit != pack_unit or match.get("unit") != unit
+            or not finite_positive(match.get("quantity"))
+            or abs(match["quantity"] - needed) > 0.000001
+            or not finite_positive(match.get("package_price"))
+            or not finite_positive(match.get("used_cost"))):
+        return False
+    expected_packs = math.ceil(needed / pack_size - 1e-9)
+    if match.get("packages") != expected_packs:
+        return False
+    expected_used = round(needed * match["package_price"] / pack_size, 2)
+    return abs(match["used_cost"] - expected_used) <= 0.011
+
+
 def verdict(recipe, record, store, evidence, now):
     if not valid_recipe(recipe):
         return "recept_niet_handmatig_gevalideerd"
@@ -126,9 +165,15 @@ def verdict(recipe, record, store, evidence, now):
     matches = record.get("matches")
     if not isinstance(matches, list) or len(matches) != len(recipe["ingredients_2p"]):
         return "ingredienten_of_porties_onvolledig"
-    if any(m.get("ingredient") != ingredient.get("ingredient")
-           for m, ingredient in zip(matches, recipe["ingredients_2p"])):
+    if not all(quantity_consistent(ingredient, m)
+               for ingredient, m in zip(recipe["ingredients_2p"], matches)):
         return "ingredienten_of_porties_onvolledig"
+    # Two separate lines for the same SKU must not buy the same pack twice.
+    # A future combined-SKU pricing implementation may lift this restriction.
+    links = [official_url(m.get("link"), store) for m in matches
+             if m.get("status") != "voorraad"]
+    if len(links) != len(set(links)):
+        return "prijsberekening_onconsistent"
     if not all(verified_match(m, store, evidence, now) for m in matches):
         return "actuele_officiele_prijsbevestiging_ontbreekt"
     cash = record.get("whole_packages_eur")
