@@ -11,7 +11,7 @@ def recipe():
                 servings=4,ingredients_2p=[dict(ingredient='Broccoli (g)',quantity_2p_source='400')])
 
 def matched():
-    return dict(ingredient='Broccoli (g)',product='AH Broccoli',link=URL,package_size='500 gram',
+    return dict(ingredient='Broccoli (g)',product='AH Broccoli',link=URL,quantity=400,unit='g',package_size='500 gram',
                 package_price=1.5,packages=1,cash_cost=1.5,used_cost=1.2,
                 status='REGULIERE BRONPRIJS; actie niet bevestigd')
 
