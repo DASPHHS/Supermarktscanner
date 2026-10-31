@@ -42,10 +42,16 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git fetch origin main
-          git reset --hard origin/main
-          python audit_recipe_quality.py
-          git add recipe_quality_audit.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Update verified recipe extraction quality report'
-          git push origin HEAD:main
+          # Concurrent preview/OCR commits may advance main between fetch
+          # and push. Recalculate from the newest checkpoint on every retry.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python audit_recipe_quality.py
+            git add recipe_quality_audit.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update verified recipe extraction quality report'
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Concurrent push; retrying quality report ($attempt/5)"
+          done
+          exit 1
