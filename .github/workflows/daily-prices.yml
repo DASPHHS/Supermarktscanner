@@ -47,16 +47,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          cp market_deals.json "$RUNNER_TEMP/market_deals.json"
           cp recipe_prices.json "$RUNNER_TEMP/recipe_prices.json"
           cp verified_rankings.json "$RUNNER_TEMP/verified_rankings.json"
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
-            cp "$RUNNER_TEMP/market_deals.json" market_deals.json
             cp "$RUNNER_TEMP/recipe_prices.json" recipe_prices.json
             cp "$RUNNER_TEMP/verified_rankings.json" verified_rankings.json
-            git add market_deals.json recipe_prices.json verified_rankings.json
+            git add recipe_prices.json verified_rankings.json
             if git diff --cached --quiet; then exit 0; fi
             git commit -m "Update supermarket price snapshot"
             if git push origin HEAD:main; then exit 0; fi

@@ -191,3 +191,18 @@ def test_market_source_http_429_is_retried_with_bounded_wait(monkeypatch):
     assert market.query("broccoli")=={"results":[]}
     assert len(attempts)==2
     assert waits==[1.5,2.0]
+
+@pytest.mark.parametrize('label,quantity,family,amount',[
+ ('Franse brie (g)','100','brie',100),('Dadelstukjes (g)','40','dadels',40),
+ ('Libanees platbrood (stuk(s))','2','libanees platbrood',160),
+ ('Varkensboerenworst (stuk(s))','2','varkensboerenworst',200),
+ ('Casarecce (g)','180','penne',180),('Linguine (g)','180','spaghetti',180)])
+def test_additional_foods_keep_quantities_and_show_shape_proxies(label,quantity,family,amount):
+ x=requirements({'ingredient':label,'quantity_2p_source':quantity})[0]
+ assert x['family']==family and x['quantity']==amount
+ if family in ('penne','spaghetti'):assert x['proxy'] and 'Prijsproxy' in x['note']
+
+def test_gomasio_blend_is_a_visible_ten_gram_norm():
+ x=requirements({'ingredient':'Gomasio (zakje(s))','quantity_2p_source':'1'})
+ assert sum(r['quantity'] for r in x)==10 and all(r['proxy'] and r['norm'] for r in x)
+ assert not product_matches('brie',product('AH Brie salade'))

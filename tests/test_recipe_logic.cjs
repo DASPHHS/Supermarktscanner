@@ -54,3 +54,17 @@ test('original PDFs remain downloadable outside the Pages size budget',()=>{
  assert.equal(L.originalPdfUrl('previews/abc123-origineel.pdf'),'https://raw.githubusercontent.com/DASPHHS/Supermarktscanner/main/hellofresh/previews/abc123-origineel.pdf');
  for(const p of ['../secret.pdf','https://evil.test/a.pdf','previews/../../a.pdf',null])assert.equal(L.originalPdfUrl(p),null);
 });
+test('cash basis chooses the cheaper basket while consumed costs remain separate',()=>{
+ const e=(used,cash)=>({eligible:true,missing:[],total_ingredients:1,covered_ingredients:1,used_total_eur:used,whole_packages_eur:cash});
+ const a={store:'AH',estimate:e(2,30)},j={store:'Jumbo',estimate:e(3,4)};
+ assert.equal(L.selectRecord([a,j],false,'used').store,'AH');
+ assert.equal(L.selectRecord([a,j],false,'cash').store,'Jumbo');
+ assert.equal(L.rankingPrice({...a.estimate,whole_packages_eur:NaN},'cash'),null);
+});
+test('expired action totals are removed; card mode can fall back to a current base estimate',()=>{
+ const action={valid_from:'2026-10-26',valid_until:'2026-11-01'};
+ const base={lines:[]},discounted={lines:[{action}]};
+ assert.equal(L.estimateFor({estimate:discounted},false,'2026-11-02'),null);
+ assert.equal(L.estimateFor({estimate:base,estimate_with_cards:discounted},true,'2026-11-02'),base);
+ assert.equal(L.estimateFor({estimate:discounted},false,'2026-11-01'),discounted);
+});

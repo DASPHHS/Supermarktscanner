@@ -69,3 +69,20 @@ test('card option actually changes the best store and recipe order in the UI',as
  cards.checked=false;cards.dispatchEvent(new w.Event('change',{bubbles:true}));
  assert.equal(firstId(),templates[1].recipe_id);
 });
+
+test('cash comparison changes the displayed basket, selected store and recipe order',async t=>{
+ const source=data('recipe_prices.json'),templates=[];
+ for(const row of source.results){if(row.estimate?.eligible&&!templates.some(x=>x.recipe_id===row.recipe_id))templates.push(row);if(templates.length===2)break;}
+ const row=(template,store,used,cash)=>({...template,store,estimate_with_cards:undefined,estimate:{...template.estimate,lines:[],used_total_eur:used,whole_packages_eur:cash,per_person_eur:used/2}});
+ const fixture={...source,fetched_at_utc:new Date().toISOString(),results:[row(templates[0],'AH',2,30),row(templates[0],'Jumbo',3,4),row(templates[1],'AH',1,10)]};
+ const w=await open(t,fixture),d=w.document;
+ assert.equal(d.querySelector('.card button[data-id]').dataset.id,templates[1].recipe_id);
+ const basis=d.querySelector('#cost-basis');basis.value='cash';basis.dispatchEvent(new w.Event('change',{bubbles:true}));
+ const first=d.querySelector('.card');assert.equal(first.querySelector('button').dataset.id,templates[0].recipe_id);
+ assert.match(first.querySelector('.money').textContent,/4,00/);
+ assert.match(first.querySelector('.money').textContent,/hele verpakkingen.*Jumbo.*1,50/);
+ assert.match(d.querySelector('#sort').selectedOptions[0].textContent,/kassabon/);
+ first.querySelector('button').click();
+ assert.match(d.querySelector('#dialog').textContent,/twee personen · Jumbo/);
+ const pdf=d.querySelector('.pdf-download');if(pdf)assert.match(pdf.href,/raw.githubusercontent.com/);
+});

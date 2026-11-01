@@ -26,11 +26,21 @@ function completePrice(r,p){
 function estimatePrice(e){
  return e?.eligible===true&&Array.isArray(e.missing)&&e.missing.length===0&&e.total_ingredients>0&&e.covered_ingredients===e.total_ingredients&&Number.isFinite(e.used_total_eur)&&e.used_total_eur>=0?e.used_total_eur:null;
 }
-function estimateFor(p,cards=false){return (cards?(p?.estimate_with_cards||p?.estimate):p?.estimate)||null;}
-function selectRecord(records,cards=false){
+function estimateFor(p,cards=false,today=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Amsterdam'})){
+ const valid=e=>e && (e.lines||[]).every(line=>!line.action||activeOffer(line.action,today));
+ if(cards&&valid(p?.estimate_with_cards))return p.estimate_with_cards;
+ return valid(p?.estimate)?p.estimate:null;
+}
+function rankingPrice(e,basis='used'){
+ if(estimatePrice(e)===null)return null;
+ if(basis!=='cash')return e.used_total_eur;
+ return Number.isFinite(e.whole_packages_eur)&&e.whole_packages_eur>=0?e.whole_packages_eur:null;
+}
+function selectRecord(records,cards=false,basis='used'){
  const present=records.filter(Boolean);
- const priced=present.filter(p=>estimatePrice(estimateFor(p,cards))!==null);
- return priced.length?priced.sort((a,b)=>estimatePrice(estimateFor(a,cards))-estimatePrice(estimateFor(b,cards))||a.store.localeCompare(b.store))[0]:present.sort((a,b)=>(estimateFor(b,cards)?.covered_ingredients||0)-(estimateFor(a,cards)?.covered_ingredients||0))[0];
+ const price=p=>rankingPrice(estimateFor(p,cards),basis);
+ const priced=present.filter(p=>price(p)!==null);
+ return priced.length?priced.sort((a,b)=>price(a)-price(b)||a.store.localeCompare(b.store))[0]:present.sort((a,b)=>(estimateFor(b,cards)?.covered_ingredients||0)-(estimateFor(a,cards)?.covered_ingredients||0))[0];
 }
 function originalPdfUrl(path){
  if(typeof path!=='string'||! /^(?:previews|plated-previews)\/[a-zA-Z0-9_-]+\.pdf$/.test(path))return null;
@@ -47,7 +57,7 @@ function protein(title,labels=[]){
  // Main protein in the title takes precedence over chicken stock in a beef dish.
  return classify(norm(title))||classify(norm(labels.filter(x=>!/(bouillon|stock|broth)/i.test(x)).join(' ')))||'onbekend';
 }
-const api={norm,offerMatches,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,originalPdfUrl};
+const api={norm,offerMatches,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,rankingPrice,originalPdfUrl};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;
 else root.RecipeLogic=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

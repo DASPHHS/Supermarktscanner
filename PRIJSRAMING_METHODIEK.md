@@ -165,3 +165,35 @@ actiegegevens ouder dan 48 uur worden door de rekenmotor geweigerd.
 Een volledig weggevallen prijsdekking vervangt geen bruikbare snapshot.
 De site blijft via GitHub Pages gepubliceerd; externe storingen blijven
 mogelijk en verlopen informatie wordt niet als actueel gepresenteerd.
+
+
+## Vergelijken en beschikbaarheid — 1 november 2026
+
+Je kunt kiezen tussen verbruikskosten per persoon en de kassabon van de gekozen
+hele verpakkingen. De tweede keuze vergelijkt het kassabedrag van de producten
+die op verbruikskosten geselecteerd zijn; zij zoekt niet alle mogelijke
+winkelmandjes uit. De winkelkeuze en receptvolgorde volgen de gekozen maatstaf.
+Verbruik en restanten blijven in beide weergaven zichtbaar.
+
+De pagina haalt de prijssnapshot elke tien minuten opnieuw op. Acties met een
+verlopen einddatum leveren geen geldig ranglijstbedrag meer op, ook wanneer de
+pagina open blijft staan. Een nog geldige basisraming kan de kaartvariant vervangen.
+
+Brie, dadels, Libanees platbrood en varkensboerenworst hebben eigen productgroepen.
+Voor het platbrood geldt als werkaanname 80 g per stuk, voor worst 100 g per stuk.
+Casarecce en linguine kunnen zichtbaar geprijsd worden via penne respectievelijk
+spaghetti: een prijsproxy voor pastavorm, geen bevestiging van hetzelfde product.
+Gomasio wordt benaderd met een zakje van 10 g, bestaande uit 95% sesamzaad en 5%
+zout; deze kostenaanname staat bij het recept.
+
+De roulerende productzoekactie bewaart prijsrecords maximaal drie dagen vanaf de
+bronwaarneming. Niet opnieuw gezochte acties blijven hoogstens 48 uur vanaf hun
+eerste/laatste echte waarneming beschikbaar, en uitsluitend binnen hun bekende
+actiedatums. Een nieuwe feeddatum verlengt deze waarnemingstermijn niet.
+De prijsworkflow schrijft de actiefeed niet terug, zodat een gelijktijdig
+opgehaalde nieuwere feed behouden blijft.
+
+De site publiceert de lichte WebP-voorbeelden. Originele PDF's worden rechtstreeks
+uit de openbare GitHub-repository geopend. Daardoor nemen de circa 2,15 GB aan
+PDF's geen ruimte in de GitHub Pages-bundel in; de oorspronkelijke bestanden
+blijven bewaard.

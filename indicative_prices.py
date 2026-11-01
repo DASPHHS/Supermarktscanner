@@ -10,7 +10,7 @@ from datetime import date
 from decimal import Decimal, ROUND_CEILING, ROUND_HALF_UP
 from sync_prices import norm,number,amount
 
-VERSION='2026-10-30.1'
+VERSION='2026-11-01.1'
 VC='https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/hoeveel-voedingswaarden-zitten-erin/'
 WORK='Werkaanname voor prijsraming; geen exact HelloFresh-verpakkingsgewicht'
 # Canonical family: accepted names, grams per source piece (when relevant).
@@ -229,6 +229,17 @@ ALIASES.update({'rucola en veldsla':'rucola en veldsla','geitenkaas':'zachte gei
  'gehaktballetjes van varken en rund':'gehaktballetjes'})
 FOOD_PROXIES.update({'witte balsamicoazijn':'wittewijnazijn'})
 
+# Additional explicit foods and disclosed pasta-shape price proxies.
+FAMILIES.update({
+ 'brie':(['brie','franse brie','brie de meaux'],None),
+ 'dadels':(['dadels','dadels zonder pit','dadelstukjes','dadels ontpit'],None),
+ 'libanees platbrood':(['libanees platbrood','libanese platbroden','libanees brood'],80),
+ 'varkensboerenworst':(['varkensboerenworst','boerenworst varken','verse varkensworst'],100),
+})
+ALIASES.update({norm(a):f for f,(names,_) in FAMILIES.items() for a in names})
+FOOD_PROXIES.update({'casarecce':'penne','linguine':'spaghetti'})
+QUALIFIERS.update('franse zonder pit ontpit zachte'.split())
+
 def prepare_catalog(raw):
  """Extend the strict catalog only with explicit name sizes or disclosed piece assumptions."""
  from sync_prices import products
@@ -314,6 +325,8 @@ def canonical(name):
 def requirements(ingredient):
  label=ingredient['ingredient'];name,unit=parts(label)
  q=number(str(ingredient.get('quantity_2p_source','')))
+ if name=='gomasio' and unit=='zakje(s)' and q is not None:
+  return [dict(family=f,quantity=q*v,unit='g',norm=True,note='Prijsproxy gomasio: zakje 10 g benaderd met 95% sesamzaad en 5% zout; mengverhouding kan afwijken',source=None,proxy=True) for f,v in [('sesamzaad',9.5),('zout',.5)]]
  if name=='rodekool wittekool en wortel' and unit=='g' and q is not None:
   return [dict(family=f,quantity=q/3,unit='g',norm=True,note='Gemengde groenten: elk een derde van het brongewicht; kostenbenadering, mengverhouding onbekend',source=None,proxy=True,fixed_quantity=True) for f in ('rodekool','wittekool','wortel')]
  if name in ('water','water voor saus','kokend water'):
@@ -503,7 +516,7 @@ def estimate_recipe(recipe,catalog,store,deals=(),today=None,cards=False,scale=1
  result['eligible']=bool(ingredient_labels) and not result['missing']
  animal={'kipfilet','kippendijfilet','zalmfilet','kabeljauwfilet','heekfilet','doradefilet','varkenshaas',
          'warmgerookte zalmsnippers','spekreepjes','ontbijtspek','achterham','rundergehakt','varkensgehakt',
-         'kippenbouillon','runderbouillon','vissaus','garnalen','pangasiusfilet','half om half gehakt','gehaktballetjes'}
+         'kippenbouillon','runderbouillon','vissaus','garnalen','pangasiusfilet','half om half gehakt','gehaktballetjes','varkensboerenworst'}
  result['vegetarian_ingredients']=result['eligible'] and not any(x['family'] in animal for x in result['lines'])
  if result['eligible']:
   result['used_total_eur']=money(sum(x.get('_used_unrounded',0) for x in result['lines']))

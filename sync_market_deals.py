@@ -79,6 +79,40 @@ def query(term):
                 delay=4.0*(attempt+1)
             time.sleep(delay)
 
+def merge_recent_history(result, previous, successful_terms):
+    """Retain dated prices across rotating searches, without extending action age."""
+    now=datetime.fromisoformat(result['updated_at_utc'])
+    from zoneinfo import ZoneInfo
+    today=now.astimezone(ZoneInfo("Europe/Amsterdam")).date()
+    def identity(p):
+        return str(p.get('base_product_id') or p.get('product_id') or p.get('product_url') or (str(p.get('name'))+'|'+str(p.get('quantity'))))
+    retained=0
+    for store,group in result['stores'].items():
+        old=previous.get('stores',{}).get(store,{})
+        products={identity(p):p for p in group['products']}
+        for p in old.get('products',[]):
+            try:age=(today-date.fromisoformat(str(p['extracted_at'])[:10])).days
+            except (KeyError,TypeError,ValueError):continue
+            if not 0<=age<=3:continue
+            key=identity(p)
+            if key not in products or str(p['extracted_at'])>str(products[key]['extracted_at']):
+                products[key]=p;retained+=1
+        group['products']=list(products.values())
+        deals={identity(d) for d in group['deals']}
+        for d in old.get('deals',[]):
+            if identity(d) in deals or d.get('source_term') in successful_terms:continue
+            try:
+                observed=d.get('observed_at_utc') or previous['updated_at_utc']
+                stamp=datetime.fromisoformat(observed)
+                if stamp.tzinfo is None:stamp=stamp.replace(tzinfo=timezone.utc)
+                age=(now-stamp).total_seconds()
+                valid=date.fromisoformat(d['valid_from'])<=today<=date.fromisoformat(d['valid_until'])
+            except (KeyError,TypeError,ValueError):continue
+            if not valid or not 0<=age<48*3600 or d.get('valid_until_estimated') or d.get('personal_offer'):continue
+            group['deals'].append(dict(d,observed_at_utc=observed));deals.add(identity(d))
+    result['search_coverage']['retained_product_records']=retained
+    return result
+
 def main(out="market_deals.json"):
     from indicative_prices import FAMILIES
     from zoneinfo import ZoneInfo
@@ -99,6 +133,7 @@ def main(out="market_deals.json"):
     seen={k:set() for k in STORES}
     product_seen={k:set() for k in STORES}
     errors=[]
+    successful_terms=set()
     def fetch_term(term):
         try:
             return term,query(term),None
@@ -109,6 +144,7 @@ def main(out="market_deals.json"):
         if error:
             errors.append(error)
             continue
+        successful_terms.add(term)
         for p in data.get("results",[]):
             retailer=normalize(p.get("retailer"))
             target=next((k for k,v in STORES.items()
@@ -153,10 +189,13 @@ def main(out="market_deals.json"):
             detail['personal_offer']=any(any(word in str(x).casefold() for word in ('persoonlijk','personal','bonus box','bonusbox')) for x in p.get('promotional_keywords',[]))
             result["stores"][target]["deals"].append({**detail,"name":name,"discount":discount,
                 "price":price,"original_price":original,
-                "valid_from":start,"valid_until":end,"source_term":term,
+                "valid_from":start,"valid_until":end,"source_term":term,"observed_at_utc":now,
                 "source_url":"https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"})
     if len(errors)>max(3,len(terms)//5):
         raise RuntimeError("Te veel bronfouten; vorige volledige actiesnapshot behouden. "+str(errors[:3]))
+    try:previous=json.loads(Path(out).read_text(encoding='utf-8'))
+    except (OSError,ValueError):previous={}
+    merge_recent_history(result,previous,successful_terms)
     result["errors"]=errors[:25]
     result["search_coverage"]["successful_terms"]=len(terms)-len(errors)
     for v in result["stores"].values():
