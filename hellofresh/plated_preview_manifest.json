@@ -261,223 +261,255 @@
       "ingredients": "plated-previews/a35ac3659fe68ed812-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/a35ac3659fe68ed812-origineel.pdf"
+      "original_pdf": "plated-previews/a35ac3659fe68ed812-origineel.pdf",
+      "source_sha256": "489dec93b2a55f908a288630a63a590ae831e65a180f4ce8fb1053f0573cad9d"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Cheesy Enchiladas with Beef_OCR.pdf": {
       "front": "plated-previews/75ad156603ffe4c932-front.webp",
       "ingredients": "plated-previews/75ad156603ffe4c932-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/75ad156603ffe4c932-origineel.pdf"
+      "original_pdf": "plated-previews/75ad156603ffe4c932-origineel.pdf",
+      "source_sha256": "b2171c8e7ca85422e89750a9f547d0290ae38211a8214e2d05193568f5cbe5aa"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Cheesy Steak Heros_OCR.pdf": {
       "front": "plated-previews/59aba51ed5b798d517-front.webp",
       "ingredients": "plated-previews/59aba51ed5b798d517-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/59aba51ed5b798d517-origineel.pdf"
+      "original_pdf": "plated-previews/59aba51ed5b798d517-origineel.pdf",
+      "source_sha256": "aac58990d31505fb0fac50175f6a28b5f5288da4b1de6afd2231f60ebf15df17"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Chop Steak_OCR.pdf": {
       "front": "plated-previews/2245b72e950051103d-front.webp",
       "ingredients": "plated-previews/2245b72e950051103d-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/2245b72e950051103d-origineel.pdf"
+      "original_pdf": "plated-previews/2245b72e950051103d-origineel.pdf",
+      "source_sha256": "7cb8a51882a4499307e30bfd5e0c3b2838f631cd074b6a30a40c6faed2b09d82"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Grilled Steak Tostadas_OCR.pdf": {
       "front": "plated-previews/e99ff4127bd40be892-front.webp",
       "ingredients": "plated-previews/e99ff4127bd40be892-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/e99ff4127bd40be892-origineel.pdf"
+      "original_pdf": "plated-previews/e99ff4127bd40be892-origineel.pdf",
+      "source_sha256": "07e08b7d0733ed6ead6af1bc128a88310825addc615646827b755177d84124f1"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Italian Burgers with Fresh Mozzarella and Tomato-Corn Salad_OCR.pdf": {
       "front": "plated-previews/abddfce924e2f8b2ce-front.webp",
       "ingredients": "plated-previews/abddfce924e2f8b2ce-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/abddfce924e2f8b2ce-origineel.pdf"
+      "original_pdf": "plated-previews/abddfce924e2f8b2ce-origineel.pdf",
+      "source_sha256": "1aba369e40ca60893a5fb3c2c6fa97eee8ff50f2c48f2af16859f1eb092677dc"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Italian Meatball Soup_OCR.pdf": {
       "front": "plated-previews/51d80b80f7054e5ee0-front.webp",
       "ingredients": "plated-previews/51d80b80f7054e5ee0-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/51d80b80f7054e5ee0-origineel.pdf"
+      "original_pdf": "plated-previews/51d80b80f7054e5ee0-origineel.pdf",
+      "source_sha256": "ba3509548cede99c6621c048522e10b7a62842cd2c16d440111e4c4c735f83db"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Meatball Parm Heroes_OCR (1).pdf": {
       "front": "plated-previews/221d66785dd98431a0-front.webp",
       "ingredients": "plated-previews/221d66785dd98431a0-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/221d66785dd98431a0-origineel.pdf"
+      "original_pdf": "plated-previews/221d66785dd98431a0-origineel.pdf",
+      "source_sha256": "69c420aa778a1f94efc455c85c0a8c296c6649ee1b493cb643232f453a21901a"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Orange Beef with Bell Pepper and Scallion Rice_OCR (1).pdf": {
       "front": "plated-previews/270da0f8e8a25197b5-front.webp",
       "ingredients": "plated-previews/270da0f8e8a25197b5-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/270da0f8e8a25197b5-origineel.pdf"
+      "original_pdf": "plated-previews/270da0f8e8a25197b5-origineel.pdf",
+      "source_sha256": "232840a69576dcc26b0d158322e160f23018ae1b90428cecbe9e6946f537aa2d"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Peppercorn Gravy Meatloaf_OCR.pdf": {
       "front": "plated-previews/511820d2fad1e5e7b6-front.webp",
       "ingredients": "plated-previews/511820d2fad1e5e7b6-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/511820d2fad1e5e7b6-origineel.pdf"
+      "original_pdf": "plated-previews/511820d2fad1e5e7b6-origineel.pdf",
+      "source_sha256": "ac3edbc6d6fcbad08e3bbf0709564a42cbc2a3ad1d1552ad937bc112b1b80963"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Philly-Style Cheesesteaks (2)_OCR (1).pdf": {
       "front": "plated-previews/7f70b0b42606087873-front.webp",
       "ingredients": "plated-previews/7f70b0b42606087873-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/7f70b0b42606087873-origineel.pdf"
+      "original_pdf": "plated-previews/7f70b0b42606087873-origineel.pdf",
+      "source_sha256": "4c120518160e9da164c593f4a2918d97aa3e76c428ecf98cbc877f8c5b710455"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Philly-Style Cheesesteaks_OCR.pdf": {
       "front": "plated-previews/f762f7ff09bf7a0e1d-front.webp",
       "ingredients": "plated-previews/f762f7ff09bf7a0e1d-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/f762f7ff09bf7a0e1d-origineel.pdf"
+      "original_pdf": "plated-previews/f762f7ff09bf7a0e1d-origineel.pdf",
+      "source_sha256": "4ea2e0549c74608cdf3e88997bab4210ba80ce81c6e15d912af19fb4fca94782"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Roast Beef-Spiced Meatballs_OCR.pdf": {
       "front": "plated-previews/b54b24a8de55fdfaab-front.webp",
       "ingredients": "plated-previews/b54b24a8de55fdfaab-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/b54b24a8de55fdfaab-origineel.pdf"
+      "original_pdf": "plated-previews/b54b24a8de55fdfaab-origineel.pdf",
+      "source_sha256": "814c85773b278385189944fcf8d61509e7bf728b820be41824bd9dbff166dd30"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/dupe_Beef_Steak and Green Garlic Stir-Fry wtih Flowering Chives_OCR (1).pdf": {
       "front": "plated-previews/36a5bbf5509f5995b7-front.webp",
       "ingredients": "plated-previews/36a5bbf5509f5995b7-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/36a5bbf5509f5995b7-origineel.pdf"
+      "original_pdf": "plated-previews/36a5bbf5509f5995b7-origineel.pdf",
+      "source_sha256": "ba94e8d8b62e3acaa5e2165cc9c854d5f425add0309156c93b912735cb38ab1f"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Steak and Zucchini Gyros_OCR.pdf": {
       "front": "plated-previews/ca7de924903a2a7dc1-front.webp",
       "ingredients": "plated-previews/ca7de924903a2a7dc1-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/ca7de924903a2a7dc1-origineel.pdf"
+      "original_pdf": "plated-previews/ca7de924903a2a7dc1-origineel.pdf",
+      "source_sha256": "3d056e1d32fb9691307a73fd0881bc6076d94e80ab9032b6528375b057291685"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Steak Frites_OCR.pdf": {
       "front": "plated-previews/9ae4c1a01b05d99504-front.webp",
       "ingredients": "plated-previews/9ae4c1a01b05d99504-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/9ae4c1a01b05d99504-origineel.pdf"
+      "original_pdf": "plated-previews/9ae4c1a01b05d99504-origineel.pdf",
+      "source_sha256": "292b91858c882fa5dda97f2f4689f747c4c3a21cd745a0fffc9d8af7d1c0fc19"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Tamarind-Glazed Steak with Crispy Curried Chickpeas_OCR.pdf": {
       "front": "plated-previews/7dc16a93a009f1e245-front.webp",
       "ingredients": "plated-previews/7dc16a93a009f1e245-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/7dc16a93a009f1e245-origineel.pdf"
+      "original_pdf": "plated-previews/7dc16a93a009f1e245-origineel.pdf",
+      "source_sha256": "6a6b47b6c9cf166a4ee8b81fea47278b680df44ad016793c8ea2b0bffaf29321"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Tex-Mex Beef Tacos_OCR.pdf": {
       "front": "plated-previews/31622b190aba3bf017-front.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 1,
-      "original_pdf": "plated-previews/31622b190aba3bf017-origineel.pdf"
+      "original_pdf": "plated-previews/31622b190aba3bf017-origineel.pdf",
+      "source_sha256": "3aa546b68fa2ed9c62c84af87e16542c77eceaf6415fdc08876e8b31f2d55f38"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_Thai Beef Lettuce Wraps_OCR.pdf": {
       "front": "plated-previews/9f23d62a7acb24ab5f-front.webp",
       "ingredients": "plated-previews/9f23d62a7acb24ab5f-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/9f23d62a7acb24ab5f-origineel.pdf"
+      "original_pdf": "plated-previews/9f23d62a7acb24ab5f-origineel.pdf",
+      "source_sha256": "1f2094e56c31a7abc15716e289dd135b0793f113eaf9c79037e9f67a4a6f94d7"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beef_White Cheddar Cheeseburgers with Onion Rings_OCR (1).pdf": {
       "front": "plated-previews/69f8846fb7e8d87a82-front.webp",
       "ingredients": "plated-previews/69f8846fb7e8d87a82-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/69f8846fb7e8d87a82-origineel.pdf"
+      "original_pdf": "plated-previews/69f8846fb7e8d87a82-origineel.pdf",
+      "source_sha256": "9297ac92f2fc1e3951b7043c3e16a1e9850758a78a7305487215cbc54b5b7257"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Beyond Meat® Tacos.pdf": {
       "front": "plated-previews/9043ac11d0c16b24e6-front.webp",
       "ingredients": "plated-previews/9043ac11d0c16b24e6-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/9043ac11d0c16b24e6-origineel.pdf"
+      "original_pdf": "plated-previews/9043ac11d0c16b24e6-origineel.pdf",
+      "source_sha256": "92c65f6f09797501c063f7e9f160fd1e8fc802fba0730e4927877de9621382b7"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Black Bean Burritos.pdf": {
       "front": "plated-previews/c3322a1c4a669c8045-front.webp",
       "ingredients": "plated-previews/c3322a1c4a669c8045-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/c3322a1c4a669c8045-origineel.pdf"
+      "original_pdf": "plated-previews/c3322a1c4a669c8045-origineel.pdf",
+      "source_sha256": "802b634a6ba21f2423585cce7a60aae1f068962d79a7435c5b824d353e1787bf"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Black Forest Cookies with Dried Cherries and Dark Chocolate Drizzle.pdf": {
       "front": "plated-previews/456ec365d6757321dc-front.webp",
       "ingredients": "plated-previews/456ec365d6757321dc-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/456ec365d6757321dc-origineel.pdf"
+      "original_pdf": "plated-previews/456ec365d6757321dc-origineel.pdf",
+      "source_sha256": "08deb0d3c02c7afdceed8c81c32325bd88796676024308b4302685ef7b085e93"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blackened Cod.pdf": {
       "front": "plated-previews/87b9f4ff4488c42210-front.webp",
       "ingredients": "plated-previews/87b9f4ff4488c42210-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/87b9f4ff4488c42210-origineel.pdf"
+      "original_pdf": "plated-previews/87b9f4ff4488c42210-origineel.pdf",
+      "source_sha256": "a961be3fdfc2b275ce8f41b610c4e1e7a98c2b1535325dafe866be43e7e242f7"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blackened Tilapia with Dirty Rice (4).pdf": {
       "front": "plated-previews/816ba3c805bff5d586-front.webp",
       "ingredients": "plated-previews/816ba3c805bff5d586-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/816ba3c805bff5d586-origineel.pdf"
+      "original_pdf": "plated-previews/816ba3c805bff5d586-origineel.pdf",
+      "source_sha256": "8d698fa7430ce05813d5525892974e189a5e16f4ab9821a4be543684265fd3d0"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blue Cheese and Pear Pizza.pdf": {
       "front": "plated-previews/f56231e645ff2cbce7-front.webp",
       "ingredients": "plated-previews/f56231e645ff2cbce7-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/f56231e645ff2cbce7-origineel.pdf"
+      "original_pdf": "plated-previews/f56231e645ff2cbce7-origineel.pdf",
+      "source_sha256": "68a722d096f766272c88adaa2fdf3afc9c67d0e23b3a9d1f8a0888223ed4c5a4"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Blue Cheese Burgers (4).pdf": {
       "front": "plated-previews/c802479e54e2e0fed7-front.webp",
       "ingredients": "plated-previews/c802479e54e2e0fed7-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/c802479e54e2e0fed7-origineel.pdf"
+      "original_pdf": "plated-previews/c802479e54e2e0fed7-origineel.pdf",
+      "source_sha256": "e5f483441bfad3d572c68b01c0e0fd68779bdb22c5ba4c4d2a15ac0109151fd8"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Bok Choy Fried Rice with Butternut Squash.pdf": {
       "front": "plated-previews/45312200508c3626c1-front.webp",
       "ingredients": "plated-previews/45312200508c3626c1-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/45312200508c3626c1-origineel.pdf"
+      "original_pdf": "plated-previews/45312200508c3626c1-origineel.pdf",
+      "source_sha256": "b500971c5e122fbde9abdbb5ee33026fd4beb9921b5cf7256566b83d54156b91"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Braised Chicken, Apricots, and Currants.pdf": {
       "front": "plated-previews/fa080ff1004ee40dbb-front.webp",
       "ingredients": "plated-previews/fa080ff1004ee40dbb-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/fa080ff1004ee40dbb-origineel.pdf"
+      "original_pdf": "plated-previews/fa080ff1004ee40dbb-origineel.pdf",
+      "source_sha256": "29b1888293723d94cb8b03d324413210c2203ade6b2478689d7f48ed8d7aaba3"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Braised Pork and Apples.pdf": {
       "front": "plated-previews/77d05b79878e73b01d-front.webp",
       "ingredients": "plated-previews/77d05b79878e73b01d-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/77d05b79878e73b01d-origineel.pdf"
+      "original_pdf": "plated-previews/77d05b79878e73b01d-origineel.pdf",
+      "source_sha256": "2af940d20ef2edd16faea665a3c015c238b1cae0269131d190ee3df62cb85854"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brie Crostini with Jalapeño-Apricot Jam.pdf": {
       "front": "plated-previews/317667cbeb58d1fcde-front.webp",
       "ingredients": "plated-previews/317667cbeb58d1fcde-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/317667cbeb58d1fcde-origineel.pdf"
+      "original_pdf": "plated-previews/317667cbeb58d1fcde-origineel.pdf",
+      "source_sha256": "a99260719e269efdb0a537411f3956a743bbf04e41a94dd5bd055276d37774bf"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Broccoli Cheddar Calzones with Marinara Sauce.pdf": {
       "front": "plated-previews/48301de30fdec8e2f4-front.webp",
       "ingredients": "plated-previews/48301de30fdec8e2f4-ingredients.webp",
       "all_pages_in_pdf": true,
       "source_pdf_page_count": 2,
-      "original_pdf": "plated-previews/48301de30fdec8e2f4-origineel.pdf"
+      "original_pdf": "plated-previews/48301de30fdec8e2f4-origineel.pdf",
+      "source_sha256": "12d66a7f1082ad0127e15353a5a8cb7e461b2149f57f046e73474902aa0cb31b"
     },
     "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Brown Butter Gnocchi with Butternut Squash.pdf": {
       "front": "plated-previews/9d31651859624acaff-front.webp",
@@ -3650,7 +3682,7 @@
   "metadata": {
     "rendered": 504,
     "queue_count": 504,
-    "byte_identical_originals": 120,
+    "byte_identical_originals": 152,
     "status": "source PDF page copies; OCR not verified",
     "failures_this_run": []
   }
