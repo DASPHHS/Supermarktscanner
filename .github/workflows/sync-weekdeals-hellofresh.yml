@@ -2,6 +2,12 @@ name: Sync HelloFresh supermarket Weekdeals
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync_weekdeals_hellofresh.py"
+      - "scripts/test_weekdeals_hellofresh.py"
+      - ".github/workflows/sync-weekdeals-hellofresh.yml"
   schedule:
     - cron: "25 7,13,19 * * *"
 
