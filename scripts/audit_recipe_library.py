@@ -114,6 +114,7 @@ def analyze(root: Path, now: datetime | None = None) -> dict:
                 "ingredient_rows": present, "ingredient_names_present": good_labels,
                 "quantity_rows_present": good_amounts, "original_card_present": has_card,
                 "source_review_confirmed": bool(certified),
+                "original_pdf": preview.get("original_pdf") if isinstance(preview.get("original_pdf"), str) and re.fullmatch(r"(?:previews|plated-previews)/[a-zA-Z0-9_-]+-origineel\.pdf", preview["original_pdf"]) else None,
                 "issues": sorted(set(reason)),
             })
     for record in records:
