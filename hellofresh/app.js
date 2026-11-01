@@ -16,7 +16,7 @@ function hfreshLink(r){
  try{
   const u=new URL(match.url);
   if(u.protocol!=='https:'||!['hfresh.info','www.hfresh.info'].includes(u.hostname)||
-    !/^\\/nl-NL\\/recipes\\/[a-z0-9-]+-[0-9]+\\/?$/.test(u.pathname)||u.search||u.hash)return null;
+    !new RegExp('^/nl-NL/recipes/[a-z0-9-]+-[0-9]+/?$').test(u.pathname)||u.search||u.hash)return null;
   return {url:u.href,total_time:match.total_time};
  }catch(_){return null}
 }
