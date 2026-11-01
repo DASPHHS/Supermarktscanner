@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Geverifieerde top 10 | Supermarktscanner</title>
+<title>Strikt geverifieerde prijzen | Supermarktscanner</title>
 <style>
 :root{color-scheme:light;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#193b2b;background:#f7f8f3}
 body{margin:0}.wrap{max-width:1100px;margin:auto;padding:25px 20px 70px}
@@ -13,7 +13,7 @@ p{line-height:1.6}.intro{color:#d7e7da;max-width:800px}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
 section{background:#fff;border:1px solid #e0e9de;border-radius:14px;padding:20px;min-width:0}
 h2{margin:0 0 10px;font-size:23px}h3{font-size:14px;margin-top:20px}
-small,.muted{color:#687d6f}.count{font-size:28px;font-weight:800}
+small,.muted{color:#687d6f}.explain{background:#fff9e8;border:1px solid #eadcb8;border-radius:12px;padding:16px 20px;margin-bottom:14px}.explain p{margin:9px 0}.explain a{color:#205b42;font-weight:800}.count{font-size:28px;font-weight:800}
 ol{padding-left:23px}li{padding:10px 0;border-bottom:1px solid #e5eee4}
 li a{color:#205b42}.price{font-weight:800;font-size:18px}
 details{margin-top:15px}summary{cursor:pointer;font-weight:700}
@@ -22,9 +22,9 @@ details{margin-top:15px}summary{cursor:pointer;font-weight:700}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a href="./">← Receptenstudio</a><h1>Geverifieerde top 10</h1>
-<p class="intro">Goedkoopste avondrecepten voor twee personen, per supermarkt, op basis van het echte kassabedrag voor benodigde hele verpakkingen. Alleen handmatig gecontroleerde receptgegevens én recent bevestigde prijzen op officiële productpagina’s worden gerangschikt. Indicatieve ramingen zijn uitgesloten.</p></div></header>
-<main class="wrap"><p id="status">Gecontroleerde gegevens laden…</p><div class="cards" id="stores"></div>
+<header><div class="wrap"><a href="./">← Receptenstudio</a><h1>Strikt geverifieerde prijzen</h1>
+<p class="intro">Hier worden uitsluitend recepten getoond waarvan de ingrediënten én alle productprijzen handmatig zijn gecontroleerd. Zonder die controles verschijnt er bewust géén ranglijst. Dit is een strengere selectie dan de indicatieve prijsvergelijking.</p></div></header>
+<main class="wrap"><div class="explain" id="explain"><b>Wat betekent 0 geverifieerde recepten?</b><p>Er is dan nog geen gerecht waarvan alle ingrediënten, hoeveelheden en kassaprijzen onafhankelijk bevestigd zijn. Het betekent <b>niet</b> dat er geen aanbiedingen bestaan en ook niet dat een gerecht gratis is.</p><p>Wil je wel een bruikbaar voorlopig overzicht? <a href="./">Ga naar de indicatieve receptprijzen, met mogelijke aanbiedingen per ingrediënt</a>.</p></div><p id="status">Gecontroleerde gegevens laden…</p><div class="cards" id="stores"></div>
 <p class="muted">Reguliere prijzen worden pas opgenomen na expliciete broncontrole. Aanbiedingen worden niet automatisch overgenomen uit een zoekfeed; een niet-bevestigde korting telt niet mee. Als er minder dan tien betrouwbare recepten zijn, blijft de lijst korter.</p>
 <p><a href="./">Bekijk de volledige bibliotheek en afzonderlijk gelabelde indicatieve ramingen</a></p></main>
 <script>
@@ -39,10 +39,10 @@ details{margin-top:15px}summary{cursor:pointer;font-weight:700}
   const data=await response.json(),generated=new Date(data.generated_at_utc);
   const age=Date.now()-generated.getTime();
   const current=Number.isFinite(age)&&age>=0&&age<48*3600000&&data.price_snapshot_fresh===true;
-  status.textContent=current?'Gecontroleerd op '+generated.toLocaleString('nl-NL',{timeZone:'Europe/Amsterdam'})+' · alleen bevestigde kassaprijzen.':'De gecontroleerde prijssnapshot is niet actueel. Er worden geen oude prijzen getoond.';
+  status.textContent=current?'Laatste controle: '+generated.toLocaleString('nl-NL',{timeZone:'Europe/Amsterdam'})+'. Alleen echt gecontroleerde recepten worden hier gerangschikt.':'De gecontroleerde prijssnapshot is niet actueel. Er worden geen oude prijzen getoond.';
   for(const store of ['Lidl','Jumbo','AH']){
    const info=data.stores?.[store]||{},box=el('section');
-   box.append(el('h2',labels[store]),el('div',String(current?(info.top10||[]).length:0)+' / 10','count'));
+   box.append(el('h2',labels[store]),el('div',String(current?(info.top10||[]).length:0)+' geverifieerd','count'));
    const list=current?(info.top10||[]):[];
    if(list.length){
     const ol=el('ol');
@@ -58,7 +58,7 @@ details{margin-top:15px}summary{cursor:pointer;font-weight:700}
      details.append(summary,ul);li.append(details);ol.append(li);
     }
     box.append(ol);
-   }else box.append(el('p','Nog geen volledig gevalideerde recepten met actuele, individueel bevestigde productprijzen. Er wordt geen top 10 verzonnen.','muted'));
+   }else box.append(el('p','Er zijn voor deze winkel nog geen recepten met volledig gecontroleerde hoeveelheden en actuele kassaprijzen. De indicatieve receptenpagina blijft beschikbaar.','muted'));
    const blocked=info.blocked_counts||{},d=el('details'),summary=el('summary','Waarom recepten ontbreken'),ul=el('ul');
    for(const [reason,count] of Object.entries(blocked)){if(count)ul.append(el('li',reason.replaceAll('_',' ')+' · '+count))}
    d.append(summary,ul);box.append(d);
