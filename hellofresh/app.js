@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const eur=n=>new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR'}).format(n);
-const state={recipes:[],extra:[],prices:new Map(),deals:{},dealsMeta:{},offerCache:new Map(),priceDate:null,previews:{},estimates:{},health:{},previewsProgress:{},quality:{},nlCatalog:{},source:'HelloFresh',store:'Voordeligste',cards:false,basis:'cash',selectedId:null,kind:'alle',only:'all',sort:'offers',top:false,shown:36,loading:true};
+const state={recipes:[],extra:[],prices:new Map(),deals:{},dealsMeta:{},offerCache:new Map(),ingredientDealCache:new Map(),storeCache:new Map(),priceDate:null,previews:{},estimates:{},health:{},previewsProgress:{},quality:{},nlCatalog:{},source:'HelloFresh',store:'Voordeligste',cards:false,basis:'cash',selectedId:null,kind:'alle',only:'all',sort:'offers',top:false,shown:36,loading:true};
 const kinds={'alle':'Alles','vega':'Vega','kip':'Kip','vis':'Vis','vlees':'Vlees','onbekend':'Controleren'};
 function ingredients(r){return Array.isArray(r.ingredients_4p)?r.ingredients_4p:[]}
 function dutch(r){return r.source==='Plated' ? state.nlCatalog[r.source_identity||r.id.replace(/^plated-release-/,'')]||null : null}
@@ -25,8 +25,43 @@ function protein(r){
 }
 function dish(r){let t=norm(displayTitle(r));if(/soep|ramen/.test(t))return 'Soep';if(/pasta|spaghetti|linguine|penne|tagliatelle|lasagne|orzo|orzotto|ravioli|gnocchi|macaroni|casarecce|fusilli|rigatoni/.test(t))return 'Pasta & orzo';if(/curry|dahl|daal|masala/.test(t))return 'Curry';if(/stamppot|hutspot|puree/.test(t))return 'Stamppot';if(/rijst|risotto|nasi|biryani|poke/.test(t))return 'Rijst & bowls';if(/noedel|bami|mie|udon|wok/.test(t))return 'Noedels & wok';if(/wrap|taco|tortilla|burrito|quesadilla|naan|platbrood|pizza/.test(t))return 'Wraps & pizza';if(/salade|couscous|bulgur|quinoa|bowl/.test(t))return 'Salade & granen';return 'Overige gerechten'}
 function all(){const map=new Map();for(const r of state.recipes.concat(state.extra)){const key=(r.source||'HelloFresh')+'|'+norm(r.title_extracted);if(key&&!map.has(key))map.set(key,r)}return [...map.values()]}
-function priceRecord(r){return state.store==='Voordeligste'?RecipeLogic.selectRecord(['AH','Jumbo','Lidl'].map(shop=>state.prices.get(shop+':'+r.id)),state.cards,state.basis):state.prices.get(state.store+':'+r.id)}
-function estimateRecord(r){return RecipeLogic.estimateFor(priceRecord(r),state.cards)}
+// Cache per-ingredient checks across recipes; store optimization never calls priceRecord.
+function matchesForIngredient(ingredient,shop){
+ const key=shop+'|'+norm(ingredient)+'|'+state.cards+'|'+todayNL();
+ if(state.ingredientDealCache.has(key))return state.ingredientDealCache.get(key);
+ const available=(state.deals[shop]?.deals||[]).filter(d=>
+  RecipeLogic.activeOffer(d,todayNL())&&d.personal_offer!==true&&
+  (d.card_required!==true||state.cards)&&relatedIngredient(ingredient,d.name));
+ state.ingredientDealCache.set(key,available);
+ return available;
+}
+function storeOption(r,shop){
+ const key=String(r.id)+'|'+shop+'|'+state.cards+'|'+state.basis;
+ if(state.storeCache.has(key))return state.storeCache.get(key);
+ const record=state.prices.get(shop+':'+r.id)||null;
+ const baseline=RecipeLogic.estimateFor(record,state.cards);
+ const modeled=RecipeLogic.estimateWithOfferAlternatives(baseline,[],{
+  store:shop,cards:state.cards,today:todayNL(),
+  matches:ingredient=>matchesForIngredient(ingredient,shop)
+ });
+ const result={record,shop,estimate:modeled.estimate,
+  price:RecipeLogic.rankingPrice(modeled.estimate,state.basis),
+  changes:modeled.changes,savings:modeled.totalSavings};
+ state.storeCache.set(key,result);
+ return result;
+}
+function selectedStoreOption(r){
+ if(state.store!=='Voordeligste')return storeOption(r,state.store);
+ const options=['AH','Jumbo','Lidl'].map(shop=>storeOption(r,shop));
+ const valid=options.filter(x=>x.price!==null);
+ if(valid.length)return valid.sort((a,b)=>a.price-b.price||a.shop.localeCompare(b.shop,'nl'))[0];
+ return options.sort((a,b)=>(b.estimate?.covered_ingredients||0)-(a.estimate?.covered_ingredients||0))[0];
+}
+function priceRecord(r){return selectedStoreOption(r).record}
+function estimateRecord(r){return selectedStoreOption(r).estimate}
+function resetOfferCaches(){
+ state.offerCache.clear();state.ingredientDealCache.clear();state.storeCache.clear();
+}
 function completePrice(r){const e=estimateRecord(r);return RecipeLogic.rankingPrice(e,state.basis)===null?null:RecipeLogic.estimatePrice(e)}
 function rankingPrice(r){return RecipeLogic.rankingPrice(estimateRecord(r),state.basis)}
 function priceCoverage(r){const e=estimateRecord(r),total=Math.max(ingredients(r).length,displayIngredients(r).length,e?.total_ingredients||0);return e?{matched:e.covered_ingredients||0,missing:Math.max(e.missing.length,total-(e.covered_ingredients||0)),total,unknown:total===0,available:true,review:!r.table_repair}:{...RecipeLogic.coverage(total,null),review:true}}
@@ -41,22 +76,21 @@ function relatedIngredient(ingredient,product){
  return RecipeLogic.relevantOfferProduct(ingredient,product);
 }
 function possibleOffers(r,scope=state.store){
- const key=String(r.id)+'|'+scope+'|'+todayNL();
+ const key=String(r.id)+'|'+scope+'|'+todayNL()+'|'+state.cards;
  if(state.offerCache.has(key))return state.offerCache.get(key);
  const names=[...new Set(displayIngredients(r).map(i=>i.name).filter(Boolean))],list=[],seen=new Set();
- for(const [shop,group] of Object.entries(state.deals||{})){
+ for(const shop of ['AH','Jumbo','Lidl']){
   if(scope!=='Voordeligste'&&scope!=='Alle'&&shop!==scope)continue;
-  for(const d of group?.deals||[]){
-   if(!RecipeLogic.activeOffer(d,todayNL())||d.personal_offer===true||d.card_required===true&&!state.cards)continue;
-   const matching=names.find(name=>relatedIngredient(name,d.name));
-   if(!matching)continue;
-   const id=shop+'|'+(d.product_id||d.name);
-   if(seen.has(id))continue;
-   seen.add(id);list.push({shop,ingredient:matching,deal:d});
+  for(const ingredient of names){
+   for(const d of matchesForIngredient(ingredient,shop)){
+    const id=shop+'|'+(d.product_id||d.name);
+    if(seen.has(id))continue;
+    seen.add(id);list.push({shop,ingredient,deal:d});
+   }
   }
  }
- const selectedStore=priceRecord(r)?.store||'';
- list.sort((a,b)=>(b.shop===selectedStore)-(a.shop===selectedStore)||
+ const selectedShop=priceRecord(r)?.store||'';
+ list.sort((a,b)=>(b.shop===selectedShop)-(a.shop===selectedShop)||
   a.shop.localeCompare(b.shop,'nl')||a.ingredient.localeCompare(b.ingredient,'nl'));
  state.offerCache.set(key,list);
  return list;
@@ -111,23 +145,14 @@ function detailOfferBlock(r){
  return html+'</section>';
 }
 function offerSort(a,b){
- const aPrice=rankingPrice(a),bPrice=rankingPrice(b);
- // Never put a recipe without any full price above a fully priced recipe.
- const rank=r=>{
-  const cost=rankingPrice(r),priced=cost!==null;
-  const offers=possibleOffers(r),applied=offerWords(r).length>0,priceShop=priceRecord(r)?.store;
-  if(priced&&applied)return 0;
-  if(priced&&offers.some(x=>x.shop===priceShop))return 1;
-  if(priced&&offers.length)return 2;
-  if(priced)return 3;
-  return offers.length?4:5;
- };
- const levelA=rank(a),levelB=rank(b);
- if(levelA!==levelB)return levelA-levelB;
- if(aPrice!==null&&bPrice!==null&&aPrice!==bPrice)return aPrice-bPrice;
- const aIngredients=new Set(possibleOffers(a).map(x=>norm(x.ingredient))).size;
- const bIngredients=new Set(possibleOffers(b).map(x=>norm(x.ingredient))).size;
- return bIngredients-aIngredients||displayTitle(a).localeCompare(displayTitle(b),'nl');
+ const optA=selectedStoreOption(a),optB=selectedStoreOption(b);
+ const appliedA=optA.price!==null&&offerWords(a).length>0;
+ const appliedB=optB.price!==null&&offerWords(b).length>0;
+ const tierA=RecipeLogic.offerRankingTier(optA.price!==null,appliedA,false);
+ const tierB=RecipeLogic.offerRankingTier(optB.price!==null,appliedB,false);
+ if(tierA!==tierB)return tierA-tierB;
+ if(optA.price!==null&&optB.price!==null&&optA.price!==optB.price)return optA.price-optB.price;
+ return displayTitle(a).localeCompare(displayTitle(b),'nl');
 }
 function options(){const kindBox=$('kinds'),storeBox=$('stores');if(!kindBox||!storeBox)return;kindBox.innerHTML=Object.entries(kinds).map(([v,n])=>'<button type="button" data-k="'+v+'" class="'+(v===state.kind?'active':'')+'">'+n+'</button>').join('');storeBox.innerHTML=['Voordeligste','Jumbo','AH','Lidl'].map(n=>'<button type="button" data-store="'+n+'" class="'+(n===state.store?'active':'')+'">'+(n==='Voordeligste'?'Beste raming':n)+'</button>').join('');kindBox.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{state.kind=b.dataset.k;state.shown=36;options();render()}));storeBox.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{state.store=b.dataset.store;options();render()}))}
 function dishOptions(){const box=$('dish');const v=box.value;const allD=[...new Set(all().map(dish))].sort();box.innerHTML='<option value="">Alle gerechten</option>'+allD.map(d=>'<option>'+esc(d)+'</option>').join('');box.value=allD.includes(v)?v:''}
