@@ -96,7 +96,7 @@ test('HFresh links can be connected, removed, imported and filtered without pric
  const recipe=data('recipes_extracted.json').recipes.find(r=>r.id&&r.title_extracted);
  assert.ok(recipe);
  const fixture={schema_version:1,recipe_links:{
-  [recipe.id]:{match:'exact_title_only',url:'https://hfresh.info/nl-NL/recipes/example-123',total_time:35}
+  [recipe.id]:{match:'exact_title_only',url:'https://hfresh.info/nl-NL/recipes/example-123',total_time:35,headline:'Met andere groente'}
  }};
  const w=await open(t,undefined,fixture),d=w.document;
  const q=d.querySelector('#q');q.value=recipe.title_extracted;
@@ -108,6 +108,7 @@ test('HFresh links can be connected, removed, imported and filtered without pric
  assert.equal(d.querySelector('.hfresh-search').href,'https://hfresh.info/nl-NL?search='+encodeURIComponent(recipe.title_extracted));
  assert.equal(d.querySelector('.hfresh-visit').href,'https://hfresh.info/nl-NL/recipes/example-123');
  assert.match(d.querySelector('#dialog').textContent,/Dezelfde titel garandeert niet dezelfde receptvariant/);
+ assert.match(d.querySelector('#dialog').textContent,/HFresh-ondertitel: Met andere groente/);
  const bad=d.querySelector('#hfresh-link-input');bad.value='https://hfresh.info.evil.test/nl-NL/recipes/x-9';
  d.querySelector('#hfresh-save').click();
  assert.match(d.querySelector('#hfresh-link-message').textContent,/Ongeldige/);
