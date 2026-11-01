@@ -34,8 +34,8 @@ test('real snapshot opens with priced recipes, visible norms and all three store
  const ids=[...d.querySelectorAll('[id]')].map(x=>x.id);
  assert.equal(new Set(ids).size,ids.length,'no duplicate IDs between cards and card checkbox');
  assert.equal(d.querySelector('#source').value,'HelloFresh');
- assert.equal(d.querySelector('#sort').value,'cheap');
- assert.equal(d.querySelector('#status').value,'yes');
+ assert.equal(d.querySelector('#sort').value,'offers');
+ assert.equal(d.querySelector('#status').value,'');
  assert.ok(Number(d.querySelector('#priced').textContent)>0,'show usable indicative prices, not a zero-only catalog');
  const first=d.querySelector('.card');assert.match(first.querySelector('.money').textContent,/≈/);
  first.querySelector('button[data-id]').click();
@@ -62,6 +62,8 @@ test('card option actually changes the best store and recipe order in the UI',as
  const fixture={...source,fetched_at_utc:new Date().toISOString(),results:[
   change(templates[0],'AH',10,2),change(templates[0],'Jumbo',7,7),change(templates[1],'AH',6,6)]};
  const w=await open(t,fixture),d=w.document;
+ const basis=d.querySelector('#cost-basis');basis.value='used';basis.dispatchEvent(new w.Event('change',{bubbles:true}));
+ const sort=d.querySelector('#sort');sort.value='cheap';sort.dispatchEvent(new w.Event('change',{bubbles:true}));
  const firstId=()=>d.querySelector('.card button[data-id]').dataset.id;
  assert.equal(firstId(),templates[1].recipe_id);
  const cards=d.querySelector('#card-promotions');cards.checked=true;cards.dispatchEvent(new w.Event('change',{bubbles:true}));
@@ -77,8 +79,10 @@ test('cash comparison changes the displayed basket, selected store and recipe or
  const row=(template,store,used,cash)=>({...template,store,estimate_with_cards:undefined,estimate:{...template.estimate,lines:[],used_total_eur:used,whole_packages_eur:cash,per_person_eur:used/2}});
  const fixture={...source,fetched_at_utc:new Date().toISOString(),results:[row(templates[0],'AH',2,30),row(templates[0],'Jumbo',3,4),row(templates[1],'AH',1,10)]};
  const w=await open(t,fixture),d=w.document;
+ const basis=d.querySelector('#cost-basis');basis.value='used';basis.dispatchEvent(new w.Event('change',{bubbles:true}));
+ const sort=d.querySelector('#sort');sort.value='cheap';sort.dispatchEvent(new w.Event('change',{bubbles:true}));
  assert.equal(d.querySelector('.card button[data-id]').dataset.id,templates[1].recipe_id);
- const basis=d.querySelector('#cost-basis');basis.value='cash';basis.dispatchEvent(new w.Event('change',{bubbles:true}));
+ basis.value='cash';basis.dispatchEvent(new w.Event('change',{bubbles:true}));
  const first=d.querySelector('.card');assert.equal(first.querySelector('button').dataset.id,templates[0].recipe_id);
  assert.match(first.querySelector('.money').textContent,/4,00/);
  assert.match(first.querySelector('.money').textContent,/hele verpakkingen.*Jumbo.*1,50/);
