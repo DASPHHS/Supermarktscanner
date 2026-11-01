@@ -20,6 +20,8 @@ const FAMILY_DEFS=[
  ['tomatenblokjes','Tomatenblokjes',/\btomatenblokjes\b/,/\btomatenblokjes\b/,['soepen-conserven-sauzen']],
  ['tomatenpuree','Tomatenpuree',/\btomatenpuree\b/,/\btomatenpuree\b/,['soepen-conserven-sauzen']],
  ['kikkererwten','Kikkererwten',/\bkikkererwten\b/,/\bkikkererwten\b/,['soepen-conserven-sauzen']],
+ ['tofu','Tofu',/\btofu\b/,/\btofu\b/,['vega']],
+ ['garnalen','Garnalen',/\b(roerbakgarnalen|garnalen)\b/,/\b(roerbakgarnalen|garnalen)\b/,['vis']],
  ['linzen','Linzen',/\blinzen\b/,/\blinzen\b/,['soepen-conserven-sauzen']],
  ['kokosmelk','Kokosmelk',/\bkokosmelk\b/,/\bkokosmelk\b/,['soepen-conserven-sauzen','pasta-rijst-wereldkeuken']],
  ['mozzarella','Mozzarella',/\bmozzarella\b/,/\bmozzarella\b/,['kaas']],
@@ -108,9 +110,10 @@ function build(recipes,feed,now=new Date()){
  for(const family of FAMILIES)byFamily.set(family.id,{id:family.id,label:family.label,recipes:[],offers:[]});
  let indexed=0;
  for(const recipe of recipes){
-  if(!recipe||recipe.source!=='HelloFresh'||!recipe.id||!recipe.title_extracted)continue;
+  if(!recipe||!['HelloFresh','Plated'].includes(recipe.source)||!recipe.id||!recipe.title_extracted)continue;
   indexed++;
-  const ingredients=Array.isArray(recipe.ingredients_2p)&&recipe.ingredients_2p.length?recipe.ingredients_2p:
+  const ingredients=Array.isArray(recipe.match_ingredients)?recipe.match_ingredients.map(ingredient=>({ingredient})):
+   Array.isArray(recipe.ingredients_2p)&&recipe.ingredients_2p.length?recipe.ingredients_2p:
    Array.isArray(recipe.ingredients_4p)?recipe.ingredients_4p:[];
   const used=new Set();
   for(const row of ingredients){
@@ -118,7 +121,7 @@ function build(recipes,feed,now=new Date()){
    if(family&&!used.has(family.id)){
     used.add(family.id);
     const group=byFamily.get(family.id);
-    group.recipes.push({id:String(recipe.id),title:String(recipe.title_extracted).slice(0,140)});
+    group.recipes.push({id:String(recipe.id),title:String(recipe.title_extracted).slice(0,140),source:recipe.source});
    }
   }
   byRecipe[String(recipe.id)]=[...used];
