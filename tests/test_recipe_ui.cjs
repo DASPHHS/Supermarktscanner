@@ -22,7 +22,7 @@ async function open(t,priceOverride,hfreshOverride){
   const p=path.join(root,relative);
   return fs.existsSync(p)?{ok:true,json:async()=>JSON.parse(fs.readFileSync(p,'utf8'))}:{ok:false,status:404};
  };
- w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/app.js'));
+ w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/app.js'));
  await new Promise(resolve=>setImmediate(resolve));
  await new Promise(resolve=>setImmediate(resolve));
  assert.deepEqual(errors,[],'application loads without runtime errors');
@@ -92,7 +92,7 @@ test('cash comparison changes the displayed basket, selected store and recipe or
  const pdf=d.querySelector('.pdf-download');if(pdf)assert.match(pdf.href,/raw.githubusercontent.com/);
 });
 
-test('HFresh links are supplementary, exact-title-only and never substitute recipe prices',async t=>{
+test('HFresh links can be connected, removed, imported and filtered without pricing mutations',async t=>{
  const recipe=data('recipes_extracted.json').recipes.find(r=>r.id&&r.title_extracted);
  assert.ok(recipe);
  const fixture={schema_version:1,recipe_links:{
@@ -102,12 +102,39 @@ test('HFresh links are supplementary, exact-title-only and never substitute reci
  const q=d.querySelector('#q');q.value=recipe.title_extracted;
  q.dispatchEvent(new w.Event('input',{bubbles:true}));
  const button=[...d.querySelectorAll('button[data-id]')].find(b=>b.dataset.id===String(recipe.id));
- assert.ok(button,'original local recipe stays searchable');
- const priceText=button.closest('.card').querySelector('.main-cost').textContent;
+ assert.ok(button,'original recipe is searchable');
+ const initialPrice=button.closest('.card').querySelector('.main-cost').textContent;
  button.click();
- const ref=d.querySelector('#dialog a[href="https://hfresh.info/nl-NL/recipes/example-123"]');
- assert.ok(ref,'validated source link is visible for an exact title match');
- assert.match(d.querySelector('#dialog').textContent,/geen controle van dezelfde variant, hoeveelheden of prijzen/i);
- assert.equal(button.closest('.card').querySelector('.main-cost').textContent,priceText);
- assert.match(d.querySelector('#hfresh-status').textContent,/1 recepttitels gekoppeld/);
+ assert.equal(d.querySelector('.hfresh-visit').href,'https://hfresh.info/nl-NL/recipes/example-123');
+ assert.match(d.querySelector('#dialog').textContent,/Dezelfde titel garandeert niet dezelfde receptvariant/);
+ const bad=d.querySelector('#hfresh-link-input');bad.value='https://hfresh.info.evil.test/nl-NL/recipes/x-9';
+ d.querySelector('#hfresh-save').click();
+ assert.match(d.querySelector('#hfresh-link-message').textContent,/Ongeldige/);
+ assert.equal(w.localStorage.getItem('hfresh-local-links-v1'),null);
+ const manual='https://hfresh.info/nl-NL/recipes/mijn-versie-654';
+ d.querySelector('#hfresh-link-input').value=manual;
+ d.querySelector('#hfresh-save').click();
+ assert.equal(d.querySelector('.hfresh-visit').href,manual);
+ assert.equal(JSON.parse(w.localStorage.getItem('hfresh-local-links-v1'))[recipe.id],manual);
+ assert.match(d.querySelector('#hfresh-status').textContent,/1 automatische titelverwijzingen · 1 handmatig/);
+ assert.equal(button.closest('.card').querySelector('.main-cost').textContent,initialPrice);
+ const linkFilter=d.querySelector('#hfresh-link-filter');
+ linkFilter.value='linked';linkFilter.dispatchEvent(new w.Event('change',{bubbles:true}));
+ assert.ok([...d.querySelectorAll('.card')].some(x=>x.querySelector('[data-id]')?.dataset.id===String(recipe.id)));
+ linkFilter.value='unlinked';linkFilter.dispatchEvent(new w.Event('change',{bubbles:true}));
+ assert.ok(![...d.querySelectorAll('.card')].some(x=>x.querySelector('[data-id]')?.dataset.id===String(recipe.id)));
+ linkFilter.value='all';linkFilter.dispatchEvent(new w.Event('change',{bubbles:true}));
+ d.querySelector('#hfresh-remove').click();
+ assert.equal(d.querySelector('.hfresh-visit').href,'https://hfresh.info/nl-NL/recipes/example-123','automatic link remains after local override removed');
+ assert.equal(JSON.parse(w.localStorage.getItem('hfresh-local-links-v1'))[recipe.id],undefined);
+ const fileInput=d.querySelector('#hfresh-import');
+ Object.defineProperty(fileInput,'files',{configurable:true,value:[{text:async()=>JSON.stringify({schema_version:1,recipe_links:{
+   [recipe.id]:manual,'not-our-id':'https://hfresh.info/nl-NL/recipes/another-555',
+ }})}]});
+ fileInput.dispatchEvent(new w.Event('change',{bubbles:true}));
+ await new Promise(resolve=>setImmediate(resolve));
+ assert.match(d.querySelector('#hfresh-import-status').textContent,/1 lokale/);
+ assert.equal(JSON.parse(w.localStorage.getItem('hfresh-local-links-v1'))[recipe.id],manual);
+ assert.equal(d.querySelector('#hfresh-status').textContent.includes('1 handmatig'),true);
+ assert.equal(button.closest('.card').querySelector('.main-cost').textContent,initialPrice);
 });
