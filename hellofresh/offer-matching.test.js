@@ -86,5 +86,14 @@ assert.equal(RecipeLogic.estimateFor({estimate:estimate([staleLine])},false,date
 assert.equal(RecipeLogic.appliedActionLines(estimate([chickpeaLine]),false,date).length,1);
 assert.equal(RecipeLogic.appliedActionLines(estimate([wrongSpinachLine]),false,date).length,0);
 assert.equal(RecipeLogic.appliedActionLines({...estimate([chickpeaLine]),missing:[{ingredient:'nog onbekend'}]},false,date).length,0);
-console.log('Recipe/offer checks: '+(compatible.length+incompatible.length+9)+' passed.');
+const packAction={...chickpeaAction,multi_buy_quantity:2,multi_buy_price:1.49};
+const onePack={...chickpeaLine,packages:1,action:packAction};
+const twoPacks={...chickpeaLine,packages:2,action:packAction};
+const noPackCount={...chickpeaLine,action:packAction};
+assert.equal(RecipeLogic.validActionLine(onePack,date,false),false);
+assert.equal(RecipeLogic.validActionLine(twoPacks,date,false),true);
+assert.equal(RecipeLogic.validActionLine(noPackCount,date,false),false);
+assert.equal(RecipeLogic.estimateFor({estimate:estimate([onePack])},false,date),null);
+assert.equal(RecipeLogic.estimateFor({estimate:estimate([twoPacks])},false,date)!==null,true);
+console.log('Recipe/offer checks: '+(compatible.length+incompatible.length+14)+' passed.');
 
