@@ -88,4 +88,4 @@ app.resetOfferCaches();
 assert.equal(app.rankingPrice(incomplete),null);
 assert.equal(app.offerWords(incomplete).length,0);
 assert.ok(app.offerSort(two,incomplete)<0,'Incomplete estimates sort last');
-console.log('Frontend offer ranking: 17 invariants passed.');
+console.log('Frontend offer ranking: 19 invariants passed.');
