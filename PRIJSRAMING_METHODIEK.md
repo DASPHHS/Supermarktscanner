@@ -197,3 +197,60 @@ De site publiceert de lichte WebP-voorbeelden. Originele PDF's worden rechtstree
 uit de openbare GitHub-repository geopend. Daardoor nemen de circa 2,15 GB aan
 PDF's geen ruimte in de GitHub Pages-bundel in; de oorspronkelijke bestanden
 blijven bewaard.
+
+
+## Weekdeals-relevantieoverzicht voor HelloFresh (november 2026)
+
+De Receptenstudio leest de al door `scripts/sync_weekdeals_hellofresh.py` ingelezen
+[Speciale Deals Weekdeals](https://dasphhs.github.io/specialedeals/weekdeals/) vanuit
+`weekdeals_hellofresh.json`. De aparte browsermodule
+`hellofresh/weekdeals-relevance.js` matcht een beperkte lijst herkenbare
+ingrediëntgroepen (zoals aardappelen, spinazie, kikkererwten, broccoli en kipfilet)
+met *kandidaatproducten* uit de juiste voedselcategorie.
+
+De lijst wordt gerangschikt naar het **aantal unieke recepten uit beide collecties waarin
+een ingrediënt voorkomt**, niet naar gerapporteerde kortingspercentages. Per
+ingrediëntgroep zijn supermarkt, product, bronprijs, verpakking, einddatum,
+eventuele klantenkaart-/bundelwaarschuwing en links naar de productpagina zichtbaar.
+Bij een recept worden uitsluitend aanvullende productkandidaten getoond.
+
+Strenge voorwaarden: alleen een volledige actuele feed van maximaal 48 uur oud
+met de huidige Nederlandse kalenderdag, geldige start/einddatum en positief
+gepubliceerde productprijs. Er wordt niet automatisch een ingestelde bronprijs
+vergeleken met een historisch kassabonbedrag. Samengestelde gerechten, soepen,
+maaltijdmixen, groentesappen, chips, broodbeleg en vergelijkbare valse
+ingrediëntmatches worden geweerd; overige matches kunnen nog fout zijn.
+De bronprijs is een **door de aanbieder getoonde prijs**, en niet noodzakelijk
+de prijs per benodigde hoeveelheid of de laagste prijs van de markt.
+
+De koppeling wijzigt **nooit** de bestaande `recipe_prices.json`, het gekozen
+supermarktfiliaal, de kassabonrangschikking, de portiehoeveelheden of een
+receptverificatie. Ook met volledige brondata geldt: een coupon, bundel of
+klantenkaartprijs levert zonder passende hoeveelheden, varianten en voorwaarden
+geen bewezen besparing. Tests: `npm test`, inclusief
+`tests/test_weekdeals_relevance.cjs` en `tests/test_recipe_ui.cjs`.
+
+
+## Gebruik van de complete receptbibliotheek
+
+De gepubliceerde bronindex bevat 225 HelloFresh-receptrecords met originele PDF en
+504 Plated-receptrecords (waarvan twee titels dubbel). De algemene bibliotheek
+toont beide collecties standaard. De snelle zoekindex loopt over **titels en
+herkende ingrediënten**, ondersteunt meerdere zoekwoorden met EN-logica en
+biedt Nederlandse/Engelse equivalenten (bijvoorbeeld kip/chicken en
+aardappel/potato). Een schakelaar beperkt de zoekopdracht tot ingrediënten.
+
+De Plated-ingrediënten blijven OCR- of vertaalgegevens die niet volledig handmatig
+zijn bevestigd. Een titel zonder herkende ingrediënten blijft op titel vindbaar,
+maar wordt niet kunstmatig als ingrediëntmatch aangemerkt. Het aantal werkelijk
+op ingrediënten doorzoekbare recepten wordt **dynamisch op de pagina getoond**
+na het laden van de beide collecties. Prijsverificatie is een afzonderlijk
+proces; ongetoetste Plated-records krijgen geen verzonnen kassabonprijs.
+
+Bovenaan staan compacte selecties **Groente, Vlees, Vega, Vis, Zuivel en Basis**.
+Deze tonen mogelijke productacties vanuit de bestaande Weekdeals-publicatie,
+gesorteerd op de frequentie van bijbehorende ingrediënten in de bibliotheek.
+Met één klik worden de bijpassende receptkaarten gefilterd. Geen van deze
+matches wordt op basis van alleen een productnaam tot gegarandeerde besparing
+verklaard. Bronfeed te oud betekent dat het categorieoverzicht geen actuele
+deals toont, zonder invloed op de receptbibliotheek.

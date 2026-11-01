@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const data=p=>JSON.parse(read(p));
 
-async function open(t,priceOverride,hfreshOverride){
+async function open(t,priceOverride,hfreshOverride,weekdealsOverride){
  const errors=[];
  const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type!=='css-parsing')errors.push(e.message)});
  const dom=new JSDOM(read('hellofresh/index.html'),{url:'https://example.test/Supermarktscanner/hellofresh/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc});
@@ -19,10 +19,11 @@ async function open(t,priceOverride,hfreshOverride){
   const u=new URL(raw,w.location.href),relative=u.pathname.replace(/^\/Supermarktscanner\//,'');
   if(priceOverride&&relative==='recipe_prices.json')return {ok:true,json:async()=>structuredClone(priceOverride)};
   if(hfreshOverride&&relative==='hellofresh/hfresh_matches.json')return {ok:true,json:async()=>structuredClone(hfreshOverride)};
+  if(weekdealsOverride&&relative==='weekdeals_hellofresh.json')return {ok:true,json:async()=>structuredClone(weekdealsOverride)};
   const p=path.join(root,relative);
   return fs.existsSync(p)?{ok:true,json:async()=>JSON.parse(fs.readFileSync(p,'utf8'))}:{ok:false,status:404};
  };
- w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/app.js'));
+ w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/recipe-search.js'));w.eval(read('hellofresh/weekdeals-relevance.js'));w.eval(read('hellofresh/app.js'));
  await new Promise(resolve=>setImmediate(resolve));
  await new Promise(resolve=>setImmediate(resolve));
  assert.deepEqual(errors,[],'application loads without runtime errors');
@@ -33,7 +34,8 @@ test('real snapshot opens with priced recipes, visible norms and all three store
  const w=await open(t),d=w.document;
  const ids=[...d.querySelectorAll('[id]')].map(x=>x.id);
  assert.equal(new Set(ids).size,ids.length,'no duplicate IDs between cards and card checkbox');
- assert.equal(d.querySelector('#source').value,'HelloFresh');
+ assert.equal(d.querySelector('#source').value,'Alle');
+ assert.match(d.querySelector('#library-index-status').textContent,/recepten.*HelloFresh.*Plated/);
  assert.equal(d.querySelector('#sort').value,'offers');
  assert.equal(d.querySelector('#status').value,'');
  assert.ok(Number(d.querySelector('#priced').textContent)>0,'show usable indicative prices, not a zero-only catalog');
@@ -142,4 +144,67 @@ test('HFresh links can be connected, removed, imported and filtered without pric
  assert.equal(JSON.parse(w.localStorage.getItem('hfresh-local-links-v1'))[recipe.id],manual);
  assert.equal(d.querySelector('#hfresh-status').textContent.includes('1 handmatig'),true);
  assert.equal(button.closest('.card').querySelector('.main-cost').textContent,initialPrice);
+});
+
+test('relevant Weekdeals panel filters real ingredient candidates and does not change prices',async t=>{
+ const recipes=data('recipes_extracted.json').recipes;
+ const match=recipes.find(r=>r.id&&r.title_extracted&&
+   (r.ingredients_2p||r.ingredients_4p||[]).some(i=>/\baardappelen\b/i.test(i.ingredient||'')));
+ assert.ok(match,'fixture requires at least one HelloFresh potato recipe');
+ const today=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Amsterdam'});
+ const end=new Date(Date.now()+86400000).toLocaleDateString('sv-SE',{timeZone:'Europe/Amsterdam'});
+ const f={schema_version:1,source_url:'https://dasphhs.github.io/specialedeals/weekdeals/',
+  updated_at_utc:new Date(Date.now()-60000).toISOString(),as_of_date:today,
+  coverage:{full_promotional_feed:true},stores:{
+   AH:{deals:[{name:'AH Vastkokende aardappelen',product_id:'potato-1',price:1.99,category:'groente-fruit',
+     quantity:'1 kg',valid_from:today,valid_until:end,product_url:'https://www.ah.nl/producten/product/123'},
+    {name:'AH Bakaardappeltjes paprika en knoflook',product_id:'false-1',price:0.5,category:'groente-fruit',
+     valid_from:today,valid_until:end}]},
+   Jumbo:{deals:[]},Lidl:{deals:[]}}};
+ const w=await open(t,undefined,undefined,f),d=w.document;
+ assert.match(d.querySelector('#deal-relevance-status').textContent,/ingrediëntgroepen met mogelijke acties/);
+ assert.ok(d.querySelector('.relevance-card'),'candidate cards render');
+ assert.ok(d.querySelector('#deal-category-cards .deal-category-card'),'compact category cards render');
+ assert.ok(d.querySelector('#deal-category-cards').textContent.includes('Groente & aardappelen'));
+ assert.ok(d.querySelector('button[data-relevance-category="groente"]'));
+ d.querySelector('button[data-relevance-category="groente"]').click();
+ assert.match(d.querySelector('#count').textContent,/aanbiedingen: Groente & aardappelen/);
+ d.querySelector('#deal-relevance-clear').click();
+ assert.ok(d.querySelector('.relevance-card').textContent.includes('Aardappelen'));
+ assert.ok(!d.querySelector('#deal-relevance-cards').textContent.includes('Bakaardappeltjes'));
+ const first=d.querySelector('.card .main-cost').textContent;
+ const family=[...d.querySelectorAll('button[data-relevance-family]')].find(x=>x.dataset.relevanceFamily==='aardappel');
+ assert.ok(family,'potato ingredient has a recipe-navigation action');
+ family.click();
+ assert.match(d.querySelector('#count').textContent,/filter: Aardappelen/);
+ assert.ok([...d.querySelectorAll('.card button[data-id]')].some(b=>b.dataset.id===String(match.id)));
+ d.querySelector('#deal-relevance-clear').click();
+ assert.ok(!d.querySelector('#count').textContent.includes('filter:'));
+ assert.equal(d.querySelector('.card .main-cost').textContent,first,'price unchanged');
+ const store=d.querySelector('#deal-relevance-store');store.value='Lidl';store.dispatchEvent(new w.Event('change',{bubbles:true}));
+ assert.match(d.querySelector('#deal-relevance-cards').textContent,/Geen mogelijke ingrediëntacties/);
+});
+
+test('complete library searches both collections and supports ingredient-only queries',async t=>{
+ const w=await open(t),d=w.document;
+ assert.equal(d.querySelector('#source').value,'Alle');
+ const text=d.querySelector('#library-index-status').textContent;
+ assert.match(text,/\d+ recepten \(\d+ HelloFresh, \d+ Plated\)/);
+ const total=Number(text.match(/^(\d+) recepten/)[1]);
+ assert.ok(total>=700,'both collections are visible, rather than 225 HelloFresh only');
+ const source=d.querySelector('#source');
+ const q=d.querySelector('#q');
+ source.value='Plated';source.dispatchEvent(new w.Event('change',{bubbles:true}));
+ q.value='Chicken';q.dispatchEvent(new w.Event('input',{bubbles:true}));
+ assert.ok(d.querySelectorAll('.card').length>0,'Plated records are searchable');
+ const mode=d.querySelector('#search-mode');
+ mode.value='ingredients';mode.dispatchEvent(new w.Event('change',{bubbles:true}));
+ assert.ok(d.querySelector('#count').textContent.includes('getoond'),'ingredient-only filter responds');
+ q.value='';q.dispatchEvent(new w.Event('input',{bubbles:true}));
+ source.value='Alle';source.dispatchEvent(new w.Event('change',{bubbles:true}));
+ const chip=d.querySelector('[data-ingredient-shortcut="spinazie"]');
+ chip.click();
+ assert.equal(d.querySelector('#q').value,'spinazie');
+ assert.equal(mode.value,'ingredients');
+ assert.ok(d.querySelectorAll('.card').length>0,'common ingredient shortcut yields matches');
 });
