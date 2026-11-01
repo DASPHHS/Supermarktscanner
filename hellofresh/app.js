@@ -26,7 +26,7 @@ function pricedServings(r){return priceRecord(r)?.servings||4}
 function estimatedCost(r){const p=priceRecord(r);if(!p||p.servings!==4)return null;const missing=p.missing||[];const base=Number(p.known_cost_eur)||0;let additional=0;for(const item of missing){const k=state.store+'|'+r.id+'|'+item.ingredient;const val=state.estimates[k];if(!Number.isFinite(val)||val<0)return null;additional+=val}return missing.length?base+additional:null}
 function incomplete(r){return priceCoverage(r).matched}
 function todayNL(){return new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Amsterdam'})}
-function offerWords(r){return (estimateRecord(r)?.lines||[]).filter(x=>x.action).map(x=>x.action)}
+function offerWords(r){return RecipeLogic.appliedActionLines(estimateRecord(r),state.cards).map(line=>line.action)}
 // A product-name resemblance is only a lead, NEVER proof that the product fits or its promotion was priced.
 function relatedIngredient(ingredient,product){
  return RecipeLogic.relevantOfferProduct(ingredient,product);
@@ -57,30 +57,46 @@ function offerPriceLabel(d){
   return d.multi_buy_quantity+' voor '+eur(d.multi_buy_price);
  return Number.isFinite(d.price)?eur(d.price)+' actieprijs':'Actieprijs onbekend';
 }
+function candidateOffers(r,scope=state.store){
+ const applied=new Set(offerWords(r).map(a=>norm(a.name)));
+ return possibleOffers(r,scope).filter(x=>!applied.has(norm(x.deal.name)));
+}
 function cardOfferBlock(r){
- const applied=offerWords(r),leads=possibleOffers(r);
- const distinct=new Set(leads.map(o=>norm(o.ingredient))).size;
- const groups=[],shown=new Set();
- for(const o of leads){
-  const key=o.shop+'|'+norm(o.ingredient);
-  if(!shown.has(key)){shown.add(key);groups.push(o)}
+ const verified=offerWords(r),candidates=candidateOffers(r);
+ const total=new Set(candidates.map(o=>norm(o.ingredient))).size;
+ const hasPrice=completePrice(r)!==null;
+ if(!verified.length&&!candidates.length)
+  return '<div class="card-offers-empty">Geen passende actie aangetroffen · beperkte actiescan</div>';
+ let html='<div class="recipe-offers compact-offers"><strong class="offer-heading">Acties bij ingrediënten</strong>';
+ if(verified.length)html+='<div class="offer-applied">'+verified.length+' actie(s) in deze raming verwerkt en op productnaam gecontroleerd</div>';
+ if(candidates.length){
+  const first=candidates[0],deal=first.deal,store=priceRecord(r)?.store;
+  html+='<div class="offer-match-line"><span class="offer-status">Mogelijke productactie · niet verrekend</span><div><b>'+esc(first.ingredient)+'</b> → '+esc(deal.name)+'</div>'+
+   '<small>'+esc(first.shop)+' · '+esc(offerPriceLabel(deal))+' · t/m '+esc(deal.valid_until)+
+   (store&&store!==first.shop?' · andere winkel dan de berekening':'')+'</small></div>';
+  if(candidates.length>1)html+='<div class="offer-extra">+'+(candidates.length-1)+' andere productopties onder Prijs &amp; acties</div>';
  }
- const priceShop=priceRecord(r)?.store||null;
- const details=groups.slice(0,2).map(o=>'<div class="offer-match-line"><b>'+esc(o.ingredient)+'</b> → '+esc(o.deal.name)+'<small>'+esc(o.shop)+' · '+esc(offerPriceLabel(o.deal))+' · t/m '+esc(o.deal.valid_until)+(priceShop&&priceShop!==o.shop?' · andere winkel dan prijsraming '+esc(priceShop):'')+'</small></div>').join('');
- const extra=groups.length>2?'<small>+'+(groups.length-2)+' andere ingrediënt/winkel-combinaties in de details</small>':'';
- return '<div class="recipe-offers"><div class="offer-heading">Aanbiedingen voor dit gerecht</div>'+
- (applied.length?'<div class="offer-applied">✓ '+applied.length+' actie(s) verwerkt in getoonde prijs</div>':'<div class="offer-unapplied">Nog geen aanbieding meegerekend in deze gerechtprijs</div>')+
- (leads.length?'<div class="offer-leads">'+distinct+' ingrediënt(en) met mogelijke actuele acties'+details+extra+'<small>Nog niet bewezen als goedkoper voor het hele gerecht.</small></div>':'<div class="offer-none">Geen productmatch in de beperkte actiescan; andere acties zijn mogelijk.</div>')+
- '</div>';
+ if(!hasPrice)html+='<small class="offer-warning">Geen volledige prijs: mogelijke acties zijn niet doorgerekend.</small>';
+ return html+'</div>';
 }
 function detailOfferBlock(r){
- const leads=possibleOffers(r,'Alle'),applied=offerWords(r);
- let html='<section class="recipe-offers detail-offers"><h3>Acties per ingrediënt</h3><p class="sub">Mogelijke productmatches uit een actuele maar onvolledige actiescan. Controleer verpakkingsinhoud, hoeveelheid, voorwaarden en lokale beschikbaarheid. Een productkorting is niet automatisch een lagere gerechtprijs.</p>';
- if(applied.length)html+='<p class="offer-applied">'+applied.length+' aantoonbaar verwerkt in de geselecteerde prijsraming: '+esc(applied.map(x=>x.name).join(', '))+'</p>';
- else html+='<p class="offer-unapplied">Er is geen aanbieding aantoonbaar meegerekend in de getoonde totaalprijs.</p>';
- if(!leads.length)html+='<p class="offer-none">Geen passende productnamen gevonden in de gedeeltelijke actiescan. Dit betekent niet dat er geen aanbiedingen zijn.</p>';
- else html+='<div class="deals">'+leads.slice(0,24).map(o=>{const d=o.deal,href=typeof d.product_url==='string'&&/^https:\/\//.test(d.product_url)?'<a target="_blank" rel="noopener" href="'+esc(d.product_url)+'">Bekijk product en actievoorwaarden</a>':'';const p=Number.isFinite(d.multi_buy_price)&&d.multi_buy_quantity>1?d.multi_buy_quantity+' voor '+eur(d.multi_buy_price):Number.isFinite(d.price)?'Gerapporteerde actieprijs '+eur(d.price):'Actieprijs niet bevestigd';return '<div class="deal"><b>'+esc(o.ingredient)+' → '+esc(d.name)+'</b><div>'+esc(o.shop)+' · '+esc(offerPriceLabel(d))+(Number.isFinite(d.original_price)?' · regulier '+eur(d.original_price):'')+'</div><small>'+esc(d.discount||'Actie')+' · geldig t/m '+esc(d.valid_until||'onbekend')+(d.card_required?' · klantenkaart nodig':'')+'</small><div>'+href+'</div></div>'}).join('')+'</div>';
- if(leads.length>24)html+='<p class="sub">'+(leads.length-24)+' overige mogelijke matches niet getoond.</p>';
+ const applied=offerWords(r),candidates=candidateOffers(r,'Alle');
+ let html='<section class="detail-offers"><h3>Acties en productkeuzes</h3><p class="sub">De scanner toont alleen vergelijkbare losse ingrediënten als actieoptie. Deze aanbiedingen zijn niet automatisch doorgerekend. Winkelprijzen, verpakkingen en voorwaarden kunnen verschillen.</p>';
+ if(applied.length){
+  html+='<h4>In gekozen prijsraming verwerkt</h4><div class="deals">'+applied.map(x=>
+   '<div class="deal"><b>'+esc(x.name||'Productactie')+'</b><small>'+esc(x.discount||'Actie')+' · t/m '+esc(x.valid_until||'onbekend')+'</small></div>'
+  ).join('')+'</div>';
+ }else html+='<p class="sub">Geen geldige, passend gematchte actie aantoonbaar verwerkt in de getoonde prijs.</p>';
+ if(candidates.length){
+  const selected=priceRecord(r)?.store||null;
+  html+='<h4>Andere passende producten in de actiescan (nog niet verrekend)</h4><div class="deals">'+candidates.slice(0,12).map(o=>{
+   const d=o.deal;const productLink=typeof d.product_url==='string'&&/^https:\/\//.test(d.product_url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(d.product_url)+'">Controleer het product</a>':'';
+   return '<div class="deal"><b>'+esc(o.ingredient)+'</b><div>'+esc(d.name)+'</div>'+
+    '<small>'+esc(o.shop)+' · '+esc(offerPriceLabel(d))+(Number.isFinite(d.original_price)?' · regulier '+eur(d.original_price):'')+
+    ' · t/m '+esc(d.valid_until||'onbekend')+(selected&&o.shop!==selected?' · andere winkel':'')+'</small><div>'+productLink+'</div></div>';
+  }).join('')+'</div>';
+  if(candidates.length>12)html+='<p class="sub">+'+(candidates.length-12)+' andere opties niet getoond.</p>';
+ }else html+='<p class="sub">Geen aanvullende passende productacties in de beperkte actiescan.</p>';
  return html+'</section>';
 }
 function offerSort(a,b){
@@ -138,7 +154,20 @@ if(state.top)rows=rows.filter(r=>completePrice(r)!==null).sort((a,b)=>rankingPri
 const scope=full.filter(r=>state.source==='Alle'||r.source===state.source),covered=scope.filter(r=>completePrice(r)!==null).length,offersCount=rows.filter(r=>offerWords(r).length||possibleOffers(r).length).length;$('count').textContent=rows.length+' getoond · '+offersCount+' met mogelijke of verrekende actie · '+covered+' van '+scope.length+' met volledige raming · '+(state.store==='Voordeligste'?'laagste beschikbare raming per recept':state.store)+(state.basis==='cash'?' · kassabon gekozen producten':' · verbruikskosten')+(state.top?' · top 10':order==='offers'?' · verrekende acties → passend bij winkel → mogelijke acties elders → laagste kassabon':'');
 $('top').textContent=state.top?'Alle recepten':'Top 10 goedkoopste';updateBanners();
 const emoji={vega:'🥬',kip:'🍗',vis:'🐟',vlees:'🥘',onbekend:'🍽️'};
-$('cards').innerHTML=rows.slice(0,state.top?10:state.shown).map(r=>{const k=protein(r),v=completePrice(r),off=offerWords(r);return '<article class="card"><div class="art '+k+'">'+(state.previews[r.id]?.front?'<img class="real-card-preview" loading="lazy" alt="Originele bronkaart van '+esc(displayTitle(r))+'" src="'+esc(state.previews[r.id].front)+'">':'<span>'+emoji[k]+'</span>')+'<span class="tag">'+esc(dish(r))+'</span></div><div class="content"><div class="meta">'+esc(r.source||'HelloFresh')+' · '+esc(k)+' · '+esc(r.source_file||'')+'</div><h3>'+esc(displayTitle(r))+'</h3><div class="minor">'+esc(displayIngredients(r).slice(0,3).map(i=>i.name).join(' · ')||'Ingrediëntencontrole vereist')+'</div>'+cardOfferBlock(r)+'<div class="quality-label">'+(v!==null?'Indicatieve prijsraming · normen zichtbaar':r.table_repair?'Nog geen volledige prijsraming':'Brongegevens nog te controleren')+'</div><div class="foot"><div class="money">'+(v!==null?(state.basis==='cash'?'Kassabon ≈ '+eur(estimateRecord(r).whole_packages_eur):'Verbruik ≈ '+eur(v/2)+' p.p.'):'Nog geen volledige prijs')+'<small>'+(v!==null?(state.basis==='cash'?'2 personen · hele verpakkingen · ':'per persoon · ')+esc(priceRecord(r)?.store||state.store)+(state.basis==='cash'?' · alleen verbruik '+eur(v/2)+' p.p.':' · 2 porties'):coverageText(r))+'</small></div><button type="button" class="action" data-id="'+esc(r.id)+'">Prijs &amp; acties →</button></div></div></article>'}).join('')||(state.loading?'<div class="empty">Recepten ophalen…</div>':'<div class="empty">'+(state.top?'Voor deze filters zijn nog geen volledige prijsramingen beschikbaar. De receptenbibliotheek blijft beschikbaar via “Alle recepten”.':'Geen recepten gevonden. Verander de zoekfilters.')+'</div>');
+$('cards').innerHTML=rows.slice(0,state.top?10:state.shown).map(r=>{
+ const k=protein(r),v=completePrice(r),est=estimateRecord(r),shop=priceRecord(r)?.store||state.store;
+ const costLabel=v===null?'Prijs nog onvolledig':state.basis==='cash'?'Kassabon ≈ '+eur(est.whole_packages_eur):'Verbruik ≈ '+eur(v/2)+' p.p.';
+ const costInfo=v===null?coverageText(r):state.basis==='cash'?'Hele verpakkingen voor 2 · '+shop+' · verbruik '+eur(v/2)+' p.p.':'Per persoon · '+shop+' · 2 porties';
+ const priceClass=v===null?'not-priced':'priced';
+ const meta=esc(r.source||'HelloFresh')+' · '+esc(k)+' · '+esc(r.source_file||'');
+ const art=state.previews[r.id]?.front?'<img class="real-card-preview" loading="lazy" alt="Originele bronkaart van '+esc(displayTitle(r))+'" src="'+esc(state.previews[r.id].front)+'">':'<span>'+emoji[k]+'</span>';
+ return '<article class="card"><div class="art '+k+'">'+art+'<span class="tag">'+esc(dish(r))+'</span></div>'+
+ '<div class="content"><div class="meta">'+meta+'</div><h3>'+esc(displayTitle(r))+'</h3>'+
+ '<div class="minor">'+esc(displayIngredients(r).slice(0,3).map(i=>i.name).join(' · ')||'Ingrediëntencontrole vereist')+'</div>'+
+ '<div class="main-cost '+priceClass+'"><strong>'+costLabel+'</strong><small>'+esc(costInfo)+'</small></div>'+
+ cardOfferBlock(r)+
+ '<div class="foot"><button type="button" class="action" data-id="'+esc(r.id)+'">Prijs &amp; acties bekijken →</button></div></div></article>';
+}).join('')||(state.loading?'<div class="empty">Recepten ophalen…</div>':'<div class="empty">'+(state.top?'Voor deze filters zijn nog geen volledige prijsramingen beschikbaar.':'Geen recepten gevonden. Pas de zoekfilters aan.')+'</div>');
 $('more').style.display=!state.top&&rows.length>state.shown?'block':'none';$('cards').querySelectorAll('button[data-id]').forEach(b=>b.addEventListener('click',()=>details(b.dataset.id)))}
 function details(id){
  const r=all().find(x=>String(x.id)===id);if(!r)return;
