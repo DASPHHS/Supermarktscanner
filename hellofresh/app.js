@@ -253,13 +253,13 @@ function parseCSV(s){const rows=[],record=[];let cell='',quoted=false;for(let i=
 async function json(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error(url+': HTTP '+r.status);return r.json()}
 function once(id,event,fn){$(id)?.addEventListener(event,fn)}
 function init(){refreshHealth();setInterval(refreshHealth,5*60*1000);try{state.estimates=JSON.parse(localStorage.getItem('hf-local-price-estimates')||'{}')}catch(e){state.estimates={}};once('q','input',()=>{state.shown=36;render()});for(const id of ['dish','sort','status','source','cost-basis','offers-only'])once(id,'change',()=>{state.shown=36;if(id==='source')state.source=$('source').value;if(id==='cost-basis')state.basis=$('cost-basis').value;render()});once('more','click',()=>{state.shown+=36;render()});once('top','click',()=>{state.top=!state.top;render()});once('modal','click',e=>{if(e.target===$('modal'))$('modal').classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('modal').classList.remove('open')});
-once('card-promotions','change',()=>{state.cards=$('card-promotions').checked;state.offerCache.clear();render();if($('modal').classList.contains('open')&&state.selectedId)details(state.selectedId)});
+once('card-promotions','change',()=>{state.cards=$('card-promotions').checked;resetOfferCaches();render();if($('modal').classList.contains('open')&&state.selectedId)details(state.selectedId)});
 once('file','change',async e=>{try{const rows=parseCSV(await e.target.files[0].text());if(!rows.length||!('titel_automatisch' in rows[0]))throw Error('CSV niet herkend');state.extra=rows.map((r,i)=>({id:'local-'+i,title_extracted:r.titel_automatisch,source:'HelloFresh',source_file:r.bron,source_page_ingredients:r.paginas,ingredients_4p:[]})).filter(r=>r.title_extracted);$('import-status').textContent=state.extra.length+' extra bronrecords geladen in deze browser.';dishOptions();render()}catch(err){$('import-status').textContent='Import mislukt: '+err.message}});
 once('clear','click',()=>{state.extra=[];$('file').value='';$('import-status').textContent='Lokale import gewist';dishOptions();render()});options();dishOptions();render();
 json('../recipes_extracted.json').then(d=>{if(!Array.isArray(d.recipes)||!d.recipes.length)throw Error('Geen recepten in bron');state.recipes=state.recipes.filter(x=>x.source==='Plated').concat(d.recipes.map(r=>({...r,source:'HelloFresh'})));state.loading=false;dishOptions();render()}).catch(err=>{state.loading=false;$('count').textContent='Receptendatabase niet geladen: '+err.message;render()});
 function refreshOriginals(){Promise.allSettled([json('./preview_manifest.json'),json('./plated_preview_manifest.json')]).then(res=>{let previews={};for(const item of res){if(item.status==='fulfilled')Object.assign(previews,item.value.recipes||{})}state.previews=previews;render()})}refreshOriginals();
 setInterval(refreshOriginals,5*60*1000);
-function refreshPrices(){return json('../recipe_prices.json').then(d=>{const at=new Date(d.fetched_at_utc);if(Date.now()-at.getTime()>=0&&Date.now()-at.getTime()<3*86400000){state.priceDate=at;state.prices=new Map((d.results||[]).map(r=>[r.store+':'+r.recipe_id,r]));state.offerCache.clear()}else{state.priceDate=null;state.prices.clear();state.offerCache.clear()}render()}).catch(()=>{if(state.priceDate&&Date.now()-state.priceDate.getTime()>=3*86400000){state.priceDate=null;state.prices.clear();state.offerCache.clear()}render()})}
+function refreshPrices(){return json('../recipe_prices.json').then(d=>{const at=new Date(d.fetched_at_utc);if(Date.now()-at.getTime()>=0&&Date.now()-at.getTime()<3*86400000){state.priceDate=at;state.prices=new Map((d.results||[]).map(r=>[r.store+':'+r.recipe_id,r]));resetOfferCaches()}else{state.priceDate=null;state.prices.clear();resetOfferCaches()}render()}).catch(()=>{if(state.priceDate&&Date.now()-state.priceDate.getTime()>=3*86400000){state.priceDate=null;state.prices.clear();resetOfferCaches()}render()})}
 refreshPrices();setInterval(refreshPrices,10*60*1000);
 json('../plated_nl_catalog.json').then(d=>{state.nlCatalog=Object.fromEntries((d.recipes||[]).map(x=>[x.source_identity||x.id,x]));render()}).catch(()=>{});
 function refreshDeals(){
@@ -270,13 +270,13 @@ function refreshDeals(){
   if(!good)throw Error('Weekdeals-feed onvolledig of verouderd');
   state.deals=d.stores;
   state.dealsMeta={source:d.source,updated_at_utc:d.updated_at_utc,coverage:d.coverage};
-  state.offerCache.clear();render();
+  resetOfferCaches();render();
  }).catch(()=>json('../market_deals.json').then(d=>{
    const age=Date.now()-new Date(d.updated_at_utc).getTime();
    state.deals=age>=0&&age<48*3600000?d.stores||{}:{};
    state.dealsMeta={source:'Beperkte PrijsProfeet-terugvalbron',updated_at_utc:d.updated_at_utc,coverage:{food_category_filtered:false}};
-   state.offerCache.clear();render();
- }).catch(()=>{state.deals={};state.dealsMeta={source:'Geen actuele acties beschikbaar'};state.offerCache.clear();render()}));
+   resetOfferCaches();render();
+ }).catch(()=>{state.deals={};state.dealsMeta={source:'Geen actuele acties beschikbaar'};resetOfferCaches();render()}));
 }
 refreshDeals();
 function refreshPlated(){json('../plated_release_review_queue.json').then(d=>{const records=(d.recipes||[]).map((r,i)=>({...r,source:'Plated',id:'plated-release-'+(r.source_identity||i)}));state.recipes=state.recipes.filter(x=>x.source!=='Plated').concat(records);const el=$('plated-summary');if(el)el.textContent=records.length+' Plated-receptkaarten uit Marc\'s archief beschikbaar (voorlopige OCR, niet prijsgeldig).';dishOptions();render()}).catch(()=>{const el=$('plated-summary');if(el)el.textContent='Plated-import is nog niet bereikbaar. HelloFresh blijft beschikbaar.'})}
