@@ -36,7 +36,7 @@ function safeSnapshot(input){
   if(!safeId(id)||!link||typeof link!=='object'||link.match!=='exact_title_only')continue;
   const url=safeUrl(link.url);
   if(!url)continue;
-  out[id]={url,match:'exact_title_only',title:String(link.title||'').slice(0,160),
+  out[id]={url,match:'exact_title_only',title:String(link.title||'').slice(0,160),headline:String(link.headline||'').slice(0,160),
     total_time:Number.isInteger(link.total_time)&&link.total_time>0&&link.total_time<=600?link.total_time:null};
  }
  return out;
@@ -48,7 +48,7 @@ function linkFor(recipe,snapshot,manual){
  if(hand)return {url:hand,origin:'manual',total_time:null};
  const linked=snapshot?.[id];
  const url=linked?.match==='exact_title_only'?safeUrl(linked.url):null;
- return url?{url,origin:'api',total_time:linked.total_time}:null;
+ return url?{url,origin:'api',total_time:linked.total_time,headline:linked.headline||null}:null;
 }
 function exportManual(manual){
  return {schema_version:1,source:'HFresh handmatige links',
