@@ -4,6 +4,12 @@ Broncode: https://github.com/moshetrenk/hellofresh-database
 Website: https://hfresh.info/nl-NL  
 API-documentatie: https://console.hfresh.info/docs/get-started
 
+## Status van de externe dienst (controle 1 november 2026)
+
+Het oorspronkelijke project [Muetze42/hellofresh-database](https://github.com/Muetze42/hellofresh-database) is in juni 2026 gearchiveerd en meldt dat het wegens een sommatie van HelloFresh SE is beëindigd. De door jou aangedragen repository van `moshetrenk` bevat de oude software, maar is **geen bewijs dat de HFresh-website of REST API nog operationeel is**. Daarom is de automatische wekelijkse synchronisatie uitgeschakeld; handmatig uitvoeren blijft mogelijk wanneer aantoonbaar geautoriseerde API-toegang beschikbaar is. De officiële [HelloFresh-receptenbibliotheek](https://www.hellofresh.nl/recipes) staat nu als primaire externe uitwijkmogelijkheid op elke receptkaart.
+
+Bestaande HFresh-URL's blijven optioneel als gebruikersverwijzingen beschikbaar, maar kunnen een foutmelding geven. Er is geen scrape of reproductie van een beëindigde databank ingericht.
+
 ## Waarvoor de bron bruikbaar is
 
 Deze onafhankelijke, onofficiële databank ondersteunt Nederlandse recepttitels,
@@ -21,7 +27,7 @@ Daarom koppelt deze uitbreiding **geen enkele prijs** of
 ## Zonder API-token: direct koppelen in de Receptenstudio
 
 1. Open een HelloFresh-recept in [de Receptenstudio](https://dasphhs.github.io/Supermarktscanner/hellofresh/) en klik op **Prijs & acties bekijken**.
-2. Bij **HFresh-receptenkoppeling** staat **Zoek dit recept direct in HFresh**. Deze link opent de publieke Nederlandse HFresh-website met de recepttitel al als zoekterm (de originele applicatie ondersteunt het URL-veld `?search=`). Er is geen account of API-token nodig om daar handmatig te zoeken.
+2. Iedere kaart heeft een link naar de **officiële HelloFresh-receptenbibliotheek**. In de details kun je daarnaast de oude HFresh-zoekfunctie proberen; die is mogelijk niet bereikbaar. De originele code ondersteunt een `?search=`-zoekterm, maar dat garandeert niet dat de gestopte website nog werkt.
 3. Zoek het recept in HFresh en controleer de bijgerechten/ingrediënten op de originele HelloFresh-kaart. Gelijknamige recepten kunnen verschillende versies zijn.
 4. Plak de **volledige HFresh-receptpagina-URL** in het veld, bijvoorbeeld `https://hfresh.info/nl-NL/recipes/receptnaam-123`, en klik **Bewaar lokale koppeling**.
 5. De gekozen bron verschijnt vervolgens bij het recept. Je kunt de koppeling verwijderen of later wijzigen. De bronfilter **HFresh-koppeling** laat alleen gekoppelde of niet-gekoppelde HelloFresh-recepten zien.
@@ -32,7 +38,7 @@ Voor de duidelijkheid: een opgeslagen link is geen bevestiging dat de twee recep
 
 ## Veilige synchronisatie
 
-De automatische API-sync vraagt uitsluitend een roterende selectie van 12 bestaande lokale recepttitels per week op (maximaal 25 op aanvraag), niet de volledige externe databank. De module bewaart een `scan_cursor` zodat volgende weken nieuwe titels worden gecontroleerd. De zoekopdrachten worden gespreid en alleen exact overeenkomende titels leveren een bronlink op. Houd rekening met de [HFresh-gebruiksvoorwaarden](https://console.hfresh.info/terms): vermijd geautomatiseerde massale opvragingen. Deze koppeling is geen volledige HFresh-import en voegt geen recepten uit HFresh aan de prijsranglijst toe.
+De (nu alleen handmatig startbare) API-sync vraagt uitsluitend een roterende selectie van 12 bestaande lokale recepttitels per week op (maximaal 25 op aanvraag), niet de volledige externe databank. De module bewaart een `scan_cursor` zodat volgende weken nieuwe titels worden gecontroleerd. De zoekopdrachten worden gespreid en alleen exact overeenkomende titels leveren een bronlink op. Houd rekening met de [HFresh-gebruiksvoorwaarden](https://console.hfresh.info/terms): vermijd geautomatiseerde massale opvragingen. Deze koppeling is geen volledige HFresh-import en voegt geen recepten uit HFresh aan de prijsranglijst toe.
 
 Voor automatische aanvullingen is een eigen HFresh-API-token nodig. De optionele importmodule `hfresh_metadata.py` vergelijkt de exacte,
 accent-onafhankelijk genormaliseerde Nederlandse titels met
@@ -55,7 +61,7 @@ HFRESH_API_TOKEN='eigen-api-token' python hfresh_metadata.py
 
 Voeg voor de geplande GitHub Action het repository-secret
 `HFRESH_API_TOKEN` toe; de workflow `hfresh-crossrefs.yml` draait
-wekelijks of handmatig. Zonder secret gebeurt er niets. Laat het token
+alleen na handmatig starten (de wekelijkse planning is uitgeschakeld). Zonder secret gebeurt er niets. Laat het token
 nooit als bestand, client-JavaScript of Pages-config publiceren.
 De API kan limieten of voorwaarden hebben; raadpleeg het portaal.
 Een mislukte API-call laat de vorige snapshot intact. Een succesvolle zoekbatch zonder matches kan eerder verouderde koppelingen uit juist die gecontroleerde batch verwijderen; de rest blijft staan.
