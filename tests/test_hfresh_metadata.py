@@ -1,5 +1,8 @@
+import io
+import json
 import unittest
-from hfresh_metadata import build_crossrefs, read_catalog, safe_recipe_url, title_key
+from unittest.mock import patch
+from hfresh_metadata import build_crossrefs, fetch_catalog, safe_recipe_url, title_key
 
 
 class HFreshMetadataTests(unittest.TestCase):
@@ -36,6 +39,27 @@ class HFreshMetadataTests(unittest.TestCase):
         self.assertIsNone(safe_recipe_url("https://hfresh.info/de-DE/recipes/x-1"))
         self.assertIsNone(safe_recipe_url("https://hfresh.info/nl-NL/recipes/x-1?token=secret"))
         self.assertEqual(title_key("Héékfilet à la meunière"), "heekfilet a la meuniere")
+
+    def test_api_uses_meta_to_fetch_every_page(self):
+        urls = []
+        def fake_open(req, timeout):
+            urls.append(req.full_url)
+            page = len(urls)
+            data = {"data": [{"id": page, "name": f"Recipe {page}",
+                              "url": f"https://hfresh.info/nl-NL/recipes/recipe-{page}"}],
+                    "meta": {"current_page": page, "last_page": 2}}
+            return io.BytesIO(json.dumps(data).encode("utf-8"))
+        with patch("hfresh_metadata.urllib.request.urlopen", side_effect=fake_open):
+            found = fetch_catalog("https://api.hfresh.info/nl-NL/recipes", "test-token")
+        self.assertEqual([r["id"] for r in found], [1, 2])
+        self.assertIn("perPage=200", urls[0])
+        self.assertIn("page=2", urls[1])
+
+    def test_api_missing_page_metadata_rejected(self):
+        response = io.BytesIO(json.dumps({"data": []}).encode())
+        with patch("hfresh_metadata.urllib.request.urlopen", return_value=response):
+            with self.assertRaisesRegex(ValueError, "paginatie"):
+                fetch_catalog("https://api.hfresh.info/nl-NL/recipes", "token")
 
     def test_empty_is_not_verification(self):
         result = build_crossrefs([], [])
