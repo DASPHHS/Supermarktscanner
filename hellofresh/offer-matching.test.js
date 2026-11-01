@@ -23,6 +23,8 @@ const incompatible = [
  ['Wortel (stuk(s))', 'De Kleine Keuken Knijpmix mango wortel & haver 6m+'],
  ['Spinazie (g)', 'AH Terra Pureersoep broccoli spinazie'],
  ['Spinazie (g)', 'Vivera Vegetarische Spinazie Kaas Filet 2 Stuks 200 g'],
+ ['[Plantaardige] roomboter (el)', 'Jumbo Bakkers Krakelingen met Roomboter 200 g'],
+ ['Paprika (stuk(s))', 'Maza Hoemoes Paprika & Oregano'],
  ['Spinazie (g)', 'AH Borrelbrood feta spinazie'],
  ['Kikkererwten (g)', 'Unox Kikkererwten tomatensoep'],
  ['Kikkererwten (g)', 'Hak Kikkererwten & Lupine Mix 225 g'],
