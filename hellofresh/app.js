@@ -13,7 +13,16 @@ function translatedIngredients(r){const nl=dutch(r);return nl?.ingredients_nl?.l
 function displayIngredients(r){const nl=translatedIngredients(r);return nl?nl.map(i=>({name:i.name_nl,quantity:i.quantity_display_nl,original:i.original_name,confidence:i.translation_status,conversion:i.conversion_status})):(r.ingredients_2p||ingredients(r)).map(i=>({name:i.ingredient,quantity:r.ingredients_2p?i.quantity_2p_source:i.quantity_4p_source,original:i.ingredient,confidence:'source'}))}
 function searchableText(r){return [r.title_extracted,displayTitle(r),...ingredients(r).map(i=>i.ingredient),...displayIngredients(r).map(i=>i.name+' '+(dutch(r)?.ingredients_nl||[]).map(x=>x.canonical_nl||'').join(' '))].join(' ')}
 
-function protein(r){const kind=RecipeLogic.protein(r.title_extracted+' '+displayTitle(r),displayIngredients(r).map(i=>i.name));return kind==='onbekend'&&estimateRecord(r)?.vegetarian_ingredients?'vega':kind}
+function protein(r){
+ const title=r.title_extracted+' '+displayTitle(r);
+ const labels=displayIngredients(r).map(i=>i.name);
+ const kind=RecipeLogic.protein(title,labels);
+ if(kind!=='onbekend')return kind;
+ // Vegetarian compounds were mistakenly shown as 'onbekend' (e.g. veggiebowl, kikkererwtencurry).
+ if(/\b(veggie\w*|vega\w*|kikkererwten\w*|vegetarisch\w*)\b/.test(norm(title))&&
+   RecipeLogic.protein('',labels)==='onbekend')return 'vega';
+ return estimateRecord(r)?.vegetarian_ingredients?'vega':kind;
+}
 function dish(r){let t=norm(displayTitle(r));if(/soep|ramen/.test(t))return 'Soep';if(/pasta|spaghetti|linguine|penne|tagliatelle|lasagne|orzo|orzotto|ravioli|gnocchi|macaroni|casarecce|fusilli|rigatoni/.test(t))return 'Pasta & orzo';if(/curry|dahl|daal|masala/.test(t))return 'Curry';if(/stamppot|hutspot|puree/.test(t))return 'Stamppot';if(/rijst|risotto|nasi|biryani|poke/.test(t))return 'Rijst & bowls';if(/noedel|bami|mie|udon|wok/.test(t))return 'Noedels & wok';if(/wrap|taco|tortilla|burrito|quesadilla|naan|platbrood|pizza/.test(t))return 'Wraps & pizza';if(/salade|couscous|bulgur|quinoa|bowl/.test(t))return 'Salade & granen';return 'Overige gerechten'}
 function all(){const map=new Map();for(const r of state.recipes.concat(state.extra)){const key=(r.source||'HelloFresh')+'|'+norm(r.title_extracted);if(key&&!map.has(key))map.set(key,r)}return [...map.values()]}
 function priceRecord(r){return state.store==='Voordeligste'?RecipeLogic.selectRecord(['AH','Jumbo','Lidl'].map(shop=>state.prices.get(shop+':'+r.id)),state.cards,state.basis):state.prices.get(state.store+':'+r.id)}
