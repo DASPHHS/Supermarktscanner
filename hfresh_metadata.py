@@ -43,12 +43,14 @@ def safe_recipe_url(value: object) -> str | None:
 def build_crossrefs(recipes: list[dict], external: list[dict]) -> dict:
     """Fail closed for ambiguous titles, unknown hosts and missing source IDs."""
     by_title: dict[str, list[dict]] = defaultdict(list)
+    seen_external_ids: set[tuple[str, int]] = set()
     for row in external:
         if not isinstance(row, dict):
             continue
         key = title_key(row.get("name"))
         url = safe_recipe_url(row.get("url"))
-        if key and url and isinstance(row.get("id"), int):
+        if key and url and type(row.get("id")) is int and (key, row["id"]) not in seen_external_ids:
+            seen_external_ids.add((key, row["id"]))
             by_title[key].append(row)
     matched = {}
     ambiguous = 0
