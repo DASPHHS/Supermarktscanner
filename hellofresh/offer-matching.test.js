@@ -131,6 +131,6 @@ assert.equal(RecipeLogic.offerRankingTier(true,true,false),0);
 assert.equal(RecipeLogic.offerRankingTier(true,false,true),1);
 assert.equal(RecipeLogic.offerRankingTier(true,false,false),2);
 assert.equal(RecipeLogic.offerRankingTier(false,true,true),3);
-console.log('Recipe/offer checks: '+(compatible.length+incompatible.length+14+19)+' passed.');
+console.log('Recipe/offer checks: '+(compatible.length+incompatible.length+37)+' passed.');
 
 
