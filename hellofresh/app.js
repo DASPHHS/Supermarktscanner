@@ -302,7 +302,7 @@ function renderRelevance(){
  categoryCards(matches);
  const stamp=new Date(data.updated_at_utc).toLocaleString('nl-NL',{timeZone:'Europe/Amsterdam',dateStyle:'short',timeStyle:'short'});
  status.textContent=matches.length+' ingrediëntgroepen met mogelijke acties · '+data.recipe_count+
-  ' HelloFresh-recepten doorzocht · bron '+stamp+'. Alleen productkandidaten, geen geverifieerde besparingen.';
+  ' recepten uit HelloFresh en Plated doorzocht · bron '+stamp+'. Alleen productkandidaten, geen geverifieerde besparingen.';
  cards.innerHTML=shown.map(f=>{
   let picked=[];
   if(shop==='all'){
