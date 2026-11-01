@@ -74,8 +74,20 @@ function completePrice(r,p){
 function estimatePrice(e){
  return e?.eligible===true&&Array.isArray(e.missing)&&e.missing.length===0&&e.total_ingredients>0&&e.covered_ingredients===e.total_ingredients&&Number.isFinite(e.used_total_eur)&&e.used_total_eur>=0?e.used_total_eur:null;
 }
+function validActionLine(line,today=dayFormat.format(new Date()),cards=false){
+ if(!line||!line.action||!activeOffer(line.action,today)||line.action.personal_offer===true)return false;
+ if(line.action.card_required===true&&!cards)return false;
+ if(!Array.isArray(line.ingredients)||typeof line.product!=='string')return false;
+ // Both the actual chosen SKU and its action name must represent the recipe ingredient.
+ return line.ingredients.some(i=>relevantOfferProduct(i,line.product)
+  &&(typeof line.action.name!=='string'||relevantOfferProduct(i,line.action.name)));
+}
+function appliedActionLines(estimate,cards=false,today=dayFormat.format(new Date())){
+ if(estimatePrice(estimate)===null)return [];
+ return (estimate.lines||[]).filter(line=>validActionLine(line,today,cards));
+}
 function estimateFor(p,cards=false,today=dayFormat.format(new Date())){
- const valid=e=>e && (e.lines||[]).every(line=>!line.action||activeOffer(line.action,today));
+ const valid=e=>e&&(e.lines||[]).every(line=>!line.action||validActionLine(line,today,cards));
  if(cards&&valid(p?.estimate_with_cards))return p.estimate_with_cards;
  return valid(p?.estimate)?p.estimate:null;
 }
@@ -105,7 +117,7 @@ function protein(title,labels=[]){
  // Main protein in the title takes precedence over chicken stock in a beef dish.
  return classify(norm(title))||classify(norm(labels.filter(x=>!/(bouillon|stock|broth)/i.test(x)).join(' ')))||'onbekend';
 }
-const api={norm,offerMatches,relevantOfferProduct,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,rankingPrice,originalPdfUrl};
+const api={norm,offerMatches,relevantOfferProduct,validActionLine,appliedActionLines,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,rankingPrice,originalPdfUrl};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;
 else root.RecipeLogic=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
