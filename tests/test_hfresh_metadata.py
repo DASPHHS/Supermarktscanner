@@ -11,12 +11,13 @@ class HFreshMetadataTests(unittest.TestCase):
                  {"id": "hf-8", "title_extracted": "Andere maaltijd"}]
         external = [{"id": 101, "name": "Heekfilet a la meuniere",
                      "url": "https://hfresh.info/nl-NL/recipes/heekfilet-a-la-meuniere-101",
-                     "total_time": 35, "ingredients": [{"name": "Vis"}],
+                     "total_time": 35, "headline": "met brood en salade", "ingredients": [{"name": "Vis"}],
                      "price_eur": 1.00, "quality": "verified"}]
         found = build_crossrefs(local, external)
         self.assertEqual(found["matched"], 1)
         entry = found["recipe_links"]["hf-7"]
         self.assertEqual(entry["total_time"], 35)
+        self.assertEqual(entry["headline"], "met brood en salade")
         self.assertEqual(entry["match"], "exact_title_only")
         self.assertNotIn("ingredients", entry)
         self.assertNotIn("price_eur", entry)
