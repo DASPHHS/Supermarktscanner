@@ -49,4 +49,40 @@ for (const [ingredient, product] of incompatible) {
  assert.equal(RecipeLogic.relevantOfferProduct(ingredient, product), false,
   'Non-equivalent product must not match: ' + ingredient + ' / ' + product);
 }
-console.log('Recipe offer matching: ' + (compatible.length + incompatible.length) + ' checks passed.');
+
+const date = '2026-11-01';
+const chickpeaAction = {
+ name: 'Hak Kikkererwten 380 g',
+ valid_from: '2026-10-28',
+ valid_until: '2026-11-03',
+};
+const chickpeaLine = {
+ ingredients: ['Kikkererwten (pak(ken))'],
+ product: 'Hak Kikkererwten 380 g',
+ action: chickpeaAction,
+};
+const wrongSpinachLine = {
+ ingredients: ['Spinazie (g)'],
+ product: 'Vivera Vegetarische Spinazie Kaas Filet 2 Stuks 200 g',
+ action: {...chickpeaAction, name: 'Vivera Vegetarische Spinazie Kaas Filet 2 Stuks 200 g'},
+};
+const mismatchedNameLine = {
+ ...chickpeaLine,
+ action: {...chickpeaAction,name:'AH Scharrel Kipfilet 2 stuks'},
+};
+const staleLine = {...chickpeaLine,action:{...chickpeaAction,valid_until:'2026-10-31'}};
+const estimate = lines => ({
+ eligible:true,total_ingredients:lines.length,covered_ingredients:lines.length,
+ missing:[],used_total_eur:5.40,whole_packages_eur:12.50,lines
+});
+assert.equal(RecipeLogic.validActionLine(chickpeaLine,date,false),true);
+assert.equal(RecipeLogic.validActionLine(wrongSpinachLine,date,false),false);
+assert.equal(RecipeLogic.validActionLine(mismatchedNameLine,date,false),false);
+assert.equal(RecipeLogic.validActionLine(staleLine,date,false),false);
+assert.equal(RecipeLogic.estimateFor({estimate:estimate([wrongSpinachLine])},false,date),null);
+assert.equal(RecipeLogic.estimateFor({estimate:estimate([staleLine])},false,date),null);
+assert.equal(RecipeLogic.appliedActionLines(estimate([chickpeaLine]),false,date).length,1);
+assert.equal(RecipeLogic.appliedActionLines(estimate([wrongSpinachLine]),false,date).length,0);
+assert.equal(RecipeLogic.appliedActionLines({...estimate([chickpeaLine]),missing:[{ingredient:'nog onbekend'}]},false,date).length,0);
+console.log('Recipe/offer checks: '+(compatible.length+incompatible.length+9)+' passed.');
+
