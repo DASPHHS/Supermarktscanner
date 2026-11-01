@@ -66,7 +66,8 @@ function renderAuditSummary(){
 function sourceAuditDetails(r){
  const entry=auditEntry(r);
  if(!entry)return '<section class="norm-section"><h3>Controle van recept en ingrediënten</h3>'+
-  '<p class="sub">Een gepubliceerd broncontroleverslag voor dit recept ontbreekt nog. Geen verificatie geclaimd.</p></section>';
+  '<p class="sub">Een gepubliceerd broncontroleverslag voor dit recept ontbreekt nog. Geen verificatie geclaimd.</p>'+ 
+  '<p><a href="./source-audit.html" target="_blank" rel="noopener noreferrer">Bekijk de volledige broncontrolelijst</a></p></section>';
  const confirmed=entry.source_review_confirmed===true;
  const issues=(entry.issues||[]).map(k=>auditIssues[k]||k).filter(x=>x!=='Handmatige vergelijking van de originele kaart vereist');
  return '<section class="norm-section" id="recipe-audit-detail"><h3>Controle van recept en ingrediënten</h3>'+
