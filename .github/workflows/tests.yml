@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt pytest
+      - run: pip install -r requirements.txt pytest 'Pillow>=10,<13' 'pypdf>=5,<7'
       - run: PYTHONPATH=. pytest -q
       - run: python -m compileall -q app.py scanner.py render_original_cards.py render_plated_cards.py import_plated_release.py sync_market_deals.py
       - run: node --check hellofresh/app.js
