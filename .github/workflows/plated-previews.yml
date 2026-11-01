@@ -3,8 +3,14 @@ on:
   push:
     paths:
       - 'render_plated_cards.py'
+      - 'tests/test_render_plated_cards.py'
       - 'plated_release_review_queue.json'
       - '.github/workflows/plated-previews.yml'
+  # Scheduled events may be delayed or dropped. Successful translation/import
+  # runs provide extra opportunities to finish the remaining PDF batches.
+  workflow_run:
+    workflows: ['Plated Nederlandse recepten', 'Plated Release ZIP import']
+    types: [completed]
   schedule:
     - cron: '20,50 * * * *'
   workflow_dispatch:
@@ -15,6 +21,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   render:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:
@@ -22,6 +29,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Start from latest committed preview checkpoint
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
       - name: Detect new scanned Plated cards
         id: todo
         run: |
@@ -35,7 +46,9 @@ jobs:
               rows=json.loads(q.read_text())['recipes']
               p=Path('hellofresh/plated_preview_manifest.json')
               existing=json.loads(p.read_text()).get('recipes',{}) if p.exists() else {}
-              needed=any(not existing.get('plated-release-'+r.get('source_identity',''),{}).get('all_pages_in_pdf') for r in rows if r.get('source_member'))
+              needed=any((not existing.get('plated-release-'+r.get('source_identity',''),{}).get('all_pages_in_pdf')
+                          or not existing.get('plated-release-'+r.get('source_identity',''),{}).get('source_sha256'))
+                         for r in rows if r.get('source_member'))
               print('needed='+str(needed).lower())
           PY
       - name: Install original PDF rendering tools
@@ -60,7 +73,7 @@ jobs:
           gh release download plated-database-v1 --pattern 'Plated*.zip' --dir plated-archive --clobber
       - name: Render source cards
         if: steps.todo.outputs.needed == 'true'
-        run: python render_plated_cards.py --archive plated-archive/Plated*.zip --batch 24
+        run: python render_plated_cards.py --archive plated-archive/Plated*.zip --batch 32
       - name: Publish images and PDFs with conflict-safe merge
         if: steps.todo.outputs.needed == 'true'
         run: |
