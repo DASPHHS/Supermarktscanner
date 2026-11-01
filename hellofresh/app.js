@@ -107,26 +107,33 @@ function candidateOffers(r,scope=state.store){
  return possibleOffers(r,scope).filter(x=>!applied.has(norm(x.deal.name)));
 }
 function cardOfferBlock(r){
- const verified=offerWords(r),candidates=candidateOffers(r);
- const total=new Set(candidates.map(o=>norm(o.ingredient))).size;
- const hasPrice=completePrice(r)!==null;
- if(!verified.length&&!candidates.length)
-  return '<div class="card-offers-empty">Geen passende actie voor losse ingrediënten gevonden</div>';
- let html='<div class="recipe-offers compact-offers"><strong class="offer-heading">Acties bij ingrediënten</strong>';
- if(verified.length)html+='<div class="offer-applied">'+verified.length+' actie(s) in deze raming verwerkt en op productnaam gecontroleerd</div>';
- if(candidates.length){
-  const first=candidates[0],deal=first.deal,store=priceRecord(r)?.store;
-  html+='<div class="offer-match-line"><span class="offer-status">Mogelijke productactie · niet verrekend</span><div><b>'+esc(first.ingredient)+'</b> → '+esc(deal.name)+'</div>'+
-   '<small>'+esc(first.shop)+' · '+esc(offerPriceLabel(deal))+' · t/m '+esc(deal.valid_until)+(deal.loyalty_warning?' · leden-/appprijs controleren':'')+
-   (store&&store!==first.shop?' · andere winkel dan de berekening':'')+'</small></div>';
-  if(candidates.length>1)html+='<div class="offer-extra">+'+(candidates.length-1)+' andere productopties onder Prijs &amp; acties</div>';
- }
- if(!hasPrice)html+='<small class="offer-warning">Geen volledige kassabonraming: acties zijn niet doorgerekend.</small>';
+ const applied=offerWords(r),price=completePrice(r),selected=selectedStoreOption(r);
+ const otherLeads=candidateOffers(r),sameShop=otherLeads.filter(x=>x.shop===selected.shop);
+ const first=sameShop[0];
+ const scenario=selected.changes.length>0;
+ if(!applied.length&&!sameShop.length)
+  return '<div class="card-offers-empty">'+
+   (otherLeads.length?'Andere supermarkt: '+otherLeads.length+' mogelijke acties, niet in deze kassabon.':'Geen passende doorgerekende actie in deze winkel.')+'</div>';
+ let html='<div class="recipe-offers compact-offers"><strong class="offer-heading">Aanbiedingen bij dit gerecht</strong>';
+ if(scenario)html+='<div class="offer-applied">'+selected.changes.length+
+  ' actie-alternatief/alternatieven doorgerekend · geschat kassabonverschil '+eur(selected.savings)+
+  ' (niet onafhankelijk gecontroleerd)</div>'+
+  selected.changes.slice(0,1).map(x=>'<div class="offer-match-line"><b>'+esc(x.ingredients.join(' / '))+
+   '</b> → '+esc(x.to)+'<small>'+esc(x.store)+' · '+x.packages+
+   ' verpakking(en) · samen '+eur(x.offerCash)+' i.p.v. '+eur(x.regularCash)+'</small></div>').join('');
+ else if(applied.length)html+='<div class="offer-applied">'+applied.length+' bestaande actie(s) meegerekend in prijsraming</div>';
+ if(first)html+='<div class="offer-match-line"><span class="offer-status">Mogelijke actie · niet meegerekend</span>'+
+   '<b>'+esc(first.ingredient)+'</b> → '+esc(first.deal.name)+
+   '<small>'+esc(first.shop)+' · '+esc(offerPriceLabel(first.deal))+' · t/m '+esc(first.deal.valid_until)+'</small></div>';
+ if(otherLeads.length>sameShop.length)html+='<div class="offer-extra">'+
+  (otherLeads.length-sameShop.length)+' aanvullende productacties in andere winkels (niet in dit bedrag).</div>';
+ if(price===null)html+='<small class="offer-warning">Geen volledige kassabonraming; geen besparing geclaimd.</small>';
  return html+'</div>';
 }
 function detailOfferBlock(r){
- const applied=offerWords(r),candidates=candidateOffers(r,'Alle');
+ const applied=offerWords(r),candidates=candidateOffers(r,'Alle'),scenario=selectedStoreOption(r);
  let html='<section class="detail-offers"><h3>Acties en productkeuzes</h3><p class="sub">De scanner toont alleen vergelijkbare losse ingrediënten als actieoptie. Deze aanbiedingen zijn niet automatisch doorgerekend. Winkelprijzen, verpakkingen en voorwaarden kunnen verschillen.</p>';
+ if(scenario.changes.length){html+='<h4>Doorgerekend alternatief voor gekozen winkel ('+esc(scenario.shop)+')</h4><p class="sub">Indicatief scenario, niet handmatig geverifieerd. Het lagere kassabedrag kan ook door een kleinere verpakking komen, niet alleen door de actie.</p><div class="deals">'+scenario.changes.map(x=>'<div class="deal"><b>'+esc(x.ingredients.join(' / '))+'</b><div>'+esc(x.from)+' → '+esc(x.to)+'</div><small>'+x.packages+' verpakking(en) · oorspronkelijk '+eur(x.regularCash)+' · alternatief '+eur(x.offerCash)+' · verschil '+eur(x.saving)+'</small></div>').join('')+'</div>'}
  if(applied.length){
   html+='<h4>In gekozen prijsraming verwerkt</h4><div class="deals">'+applied.map(x=>
    '<div class="deal"><b>'+esc(x.name||'Productactie')+'</b><small>'+esc(x.discount||'Actie')+' · t/m '+esc(x.valid_until||'onbekend')+'</small></div>'
@@ -186,7 +193,7 @@ function refreshHealth(){
  renderHealth();
  });
 }
-function render(){if(!$('cards'))return;const q=norm($('q').value),d=$('dish').value,status=$('status').value;const full=all();let rows=full.filter(r=>(state.source==='Alle'||r.source===state.source)&& (state.kind==='alle'||protein(r)===state.kind)&&(!d||dish(r)===d)&&norm(searchableText(r)).includes(q)&&(!status||(status==='yes'?completePrice(r)!==null:completePrice(r)===null))&&(!$('offers-only')?.checked||possibleOffers(r).length>0||offerWords(r).length>0));
+function render(){if(!$('cards'))return;const q=norm($('q').value),d=$('dish').value,status=$('status').value;const full=all();let rows=full.filter(r=>(state.source==='Alle'||r.source===state.source)&& (state.kind==='alle'||protein(r)===state.kind)&&(!d||dish(r)===d)&&norm(searchableText(r)).includes(q)&&(!status||(status==='yes'?completePrice(r)!==null:completePrice(r)===null))&&(!$('offers-only')?.checked||offerWords(r).length>0||possibleOffers(r).some(x=>x.shop===selectedStoreOption(r).shop)));
 const order=$('sort').value;$('sort').querySelector('[value=cheap]').textContent=state.basis==='cash'?'Laagste kassabon eerst':'Laagste verbruikskosten eerst';rows.sort((a,b)=>{if(order==='cheap')return (completePrice(a)===null)-(completePrice(b)===null)||(rankingPrice(a)??Infinity)-(rankingPrice(b)??Infinity)||displayTitle(a).localeCompare(displayTitle(b),'nl');if(order==='leastmissing')return ((priceCoverage(a).unknown?Infinity:priceCoverage(a).missing)-(priceCoverage(b).unknown?Infinity:priceCoverage(b).missing))||a.title_extracted.localeCompare(b.title_extracted,'nl');if(order==='offers')return offerSort(a,b);if(order==='matches')return incomplete(b)-incomplete(a)||a.title_extracted.localeCompare(b.title_extracted,'nl');return a.title_extracted.localeCompare(b.title_extracted,'nl')});
 if(state.top)rows=rows.filter(r=>completePrice(r)!==null).sort((a,b)=>rankingPrice(a)-rankingPrice(b)).slice(0,10);
 const scope=full.filter(r=>state.source==='Alle'||r.source===state.source),covered=scope.filter(r=>completePrice(r)!==null).length,offersCount=rows.filter(r=>offerWords(r).length||possibleOffers(r).length).length;$('count').textContent=rows.length+' getoond · '+offersCount+' met mogelijke of verrekende actie · '+covered+' van '+scope.length+' met volledige raming · '+(state.store==='Voordeligste'?'laagste beschikbare raming per recept':state.store)+(state.basis==='cash'?' · kassabon gekozen producten':' · verbruikskosten')+(state.top?' · top 10':order==='offers'?' · verrekende acties → passend bij winkel → mogelijke acties elders → laagste kassabon':'');
@@ -202,7 +209,7 @@ $('cards').innerHTML=rows.slice(0,state.top?10:state.shown).map(r=>{
  return '<article class="card"><div class="art '+k+'">'+art+'<span class="tag">'+esc(dish(r))+'</span></div>'+
  '<div class="content"><div class="meta">'+meta+'</div><h3>'+esc(displayTitle(r))+'</h3>'+
  '<div class="minor">'+esc(displayIngredients(r).slice(0,3).map(i=>i.name).join(' · ')||'Ingrediëntencontrole vereist')+'</div>'+
- '<div class="main-cost '+priceClass+'"><strong>'+costLabel+'</strong><small>'+esc(costInfo)+'</small></div>'+
+ '<div class="main-cost '+priceClass+'"><strong>'+costLabel+'</strong><small>'+esc(costInfo)+'</small>'+(est?.scenario_offer?'<small>Met doorgerekend actiescenario · indicatief kassabonverschil '+eur(selectedStoreOption(r).savings)+'</small>':'')+'</div>'+
  cardOfferBlock(r)+
  '<div class="foot"><button type="button" class="action" data-id="'+esc(r.id)+'">Prijs &amp; acties bekijken →</button></div></div></article>';
 }).join('')||(state.loading?'<div class="empty">Recepten ophalen…</div>':'<div class="empty">'+(state.top?'Voor deze filters zijn nog geen volledige prijsramingen beschikbaar.':'Geen recepten gevonden. Pas de zoekfilters aan.')+'</div>');
@@ -218,16 +225,16 @@ function details(id){
  const src=card?'<section class="source-pages"><h3>Originele '+esc(r.source||'HelloFresh')+'-receptkaart</h3><p class="sub">Dit zijn afbeeldingen van de echte PDF-pagina’s, dus geen overgeschreven OCR-tekst. Klik voor groot formaat of sla de afbeelding op.</p>'+(originalPdf?'<p><a class="pdf-download" href="'+esc(originalPdf)+'" target="_blank" rel="noopener" download="'+esc(r.id+'-origineel.pdf')+'">⬇ Download originele receptkaart (PDF)</a></p>':'<p class="sub">Een aparte PDF-download wordt nog gegenereerd.</p>')+'<div class="source-images">'+['front','ingredients'].filter(k=>card[k]).map(k=>'<a href="'+esc(card[k])+'" target="_blank" rel="noopener" download="'+esc(r.id+'-'+k+'.webp')+'"><img loading="lazy" src="'+esc(card[k])+'" alt="Originele '+(k==='front'?'receptvoorzijde':'ingrediëntenpagina')+'"><span>Bekijk / download '+(k==='front'?'voorzijde':'ingrediëntenblad')+' ↗</span></a>').join('')+'</div></section>':
  '<section class="source-pages"><h3>Originele kaart</h3><p class="sub">De originele PDF-weergave is voor deze kaart nog niet gegenereerd. Bron: '+esc(r.source_file||'onbekend')+', voorzijde p. '+esc(r.source_page_front||'?')+', ingrediënten p. '+esc(r.source_page_ingredients||'?')+'.</p></section>';
  const comparison=['AH','Jumbo','Lidl'].map(store=>{
-  const entry=state.prices.get(store+':'+r.id),estimate=RecipeLogic.estimateFor(entry,state.cards),cost=RecipeLogic.estimatePrice(estimate);
-  return '<tr><th>'+store+'</th><td>'+(cost!==null?'≈ '+eur(cost):'Onvolledig')+'</td><td>'+(cost!==null?eur(estimate.whole_packages_eur):'—')+'</td><td>'+(cost!==null?(estimate.actions_applied||0)+' acties toegepast':estimate?.missing?.length?'Ontbrekende prijscomponenten':'Geen raming beschikbaar')+'</td></tr>';
+  const option=storeOption(r,store),estimate=option.estimate,cost=RecipeLogic.estimatePrice(estimate);
+  return '<tr><th>'+store+'</th><td>'+(cost!==null?'≈ '+eur(cost):'Onvolledig')+'</td><td>'+(cost!==null?eur(estimate.whole_packages_eur):'—')+'</td><td>'+(cost!==null?(option.changes.length?option.changes.length+' actie-alternatieven (scenario)':(estimate.actions_applied||0)+' acties toegepast'):estimate?.missing?.length?'Ontbrekende prijscomponenten':'Geen raming beschikbaar')+'</td></tr>';
  }).join('');
- const total=v!==null?'<div class="estimate"><strong>Geschatte kassabon: '+eur(e.whole_packages_eur)+' voor 2 personen</strong><p>Hele verpakkingen, zonder eigen voorraad. Alleen gebruikte hoeveelheden: <b>'+eur(v)+' voor 2 porties ('+eur(v/2)+' p.p.)</b>. Resterende inhoud kan je later gebruiken. Dit is geen gegarandeerde filiaalprijs.</p></div>'+(Number.isFinite(e.norm_scenario_low_eur)?'<p class="sub">Normscenario: '+eur(e.norm_scenario_low_eur)+' tot '+eur(e.norm_scenario_high_eur)+' voor twee porties bij −25% / +25% normhoeveelheden. Dit is een gevoeligheidsberekening, geen gegarandeerde prijsmarge.</p>':'')+(e.actions_applied?'<p class="offer-indicator">'+e.actions_applied+' actie(s) verrekend. Voordeel op het verbruik van de gekozen actieproducten: '+eur(e.used_savings_same_products_eur)+'. Extra verpakkingen en restanten staan hieronder.</p>':'<p class="sub">In deze prijsraming is geen aanbieding verrekend. Mogelijke productacties in deze of andere winkels staan verderop, maar zijn nog niet doorgerekend.</p>'):'<p class="notice"><b>Nog geen volledige prijsraming.</b> Ontbrekende componenten krijgen geen nulprijs en dit recept komt niet in de prijsranglijst.</p>';
+ const total=v!==null?'<div class="estimate"><strong>Geschatte kassabon: '+eur(e.whole_packages_eur)+' voor 2 personen</strong><p>Hele verpakkingen, zonder eigen voorraad. Alleen gebruikte hoeveelheden: <b>'+eur(v)+' voor 2 porties ('+eur(v/2)+' p.p.)</b>. Resterende inhoud kan je later gebruiken. Dit is geen gegarandeerde filiaalprijs.</p></div>'+(Number.isFinite(e.norm_scenario_low_eur)?'<p class="sub">Normscenario: '+eur(e.norm_scenario_low_eur)+' tot '+eur(e.norm_scenario_high_eur)+' voor twee porties bij −25% / +25% normhoeveelheden. Dit is een gevoeligheidsberekening, geen gegarandeerde prijsmarge.</p>':'')+(e.scenario_offer?'<p class="offer-indicator">Actiescenario: '+selectedStoreOption(r).changes.length+' alternatief product(en) verwerkt, indicatief kassabonverschil '+eur(selectedStoreOption(r).savings)+' ten opzichte van de reguliere gekozen producten. Mogelijk deels door andere verpakkingsgrootte; geen gegarandeerde korting.</p>':e.actions_applied?'<p class="offer-indicator">'+e.actions_applied+' eerder toegepaste actie(s) volgens de prijssnapshot. Controleer de details en voorwaarden.</p>':'<p class="sub">Geen aantoonbare actie verwerkt in deze kassabon. Mogelijke alternatieven bij andere winkels zijn geen bewijs van lagere receptkosten.</p>'):'<p class="notice"><b>Nog geen volledige prijsraming.</b> Ontbrekende componenten krijgen geen nulprijs en dit recept komt niet in de prijsranglijst.</p>';
  const missing=(e?.missing||[]);
  const gaps=missing.length?'<h3>Nog ontbrekend</h3><ul>'+missing.map(m=>'<li><b>'+esc(m.ingredient)+'</b>: '+esc(m.reason)+'</li>').join('')+'</ul>':!e?'<p class="notice">Voor dit recept is nog geen ramingsrecord beschikbaar.</p>':'';
  const lines=e?.lines||[];
  const lineTable=lines.length?'<h3>Productkeuzes en kosten</h3><div class="price-table-wrap"><table class="price-table"><thead><tr><th>Ingrediënt en rekenhoeveelheid</th><th>Gekozen product</th><th>Verbruik</th><th>Hele verpakkingen</th></tr></thead><tbody>'+lines.map(x=>{
   const link=url(x.link),a=x.action;
-  return '<tr><td>'+esc(x.ingredients.join(' / '))+'<small>'+(x.norm?'≈ ':'')+fmt(x.quantity)+' '+esc(x.unit)+'</small></td><td>'+(link?'<a href="'+link+'" target="_blank" rel="noopener">'+esc(x.product)+'</a>':esc(x.product))+(x.package_size?'<small>'+esc(x.package_size)+' · '+eur(x.package_price)+'</small>':'')+(x.package_conversion?'<small class="assumption-note">'+esc(x.package_conversion)+'</small>':'')+(x.price_proxy?'<small class="assumption-note">Prijsproxy; zie aannames</small>':'')+(a?'<small class="offer-indicator">'+esc(a.discount||'Actie')+' · '+(a.multi_buy_quantity?esc(a.multi_buy_quantity)+' voor '+eur(a.multi_buy_price):eur(a.price))+' · t/m '+esc(a.valid_until)+(a.card_required?' · klantenkaart nodig':'')+'</small>':'')+'</td><td>'+eur(x.used_cost)+'</td><td>'+eur(x.cash_cost)+(Number.isFinite(x.packages)?'<small>'+x.packages+' verpakking(en) · '+fmt(x.leftover)+' '+esc(x.unit)+' over</small>':'')+'</td></tr>';
+  return '<tr><td>'+esc(x.ingredients.join(' / '))+'<small>'+(x.norm?'≈ ':'')+fmt(x.quantity)+' '+esc(x.unit)+'</small></td><td>'+(link?'<a href="'+link+'" target="_blank" rel="noopener">'+esc(x.product)+'</a>':esc(x.product))+(x.package_size?'<small>'+esc(x.package_size)+' · '+eur(x.package_price)+'</small>':'')+(x.package_conversion?'<small class="assumption-note">'+esc(x.package_conversion)+'</small>':'')+(x.price_proxy?'<small class="assumption-note">Prijsproxy; zie aannames</small>':'')+(a?'<small class="offer-indicator">'+(x.scenario_offer?'Indicatief productalternatief · ':'')+esc(a.discount||'Actie')+' · '+(a.multi_buy_quantity&&Number.isFinite(a.multi_buy_price)?esc(a.multi_buy_quantity)+' voor '+eur(a.multi_buy_price):Number.isFinite(a.price)?eur(a.price):'Prijs onbekend')+' · t/m '+esc(a.valid_until)+(a.card_required?' · klantenkaart nodig':'')+'</small>':'')+'</td><td>'+eur(x.used_cost)+'</td><td>'+eur(x.cash_cost)+(Number.isFinite(x.packages)?'<small>'+x.packages+' verpakking(en) · '+fmt(x.leftover)+' '+esc(x.unit)+' over</small>':'')+'</td></tr>';
  }).join('')+'</tbody></table></div><p class="sub">Regelbedragen zijn afgerond; de totaalraming wordt berekend uit onafgeronde kosten.</p>':'';
  const assumptions=(e?.assumptions||[]);
  const normRows=assumptions.map(a=>'<li><b>'+esc(a.ingredient)+'</b> → ≈ '+fmt(a.quantity)+' '+esc(a.unit)+'. '+esc(a.note)+(url(a.source)?' <a href="'+url(a.source)+'" target="_blank" rel="noopener">Bron normgewicht</a>':'')+'</li>').join('');
