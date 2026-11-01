@@ -208,7 +208,7 @@ De Receptenstudio leest de al door `scripts/sync_weekdeals_hellofresh.py` ingele
 ingrediëntgroepen (zoals aardappelen, spinazie, kikkererwten, broccoli en kipfilet)
 met *kandidaatproducten* uit de juiste voedselcategorie.
 
-De lijst wordt gerangschikt naar het **aantal unieke HelloFresh-recepten waarin
+De lijst wordt gerangschikt naar het **aantal unieke recepten uit beide collecties waarin
 een ingrediënt voorkomt**, niet naar gerapporteerde kortingspercentages. Per
 ingrediëntgroep zijn supermarkt, product, bronprijs, verpakking, einddatum,
 eventuele klantenkaart-/bundelwaarschuwing en links naar de productpagina zichtbaar.
@@ -230,3 +230,27 @@ klantenkaartprijs levert zonder passende hoeveelheden, varianten en voorwaarden
 geen bewezen besparing. Tests: `npm test`, inclusief
 `tests/test_weekdeals_relevance.cjs` en `tests/test_recipe_ui.cjs`.
 
+
+## Gebruik van de complete receptbibliotheek
+
+De gepubliceerde bronindex bevat 225 HelloFresh-receptrecords met originele PDF en
+504 Plated-receptrecords (waarvan twee titels dubbel). De algemene bibliotheek
+toont beide collecties standaard. De snelle zoekindex loopt over **titels en
+herkende ingrediënten**, ondersteunt meerdere zoekwoorden met EN-logica en
+biedt Nederlandse/Engelse equivalenten (bijvoorbeeld kip/chicken en
+aardappel/potato). Een schakelaar beperkt de zoekopdracht tot ingrediënten.
+
+De Plated-ingrediënten blijven OCR- of vertaalgegevens die niet volledig handmatig
+zijn bevestigd. Een titel zonder herkende ingrediënten blijft op titel vindbaar,
+maar wordt niet kunstmatig als ingrediëntmatch aangemerkt. Het aantal werkelijk
+op ingrediënten doorzoekbare recepten wordt **dynamisch op de pagina getoond**
+na het laden van de beide collecties. Prijsverificatie is een afzonderlijk
+proces; ongetoetste Plated-records krijgen geen verzonnen kassabonprijs.
+
+Bovenaan staan compacte selecties **Groente, Vlees, Vega, Vis, Zuivel en Basis**.
+Deze tonen mogelijke productacties vanuit de bestaande Weekdeals-publicatie,
+gesorteerd op de frequentie van bijbehorende ingrediënten in de bibliotheek.
+Met één klik worden de bijpassende receptkaarten gefilterd. Geen van deze
+matches wordt op basis van alleen een productnaam tot gegarandeerde besparing
+verklaard. Bronfeed te oud betekent dat het categorieoverzicht geen actuele
+deals toont, zonder invloed op de receptbibliotheek.
