@@ -1,0 +1,67 @@
+name: Audit complete recipe library (no OCR certification)
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit_recipe_library.py"
+      - "tests/test_audit_recipe_library.py"
+      - "recipes_extracted.json"
+      - "plated_release_review_queue.json"
+      - "plated_nl_catalog.json"
+      - "hellofresh/preview_manifest.json"
+      - "hellofresh/plated_preview_manifest.json"
+      - ".github/workflows/library-source-audit.yml"
+  schedule:
+    - cron: "20 8 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: recipe-library-source-audit
+  cancel-in-progress: false
+jobs:
+  structural-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regression tests for audit safety
+        run: PYTHONPATH=. python -m unittest discover -s tests -p "test_audit_recipe_library.py" -v
+      - name: Examine all source records, ingredient labels, quantities and original cards
+        run: python scripts/audit_recipe_library.py
+      - name: Confirm full-index coverage; no source record silently disappears
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open("hellofresh/library_source_audit.json", encoding="utf-8"))
+          s=d["summary"]
+          assert s["records_audited"] == len(d["records"])
+          assert s["by_source"]["HelloFresh"] >= 225
+          assert s["by_source"]["Plated"] >= 500
+          assert s["records_audited"] >= 725
+          assert s["human_source_review_confirmed"] <= s["records_audited"]
+          print("Entire source index audited:", s)
+          PY
+      - name: Publish the factual report without modifying recipe data
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp hellofresh/library_source_audit.json "$RUNNER_TEMP/library_source_audit.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -f main
+            git reset --hard origin/main
+            cp "$RUNNER_TEMP/library_source_audit.json" hellofresh/library_source_audit.json
+            git add hellofresh/library_source_audit.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Update complete recipe source audit [skip ci]"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1

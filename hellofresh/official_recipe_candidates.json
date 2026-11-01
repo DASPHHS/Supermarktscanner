@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "source": "HelloFresh Nederland (officiële website)",
+  "match_policy": "title_candidate_only; ingredients, portion quantities and recipe edition NOT verified",
+  "checked_date": "2026-11-01",
+  "candidates": {
+    "Kipfilet in mosterdroomsaus": [
+      {
+        "title": "Kipfilet in mosterdroomsaus",
+        "subtitle": "met gebakken aardappelen en courgette",
+        "url": "https://www.hellofresh.nl/recipes/kipfilet-in-mosterdroomsaus-65a689facbafa858007b4d08"
+      }
+    ],
+    "Schnitzel met knoflook-gemberrijst": [
+      {
+        "title": "Schnitzel met knoflook-gemberrijst",
+        "subtitle": "met teriyakimayonaise en spitskool-wortelsalade",
+        "url": "https://www.hellofresh.nl/recipes/schnitzel-met-knoflook-gemberrijst-6311cb3128a4b6cde308087a"
+      },
+      {
+        "title": "Schnitzel met knoflook-gemberrijst",
+        "subtitle": "met zoete Aziatische saus, bosui en knapperige koolsla",
+        "url": "https://www.hellofresh.nl/recipes/schnitzel-met-knoflook-gemberrijst-65f991ba473c4f42771d07c0"
+      },
+      {
+        "title": "Schnitzel met knoflook-gemberrijst",
+        "subtitle": "met teriyakimayonaise en wittekool-wortelsalade",
+        "url": "https://www.hellofresh.nl/recipes/schnitzel-met-knoflook-gemberrijst-63c841f86ab9cacaa3738d06"
+      }
+    ]
+  },
+  "disclaimer": "Bronpagina's zijn gevonden en per titel gegroepeerd; geen automatische gelijkstelling van receptvarianten, ingrediënten of 2-personenhoeveelheden. Plated-recepten zijn niet van HelloFresh."
+}
