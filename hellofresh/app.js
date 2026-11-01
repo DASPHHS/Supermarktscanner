@@ -27,7 +27,7 @@ function hfreshDetail(r){
  (ext?'<p><a class="hfresh-visit" href="'+esc(ext.url)+'" target="_blank" rel="noopener noreferrer">Open de gekoppelde HFresh-receptpagina</a>'+
  (Number.isInteger(ext.total_time)?' · '+ext.total_time+' min volgens HFresh':'')+'</p><p class="sub">'+source+'. Dezelfde titel garandeert niet dezelfde receptvariant. Vergelijk ingrediënten en bijgerechten met de originele PDF.</p>'+(ext.headline?'<p class="sub">HFresh-ondertitel: '+esc(ext.headline)+'</p>':''):
  '<p class="sub">Voor dit recept is nog geen HFresh-pagina gekoppeld. Dit verandert niets aan de prijsberekening.</p>')+
- '<p><a class="hfresh-search" href="'+esc(HFreshLinks.searchUrl(displayTitle(r)))+'" target="_blank" rel="noopener noreferrer">Zoek dit recept direct in HFresh</a></p>'+
+ '<p><a class="official-visit" href="https://www.hellofresh.nl/recipes" target="_blank" rel="noopener noreferrer">Open de officiële HelloFresh-receptenbibliotheek</a></p>'+ '<p class="sub">De onofficiële HFresh-database werd in 2026 beëindigd. Bestaande links en HFresh-zoekopdrachten kunnen daardoor onbereikbaar zijn.</p>'+ '<p><a class="hfresh-search" href="'+esc(HFreshLinks.searchUrl(displayTitle(r)))+'" target="_blank" rel="noopener noreferrer">Probeer HFresh-zoekfunctie (mogelijk offline)</a></p>'+
  '<label for="hfresh-recipe-title">Zoektekst</label><input id="hfresh-recipe-title" class="field" readonly value="'+esc(displayTitle(r))+'">'+
  '<div class="hfresh-actions"><button id="hfresh-copy" type="button" class="action">Kopieer recepttitel</button></div>'+ 
  '<label for="hfresh-link-input">Plak hier de URL van de gevonden HFresh-receptpagina</label>'+
@@ -237,7 +237,7 @@ $('cards').innerHTML=rows.slice(0,state.top?10:state.shown).map(r=>{
  const art=state.previews[r.id]?.front?'<img class="real-card-preview" loading="lazy" alt="Originele bronkaart van '+esc(displayTitle(r))+'" src="'+esc(state.previews[r.id].front)+'">':'<span>'+emoji[k]+'</span>';
  return '<article class="card"><div class="art '+k+'">'+art+'<span class="tag">'+esc(dish(r))+'</span></div>'+
  '<div class="content"><div class="meta">'+meta+'</div><h3>'+esc(displayTitle(r))+'</h3>'+
- '<div class="minor">'+esc(displayIngredients(r).slice(0,3).map(i=>i.name).join(' · ')||'Ingrediëntencontrole vereist')+'</div>'+ (r.source==='HelloFresh'?'<p class="hfresh-quick"><a href="'+esc(hfreshLink(r)?.url||HFreshLinks.searchUrl(displayTitle(r)))+'" target="_blank" rel="noopener noreferrer">'+(hfreshLink(r)?'Open HFresh-verwijzing (variant controleren)':'Zoek dit recept bij HFresh')+'</a></p>':'')+
+ '<div class="minor">'+esc(displayIngredients(r).slice(0,3).map(i=>i.name).join(' · ')||'Ingrediëntencontrole vereist')+'</div>'+ (r.source==='HelloFresh'?'<p class="hfresh-quick"><a href="https://www.hellofresh.nl/recipes" target="_blank" rel="noopener noreferrer">Officieel HelloFresh-kookboek</a>'+(hfreshLink(r)?' · <a href="'+esc(hfreshLink(r).url)+'" target="_blank" rel="noopener noreferrer">HFresh-link (mogelijk offline)</a>':'')+'</p>':'')+
  '<div class="main-cost '+priceClass+'"><strong>'+costLabel+'</strong><small>'+esc(costInfo)+'</small>'+(est?.scenario_offer?'<small>Met doorgerekend actiescenario · indicatief kassabonverschil '+eur(selectedStoreOption(r).savings)+'</small>':'')+'</div>'+
  cardOfferBlock(r)+
  '<div class="foot"><button type="button" class="action" data-id="'+esc(r.id)+'">Prijs &amp; acties bekijken →</button></div></div></article>';
