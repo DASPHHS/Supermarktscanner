@@ -20,6 +20,11 @@ function relevantOfferProduct(ingredient,product){
  // Prepared dishes, baby food, snacks, toiletries and drinks are not single cooking ingredients.
  const disallowed=/\b(olvarit|organix|ella|nestle|kleine keuken|knijpfruit|baby|smoothie|groentesmoothie|groentesap|vruchtensap|fruitjes|fruitsap|versgeperst|limonade|snoep|chips|drop|koek|koeken|krakelingen|spritsen|cake|cakejes|poffertjes|wraps|wrap|pinsa|pizza|quiche|verspakket|maaltijd|ovenschotel|soep|pureersoep|saus|pastasaus|salade|salademix|saladekit|broodbeleg|beleg|hummus|hoemoes|pesto|chutney|kant en klaar|knabbels|sticks|puffs|snack|diner|kipshoarma|rijst rondjes|botermix|kruidenboter|spreads|dip|boter|kruidenmix)\b/;
  if(disallowed.test(p))return false;
+ // Explicitly reject compound names that do not have word boundaries around the food form.
+ // Examples: 'tomatensoep', 'knoflookmarinade', 'borrelbrood', 'kipfilet Toscana'.
+ if(/(soep|salade|marinade|borrelbrood|knijpfruit|smoothie|snoep|chips|snack|puffs|sticks|kantklaar|pastasaus|maaltijd|verspakket|kruidenboter|ovenschotel|pinsa|quiche)/.test(p))return false;
+ if(/\b(unox|knorr|olvarit|organix|nestle|ella|ch(i|e)o|doritos|lays|lay s|vivera vegetarische)\b/.test(p))return false;
+ if(/\b(spinazie kaas filet|zalm pangasius garnalen|vegetarische spinazie)\b/.test(p))return false;
  // Mixtures are not interchangeable with a single ingredient; recipes may need the pure food.
  if(/\b(mix|melange|combinatie|cocktail|kruiden|met|en)\b/.test(p)&&!/\b(tonijn in (olijf)?olie|tonijn in water)\b/.test(p))return false;
  // Different preparation, preservation or flavours may change the recipe.
