@@ -109,6 +109,83 @@ function selectRecord(records,cards=false,basis='used'){
  const priced=present.filter(p=>price(p)!==null);
  return priced.length?priced.sort((a,b)=>price(a)-price(b)||a.store.localeCompare(b.store))[0]:present.sort((a,b)=>(estimateFor(b,cards)?.covered_ingredients||0)-(estimateFor(a,cards)?.covered_ingredients||0))[0];
 }
+// Conservative what-if checkout: compare comparable loose-food SKU alternatives from a
+// current, product-level promotion feed. Not an independently confirmed shelf price.
+function offerPackageAmount(raw){
+ if(typeof raw!=='string')return null;
+ const m=raw.trim().toLowerCase().replace(',','.').match(/^(\d+(?:\.\d+)?)\s*(kg|g|gr|gram|ml|l|liter|milliliter)$/);
+ if(!m)return null;
+ let n=Number(m[1]);if(!Number.isFinite(n)||n<=0)return null;
+ return {amount:n*(m[2]==='kg'||m[2]==='l'||m[2]==='liter'?1000:1),
+  unit:['ml','l','liter','milliliter'].includes(m[2])?'ml':'g'};
+}
+function offerRankingTier(complete,applied,matchingStoreCandidate){
+ // A lead at another store is NOT a saving on the chosen store's checkout.
+ if(!complete)return 3;
+ if(applied)return 0;
+ if(matchingStoreCandidate)return 1;
+ return 2;
+}
+function estimateWithOfferAlternatives(estimate,shopDeals=[],opts={}){
+ if(estimatePrice(estimate)===null||!Number.isFinite(estimate.whole_packages_eur))
+  return {estimate,changes:[],totalSavings:0};
+ const today=opts.today||dayFormat.format(new Date());
+ const cards=opts.cards===true;
+ const matches=typeof opts.matches==='function'?opts.matches:null;
+ let changes=[],cashDelta=0,usedDelta=0;
+ const lines=estimate.lines.map(line=>{
+  if(line.action||line.price_proxy||!Array.isArray(line.ingredients)||!line.ingredients.length||
+    !Number.isFinite(line.quantity)||line.quantity<=0||!['g','ml'].includes(line.unit)||
+    !Number.isFinite(line.cash_cost)||!Number.isFinite(line.used_cost)||!Number.isFinite(line.packages))return line;
+  const candidates=matches?line.ingredients.flatMap(i=>matches(i)):
+   shopDeals.filter(d=>line.ingredients.some(i=>relevantOfferProduct(i,d.name)));
+  let winner=null;
+  for(const d of candidates){
+   if(!activeOffer(d,today)||d.personal_offer===true||d.loyalty_warning===true||
+      d.card_required===true&&!cards)continue;
+   if(!Number.isFinite(d.price)||d.price<=0||
+      !Number.isFinite(d.original_price)||d.original_price<=d.price)continue;
+   // The compact feed lacks a reliable total amount payable for multi-buy deals.
+   if(Number.isFinite(d.multi_buy_quantity)&&d.multi_buy_quantity>1)continue;
+   if(!['percentage','fixed_amount','fixed_price',null,''].includes(d.promotion_type||null))continue;
+   if(!line.ingredients.some(i=>relevantOfferProduct(i,d.name)))continue;
+   const size=offerPackageAmount(d.quantity);
+   if(!size||size.unit!==line.unit)continue;
+   const packs=Math.ceil((line.quantity-1e-9)/size.amount);
+   if(!Number.isSafeInteger(packs)||packs<=0||packs>30)continue;
+   const cash=Number((packs*d.price).toFixed(4));
+   const use=Number((line.quantity/size.amount*d.price).toFixed(4));
+   const saving=line.cash_cost-cash;
+   if(saving<=0.01||!Number.isFinite(use)||use<0)continue;
+   if(!winner||cash<winner.cash-0.0001)
+    winner={deal:d,cash,use,packs,amount:size.amount,saving};
+  }
+  if(!winner)return line;
+  const d=winner.deal;
+  cashDelta+=winner.cash-line.cash_cost;
+  usedDelta+=winner.use-line.used_cost;
+  changes.push({
+   ingredients:line.ingredients.slice(),from:line.product,to:d.name,store:opts.store||null,
+   regularCash:line.cash_cost,offerCash:winner.cash,saving:winner.saving,
+   quantity:line.quantity,unit:line.unit,packages:winner.packs,packageSize:d.quantity,
+   deal:d
+  });
+  return {...line,product:d.name,link:d.product_url||null,package_size:d.quantity,
+   package_price:d.price,packages:winner.packs,cash_cost:winner.cash,used_cost:winner.use,
+   leftover:Math.max(0,winner.packs*winner.amount-line.quantity),
+   price_source:'Weekdeals actiescenario (indicatief)',
+   action:{...d,name:d.name},scenario_offer:true,price_proxy:false};
+ });
+ if(!changes.length)return {estimate,changes:[],totalSavings:0};
+ const whole=Math.max(0,Number((estimate.whole_packages_eur+cashDelta).toFixed(2)));
+ const used=Math.max(0,Number((estimate.used_total_eur+usedDelta).toFixed(2)));
+ const optimized={...estimate,lines,whole_packages_eur:whole,used_total_eur:used,
+  per_person_eur:Number((used/2).toFixed(2)),scenario_offer:true,
+  scenario_original_whole_eur:estimate.whole_packages_eur,
+  scenario_savings_eur:Number((estimate.whole_packages_eur-whole).toFixed(2)),
+  actions_applied:(estimate.actions_applied||0)+changes.length};
+ return {estimate:optimized,changes,totalSavings:optimized.scenario_savings_eur};
+}
 function originalPdfUrl(path){
  if(typeof path!=='string'||! /^(?:previews|plated-previews)\/[a-zA-Z0-9_-]+\.pdf$/.test(path))return null;
  return 'https://raw.githubusercontent.com/DASPHHS/Supermarktscanner/main/hellofresh/'+path;
@@ -124,7 +201,7 @@ function protein(title,labels=[]){
  // Main protein in the title takes precedence over chicken stock in a beef dish.
  return classify(norm(title))||classify(norm(labels.filter(x=>!/(bouillon|stock|broth)/i.test(x)).join(' ')))||'onbekend';
 }
-const api={norm,offerMatches,relevantOfferProduct,validActionLine,appliedActionLines,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,rankingPrice,originalPdfUrl};
+const api={norm,offerMatches,relevantOfferProduct,validActionLine,appliedActionLines,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,rankingPrice,offerPackageAmount,offerRankingTier,estimateWithOfferAlternatives,originalPdfUrl};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;
 else root.RecipeLogic=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
