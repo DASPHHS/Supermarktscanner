@@ -20,7 +20,7 @@ test('rejects dated/incomplete feeds and never silently treats old products as c
  assert.equal(L.build(r,source({source_url:'https://evil.test/weekdeals/'}),NOW).status,'unavailable');
 });
 
-test('matched ingredients count distinct HelloFresh recipes and exclude Plated',()=>{
+test('matched ingredients count distinct recipes from HelloFresh and Plated',()=>{
  const recipes=[
   recipe('1','Aardappelen met kikkererwten',['Aardappelen (g)','Aardappelen (g)','Kikkererwten (blik)']),
   recipe('2','Salade aardappelen',['Aardappelen (g)','Ui (stuk(s))']),
@@ -32,10 +32,11 @@ test('matched ingredients count distinct HelloFresh recipes and exclude Plated',
  }});
  const result=L.build(recipes,feed,NOW);
  assert.equal(result.status,'ok');
- assert.equal(result.recipe_count,2);
- assert.equal(result.families.find(f=>f.id==='aardappel').recipe_count,2);
+ assert.equal(result.recipe_count,3);
+ assert.equal(result.families.find(f=>f.id==='aardappel').recipe_count,3);
  assert.equal(result.families.find(f=>f.id==='kikkererwten').recipe_count,1);
  assert.deepEqual(result.byRecipe['1'].sort(),['aardappel','kikkererwten']);
+ assert.ok(result.byRecipe['3'].includes('aardappel'),'Plated also receives a related deal category');
 });
 
 test('rejects chips, soup, wraps, ready meals, combinations and untrusted links',()=>{
