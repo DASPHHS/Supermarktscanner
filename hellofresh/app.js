@@ -225,6 +225,7 @@ function renderRelevance(){
  if(!cards||!status||!more)return;
  const data=state.relevance;
  if(!data||data.status!=='ok'){
+  state.relevanceFamily=null;
   status.textContent='Nog geen actuele, volledige Weekdeals-ingrediëntvergelijking. De bestaande receptprijzen blijven beschikbaar.';
   cards.innerHTML='';more.hidden=true;return;
  }
@@ -236,7 +237,7 @@ function renderRelevance(){
  const shown=matches.slice(0,state.relevanceShown);
  const stamp=new Date(data.updated_at_utc).toLocaleString('nl-NL',{timeZone:'Europe/Amsterdam',dateStyle:'short',timeStyle:'short'});
  status.textContent=matches.length+' ingrediëntgroepen met mogelijke acties · '+data.recipe_count+
-  ' HelloFresh-recepten gecontroleerd · bron '+stamp+'. Alleen productkandidaten, geen geverifieerde besparingen.';
+  ' HelloFresh-recepten doorzocht · bron '+stamp+'. Alleen productkandidaten, geen geverifieerde besparingen.';
  cards.innerHTML=shown.map(f=>{
   let picked=[];
   if(shop==='all'){
