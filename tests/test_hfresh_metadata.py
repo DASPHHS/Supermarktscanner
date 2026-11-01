@@ -2,7 +2,7 @@ import io
 import json
 import unittest
 from unittest.mock import patch
-from hfresh_metadata import build_crossrefs, fetch_catalog, safe_recipe_url, title_key
+from hfresh_metadata import build_crossrefs, fetch_titles, incremental_batch, safe_recipe_url, title_key
 
 
 class HFreshMetadataTests(unittest.TestCase):
@@ -40,26 +40,36 @@ class HFreshMetadataTests(unittest.TestCase):
         self.assertIsNone(safe_recipe_url("https://hfresh.info/nl-NL/recipes/x-1?token=secret"))
         self.assertEqual(title_key("Héékfilet à la meunière"), "heekfilet a la meuniere")
 
-    def test_api_uses_meta_to_fetch_every_page(self):
+    def test_api_limits_searches_and_checks_metadata(self):
         urls = []
         def fake_open(req, timeout):
             urls.append(req.full_url)
             page = len(urls)
             data = {"data": [{"id": page, "name": f"Recipe {page}",
                               "url": f"https://hfresh.info/nl-NL/recipes/recipe-{page}"}],
-                    "meta": {"current_page": page, "last_page": 2}}
+                    "meta": {"current_page": 1, "last_page": 1}}
             return io.BytesIO(json.dumps(data).encode("utf-8"))
         with patch("hfresh_metadata.urllib.request.urlopen", side_effect=fake_open):
-            found = fetch_catalog("https://api.hfresh.info/nl-NL/recipes", "test-token", pause_seconds=0)
+            found = fetch_titles("https://api.hfresh.info/nl-NL/recipes", "test-token", ["Recipe 1", "Recipe 2"], pause_seconds=0)
         self.assertEqual([r["id"] for r in found], [1, 2])
         self.assertIn("perPage=200", urls[0])
-        self.assertIn("page=2", urls[1])
+        self.assertIn("search=Recipe+2", urls[1])
 
     def test_api_missing_page_metadata_rejected(self):
         response = io.BytesIO(json.dumps({"data": []}).encode())
         with patch("hfresh_metadata.urllib.request.urlopen", return_value=response):
             with self.assertRaisesRegex(ValueError, "paginatie"):
-                fetch_catalog("https://api.hfresh.info/nl-NL/recipes", "token")
+                fetch_titles("https://api.hfresh.info/nl-NL/recipes", "token", ["Recipe"], pause_seconds=0)
+
+    def test_rotating_batch_is_bounded_and_resumable(self):
+        recipes = [{"id": i, "title_extracted": f"Recept {i}"} for i in range(4)]
+        first, cursor = incremental_batch(recipes, {}, 2)
+        second, end = incremental_batch(recipes, {"scan_cursor": cursor}, 1)
+        self.assertEqual([r["id"] for r in first], [1, 2])
+        self.assertEqual([r["id"] for r in second], [3])
+        self.assertEqual(end, 0)
+        with self.assertRaisesRegex(ValueError, "Batchgrootte"):
+            incremental_batch(recipes, {}, 26)
 
     def test_empty_is_not_verification(self):
         result = build_crossrefs([], [])
