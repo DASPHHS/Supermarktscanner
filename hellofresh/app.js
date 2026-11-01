@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const eur=n=>new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR'}).format(n);
-const state={recipes:[],extra:[],prices:new Map(),deals:{},dealsMeta:{},weekdealsFeed:null,relevance:null,relevanceShown:8,relevanceFamily:null,relevanceCategory:null,searchIndex:new Map(),offerCache:new Map(),ingredientDealCache:new Map(),storeCache:new Map(),priceDate:null,previews:{},estimates:{},health:{},previewsProgress:{},quality:{},nlCatalog:{},hfreshMatches:{},hfreshLocal:{},source:'Alle',store:'Voordeligste',cards:false,basis:'cash',selectedId:null,kind:'alle',only:'all',sort:'offers',top:false,shown:36,loading:true};
+const state={recipes:[],extra:[],prices:new Map(),deals:{},dealsMeta:{},weekdealsFeed:null,relevance:null,relevanceShown:8,relevanceFamily:null,relevanceCategory:null,searchIndex:new Map(),offerCache:new Map(),ingredientDealCache:new Map(),storeCache:new Map(),priceDate:null,previews:{},estimates:{},health:{},previewsProgress:{},quality:{},nlCatalog:{},hfreshMatches:{},hfreshLocal:{},officialCatalog:{},sourceAudit:null,sourceAuditById:new Map(),source:'Alle',store:'Voordeligste',cards:false,basis:'cash',selectedId:null,kind:'alle',only:'all',sort:'offers',top:false,shown:36,loading:true};
 const kinds={'alle':'Alles','vega':'Vega','kip':'Kip','vis':'Vis','vlees':'Vlees','onbekend':'Controleren'};
 function ingredients(r){return Array.isArray(r.ingredients_4p)?r.ingredients_4p:[]}
 function dutch(r){return r.source==='Plated' ? state.nlCatalog[r.source_identity||r.id.replace(/^plated-release-/,'')]||null : null}
@@ -37,6 +37,58 @@ function hfreshDetail(r){
  '<p class="sub" id="hfresh-link-message" role="status">Alleen links op het domein hfresh.info met een Nederlandse receptpagina zijn toegestaan. Lokale koppelingen zijn geen verificatie.</p>'+
  '</section>';
 }
+
+const auditIssues={
+ title_missing:'Geen bruikbare titel',
+ identity_missing:'Receptidentificatie ontbreekt',
+ original_card_missing:'Originele bronkaart of download ontbreekt',
+ ingredients_missing:'Ingrediënten ontbreken in de extractie',
+ ingredient_names_incomplete:'Niet alle ingrediëntnamen zijn herkend',
+ quantities_incomplete:'Hoeveelheden ontbreken of zijn onduidelijk',
+ portions_unconfirmed:'Bronporties zijn nog niet bevestigd',
+ duplicate_title_variant:'Titel komt vaker voor; receptvariant controleren',
+ human_source_review_required:'Handmatige vergelijking van de originele kaart vereist'
+};
+function auditEntry(r){return state.sourceAuditById.get(String(r.id))||null;}
+function renderAuditSummary(){
+ const el=$('source-audit-status');if(!el)return;
+ const a=state.sourceAudit,summary=a?.summary;
+ if(!summary){el.textContent='Het volledige broncontroleverslag is nog niet gepubliceerd. Recepten blijven voorlopig doorzoekbaar.';return;}
+ const timestamp=new Date(a.generated_at_utc);
+ const updated=Number.isFinite(timestamp.getTime())?timestamp.toLocaleDateString('nl-NL',{timeZone:'Europe/Amsterdam'}):'datum onbekend';
+ el.textContent='Automatisch gescand: '+summary.records_audited+' bronrecords en '+
+  summary.ingredient_rows_inspected+' ingrediëntenregels (rapport '+updated+'). '+
+  summary.with_ingredient_rows+' records met ingrediëntregels, '+
+  summary.quantity_rows_structurally_complete+' met alle hoeveelheidsvelden. '+
+  summary.human_source_review_confirmed+' handmatig als bronvergelijking bevestigd; '+
+  summary.require_human_review+' nog niet bevestigd. Een volledige hoeveelheidstabel bewijst geen correcte OCR.';
+}
+function sourceAuditDetails(r){
+ const entry=auditEntry(r);
+ if(!entry)return '<section class="norm-section"><h3>Controle van recept en ingrediënten</h3>'+
+  '<p class="sub">Een gepubliceerd broncontroleverslag voor dit recept ontbreekt nog. Geen verificatie geclaimd.</p></section>';
+ const confirmed=entry.source_review_confirmed===true;
+ const issues=(entry.issues||[]).map(k=>auditIssues[k]||k).filter(x=>x!=='Handmatige vergelijking van de originele kaart vereist');
+ return '<section class="norm-section" id="recipe-audit-detail"><h3>Controle van recept en ingrediënten</h3>'+
+ '<p class="sub"><strong>'+(confirmed?'Handmatig bevestigd in de bronregistratie':'Automatisch gecontroleerd – handmatige bronvergelijking nog nodig')+'</strong></p>'+
+ '<p class="sub">Gecontroleerde velden: titel, originele kaart, '+entry.ingredient_rows+
+ ' ingrediëntregels, '+entry.ingredient_names_present+' namen en '+entry.quantity_rows_present+
+ ' ingevulde hoeveelheden. Aanwezigheid van gegevens betekent niet dat ze juist zijn overgenomen.</p>'+
+ (issues.length?'<ul>'+issues.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+
+ '<p><a href="./source-audit.html" target="_blank" rel="noopener noreferrer">Bekijk de volledige broncontrolelijst</a></p></section>';
+}
+function officialCandidatesDetail(r){
+ if(r.source!=='HelloFresh')return '';
+ const candidates=OfficialRecipeSource.candidatesFor(r,state.officialCatalog);
+ if(!candidates.length)return '<section class="norm-section"><h3>Officiële HelloFresh als controlebron</h3>'+
+ '<p><a href="https://www.hellofresh.nl/recipes" target="_blank" rel="noopener noreferrer">Zoek dit gerecht op de officiële HelloFresh-receptenwebsite</a></p>'+
+ '<p class="sub">De originele PDF is leidend. De officiële site heeft niet voor elk archiefrecept een bevestigd overeenkomende versie.</p></section>';
+ return '<section class="norm-section" id="official-candidates"><h3>Mogelijke versies op HelloFresh.nl</h3>'+
+ '<p class="sub">Op titel gevonden officiële pagina’s. Geen van deze links is een bevestiging van dezelfde versie of dezelfde hoeveelheden. Controleer ingrediënten en porties naast de originele PDF.</p>'+
+ '<ul>'+candidates.map(c=>'<li><a class="official-candidate" href="'+esc(c.url)+
+ '" target="_blank" rel="noopener noreferrer">'+esc(c.title)+(c.subtitle?' – '+esc(c.subtitle):'')+'</a> <small>(variant nog niet bevestigd)</small></li>').join('')+'</ul></section>';
+}
+
 function translatedIngredients(r){const nl=dutch(r);return nl?.ingredients_nl?.length?nl.ingredients_nl:null}
 function displayIngredients(r){const nl=translatedIngredients(r);return nl?nl.map(i=>({name:i.name_nl,quantity:i.quantity_display_nl,original:i.original_name,confidence:i.translation_status,conversion:i.conversion_status})):(r.ingredients_2p||ingredients(r)).map(i=>({name:i.ingredient,quantity:r.ingredients_2p?i.quantity_2p_source:i.quantity_4p_source,original:i.ingredient,confidence:'source'}))}
 
@@ -412,8 +464,8 @@ function details(id){
  const checkjebonLink=comparisonList.length?'https://www.checkjebon.nl/#'+encodeURIComponent(comparisonList.join('\n')):null;
  const outsidePriceCheck=checkjebonLink?'<section class="norm-section"><h3>Externe controle: Checkjebon</h3><p><a href="'+esc(checkjebonLink)+'" target="_blank" rel="noopener noreferrer">Vergelijk de ingrediëntenlijst bij AH en Jumbo in Checkjebon</a></p><p class="sub">Checkjebon gebruikt eigen producten en fuzzy matching. Controleer de juiste varianten en hoeveelheden; overgenomen prijzen zijn niet gevalideerd in deze receptprijs. Lidl wordt niet ondersteund door Checkjebon.</p></section>':'';
  const portions=r.ingredients_2p?2:4;
- const external=hfreshDetail(r),relevantDeals=relevanceDetail(r);
- $('dialog').innerHTML='<button type="button" class="close" id="close" aria-label="Sluit recept">×</button><div class="meta">'+esc(r.source||'HelloFresh')+' · '+esc(protein(r))+'</div><h2>'+esc(displayTitle(r))+'</h2><p class="quality-label">Indicatieve prijsraming · twee personen · '+esc(shop)+'</p>' +total+outsidePriceCheck+external+relevantDeals+'<h3>Vergelijk de winkels</h3><div class="price-table-wrap"><table class="price-table"><thead><tr><th>Winkel</th><th>Verbruik, 2 porties</th><th>Gekozen verpakkingen</th><th>Status</th></tr></thead><tbody>'+comparison+'</tbody></table></div><p class="sub">Elke raming gebruikt producten uit één winkel. Het kassabedrag hoort bij de getoonde productkeuzes; er is geen voorraad verondersteld. Voordeelpakken verlagen de verbruikskosten alleen als je de rest ook gebruikt. Kaartacties: '+(state.cards?'ingeschakeld':'uitgeschakeld')+'.</p>'+detailOfferBlock(r)+gaps+lineTable+norms+'<h3>Bronhoeveelheden ('+portions+' porties)</h3><ul>'+displayIngredients(r).map(i=>'<li>'+esc(i.quantity)+' '+esc(i.name)+'</li>').join('')+'</ul>'+(!r.table_repair?'<p class="notice">Deze bronkolom doorstaat de automatische tabelcontrole nog niet. Er wordt geen totaalraming van gemaakt.</p>':'<p class="sub">Herstelde bronkolom; de oorspronkelijke kaart blijft leidend. Een prijsraming is geen handmatig gecertificeerde receptprijs.</p>')+src+'<p class="sub">Prijsnormen: '+esc(e?.policy_version||'nog niet beschikbaar')+'. Water, energie, bezorging en reiskosten vallen buiten deze vergelijking. Filiaalprijzen kunnen afwijken.</p>';
+ const external=hfreshDetail(r),relevantDeals=relevanceDetail(r),review=sourceAuditDetails(r),official=officialCandidatesDetail(r);
+ $('dialog').innerHTML='<button type="button" class="close" id="close" aria-label="Sluit recept">×</button><div class="meta">'+esc(r.source||'HelloFresh')+' · '+esc(protein(r))+'</div><h2>'+esc(displayTitle(r))+'</h2><p class="quality-label">Indicatieve prijsraming · twee personen · '+esc(shop)+'</p>'  +total+outsidePriceCheck+review+official+external+relevantDeals+'<h3>Vergelijk de winkels</h3><div class="price-table-wrap"><table class="price-table"><thead><tr><th>Winkel</th><th>Verbruik, 2 porties</th><th>Gekozen verpakkingen</th><th>Status</th></tr></thead><tbody>'+comparison+'</tbody></table></div><p class="sub">Elke raming gebruikt producten uit één winkel. Het kassabedrag hoort bij de getoonde productkeuzes; er is geen voorraad verondersteld. Voordeelpakken verlagen de verbruikskosten alleen als je de rest ook gebruikt. Kaartacties: '+(state.cards?'ingeschakeld':'uitgeschakeld')+'.</p>'+detailOfferBlock(r)+gaps+lineTable+norms+'<h3>Bronhoeveelheden ('+portions+' porties)</h3><ul>'+displayIngredients(r).map(i=>'<li>'+esc(i.quantity)+' '+esc(i.name)+'</li>').join('')+'</ul>'+(!r.table_repair?'<p class="notice">Deze bronkolom doorstaat de automatische tabelcontrole nog niet. Er wordt geen totaalraming van gemaakt.</p>':'<p class="sub">Herstelde bronkolom; de oorspronkelijke kaart blijft leidend. Een prijsraming is geen handmatig gecertificeerde receptprijs.</p>')+src+'<p class="sub">Prijsnormen: '+esc(e?.policy_version||'nog niet beschikbaar')+'. Water, energie, bezorging en reiskosten vallen buiten deze vergelijking. Filiaalprijzen kunnen afwijken.</p>';
  $('modal').classList.add('open');
  $('close').onclick=()=>{$('modal').classList.remove('open');state.selectedId=null;};
  if(r.source==='HelloFresh'){
@@ -486,6 +538,18 @@ function refreshOriginals(){Promise.allSettled([json('./preview_manifest.json'),
 setInterval(refreshOriginals,5*60*1000);
 function refreshPrices(){return json('../recipe_prices.json').then(d=>{const at=new Date(d.fetched_at_utc);if(Date.now()-at.getTime()>=0&&Date.now()-at.getTime()<3*86400000){state.priceDate=at;state.prices=new Map((d.results||[]).map(r=>[r.store+':'+r.recipe_id,r]));resetOfferCaches()}else{state.priceDate=null;state.prices.clear();resetOfferCaches()}render()}).catch(()=>{if(state.priceDate&&Date.now()-state.priceDate.getTime()>=3*86400000){state.priceDate=null;state.prices.clear();resetOfferCaches()}render()})}
 refreshPrices();setInterval(refreshPrices,10*60*1000);
+json('./official_recipe_candidates.json').then(d=>{
+ state.officialCatalog=OfficialRecipeSource.safeCatalog(d);
+ if(state.selectedId&&$('modal').classList.contains('open'))details(String(state.selectedId));
+}).catch(()=>{state.officialCatalog={}});
+json('./library_source_audit.json').then(d=>{
+ if(d.schema_version!==1||!Array.isArray(d.records)||d.records.length!==d.summary?.records_audited)
+  throw Error('Onvolledig controleverslag');
+ state.sourceAudit=d;
+ state.sourceAuditById=new Map(d.records.map(r=>[String(r.id),r]));
+ renderAuditSummary();
+ if(state.selectedId&&$('modal').classList.contains('open'))details(String(state.selectedId));
+}).catch(()=>{state.sourceAudit=null;state.sourceAuditById=new Map();renderAuditSummary();});
 json('./hfresh_matches.json').then(d=>{
  if(d.schema_version!==1||!d.recipe_links||typeof d.recipe_links!=='object')throw Error('Ongeldige bronverwijzingen');
  state.hfreshMatches=HFreshLinks.safeSnapshot(d);
