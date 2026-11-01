@@ -33,7 +33,7 @@ def safe_recipe_url(value: object) -> str | None:
     except ValueError:
         return None
     if (parsed.scheme != "https" or parsed.hostname not in {"hfresh.info", "www.hfresh.info"}
-            or parsed.username or parsed.password or parsed.port
+            or parsed.username or parsed.password or parsed.port or parsed.query or parsed.fragment
             or not re.fullmatch(r"/nl-NL/recipes/[a-z0-9-]+-[0-9]+/?", parsed.path)):
         return None
     return urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
