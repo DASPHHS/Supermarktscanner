@@ -1,0 +1,116 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Controlelijst recepten en ingrediënten · Supermarktscanner</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#203528;background:#f6f8f3}
+*{box-sizing:border-box}body{margin:0}main{max-width:1230px;margin:0 auto;padding:22px}
+h1{font-size:clamp(1.7rem,3vw,2.4rem);margin:8px 0}h2{font-size:1.1rem}p{line-height:1.55}a{color:#176746}
+header{background:#153f2b;color:#fff;padding:24px}header a{color:#e6f6da}.sub{font-size:.89rem;color:#5f7668}
+.panel{background:#fff;border:1px solid #d3dfd0;border-radius:16px;margin:15px 0;padding:20px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:16px 0}
+.stat{padding:15px;border-radius:12px;background:#eff6eb}.stat strong{display:block;font-size:1.5rem}
+.controls{display:grid;grid-template-columns:2fr 1fr 1.5fr;gap:12px;margin:12px 0}.controls label{display:block;font-size:.86rem;font-weight:700}
+input,select{width:100%;padding:12px;margin-top:6px;border:1px solid #aac6ad;border-radius:10px;background:white;font:inherit}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:11px;margin:12px 0}
+.recipe{padding:17px;background:#fff;border:1px solid #d4e1d7;border-radius:13px;overflow-wrap:anywhere}.recipe h3{font-size:1.02rem;margin:0 0 8px}
+.recipe .origin{font-size:.8rem;color:#536858}
+.recipe ul{padding-left:19px;font-size:.86rem}.recipe li{margin:4px 0}.recipe .links{display:flex;flex-wrap:wrap;gap:10px;font-size:.87rem}
+.status{font-weight:700;color:#795019}.status.confirmed{color:#195f3b}
+button{padding:10px 15px;border-radius:10px;border:1px solid #7da68b;background:#e9f3e7;color:#13492f;cursor:pointer;font-weight:700}
+#more[hidden]{display:none}
+@media(max-width:700px){main{padding:12px}.controls{grid-template-columns:1fr}}
+</style></head>
+<body><header><main><p><a href="./">Terug naar de Receptenstudio</a></p><h1>Recepten- en ingrediëntencontrole</h1>
+<p>Volledige technische controlelijst van de eigen HelloFresh- en Plated-archieven. Dit is een audit van gegevensvelden en bronbestanden, geen bewijs dat OCR-tekst of portiehoeveelheden juist zijn.</p></main></header>
+<main><div class="panel">
+<h2>Welke onderdelen zijn gecontroleerd?</h2>
+<p>Per bronrecord: aanwezigheid van titel, identiteit, originele PDF, ingrediëntnamen, hoeveelheidsvelden en bekende porties. Recepten met ontbrekende gegevens worden niet stilzwijgend aangevuld. Voor definitieve bevestiging moet de originele receptkaart visueel worden vergeleken met alle ingrediënten en hoeveelheden; voor HelloFresh kan de officiële site als extra bron worden gebruikt, mits de juiste receptversie vaststaat.</p>
+<p><a href="https://www.hellofresh.nl/recipes" target="_blank" rel="noopener noreferrer">Officiële HelloFresh-recepten</a> · <a href="../PRIJSRAMING_METHODIEK.md" target="_blank" rel="noopener noreferrer">Rekenmethodiek</a></p>
+<div class="stats" id="stats"></div><p class="sub" id="status" role="status">Controlebestand ophalen…</p></div>
+<div class="panel">
+<div class="controls">
+<label>Zoek recept of status<input id="q" type="search" autocomplete="off" placeholder="Bijvoorbeeld schnitzel of ontbrekende ingrediënten"></label>
+<label>Collectie<select id="source"><option value="all">Beide collecties</option><option value="HelloFresh">HelloFresh</option><option value="Plated">Plated</option></select></label>
+<label>Controle<select id="filter"><option value="all">Alle bronrecords</option>
+<option value="unconfirmed">Handmatige bronvergelijking nog nodig</option>
+<option value="missing_ingredients">Ingrediënten ontbreken of onvolledig</option>
+<option value="missing_quantities">Hoeveelheden ontbreken of onvolledig</option>
+<option value="portions_unconfirmed">Porties niet bevestigd</option>
+<option value="original_card_missing">Originele kaart ontbreekt</option>
+<option value="confirmed">Handmatig bevestigd in bronregistratie</option></select></label>
+</div><div id="list" class="list"></div><button id="more" type="button" hidden>Meer recepten</button>
+</div></main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const issues={
+title_missing:'Titel ontbreekt',identity_missing:'Recept-ID ontbreekt',
+original_card_missing:'Originele receptkaart ontbreekt',ingredients_missing:'Ingrediënten ontbreken',
+ingredient_names_incomplete:'Ingrediëntnamen onvolledig',quantities_incomplete:'Hoeveelheden onvolledig',
+portions_unconfirmed:'Porties niet bevestigd',duplicate_title_variant:'Meerdere records met dezelfde titel',
+human_source_review_required:'Visuele vergelijking met originele kaart vereist'
+};
+let records=[],shown=60,report=null;
+function safePdf(path){
+ return typeof path==='string'&&/^(previews|plated-previews)\/[a-zA-Z0-9_-]+-origineel\.pdf$/.test(path)?
+ 'https://raw.githubusercontent.com/DASPHHS/Supermarktscanner/main/hellofresh/'+path:null;
+}
+function create(tag,content,cls){const n=document.createElement(tag);if(cls)n.className=cls;n.textContent=content;return n;}
+function summary(){
+ const s=report.summary,labels=[
+ ['Bronrecords doorgelopen',s.records_audited],['HelloFresh / Plated',(s.by_source.HelloFresh||0)+' / '+(s.by_source.Plated||0)],
+ ['Ingrediëntenregels bekeken',s.ingredient_rows_inspected],['Originele kaarten aanwezig',s.with_original_card],
+ ['Recepten met ingrediëntregels',s.with_ingredient_rows],['Volledige hoeveelheidsvelden',s.quantity_rows_structurally_complete],
+ ['Handmatig bronbevestigd',s.human_source_review_confirmed],['Nog bronvergelijking nodig',s.require_human_review]
+ ];
+ $('stats').replaceChildren(...labels.map(([title,value])=>{let el=create('div','','stat');el.append(create('strong',String(value)),create('span',title));return el;}));
+ $('status').textContent='Automatische controle: '+new Date(report.generated_at_utc).toLocaleString('nl-NL',{timeZone:'Europe/Amsterdam'})+
+ '. Aanwezige waarden zijn niet automatisch correcte OCR, recepten of winkelprijzen.';
+}
+function filtered(){
+ const q=$('q').value.toLocaleLowerCase('nl-NL').trim(),source=$('source').value,filter=$('filter').value;
+ return records.filter(r=>{
+  if(source!=='all'&&r.source!==source)return false;
+  const flags=r.issues||[];
+  if(filter==='confirmed'&&r.source_review_confirmed!==true)return false;
+  if(filter==='unconfirmed'&&r.source_review_confirmed===true)return false;
+  if(filter==='missing_ingredients'&&!flags.some(x=>['ingredients_missing','ingredient_names_incomplete'].includes(x)))return false;
+  if(filter==='missing_quantities'&&!flags.includes('quantities_incomplete'))return false;
+  if(filter==='portions_unconfirmed'&&!flags.includes('portions_unconfirmed'))return false;
+  if(filter==='original_card_missing'&&!flags.includes('original_card_missing'))return false;
+  return !q||[r.title,r.source,...flags.map(k=>issues[k]||k)].join(' ').toLocaleLowerCase('nl-NL').includes(q);
+ });
+}
+function card(r){
+ const article=create('article','','recipe');
+ article.append(create('h3',r.title||'Zonder titel'),create('p',r.source+' · '+r.ingredient_rows+' ingrediëntregels · '+r.quantity_rows_present+' ingevulde hoeveelheden','origin'));
+ article.append(create('p',r.source_review_confirmed?'Handmatig bevestigd in bronregistratie':'Handmatige controle nodig',r.source_review_confirmed?'status confirmed':'status'));
+ const problems=(r.issues||[]).map(x=>issues[x]||x);
+ if(problems.length){const ul=create('ul','');problems.forEach(x=>ul.append(create('li',x)));article.append(ul);}
+ const links=create('div','','links');
+ const link=create('a','Zoek recept in de studio');link.href='./?q='+encodeURIComponent(r.title||'');links.append(link);
+ const url=safePdf(r.original_pdf);
+ if(url){const pdf=create('a','Originele PDF');pdf.href=url;pdf.target='_blank';pdf.rel='noopener noreferrer';links.append(pdf);}
+ if(r.source==='HelloFresh'){
+  const h=create('a','HelloFresh.nl');h.href='https://www.hellofresh.nl/recipes';h.target='_blank';h.rel='noopener noreferrer';links.append(h);
+ }
+ article.append(links);return article;
+}
+function render(){
+ const items=filtered();
+ $('list').replaceChildren(...items.slice(0,shown).map(card));
+ if(!items.length)$('list').append(create('p','Geen bronrecords voor deze filters.','sub'));
+ $('more').hidden=items.length<=shown;
+ $('more').textContent='Toon meer ('+(items.length-shown)+')';
+ $('status').textContent=items.length+' van '+records.length+' bronrecords in deze weergave. '+
+ 'De originele kaart is leidend; een automatisch ingevulde hoeveelheid is geen handmatige verificatie.';
+}
+for(const id of ['q','source','filter'])$(id).addEventListener('input',()=>{shown=60;render()});
+$('more').addEventListener('click',()=>{shown+=60;render()});
+fetch('./library_source_audit.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Geen gepubliceerd controlebestand');return r.json()}).then(d=>{
+ if(d.schema_version!==1||!Array.isArray(d.records)||d.records.length!==d.summary?.records_audited)
+  throw Error('Het broncontroleverslag is onvolledig');
+ report=d;records=d.records;summary();render();
+}).catch(err=>{$('status').textContent='Controleverslag nog niet beschikbaar: '+err.message+
+ '. De bibliotheek blijft bruikbaar, maar er wordt geen volledige controle geclaimd.';});
+})();
+</script></body></html>
