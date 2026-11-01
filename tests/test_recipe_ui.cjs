@@ -23,7 +23,7 @@ async function open(t,priceOverride,hfreshOverride,weekdealsOverride){
   const p=path.join(root,relative);
   return fs.existsSync(p)?{ok:true,json:async()=>JSON.parse(fs.readFileSync(p,'utf8'))}:{ok:false,status:404};
  };
- w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/recipe-search.js'));w.eval(read('hellofresh/weekdeals-relevance.js'));w.eval(read('hellofresh/app.js'));
+ w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/recipe-search.js'));w.eval(read('hellofresh/official-recipes.js'));w.eval(read('hellofresh/weekdeals-relevance.js'));w.eval(read('hellofresh/app.js'));
  await new Promise(resolve=>setImmediate(resolve));
  await new Promise(resolve=>setImmediate(resolve));
  assert.deepEqual(errors,[],'application loads without runtime errors');
@@ -207,4 +207,16 @@ test('complete library searches both collections and supports ingredient-only qu
  assert.equal(d.querySelector('#q').value,'spinazie');
  assert.equal(mode.value,'ingredients');
  assert.ok(d.querySelectorAll('.card').length>0,'common ingredient shortcut yields matches');
+});
+
+test('official HelloFresh candidates are clearly unverified; source audit is optional on first publication',async t=>{
+ const w=await open(t),d=w.document;
+ assert.ok(d.querySelector('#source-audit-status'),'source audit status visible');
+ const search=d.querySelector('#q');
+ assert.ok(search,'existing recipe search remains accessible');
+ const article=d.querySelector('.card button[data-id]');
+ assert.ok(article);article.click();
+ assert.match(d.querySelector('#dialog').textContent,/Controle van recept en ingrediënten/);
+ assert.ok(d.querySelector('#dialog a[href$="source-audit.html"]'),'full audit list linked');
+ assert.match(d.querySelector('#dialog').textContent,/broncontroleverslag.*ontbreekt|automatisch gecontroleerd|handmatige/i);
 });
