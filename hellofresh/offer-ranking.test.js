@@ -37,10 +37,12 @@ const offer=(store,name,price,originalPrice)=>({
  product_url:'https://example.com/test',card_required:false,personal_offer:false,
 });
 const one=recipe('action'),two=recipe('noaction'),third=recipe('elsewhere');
+const noAction=estimate('AH',2.50);
+noAction.estimate.lines[0].ingredients=['Wortel (g)'];
 app.state.prices=new Map([
  ['AH:action',estimate('AH',5.39)],
  ['Jumbo:action',estimate('Jumbo',4.90)],
- ['AH:noaction',estimate('AH',2.50)],
+ ['AH:noaction',noAction],
  ['AH:elsewhere',estimate('AH',4.20)]
 ]);
 app.state.deals={
