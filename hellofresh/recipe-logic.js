@@ -1,6 +1,7 @@
 /* Shared, DOM-free rules for recipe cards and regression tests. */
 (function(root){
 'use strict';
+const dayFormat=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Amsterdam'});
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const units=/\((?:g|ml|el|tl|[^()]+\([^()]+\))\)/g;
 const blocked=new Set('saus soep maaltijd maaltijden pizza dip chips wrap quiche poeder smaak puree snack burger gevuld gekruid kruidenmix salade hummus hoemoes geroosterd gebakken vegetarisch vegetarische vegan plantaardig plantaardige chocolade surprise snoep gedroogd gedroogde zongedroogd zongedroogde granulaat'.split(' '));
@@ -26,7 +27,7 @@ function completePrice(r,p){
 function estimatePrice(e){
  return e?.eligible===true&&Array.isArray(e.missing)&&e.missing.length===0&&e.total_ingredients>0&&e.covered_ingredients===e.total_ingredients&&Number.isFinite(e.used_total_eur)&&e.used_total_eur>=0?e.used_total_eur:null;
 }
-function estimateFor(p,cards=false,today=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Amsterdam'})){
+function estimateFor(p,cards=false,today=dayFormat.format(new Date())){
  const valid=e=>e && (e.lines||[]).every(line=>!line.action||activeOffer(line.action,today));
  if(cards&&valid(p?.estimate_with_cards))return p.estimate_with_cards;
  return valid(p?.estimate)?p.estimate:null;
