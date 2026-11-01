@@ -32,6 +32,10 @@ function selectRecord(records,cards=false){
  const priced=present.filter(p=>estimatePrice(estimateFor(p,cards))!==null);
  return priced.length?priced.sort((a,b)=>estimatePrice(estimateFor(a,cards))-estimatePrice(estimateFor(b,cards))||a.store.localeCompare(b.store))[0]:present.sort((a,b)=>(estimateFor(b,cards)?.covered_ingredients||0)-(estimateFor(a,cards)?.covered_ingredients||0))[0];
 }
+function originalPdfUrl(path){
+ if(typeof path!=='string'||! /^(?:previews|plated-previews)\/[a-zA-Z0-9_-]+\.pdf$/.test(path))return null;
+ return 'https://raw.githubusercontent.com/DASPHHS/Supermarktscanner/main/hellofresh/'+path;
+}
 function protein(title,labels=[]){
  const classify=t=>{
   if(/\b(vegetarisch|vegetarische|vega|veggie|plantaardig|plantaardige|vegan|tofu|tempeh|falafel)\b/.test(t))return 'vega';
@@ -43,7 +47,7 @@ function protein(title,labels=[]){
  // Main protein in the title takes precedence over chicken stock in a beef dish.
  return classify(norm(title))||classify(norm(labels.filter(x=>!/(bouillon|stock|broth)/i.test(x)).join(' ')))||'onbekend';
 }
-const api={norm,offerMatches,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord};
+const api={norm,offerMatches,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,originalPdfUrl};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;
 else root.RecipeLogic=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

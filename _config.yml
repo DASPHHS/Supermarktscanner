@@ -1,0 +1,9 @@
+# Keep original PDFs in GitHub; publish lightweight previews and application data.
+exclude:
+  - "hellofresh/previews/*.pdf"
+  - "hellofresh/plated-previews/*.pdf"
+  - node_modules
+  - tests
+  - vendor
+  - Gemfile
+  - Gemfile.lock

@@ -49,3 +49,8 @@ test('store choice and order react to prices and card promotions',()=>{
  assert.equal(L.selectRecord([a,{store:'Lidl',estimate:{eligible:false,missing:[{}]}}],false).store,'AH');
  assert.equal(L.estimateFor({estimate:e(3)},true).used_total_eur,3);
 });
+test('original PDFs remain downloadable outside the Pages size budget',()=>{
+ assert.equal(L.originalPdfUrl('plated-previews/abc123-origineel.pdf'),'https://raw.githubusercontent.com/DASPHHS/Supermarktscanner/main/hellofresh/plated-previews/abc123-origineel.pdf');
+ assert.equal(L.originalPdfUrl('previews/abc123-origineel.pdf'),'https://raw.githubusercontent.com/DASPHHS/Supermarktscanner/main/hellofresh/previews/abc123-origineel.pdf');
+ for(const p of ['../secret.pdf','https://evil.test/a.pdf','previews/../../a.pdf',null])assert.equal(L.originalPdfUrl(p),null);
+});
