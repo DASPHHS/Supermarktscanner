@@ -12,6 +12,8 @@ class LibraryAuditTests(unittest.TestCase):
         self.assertEqual(ingredient_row({"ingredient": "Broccoli", "quantity_2p_source": "onbekend"}), (True, False))
         self.assertEqual(ingredient_row({"ingredient": "", "quantity_2p_source": 100}), (False, True))
         self.assertEqual(ingredient_row({"ingredient": "Courgette", "quantity_2p_source": 0}), (True, False))
+        self.assertEqual(ingredient_row({"ingredient": "Zout", "quantity_2p_source": "naar smaak"}), (True, False))
+        self.assertEqual(ingredient_row({"ingredient": "Paprika", "quantity_2p_source": "?"}), (True, False))
 
     def test_all_records_audited_without_confusing_ocr_and_verification(self):
         with tempfile.TemporaryDirectory() as tmp:
