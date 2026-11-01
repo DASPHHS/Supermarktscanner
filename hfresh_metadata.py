@@ -86,24 +86,22 @@ def read_catalog(path: Path) -> list[dict]:
     raise ValueError("HFresh-catalogus moet een lijst of een API-pagina met data[] zijn")
 
 
-def fetch_catalog(api_url: str, token: str, max_pages: int = 250, pause_seconds: float = 1.1) -> list[dict]:
-    """Server-side only. Never put the token in GitHub Pages or browser JS."""
+def fetch_titles(api_url: str, token: str, titles: list[str], pause_seconds: float = 1.1) -> list[dict]:
+    """Only a small number of exact-title searches; no mass database download."""
     parsed = urllib.parse.urlsplit(api_url)
-    if parsed.scheme != "https" or parsed.hostname != "api.hfresh.info" or parsed.username or parsed.password:
-        raise ValueError("API-URL moet op https://api.hfresh.info staan")
-    if parsed.path != "/nl-NL/recipes":
-        raise ValueError("Alleen de Nederlandse recepten-API is toegestaan")
-    # Server implementation currently uses perPage (docs still mention per_page).
-    # Its ResourceCollection explicitly removes pagination links. Use meta instead.
-    base = urllib.parse.urlsplit(api_url)
-    base_query = dict(urllib.parse.parse_qsl(base.query))
-    base_query["perPage"] = "200"
+    if (parsed.scheme != "https" or parsed.hostname != "api.hfresh.info"
+            or parsed.username or parsed.password or parsed.path != "/nl-NL/recipes"):
+        raise ValueError("Alleen https://api.hfresh.info/nl-NL/recipes is toegestaan")
+    if len(titles) > 25:
+        raise ValueError("Maximum 25 titelzoekopdrachten per synchronisatie")
+    base_query = dict(urllib.parse.parse_qsl(parsed.query))
     rows: list[dict] = []
-    for page in range(1, max_pages + 1):
-        if page > 1:
-            time.sleep(pause_seconds)  # API limit: 60 requests/minute; no parallel calls.
-        query = urllib.parse.urlencode({**base_query, "page": str(page)})
-        url = urllib.parse.urlunsplit((base.scheme, base.netloc, base.path, query, ""))
+    for i, title in enumerate(titles):
+        if i:
+            time.sleep(pause_seconds)
+        # Current API implementation uses perPage, though its docs say per_page.
+        query = urllib.parse.urlencode({**base_query, "search": title, "perPage": "200", "page": "1"})
+        url = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, query, ""))
         req = urllib.request.Request(url, headers={
             "Authorization": "Bearer " + token, "Accept": "application/json",
             "User-Agent": "Supermarktscanner-HFreshCrossrefs/1.0"})
@@ -114,14 +112,27 @@ def fetch_catalog(api_url: str, token: str, max_pages: int = 250, pause_seconds:
         meta = payload.get("meta", {})
         current = meta.get("current_page") if isinstance(meta, dict) else None
         last = meta.get("last_page") if isinstance(meta, dict) else None
-        if type(current) is not int or type(last) is not int or current != page or last < page:
+        if type(current) is not int or type(last) is not int or current != 1 or last < 1:
             raise ValueError("HFresh API-paginatie onvolledig; bestaande output behouden")
-        if last > max_pages:
-            raise ValueError("HFresh API bevat te veel pagina's voor veilige synchronisatie")
-        rows.extend(payload["data"])
-        if page == last:
-            return rows
-    raise ValueError("Maximum aantal API-pagina's bereikt; geen onvolledige output publiceren")
+        # More than one page for a precise title is unsafe to treat as unique.
+        if last == 1:
+            rows.extend(payload["data"])
+    return rows
+
+
+def incremental_batch(recipes: list[dict], previous: dict, batch_size: int) -> tuple[list[dict], int]:
+    """Return a stable rotation of the local titles; only these are queried."""
+    selected = [r for r in recipes if isinstance(r, dict) and r.get("id") and title_key(r.get("title_extracted"))]
+    if not selected:
+        raise ValueError("Geen lokale brontitels beschikbaar")
+    if not 1 <= batch_size <= 25:
+        raise ValueError("Batchgrootte moet 1 t/m 25 zijn")
+    cursor = previous.get("scan_cursor", 0)
+    if type(cursor) is not int or cursor < 0:
+        cursor = 0
+    start = cursor % len(selected)
+    batch = [selected[(start + i) % len(selected)] for i in range(min(batch_size, len(selected)))]
+    return batch, (start + len(batch)) % len(selected)
 
 
 def main() -> None:
@@ -130,21 +141,39 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("hellofresh/hfresh_matches.json"))
     parser.add_argument("--catalog", type=Path, help="Bestaande JSON-export; geen token nodig")
     parser.add_argument("--api-url", default="https://api.hfresh.info/nl-NL/recipes")
+    parser.add_argument("--batch-size", type=int, default=12, help="Maximum 25 zoekopdrachten per run")
     args = parser.parse_args()
 
     local = json.loads(args.recipes.read_text(encoding="utf-8"))
     if not isinstance(local, dict) or not isinstance(local.get("recipes"), list):
         raise ValueError("Lokale receptenindex ontbreekt of is ongeldig")
+    previous = {}
+    if args.output.exists():
+        try:
+            previous = json.loads(args.output.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            raise ValueError("Bestaande matches onleesbaar; niet overschrijven")
+        if previous.get("schema_version") != 1:
+            raise ValueError("Onbekende bestaande matches; niet overschrijven")
     if args.catalog:
         external = read_catalog(args.catalog)
+        result = build_crossrefs(local["recipes"], external)
+        if not result["matched"]:
+            raise SystemExit("Geen exacte bronmatches in export; output behouden")
     else:
         token = os.getenv("HFRESH_API_TOKEN", "")
         if not token:
             raise SystemExit("HFRESH_API_TOKEN ontbreekt; output niet gewijzigd")
-        external = fetch_catalog(args.api_url, token)
-    result = build_crossrefs(local["recipes"], external)
-    if not result["matched"]:
-        raise SystemExit("Geen ondubbelzinnige bronmatches; bestaande output behouden")
+        batch, next_cursor = incremental_batch(local["recipes"], previous, args.batch_size)
+        external = fetch_titles(args.api_url, token, [r["title_extracted"] for r in batch])
+        fresh = build_crossrefs(batch, external)
+        links = dict(previous.get("recipe_links") or {})
+        # Rechecked titles must not retain a stale old match.
+        for r in batch:
+            links.pop(str(r["id"]), None)
+        links.update(fresh["recipe_links"])
+        result = {**fresh, "recipe_links": links, "matched": len(links),
+                  "scan_cursor": next_cursor, "scanned_this_run": len(batch)}
     result["updated_at_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
