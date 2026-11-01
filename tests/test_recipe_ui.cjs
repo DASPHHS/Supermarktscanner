@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const data=p=>JSON.parse(read(p));
 
-async function open(t,priceOverride){
+async function open(t,priceOverride,hfreshOverride){
  const errors=[];
  const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type!=='css-parsing')errors.push(e.message)});
  const dom=new JSDOM(read('hellofresh/index.html'),{url:'https://example.test/Supermarktscanner/hellofresh/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc});
@@ -18,6 +18,7 @@ async function open(t,priceOverride){
  w.fetch=async raw=>{
   const u=new URL(raw,w.location.href),relative=u.pathname.replace(/^\/Supermarktscanner\//,'');
   if(priceOverride&&relative==='recipe_prices.json')return {ok:true,json:async()=>structuredClone(priceOverride)};
+  if(hfreshOverride&&relative==='hellofresh/hfresh_matches.json')return {ok:true,json:async()=>structuredClone(hfreshOverride)};
   const p=path.join(root,relative);
   return fs.existsSync(p)?{ok:true,json:async()=>JSON.parse(fs.readFileSync(p,'utf8'))}:{ok:false,status:404};
  };
@@ -85,4 +86,24 @@ test('cash comparison changes the displayed basket, selected store and recipe or
  first.querySelector('button').click();
  assert.match(d.querySelector('#dialog').textContent,/twee personen · Jumbo/);
  const pdf=d.querySelector('.pdf-download');if(pdf)assert.match(pdf.href,/raw.githubusercontent.com/);
+});
+
+test('HFresh links are supplementary, exact-title-only and never substitute recipe prices',async t=>{
+ const recipe=data('recipes_extracted.json').recipes.find(r=>r.id&&r.title_extracted);
+ assert.ok(recipe);
+ const fixture={schema_version:1,recipe_links:{
+  [recipe.id]:{match:'exact_title_only',url:'https://hfresh.info/nl-NL/recipes/example-123',total_time:35}
+ }};
+ const w=await open(t,undefined,fixture),d=w.document;
+ const q=d.querySelector('#q');q.value=recipe.title_extracted;
+ q.dispatchEvent(new w.Event('input',{bubbles:true}));
+ const button=[...d.querySelectorAll('button[data-id]')].find(b=>b.dataset.id===String(recipe.id));
+ assert.ok(button,'original local recipe stays searchable');
+ const priceText=button.closest('.card').querySelector('.main-cost').textContent;
+ button.click();
+ const ref=d.querySelector('#dialog a[href="https://hfresh.info/nl-NL/recipes/example-123"]');
+ assert.ok(ref,'validated source link is visible for an exact title match');
+ assert.match(d.querySelector('#dialog').textContent,/geen controle van dezelfde variant, hoeveelheden of prijzen/i);
+ assert.equal(button.closest('.card').querySelector('.main-cost').textContent,priceText);
+ assert.match(d.querySelector('#hfresh-status').textContent,/1 recepttitels gekoppeld/);
 });
