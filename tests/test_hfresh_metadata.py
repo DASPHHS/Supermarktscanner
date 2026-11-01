@@ -50,7 +50,7 @@ class HFreshMetadataTests(unittest.TestCase):
                     "meta": {"current_page": page, "last_page": 2}}
             return io.BytesIO(json.dumps(data).encode("utf-8"))
         with patch("hfresh_metadata.urllib.request.urlopen", side_effect=fake_open):
-            found = fetch_catalog("https://api.hfresh.info/nl-NL/recipes", "test-token")
+            found = fetch_catalog("https://api.hfresh.info/nl-NL/recipes", "test-token", pause_seconds=0)
         self.assertEqual([r["id"] for r in found], [1, 2])
         self.assertIn("perPage=200", urls[0])
         self.assertIn("page=2", urls[1])
