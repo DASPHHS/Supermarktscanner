@@ -25,7 +25,7 @@ function hfreshDetail(r){
  const source=ext?.origin==='manual'?'Handmatig gekoppeld in deze browser':'Automatisch gekoppeld op titel';
  return '<section class="norm-section" id="hfresh-detail"><h3>HFresh-receptenkoppeling</h3>'+
  (ext?'<p><a class="hfresh-visit" href="'+esc(ext.url)+'" target="_blank" rel="noopener noreferrer">Open de gekoppelde HFresh-receptpagina</a>'+
- (Number.isInteger(ext.total_time)?' · '+ext.total_time+' min volgens HFresh':'')+'</p><p class="sub">'+source+'. Dezelfde titel garandeert niet dezelfde receptvariant. Vergelijk ingrediënten en bijgerechten met de originele PDF.</p>':
+ (Number.isInteger(ext.total_time)?' · '+ext.total_time+' min volgens HFresh':'')+'</p><p class="sub">'+source+'. Dezelfde titel garandeert niet dezelfde receptvariant. Vergelijk ingrediënten en bijgerechten met de originele PDF.</p>'+(ext.headline?'<p class="sub">HFresh-ondertitel: '+esc(ext.headline)+'</p>':''):
  '<p class="sub">Voor dit recept is nog geen HFresh-pagina gekoppeld. Dit verandert niets aan de prijsberekening.</p>')+
  '<p><a class="hfresh-search" href="'+esc(HFreshLinks.searchUrl(displayTitle(r)))+'" target="_blank" rel="noopener noreferrer">Zoek dit recept direct in HFresh</a></p>'+
  '<label for="hfresh-recipe-title">Zoektekst</label><input id="hfresh-recipe-title" class="field" readonly value="'+esc(displayTitle(r))+'">'+
