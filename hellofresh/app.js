@@ -116,7 +116,8 @@ function cardOfferBlock(r){
    (otherLeads.length?'Andere supermarkt: '+otherLeads.length+' mogelijke acties, niet in deze kassabon.':'Geen passende doorgerekende actie in deze winkel.')+'</div>';
  let html='<div class="recipe-offers compact-offers"><strong class="offer-heading">Aanbiedingen bij dit gerecht</strong>';
  if(scenario)html+='<div class="offer-applied">'+selected.changes.length+
-  ' actie-alternatief/alternatieven doorgerekend · geschat kassabonverschil '+eur(selected.savings)+
+  (selected.changes.length===1?' actie-alternatief doorgerekend':' actie-alternatieven doorgerekend')+
+  ' · geschat kassabonverschil '+eur(selected.savings)+
   ' (niet onafhankelijk gecontroleerd)</div>'+
   selected.changes.slice(0,1).map(x=>'<div class="offer-match-line"><b>'+esc(x.ingredients.join(' / '))+
    '</b> → '+esc(x.to)+'<small>'+esc(x.store)+' · '+x.packages+
