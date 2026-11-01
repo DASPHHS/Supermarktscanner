@@ -265,7 +265,7 @@ function categoryCards(families){
   const offers=[];
   for(const group of matching){
    // Family-level recent lead: prefer most recipes using the ingredient, not claimed % saving.
-   for(const recipe of group.recipes)ids.add(recipe.id);
+   for(const id of group.recipe_ids||[])ids.add(id);
    for(const d of group.visibleOffers)offers.push({d,used:group.recipe_count,ingredient:group.label});
   }
   offers.sort((a,b)=>b.used-a.used||a.d.price-b.d.price||a.d.name.localeCompare(b.d.name,'nl'));
