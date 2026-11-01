@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const data=p=>JSON.parse(read(p));
 
-async function open(t,priceOverride,hfreshOverride){
+async function open(t,priceOverride,hfreshOverride,weekdealsOverride){
  const errors=[];
  const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type!=='css-parsing')errors.push(e.message)});
  const dom=new JSDOM(read('hellofresh/index.html'),{url:'https://example.test/Supermarktscanner/hellofresh/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc});
@@ -19,10 +19,11 @@ async function open(t,priceOverride,hfreshOverride){
   const u=new URL(raw,w.location.href),relative=u.pathname.replace(/^\/Supermarktscanner\//,'');
   if(priceOverride&&relative==='recipe_prices.json')return {ok:true,json:async()=>structuredClone(priceOverride)};
   if(hfreshOverride&&relative==='hellofresh/hfresh_matches.json')return {ok:true,json:async()=>structuredClone(hfreshOverride)};
+  if(weekdealsOverride&&relative==='weekdeals_hellofresh.json')return {ok:true,json:async()=>structuredClone(weekdealsOverride)};
   const p=path.join(root,relative);
   return fs.existsSync(p)?{ok:true,json:async()=>JSON.parse(fs.readFileSync(p,'utf8'))}:{ok:false,status:404};
  };
- w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/app.js'));
+ w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/weekdeals-relevance.js'));w.eval(read('hellofresh/app.js'));
  await new Promise(resolve=>setImmediate(resolve));
  await new Promise(resolve=>setImmediate(resolve));
  assert.deepEqual(errors,[],'application loads without runtime errors');
@@ -142,4 +143,37 @@ test('HFresh links can be connected, removed, imported and filtered without pric
  assert.equal(JSON.parse(w.localStorage.getItem('hfresh-local-links-v1'))[recipe.id],manual);
  assert.equal(d.querySelector('#hfresh-status').textContent.includes('1 handmatig'),true);
  assert.equal(button.closest('.card').querySelector('.main-cost').textContent,initialPrice);
+});
+
+test('relevant Weekdeals panel filters real ingredient candidates and does not change prices',async t=>{
+ const recipes=data('recipes_extracted.json').recipes;
+ const match=recipes.find(r=>r.id&&r.title_extracted&&
+   (r.ingredients_2p||r.ingredients_4p||[]).some(i=>/\baardappelen\b/i.test(i.ingredient||'')));
+ assert.ok(match,'fixture requires at least one HelloFresh potato recipe');
+ const today=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Amsterdam'});
+ const end=new Date(Date.now()+86400000).toLocaleDateString('sv-SE',{timeZone:'Europe/Amsterdam'});
+ const f={schema_version:1,source_url:'https://dasphhs.github.io/specialedeals/weekdeals/',
+  updated_at_utc:new Date(Date.now()-60000).toISOString(),as_of_date:today,
+  coverage:{full_promotional_feed:true},stores:{
+   AH:{deals:[{name:'AH Vastkokende aardappelen',product_id:'potato-1',price:1.99,category:'groente-fruit',
+     quantity:'1 kg',valid_from:today,valid_until:end,product_url:'https://www.ah.nl/producten/product/123'},
+    {name:'AH Bakaardappeltjes paprika en knoflook',product_id:'false-1',price:0.5,category:'groente-fruit',
+     valid_from:today,valid_until:end}]},
+   Jumbo:{deals:[]},Lidl:{deals:[]}}};
+ const w=await open(t,undefined,undefined,f),d=w.document;
+ assert.match(d.querySelector('#deal-relevance-status').textContent,/ingrediëntgroepen met mogelijke acties/);
+ assert.ok(d.querySelector('.relevance-card'),'candidate cards render');
+ assert.ok(d.querySelector('.relevance-card').textContent.includes('Aardappelen'));
+ assert.ok(!d.querySelector('#deal-relevance-cards').textContent.includes('Bakaardappeltjes'));
+ const first=d.querySelector('.card .main-cost').textContent;
+ const family=[...d.querySelectorAll('button[data-relevance-family]')].find(x=>x.dataset.relevanceFamily==='aardappel');
+ assert.ok(family,'potato ingredient has a recipe-navigation action');
+ family.click();
+ assert.match(d.querySelector('#count').textContent,/filter: Aardappelen/);
+ assert.ok([...d.querySelectorAll('.card button[data-id]')].some(b=>b.dataset.id===String(match.id)));
+ d.querySelector('#deal-relevance-clear').click();
+ assert.ok(!d.querySelector('#count').textContent.includes('filter:'));
+ assert.equal(d.querySelector('.card .main-cost').textContent,first,'price unchanged');
+ const store=d.querySelector('#deal-relevance-store');store.value='Lidl';store.dispatchEvent(new w.Event('change',{bubbles:true}));
+ assert.match(d.querySelector('#deal-relevance-cards').textContent,/Geen mogelijke ingrediëntacties/);
 });
