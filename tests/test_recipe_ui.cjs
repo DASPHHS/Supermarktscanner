@@ -105,6 +105,7 @@ test('HFresh links can be connected, removed, imported and filtered without pric
  assert.ok(button,'original recipe is searchable');
  const initialPrice=button.closest('.card').querySelector('.main-cost').textContent;
  button.click();
+ assert.equal(d.querySelector('.hfresh-search').href,'https://hfresh.info/nl-NL?search='+encodeURIComponent(recipe.title_extracted));
  assert.equal(d.querySelector('.hfresh-visit').href,'https://hfresh.info/nl-NL/recipes/example-123');
  assert.match(d.querySelector('#dialog').textContent,/Dezelfde titel garandeert niet dezelfde receptvariant/);
  const bad=d.querySelector('#hfresh-link-input');bad.value='https://hfresh.info.evil.test/nl-NL/recipes/x-9';
