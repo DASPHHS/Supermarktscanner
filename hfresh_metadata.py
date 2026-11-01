@@ -92,13 +92,15 @@ def fetch_catalog(api_url: str, token: str, max_pages: int = 40) -> list[dict]:
         raise ValueError("API-URL moet op https://api.hfresh.info staan")
     if parsed.path != "/nl-NL/recipes":
         raise ValueError("Alleen de Nederlandse recepten-API is toegestaan")
-    url = api_url + ("&" if parsed.query else "?") + "perPage=200"
+    # Server implementation currently uses perPage (docs still mention per_page).
+    # Its ResourceCollection explicitly removes pagination links. Use meta instead.
+    base = urllib.parse.urlsplit(api_url)
+    base_query = dict(urllib.parse.parse_qsl(base.query))
+    base_query["perPage"] = "200"
     rows: list[dict] = []
-    seen: set[str] = set()
-    for _ in range(max_pages):
-        if url in seen:
-            raise ValueError("Paginatie bevat een lus")
-        seen.add(url)
+    for page in range(1, max_pages + 1):
+        query = urllib.parse.urlencode({**base_query, "page": str(page)})
+        url = urllib.parse.urlunsplit((base.scheme, base.netloc, base.path, query, ""))
         req = urllib.request.Request(url, headers={
             "Authorization": "Bearer " + token, "Accept": "application/json",
             "User-Agent": "Supermarktscanner-HFreshCrossrefs/1.0"})
@@ -106,14 +108,16 @@ def fetch_catalog(api_url: str, token: str, max_pages: int = 40) -> list[dict]:
             payload = json.load(response)
         if not isinstance(payload, dict) or not isinstance(payload.get("data"), list):
             raise ValueError("HFresh API-schema onbekend; bestaande output behouden")
+        meta = payload.get("meta", {})
+        current = meta.get("current_page") if isinstance(meta, dict) else None
+        last = meta.get("last_page") if isinstance(meta, dict) else None
+        if type(current) is not int or type(last) is not int or current != page or last < page:
+            raise ValueError("HFresh API-paginatie onvolledig; bestaande output behouden")
+        if last > max_pages:
+            raise ValueError("HFresh API bevat te veel pagina's voor veilige synchronisatie")
         rows.extend(payload["data"])
-        nxt = payload.get("links", {}).get("next") if isinstance(payload.get("links"), dict) else None
-        if not nxt:
+        if page == last:
             return rows
-        parsed_next = urllib.parse.urlsplit(nxt)
-        if parsed_next.scheme != "https" or parsed_next.hostname != "api.hfresh.info" or parsed_next.path != "/nl-NL/recipes":
-            raise ValueError("Onveilige vervolglink in HFresh-paginatie")
-        url = nxt
     raise ValueError("Maximum aantal API-pagina's bereikt; geen onvolledige output publiceren")
 
 
