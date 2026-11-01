@@ -1,0 +1,33 @@
+name: Validate HelloFresh recipe pricing
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "hellofresh/app.js"
+      - "hellofresh/recipe-logic.js"
+      - "hellofresh/offer-matching.test.js"
+      - "hellofresh/offer-ranking.test.js"
+      - ".github/workflows/validate-hellofresh-pricing.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pricing-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Test recipe matching and promotion conditions
+        run: node hellofresh/offer-matching.test.js
+      - name: Test store selection and discounted checkout ranking
+        run: node hellofresh/offer-ranking.test.js
+      - name: Check frontend JavaScript syntax
+        run: |
+          node --check hellofresh/app.js
+          node --check hellofresh/recipe-logic.js
