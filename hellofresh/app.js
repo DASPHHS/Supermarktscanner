@@ -84,14 +84,19 @@ function detailOfferBlock(r){
  return html+'</section>';
 }
 function offerSort(a,b){
- const actionA=offerWords(a).length,actionB=offerWords(b).length;
- const aOffers=possibleOffers(a),bOffers=possibleOffers(b);
- const aStore=priceRecord(a)?.store,bStore=priceRecord(b)?.store;
- const levelA=actionA?3:aOffers.length?(aOffers.some(x=>x.shop===aStore)?2:1):0;
- const levelB=actionB?3:bOffers.length?(bOffers.some(x=>x.shop===bStore)?2:1):0;
- if(levelA!==levelB)return levelB-levelA;
  const aPrice=rankingPrice(a),bPrice=rankingPrice(b);
- if((aPrice===null)!==(bPrice===null))return aPrice===null?1:-1;
+ // Never put a recipe without any full price above a fully priced recipe.
+ const rank=r=>{
+  const cost=rankingPrice(r),priced=cost!==null;
+  const offers=possibleOffers(r),applied=offerWords(r).length>0,priceShop=priceRecord(r)?.store;
+  if(priced&&applied)return 0;
+  if(priced&&offers.some(x=>x.shop===priceShop))return 1;
+  if(priced&&offers.length)return 2;
+  if(priced)return 3;
+  return offers.length?4:5;
+ };
+ const levelA=rank(a),levelB=rank(b);
+ if(levelA!==levelB)return levelA-levelB;
  if(aPrice!==null&&bPrice!==null&&aPrice!==bPrice)return aPrice-bPrice;
  const aIngredients=new Set(possibleOffers(a).map(x=>norm(x.ingredient))).size;
  const bIngredients=new Set(possibleOffers(b).map(x=>norm(x.ingredient))).size;
