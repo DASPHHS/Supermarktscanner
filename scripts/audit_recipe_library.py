@@ -29,8 +29,8 @@ def ingredient_row(row, label="ingredient", quantity="quantity_2p_source"):
     amount = row.get(quantity)
     return bool(isinstance(name, str) and name.strip()), bool(
         isinstance(amount, (int, float)) and not isinstance(amount, bool) and amount > 0
-        or isinstance(amount, str) and amount.strip() and
-        normalized(amount) not in ("unknown", "onbekend", "none", "niet bekend", "n a", "-", "?")
+        or isinstance(amount, str) and bool(normalized(amount)) and
+        normalized(amount) not in ("unknown", "onbekend", "none", "niet bekend", "n a", "naar smaak")
     )
 
 
