@@ -23,7 +23,7 @@ async function open(t,priceOverride,hfreshOverride,weekdealsOverride){
   const p=path.join(root,relative);
   return fs.existsSync(p)?{ok:true,json:async()=>JSON.parse(fs.readFileSync(p,'utf8'))}:{ok:false,status:404};
  };
- w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/weekdeals-relevance.js'));w.eval(read('hellofresh/app.js'));
+ w.eval(read('hellofresh/hfresh-links.js'));w.eval(read('hellofresh/recipe-logic.js'));w.eval(read('hellofresh/recipe-search.js'));w.eval(read('hellofresh/weekdeals-relevance.js'));w.eval(read('hellofresh/app.js'));
  await new Promise(resolve=>setImmediate(resolve));
  await new Promise(resolve=>setImmediate(resolve));
  assert.deepEqual(errors,[],'application loads without runtime errors');
@@ -34,7 +34,8 @@ test('real snapshot opens with priced recipes, visible norms and all three store
  const w=await open(t),d=w.document;
  const ids=[...d.querySelectorAll('[id]')].map(x=>x.id);
  assert.equal(new Set(ids).size,ids.length,'no duplicate IDs between cards and card checkbox');
- assert.equal(d.querySelector('#source').value,'HelloFresh');
+ assert.equal(d.querySelector('#source').value,'Alle');
+ assert.match(d.querySelector('#library-index-status').textContent,/recepten.*HelloFresh.*Plated/);
  assert.equal(d.querySelector('#sort').value,'offers');
  assert.equal(d.querySelector('#status').value,'');
  assert.ok(Number(d.querySelector('#priced').textContent)>0,'show usable indicative prices, not a zero-only catalog');
@@ -163,6 +164,12 @@ test('relevant Weekdeals panel filters real ingredient candidates and does not c
  const w=await open(t,undefined,undefined,f),d=w.document;
  assert.match(d.querySelector('#deal-relevance-status').textContent,/ingrediëntgroepen met mogelijke acties/);
  assert.ok(d.querySelector('.relevance-card'),'candidate cards render');
+ assert.ok(d.querySelector('#deal-category-cards .deal-category-card'),'compact category cards render');
+ assert.ok(d.querySelector('#deal-category-cards').textContent.includes('Groente & aardappelen'));
+ assert.ok(d.querySelector('button[data-relevance-category="groente"]'));
+ d.querySelector('button[data-relevance-category="groente"]').click();
+ assert.match(d.querySelector('#count').textContent,/aanbiedingen: Groente & aardappelen/);
+ d.querySelector('#deal-relevance-clear').click();
  assert.ok(d.querySelector('.relevance-card').textContent.includes('Aardappelen'));
  assert.ok(!d.querySelector('#deal-relevance-cards').textContent.includes('Bakaardappeltjes'));
  const first=d.querySelector('.card .main-cost').textContent;
@@ -176,4 +183,28 @@ test('relevant Weekdeals panel filters real ingredient candidates and does not c
  assert.equal(d.querySelector('.card .main-cost').textContent,first,'price unchanged');
  const store=d.querySelector('#deal-relevance-store');store.value='Lidl';store.dispatchEvent(new w.Event('change',{bubbles:true}));
  assert.match(d.querySelector('#deal-relevance-cards').textContent,/Geen mogelijke ingrediëntacties/);
+});
+
+test('complete library searches both collections and supports ingredient-only queries',async t=>{
+ const w=await open(t),d=w.document;
+ assert.equal(d.querySelector('#source').value,'Alle');
+ const text=d.querySelector('#library-index-status').textContent;
+ assert.match(text,/\d+ recepten \(\d+ HelloFresh, \d+ Plated\)/);
+ const total=Number(text.match(/^(\d+) recepten/)[1]);
+ assert.ok(total>=700,'both collections are visible, rather than 225 HelloFresh only');
+ const source=d.querySelector('#source');
+ const q=d.querySelector('#q');
+ source.value='Plated';source.dispatchEvent(new w.Event('change',{bubbles:true}));
+ q.value='Chicken';q.dispatchEvent(new w.Event('input',{bubbles:true}));
+ assert.ok(d.querySelectorAll('.card').length>0,'Plated records are searchable');
+ const mode=d.querySelector('#search-mode');
+ mode.value='ingredients';mode.dispatchEvent(new w.Event('change',{bubbles:true}));
+ assert.ok(d.querySelector('#count').textContent.includes('getoond'),'ingredient-only filter responds');
+ q.value='';q.dispatchEvent(new w.Event('input',{bubbles:true}));
+ source.value='Alle';source.dispatchEvent(new w.Event('change',{bubbles:true}));
+ const chip=d.querySelector('[data-ingredient-shortcut="spinazie"]');
+ chip.click();
+ assert.equal(d.querySelector('#q').value,'spinazie');
+ assert.equal(mode.value,'ingredients');
+ assert.ok(d.querySelectorAll('.card').length>0,'common ingredient shortcut yields matches');
 });
