@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-01T09:28:32.071273+00:00",
+  "updated_at_utc": "2026-11-01T13:38:45.149480+00:00",
   "source": "PrijsProfeet API /search",
   "limitations": [
     "Rotating partial food-term search; not a complete assortment",
@@ -9,14 +9,14 @@
   "search_coverage": {
     "requested_terms": 24,
     "available_terms": 187,
-    "daily_slot": 1,
+    "daily_slot": 2,
     "complete": false,
-    "retained_product_records": 70,
+    "retained_product_records": 118,
     "successful_terms": 24
   },
   "stores": {
     "Jumbo": {
-      "updated_at": "2026-11-01T09:28:32.071273+00:00",
+      "updated_at": "2026-11-01T13:38:45.149480+00:00",
       "deals": [
         {
           "product_id": "jumbo_702956ZK",
@@ -42,7 +42,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -96,7 +96,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -150,7 +150,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -231,7 +231,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -339,7 +339,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -366,7 +366,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -420,7 +420,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -447,7 +447,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -474,7 +474,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -501,7 +501,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -528,7 +528,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -555,7 +555,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -582,7 +582,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -609,7 +609,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -663,7 +663,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -717,7 +717,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -771,7 +771,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -798,7 +798,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -852,7 +852,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -879,7 +879,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "eieren",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -906,7 +906,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "eieren",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -933,7 +933,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1041,7 +1041,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "eieren",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1095,7 +1095,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1149,7 +1149,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-24",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1176,7 +1176,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-03",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1284,7 +1284,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1365,7 +1365,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1392,7 +1392,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1419,7 +1419,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1446,7 +1446,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1473,7 +1473,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1500,7 +1500,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2037,6 +2037,16 @@
           "source": "PrijsProfeet product search"
         },
         {
+          "name": "Jumbo Gevulde Dadels met Geitenkaas 80 g",
+          "quantity": "80 g",
+          "price": 2.59,
+          "product_url": "https://www.jumbo.com/producten/jumbo-gevulde-dadels-met-geitenkaas-80-g-694125CUP",
+          "product_id": "jumbo_694125CUP",
+          "base_product_id": "jumbo_694125CUP",
+          "extracted_at": "2026-11-01T00:05:10.949000",
+          "source": "PrijsProfeet product search"
+        },
+        {
           "name": "Zonnatura Biologische Groene Thee Gember",
           "quantity": "34 g",
           "price": 2.69,
@@ -2349,7 +2359,7 @@
       ]
     },
     "AH": {
-      "updated_at": "2026-11-01T09:28:32.071273+00:00",
+      "updated_at": "2026-11-01T13:38:45.149480+00:00",
       "deals": [
         {
           "product_id": "ah_wi401382_2026-10-26",
@@ -2429,7 +2439,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2483,7 +2493,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2645,7 +2655,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2726,7 +2736,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2753,7 +2763,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2780,7 +2790,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2807,7 +2817,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2834,7 +2844,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2861,7 +2871,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2888,7 +2898,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2915,7 +2925,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2942,7 +2952,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2969,7 +2979,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2996,7 +3006,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3023,7 +3033,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3050,7 +3060,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3077,7 +3087,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3104,7 +3114,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3131,7 +3141,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3158,7 +3168,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3185,7 +3195,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3239,7 +3249,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3266,7 +3276,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3293,7 +3303,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3374,7 +3384,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3401,7 +3411,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3428,7 +3438,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3455,7 +3465,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3482,7 +3492,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3509,7 +3519,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3536,7 +3546,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3563,7 +3573,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3644,7 +3654,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3671,7 +3681,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3698,7 +3708,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3725,7 +3735,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3752,7 +3762,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3779,7 +3789,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3860,7 +3870,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3887,7 +3897,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3914,7 +3924,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3968,7 +3978,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3995,7 +4005,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4021,9 +4031,9 @@
           "original_price": 3.29,
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
-          "source_term": "zalm",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/",
-          "observed_at_utc": "2026-10-31T21:46:30.795085+00:00"
+          "source_term": "kappertjes",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
           "product_id": "ah_wi369971_2026-10-26",
@@ -4049,7 +4059,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4076,7 +4086,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4103,7 +4113,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4130,7 +4140,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4157,7 +4167,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4184,7 +4194,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4211,7 +4221,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4238,7 +4248,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4265,7 +4275,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4346,7 +4356,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4429,6 +4439,33 @@
           "source_term": "olijfolie",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/",
           "observed_at_utc": "2026-10-31T21:46:30.795085+00:00"
+        },
+        {
+          "product_id": "ah_wi496876_2026-10-26",
+          "base_product_id": "ah_wi496876",
+          "ean": "8720289701819",
+          "quantity": "50 g",
+          "product_url": "https://www.ah.nl/producten/product/wi496876/fish-tales-ansjovisfilets-met-kappertjes",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 3,
+          "multi_buy_price": 6.58,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Fish Tales Ansjovisfilets met kappertjes",
+          "discount": "33.33% korting",
+          "price": 2.19,
+          "original_price": 3.29,
+          "valid_from": "2026-10-26",
+          "valid_until": "2026-11-01",
+          "source_term": "kappertjes",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
           "product_id": "ah_wi461772_2026-10-26",
@@ -4724,7 +4761,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4751,7 +4788,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4913,7 +4950,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5048,7 +5085,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5129,7 +5166,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5291,7 +5328,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5318,7 +5355,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5534,7 +5571,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5561,7 +5598,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5588,7 +5625,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5615,7 +5652,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5669,7 +5706,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5696,7 +5733,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5723,7 +5760,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5777,7 +5814,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5831,7 +5868,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5858,7 +5895,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5912,7 +5949,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5939,7 +5976,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5966,7 +6003,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6020,7 +6057,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6074,7 +6111,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6128,7 +6165,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6155,7 +6192,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6182,7 +6219,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6209,7 +6246,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6290,7 +6327,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6371,7 +6408,7 @@
           "valid_from": "2026-10-26",
           "valid_until": "2026-11-01",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-01T13:38:45.149480+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         }
       ],
@@ -7327,6 +7364,156 @@
           "source": "PrijsProfeet product search"
         },
         {
+          "name": "AH Loaded dip zalm met kappertjes",
+          "quantity": "150 g",
+          "price": 3.29,
+          "product_url": "https://www.ah.nl/producten/product/wi604942/ah-loaded-dip-zalm-met-kappertjes",
+          "product_id": "ah_wi604942_2026-10-26",
+          "base_product_id": "ah_wi604942",
+          "extracted_at": "2026-11-01T00:00:33.896000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Fish Tales Ansjovisfilets met kappertjes",
+          "quantity": "50 g",
+          "price": 3.29,
+          "product_url": "https://www.ah.nl/producten/product/wi496876/fish-tales-ansjovisfilets-met-kappertjes",
+          "product_id": "ah_wi496876_2026-10-26",
+          "base_product_id": "ah_wi496876",
+          "extracted_at": "2026-11-01T00:00:33.560000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "AH Salamirolletjes geitenkaas",
+          "quantity": "75 g",
+          "price": 3.59,
+          "product_url": "https://www.ah.nl/producten/product/wi605087/ah-salamirolletjes-geitenkaas",
+          "product_id": "ah_wi605087_2026-10-26",
+          "base_product_id": "ah_wi605087",
+          "extracted_at": "2026-11-01T00:00:33.896000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "AH Geitenkaas 50+ gerijpt",
+          "quantity": "71 g",
+          "price": 2.49,
+          "product_url": "https://www.ah.nl/producten/product/wi478023/ah-geitenkaas-50-gerijpt",
+          "product_id": "ah_wi478023_2026-10-26",
+          "base_product_id": "ah_wi478023",
+          "extracted_at": "2026-11-01T00:00:33.747000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "AH Saladbowl biet geitenkaas",
+          "quantity": "400 g",
+          "price": 6.49,
+          "product_url": "https://www.ah.nl/producten/product/wi628019/ah-saladbowl-biet-geitenkaas",
+          "product_id": "ah_wi628019_2026-10-26",
+          "base_product_id": "ah_wi628019",
+          "extracted_at": "2026-11-01T00:00:33.388000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "AH Roomkaas rode biet & geitenkaas",
+          "quantity": "125 g",
+          "price": 2.89,
+          "product_url": "https://www.ah.nl/producten/product/wi604909/ah-roomkaas-rode-biet-en-geitenkaas",
+          "product_id": "ah_wi604909_2026-10-26",
+          "base_product_id": "ah_wi604909",
+          "extracted_at": "2026-11-01T00:00:33.885000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "AH Geitenkaas koriander 50+ plak",
+          "quantity": "ca. 215 g",
+          "price": 5.54,
+          "product_url": "https://www.ah.nl/producten/product/wi197964/ah-geitenkaas-koriander-50-plak",
+          "product_id": "ah_wi197964_2026-10-26",
+          "base_product_id": "ah_wi197964",
+          "extracted_at": "2026-11-01T00:00:33.740000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Nestlé Little Rockets Knijpfruit banaan 2+",
+          "quantity": "150 g",
+          "price": 1.99,
+          "product_url": "https://www.ah.nl/producten/product/wi511280/nestle%CC%81-little-rockets-knijpfruit-banaan-2",
+          "product_id": "ah_wi511280_2026-10-26",
+          "base_product_id": "ah_wi511280",
+          "extracted_at": "2026-11-01T00:00:32.758000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Nestlé Little Rockets Knijpfruit pompoen 2+",
+          "quantity": "150 g",
+          "price": 1.99,
+          "product_url": "https://www.ah.nl/producten/product/wi511279/nestle%CC%81-little-rockets-knijpfruit-pompoen-2",
+          "product_id": "ah_wi511279_2026-10-26",
+          "base_product_id": "ah_wi511279",
+          "extracted_at": "2026-11-01T00:00:32.762000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Huggies Little swimmers maat 5-6",
+          "quantity": "11 stuks",
+          "price": 7.49,
+          "product_url": "https://www.ah.nl/producten/product/wi210139/huggies-little-swimmers-maat-5-6",
+          "product_id": "ah_wi210139_2026-10-26",
+          "base_product_id": "ah_wi210139",
+          "extracted_at": "2026-11-01T00:00:35.795000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Huggies Little swimmers maat 3-4",
+          "quantity": "12 stuks",
+          "price": 7.49,
+          "product_url": "https://www.ah.nl/producten/product/wi71096/huggies-little-swimmers-maat-3-4",
+          "product_id": "ah_wi71096_2026-10-26",
+          "base_product_id": "ah_wi71096",
+          "extracted_at": "2026-11-01T00:00:35.801000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Upfront Gel citroen smaak",
+          "quantity": "50 g",
+          "price": 1.99,
+          "product_url": "https://www.ah.nl/producten/product/wi576782/upfront-gel-citroen-smaak",
+          "product_id": "ah_wi576782_2026-10-26",
+          "base_product_id": "ah_wi576782",
+          "extracted_at": "2026-11-01T00:00:35.312000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Upfront Gel framboos smaak",
+          "quantity": "50 g",
+          "price": 1.99,
+          "product_url": "https://www.ah.nl/producten/product/wi584830/upfront-gel-framboos-smaak",
+          "product_id": "ah_wi584830_2026-10-26",
+          "base_product_id": "ah_wi584830",
+          "extracted_at": "2026-11-01T00:00:35.317000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "NIVEA Men sensitive gezichtsreiniger gel",
+          "quantity": "100 ml",
+          "price": 9.99,
+          "product_url": "https://www.ah.nl/producten/product/wi160441/nivea-men-sensitive-gezichtsreiniger-gel",
+          "product_id": "ah_wi160441_2026-10-26",
+          "base_product_id": "ah_wi160441",
+          "extracted_at": "2026-11-01T00:00:35.168000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Taksi Jungle mysterie editie geel",
+          "quantity": "1,5 l",
+          "price": 1.99,
+          "product_url": "https://www.ah.nl/producten/product/wi607333/taksi-jungle-mysterie-editie-geel",
+          "product_id": "ah_wi607333_2026-10-26",
+          "base_product_id": "ah_wi607333",
+          "extracted_at": "2026-11-01T00:00:34.650000",
+          "source": "PrijsProfeet product search"
+        },
+        {
           "name": "AH Excellent Fuet zwarte peper",
           "quantity": "150 g",
           "price": 3.99,
@@ -7857,16 +8044,6 @@
           "source": "PrijsProfeet product search"
         },
         {
-          "name": "AH Loaded dip zalm met kappertjes",
-          "quantity": "150 g",
-          "price": 3.29,
-          "product_url": "https://www.ah.nl/producten/product/wi604942/ah-loaded-dip-zalm-met-kappertjes",
-          "product_id": "ah_wi604942_2026-10-26",
-          "base_product_id": "ah_wi604942",
-          "extracted_at": "2026-10-31T00:00:27.050000",
-          "source": "PrijsProfeet product search"
-        },
-        {
           "name": "Johma Zalm salade",
           "quantity": "175 g",
           "price": 4.15,
@@ -8209,7 +8386,7 @@
       ]
     },
     "Lidl": {
-      "updated_at": "2026-11-01T09:28:32.071273+00:00",
+      "updated_at": "2026-11-01T13:38:45.149480+00:00",
       "deals": [
         {
           "product_id": "lidl_11210283_2026-10-30",
