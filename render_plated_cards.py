@@ -1,8 +1,8 @@
 """Publish readable original Plated card previews for queued PDF scans."""
-import argparse, hashlib, io, json, subprocess, tempfile, zipfile
+import argparse, hashlib, json, shutil, subprocess, tempfile, zipfile
 from pathlib import Path
 from PIL import Image
-from pypdf import PdfReader,PdfWriter
+from pypdf import PdfReader
 
 def data(path,default):
  p=Path(path)
@@ -28,12 +28,22 @@ def run(archive,queue,root="hellofresh",batch=20):
  failures=[]
  with zipfile.ZipFile(archive) as z:
   available=set(z.namelist())
-  for r in records:
+  # Publish missing cards first, then replace legacy reserialized PDFs with
+  # byte-identical source copies. Both phases are resumable via source_sha256.
+  def entry(r):
+   return m["recipes"].get("plated-release-"+r.get("source_identity",""),{})
+  pending=[r for r in records if r.get("source_identity") and r.get("source_member")
+           and not entry(r).get("all_pages_in_pdf")]
+  legacy=[r for r in records if r.get("source_identity") and r.get("source_member")
+          and entry(r).get("all_pages_in_pdf") and not entry(r).get("source_sha256")]
+  for r in pending+legacy:
    identity=r.get("source_identity")
    member=r.get("source_member")
    if not identity or not member:continue
    key="plated-release-"+identity
-   if key in m["recipes"] and m["recipes"][key].get("all_pages_in_pdf"):continue
+   old_entry=m["recipes"].get(key,{})
+   legacy_copy=bool(old_entry.get("all_pages_in_pdf"))
+   if legacy_copy and old_entry.get("source_sha256"):continue
    if added>=batch:break
    if member not in available:
     failures.append(member+" not found in ZIP")
@@ -51,27 +61,34 @@ def run(archive,queue,root="hellofresh",batch=20):
        if total>80*1024*1024:raise ValueError("Oversized PDF")
        f.write(chunk)
      reader=PdfReader(str(path))
-     writer=PdfWriter()
-     preview={}
-     for page,label in ((1,"front"),(2,"ingredients")):
-      if page>len(reader.pages):continue
-      
-      target=out/(stem+"-"+label+".webp")
-      raster(path,page,target)
-      preview[label]="plated-previews/"+target.name
-     if not preview:raise ValueError("Empty PDF")
-     for page in reader.pages:writer.add_page(page)
+     if not reader.pages:raise ValueError("Empty PDF")
+     preview=dict(old_entry)
+     if not legacy_copy:
+      for page,label in ((1,"front"),(2,"ingredients")):
+       if page>len(reader.pages):continue
+       target=out/(stem+"-"+label+".webp")
+       raster(path,page,target)
+       preview[label]="plated-previews/"+target.name
+     # PdfWriter reserializes the document and can discard metadata or
+     # attachments. Publish the original PDF bytes, atomically, instead.
+     pdf=out/(stem+"-origineel.pdf")
+     temporary=out/(stem+"-origineel.pdf.tmp")
+     shutil.copyfile(path,temporary)
+     temporary.replace(pdf)
      preview["all_pages_in_pdf"]=True
      preview["source_pdf_page_count"]=len(reader.pages)
-     pdf=out/(stem+"-origineel.pdf")
-     with pdf.open("wb") as file:writer.write(file)
      preview["original_pdf"]="plated-previews/"+pdf.name
-     m["recipes"][key]={**m["recipes"].get(key,{}),**preview}
+     preview["source_sha256"]=hashlib.sha256(path.read_bytes()).hexdigest()
+     m["recipes"][key]=preview
      added+=1
    except Exception as e:
     failures.append(member+": "+str(e)[:120])
-    for p in out.glob(stem+"-*"):p.unlink(missing_ok=True)
+    (out/(stem+"-origineel.pdf.tmp")).unlink(missing_ok=True)
+    # Never delete previously published source cards on a failed retry.
+    if not old_entry:
+     for p in out.glob(stem+"-*"):p.unlink(missing_ok=True)
  m["metadata"]={"rendered":len(m["recipes"]),"queue_count":len(records),
+                "byte_identical_originals":sum(bool(v.get("source_sha256")) for v in m["recipes"].values()),
                 "status":"source PDF page copies; OCR not verified",
                 "failures_this_run":failures[:15]}
  manifestpath.write_text(json.dumps(m,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
