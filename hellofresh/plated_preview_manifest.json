@@ -3101,12 +3101,268 @@
       "source_pdf_page_count": 2,
       "original_pdf": "plated-previews/03f046e52d9d9e09dc-origineel.pdf",
       "source_sha256": "7593c3684c997a35a5a0fea70c6bcc0fd3aa7bcd12e5c47fa2a2b4f4404e34c6"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spanakopita Lamb Meatloaf (4).pdf": {
+      "front": "plated-previews/73241d07b7fd45c013-front.webp",
+      "ingredients": "plated-previews/73241d07b7fd45c013-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/73241d07b7fd45c013-origineel.pdf",
+      "source_sha256": "511f535fcf571a597aea970f5883d03e56c3208cf01d178dafae270770deec9e"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spanish-Style Chicken Thighs.pdf": {
+      "front": "plated-previews/0e818e699dac7f9d11-front.webp",
+      "ingredients": "plated-previews/0e818e699dac7f9d11-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/0e818e699dac7f9d11-origineel.pdf",
+      "source_sha256": "071b9d3c8be8f6a08d8478a443574b4ed3c9299e72c8fd86110ea72590f5d94e"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spanish-Style Steak.pdf": {
+      "front": "plated-previews/87743d9d3296fdc01f-front.webp",
+      "ingredients": "plated-previews/87743d9d3296fdc01f-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/87743d9d3296fdc01f-origineel.pdf",
+      "source_sha256": "ba2c1e6ba6a95eca68ac226d31ea98f8ddec5bd78cc1a8f509eb7d9bd22daa12"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spicy Crunchy Shrimp Bowls.pdf": {
+      "front": "plated-previews/d9a778ff59cc0e8b9b-front.webp",
+      "ingredients": "plated-previews/d9a778ff59cc0e8b9b-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/d9a778ff59cc0e8b9b-origineel.pdf",
+      "source_sha256": "00b1648fd2974781d83e0cfa8050f8a4bde8697be391c1a63d3956b1b7bd101b"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spicy Sambal Pork Stir-Fry.pdf": {
+      "front": "plated-previews/51f95b7a1df01064ef-front.webp",
+      "ingredients": "plated-previews/51f95b7a1df01064ef-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/51f95b7a1df01064ef-origineel.pdf",
+      "source_sha256": "9ea7275fb8514b3b3281789dbdf44787618019727bbd86a7a2526c08968f2a34"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spicy Sausage and Sourdough Panade (4).pdf": {
+      "front": "plated-previews/d3c24655f0bc7ae84c-front.webp",
+      "ingredients": "plated-previews/d3c24655f0bc7ae84c-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/d3c24655f0bc7ae84c-origineel.pdf",
+      "source_sha256": "d4bd0e0e2966492d0498781a8cf282643c3d4c6a80db4ff6c78c2a3b0f1c8eb7"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spicy Sausage Ragu (4).pdf": {
+      "front": "plated-previews/da03eea58f819e1781-front.webp",
+      "ingredients": "plated-previews/da03eea58f819e1781-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/da03eea58f819e1781-origineel.pdf",
+      "source_sha256": "ad67b654edda748adc895540a8808f008b477fc212530db2a3343e1c06faa593"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/spicy scallop linguine with creamy marinara and parsley breadcrumbs-7569.pdf": {
+      "front": "plated-previews/788a70433be2cea4f0-front.webp",
+      "ingredients": "plated-previews/788a70433be2cea4f0-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/788a70433be2cea4f0-origineel.pdf",
+      "source_sha256": "23dece9fd6f48f1ccbc72f5b7dbbec84d66955b9e729f2f12061bf027f5c30ab"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spinach and Artichoke Turnovers.pdf": {
+      "front": "plated-previews/7ed8fe12a18e0ffc3c-front.webp",
+      "ingredients": "plated-previews/7ed8fe12a18e0ffc3c-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/7ed8fe12a18e0ffc3c-origineel.pdf",
+      "source_sha256": "bc76e8e3feadcf9a29eda4ca0d346a23cf7a8eccbad45cb58ee44df791fa83bc"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/spinach and brown rice bowls with crispy prosciutto, roasted vegetables, and goat cheese-5957.pdf": {
+      "front": "plated-previews/914f180dbc453db2cd-front.webp",
+      "ingredients": "plated-previews/914f180dbc453db2cd-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/914f180dbc453db2cd-origineel.pdf",
+      "source_sha256": "dbffe4f773bfcdaa2610d0a2ff5b1325283d119cbed0dfd179efa07723ae8a01"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spring Minestrone with Parmesan Crisps.PDF": {
+      "front": "plated-previews/e06557290e7e1b3f41-front.webp",
+      "ingredients": "plated-previews/e06557290e7e1b3f41-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/e06557290e7e1b3f41-origineel.pdf",
+      "source_sha256": "06cb7503f55f56c87055405769ddd12fecdd787d1a4aeb217e522a7061cba20f"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Spring Vegetable Tarts.pdf": {
+      "front": "plated-previews/3d37701e43cff014a5-front.webp",
+      "ingredients": "plated-previews/3d37701e43cff014a5-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/3d37701e43cff014a5-origineel.pdf",
+      "source_sha256": "1a6292f41d9154ddcfd3141c48bf25f821dab41a33a590bda567444d457ad322"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Squash Parmesan .pdf": {
+      "front": "plated-previews/3333d9ba4aa676d053-front.webp",
+      "ingredients": "plated-previews/3333d9ba4aa676d053-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/3333d9ba4aa676d053-origineel.pdf",
+      "source_sha256": "d80118d382dbf63454d104c790a5297c275d2fcbf10be53a03e09705eb259086"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Steak and Kimchi Quesadillas.pdf": {
+      "front": "plated-previews/bf8bc81aef5238ac36-front.webp",
+      "ingredients": "plated-previews/bf8bc81aef5238ac36-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/bf8bc81aef5238ac36-origineel.pdf",
+      "source_sha256": "3e883461cd0cac873dfdec152ad243235beff496cbaf35abd7ce996cae23db37"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Steak au Poivre (4).pdf": {
+      "front": "plated-previews/ad3c7e29fd65ea048d-front.webp",
+      "ingredients": "plated-previews/ad3c7e29fd65ea048d-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/ad3c7e29fd65ea048d-origineel.pdf",
+      "source_sha256": "c25c5147a3c80a287dea89bdb7af87c912b8818e96bc6c14e0c4e2c26f8bee3b"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/steak-sherry-marinated.pdf": {
+      "front": "plated-previews/42e73e8ae78fb21ab1-front.webp",
+      "ingredients": "plated-previews/42e73e8ae78fb21ab1-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/42e73e8ae78fb21ab1-origineel.pdf",
+      "source_sha256": "afa13c41c2947fc9046f0ad5d87aa9932433e52333692a726611ff49f496ab59"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Sticky Apricot-Glazed Salmon.pdf": {
+      "front": "plated-previews/ce53f5f00c12a8d54e-front.webp",
+      "ingredients": "plated-previews/ce53f5f00c12a8d54e-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/ce53f5f00c12a8d54e-origineel.pdf",
+      "source_sha256": "df670ce63702bc5ed4a7c6cd37e8f79c439058e2bd6fe721a0aead9d1f4da1b0"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Sticky monkey bread with walnuts and cinnamon.pdf": {
+      "front": "plated-previews/af29ad6050f4f3f1c4-front.webp",
+      "ingredients": "plated-previews/af29ad6050f4f3f1c4-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/af29ad6050f4f3f1c4-origineel.pdf",
+      "source_sha256": "caa649e50130a2c894d7c43f3dec266deb73fd3676281fa653a9e1efdda4488e"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Sticky Sesame Cauliflower.pdf": {
+      "front": "plated-previews/dd1080f0f364fc6bf9-front.webp",
+      "ingredients": "plated-previews/dd1080f0f364fc6bf9-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/dd1080f0f364fc6bf9-origineel.pdf",
+      "source_sha256": "6227b936db9302da34cd40583de4f944d53fe29e2c0cccf8bfde39b9366884a3"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Summer Berry Galettes.pdf": {
+      "front": "plated-previews/09c620c2e41df3c522-front.webp",
+      "ingredients": "plated-previews/09c620c2e41df3c522-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/09c620c2e41df3c522-origineel.pdf",
+      "source_sha256": "84418d09b7f134f509851d2ba118db477bc7da675780ad683d4dc82ab1532f1f"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Summer Quinoa Bowl with Burrata.pdf": {
+      "front": "plated-previews/1267cee9a281fb62ea-front.webp",
+      "ingredients": "plated-previews/1267cee9a281fb62ea-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/1267cee9a281fb62ea-origineel.pdf",
+      "source_sha256": "6b57f16488402c925b2da69894c46564712ff24eaa6d9a59c9140ffbbdb37f72"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/summer squash tacos with refried black beans and chimichurri slaw-5071.pdf": {
+      "front": "plated-previews/16cf3d9f98ee96fd7b-front.webp",
+      "ingredients": "plated-previews/16cf3d9f98ee96fd7b-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/16cf3d9f98ee96fd7b-origineel.pdf",
+      "source_sha256": "cd516c9357b65c05a41ca48d5a1c09b9f120dfe1e2f7a956fe49ce28f24425d2"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Summer Vegetable Pasta.pdf": {
+      "front": "plated-previews/7b813bbf9dc7a30793-front.webp",
+      "ingredients": "plated-previews/7b813bbf9dc7a30793-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/7b813bbf9dc7a30793-origineel.pdf",
+      "source_sha256": "076a4b6ce788e2397640d88ffd7c84a16cd20df3211d485fa69daa5e5cd7a45a"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/sweet potato tostadas with refried black beans and crunchy slaw-3850.pdf": {
+      "front": "plated-previews/cecde02308533b35ae-front.webp",
+      "ingredients": "plated-previews/cecde02308533b35ae-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/cecde02308533b35ae-origineel.pdf",
+      "source_sha256": "a65740c9b35628455a36cf2c0c4f0c1682c242e0f03bb61ac4a5c0a03ff43651"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Szechuan Lamb Noodles with Bok Choy.PDF": {
+      "front": "plated-previews/8e9871fb74bd6b148c-front.webp",
+      "ingredients": "plated-previews/8e9871fb74bd6b148c-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/8e9871fb74bd6b148c-origineel.pdf",
+      "source_sha256": "54d747824b554682ca0f2909e473c508362f8d1fdd636fd0f13634c9a2507e28"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Szechuan-Style Pork.pdf": {
+      "front": "plated-previews/fae87ceeae2567b3c7-front.webp",
+      "ingredients": "plated-previews/fae87ceeae2567b3c7-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/fae87ceeae2567b3c7-origineel.pdf",
+      "source_sha256": "140c351108e9720b8890b84e2d060126535c775b3f1d6c6c1f65cf2306fe870f"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Taiwanese Chicken Lettuce Wraps (4).pdf": {
+      "front": "plated-previews/04dd1cbc5653e75fce-front.webp",
+      "ingredients": "plated-previews/04dd1cbc5653e75fce-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/04dd1cbc5653e75fce-origineel.pdf",
+      "source_sha256": "633ebde7daea7a7181a690160e40abe1fe89cdb6371de3a594f995080d9f699d"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Tamale Pie.pdf": {
+      "front": "plated-previews/d79a753259e3b45502-front.webp",
+      "ingredients": "plated-previews/d79a753259e3b45502-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/d79a753259e3b45502-origineel.pdf",
+      "source_sha256": "19933a9366c6f97c5f6f16bb404b568d85fdf124df39efd80c015128a1a46244"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Tarragon Chicken w vegetable gratin.pdf": {
+      "front": "plated-previews/da7bd70e143f5fb965-front.webp",
+      "ingredients": "plated-previews/da7bd70e143f5fb965-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/da7bd70e143f5fb965-origineel.pdf",
+      "source_sha256": "56a84e6a3461897574d18ecf29b93d1d6f2568dc99c44aa2bcfc8a434e3da409"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Teriyaki Salmon.pdf": {
+      "front": "plated-previews/f84c261d0836bd9eae-front.webp",
+      "ingredients": "plated-previews/f84c261d0836bd9eae-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/f84c261d0836bd9eae-origineel.pdf",
+      "source_sha256": "47eebb1e974726193b14d7fd084a67fa3ac034da8629965097b4ba1ce64e0390"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/thai butternut and cauliflower bowls with snow peas and peanut sauce-6106.pdf": {
+      "front": "plated-previews/d65b9a9e983f636e11-front.webp",
+      "ingredients": "plated-previews/d65b9a9e983f636e11-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/d65b9a9e983f636e11-origineel.pdf",
+      "source_sha256": "44b201a7e4035d49b67f64b5e85ccb159870c2bff986507826dcd3a936e22bd6"
+    },
+    "plated-release-Plated.recipes.from.Marc.Hummel.Download.folder.-20261027T153826Z-1-002.zip::Plated recipes from Marc Hummel [Download folder]/Thai Chicken Larb (4).pdf": {
+      "front": "plated-previews/2a56e773a36a58f191-front.webp",
+      "ingredients": "plated-previews/2a56e773a36a58f191-ingredients.webp",
+      "all_pages_in_pdf": true,
+      "source_pdf_page_count": 2,
+      "original_pdf": "plated-previews/2a56e773a36a58f191-origineel.pdf",
+      "source_sha256": "f128308893282f4d4a5b6bf391439cdd0b6d1b7a6bf38cd2fffb773d28aa8182"
     }
   },
   "metadata": {
-    "rendered": 440,
+    "rendered": 472,
     "queue_count": 504,
-    "byte_identical_originals": 24,
+    "byte_identical_originals": 56,
     "status": "source PDF page copies; OCR not verified",
     "failures_this_run": []
   }
