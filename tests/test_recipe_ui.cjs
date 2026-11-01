@@ -104,6 +104,7 @@ test('HFresh links can be connected, removed, imported and filtered without pric
  const button=[...d.querySelectorAll('button[data-id]')].find(b=>b.dataset.id===String(recipe.id));
  assert.ok(button,'original recipe is searchable');
  const initialPrice=button.closest('.card').querySelector('.main-cost').textContent;
+ assert.equal(button.closest('.card').querySelector('.hfresh-quick a').href,'https://hfresh.info/nl-NL/recipes/example-123');
  button.click();
  assert.equal(d.querySelector('.hfresh-search').href,'https://hfresh.info/nl-NL?search='+encodeURIComponent(recipe.title_extracted));
  assert.equal(d.querySelector('.hfresh-visit').href,'https://hfresh.info/nl-NL/recipes/example-123');
