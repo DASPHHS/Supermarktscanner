@@ -29,6 +29,7 @@ function hfreshDetail(r){
  '<p class="sub">Voor dit recept is nog geen HFresh-pagina gekoppeld. Dit verandert niets aan de prijsberekening.</p>')+
  '<p><a href="https://hfresh.info/nl-NL" target="_blank" rel="noopener noreferrer">Open HFresh en zoek de onderstaande recepttitel</a></p>'+
  '<label for="hfresh-recipe-title">Zoektekst</label><input id="hfresh-recipe-title" class="field" readonly value="'+esc(displayTitle(r))+'">'+
+ '<div class="hfresh-actions"><button id="hfresh-copy" type="button" class="action">Kopieer recepttitel</button></div>'+ 
  '<label for="hfresh-link-input">Plak hier de URL van de gevonden HFresh-receptpagina</label>'+
  '<input id="hfresh-link-input" class="field" type="url" autocomplete="off" placeholder="https://hfresh.info/nl-NL/recipes/receptnaam-123" value="'+esc(local)+'">'+
  '<div class="hfresh-actions"><button id="hfresh-save" type="button" class="action">Bewaar lokale koppeling</button>'+
@@ -221,7 +222,7 @@ function refreshHealth(){
  renderHealth();
  });
 }
-function render(){if(!$('cards'))return;const q=norm($('q').value),d=$('dish').value,status=$('status').value;const full=all(),linkFilter=$('hfresh-link-filter')?.value||'all';let rows=full.filter(r=>(linkFilter==='all'||(linkFilter==='linked')===Boolean(hfreshLink(r)))&&(state.source==='Alle'||r.source===state.source)&& (state.kind==='alle'||protein(r)===state.kind)&&(!d||dish(r)===d)&&norm(searchableText(r)).includes(q)&&(!status||(status==='yes'?completePrice(r)!==null:completePrice(r)===null))&&(!$('offers-only')?.checked||(completePrice(r)!==null&&offerWords(r).length>0)));
+function render(){if(!$('cards'))return;const q=norm($('q').value),d=$('dish').value,status=$('status').value;const full=all(),linkFilter=$('hfresh-link-filter')?.value||'all';let rows=full.filter(r=>(linkFilter==='all'||(r.source==='HelloFresh'&&(linkFilter==='linked')===Boolean(hfreshLink(r))))&&(state.source==='Alle'||r.source===state.source)&& (state.kind==='alle'||protein(r)===state.kind)&&(!d||dish(r)===d)&&norm(searchableText(r)).includes(q)&&(!status||(status==='yes'?completePrice(r)!==null:completePrice(r)===null))&&(!$('offers-only')?.checked||(completePrice(r)!==null&&offerWords(r).length>0)));
 const order=$('sort').value;$('sort').querySelector('[value=cheap]').textContent=state.basis==='cash'?'Laagste kassabon eerst':'Laagste verbruikskosten eerst';rows.sort((a,b)=>{if(order==='cheap')return (completePrice(a)===null)-(completePrice(b)===null)||(rankingPrice(a)??Infinity)-(rankingPrice(b)??Infinity)||displayTitle(a).localeCompare(displayTitle(b),'nl');if(order==='leastmissing')return ((priceCoverage(a).unknown?Infinity:priceCoverage(a).missing)-(priceCoverage(b).unknown?Infinity:priceCoverage(b).missing))||a.title_extracted.localeCompare(b.title_extracted,'nl');if(order==='offers')return offerSort(a,b);if(order==='matches')return incomplete(b)-incomplete(a)||a.title_extracted.localeCompare(b.title_extracted,'nl');return a.title_extracted.localeCompare(b.title_extracted,'nl')});
 if(state.top)rows=rows.filter(r=>completePrice(r)!==null).sort((a,b)=>rankingPrice(a)-rankingPrice(b)).slice(0,10);
 const scope=full.filter(r=>state.source==='Alle'||r.source===state.source),covered=scope.filter(r=>completePrice(r)!==null).length,offersCount=rows.filter(r=>completePrice(r)!==null&&offerWords(r).length>0).length;$('count').textContent=rows.length+' getoond · '+offersCount+' met doorgerekende actie · '+covered+' van '+scope.length+' met volledige raming · '+(state.store==='Voordeligste'?'laagste beschikbare raming per recept':state.store)+(state.basis==='cash'?' · kassabon gekozen producten':' · verbruikskosten')+(state.top?' · top 10':order==='offers'?' · doorgerekende actie-alternatieven → laagste kassabon':'');
@@ -277,6 +278,14 @@ function details(id){
  $('modal').classList.add('open');
  $('close').onclick=()=>{$('modal').classList.remove('open');state.selectedId=null;};
  if(r.source==='HelloFresh'){
+  $('hfresh-copy')?.addEventListener('click',async()=>{
+   const title=displayTitle(r),message=$('hfresh-link-message');
+   try{
+    if(!navigator.clipboard?.writeText)throw Error('Niet beschikbaar');
+    await navigator.clipboard.writeText(title);
+    message.textContent='Recepttitel gekopieerd. Plak hem in het zoekveld van HFresh.';
+   }catch(_){const input=$('hfresh-recipe-title');input.focus();input.select();message.textContent='Selecteer en kopieer de gemarkeerde titel met Ctrl+C of Cmd+C.';}
+  });
   $('hfresh-save')?.addEventListener('click',()=>{
    const input=$('hfresh-link-input'),message=$('hfresh-link-message');
    const url=HFreshLinks.safeUrl(input?.value);
