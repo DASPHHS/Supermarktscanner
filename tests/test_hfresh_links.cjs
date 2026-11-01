@@ -37,3 +37,9 @@ test('export/import only contains validated links, not ingredients or prices',()
  assert.equal(JSON.stringify(json).includes('price_eur'),false);
  assert.equal(L.linkFor({id:'missing',source:'HelloFresh'}, {}, json.recipe_links),null);
 });
+
+test('public HFresh search link pre-fills the recipe title without an API key',()=>{
+ const url=L.searchUrl('Kipfilet in mosterdroomsaus & courgette');
+ assert.equal(url,'https://hfresh.info/nl-NL?search=Kipfilet%20in%20mosterdroomsaus%20%26%20courgette');
+ assert.equal(L.searchUrl(''),'https://hfresh.info/nl-NL');
+});
