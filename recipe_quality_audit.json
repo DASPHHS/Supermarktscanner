@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-01T06:57:15.444095+00:00",
+  "generated_at_utc": "2026-11-01T07:21:18.930154+00:00",
   "status": "PASS_WITH_MANUAL_REVIEW",
   "release_archive_pdfs": 533,
   "release_completed": 533,
@@ -11,6 +11,9 @@
   "plated_recipes_with_unconfirmed_portions": 351,
   "plated_unmapped_ingredient_labels": 1891,
   "plated_source_cards_with_original_pdf": 416,
+  "plated_source_cards_remaining": 88,
+  "plated_source_cards_with_source_sha256": 0,
+  "plated_original_pdfs_pending_exact_copy": 504,
   "hellofresh_recipes_in_index": 225,
   "hellofresh_recipes_with_original_pdf": 225,
   "verified_pricing_eligible_plated": 0,
