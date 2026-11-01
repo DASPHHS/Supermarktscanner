@@ -68,6 +68,9 @@ def build_crossrefs(recipes: list[dict], external: list[dict]) -> dict:
         # No quantities, ingredient substitutions, prices or verification flags.
         entry = {"url": safe_recipe_url(ext["url"]), "source_id": ext["id"],
                  "title": ext["name"], "match": "exact_title_only"}
+        headline = ext.get("headline")
+        if isinstance(headline, str) and 0 < len(headline.strip()) <= 160:
+            entry["headline"] = headline.strip()
         for field in ("prep_time", "total_time"):
             value = ext.get(field)
             if type(value) is int and 0 < value <= 600:
