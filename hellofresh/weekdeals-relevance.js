@@ -155,7 +155,7 @@ function build(recipes,feed,now=new Date()){
  const families=[...byFamily.values()].filter(x=>x.recipes.length&&x.offers.length).map(group=>{
   group.offers.sort((a,b)=>a.store.localeCompare(b.store,'nl')||a.name.localeCompare(b.name,'nl'));
   return {id:group.id,label:group.label,recipe_count:group.recipes.length,
-   offer_count:group.offers.length,recipes:group.recipes.slice(0,5),offers:group.offers.slice(0,60)};
+   offer_count:group.offers.length,recipe_ids:group.recipes.map(r=>r.id),recipes:group.recipes.slice(0,5),offers:group.offers.slice(0,60)};
  }).sort((a,b)=>b.recipe_count-a.recipe_count||b.offer_count-a.offer_count||a.label.localeCompare(b.label,'nl'));
  return {status:'ok',families,byRecipe,updated_at_utc:feed.updated_at_utc,as_of_date:feed.as_of_date,
   recipe_count:indexed,ingredient_count:families.length,offer_count:families.reduce((n,x)=>n+x.offer_count,0),
