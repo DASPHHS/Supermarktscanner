@@ -4,25 +4,38 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const eur=n=>new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR'}).format(n);
-const state={recipes:[],extra:[],prices:new Map(),deals:{},dealsMeta:{},offerCache:new Map(),ingredientDealCache:new Map(),storeCache:new Map(),priceDate:null,previews:{},estimates:{},health:{},previewsProgress:{},quality:{},nlCatalog:{},hfreshMatches:{},source:'HelloFresh',store:'Voordeligste',cards:false,basis:'cash',selectedId:null,kind:'alle',only:'all',sort:'offers',top:false,shown:36,loading:true};
+const state={recipes:[],extra:[],prices:new Map(),deals:{},dealsMeta:{},offerCache:new Map(),ingredientDealCache:new Map(),storeCache:new Map(),priceDate:null,previews:{},estimates:{},health:{},previewsProgress:{},quality:{},nlCatalog:{},hfreshMatches:{},hfreshLocal:{},source:'HelloFresh',store:'Voordeligste',cards:false,basis:'cash',selectedId:null,kind:'alle',only:'all',sort:'offers',top:false,shown:36,loading:true};
 const kinds={'alle':'Alles','vega':'Vega','kip':'Kip','vis':'Vis','vlees':'Vlees','onbekend':'Controleren'};
 function ingredients(r){return Array.isArray(r.ingredients_4p)?r.ingredients_4p:[]}
 function dutch(r){return r.source==='Plated' ? state.nlCatalog[r.source_identity||r.id.replace(/^plated-release-/,'')]||null : null}
 function displayTitle(r){return dutch(r)?.title_nl||r.title_extracted}
 function hfreshLink(r){
- if(r.source!=='HelloFresh')return null;
- const match=state.hfreshMatches[String(r.id)];
- if(!match||match.match!=='exact_title_only'||typeof match.url!=='string')return null;
- try{
-  const u=new URL(match.url);
-  if(u.protocol!=='https:'||!['hfresh.info','www.hfresh.info'].includes(u.hostname)||
-    !new RegExp('^/nl-NL/recipes/[a-z0-9-]+-[0-9]+/?$').test(u.pathname)||u.search||u.hash)return null;
-  return {url:u.href,total_time:match.total_time};
- }catch(_){return null}
+ return HFreshLinks.linkFor(r,state.hfreshMatches,state.hfreshLocal);
+}
+function refreshHFreshStatus(){
+ const el=$('hfresh-status');if(!el)return;
+ const local=Object.keys(HFreshLinks.cleanManual(state.hfreshLocal)).length;
+ const automatic=Object.keys(state.hfreshMatches).length;
+ el.textContent=automatic+' automatische titelverwijzingen · '+local+
+  ' handmatig in deze browser. Geen van deze koppelingen verifieert porties, ingrediënten of prijzen.';
 }
 function hfreshDetail(r){
- const ext=hfreshLink(r);
- return ext?'<section class="norm-section"><h3>Aanvullende onafhankelijke receptenbron</h3><p><a href="'+esc(ext.url)+'" target="_blank" rel="noopener noreferrer">Bekijk hetzelfde recept in HFresh</a>'+(Number.isInteger(ext.total_time)?' · '+ext.total_time+' minuten (externe opgave)':'')+'</p><p class="sub">Gekoppeld op exact overeenkomende recepttitel. Geen controle van dezelfde variant, hoeveelheden of prijzen; de oorspronkelijke kaart en eigen prijsberekening blijven leidend.</p></section>':'';
+ if(r.source!=='HelloFresh')return '';
+ const ext=hfreshLink(r),local=HFreshLinks.safeUrl(state.hfreshLocal[String(r.id)])||'';
+ const source=ext?.origin==='manual'?'Handmatig gekoppeld in deze browser':'Automatisch gekoppeld op titel';
+ return '<section class="norm-section" id="hfresh-detail"><h3>HFresh-receptenkoppeling</h3>'+
+ (ext?'<p><a class="hfresh-visit" href="'+esc(ext.url)+'" target="_blank" rel="noopener noreferrer">Open de gekoppelde HFresh-receptpagina</a>'+
+ (Number.isInteger(ext.total_time)?' · '+ext.total_time+' min volgens HFresh':'')+'</p><p class="sub">'+source+'. Dezelfde titel garandeert niet dezelfde receptvariant. Vergelijk ingrediënten en bijgerechten met de originele PDF.</p>'+(ext.headline?'<p class="sub">HFresh-ondertitel: '+esc(ext.headline)+'</p>':''):
+ '<p class="sub">Voor dit recept is nog geen HFresh-pagina gekoppeld. Dit verandert niets aan de prijsberekening.</p>')+
+ '<p><a class="hfresh-search" href="'+esc(HFreshLinks.searchUrl(displayTitle(r)))+'" target="_blank" rel="noopener noreferrer">Zoek dit recept direct in HFresh</a></p>'+
+ '<label for="hfresh-recipe-title">Zoektekst</label><input id="hfresh-recipe-title" class="field" readonly value="'+esc(displayTitle(r))+'">'+
+ '<div class="hfresh-actions"><button id="hfresh-copy" type="button" class="action">Kopieer recepttitel</button></div>'+ 
+ '<label for="hfresh-link-input">Plak hier de URL van de gevonden HFresh-receptpagina</label>'+
+ '<input id="hfresh-link-input" class="field" type="url" autocomplete="off" placeholder="https://hfresh.info/nl-NL/recipes/receptnaam-123" value="'+esc(local)+'">'+
+ '<div class="hfresh-actions"><button id="hfresh-save" type="button" class="action">Bewaar lokale koppeling</button>'+
+ (local?'<button id="hfresh-remove" type="button" class="action">Verwijder lokale koppeling</button>':'')+'</div>'+
+ '<p class="sub" id="hfresh-link-message" role="status">Alleen links op het domein hfresh.info met een Nederlandse receptpagina zijn toegestaan. Lokale koppelingen zijn geen verificatie.</p>'+
+ '</section>';
 }
 function translatedIngredients(r){const nl=dutch(r);return nl?.ingredients_nl?.length?nl.ingredients_nl:null}
 function displayIngredients(r){const nl=translatedIngredients(r);return nl?nl.map(i=>({name:i.name_nl,quantity:i.quantity_display_nl,original:i.original_name,confidence:i.translation_status,conversion:i.conversion_status})):(r.ingredients_2p||ingredients(r)).map(i=>({name:i.ingredient,quantity:r.ingredients_2p?i.quantity_2p_source:i.quantity_4p_source,original:i.ingredient,confidence:'source'}))}
@@ -209,7 +222,7 @@ function refreshHealth(){
  renderHealth();
  });
 }
-function render(){if(!$('cards'))return;const q=norm($('q').value),d=$('dish').value,status=$('status').value;const full=all();let rows=full.filter(r=>(state.source==='Alle'||r.source===state.source)&& (state.kind==='alle'||protein(r)===state.kind)&&(!d||dish(r)===d)&&norm(searchableText(r)).includes(q)&&(!status||(status==='yes'?completePrice(r)!==null:completePrice(r)===null))&&(!$('offers-only')?.checked||(completePrice(r)!==null&&offerWords(r).length>0)));
+function render(){if(!$('cards'))return;const q=norm($('q').value),d=$('dish').value,status=$('status').value;const full=all(),linkFilter=$('hfresh-link-filter')?.value||'all';let rows=full.filter(r=>(linkFilter==='all'||(r.source==='HelloFresh'&&(linkFilter==='linked')===Boolean(hfreshLink(r))))&&(state.source==='Alle'||r.source===state.source)&& (state.kind==='alle'||protein(r)===state.kind)&&(!d||dish(r)===d)&&norm(searchableText(r)).includes(q)&&(!status||(status==='yes'?completePrice(r)!==null:completePrice(r)===null))&&(!$('offers-only')?.checked||(completePrice(r)!==null&&offerWords(r).length>0)));
 const order=$('sort').value;$('sort').querySelector('[value=cheap]').textContent=state.basis==='cash'?'Laagste kassabon eerst':'Laagste verbruikskosten eerst';rows.sort((a,b)=>{if(order==='cheap')return (completePrice(a)===null)-(completePrice(b)===null)||(rankingPrice(a)??Infinity)-(rankingPrice(b)??Infinity)||displayTitle(a).localeCompare(displayTitle(b),'nl');if(order==='leastmissing')return ((priceCoverage(a).unknown?Infinity:priceCoverage(a).missing)-(priceCoverage(b).unknown?Infinity:priceCoverage(b).missing))||a.title_extracted.localeCompare(b.title_extracted,'nl');if(order==='offers')return offerSort(a,b);if(order==='matches')return incomplete(b)-incomplete(a)||a.title_extracted.localeCompare(b.title_extracted,'nl');return a.title_extracted.localeCompare(b.title_extracted,'nl')});
 if(state.top)rows=rows.filter(r=>completePrice(r)!==null).sort((a,b)=>rankingPrice(a)-rankingPrice(b)).slice(0,10);
 const scope=full.filter(r=>state.source==='Alle'||r.source===state.source),covered=scope.filter(r=>completePrice(r)!==null).length,offersCount=rows.filter(r=>completePrice(r)!==null&&offerWords(r).length>0).length;$('count').textContent=rows.length+' getoond · '+offersCount+' met doorgerekende actie · '+covered+' van '+scope.length+' met volledige raming · '+(state.store==='Voordeligste'?'laagste beschikbare raming per recept':state.store)+(state.basis==='cash'?' · kassabon gekozen producten':' · verbruikskosten')+(state.top?' · top 10':order==='offers'?' · doorgerekende actie-alternatieven → laagste kassabon':'');
@@ -224,7 +237,7 @@ $('cards').innerHTML=rows.slice(0,state.top?10:state.shown).map(r=>{
  const art=state.previews[r.id]?.front?'<img class="real-card-preview" loading="lazy" alt="Originele bronkaart van '+esc(displayTitle(r))+'" src="'+esc(state.previews[r.id].front)+'">':'<span>'+emoji[k]+'</span>';
  return '<article class="card"><div class="art '+k+'">'+art+'<span class="tag">'+esc(dish(r))+'</span></div>'+
  '<div class="content"><div class="meta">'+meta+'</div><h3>'+esc(displayTitle(r))+'</h3>'+
- '<div class="minor">'+esc(displayIngredients(r).slice(0,3).map(i=>i.name).join(' · ')||'Ingrediëntencontrole vereist')+'</div>'+ (hfreshLink(r)?'<p class="sub">Ook in onafhankelijke HFresh-databank</p>':'')+
+ '<div class="minor">'+esc(displayIngredients(r).slice(0,3).map(i=>i.name).join(' · ')||'Ingrediëntencontrole vereist')+'</div>'+ (r.source==='HelloFresh'?'<p class="hfresh-quick"><a href="'+esc(hfreshLink(r)?.url||HFreshLinks.searchUrl(displayTitle(r)))+'" target="_blank" rel="noopener noreferrer">'+(hfreshLink(r)?'Open HFresh-verwijzing (variant controleren)':'Zoek dit recept bij HFresh')+'</a></p>':'')+
  '<div class="main-cost '+priceClass+'"><strong>'+costLabel+'</strong><small>'+esc(costInfo)+'</small>'+(est?.scenario_offer?'<small>Met doorgerekend actiescenario · indicatief kassabonverschil '+eur(selectedStoreOption(r).savings)+'</small>':'')+'</div>'+
  cardOfferBlock(r)+
  '<div class="foot"><button type="button" class="action" data-id="'+esc(r.id)+'">Prijs &amp; acties bekijken →</button></div></div></article>';
@@ -264,26 +277,76 @@ function details(id){
  $('dialog').innerHTML='<button type="button" class="close" id="close" aria-label="Sluit recept">×</button><div class="meta">'+esc(r.source||'HelloFresh')+' · '+esc(protein(r))+'</div><h2>'+esc(displayTitle(r))+'</h2><p class="quality-label">Indicatieve prijsraming · twee personen · '+esc(shop)+'</p>'+total+outsidePriceCheck+external+'<h3>Vergelijk de winkels</h3><div class="price-table-wrap"><table class="price-table"><thead><tr><th>Winkel</th><th>Verbruik, 2 porties</th><th>Gekozen verpakkingen</th><th>Status</th></tr></thead><tbody>'+comparison+'</tbody></table></div><p class="sub">Elke raming gebruikt producten uit één winkel. Het kassabedrag hoort bij de getoonde productkeuzes; er is geen voorraad verondersteld. Voordeelpakken verlagen de verbruikskosten alleen als je de rest ook gebruikt. Kaartacties: '+(state.cards?'ingeschakeld':'uitgeschakeld')+'.</p>'+detailOfferBlock(r)+gaps+lineTable+norms+'<h3>Bronhoeveelheden ('+portions+' porties)</h3><ul>'+displayIngredients(r).map(i=>'<li>'+esc(i.quantity)+' '+esc(i.name)+'</li>').join('')+'</ul>'+(!r.table_repair?'<p class="notice">Deze bronkolom doorstaat de automatische tabelcontrole nog niet. Er wordt geen totaalraming van gemaakt.</p>':'<p class="sub">Herstelde bronkolom; de oorspronkelijke kaart blijft leidend. Een prijsraming is geen handmatig gecertificeerde receptprijs.</p>')+src+'<p class="sub">Prijsnormen: '+esc(e?.policy_version||'nog niet beschikbaar')+'. Water, energie, bezorging en reiskosten vallen buiten deze vergelijking. Filiaalprijzen kunnen afwijken.</p>';
  $('modal').classList.add('open');
  $('close').onclick=()=>{$('modal').classList.remove('open');state.selectedId=null;};
+ if(r.source==='HelloFresh'){
+  $('hfresh-copy')?.addEventListener('click',async()=>{
+   const title=displayTitle(r),message=$('hfresh-link-message');
+   try{
+    if(!navigator.clipboard?.writeText)throw Error('Niet beschikbaar');
+    await navigator.clipboard.writeText(title);
+    message.textContent='Recepttitel gekopieerd. Plak hem in het zoekveld van HFresh.';
+   }catch(_){const input=$('hfresh-recipe-title');input.focus();input.select();message.textContent='Selecteer en kopieer de gemarkeerde titel met Ctrl+C of Cmd+C.';}
+  });
+  $('hfresh-save')?.addEventListener('click',()=>{
+   const input=$('hfresh-link-input'),message=$('hfresh-link-message');
+   const url=HFreshLinks.safeUrl(input?.value);
+   if(!url){message.textContent='Ongeldige HFresh-receptlink. Gebruik een volledige HTTPS-link van hfresh.info/nl-NL/recipes/...';return;}
+   const next={...state.hfreshLocal,[String(r.id)]:url};
+   try{localStorage.setItem('hfresh-local-links-v1',JSON.stringify(HFreshLinks.exportManual(next).recipe_links));}
+   catch(_){message.textContent='Opslaan in deze browser is geblokkeerd. Controleer privacy-instellingen of opslagruimte.';return;}
+   state.hfreshLocal=HFreshLinks.cleanManual(next);refreshHFreshStatus();render();details(String(r.id));
+  });
+  $('hfresh-remove')?.addEventListener('click',()=>{
+   const next={...state.hfreshLocal};delete next[String(r.id)];
+   try{localStorage.setItem('hfresh-local-links-v1',JSON.stringify(HFreshLinks.exportManual(next).recipe_links));}
+   catch(_){$('hfresh-link-message').textContent='Verwijderen kon niet worden opgeslagen.';return;}
+   state.hfreshLocal=HFreshLinks.cleanManual(next);refreshHFreshStatus();render();details(String(r.id));
+  });
+ }
 }
 function parseCSV(s){const rows=[],record=[];let cell='',quoted=false;for(let i=0;i<s.length;i++){let c=s[i];if(c==='"'){if(quoted&&s[i+1]==='"'){cell+='"';i++}else quoted=!quoted}else if(c===';'&&!quoted){record.push(cell);cell=''}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&s[i+1]==='\n')i++;record.push(cell);if(record.some(x=>x.trim()))rows.push(record.splice(0));cell=''}else cell+=c}record.push(cell);if(record.some(x=>x.trim()))rows.push(record);const head=(rows.shift()||[]).map(x=>x.trim().replace(/^\uFEFF/,''));return rows.map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]||''])))}
 async function json(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error(url+': HTTP '+r.status);return r.json()}
 function once(id,event,fn){$(id)?.addEventListener(event,fn)}
-function init(){refreshHealth();setInterval(refreshHealth,5*60*1000);try{state.estimates=JSON.parse(localStorage.getItem('hf-local-price-estimates')||'{}')}catch(e){state.estimates={}};once('q','input',()=>{state.shown=36;render()});for(const id of ['dish','sort','status','source','cost-basis','offers-only'])once(id,'change',()=>{state.shown=36;if(id==='source')state.source=$('source').value;if(id==='cost-basis')state.basis=$('cost-basis').value;render()});once('more','click',()=>{state.shown+=36;render()});once('top','click',()=>{state.top=!state.top;render()});once('modal','click',e=>{if(e.target===$('modal'))$('modal').classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('modal').classList.remove('open')});
+function init(){refreshHealth();setInterval(refreshHealth,5*60*1000);try{state.hfreshLocal=HFreshLinks.cleanManual(JSON.parse(localStorage.getItem('hfresh-local-links-v1')||'{}'))}catch(_){state.hfreshLocal={}};refreshHFreshStatus();try{state.estimates=JSON.parse(localStorage.getItem('hf-local-price-estimates')||'{}')}catch(e){state.estimates={}};once('q','input',()=>{state.shown=36;render()});for(const id of ['dish','sort','status','source','cost-basis','offers-only','hfresh-link-filter'])once(id,'change',()=>{state.shown=36;if(id==='source')state.source=$('source').value;if(id==='cost-basis')state.basis=$('cost-basis').value;render()});once('more','click',()=>{state.shown+=36;render()});once('top','click',()=>{state.top=!state.top;render()});once('modal','click',e=>{if(e.target===$('modal'))$('modal').classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('modal').classList.remove('open')});
 once('card-promotions','change',()=>{state.cards=$('card-promotions').checked;resetOfferCaches();render();if($('modal').classList.contains('open')&&state.selectedId)details(state.selectedId)});
+once('hfresh-import','change',async e=>{
+ const message=$('hfresh-import-status');
+ try{
+  const file=e.target.files?.[0];if(!file)return;
+  const payload=JSON.parse(await file.text());
+  if(payload.schema_version!==1||!payload.recipe_links||typeof payload.recipe_links!=='object')
+   throw Error('Gebruik een geëxporteerd HFresh-koppelingenbestand.');
+  if(!state.recipes.some(r=>r.source==='HelloFresh'))throw Error('Receptenindex is nog niet geladen.');
+  const allowed=new Set(state.recipes.filter(r=>r.source==='HelloFresh').map(r=>String(r.id)));
+  const incoming=HFreshLinks.cleanManual(payload.recipe_links);
+  const accepted=Object.entries(incoming).filter(([id])=>allowed.has(id));
+  if(!accepted.length)throw Error('Geen geldige koppelingen voor jouw recepten gevonden.');
+  const next={...state.hfreshLocal,...Object.fromEntries(accepted)};
+  localStorage.setItem('hfresh-local-links-v1',JSON.stringify(HFreshLinks.exportManual(next).recipe_links));
+  state.hfreshLocal=HFreshLinks.cleanManual(next);
+  message.textContent=accepted.length+' lokale HFresh-verwijzingen ingelezen. De prijsramingen blijven ongewijzigd.';
+  refreshHFreshStatus();render();
+ }catch(err){message.textContent='Import niet uitgevoerd: '+err.message;}
+ e.target.value='';
+});
+once('hfresh-export','click',()=>{
+ const data=JSON.stringify(HFreshLinks.exportManual(state.hfreshLocal),null,2)+'\n';
+ const blob=new Blob([data],{type:'application/json'});
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement('a');a.href=url;a.download='hfresh-receptenkoppelingen.json';document.body.append(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
 once('file','change',async e=>{try{const rows=parseCSV(await e.target.files[0].text());if(!rows.length||!('titel_automatisch' in rows[0]))throw Error('CSV niet herkend');state.extra=rows.map((r,i)=>({id:'local-'+i,title_extracted:r.titel_automatisch,source:'HelloFresh',source_file:r.bron,source_page_ingredients:r.paginas,ingredients_4p:[]})).filter(r=>r.title_extracted);$('import-status').textContent=state.extra.length+' extra bronrecords geladen in deze browser.';dishOptions();render()}catch(err){$('import-status').textContent='Import mislukt: '+err.message}});
 once('clear','click',()=>{state.extra=[];$('file').value='';$('import-status').textContent='Lokale import gewist';dishOptions();render()});options();dishOptions();render();
-json('../recipes_extracted.json').then(d=>{if(!Array.isArray(d.recipes)||!d.recipes.length)throw Error('Geen recepten in bron');state.recipes=state.recipes.filter(x=>x.source==='Plated').concat(d.recipes.map(r=>({...r,source:'HelloFresh'})));state.loading=false;dishOptions();render()}).catch(err=>{state.loading=false;$('count').textContent='Receptendatabase niet geladen: '+err.message;render()});
+json('../recipes_extracted.json').then(d=>{if(!Array.isArray(d.recipes)||!d.recipes.length)throw Error('Geen recepten in bron');state.recipes=state.recipes.filter(x=>x.source==='Plated').concat(d.recipes.map(r=>({...r,source:'HelloFresh'})));state.loading=false;dishOptions();refreshHFreshStatus();render()}).catch(err=>{state.loading=false;$('count').textContent='Receptendatabase niet geladen: '+err.message;render()});
 function refreshOriginals(){Promise.allSettled([json('./preview_manifest.json'),json('./plated_preview_manifest.json')]).then(res=>{let previews={};for(const item of res){if(item.status==='fulfilled')Object.assign(previews,item.value.recipes||{})}state.previews=previews;render()})}refreshOriginals();
 setInterval(refreshOriginals,5*60*1000);
 function refreshPrices(){return json('../recipe_prices.json').then(d=>{const at=new Date(d.fetched_at_utc);if(Date.now()-at.getTime()>=0&&Date.now()-at.getTime()<3*86400000){state.priceDate=at;state.prices=new Map((d.results||[]).map(r=>[r.store+':'+r.recipe_id,r]));resetOfferCaches()}else{state.priceDate=null;state.prices.clear();resetOfferCaches()}render()}).catch(()=>{if(state.priceDate&&Date.now()-state.priceDate.getTime()>=3*86400000){state.priceDate=null;state.prices.clear();resetOfferCaches()}render()})}
 refreshPrices();setInterval(refreshPrices,10*60*1000);
 json('./hfresh_matches.json').then(d=>{
  if(d.schema_version!==1||!d.recipe_links||typeof d.recipe_links!=='object')throw Error('Ongeldige bronverwijzingen');
- state.hfreshMatches=d.recipe_links;
- const el=$('hfresh-status');
- if(el)el.textContent=(Object.keys(d.recipe_links).length||0)+' recepttitels gekoppeld; dit zijn alleen links, geen prijzen.';
- render();
-}).catch(()=>{const el=$('hfresh-status');if(el)el.textContent='Externe koppelingen niet beschikbaar. De eigen receptprijzen blijven werken.'});
+ state.hfreshMatches=HFreshLinks.safeSnapshot(d);
+ refreshHFreshStatus();render();
+}).catch(()=>{state.hfreshMatches={};refreshHFreshStatus();render()});
 json('../plated_nl_catalog.json').then(d=>{state.nlCatalog=Object.fromEntries((d.recipes||[]).map(x=>[x.source_identity||x.id,x]));render()}).catch(()=>{});
 function refreshDeals(){
  return json('../weekdeals_hellofresh.json').then(d=>{
