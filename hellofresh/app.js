@@ -29,13 +29,7 @@ function todayNL(){return new Date().toLocaleDateString('sv-SE',{timeZone:'Europ
 function offerWords(r){return (estimateRecord(r)?.lines||[]).filter(x=>x.action).map(x=>x.action)}
 // A product-name resemblance is only a lead, NEVER proof that the product fits or its promotion was priced.
 function relatedIngredient(ingredient,product){
- if(RecipeLogic.offerMatches(ingredient,product))return true;
- const parts=norm(String(ingredient).replace(/\([^)]*\)/g,'').replace(/\*/g,'')).split(' ').filter(w=>w.length>=5&&!['verse','vers','bio','biologisch','gemalen','geraspte','gesneden','rode','groene','witte','gele','italiaanse','ongezouten'].includes(w));
- if(!parts.length)return false;
- const words=norm(product).split(' ');
- const unsuitable=['snoep','drop','chips','shampoo','honden','katten','smaak','drink','drank','vitamine','kaars','poeder','soep','saus','dressing','kruidenmix','koek','thee','koffie','limonade','ijs','vla','sap','pizza','wrap','snack','maaltijd','diner','klene','mentos','vicks','redband','haribo','pasta'];
- if(words.some(w=>unsuitable.includes(w)&&!parts.includes(w)))return false;
- return parts.some(w=>words.includes(w));
+ return RecipeLogic.relevantOfferProduct(ingredient,product);
 }
 function possibleOffers(r,scope=state.store){
  const key=String(r.id)+'|'+scope+'|'+todayNL();
@@ -52,7 +46,9 @@ function possibleOffers(r,scope=state.store){
    seen.add(id);list.push({shop,ingredient:matching,deal:d});
   }
  }
- list.sort((a,b)=>a.shop.localeCompare(b.shop,'nl')||a.ingredient.localeCompare(b.ingredient,'nl'));
+ const selectedStore=priceRecord(r)?.store||'';
+ list.sort((a,b)=>(b.shop===selectedStore)-(a.shop===selectedStore)||
+  a.shop.localeCompare(b.shop,'nl')||a.ingredient.localeCompare(b.ingredient,'nl'));
  state.offerCache.set(key,list);
  return list;
 }
@@ -69,7 +65,8 @@ function cardOfferBlock(r){
   const key=o.shop+'|'+norm(o.ingredient);
   if(!shown.has(key)){shown.add(key);groups.push(o)}
  }
- const details=groups.slice(0,2).map(o=>'<div class="offer-match-line"><b>'+esc(o.ingredient)+'</b> → '+esc(o.deal.name)+'<small>'+esc(o.shop)+' · '+esc(offerPriceLabel(o.deal))+' · t/m '+esc(o.deal.valid_until)+'</small></div>').join('');
+ const priceShop=priceRecord(r)?.store||null;
+ const details=groups.slice(0,2).map(o=>'<div class="offer-match-line"><b>'+esc(o.ingredient)+'</b> → '+esc(o.deal.name)+'<small>'+esc(o.shop)+' · '+esc(offerPriceLabel(o.deal))+' · t/m '+esc(o.deal.valid_until)+(priceShop&&priceShop!==o.shop?' · andere winkel dan prijsraming '+esc(priceShop):'')+'</small></div>').join('');
  const extra=groups.length>2?'<small>+'+(groups.length-2)+' andere ingrediënt/winkel-combinaties in de details</small>':'';
  return '<div class="recipe-offers"><div class="offer-heading">Aanbiedingen voor dit gerecht</div>'+
  (applied.length?'<div class="offer-applied">✓ '+applied.length+' actie(s) verwerkt in getoonde prijs</div>':'<div class="offer-unapplied">Nog geen aanbieding meegerekend in deze gerechtprijs</div>')+
@@ -88,8 +85,10 @@ function detailOfferBlock(r){
 }
 function offerSort(a,b){
  const actionA=offerWords(a).length,actionB=offerWords(b).length;
- const levelA=actionA?2:possibleOffers(a).length?1:0;
- const levelB=actionB?2:possibleOffers(b).length?1:0;
+ const aOffers=possibleOffers(a),bOffers=possibleOffers(b);
+ const aStore=priceRecord(a)?.store,bStore=priceRecord(b)?.store;
+ const levelA=actionA?3:aOffers.length?(aOffers.some(x=>x.shop===aStore)?2:1):0;
+ const levelB=actionB?3:bOffers.length?(bOffers.some(x=>x.shop===bStore)?2:1):0;
  if(levelA!==levelB)return levelB-levelA;
  const aPrice=rankingPrice(a),bPrice=rankingPrice(b);
  if((aPrice===null)!==(bPrice===null))return aPrice===null?1:-1;
