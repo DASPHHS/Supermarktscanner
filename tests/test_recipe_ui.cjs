@@ -37,18 +37,18 @@ test('real snapshot opens with priced recipes, visible norms and all three store
  assert.equal(d.querySelector('#sort').value,'offers');
  assert.equal(d.querySelector('#status').value,'');
  assert.ok(Number(d.querySelector('#priced').textContent)>0,'show usable indicative prices, not a zero-only catalog');
- const first=d.querySelector('.card');assert.match(first.querySelector('.money').textContent,/≈/);
+ const first=d.querySelector('.card');assert.match(first.querySelector('.main-cost').textContent,/≈/);
  first.querySelector('button[data-id]').click();
  assert.ok(d.querySelector('#modal').classList.contains('open'));
  assert.match(d.querySelector('#dialog').textContent,/Zichtbare normgewichten en aannames/);
- assert.match(d.querySelector('#dialog').textContent,/Af te rekenen/);
+ assert.match(d.querySelector('#dialog').textContent,/Geschatte kassabon/);
  for(const s of ['AH','Jumbo','Lidl'])assert.match(d.querySelector('#dialog').textContent,new RegExp(s));
  assert.ok(d.querySelector('.norm-section li'));
  d.querySelector('#close').click();
  d.querySelector('#top').click();
  const expected=Math.min(10,Number(d.querySelector('#priced').textContent));
  assert.equal(d.querySelectorAll('.card').length,expected);
- assert.ok([...d.querySelectorAll('.card .money')].every(x=>x.textContent.includes('≈')));
+ assert.ok([...d.querySelectorAll('.card .main-cost')].every(x=>x.textContent.includes('≈')));
 });
 
 test('card option actually changes the best store and recipe order in the UI',async t=>{
@@ -84,8 +84,8 @@ test('cash comparison changes the displayed basket, selected store and recipe or
  assert.equal(d.querySelector('.card button[data-id]').dataset.id,templates[1].recipe_id);
  basis.value='cash';basis.dispatchEvent(new w.Event('change',{bubbles:true}));
  const first=d.querySelector('.card');assert.equal(first.querySelector('button').dataset.id,templates[0].recipe_id);
- assert.match(first.querySelector('.money').textContent,/4,00/);
- assert.match(first.querySelector('.money').textContent,/hele verpakkingen.*Jumbo.*1,50/);
+ assert.match(first.querySelector('.main-cost').textContent,/4,00/);
+ assert.match(first.querySelector('.main-cost').textContent,/Hele verpakkingen.*Jumbo.*1,50/);
  assert.match(d.querySelector('#sort').selectedOptions[0].textContent,/kassabon/);
  first.querySelector('button').click();
  assert.match(d.querySelector('#dialog').textContent,/twee personen · Jumbo/);
