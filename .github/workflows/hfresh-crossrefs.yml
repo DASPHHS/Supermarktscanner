@@ -1,7 +1,5 @@
-name: Optional HFresh recipe cross-references
+name: Manual HFresh cross-references (API may be unavailable)
 on:
-  schedule:
-    - cron: "25 7 * * 1"
   workflow_dispatch:
 permissions:
   contents: write
