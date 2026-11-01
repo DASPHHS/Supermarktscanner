@@ -12,6 +12,7 @@ import datetime as dt
 import json
 import os
 import re
+import time
 import unicodedata
 import urllib.parse
 import urllib.request
@@ -85,7 +86,7 @@ def read_catalog(path: Path) -> list[dict]:
     raise ValueError("HFresh-catalogus moet een lijst of een API-pagina met data[] zijn")
 
 
-def fetch_catalog(api_url: str, token: str, max_pages: int = 40) -> list[dict]:
+def fetch_catalog(api_url: str, token: str, max_pages: int = 250, pause_seconds: float = 1.1) -> list[dict]:
     """Server-side only. Never put the token in GitHub Pages or browser JS."""
     parsed = urllib.parse.urlsplit(api_url)
     if parsed.scheme != "https" or parsed.hostname != "api.hfresh.info" or parsed.username or parsed.password:
@@ -99,6 +100,8 @@ def fetch_catalog(api_url: str, token: str, max_pages: int = 40) -> list[dict]:
     base_query["perPage"] = "200"
     rows: list[dict] = []
     for page in range(1, max_pages + 1):
+        if page > 1:
+            time.sleep(pause_seconds)  # API limit: 60 requests/minute; no parallel calls.
         query = urllib.parse.urlencode({**base_query, "page": str(page)})
         url = urllib.parse.urlunsplit((base.scheme, base.netloc, base.path, query, ""))
         req = urllib.request.Request(url, headers={
