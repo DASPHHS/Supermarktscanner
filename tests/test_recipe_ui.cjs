@@ -68,7 +68,7 @@ test('card option actually changes the best store and recipe order in the UI',as
  assert.equal(firstId(),templates[1].recipe_id);
  const cards=d.querySelector('#card-promotions');cards.checked=true;cards.dispatchEvent(new w.Event('change',{bubbles:true}));
  assert.equal(firstId(),templates[0].recipe_id);
- assert.match(d.querySelector('.card .money').textContent,/AH/);
+ assert.match(d.querySelector('.card .main-cost').textContent,/AH/);
  cards.checked=false;cards.dispatchEvent(new w.Event('change',{bubbles:true}));
  assert.equal(firstId(),templates[1].recipe_id);
 });
