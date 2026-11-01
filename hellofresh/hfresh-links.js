@@ -11,6 +11,12 @@ function safeUrl(raw){
   return u.origin+u.pathname;
  }catch(_){return null;}
 }
+function searchUrl(value){
+ if(typeof value!=='string')return 'https://hfresh.info/nl-NL';
+ const title=value.trim().slice(0,160);
+ return title?'https://hfresh.info/nl-NL?search='+encodeURIComponent(title):
+  'https://hfresh.info/nl-NL';
+}
 function safeId(id){return /^[A-Za-z0-9_-]{1,100}$/.test(String(id||''));}
 function cleanManual(input){
  const out=Object.create(null);
@@ -49,7 +55,7 @@ function exportManual(manual){
          note:'Alleen URL-verwijzingen; geen receptprijzen of gevalideerde hoeveelheden.',
          recipe_links:{...cleanManual(manual)}};
 }
-const api={safeUrl,cleanManual,safeSnapshot,linkFor,exportManual};
+const api={safeUrl,searchUrl,cleanManual,safeSnapshot,linkFor,exportManual};
 if(typeof module==='object'&&module.exports)module.exports=api;
 root.HFreshLinks=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
