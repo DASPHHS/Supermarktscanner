@@ -63,7 +63,7 @@ test('cash basis chooses the cheaper basket while consumed costs remain separate
 });
 test('expired action totals are removed; card mode can fall back to a current base estimate',()=>{
  const action={valid_from:'2026-10-26',valid_until:'2026-11-01'};
- const base={lines:[]},discounted={lines:[{action}]};
+ const base={lines:[]},discounted={lines:[{action,ingredients:['banaan'],product:'banaan'}]};
  assert.equal(L.estimateFor({estimate:discounted},false,'2026-11-02'),null);
  assert.equal(L.estimateFor({estimate:base,estimate_with_cards:discounted},true,'2026-11-02'),base);
  assert.equal(L.estimateFor({estimate:discounted},false,'2026-11-01'),discounted);
