@@ -38,7 +38,7 @@ Voor de duidelijkheid: een opgeslagen link is geen bevestiging dat de twee recep
 
 ## Veilige synchronisatie
 
-De (nu alleen handmatig startbare) API-sync vraagt uitsluitend een roterende selectie van 12 bestaande lokale recepttitels per week op (maximaal 25 op aanvraag), niet de volledige externe databank. De module bewaart een `scan_cursor` zodat volgende weken nieuwe titels worden gecontroleerd. De zoekopdrachten worden gespreid en alleen exact overeenkomende titels leveren een bronlink op. Houd rekening met de [HFresh-gebruiksvoorwaarden](https://console.hfresh.info/terms): vermijd geautomatiseerde massale opvragingen. Deze koppeling is geen volledige HFresh-import en voegt geen recepten uit HFresh aan de prijsranglijst toe.
+De (nu alleen handmatig startbare) API-sync vraagt uitsluitend een roterende selectie van 12 bestaande lokale recepttitels per handmatige uitvoering op (maximaal 25 op aanvraag), niet de volledige externe databank. De module bewaart een `scan_cursor` zodat volgende weken nieuwe titels worden gecontroleerd. De zoekopdrachten worden gespreid en alleen exact overeenkomende titels leveren een bronlink op. Houd rekening met de [HFresh-gebruiksvoorwaarden](https://console.hfresh.info/terms): vermijd geautomatiseerde massale opvragingen. Deze koppeling is geen volledige HFresh-import en voegt geen recepten uit HFresh aan de prijsranglijst toe.
 
 Voor automatische aanvullingen is een eigen HFresh-API-token nodig. De optionele importmodule `hfresh_metadata.py` vergelijkt de exacte,
 accent-onafhankelijk genormaliseerde Nederlandse titels met
