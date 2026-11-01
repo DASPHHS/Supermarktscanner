@@ -34,7 +34,7 @@ const FAMILY_DEFS=[
  ['spaghetti','Spaghetti',/\bspaghetti\b/,/\bspaghetti\b/,['pasta-rijst-wereldkeuken']]
 ];
 const FAMILIES=FAMILY_DEFS.map(([id,label,ingredient,product,categories])=>({id,label,ingredient,product,categories}));
-const BLOCKED=/\b(salade|salademix|saladekit|saus|maaltijdmix|ovenmix|mix|soep|soepmix|cup a soup|pesto|spread|dip|smoothie|sap|chips|snack|wrap|pizza|quiche|lasagne|ovenschotel|stamppot|burger|gehaktballetjes|schnitzel|dressing|hummus|roerbakgroente|rauwkost|maaltijd|rolletjes|vleeswaren|beleg|sandwich|kruidenmix|gemarineerd|gerookt|gerookte|gegrild)\b/;
+const BLOCKED=/\b(salade|salademix|saladekit|saus|maaltijdmix|ovenmix|mix|soep|soepmix|cup a soup|pesto|spread|dip|smoothie|sap|chips|snack|wrap|pizza|quiche|lasagne|ovenschotel|stamppot|burger|gehaktballetjes|schnitzel|dressing|hummus|roerbakgroente|rauwkost|maaltijd|rolletjes|vleeswaren|beleg|sandwich|kruidenmix|gemarineerd|gerookt|gerookte|gegrild|wraps|bakaardappeltjes|olijven|olijfmix|hutspot|slaverrijker|roomkaas|creme|cremefraiche|pureersoep|spitskool|met|en|tex mex|gehaktballen|gepofte|friet|chips)\b/;
 const BLOCKED_TEXT=/(tomatensoep|champignonsaus|pastasaus|knoflooksaus|broccolisoep|pizzasaus|kruidenboter|kipfiletrolletjes|vegetarische kip|plantaardige kip|tomatenketchup|groentesap|groentesmoothie)/;
 const STATE_WORDS=/\b(gedroogd|gedroogde|zongedroogd|zongedroogde|gevriesdroogd|gekonfijt|geroosterd|geroosterde|gekruid|gekruide|gekarameliseerd|gekarameliseerde)\b/;
 const CATEGORY_EXTRAS={
