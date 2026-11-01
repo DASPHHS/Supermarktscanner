@@ -1,0 +1,63 @@
+name: Sync HelloFresh supermarket Weekdeals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "25 7,13,19 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hello-fresh-weekdeals-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check importer regression tests
+        env:
+          PYTHONPATH: scripts
+        run: python -m unittest discover -s scripts -p "test_weekdeals_hellofresh.py" -v
+      - name: Read complete published Weekdeals feed
+        run: python scripts/sync_weekdeals_hellofresh.py
+      - name: Confirm all three supermarkets have current data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("weekdeals_hellofresh.json").read_text())
+          assert d["coverage"]["full_promotional_feed"]
+          counts={k:len(d["stores"][k]["deals"]) for k in ("AH","Jumbo","Lidl")}
+          assert all(v>0 for v in counts.values())
+          assert sum(counts.values())>=100
+          assert all(x["valid_from"]<=d["as_of_date"]<=x["valid_until"]
+                     for v in d["stores"].values() for x in v["deals"])
+          print("Current relevant supermarket actions:",counts)
+          PY
+      - name: Publish only after complete validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp weekdeals_hellofresh.json "$RUNNER_TEMP/hellofresh-weekdeals.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout -f main
+          git reset --hard origin/main
+          cp "$RUNNER_TEMP/hellofresh-weekdeals.json" weekdeals_hellofresh.json
+          git add weekdeals_hellofresh.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh HelloFresh AH Jumbo Lidl Weekdeals [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "Feed already up to date"
+          fi
