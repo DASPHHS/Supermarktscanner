@@ -11,6 +11,48 @@ function offerMatches(ingredient,product){
  const words=norm(product).split(' ');
  return target.length>0 && target.every(w=>words.includes(w)) && !words.some(w=>blocked.has(w)&&!target.includes(w)) && words.every(w=>target.includes(w)||qualifiers.has(w)||/^\d+(?:g|gr|gram|kg|ml|l|st|stuks|x)?$/.test(w));
 }
+// Conservative product-to-recipe compatibility: false positives are more harmful than missing leads.
+// This is not a guarantee of an equivalent SKU: it only controls candidate display/ranking.
+function relevantOfferProduct(ingredient,product){
+ const i=norm(String(ingredient||'').replace(/\([^)]*\)/g,'').replace(/\*/g,''));
+ const p=norm(product);
+ if(!i||!p)return false;
+ // Prepared dishes, baby food, snacks, toiletries and drinks are not single cooking ingredients.
+ const disallowed=/\b(olvarit|organix|ella|nestle|kleine keuken|knijpfruit|baby|smoothie|groentesmoothie|groentesap|vruchtensap|fruitjes|fruitsap|versgeperst|limonade|snoep|chips|drop|koek|koeken|krakelingen|spritsen|cake|cakejes|poffertjes|wraps|wrap|pinsa|pizza|quiche|verspakket|maaltijd|ovenschotel|soep|pureersoep|saus|pastasaus|salade|salademix|saladekit|broodbeleg|beleg|hummus|hoemoes|pesto|chutney|kant en klaar|knabbels|sticks|puffs|snack|diner|kipshoarma|rijst rondjes|botermix|kruidenboter|spreads|dip|boter|kruidenmix)\b/;
+ if(disallowed.test(p))return false;
+ // Mixtures are not interchangeable with a single ingredient; recipes may need the pure food.
+ if(/\b(mix|melange|combinatie|cocktail|kruiden|met|en)\b/.test(p)&&!/\b(tonijn in (olijf)?olie|tonijn in water)\b/.test(p))return false;
+ // Different preparation, preservation or flavours may change the recipe.
+ if(/\b(gerookt|gerookte|gegrild|gemarineerd|marinade|knoflook|chili|pittig|gekarameliseerd)\b/.test(p)&&!/\b(gerookt|gerookte|gegrild|gemarineerd|knoflook|chili|pittig|gekarameliseerd)\b/.test(i))return false;
+ // Whitelist of food categories readily identifiable in the current source feed.
+ if(/\bkrieltjes\b/.test(i))return /\bkrieltjes\b/.test(p)&&!/\b(stamppot|puree)\b/.test(p);
+ if(/\baardappelen\b/.test(i))return /\baardappelen\b/.test(p)&&!/\b(krieltjes|bakaardappeltjes)\b/.test(p);
+ if(/\bkikkererwten\b/.test(i))return /\bkikkererwten\b/.test(p);
+ if(/\bmais\b/.test(i))return /\bmais\b/.test(p)&&!/\b(tarwe|puffs)\b/.test(p);
+ if(/\btofu\b/.test(i))return /\btofu\b/.test(p);
+ if(/\bspinazie\b/.test(i))return /\bspinazie\b/.test(p)&&!/\b(kleinverpakking broccoli|broccoli)\b/.test(p);
+ if(/\bkipfilet\b/.test(i)){
+  if(!/\bkipfilet\b/.test(p))return false;
+  // Pre-sliced 100-120g kipfilet is sandwich meat, not raw chicken for cooking.
+  if(/\b(100|110|115|120|125|150)\s*(g|gr|gram)\b/.test(p))return false;
+  return /\b(stuks|stuk|filet)\b/.test(p)||/\bkipfilet\b/.test(p)&&!/\b(scharrel)\b/.test(p);
+ }
+ if(/\b(roerbakgarnalen|garnalen)\b/.test(i))return /\b(roerbakgarnalen|garnalen)\b/.test(p);
+ if(/\btonijn\b/.test(i)){
+  if(/\b(tonijnfilet|verse tonijn)\b/.test(i))return false;
+  if(/\bwater\b/.test(i))return /\btonijn\b/.test(p)&&/\bwater\b/.test(p);
+  if(/\b(olijfolie|olie)\b/.test(i))return /\btonijn\b/.test(p)&&/\b(olijfolie|olie)\b/.test(p);
+  return /\btonijn\b/.test(p);
+ }
+ // Unlisted ingredients require an exact, simple packaged-product name.
+ const prepWords=new Set(['verse','vers','biologische','biologisch','bio','kleine','klein','rood','rode','groen','groene','wit','witte']);
+ const target=i.split(' ').filter(w=>!prepWords.has(w)&&!['g','gram','ml','stuk','stuks'].includes(w));
+ if(!target.length)return false;
+ const brands=new Set(['ah','jumbo','hak','bonduelle','vivera','rodolfi','fish','tales','excellent']);
+ const formats=new Set(['verse','vers','bio','biologisch','biologische','kleinverpakking','stuks','stuk','g','gr','gram','kg','ml','l','milliliter','liter','pak','pack','mini','origineel','original','naturel']);
+ const words=p.split(' ').filter(w=>!brands.has(w));
+ return target.every(w=>words.includes(w))&&words.every(w=>target.includes(w)||formats.has(w)||/^\d+(?:g|gr|gram|kg|ml|l|stuks?)?$/.test(w));
+}
 function activeOffer(d,today){return typeof d.valid_from==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d.valid_from)&&typeof d.valid_until==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d.valid_until)&&d.valid_from<=today&&d.valid_until>=today;}
 function coverage(total,p){
  const matched=p?(p.matches||[]).length:0;
@@ -58,7 +100,7 @@ function protein(title,labels=[]){
  // Main protein in the title takes precedence over chicken stock in a beef dish.
  return classify(norm(title))||classify(norm(labels.filter(x=>!/(bouillon|stock|broth)/i.test(x)).join(' ')))||'onbekend';
 }
-const api={norm,offerMatches,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,rankingPrice,originalPdfUrl};
+const api={norm,offerMatches,relevantOfferProduct,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,rankingPrice,originalPdfUrl};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;
 else root.RecipeLogic=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
