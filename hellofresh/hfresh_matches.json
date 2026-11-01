@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "source": "HFresh — onofficieel",
+  "match_policy": "exact_title_only; no price/portion/ingredient verification",
+  "matched": 0,
+  "ambiguous": 0,
+  "recipe_links": {},
+  "note": "Nog geen HFresh API-export verwerkt; geen bronmatches of prijzen geclaimd."
+}

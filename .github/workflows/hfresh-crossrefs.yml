@@ -1,0 +1,32 @@
+name: Optional HFresh recipe cross-references
+on:
+  schedule:
+    - cron: "25 7 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  crossrefs:
+    runs-on: ubuntu-latest
+    env:
+      HFRESH_API_TOKEN: ${{ secrets.HFRESH_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_hfresh_metadata.py'
+      - name: Fetch safe Dutch metadata
+        if: env.HFRESH_API_TOKEN != ''
+        run: python hfresh_metadata.py
+      - name: Commit cross-reference snapshot when changed
+        if: env.HFRESH_API_TOKEN != ''
+        run: |
+          if ! git diff --quiet -- hellofresh/hfresh_matches.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add hellofresh/hfresh_matches.json
+            git commit -m "Sync HFresh recipe cross-references (metadata only)"
+            git push
+          fi
