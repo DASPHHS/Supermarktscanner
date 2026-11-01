@@ -77,6 +77,13 @@ function estimatePrice(e){
 function validActionLine(line,today=dayFormat.format(new Date()),cards=false){
  if(!line||!line.action||!activeOffer(line.action,today)||line.action.personal_offer===true)return false;
  if(line.action.card_required===true&&!cards)return false;
+ // A multi-buy requires enough actual packs at checkout. Otherwise a discounted unit price is misleading.
+ const minimum=Number(line.action.multi_buy_quantity);
+ if(Number.isFinite(minimum)&&minimum>1){
+  if(!Number.isFinite(Number(line.packages))||Number(line.packages)<minimum)return false;
+  if(!Number.isFinite(Number(line.action.multi_buy_price))||Number(line.action.multi_buy_price)<=0)return false;
+ }
+ if(Number.isFinite(Number(line.action.max_per_customer))&&Number(line.action.max_per_customer)>0&&Number(line.packages)>Number(line.action.max_per_customer))return false;
  if(!Array.isArray(line.ingredients)||typeof line.product!=='string')return false;
  // Both the actual chosen SKU and its action name must represent the recipe ingredient.
  return line.ingredients.some(i=>relevantOfferProduct(i,line.product)
