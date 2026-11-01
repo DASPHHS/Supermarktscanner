@@ -21,7 +21,7 @@ Daarom koppelt deze uitbreiding **geen enkele prijs** of
 ## Zonder API-token: direct koppelen in de Receptenstudio
 
 1. Open een HelloFresh-recept in [de Receptenstudio](https://dasphhs.github.io/Supermarktscanner/hellofresh/) en klik op **Prijs & acties bekijken**.
-2. Bij **HFresh-receptenkoppeling** staat de zoektekst en een rechtstreekse link naar de Nederlandse HFresh-receptenbibliotheek.
+2. Bij **HFresh-receptenkoppeling** staat **Zoek dit recept direct in HFresh**. Deze link opent de publieke Nederlandse HFresh-website met de recepttitel al als zoekterm (de originele applicatie ondersteunt het URL-veld `?search=`). Er is geen account of API-token nodig om daar handmatig te zoeken.
 3. Zoek het recept in HFresh en controleer de bijgerechten/ingrediënten op de originele HelloFresh-kaart. Gelijknamige recepten kunnen verschillende versies zijn.
 4. Plak de **volledige HFresh-receptpagina-URL** in het veld, bijvoorbeeld `https://hfresh.info/nl-NL/recipes/receptnaam-123`, en klik **Bewaar lokale koppeling**.
 5. De gekozen bron verschijnt vervolgens bij het recept. Je kunt de koppeling verwijderen of later wijzigen. De bronfilter **HFresh-koppeling** laat alleen gekoppelde of niet-gekoppelde HelloFresh-recepten zien.
