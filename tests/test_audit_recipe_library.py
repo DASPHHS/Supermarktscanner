@@ -74,6 +74,20 @@ class LibraryAuditTests(unittest.TestCase):
             put("recipes_extracted.json", data)
             self.assertFalse(analyze(root)["records"][0]["source_review_confirmed"])
 
+    def test_real_image_only_archive_is_fully_covered_and_unverified(self):
+        root = Path(__file__).resolve().parents[1]
+        report = analyze(root)
+        summary = report["summary"]
+        self.assertEqual(summary["image_only_scans"], 60)
+        self.assertGreaterEqual(summary["records_audited"], 789)
+        scanned = [r for r in report["records"] if r.get("image_only_archive")]
+        self.assertEqual(len(scanned), 60)
+        self.assertEqual(sum(len(r["source_pages"]) for r in scanned), 61)
+        self.assertTrue(all(not r["source_review_confirmed"] for r in scanned))
+        self.assertTrue(all("original_scan_not_published" in r["issues"] for r in scanned))
+        self.assertTrue(all(not r["original_card_present"] for r in scanned))
+        self.assertTrue(all(r["quantity_rows_present"] == 0 for r in scanned))
+
 
 if __name__ == "__main__":
     unittest.main()
