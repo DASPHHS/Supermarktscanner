@@ -9,7 +9,9 @@ on:
       - "scripts/test_weekdeals_hellofresh.py"
       - ".github/workflows/sync-weekdeals-hellofresh.yml"
   schedule:
-    - cron: "25 7,13,19 * * *"
+    # Import shortly after the upstream Weekdeals publication attempts,
+    # with extra opportunities if a scheduled run gets skipped.
+    - cron: "30 6,9,12,15,18,21 * * *"
 
 permissions:
   contents: write
