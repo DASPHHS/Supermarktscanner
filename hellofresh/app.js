@@ -125,7 +125,7 @@ function protein(r){
  return estimateRecord(r)?.vegetarian_ingredients?'vega':kind;
 }
 function dish(r){let t=norm(displayTitle(r));if(/soep|ramen/.test(t))return 'Soep';if(/pasta|spaghetti|linguine|penne|tagliatelle|lasagne|orzo|orzotto|ravioli|gnocchi|macaroni|casarecce|fusilli|rigatoni/.test(t))return 'Pasta & orzo';if(/curry|dahl|daal|masala/.test(t))return 'Curry';if(/stamppot|hutspot|puree/.test(t))return 'Stamppot';if(/rijst|risotto|nasi|biryani|poke/.test(t))return 'Rijst & bowls';if(/noedel|bami|mie|udon|wok/.test(t))return 'Noedels & wok';if(/wrap|taco|tortilla|burrito|quesadilla|naan|platbrood|pizza/.test(t))return 'Wraps & pizza';if(/salade|couscous|bulgur|quinoa|bowl/.test(t))return 'Salade & granen';return 'Overige gerechten'}
-function all(){const map=new Map();for(const r of state.recipes.concat(state.extra)){const key=(r.source||'HelloFresh')+'|'+norm(r.title_extracted);if(key&&(!map.has(key)||(map.get(key)?.image_only_archive&&!r.image_only_archive)))map.set(key,r)}return [...map.values()]}
+function all(){const map=new Map();for(const r of state.recipes.concat(state.extra)){const key=(r.source||'HelloFresh')+'|'+String(r.id||'');if(key&&!map.has(key))map.set(key,r)}return [...map.values()]}
 // Cache per-ingredient checks across recipes; store optimization never calls priceRecord.
 function matchesForIngredient(ingredient,shop){
  const key=shop+'|'+norm(ingredient)+'|'+state.cards+'|'+todayNL();
