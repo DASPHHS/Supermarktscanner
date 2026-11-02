@@ -26,7 +26,7 @@ jobs:
       - run: pip install -r requirements.txt pytest 'Pillow>=10,<13' 'pypdf>=5,<7'
       - run: PYTHONPATH=. pytest -q
       - run: python scripts/audit_recipe_library.py --output /tmp/library_source_audit.json
-      - run: python -c "import json; d=json.load(open('/tmp/library_source_audit.json')); assert d['summary']['records_audited'] == len(d['records']) and d['summary']['records_audited'] >= 725"
+      - run: python -c "import json; d=json.load(open('/tmp/library_source_audit.json')); assert d['summary']['records_audited'] == len(d['records']) and d['summary']['records_audited'] >= 789 and d['summary']['image_only_scans'] == 60"
       - run: python -m compileall -q app.py scanner.py render_original_cards.py render_plated_cards.py import_plated_release.py sync_market_deals.py
       - run: node --check hellofresh/app.js
       - uses: actions/setup-node@v4

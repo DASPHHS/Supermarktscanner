@@ -36,6 +36,7 @@ button{padding:10px 15px;border-radius:10px;border:1px solid #7da68b;background:
 <option value="missing_quantities">Hoeveelheden ontbreken of onvolledig</option>
 <option value="portions_unconfirmed">Porties niet bevestigd</option>
 <option value="original_card_missing">Originele kaart ontbreekt</option>
+<option value="image_only_archive">Nieuwe beeldkaarten zonder openbare PDF</option>
 <option value="confirmed">Handmatig bevestigd in bronregistratie</option></select></label>
 </div><div id="list" class="list"></div><button id="more" type="button" hidden>Meer recepten</button>
 </div></main>
@@ -44,7 +45,9 @@ button{padding:10px 15px;border-radius:10px;border:1px solid #7da68b;background:
 const $=id=>document.getElementById(id);
 const issues={
 title_missing:'Titel ontbreekt',identity_missing:'Recept-ID ontbreekt',
-original_card_missing:'Originele receptkaart ontbreekt',ingredients_missing:'Ingrediënten ontbreken',
+original_card_missing:'Originele receptkaart ontbreekt',
+original_scan_not_published:'Originele beeld-PDF staat alleen bij de aangeleverde bestanden',
+image_ocr_ingredient_candidates:'Voorlopige OCR-ingrediënten, nog niet visueel gecontroleerd',ingredients_missing:'Ingrediënten ontbreken',
 ingredient_names_incomplete:'Ingrediëntnamen onvolledig',quantities_incomplete:'Hoeveelheden onvolledig',
 portions_unconfirmed:'Porties niet bevestigd',duplicate_title_variant:'Meerdere records met dezelfde titel',
 human_source_review_required:'Visuele vergelijking met originele kaart vereist'
@@ -57,7 +60,7 @@ function safePdf(path){
 function create(tag,content,cls){const n=document.createElement(tag);if(cls)n.className=cls;n.textContent=content;return n;}
 function summary(){
  const s=report.summary,labels=[
- ['Bronrecords doorgelopen',s.records_audited],['HelloFresh / Plated',(s.by_source.HelloFresh||0)+' / '+(s.by_source.Plated||0)],
+ ['Bronrecords doorgelopen',s.records_audited],['Extra beeldkaarten zonder gecontroleerde hoeveelheden',s.image_only_scans||0],['HelloFresh / Plated',(s.by_source.HelloFresh||0)+' / '+(s.by_source.Plated||0)],
  ['Ingrediëntenregels bekeken',s.ingredient_rows_inspected],['Originele kaarten aanwezig',s.with_original_card],
  ['Recepten met ingrediëntregels',s.with_ingredient_rows],['Volledige hoeveelheidsvelden',s.quantity_rows_structurally_complete],
  ['Handmatig bronbevestigd',s.human_source_review_confirmed],['Nog bronvergelijking nodig',s.require_human_review]
@@ -72,6 +75,7 @@ function filtered(){
   if(source!=='all'&&r.source!==source)return false;
   const flags=r.issues||[];
   if(filter==='confirmed'&&r.source_review_confirmed!==true)return false;
+  if(filter==='image_only_archive'&&r.image_only_archive!==true)return false;
   if(filter==='unconfirmed'&&r.source_review_confirmed===true)return false;
   if(filter==='missing_ingredients'&&!flags.some(x=>['ingredients_missing','ingredient_names_incomplete'].includes(x)))return false;
   if(filter==='missing_quantities'&&!flags.includes('quantities_incomplete'))return false;
@@ -83,7 +87,8 @@ function filtered(){
 function card(r){
  const article=create('article','','recipe');
  article.append(create('h3',r.title||'Zonder titel'),create('p',r.source+' · '+r.ingredient_rows+' ingrediëntregels · '+r.quantity_rows_present+' ingevulde hoeveelheden','origin'));
- article.append(create('p',r.source_review_confirmed?'Handmatig bevestigd in bronregistratie':'Handmatige controle nodig',r.source_review_confirmed?'status confirmed':'status'));
+ article.append(create('p',r.source_review_confirmed?'Handmatig bevestigd in bronregistratie':r.image_only_archive?'Voorlopige beeldkaart · OCR-ingrediënten, geen betrouwbare porties':'Handmatige controle nodig',r.source_review_confirmed?'status confirmed':'status'));
+ if(r.image_only_archive&&Array.isArray(r.source_pages))article.append(create('p','Bron: Hellofresh recepten.pdf · pagina '+r.source_pages.join(', ')+' · PDF niet openbaar op deze pagina','origin'));
  const problems=(r.issues||[]).map(x=>issues[x]||x);
  if(problems.length){const ul=create('ul','');problems.forEach(x=>ul.append(create('li',x)));article.append(ul);}
  const links=create('div','','links');
