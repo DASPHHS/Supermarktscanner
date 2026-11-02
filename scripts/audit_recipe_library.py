@@ -37,6 +37,9 @@ def ingredient_row(row, label="ingredient", quantity="quantity_2p_source"):
 def analyze(root: Path, now: datetime | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     hf = read(root, "recipes_extracted.json").get("recipes", [])
+    scan_file = root / "hellofresh/scanned_recipe_candidates.json"
+    scans = read(root, "hellofresh/scanned_recipe_candidates.json").get("recipes", []) if scan_file.exists() else []
+    hf = hf + scans
     plated = read(root, "plated_release_review_queue.json").get("recipes", [])
     nl = read(root, "plated_nl_catalog.json").get("recipes", [])
     hf_pages = read(root, "hellofresh/preview_manifest.json").get("recipes", {})
@@ -63,7 +66,7 @@ def analyze(root: Path, now: datetime | None = None) -> dict:
             preview = (hf_pages if source == "HelloFresh" else pl_pages).get(rid) or {}
             has_card = bool(preview.get("front") and preview.get("original_pdf"))
             if not has_card:
-                reason.append("original_card_missing")
+                reason.append("original_scan_not_published" if item.get("image_only_archive") else "original_card_missing")
             rows = []
             if source == "HelloFresh":
                 rows = item.get("ingredients_2p") or item.get("ingredients_4p") or []
@@ -104,6 +107,9 @@ def analyze(root: Path, now: datetime | None = None) -> dict:
                          and item.get("quantities_verified") is True
                          and item.get("servings_verified") is True
                          and has_card and not reason)
+            if item.get("image_only_archive"):
+                certified = False
+                reason.append("image_ocr_ingredient_candidates")
             if not certified:
                 reason.append("human_source_review_required")
             # No official-site match is inferred solely from the title.
@@ -114,6 +120,8 @@ def analyze(root: Path, now: datetime | None = None) -> dict:
                 "ingredient_rows": present, "ingredient_names_present": good_labels,
                 "quantity_rows_present": good_amounts, "original_card_present": has_card,
                 "source_review_confirmed": bool(certified),
+                "image_only_archive": bool(item.get("image_only_archive")),
+                "source_pages": item.get("source_pages") if item.get("image_only_archive") else None,
                 "original_pdf": preview.get("original_pdf") if isinstance(preview.get("original_pdf"), str) and re.fullmatch(r"(?:previews|plated-previews)/[a-zA-Z0-9_-]+-origineel\.pdf", preview["original_pdf"]) else None,
                 "issues": sorted(set(reason)),
             })
@@ -138,6 +146,7 @@ def analyze(root: Path, now: datetime | None = None) -> dict:
             "by_source": dict(sources),
             "title_records": sum(bool(x["title"]) for x in records),
             "with_original_card": with_card,
+            "image_only_scans": len(scans),
             "with_ingredient_rows": has_ingredients,
             "ingredient_names_structurally_complete": names_complete,
             "quantity_rows_structurally_complete": quantities_complete,
