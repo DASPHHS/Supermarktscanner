@@ -1,0 +1,3349 @@
+{
+  "schema_version": 1,
+  "source": "User-supplied image-only Hellofresh recepten.pdf",
+  "source_pages_total": 61,
+  "summary": "60 tentative recipe title records; pages 48-49 are one recipe; no quantities/servings verified; no original PDF published on the website",
+  "source_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+  "data_quality": "tentative_transcription_from_image_ocr_and_visual_review",
+  "recipes": [
+    {
+      "id": "hf-scan-20261102-001",
+      "source": "HelloFresh",
+      "title_extracted": "Champignonrisotto van orzo",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 1,
+      "source_pages": [
+        1
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bosui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Champignons",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Courgette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Walnootstukjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Geraspte pecorino",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Orzo",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Olijfolie met truffelaroma",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-002",
+      "source": "HelloFresh",
+      "title_extracted": "Parelcouscous met garnalen en courgette",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 2,
+      "source_pages": [
+        2
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Rode peper",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Citroen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse tijm",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Courgette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Paprika",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Parelcouscous",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Garnalen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-003",
+      "source": "HelloFresh",
+      "title_extracted": "Pittige stamppot van paksoi met spekjes",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 3,
+      "source_pages": [
+        3
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Komkommer",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Aardappelen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zoete aardappel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode peper",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse gember",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bosui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Paksoi",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Limoen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spekreepjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sojasaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-004",
+      "source": "HelloFresh",
+      "title_extracted": "Aubergine met Midden-Oosterse kruiden en zelfgemaakte muhammara",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 4,
+      "source_pages": [
+        4
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Aubergine",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode puntpaprika",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Midden-Oosterse kruidenmix",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Naanbrood",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bulgur",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode peper",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Citroen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse bladpeterselie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Walnootstukjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-005",
+      "source": "HelloFresh",
+      "title_extracted": "Kikkererwtencurry met zoete aardappel",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 5,
+      "source_pages": [
+        5
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Zoete aardappel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse gember",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kikkererwten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kokosmelk",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse koriander",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Basmatirijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Mangochutney",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gele currykruiden",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-006",
+      "source": "HelloFresh",
+      "title_extracted": "Bulgurbowl met kipfilet, sinaasappeldressing en witte kaas",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 6,
+      "source_pages": [
+        6
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Bulgur",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kipfiletblokjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Handsinaasappel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rozijnen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Midden-Oosterse kruidenmix",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Wortel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Komkommer",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-007",
+      "source": "HelloFresh",
+      "title_extracted": "Falafel en geroosterde groenten met tahinsaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 7,
+      "source_pages": [
+        7
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Volkoren couscous",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Falafel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Wortel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Aubergine",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Citroen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse bladpeterselie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Munt",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-008",
+      "source": "HelloFresh",
+      "title_extracted": "Biefstuk met zwarte-pepersaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 8,
+      "source_pages": [
+        8
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Zwarte-pepersaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Voorgekookte kriel met schil",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gemarineerde biefstuk",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rucola en veldsla",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Mexicaanse kruiden",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Komkommer",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Pompoenpitten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-009",
+      "source": "HelloFresh",
+      "title_extracted": "Pokébowl met gemarineerde tofu en rijst",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 9,
+      "source_pages": [
+        9
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Gekruide tofublokjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zoete Aziatische saus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Basmatirijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sojasaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Radijs",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sojabonen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gomasio",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Honing-gemberdressing",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-010",
+      "source": "HelloFresh",
+      "title_extracted": "Biefstukreepjes met rijst en paksoi",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 10,
+      "source_pages": [
+        10
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Jasmijnrijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Biefstukreepjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gebroken sperziebonen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Paksoi",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sojasaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Thais basilicum",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-011",
+      "source": "HelloFresh",
+      "title_extracted": "Koreaanse stijl gefrituurde kip",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 11,
+      "source_pages": [
+        11
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Rodekool",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Wittekool",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Wortel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bosui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte langgraanrijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Broccolirijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kippendijfilet",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sojasaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Koreaanse kruidenmix",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-012",
+      "source": "HelloFresh",
+      "title_extracted": "Schelvis met knoflookbotersaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 12,
+      "source_pages": [
+        12
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Aardappelen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sperziebonen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse bladpeterselie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Schelvisfilet",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-013",
+      "source": "HelloFresh",
+      "title_extracted": "Kalfsburger deluxe met pompoenpuree en uiensaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 13,
+      "source_pages": [
+        13
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Aardappelen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spekreepjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Pompoenblokjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spruiten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Mosterdcress",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Pikante uienchutney",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Walnootstukjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-014",
+      "source": "HelloFresh",
+      "title_extracted": "Romige visstoof met gebakken krieltjes",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 14,
+      "source_pages": [
+        14
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Krieltjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sjalot",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Venkel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Slagroom",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse oregano",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Vismelange",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Geraspte belegen kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte wijn",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-015",
+      "source": "HelloFresh",
+      "title_extracted": "Klassieke tournedos met chimichurri",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 15,
+      "source_pages": [
+        15
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Aardappelen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Champignons",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode cherrytomaten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Groene peper",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse bladpeterselie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tournedos",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rucola",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-016",
+      "source": "HelloFresh",
+      "title_extracted": "Steak met fusion risotto van groene curry",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 16,
+      "source_pages": [
+        16
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Gemarineerde steak",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Risottorijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kokosmelk",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Groene currykruiden",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bosui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Munt",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Koriander",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Limoen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Broccoli",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-017",
+      "source": "HelloFresh",
+      "title_extracted": "Garnalen in knoflookmarinade",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 17,
+      "source_pages": [
+        17
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Olijfolie met citroen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Garnalen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Vers basilicum",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Parelcouscous",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Courgette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Venkel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse geitenkaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-018",
+      "source": "HelloFresh",
+      "title_extracted": "Risotto met burrata en spekjes",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 18,
+      "source_pages": [
+        18
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Vers basilicum",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Risottorijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode peper",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Burrata",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Grana Padanovlokken",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Balsamicocrème",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spekreepjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-019",
+      "source": "HelloFresh",
+      "title_extracted": "Conchiglie uit de oven met mozzarella",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 19,
+      "source_pages": [
+        19
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Conchiglie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Courgette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Midden-Oosterse kruidenmix",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Mozzarella",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Passata",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Geraspte belegen kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-020",
+      "source": "HelloFresh",
+      "title_extracted": "Köfte-stijl gehaktballetjes in romige currysaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 20,
+      "source_pages": [
+        20
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Jasmijnrijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Snijbonen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rundergehaktballetjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kokosmelk",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomatenpuree",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-021",
+      "source": "HelloFresh",
+      "title_extracted": "Roerbaknoedels met boerenworst",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 21,
+      "source_pages": [
+        21
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Verse gember",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Varkensboerenworst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Volkoren noedels",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gesneden spitskool",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bulgogisaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sojasaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sesamzaad",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Paprika",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-022",
+      "source": "HelloFresh",
+      "title_extracted": "Parelcouscous met witte kaas en gepofte kikkererwten",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 22,
+      "source_pages": [
+        22
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Witte courgette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Paprika",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse tijm",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse oregano",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kikkererwten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Midden-Oosterse kruidenmix",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Citroen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Parelcouscous",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-023",
+      "source": "HelloFresh",
+      "title_extracted": "Biefstukreepjes in lichtpittige zwarte-bonensaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 23,
+      "source_pages": [
+        23
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Biefstukreepjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Jasmijnrijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode puntpaprika",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse gember",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode peper",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zwarte-bonenpasta",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sojasaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Komkommer",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gomasio",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-024",
+      "source": "HelloFresh",
+      "title_extracted": "Tempehbowl met gember-honingglazuur",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 24,
+      "source_pages": [
+        24
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Tempehblokjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sushirijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Broccoli",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Wortelschijfjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Furikake",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gomasio",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gemberpuree",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gerookt paprikapoeder",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-025",
+      "source": "HelloFresh",
+      "title_extracted": "Knapperige bloemkool met kastanjechampignonsaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 25,
+      "source_pages": [
+        25
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Aardappelen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bloemkool",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Nootmuskaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kookroom",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse bladpeterselie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Parmigiano Reggiano",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kastanjechampignons",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-026",
+      "source": "HelloFresh",
+      "title_extracted": "Bowl met orzo en kippendijreepjes",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 26,
+      "source_pages": [
+        26
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Kippendijreepjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Komkommer",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Yoghurt Griekse stijl",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse munt",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Citroen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gesneden rode ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Paprikapoeder",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode cherrytomaten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Orzo",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-027",
+      "source": "HelloFresh",
+      "title_extracted": "Veggie linzenschotel met vegan gehakt",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 27,
+      "source_pages": [
+        27
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Aubergine",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Linzen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Wortel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Vegan gehakt",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Midden-Oosterse kruidenmix",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Yoghurt Griekse stijl",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Geraspte belegen kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-028",
+      "source": "HelloFresh",
+      "title_extracted": "Frisse krieltjessalade met tonijn en kappertjes",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 28,
+      "source_pages": [
+        28
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Krieltjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sperziebonen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tonijn in olijfolie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kappertjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse dille",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-029",
+      "source": "HelloFresh",
+      "title_extracted": "Geroosterde bloemkool en zoete aardappel met bulgur",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 29,
+      "source_pages": [
+        29
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Hummus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bulgur",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Midden-Oosterse kruidenmix",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zoete aardappel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bloemkool",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Granaatappel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse bladpeterselie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Munt",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-030",
+      "source": "HelloFresh",
+      "title_extracted": "Kruidige kikkererwtenstoof met spinazie en witte kaas",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 30,
+      "source_pages": [
+        30
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode peper",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kikkererwten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gemalen kurkuma",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kokosmelk",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Biologische volle yoghurt",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Pitabrood",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-031",
+      "source": "HelloFresh",
+      "title_extracted": "Spinaziestamppot met boerenworst",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 31,
+      "source_pages": [
+        31
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Aardappelen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knolselderij",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kastanjechampignons",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Varkensboerenworst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-032",
+      "source": "HelloFresh",
+      "title_extracted": "Milde viscurry met kabeljauw",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 32,
+      "source_pages": [
+        32
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Broccoli",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gele currykruiden",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kokosmelk",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Vissaus",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Volkoren noedels",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gomasio",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kabeljauwfilet",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-033",
+      "source": "HelloFresh",
+      "title_extracted": "Linzenstoof met gele currykruiden en naan",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 33,
+      "source_pages": [
+        33
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zoete aardappel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse gember",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse bladpeterselie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Linzen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Naanbrood",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Labne",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-034",
+      "source": "HelloFresh",
+      "title_extracted": "Bananenbrood",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 34,
+      "source_pages": [
+        34
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": []
+    },
+    {
+      "id": "hf-scan-20261102-035",
+      "source": "HelloFresh",
+      "title_extracted": "Loaded nacho's met pulled chicken",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 35,
+      "source_pages": [
+        35
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Geraspte cheddar",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gesneden jalapeños",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bosui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Avocado",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Sjalot",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Limoen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Pulled chicken",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-036",
+      "source": "HelloFresh",
+      "title_extracted": "Kaiserschmarrn",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 36,
+      "source_pages": [
+        36
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": []
+    },
+    {
+      "id": "hf-scan-20261102-037",
+      "source": "HelloFresh",
+      "title_extracted": "Peruaans geïnspireerde rijstbowl met zoete aardappel",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 37,
+      "source_pages": [
+        37
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zoete aardappel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zwarte bonen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Mais in blik",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Peruaanse kruidenmix",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode peper",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse koriander",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte langgraanrijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-038",
+      "source": "HelloFresh",
+      "title_extracted": "Zuurkoolpannetje met rookworst en spekjes",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 38,
+      "source_pages": [
+        38
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zuurkool",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Aardappelen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Appel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Varkensrookworst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spekreepjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-039",
+      "source": "HelloFresh",
+      "title_extracted": "Verse pappardelle met gebakken kabeljauw",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 39,
+      "source_pages": [
+        39
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse pappardelle",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Slagroom",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kabeljauwfilet",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Geraspte Italiaanse kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Citroen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse dille",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bieslook",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-040",
+      "source": "HelloFresh",
+      "title_extracted": "Gemarineerde biefstuk met boter met truffelaroma",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 40,
+      "source_pages": [
+        40
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Gemarineerde biefstuk",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Dunne frieten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gemengde paddenstoelen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Parmigiano Reggiano",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-041",
+      "source": "HelloFresh",
+      "title_extracted": "Luxe Thaise curry met garnalen en kippendij",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 41,
+      "source_pages": [
+        41
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Bosui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse gember",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Paprika",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Wortel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kippendijfilet",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Garnalen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gele currykruiden",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Witte langgraanrijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kokosmelk",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-042",
+      "source": "HelloFresh",
+      "title_extracted": "Indonesische roerbak met snijbonen",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 42,
+      "source_pages": [
+        42
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Snijbonen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Komkommer",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Eieren",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-043",
+      "source": "HelloFresh",
+      "title_extracted": "Groentelasagne met zelfgemaakte roomsaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 43,
+      "source_pages": [
+        43
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Aubergine",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflookteen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Gedroogde rozemarijn",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kookroom",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Geraspte oude kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Lasagnebladen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-044",
+      "source": "HelloFresh",
+      "title_extracted": "Courgettesoep met bospaddenstoelenpesto",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 44,
+      "source_pages": [
+        44
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Courgette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bospaddenstoelenpesto",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Speltbaguette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-045",
+      "source": "HelloFresh",
+      "title_extracted": "Volkoren couscous met blauwe kaas",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 45,
+      "source_pages": [
+        45
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Volkoren couscous",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Blauwe kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Peer",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Pistachenoten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-046",
+      "source": "HelloFresh",
+      "title_extracted": "Havermout met chocolade",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 46,
+      "source_pages": [
+        46
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Havermout",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Chocolade",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Dadels",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Walnoten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-047",
+      "source": "HelloFresh",
+      "title_extracted": "Parelcouscous met pompoen, kastanjechampignons en feta",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 47,
+      "source_pages": [
+        47
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Parelcouscous",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Pompoen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kastanjechampignons",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Feta",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-048",
+      "source": "HelloFresh",
+      "title_extracted": "Kipcurry met broccoli-rijst",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 48,
+      "source_pages": [
+        48,
+        49
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Kip",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Broccoli",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-050",
+      "source": "HelloFresh",
+      "title_extracted": "Romige farfalle met gekruid kipgehakt",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 50,
+      "source_pages": [
+        50
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Farfalle",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kipgehakt",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Venkel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Belegen kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-051",
+      "source": "HelloFresh",
+      "title_extracted": "Portobello met geitenkaas uit de oven",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 51,
+      "source_pages": [
+        51
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Portobello",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Geitenkaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Walnoten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Honing",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse rozemarijn",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-052",
+      "source": "HelloFresh",
+      "title_extracted": "Zoete hutspot met rookworst",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 52,
+      "source_pages": [
+        52
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Gekleurde peen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rookworst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode ui",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-053",
+      "source": "HelloFresh",
+      "title_extracted": "Winterse ovenschotel met linzen",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 53,
+      "source_pages": [
+        53
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Linzen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Wortel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Belegen geitenkaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-054",
+      "source": "HelloFresh",
+      "title_extracted": "Kipgyros met lauwwarme tabouleh",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 54,
+      "source_pages": [
+        54
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Kipgyros",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Little gem",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Verse kruiden",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-055",
+      "source": "HelloFresh",
+      "title_extracted": "Kruidige couscoussalade met geitenkaas",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 55,
+      "source_pages": [
+        55
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Couscous",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Geitenkaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Appel",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Limoen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-056",
+      "source": "HelloFresh",
+      "title_extracted": "Thaise noedels met omeletreepjes",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 56,
+      "source_pages": [
+        56
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Noedels",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Eieren",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Snijbonen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Honingpinda's",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-057",
+      "source": "HelloFresh",
+      "title_extracted": "Gebakken kabeljauwfilet met botersaus",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 57,
+      "source_pages": [
+        57
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Kabeljauwfilet",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Roomboter",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Parelcouscous",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Peen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Tomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-058",
+      "source": "HelloFresh",
+      "title_extracted": "Bietenrisotto met feta en munt",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 58,
+      "source_pages": [
+        58
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Bieten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Risottorijst",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Feta",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Munt",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Veldsla",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Walnoten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-059",
+      "source": "HelloFresh",
+      "title_extracted": "Kippendijstukjes met bospaddenstoelenpesto",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 59,
+      "source_pages": [
+        59
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Kippendijstukjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Bospaddenstoelenpesto",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Krieltjes",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Rode paprika",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Spinazie",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-060",
+      "source": "HelloFresh",
+      "title_extracted": "Spaghetti aglio olio met oude kaas",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 60,
+      "source_pages": [
+        60
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Spaghetti",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Knoflook",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Oude kaas",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Cherrytomaat",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Courgette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Basilicum",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    },
+    {
+      "id": "hf-scan-20261102-061",
+      "source": "HelloFresh",
+      "title_extracted": "Pompoen-kikkererwtensoep met komijn",
+      "source_file": "Hellofresh recepten.pdf",
+      "source_page_ingredients": 61,
+      "source_pages": [
+        61
+      ],
+      "image_only_archive": true,
+      "archive_sha256": "040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893",
+      "quality": "needs_manual_verification",
+      "pricing_eligible": false,
+      "ingredients_verified": false,
+      "quantities_verified": false,
+      "servings_verified": false,
+      "servings": null,
+      "table_repair": false,
+      "ingredients_4p": [
+        {
+          "ingredient": "Pompoen",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Kikkererwten",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Komijn",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Zure room",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        },
+        {
+          "ingredient": "Speltbaguette",
+          "quantity_4p_source": null,
+          "source": "ocr_icon_candidate_unverified"
+        }
+      ]
+    }
+  ]
+}
