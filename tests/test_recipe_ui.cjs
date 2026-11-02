@@ -220,3 +220,19 @@ test('official HelloFresh candidates are clearly unverified; source audit is opt
  assert.ok(d.querySelector('#dialog a[href$="source-audit.html"]'),'full audit list linked');
  assert.match(d.querySelector('#dialog').textContent,/broncontroleverslag.*ontbreekt|automatisch gecontroleerd|handmatige/i);
 });
+
+test('image-only HelloFresh source records are searchable but cannot claim a checkout price',async t=>{
+ const w=await open(t),d=w.document;
+ assert.match(d.querySelector('#scan-index-status').textContent,/60 voorlopige extra beeldkaartrecepten/);
+ const count=Number(d.querySelector('#library-index-status').textContent.match(/^(\d+) recepten/)[1]);
+ assert.ok(count>=740,'image-only import adds new discoverable recipes without deleting originals');
+ const q=d.querySelector('#q');q.value='Zuurkoolpannetje';q.dispatchEvent(new w.Event('input',{bubbles:true}));
+ const hits=[...d.querySelectorAll('.card')];
+ assert.ok(hits.some(x=>x.textContent.includes('Zuurkoolpannetje')),'original scanned title searchable');
+ const b=hits.find(x=>x.textContent.includes('Zuurkoolpannetje')).querySelector('button[data-id]');
+ assert.ok(b);b.click();
+ assert.match(d.querySelector('#dialog').textContent,/Extra beeldkaart uit jouw archief/);
+ assert.match(d.querySelector('#dialog').textContent,/geen betrouwbare portiehoeveelheden/i);
+ assert.match(d.querySelector('#dialog').textContent,/geen winkelprijs berekend/i);
+ assert.ok(!d.querySelector('#dialog').textContent.includes('Handmatig bevestigd in de bronregistratie'));
+});
