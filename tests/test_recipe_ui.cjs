@@ -254,7 +254,7 @@ test('every distinct audited source card remains addressable, including repeated
 
 test('live site loads versioned JavaScript and confirms full source-audit coverage',async t=>{
  const html=read('hellofresh/index.html');
- assert.match(html,/app\\.js\\?v=20261103-coverage-v17/,'browser must not load previous cached JavaScript');
+ assert.ok(html.includes('app.js?v=20261103-coverage-v17'),'browser must load new versioned JS');
  const w=await open(t),d=w.document;
  const audit=data('hellofresh/library_source_audit.json');
  const status=d.querySelector('#library-coverage-status');
