@@ -125,7 +125,7 @@ function protein(r){
  return estimateRecord(r)?.vegetarian_ingredients?'vega':kind;
 }
 function dish(r){let t=norm(displayTitle(r));if(/soep|ramen/.test(t))return 'Soep';if(/pasta|spaghetti|linguine|penne|tagliatelle|lasagne|orzo|orzotto|ravioli|gnocchi|macaroni|casarecce|fusilli|rigatoni/.test(t))return 'Pasta & orzo';if(/curry|dahl|daal|masala/.test(t))return 'Curry';if(/stamppot|hutspot|puree/.test(t))return 'Stamppot';if(/rijst|risotto|nasi|biryani|poke/.test(t))return 'Rijst & bowls';if(/noedel|bami|mie|udon|wok/.test(t))return 'Noedels & wok';if(/wrap|taco|tortilla|burrito|quesadilla|naan|platbrood|pizza/.test(t))return 'Wraps & pizza';if(/salade|couscous|bulgur|quinoa|bowl/.test(t))return 'Salade & granen';return 'Overige gerechten'}
-function all(){const map=new Map();for(const r of state.recipes.concat(state.extra)){const key=(r.source||'HelloFresh')+'|'+norm(r.title_extracted);if(key&&!map.has(key))map.set(key,r)}return [...map.values()]}
+function all(){const map=new Map();for(const r of state.recipes.concat(state.extra)){const key=(r.source||'HelloFresh')+'|'+norm(r.title_extracted);if(key&&(!map.has(key)||(map.get(key)?.image_only_archive&&!r.image_only_archive)))map.set(key,r)}return [...map.values()]}
 // Cache per-ingredient checks across recipes; store optimization never calls priceRecord.
 function matchesForIngredient(ingredient,shop){
  const key=shop+'|'+norm(ingredient)+'|'+state.cards+'|'+todayNL();
@@ -545,13 +545,14 @@ once('hfresh-export','click',()=>{
 once('file','change',async e=>{try{const rows=parseCSV(await e.target.files[0].text());if(!rows.length||!('titel_automatisch' in rows[0]))throw Error('CSV niet herkend');state.extra=rows.map((r,i)=>({id:'local-'+i,title_extracted:r.titel_automatisch,source:'HelloFresh',source_file:r.bron,source_page_ingredients:r.paginas,ingredients_4p:[]})).filter(r=>r.title_extracted);$('import-status').textContent=state.extra.length+' extra bronrecords geladen in deze browser.';dishOptions();rebuildSearch();rebuildRelevance();render()}catch(err){$('import-status').textContent='Import mislukt: '+err.message}});
 once('clear','click',()=>{state.extra=[];$('file').value='';$('import-status').textContent='Lokale import gewist';dishOptions();rebuildSearch();rebuildRelevance();render()});try{const lookup=new URLSearchParams(location.search).get('q');if(lookup&&lookup.length<=160)$('q').value=lookup;}catch(_){/* ignore malformed query */}
 options();dishOptions();render();
-json('../recipes_extracted.json').then(d=>{if(!Array.isArray(d.recipes)||!d.recipes.length)throw Error('Geen recepten in bron');state.recipes=state.recipes.filter(x=>x.source==='Plated').concat(d.recipes.map(r=>({...r,source:'HelloFresh'})));state.loading=false;dishOptions();refreshHFreshStatus();rebuildSearch();rebuildRelevance();render()}).catch(err=>{state.loading=false;$('count').textContent='Receptendatabase niet geladen: '+err.message;render()});
+json('../recipes_extracted.json').then(d=>{if(!Array.isArray(d.recipes)||!d.recipes.length)throw Error('Geen recepten in bron');state.recipes=state.recipes.filter(x=>x.source==='Plated').concat(d.recipes.map(r=>({...r,source:'HelloFresh'}))).concat(state.recipes.filter(r=>r.image_only_archive));state.loading=false;dishOptions();refreshHFreshStatus();rebuildSearch();rebuildRelevance();render()}).catch(err=>{state.loading=false;$('count').textContent='Receptendatabase niet geladen: '+err.message;render()});
 json('./scanned_recipe_candidates.json').then(d=>{
  if(d.schema_version!==1||!Array.isArray(d.recipes)||d.recipes.length!==60||d.source_pages_total!==61)
   throw Error('Incomplete image-only source index');
  const valid=d.recipes.every(r=>r.id?.startsWith('hf-scan-')&&r.source==='HelloFresh'&&r.image_only_archive===true&&r.pricing_eligible===false);
  if(!valid)throw Error('Unsafe image-only source index');
  state.recipes=state.recipes.filter(r=>!r.image_only_archive).concat(d.recipes);
+ const scanStatus=$('scan-index-status');if(scanStatus)scanStatus.textContent='60 voorlopige extra beeldkaartrecepten uit 61 pagina’s toegevoegd; OCR-ingrediënten zijn onvolledig en niet gewogen. Deze recepten krijgen geen prijsraming.';
  dishOptions();rebuildSearch();rebuildRelevance();render();
 }).catch(()=>{const el=$('scan-index-status');if(el)el.textContent='Aanvullende beeld-PDF-index is nog niet beschikbaar. De bestaande recepten blijven doorzoekbaar.';});
 
