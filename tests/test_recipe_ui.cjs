@@ -236,3 +236,18 @@ test('image-only HelloFresh source records are searchable but cannot claim a che
  assert.match(d.querySelector('#dialog').textContent,/geen winkelprijs berekend/i);
  assert.ok(!d.querySelector('#dialog').textContent.includes('Handmatig bevestigd in de bronregistratie'));
 });
+
+test('every distinct audited source card remains addressable, including repeated titles',async t=>{
+ const w=await open(t),d=w.document;
+ const audit=data('hellofresh/library_source_audit.json');
+ const countText=d.querySelector('#library-index-status').textContent; const countMatch=countText.match(/(\d+) recepten/); assert.ok(countMatch,'search counter: '+countText); const total=Number(countMatch[1]);
+ assert.equal(total,audit.summary.records_audited,'search index must not silently drop recipe versions');
+ const duplicates=audit.records.filter(r=>(r.issues||[]).includes('duplicate_title_variant'));
+ assert.ok(duplicates.length>=2,'fixture includes several different source cards sharing a title');
+ const title=duplicates[0].title;
+ const q=d.querySelector('#q');q.value=title;q.dispatchEvent(new w.Event('input',{bubbles:true}));
+ const matching=[...d.querySelectorAll('.card button[data-id]')].filter(b=>
+  b.closest('.card').textContent.includes(title));
+ const ids=new Set(matching.map(b=>b.dataset.id));
+ assert.ok(ids.size>=2,'different recipe IDs with the same title remain separately selectable');
+});
