@@ -30,3 +30,33 @@ De bronindex bevat 225 HelloFresh-receptrecords en 504 Plated-bronrecords. De Pl
 - npm test
 
 Het aantal automatisch doorgelopen receptrecords, ingevulde hoeveelheden en nog onbevestigde recepten wordt op de website rechtstreeks uit de laatste uitgevoerde audit getoond. Ontbreekt die publicatie, dan wordt dat expliciet vermeld.
+
+
+## Aanvullende 61 beeldpagina’s: 60 voorlopige recepten (2 november 2026)
+
+De door de gebruiker aangeleverde `Hellofresh recepten.pdf` bestaat uit
+61 beeldpagina’s zonder tekstlaag. Deze zijn aanvullend geïnventariseerd en
+als `hellofresh/scanned_recipe_candidates.json` aan de site toegevoegd:
+**60 afzonderlijke receptrecords**, omdat pagina 49 een vervolg is van de
+receptpagina 48.
+
+De index legt per recept de titel, bronbestandsnaam, exacte bronpagina en
+een selectie van via beeld-OCR herkenbare ingrediëntnamen vast. De 60
+titels en **416 mogelijke ingrediëntlabels** zijn voorlopig; de lijst met
+ingrediënten is niet volledig, en er zijn **geen gevalideerde hoeveelheden,
+portieaantallen of supermarktprijzen** toegevoegd. Zoekresultaten tonen
+deze records met een herkenbare OCR-/beeldkaartwaarschuwing. Bestaande
+geïndexeerde kaarten winnen altijd van een titelduplicaat uit de scans.
+
+Het oorspronkelijke bestand heeft SHA-256
+`040937c9524b105a79d5bfa5a66008d2e3073dc61defb951de62b4a1412c2893`.
+Dit PDF-bestand werd in de projectconversatie aangeleverd, maar staat
+**niet als openbare bron-PDF op GitHub Pages**. De broncontrole meldt
+die ontbrekende openbare koppeling expliciet. Het volledige dashboard
+kan dus niet pretenderen dat deze 60 originele PDF's publiek klikbaar zijn.
+
+De structurele audit loopt voortaan door **789 bronrecords: 285 HelloFresh
+(inclusief 60 beeldkaarten) plus 504 Plated**. Het aantal afzonderlijke
+zoekresultaten kan lager zijn door titeldeduplicatie. Alle 60 beeldkaarten
+blijven onderdeel van de handmatige controlevraag. De 416 OCR-labels
+worden niet automatisch als geschikte actiescenario's meegerekend.
