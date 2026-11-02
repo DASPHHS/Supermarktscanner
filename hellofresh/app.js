@@ -50,6 +50,20 @@ const auditIssues={
  human_source_review_required:'Handmatige vergelijking van de originele kaart vereist'
 };
 function auditEntry(r){return state.sourceAuditById.get(String(r.id))||null;}
+function compareLoadedWithAudit(){
+ const el=$('library-coverage-status');if(!el)return;
+ const report=state.sourceAudit?.summary;
+ if(!report){el.textContent='Broncontrole en volledigheid van de geladen bibliotheek worden gecontroleerd…';return;}
+ const loaded=all();
+ const expected=report.records_audited;
+ if(loaded.length!==expected){
+  el.textContent='Let op: '+loaded.length+' van '+expected+' bronrecords geladen. De bibliotheek is nog onvolledig; vernieuw deze pagina of controleer de bronstatus hieronder.';
+  el.dataset.coverage='incomplete';
+ }else{
+  el.textContent='Volledigheid bevestigd: alle '+expected+' bronrecords uit het controleverslag zijn in de zoekindex geladen.';
+  el.dataset.coverage='complete';
+ }
+}
 function renderAuditSummary(){
  const el=$('source-audit-status');if(!el)return;
  const a=state.sourceAudit,summary=a?.summary;
@@ -105,6 +119,7 @@ function displayIngredients(r){const nl=translatedIngredients(r);return nl?nl.ma
 function rebuildSearch(){
  const records=all();
  state.searchIndex=RecipeSearch.makeIndex(records.map(r=>({...r,displayTitle:displayTitle(r)})),displayIngredients);
+ compareLoadedWithAudit();
  const summary=RecipeSearch.stats(records,state.searchIndex);
  const scanned=records.filter(r=>r.image_only_archive).length;
  const el=$('library-index-status');
@@ -569,9 +584,9 @@ json('./library_source_audit.json').then(d=>{
   throw Error('Onvolledig controleverslag');
  state.sourceAudit=d;
  state.sourceAuditById=new Map(d.records.map(r=>[String(r.id),r]));
- renderAuditSummary();
+ renderAuditSummary();compareLoadedWithAudit();
  if(state.selectedId&&$('modal').classList.contains('open'))details(String(state.selectedId));
-}).catch(()=>{state.sourceAudit=null;state.sourceAuditById=new Map();renderAuditSummary();});
+}).catch(()=>{state.sourceAudit=null;state.sourceAuditById=new Map();renderAuditSummary();compareLoadedWithAudit();});
 json('./hfresh_matches.json').then(d=>{
  if(d.schema_version!==1||!d.recipe_links||typeof d.recipe_links!=='object')throw Error('Ongeldige bronverwijzingen');
  state.hfreshMatches=HFreshLinks.safeSnapshot(d);
