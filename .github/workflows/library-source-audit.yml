@@ -9,6 +9,7 @@ on:
       - "plated_release_review_queue.json"
       - "plated_nl_catalog.json"
       - "hellofresh/preview_manifest.json"
+      - "hellofresh/scanned_recipe_candidates.json"
       - "hellofresh/plated_preview_manifest.json"
       - ".github/workflows/library-source-audit.yml"
   schedule:
@@ -41,9 +42,10 @@ jobs:
           d=json.load(open("hellofresh/library_source_audit.json", encoding="utf-8"))
           s=d["summary"]
           assert s["records_audited"] == len(d["records"])
-          assert s["by_source"]["HelloFresh"] >= 225
+          assert s["by_source"]["HelloFresh"] >= 285
           assert s["by_source"]["Plated"] >= 500
-          assert s["records_audited"] >= 725
+          assert s["records_audited"] >= 789
+          assert s["image_only_scans"] == 60
           assert s["human_source_review_confirmed"] <= s["records_audited"]
           print("Entire source index audited:", s)
           PY
