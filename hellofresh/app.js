@@ -100,7 +100,7 @@ function officialCandidatesDetail(r){
 }
 
 function translatedIngredients(r){const nl=dutch(r);return nl?.ingredients_nl?.length?nl.ingredients_nl:null}
-function displayIngredients(r){const nl=translatedIngredients(r);return nl?nl.map(i=>({name:i.name_nl,quantity:i.quantity_display_nl,original:i.original_name,confidence:i.translation_status,conversion:i.conversion_status})):(r.ingredients_2p||ingredients(r)).map(i=>({name:i.ingredient,quantity:r.ingredients_2p?i.quantity_2p_source:i.quantity_4p_source,original:i.ingredient,confidence:'source'}))}
+function displayIngredients(r){const nl=translatedIngredients(r);return nl?nl.map(i=>({name:i.name_nl,quantity:i.quantity_display_nl,original:i.original_name,confidence:i.translation_status,conversion:i.conversion_status})):(r.ingredients_2p||ingredients(r)).map(i=>({name:i.ingredient,quantity:r.ingredients_2p?i.quantity_2p_source:i.quantity_4p_source,original:i.ingredient,confidence:r.image_only_archive?'ocr_unverified':'source'}))}
 
 function rebuildSearch(){
  const records=all();
@@ -432,17 +432,17 @@ $('top').textContent=state.top?'Alle recepten':'Top 10 goedkoopste';updateBanner
 const emoji={vega:'🥬',kip:'🍗',vis:'🐟',vlees:'🥘',onbekend:'🍽️'};
 $('cards').innerHTML=rows.slice(0,state.top?10:state.shown).map(r=>{
  const k=protein(r),v=completePrice(r),est=estimateRecord(r),shop=priceRecord(r)?.store||state.store;
- const costLabel=v===null?'Prijs nog onvolledig':state.basis==='cash'?'Kassabon ≈ '+eur(est.whole_packages_eur):'Verbruik ≈ '+eur(v/2)+' p.p.';
+ const costLabel=v===null?(r.image_only_archive?'Geen prijs: beeldkaart nog niet gecontroleerd':'Prijs nog onvolledig'):state.basis==='cash'?'Kassabon ≈ '+eur(est.whole_packages_eur):'Verbruik ≈ '+eur(v/2)+' p.p.';
  const costInfo=v===null?coverageText(r):state.basis==='cash'?'Hele verpakkingen voor 2 · '+shop+' · verbruik '+eur(v/2)+' p.p.':'Per persoon · '+shop+' · 2 porties';
  const priceClass=v===null?'not-priced':'priced';
- const meta=esc(r.source||'HelloFresh')+' · '+esc(k)+' · '+esc(r.source_file||'');
+ const meta=esc(r.source||'HelloFresh')+' · '+esc(k)+' · '+esc(r.source_file||'')+(r.image_only_archive?' · OCR/beeldkaart voorlopig':'');
  const art=state.previews[r.id]?.front?'<img class="real-card-preview" loading="lazy" alt="Originele bronkaart van '+esc(displayTitle(r))+'" src="'+esc(state.previews[r.id].front)+'">':'<span>'+emoji[k]+'</span>';
  return '<article class="card"><div class="art '+k+'">'+art+'<span class="tag">'+esc(dish(r))+'</span></div>'+
  '<div class="content"><div class="meta">'+meta+'</div><h3>'+esc(displayTitle(r))+'</h3>'+
  '<div class="minor">'+esc(displayIngredients(r).slice(0,3).map(i=>i.name).join(' · ')||'Ingrediëntencontrole vereist')+'</div>'+ (r.source==='HelloFresh'?'<p class="hfresh-quick"><a href="https://www.hellofresh.nl/recipes" target="_blank" rel="noopener noreferrer">Officieel HelloFresh-kookboek</a>'+(hfreshLink(r)?' · <a href="'+esc(hfreshLink(r).url)+'" target="_blank" rel="noopener noreferrer">HFresh-link (mogelijk offline)</a>':'')+'</p>':'')+
  '<div class="main-cost '+priceClass+'"><strong>'+costLabel+'</strong><small>'+esc(costInfo)+'</small>'+(est?.scenario_offer?'<small>Met doorgerekend actiescenario · indicatief kassabonverschil '+eur(selectedStoreOption(r).savings)+'</small>':'')+'</div>'+
  cardOfferBlock(r)+
- '<div class="foot"><button type="button" class="action" data-id="'+esc(r.id)+'">Prijs &amp; acties bekijken →</button></div></div></article>';
+ '<div class="foot"><button type="button" class="action" data-id="'+esc(r.id)+'">'+(r.image_only_archive?'Bekijk bron- en ingrediëntenstatus':'Prijs &amp; acties bekijken')+' →</button></div></div></article>';
 }).join('')||(state.loading?'<div class="empty">Recepten ophalen…</div>':'<div class="empty">'+(state.top?'Voor deze filters zijn nog geen volledige prijsramingen beschikbaar.':'Geen recepten gevonden. Pas de zoekfilters aan.')+'</div>');
 $('more').style.display=!state.top&&rows.length>state.shown?'block':'none';$('cards').querySelectorAll('button[data-id]').forEach(b=>b.addEventListener('click',()=>details(b.dataset.id)))}
 function details(id){
