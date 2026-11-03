@@ -15,7 +15,7 @@ from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 
 DEFAULT_BASE = "https://dasphhs.github.io/Supermarktscanner/hellofresh/"
-REQUIRED_APP_VERSION = "20261103-coverage-v17"
+REQUIRED_APP_VERSION = "20261103-audit-v18"
 
 
 def get(url: str, *, max_bytes: int = 9_000_000, timeout: int = 25) -> tuple[bytes, str]:
@@ -80,6 +80,8 @@ def check_site(base: str) -> dict:
             found_latest_app = REQUIRED_APP_VERSION in script
             if "compareLoadedWithAudit" not in code:
                 problems.append("Published app.js is missing the live audit coverage check")
+            if "expectedIds" not in code or "loadedIds" not in code:
+                problems.append("Published app.js must compare exact source identities")
             if "String(r.id||'')" not in code:
                 problems.append("Published app.js still collapses distinct same-title recipes")
     if not found_latest_app:
