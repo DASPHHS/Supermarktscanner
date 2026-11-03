@@ -1,0 +1,20 @@
+name: HelloFresh source integrity
+on:
+  push:
+    paths:
+      - 'hellofresh/library_source_audit.json'
+      - 'scripts/check_hellofresh_source_integrity.py'
+      - '.github/workflows/hellofresh-integrity.yml'
+  schedule:
+    - cron: '15 6 * * *'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate HelloFresh source audit
+        run: python scripts/check_hellofresh_source_integrity.py
