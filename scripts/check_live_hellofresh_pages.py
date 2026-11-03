@@ -22,7 +22,11 @@ def get(url: str, *, max_bytes: int = 9_000_000, timeout: int = 25) -> tuple[byt
     request = Request(
         url, headers={"User-Agent": "Supermarktscanner-Pages-Smoketest/1.0", "Accept": "*/*"}
     )
-    with urlopen(request, timeout=timeout) as response:
+    try:
+        response = urlopen(request, timeout=timeout)
+    except HTTPError as exc:
+        raise ValueError(f"HTTP {exc.code} for public resource: {url}") from exc
+    with response:
         if response.status != 200:
             raise ValueError(f"HTTP {response.status}: {url}")
         size = response.headers.get("Content-Length")
@@ -130,7 +134,11 @@ def check_site(base: str) -> dict:
             # Read only header bytes to validate 200 and actual original/preview signature.
             req = Request(urljoin(base, path), headers={"Range": "bytes=0-15",
                                                         "User-Agent": "Supermarktscanner-Pages-Smoketest/1.0"})
-            with urlopen(req, timeout=25) as response:
+            try:
+                response = urlopen(req, timeout=25)
+            except HTTPError as exc:
+                raise ValueError(f"HTTP {exc.code} for original source file: {path}") from exc
+            with response:
                 header = response.read(16)
                 if response.status not in (200, 206):
                     problems.append(f"Source card HTTP {response.status}: {path}")
