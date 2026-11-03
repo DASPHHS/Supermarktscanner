@@ -1,5 +1,9 @@
 name: Controleer gepubliceerde HelloFresh website
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-hellofresh-pages.yml'
   workflow_run:
     workflows: ["pages build and deployment"]
     types: [completed]
