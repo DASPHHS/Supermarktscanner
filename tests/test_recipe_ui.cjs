@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const data=p=>JSON.parse(read(p));
 
-async function open(t,priceOverride,hfreshOverride,weekdealsOverride){
+async function open(t,priceOverride,hfreshOverride,weekdealsOverride,auditOverride){
  const errors=[];
  const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type!=='css-parsing')errors.push(e.message)});
  const dom=new JSDOM(read('hellofresh/index.html'),{url:'https://example.test/Supermarktscanner/hellofresh/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc});
@@ -20,6 +20,7 @@ async function open(t,priceOverride,hfreshOverride,weekdealsOverride){
   if(priceOverride&&relative==='recipe_prices.json')return {ok:true,json:async()=>structuredClone(priceOverride)};
   if(hfreshOverride&&relative==='hellofresh/hfresh_matches.json')return {ok:true,json:async()=>structuredClone(hfreshOverride)};
   if(weekdealsOverride&&relative==='weekdeals_hellofresh.json')return {ok:true,json:async()=>structuredClone(weekdealsOverride)};
+  if(auditOverride&&relative==='hellofresh/library_source_audit.json')return {ok:true,json:async()=>structuredClone(auditOverride)};
   const p=path.join(root,relative);
   return fs.existsSync(p)?{ok:true,json:async()=>JSON.parse(fs.readFileSync(p,'utf8'))}:{ok:false,status:404};
  };
@@ -254,11 +255,32 @@ test('every distinct audited source card remains addressable, including repeated
 
 test('live site loads versioned JavaScript and confirms full source-audit coverage',async t=>{
  const html=read('hellofresh/index.html');
- assert.ok(html.includes('app.js?v=20261103-coverage-v17'),'browser must load new versioned JS');
+ assert.ok(html.includes('app.js?v=20261103-audit-v18'),'browser must load new versioned JS');
  const w=await open(t),d=w.document;
  const audit=data('hellofresh/library_source_audit.json');
  const status=d.querySelector('#library-coverage-status');
  assert.ok(status,'visible completeness check');
  assert.equal(status.dataset.coverage,'complete',status.textContent);
  assert.match(status.textContent,new RegExp(String(audit.summary.records_audited)));
+});
+
+test('equal record totals do not hide a mismatched source identity',async t=>{
+ const audit=data('hellofresh/library_source_audit.json');
+ const altered=structuredClone(audit);
+ altered.records[0].id='nonexistent-source-card-not-in-search';
+ const w=await open(t,null,null,null,altered),d=w.document;
+ const status=d.querySelector('#library-coverage-status');
+ assert.equal(status.dataset.coverage,'incomplete');
+ assert.match(status.textContent,/1 bronrecords ontbreken/);
+ assert.match(status.textContent,/1 nieuwere of afwijkende records/);
+});
+test('outdated source audit is disclosed rather than represented as up-to-date',async t=>{
+ const audit=data('hellofresh/library_source_audit.json');
+ const altered=structuredClone(audit);
+ altered.generated_at_utc='2020-01-01T00:00:00Z';
+ const w=await open(t,null,null,null,altered),d=w.document;
+ const status=d.querySelector('#library-coverage-status');
+ assert.equal(status.dataset.coverage,'complete');
+ assert.equal(status.dataset.auditFreshness,'stale');
+ assert.match(status.textContent,/ouder dan 24 uur/);
 });
