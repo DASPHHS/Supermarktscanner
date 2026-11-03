@@ -1,0 +1,39 @@
+name: Controleer gepubliceerde HelloFresh website
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+  schedule:
+    - cron: "40 7,16 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: live-hellofresh-pages
+  cancel-in-progress: true
+jobs:
+  live-smoke:
+    if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inspect actually deployed site and source PDFs
+        shell: bash
+        run: |
+          set -u
+          for attempt in 1 2 3 4 5; do
+            echo "Public GitHub Pages smoke test attempt $attempt"
+            if python scripts/check_live_hellofresh_pages.py; then
+              echo "Live site verified after deployment."
+              exit 0
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              echo "::error::Published HelloFresh site fails the end-to-end HTTP verification."
+              exit 1
+            fi
+            sleep 20
+          done
