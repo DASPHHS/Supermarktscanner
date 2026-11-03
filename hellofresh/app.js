@@ -90,7 +90,7 @@ function renderAuditSummary(){
   summary.with_ingredient_rows+' records met ingrediëntregels, '+
   summary.quantity_rows_structurally_complete+' met alle hoeveelheidsvelden. '+
   summary.human_source_review_confirmed+' handmatig als bronvergelijking bevestigd; '+
-  summary.require_human_review+' nog niet bevestigd. Een volledige hoeveelheidstabel bewijst geen correcte OCR.';
+  summary.require_human_review+' nog niet bevestigd. '+(summary.issues?.ingredients_missing??0)+' zonder herkende ingrediënten, '+(summary.issues?.quantities_incomplete??0)+' met onvolledige hoeveelheden en '+(summary.issues?.portions_unconfirmed??0)+' met onbevestigde porties. Een volledige hoeveelheidstabel bewijst geen correcte OCR. Deze recepten blijven doorzoekbaar, maar zijn niet automatisch prijsgeldig.';
 }
 function scanSourceNotice(r){
  if(!r.image_only_archive)return '';
