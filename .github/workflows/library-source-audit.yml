@@ -12,8 +12,17 @@ on:
       - "hellofresh/scanned_recipe_candidates.json"
       - "hellofresh/plated_preview_manifest.json"
       - ".github/workflows/library-source-audit.yml"
+  workflow_run:
+    workflows:
+      - "Plated Release ZIP import"
+      - "Plated Nederlandse recepten"
+      - "Plated ontbrekende ingrediënten herscannen"
+      - "Originele Plated kaarten van Marc"
+      - "Recepten kwaliteitsrapport"
+      - "Originele HelloFresh receptkaarten"
+    types: [completed]
   schedule:
-    - cron: "20 8 * * 1"
+    - cron: "20 8 * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -22,12 +31,18 @@ concurrency:
   cancel-in-progress: false
 jobs:
   structural-review:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Fetch latest source records before building report
+        run: |
+          git fetch origin main
+          git checkout -f main
+          git reset --hard origin/main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -53,14 +68,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cp hellofresh/library_source_audit.json "$RUNNER_TEMP/library_source_audit.json"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
             git checkout -f main
             git reset --hard origin/main
-            cp "$RUNNER_TEMP/library_source_audit.json" hellofresh/library_source_audit.json
+            python scripts/audit_recipe_library.py
             git add hellofresh/library_source_audit.json
             if git diff --cached --quiet; then exit 0; fi
             git commit -m "Update complete recipe source audit [skip ci]"
