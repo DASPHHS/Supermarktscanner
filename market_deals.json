@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-03T01:04:55.278052+00:00",
+  "updated_at_utc": "2026-11-03T14:29:11.580564+00:00",
   "source": "PrijsProfeet API /search",
   "limitations": [
     "Rotating partial food-term search; not a complete assortment",
@@ -9,14 +9,14 @@
   "search_coverage": {
     "requested_terms": 24,
     "available_terms": 187,
-    "daily_slot": 0,
+    "daily_slot": 2,
     "complete": false,
-    "retained_product_records": 361,
+    "retained_product_records": 418,
     "successful_terms": 24
   },
   "stores": {
     "Jumbo": {
-      "updated_at": "2026-11-03T01:04:55.278052+00:00",
+      "updated_at": "2026-11-03T14:29:11.580564+00:00",
       "deals": [
         {
           "product_id": "jumbo_612031PAK",
@@ -46,6 +46,33 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "product_id": "jumbo_599244PAK",
+          "base_product_id": "jumbo_599244PAK",
+          "ean": "8720600624483",
+          "quantity": "190 g",
+          "product_url": "https://www.jumbo.com/producten/hak-linzen-190-g-599244PAK",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 1.19,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": null,
+          "online_only": null,
+          "valid_until_estimated": null,
+          "card_required": false,
+          "personal_offer": false,
+          "name": "Hak Linzen 190 g",
+          "discount": "50.4% korting",
+          "price": 0.59,
+          "original_price": 1.19,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "product_id": "jumbo_702956ZK",
           "base_product_id": "jumbo_702956ZK",
           "ean": "8718452928200",
@@ -69,18 +96,18 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "product_id": "jumbo_672911PAK",
-          "base_product_id": "jumbo_672911PAK",
-          "ean": "8720600667572",
-          "quantity": "390gr",
-          "product_url": "https://www.jumbo.com/producten/hak-mais-mix-390gr-672911PAK",
+          "product_id": "jumbo_648351PAK",
+          "base_product_id": "jumbo_648351PAK",
+          "ean": "8720600666841",
+          "quantity": "380g",
+          "product_url": "https://www.jumbo.com/producten/hak-zwarte-bonen-380g-648351PAK",
           "promotion_type": "one_plus_one",
           "multi_buy_quantity": 2,
-          "multi_buy_price": 1.99,
+          "multi_buy_price": 1.49,
           "loyalty_program": null,
           "loyalty_price": null,
           "max_per_customer": null,
@@ -89,14 +116,14 @@
           "valid_until_estimated": null,
           "card_required": false,
           "personal_offer": false,
-          "name": "HAK Mais Mix 390gr",
+          "name": "HAK Zwarte Bonen 380g",
           "discount": "50.3% korting",
-          "price": 0.99,
-          "original_price": 1.99,
+          "price": 0.74,
+          "original_price": 1.49,
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
-          "source_term": "mais",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "source_term": "zwarte bonen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -123,18 +150,18 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
-          "product_id": "jumbo_599251PAK",
-          "base_product_id": "jumbo_599251PAK",
-          "ean": "8720600663840",
-          "quantity": "390 g",
-          "product_url": "https://www.jumbo.com/producten/hak-mais-390-g-599251PAK",
+          "product_id": "jumbo_599245PAK",
+          "base_product_id": "jumbo_599245PAK",
+          "ean": "8720600624506",
+          "quantity": "380 g",
+          "product_url": "https://www.jumbo.com/producten/hak-linzen-380-g-599245PAK",
           "promotion_type": "one_plus_one",
           "multi_buy_quantity": 2,
-          "multi_buy_price": 1.89,
+          "multi_buy_price": 1.49,
           "loyalty_program": null,
           "loyalty_price": null,
           "max_per_customer": null,
@@ -143,14 +170,14 @@
           "valid_until_estimated": null,
           "card_required": false,
           "personal_offer": false,
-          "name": "Hak Mais 390 g",
+          "name": "Hak Linzen 380 g",
           "discount": "50.3% korting",
-          "price": 0.94,
-          "original_price": 1.89,
+          "price": 0.74,
+          "original_price": 1.49,
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
-          "source_term": "mais",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -205,33 +232,6 @@
           "valid_until": "2026-11-03",
           "source_term": "boerenkool",
           "observed_at_utc": "2026-11-01T22:12:41.131197+00:00",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "product_id": "jumbo_464245ZK",
-          "base_product_id": "jumbo_464245ZK",
-          "ean": "8718452793440",
-          "quantity": "75 g",
-          "product_url": "https://www.jumbo.com/producten/jumbo-melange-veldsla-bull-s-blood-75-g-464245ZK",
-          "promotion_type": "percentage",
-          "multi_buy_quantity": null,
-          "multi_buy_price": null,
-          "loyalty_program": null,
-          "loyalty_price": null,
-          "max_per_customer": 2,
-          "in_store_only": null,
-          "online_only": null,
-          "valid_until_estimated": null,
-          "card_required": false,
-          "personal_offer": false,
-          "name": "Jumbo Melange Veldsla & Bull's Blood 75 g",
-          "discount": "50.3% korting",
-          "price": 0.99,
-          "original_price": 1.99,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "veldsla",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -312,7 +312,61 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "jumbo_175456ZK",
+          "base_product_id": "jumbo_175456ZK",
+          "ean": "8720600613234",
+          "quantity": "205 g",
+          "product_url": "https://www.jumbo.com/producten/hak-linzen-205-g-175456ZK",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 2.19,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": null,
+          "online_only": null,
+          "valid_until_estimated": null,
+          "card_required": false,
+          "personal_offer": false,
+          "name": "Hak Linzen 205 g",
+          "discount": "50.2% korting",
+          "price": 1.09,
+          "original_price": 2.19,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "jumbo_503827ZK",
+          "base_product_id": "jumbo_503827ZK",
+          "ean": "8720600613272",
+          "quantity": "225g",
+          "product_url": "https://www.jumbo.com/producten/hak-zwarte-bonen-225g-503827ZK",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 2.19,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": null,
+          "online_only": null,
+          "valid_until_estimated": null,
+          "card_required": false,
+          "personal_offer": false,
+          "name": "Hak Zwarte Bonen 225g",
+          "discount": "50.2% korting",
+          "price": 1.09,
+          "original_price": 2.19,
+          "valid_from": "2026-10-28",
+          "valid_until": "2026-11-03",
+          "source_term": "zwarte bonen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -663,7 +717,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -690,7 +744,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -717,7 +771,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -743,8 +797,8 @@
           "original_price": 4.99,
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
-          "source_term": "pompoen",
-          "observed_at_utc": "2026-11-01T22:12:41.131197+00:00",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -771,7 +825,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -798,7 +852,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -825,7 +879,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -879,7 +933,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -906,7 +960,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -933,7 +987,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -960,7 +1014,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -987,7 +1041,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1041,7 +1095,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1068,34 +1122,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "product_id": "jumbo_599250PAK",
-          "base_product_id": "jumbo_599250PAK",
-          "ean": "8720600663789",
-          "quantity": "190 g",
-          "product_url": "https://www.jumbo.com/producten/hak-mais-190-g-599250PAK",
-          "promotion_type": "one_plus_one",
-          "multi_buy_quantity": 2,
-          "multi_buy_price": 1.29,
-          "loyalty_program": null,
-          "loyalty_price": null,
-          "max_per_customer": null,
-          "in_store_only": null,
-          "online_only": null,
-          "valid_until_estimated": null,
-          "card_required": false,
-          "personal_offer": false,
-          "name": "Hak Mais 190 g",
-          "discount": "49.6% korting",
-          "price": 0.65,
-          "original_price": 1.29,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "mais",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1122,7 +1149,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1203,7 +1230,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1284,7 +1311,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1527,7 +1554,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "eieren",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1554,7 +1581,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "eieren",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1581,7 +1608,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1609,60 +1636,6 @@
           "valid_until": "2026-11-03",
           "source_term": "prei",
           "observed_at_utc": "2026-11-02T16:19:32.406771+00:00",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "product_id": "jumbo_581692ZK",
-          "base_product_id": "jumbo_581692ZK",
-          "ean": "8718452793358",
-          "quantity": "75 GRAM",
-          "product_url": "https://www.jumbo.com/producten/jumbo-melange-jonge-bladsla-veldsla-75-g-581692ZK",
-          "promotion_type": "percentage",
-          "multi_buy_quantity": null,
-          "multi_buy_price": null,
-          "loyalty_program": null,
-          "loyalty_price": null,
-          "max_per_customer": 2,
-          "in_store_only": null,
-          "online_only": null,
-          "valid_until_estimated": null,
-          "card_required": false,
-          "personal_offer": false,
-          "name": "Jumbo Melange Jonge Bladsla & Veldsla 75 g",
-          "discount": "28.8% korting",
-          "price": 0.99,
-          "original_price": 1.39,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "veldsla",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "product_id": "jumbo_362320ZK",
-          "base_product_id": "jumbo_362320ZK",
-          "ean": "8718452793372",
-          "quantity": "75 g",
-          "product_url": "https://www.jumbo.com/producten/jumbo-melange-rucola-75-g-362320ZK",
-          "promotion_type": "percentage",
-          "multi_buy_quantity": null,
-          "multi_buy_price": null,
-          "loyalty_program": null,
-          "loyalty_price": null,
-          "max_per_customer": 2,
-          "in_store_only": null,
-          "online_only": null,
-          "valid_until_estimated": null,
-          "card_required": false,
-          "personal_offer": false,
-          "name": "Jumbo Melange Rucola 75 g",
-          "discount": "28.8% korting",
-          "price": 0.99,
-          "original_price": 1.39,
-          "valid_from": "2026-10-28",
-          "valid_until": "2026-11-03",
-          "source_term": "rucola",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1743,7 +1716,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "eieren",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1824,7 +1797,7 @@
           "valid_from": "2026-10-28",
           "valid_until": "2026-11-03",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1852,33 +1825,6 @@
           "valid_until": "2026-11-03",
           "source_term": "sperziebonen",
           "observed_at_utc": "2026-11-01T22:12:41.131197+00:00",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "product_id": "jumbo_484439CUP",
-          "base_product_id": "jumbo_484439CUP",
-          "ean": "8718452749645",
-          "quantity": "80 g",
-          "product_url": "https://www.jumbo.com/producten/jumbo-garnalen-knoflook-80-g-484439CUP",
-          "promotion_type": "multi_buy",
-          "multi_buy_quantity": 3,
-          "multi_buy_price": 6.0,
-          "loyalty_program": null,
-          "loyalty_price": null,
-          "max_per_customer": null,
-          "in_store_only": null,
-          "online_only": null,
-          "valid_until_estimated": null,
-          "card_required": false,
-          "personal_offer": false,
-          "name": "Jumbo Garnalen Knoflook 80 g",
-          "discount": "22.8% korting",
-          "price": 2.0,
-          "original_price": 2.59,
-          "valid_from": "2026-01-01",
-          "valid_until": "2026-11-03",
-          "source_term": "garnalen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -1986,7 +1932,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-24",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2040,61 +1986,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-03",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "product_id": "jumbo_627250CUP",
-          "base_product_id": "jumbo_627250CUP",
-          "ean": "8726900070753",
-          "quantity": "125 g",
-          "product_url": "https://www.jumbo.com/producten/jumbo-salade-garnalen-cocktail-125-g-627250CUP",
-          "promotion_type": "multi_buy",
-          "multi_buy_quantity": 3,
-          "multi_buy_price": 6.0,
-          "loyalty_program": null,
-          "loyalty_price": null,
-          "max_per_customer": null,
-          "in_store_only": null,
-          "online_only": null,
-          "valid_until_estimated": null,
-          "card_required": false,
-          "personal_offer": false,
-          "name": "Jumbo Salade Garnalen Cocktail 125 g",
-          "discount": "19.7% korting",
-          "price": 2.0,
-          "original_price": 2.49,
-          "valid_from": "2026-01-01",
-          "valid_until": "2026-11-03",
-          "source_term": "garnalen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
-          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
-        },
-        {
-          "product_id": "jumbo_672958CUP",
-          "base_product_id": "jumbo_672958CUP",
-          "ean": "8718452904150",
-          "quantity": "150 g",
-          "product_url": "https://www.jumbo.com/producten/jumbo-spicy-garnalen-salade-150-g-672958CUP",
-          "promotion_type": "multi_buy",
-          "multi_buy_quantity": 2,
-          "multi_buy_price": 4.0,
-          "loyalty_program": null,
-          "loyalty_price": null,
-          "max_per_customer": null,
-          "in_store_only": null,
-          "online_only": null,
-          "valid_until_estimated": null,
-          "card_required": false,
-          "personal_offer": false,
-          "name": "Jumbo Spicy Garnalen Salade 150 g",
-          "discount": "19.7% korting",
-          "price": 2.0,
-          "original_price": 2.49,
-          "valid_from": "2026-03-11",
-          "valid_until": "2026-11-03",
-          "source_term": "garnalen",
-          "observed_at_utc": "2026-11-01T09:28:32.071273+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2256,7 +2148,7 @@
           "valid_from": "2026-01-01",
           "valid_until": "2026-11-03",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2337,7 +2229,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2364,7 +2256,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2391,7 +2283,34 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "jumbo_171780PAK",
+          "base_product_id": "jumbo_171780PAK",
+          "ean": "5411188121435",
+          "quantity": "257 g",
+          "product_url": "https://www.jumbo.com/producten/alpro-plantaardige-variatie-op-slagroom-op-te-kloppen-250ml-171780PAK",
+          "promotion_type": "multi_buy",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 3.99,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": null,
+          "online_only": null,
+          "valid_until_estimated": null,
+          "card_required": false,
+          "personal_offer": false,
+          "name": "Alpro Plantaardige Variatie Op Slagroom Op Te Kloppen 250ml",
+          "discount": "12.7% korting",
+          "price": 2.0,
+          "original_price": 2.29,
+          "valid_from": "2026-10-07",
+          "valid_until": "2026-11-03",
+          "source_term": "slagroom",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2445,7 +2364,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2472,7 +2391,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -2499,7 +2418,7 @@
           "valid_from": "2026-03-11",
           "valid_until": "2026-11-24",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -3130,6 +3049,216 @@
           "product_id": "jumbo_16645PAK",
           "base_product_id": "jumbo_16645PAK",
           "extracted_at": "2026-11-03T00:05:10.520000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Alpro Plantaardige Variatie Op Slagroom Op Te Kloppen 250ml",
+          "quantity": "257 g",
+          "price": 2.29,
+          "product_url": "https://www.jumbo.com/producten/alpro-plantaardige-variatie-op-slagroom-op-te-kloppen-250ml-171780PAK",
+          "product_id": "jumbo_171780PAK",
+          "base_product_id": "jumbo_171780PAK",
+          "extracted_at": "2026-11-03T00:05:09.195000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Campina Vla Slagroom Vanillesmaak 1 L",
+          "quantity": "1 L",
+          "price": 2.39,
+          "product_url": "https://www.jumbo.com/producten/campina-vla-slagroom-vanillesmaak-1-l-527089PAK",
+          "product_id": "jumbo_527089PAK",
+          "base_product_id": "jumbo_527089PAK",
+          "extracted_at": "2026-11-03T00:05:15.889000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Campina Echte Slagroom 12 x 250g",
+          "quantity": "12 x 250 g • Met doos",
+          "price": 23.85,
+          "product_url": "https://www.jumbo.com/producten/campina-echte-slagroom-12-x-250g-678335TRL",
+          "product_id": "jumbo_678335TRL",
+          "base_product_id": "jumbo_678335TRL",
+          "extracted_at": "2026-11-03T00:05:18.705000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Mutti Passata LaRossa 425ml",
+          "quantity": "425ml",
+          "price": 2.09,
+          "product_url": "https://www.jumbo.com/producten/mutti-passata-larossa-425ml-748963GLS",
+          "product_id": "jumbo_748963GLS",
+          "base_product_id": "jumbo_748963GLS",
+          "extracted_at": "2026-11-03T00:05:19.842000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Mutti Passata LaRossa Basilico 425ml",
+          "quantity": "425ml",
+          "price": 2.39,
+          "product_url": "https://www.jumbo.com/producten/mutti-passata-larossa-basilico-425ml-748964GLS",
+          "product_id": "jumbo_748964GLS",
+          "base_product_id": "jumbo_748964GLS",
+          "extracted_at": "2026-11-03T00:05:19.845000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Mutti Passata Basilicum 700ml",
+          "quantity": "700ml",
+          "price": 3.09,
+          "product_url": "https://www.jumbo.com/producten/mutti-passata-basilicum-700ml-710971FLS",
+          "product_id": "jumbo_710971FLS",
+          "base_product_id": "jumbo_710971FLS",
+          "extracted_at": "2026-11-03T00:05:19.845000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Mutti Passata la Rossa 700ml",
+          "quantity": "700ml",
+          "price": 3.09,
+          "product_url": "https://www.jumbo.com/producten/mutti-passata-la-rossa-700ml-710949FLS",
+          "product_id": "jumbo_710949FLS",
+          "base_product_id": "jumbo_710949FLS",
+          "extracted_at": "2026-11-03T00:05:19.846000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Mutti Tomatenpuree 140g",
+          "quantity": "140g",
+          "price": 1.59,
+          "product_url": "https://www.jumbo.com/producten/mutti-tomatenpuree-140g-711236BLK",
+          "product_id": "jumbo_711236BLK",
+          "base_product_id": "jumbo_711236BLK",
+          "extracted_at": "2026-11-03T00:05:19.843000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Mutti Tomatenpuree Geconcentreerd 130g",
+          "quantity": "130g",
+          "price": 2.09,
+          "product_url": "https://www.jumbo.com/producten/mutti-tomatenpuree-geconcentreerd-130g-748962TUB",
+          "product_id": "jumbo_748962TUB",
+          "base_product_id": "jumbo_748962TUB",
+          "extracted_at": "2026-11-03T00:05:19.842000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Mutti Tomatenpuree Doppio Concentrato Knoflook 130g",
+          "quantity": "130g",
+          "price": 2.49,
+          "product_url": "https://www.jumbo.com/producten/mutti-tomatenpuree-doppio-concentrato-knoflook-130g-748961TUB",
+          "product_id": "jumbo_748961TUB",
+          "base_product_id": "jumbo_748961TUB",
+          "extracted_at": "2026-11-03T00:05:19.842000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Mutti Tomatenpuree Doppio Concentrato Bio Tube 185g",
+          "quantity": "185g",
+          "price": 2.79,
+          "product_url": "https://www.jumbo.com/producten/mutti-tomatenpuree-doppio-concentrato-bio-tube-185g-648018TUB",
+          "product_id": "jumbo_648018TUB",
+          "base_product_id": "jumbo_648018TUB",
+          "extracted_at": "2026-11-03T00:05:19.843000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Bonduelle Rode Kidneybonen 160g",
+          "quantity": "160g",
+          "price": 1.39,
+          "product_url": "https://www.jumbo.com/producten/bonduelle-rode-kidneybonen-160g-494569BLK",
+          "product_id": "jumbo_494569BLK",
+          "base_product_id": "jumbo_494569BLK",
+          "extracted_at": "2026-11-03T00:05:15.895000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Bonduelle Rode kidneybonen Bio 160g",
+          "quantity": "160g",
+          "price": 1.99,
+          "product_url": "https://www.jumbo.com/producten/bonduelle-rode-kidneybonen-bio-160g-200890BLK",
+          "product_id": "jumbo_200890BLK",
+          "base_product_id": "jumbo_200890BLK",
+          "extracted_at": "2026-11-03T00:05:15.896000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "HAK Zwarte Bonen 380g",
+          "quantity": "380g",
+          "price": 1.49,
+          "product_url": "https://www.jumbo.com/producten/hak-zwarte-bonen-380g-648351PAK",
+          "product_id": "jumbo_648351PAK",
+          "base_product_id": "jumbo_648351PAK",
+          "extracted_at": "2026-11-03T00:05:06.781000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Hak Zwarte Bonen 225g",
+          "quantity": "225g",
+          "price": 2.19,
+          "product_url": "https://www.jumbo.com/producten/hak-zwarte-bonen-225g-503827ZK",
+          "product_id": "jumbo_503827ZK",
+          "base_product_id": "jumbo_503827ZK",
+          "extracted_at": "2026-11-03T00:05:06.782000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Bonduelle Zwarte Bonen 200g",
+          "quantity": "200g",
+          "price": 1.59,
+          "product_url": "https://www.jumbo.com/producten/bonduelle-zwarte-bonen-200g-86042BLK",
+          "product_id": "jumbo_86042BLK",
+          "base_product_id": "jumbo_86042BLK",
+          "extracted_at": "2026-11-03T00:05:15.897000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Hak Linzen 190 g",
+          "quantity": "190 g",
+          "price": 1.19,
+          "product_url": "https://www.jumbo.com/producten/hak-linzen-190-g-599244PAK",
+          "product_id": "jumbo_599244PAK",
+          "base_product_id": "jumbo_599244PAK",
+          "extracted_at": "2026-11-03T00:05:06.782000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Hak Linzen 380 g",
+          "quantity": "380 g",
+          "price": 1.49,
+          "product_url": "https://www.jumbo.com/producten/hak-linzen-380-g-599245PAK",
+          "product_id": "jumbo_599245PAK",
+          "base_product_id": "jumbo_599245PAK",
+          "extracted_at": "2026-11-03T00:05:06.781000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Hak Linzen 205 g",
+          "quantity": "205 g",
+          "price": 2.19,
+          "product_url": "https://www.jumbo.com/producten/hak-linzen-205-g-175456ZK",
+          "product_id": "jumbo_175456ZK",
+          "base_product_id": "jumbo_175456ZK",
+          "extracted_at": "2026-11-03T00:05:06.782000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Unox Extra Rijkgevuld Soep In Zak Pompoen Rode Linzen 570 ml",
+          "quantity": "570 ml",
+          "price": 4.99,
+          "product_url": "https://www.jumbo.com/producten/unox-extra-rijkgevuld-soep-in-zak-pompoen-rode-linzen-570-ml-575263ZK",
+          "product_id": "jumbo_575263ZK",
+          "base_product_id": "jumbo_575263ZK",
+          "extracted_at": "2026-11-03T00:05:09.777000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Bonduelle Linzen 160g",
+          "quantity": "160g",
+          "price": 1.49,
+          "product_url": "https://www.jumbo.com/producten/bonduelle-linzen-160g-507650BLK",
+          "product_id": "jumbo_507650BLK",
+          "base_product_id": "jumbo_507650BLK",
+          "extracted_at": "2026-11-03T00:05:15.897000",
           "source": "PrijsProfeet product search"
         },
         {
@@ -3953,16 +4082,6 @@
           "source": "PrijsProfeet product search"
         },
         {
-          "name": "Unox Extra Rijkgevuld Soep In Zak Pompoen Rode Linzen 570 ml",
-          "quantity": "570 ml",
-          "price": 4.99,
-          "product_url": "https://www.jumbo.com/producten/unox-extra-rijkgevuld-soep-in-zak-pompoen-rode-linzen-570-ml-575263ZK",
-          "product_id": "jumbo_575263ZK",
-          "base_product_id": "jumbo_575263ZK",
-          "extracted_at": "2026-11-01T00:05:10.847000",
-          "source": "PrijsProfeet product search"
-        },
-        {
           "name": "Jumbo Gebroken Sperziebonen 400 g",
           "quantity": "400 g",
           "price": 2.59,
@@ -4235,7 +4354,7 @@
       ]
     },
     "AH": {
-      "updated_at": "2026-11-03T01:04:55.278052+00:00",
+      "updated_at": "2026-11-03T14:29:11.580564+00:00",
       "deals": [
         {
           "product_id": "ah_wi231911_2026-11-02",
@@ -4342,7 +4461,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4369,7 +4488,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4396,7 +4515,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4423,7 +4542,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4450,7 +4569,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4477,7 +4596,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4504,7 +4623,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4531,7 +4650,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4558,7 +4677,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4720,7 +4839,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4747,7 +4866,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4775,6 +4894,33 @@
           "valid_until": "2026-11-08",
           "source_term": "avocado",
           "observed_at_utc": "2026-11-02T16:19:32.406771+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi56949_2026-11-02",
+          "base_product_id": "ah_wi56949",
+          "ean": "8718951669017",
+          "quantity": "300 ml",
+          "product_url": "https://www.ah.nl/producten/product/wi56949/palmolive-naturals-melk-en-amandel",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 2.65,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Palmolive Naturals melk & amandel",
+          "discount": "50% korting",
+          "price": 1.32,
+          "original_price": 2.65,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "melk",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4828,7 +4974,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4855,7 +5001,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4882,7 +5028,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4909,7 +5055,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kaas",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -4967,6 +5113,33 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "product_id": "ah_wi585663_2026-11-02",
+          "base_product_id": "ah_wi585663",
+          "ean": "8719587085516",
+          "quantity": "200 g",
+          "product_url": "https://www.ah.nl/producten/product/wi585663/ah-terra-linzen-mediterraan-gekruid",
+          "promotion_type": "percentage",
+          "multi_buy_quantity": null,
+          "multi_buy_price": null,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": true,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "AH Terra Linzen mediterraan gekruid",
+          "discount": "35.2% korting",
+          "price": 1.29,
+          "original_price": 1.99,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "product_id": "ah_wi378610_2026-11-02",
           "base_product_id": "ah_wi378610",
           "ean": "8715700421889",
@@ -4990,7 +5163,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5017,7 +5190,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5044,7 +5217,34 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi198414_2026-11-02",
+          "base_product_id": "ah_wi198414",
+          "ean": "8715017090341",
+          "quantity": "900 g",
+          "product_url": "https://www.ah.nl/producten/product/wi198414/valle-del-sole-groene-linzen",
+          "promotion_type": "percentage",
+          "multi_buy_quantity": null,
+          "multi_buy_price": null,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": true,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Valle del sole Groene linzen",
+          "discount": "35% korting",
+          "price": 2.27,
+          "original_price": 3.49,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5071,7 +5271,34 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi198410_2026-11-02",
+          "base_product_id": "ah_wi198410",
+          "ean": "8715017090532",
+          "quantity": "900 g",
+          "product_url": "https://www.ah.nl/producten/product/wi198410/valle-del-sole-rode-splitlinzen",
+          "promotion_type": "percentage",
+          "multi_buy_quantity": null,
+          "multi_buy_price": null,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": true,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Valle del sole Rode splitlinzen",
+          "discount": "35% korting",
+          "price": 2.27,
+          "original_price": 3.49,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5098,7 +5325,88 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi606112_2026-11-02",
+          "base_product_id": "ah_wi606112",
+          "ean": "3083681180480",
+          "quantity": "400 g",
+          "product_url": "https://www.ah.nl/producten/product/wi606112/bonduelle-linzen-in-curry",
+          "promotion_type": "percentage",
+          "multi_buy_quantity": null,
+          "multi_buy_price": null,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": true,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Bonduelle Linzen in curry",
+          "discount": "34.9% korting",
+          "price": 1.88,
+          "original_price": 2.89,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi606111_2026-11-02",
+          "base_product_id": "ah_wi606111",
+          "ean": "3083681040609",
+          "quantity": "400 g",
+          "product_url": "https://www.ah.nl/producten/product/wi606111/bonduelle-rode-kidneybonen-in-chili",
+          "promotion_type": "percentage",
+          "multi_buy_quantity": null,
+          "multi_buy_price": null,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": true,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Bonduelle Rode kidneybonen in chili",
+          "discount": "34.9% korting",
+          "price": 1.88,
+          "original_price": 2.89,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "rode kidneybonen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi599343_2026-11-02",
+          "base_product_id": "ah_wi599343",
+          "ean": "5412038012644",
+          "quantity": "65 g",
+          "product_url": "https://www.ah.nl/producten/product/wi599343/galler-melk-popcorn",
+          "promotion_type": "percentage",
+          "multi_buy_quantity": null,
+          "multi_buy_price": null,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": true,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Galler Melk popcorn",
+          "discount": "34.9% korting",
+          "price": 1.62,
+          "original_price": 2.49,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "melk",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5152,7 +5460,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5179,7 +5487,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5449,7 +5757,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5476,7 +5784,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5723,6 +6031,33 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "product_id": "ah_wi588927_2026-11-02",
+          "base_product_id": "ah_wi588927",
+          "ean": "8715700127910",
+          "quantity": "200 g",
+          "product_url": "https://www.ah.nl/producten/product/wi588927/de-ruijter-chocolade-vlokken-melk",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 3.74,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "De Ruijter Chocolade vlokken melk",
+          "discount": "25% korting",
+          "price": 1.87,
+          "original_price": 2.49,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "melk",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "product_id": "ah_wi106256_2026-11-02",
           "base_product_id": "ah_wi106256",
           "ean": "80023418",
@@ -5827,7 +6162,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "tomaten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5881,7 +6216,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5908,7 +6243,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5935,7 +6270,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5962,7 +6297,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -5989,7 +6324,61 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kikkererwten",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi569515_2026-11-02",
+          "base_product_id": "ah_wi569515",
+          "ean": "8720600624506",
+          "quantity": "380 g",
+          "product_url": "https://www.ah.nl/producten/product/wi569515/hak-linzen",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 2.23,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Hak Linzen",
+          "discount": "25% korting",
+          "price": 1.12,
+          "original_price": 1.49,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi374223_2026-11-02",
+          "base_product_id": "ah_wi374223",
+          "ean": "8720600613234",
+          "quantity": "205 g",
+          "product_url": "https://www.ah.nl/producten/product/wi374223/hak-linzen",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 3.29,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Hak Linzen",
+          "discount": "25% korting",
+          "price": 1.64,
+          "original_price": 2.19,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6016,7 +6405,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6074,6 +6463,60 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "product_id": "ah_wi583840_2026-11-02",
+          "base_product_id": "ah_wi583840",
+          "ean": "8720600666841",
+          "quantity": "380 g",
+          "product_url": "https://www.ah.nl/producten/product/wi583840/hak-zwarte-bonen",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 2.23,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Hak Zwarte bonen",
+          "discount": "25% korting",
+          "price": 1.12,
+          "original_price": 1.49,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "zwarte bonen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi374224_2026-11-02",
+          "base_product_id": "ah_wi374224",
+          "ean": "8720600613272",
+          "quantity": "225 g",
+          "product_url": "https://www.ah.nl/producten/product/wi374224/hak-zwarte-bonen",
+          "promotion_type": "one_plus_one",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 3.29,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Hak Zwarte bonen",
+          "discount": "25% korting",
+          "price": 1.64,
+          "original_price": 2.19,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "zwarte bonen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "product_id": "ah_wi216487_2026-11-02",
           "base_product_id": "ah_wi216487",
           "ean": "8002470017702",
@@ -6101,6 +6544,33 @@
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
+          "product_id": "ah_wi349195_2026-11-02",
+          "base_product_id": "ah_wi349195",
+          "ean": "8718166011014",
+          "quantity": "1 l",
+          "product_url": "https://www.ah.nl/producten/product/wi349195/arla-biologisch-volle-melk",
+          "promotion_type": "multi_buy",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 2.99,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Arla Biologisch volle melk",
+          "discount": "24.87% korting",
+          "price": 1.5,
+          "original_price": 1.99,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "melk",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
           "product_id": "ah_wi624577_2026-11-02",
           "base_product_id": "ah_wi624577",
           "ean": "8719587465530",
@@ -6124,7 +6594,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6232,7 +6702,34 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "broccoli",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi565231_2026-11-02",
+          "base_product_id": "ah_wi565231",
+          "ean": "8719587206911",
+          "quantity": "520 g",
+          "product_url": "https://www.ah.nl/producten/product/wi565231/ah-terra-pureersoep-pompoen-linzen",
+          "promotion_type": "multi_buy",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 7.0,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "AH Terra Pureersoep pompoen linzen",
+          "discount": "22.05% korting",
+          "price": 3.5,
+          "original_price": 4.49,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6259,7 +6756,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6286,7 +6783,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6313,7 +6810,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "kipfilet",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6394,7 +6891,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6475,7 +6972,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6502,7 +6999,61 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi168925_2026-11-02",
+          "base_product_id": "ah_wi168925",
+          "ean": "8718166011021",
+          "quantity": "1 l",
+          "product_url": "https://www.ah.nl/producten/product/wi168925/arla-biologisch-halfvolle-melk",
+          "promotion_type": "multi_buy",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 2.99,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "Arla Biologisch halfvolle melk",
+          "discount": "16.48% korting",
+          "price": 1.5,
+          "original_price": 1.79,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "melk",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
+          "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
+        },
+        {
+          "product_id": "ah_wi578799_2026-11-02",
+          "base_product_id": "ah_wi578799",
+          "ean": "8719587359860",
+          "quantity": "500 g",
+          "product_url": "https://www.ah.nl/producten/product/wi578799/ah-terra-verse-soep-linzen",
+          "promotion_type": "multi_buy",
+          "multi_buy_quantity": 2,
+          "multi_buy_price": 6.0,
+          "loyalty_program": null,
+          "loyalty_price": null,
+          "max_per_customer": null,
+          "in_store_only": false,
+          "online_only": false,
+          "valid_until_estimated": null,
+          "card_required": true,
+          "personal_offer": false,
+          "name": "AH Terra Verse soep linzen",
+          "discount": "16.43% korting",
+          "price": 3.0,
+          "original_price": 3.59,
+          "valid_from": "2026-11-02",
+          "valid_until": "2026-11-08",
+          "source_term": "linzen",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6529,7 +7080,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "aardappelen",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6556,7 +7107,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6583,7 +7134,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6610,7 +7161,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6637,7 +7188,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6664,7 +7215,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6880,7 +7431,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "pasta",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -6961,7 +7512,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "rijst",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         }
       ],
@@ -7497,6 +8048,176 @@
           "source": "PrijsProfeet product search"
         },
         {
+          "name": "Andrélon Kokos volume boost conditioner",
+          "quantity": "200 ml",
+          "price": 6.39,
+          "product_url": "https://www.ah.nl/producten/product/wi595231/andre%CC%81lon-kokos-volume-boost-conditioner",
+          "product_id": "ah_wi595231_2026-11-02",
+          "base_product_id": "ah_wi595231",
+          "extracted_at": "2026-11-03T00:00:22.194000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Palmolive Naturals melk & amandel",
+          "quantity": "300 ml",
+          "price": 2.65,
+          "product_url": "https://www.ah.nl/producten/product/wi56949/palmolive-naturals-melk-en-amandel",
+          "product_id": "ah_wi56949_2026-11-02",
+          "base_product_id": "ah_wi56949",
+          "extracted_at": "2026-11-03T00:00:20.801000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Arla Biologisch halfvolle melk",
+          "quantity": "1 l",
+          "price": 1.79,
+          "product_url": "https://www.ah.nl/producten/product/wi168925/arla-biologisch-halfvolle-melk",
+          "product_id": "ah_wi168925_2026-11-02",
+          "base_product_id": "ah_wi168925",
+          "extracted_at": "2026-11-03T00:00:21.276000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Arla Biologisch volle melk",
+          "quantity": "1 l",
+          "price": 1.99,
+          "product_url": "https://www.ah.nl/producten/product/wi349195/arla-biologisch-volle-melk",
+          "product_id": "ah_wi349195_2026-11-02",
+          "base_product_id": "ah_wi349195",
+          "extracted_at": "2026-11-03T00:00:21.277000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Galler Melk popcorn",
+          "quantity": "65 g",
+          "price": 2.49,
+          "product_url": "https://www.ah.nl/producten/product/wi599343/galler-melk-popcorn",
+          "product_id": "ah_wi599343_2026-11-02",
+          "base_product_id": "ah_wi599343",
+          "extracted_at": "2026-11-03T00:00:22.411000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "De Ruijter Chocolade vlokken melk",
+          "quantity": "200 g",
+          "price": 2.49,
+          "product_url": "https://www.ah.nl/producten/product/wi588927/de-ruijter-chocolade-vlokken-melk",
+          "product_id": "ah_wi588927_2026-11-02",
+          "base_product_id": "ah_wi588927",
+          "extracted_at": "2026-11-03T00:00:21.608000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Bonduelle Rode kidneybonen in chili",
+          "quantity": "400 g",
+          "price": 2.89,
+          "product_url": "https://www.ah.nl/producten/product/wi606111/bonduelle-rode-kidneybonen-in-chili",
+          "product_id": "ah_wi606111_2026-11-02",
+          "base_product_id": "ah_wi606111",
+          "extracted_at": "2026-11-03T00:00:22.402000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Hak Zwarte bonen",
+          "quantity": "380 g",
+          "price": 1.49,
+          "product_url": "https://www.ah.nl/producten/product/wi583840/hak-zwarte-bonen",
+          "product_id": "ah_wi583840_2026-11-02",
+          "base_product_id": "ah_wi583840",
+          "extracted_at": "2026-11-03T00:00:20.865000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Hak Zwarte bonen",
+          "quantity": "225 g",
+          "price": 2.19,
+          "product_url": "https://www.ah.nl/producten/product/wi374224/hak-zwarte-bonen",
+          "product_id": "ah_wi374224_2026-11-02",
+          "base_product_id": "ah_wi374224",
+          "extracted_at": "2026-11-03T00:00:20.875000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Hak Linzen",
+          "quantity": "380 g",
+          "price": 1.49,
+          "product_url": "https://www.ah.nl/producten/product/wi569515/hak-linzen",
+          "product_id": "ah_wi569515_2026-11-02",
+          "base_product_id": "ah_wi569515",
+          "extracted_at": "2026-11-03T00:00:20.866000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "AH Terra Linzen mediterraan gekruid",
+          "quantity": "200 g",
+          "price": 1.99,
+          "product_url": "https://www.ah.nl/producten/product/wi585663/ah-terra-linzen-mediterraan-gekruid",
+          "product_id": "ah_wi585663_2026-11-02",
+          "base_product_id": "ah_wi585663",
+          "extracted_at": "2026-11-03T00:00:22.405000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Hak Linzen",
+          "quantity": "205 g",
+          "price": 2.19,
+          "product_url": "https://www.ah.nl/producten/product/wi374223/hak-linzen",
+          "product_id": "ah_wi374223_2026-11-02",
+          "base_product_id": "ah_wi374223",
+          "extracted_at": "2026-11-03T00:00:20.870000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Bonduelle Linzen in curry",
+          "quantity": "400 g",
+          "price": 2.89,
+          "product_url": "https://www.ah.nl/producten/product/wi606112/bonduelle-linzen-in-curry",
+          "product_id": "ah_wi606112_2026-11-02",
+          "base_product_id": "ah_wi606112",
+          "extracted_at": "2026-11-03T00:00:22.402000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Valle del sole Groene linzen",
+          "quantity": "900 g",
+          "price": 3.49,
+          "product_url": "https://www.ah.nl/producten/product/wi198414/valle-del-sole-groene-linzen",
+          "product_id": "ah_wi198414_2026-11-02",
+          "base_product_id": "ah_wi198414",
+          "extracted_at": "2026-11-03T00:00:22.408000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "AH Terra Verse soep linzen",
+          "quantity": "500 g",
+          "price": 3.59,
+          "product_url": "https://www.ah.nl/producten/product/wi578799/ah-terra-verse-soep-linzen",
+          "product_id": "ah_wi578799_2026-11-02",
+          "base_product_id": "ah_wi578799",
+          "extracted_at": "2026-11-03T00:00:21.015000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "AH Terra Pureersoep pompoen linzen",
+          "quantity": "520 g",
+          "price": 4.49,
+          "product_url": "https://www.ah.nl/producten/product/wi565231/ah-terra-pureersoep-pompoen-linzen",
+          "product_id": "ah_wi565231_2026-11-02",
+          "base_product_id": "ah_wi565231",
+          "extracted_at": "2026-11-03T00:00:21.009000",
+          "source": "PrijsProfeet product search"
+        },
+        {
+          "name": "Valle del sole Rode splitlinzen",
+          "quantity": "900 g",
+          "price": 3.49,
+          "product_url": "https://www.ah.nl/producten/product/wi198410/valle-del-sole-rode-splitlinzen",
+          "product_id": "ah_wi198410_2026-11-02",
+          "base_product_id": "ah_wi198410",
+          "extracted_at": "2026-11-03T00:00:22.398000",
+          "source": "PrijsProfeet product search"
+        },
+        {
           "name": "AH Gezouten pistachenoten",
           "quantity": "80 g",
           "price": 2.39,
@@ -7864,16 +8585,6 @@
           "product_id": "ah_wi602305_2026-11-02",
           "base_product_id": "ah_wi602305",
           "extracted_at": "2026-11-01T00:00:34.302000",
-          "source": "PrijsProfeet product search"
-        },
-        {
-          "name": "Andrélon Kokos volume boost conditioner",
-          "quantity": "200 ml",
-          "price": 6.39,
-          "product_url": "https://www.ah.nl/producten/product/wi595231/andre%CC%81lon-kokos-volume-boost-conditioner",
-          "product_id": "ah_wi595231_2026-11-02",
-          "base_product_id": "ah_wi595231",
-          "extracted_at": "2026-11-02T00:00:20.177000",
           "source": "PrijsProfeet product search"
         },
         {
@@ -10579,7 +11290,7 @@
       ]
     },
     "Lidl": {
-      "updated_at": "2026-11-03T01:04:55.278052+00:00",
+      "updated_at": "2026-11-03T14:29:11.580564+00:00",
       "deals": [
         {
           "product_id": "lidl_11214436_2026-11-02",
@@ -10632,7 +11343,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "wortel",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -10659,7 +11370,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
@@ -10713,7 +11424,7 @@
           "valid_from": "2026-11-02",
           "valid_until": "2026-11-08",
           "source_term": "ui",
-          "observed_at_utc": "2026-11-03T01:04:55.278052+00:00",
+          "observed_at_utc": "2026-11-03T14:29:11.580564+00:00",
           "source_url": "https://www.prijsprofeet.nl/supermarkt-aanbiedingen-api/"
         },
         {
