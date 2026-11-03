@@ -53,26 +53,31 @@ function auditEntry(r){return state.sourceAuditById.get(String(r.id))||null;}
 function compareLoadedWithAudit(){
  const el=$('library-coverage-status');if(!el)return;
  const audit=state.sourceAudit,report=audit?.summary;
- if(!report){el.textContent='Broncontrole nog niet beschikbaar: volledigheid niet bevestigd.';el.dataset.coverage='unknown';return;}
- const expectedIds=new Set(audit.records.map(r=>String(r.id)));
- const loadedIds=new Set(all().map(r=>String(r.id)));
+ if(!report||!Array.isArray(audit.records)){el.textContent='Broncontrole nog niet beschikbaar: volledigheid niet bevestigd.';el.dataset.coverage='unknown';return;}
+ const audited=audit.records.map(r=>String(r.id));
+ const loaded=all().map(r=>String(r.id));
+ const expectedIds=new Set(audited),loadedIds=new Set(loaded);
  const missing=[...expectedIds].filter(id=>!loadedIds.has(id));
  const unexpected=[...loadedIds].filter(id=>!expectedIds.has(id));
- const valid=expectedIds.size===report.records_audited&&missing.length===0&&unexpected.length===0;
+ const duplicates=audited.length-expectedIds.size;
  const age=Date.now()-new Date(audit.generated_at_utc).getTime();
- const old=Number.isFinite(age)&&age>24*3600000;
+ const fresh=Number.isFinite(age)&&age>=0&&age<=24*3600000;
+ const valid=duplicates===0&&audited.length===report.records_audited&&
+  loaded.length===report.records_audited&&missing.length===0&&unexpected.length===0;
  if(!valid){
-  el.textContent='Let op: bibliotheek en controleverslag wijken af ('+missing.length+
-   ' bronrecords ontbreken in de zoekindex, '+unexpected.length+
-   ' nieuwere of afwijkende records). Het rapport kan achterlopen; broncontrole niet volledig bevestigd.';
+  el.textContent='Bibliotheek niet volledig bevestigd: '+missing.length+' ontbrekende, '+
+   unexpected.length+' afwijkende en '+duplicates+' dubbele audit-ID’s. '+
+   'Geladen: '+loaded.length+' / verwacht: '+report.records_audited+'.';
   el.dataset.coverage='incomplete';
+ }else if(!fresh){
+  el.textContent='Alle '+report.records_audited+' bron-ID’s komen overeen, maar het auditrapport is verouderd of heeft een ongeldige datum. Nieuwe broncontrole vereist.';
+  el.dataset.coverage='stale';
  }else{
-  el.textContent='Volledigheid bevestigd: alle '+report.records_audited+
-   ' bron-ID’s komen overeen met de doorzoekbare recepten.';
+  el.textContent='Technische volledigheid bevestigd: alle '+report.records_audited+
+   ' bron-ID’s komen overeen. Ingrediënten en hoeveelheden zijn niet handmatig geverifieerd.';
   el.dataset.coverage='complete';
  }
- if(old)el.textContent+=' Het controleverslag is ouder dan 24 uur en wordt opnieuw opgebouwd door de auditworkflow.';
- el.dataset.auditFreshness=old?'stale':'current';
+ el.dataset.auditFreshness=fresh?'current':'stale';
 }
 function renderAuditSummary(){
  const el=$('source-audit-status');if(!el)return;
