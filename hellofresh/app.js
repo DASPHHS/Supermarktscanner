@@ -160,7 +160,7 @@ function all(){const map=new Map();for(const r of state.recipes.concat(state.ext
 function matchesForIngredient(ingredient,shop){
  const key=shop+'|'+norm(ingredient)+'|'+state.cards+'|'+todayNL();
  if(state.ingredientDealCache.has(key))return state.ingredientDealCache.get(key);
- const available=(state.deals[shop]?.deals||[]).filter(d=>
+ const available=(state.weekdealsFeed&&state.deals[shop]?.deals||[]).filter(d=>
   RecipeLogic.activeOffer(d,todayNL())&&d.personal_offer!==true&&
   (d.card_required!==true||state.cards)&&relatedIngredient(ingredient,d.name));
  state.ingredientDealCache.set(key,available);
@@ -588,7 +588,7 @@ json('./scanned_recipe_candidates.json').then(d=>{
 
 function refreshOriginals(){Promise.allSettled([json('./preview_manifest.json'),json('./plated_preview_manifest.json')]).then(res=>{let previews={};for(const item of res){if(item.status==='fulfilled')Object.assign(previews,item.value.recipes||{})}state.previews=previews;render()})}refreshOriginals();
 setInterval(refreshOriginals,5*60*1000);
-function refreshPrices(){return json('../recipe_prices.json').then(d=>{const at=new Date(d.fetched_at_utc);if(Date.now()-at.getTime()>=0&&Date.now()-at.getTime()<3*86400000){state.priceDate=at;state.prices=new Map((d.results||[]).map(r=>[r.store+':'+r.recipe_id,r]));resetOfferCaches()}else{state.priceDate=null;state.prices.clear();resetOfferCaches()}render()}).catch(()=>{if(state.priceDate&&Date.now()-state.priceDate.getTime()>=3*86400000){state.priceDate=null;state.prices.clear();resetOfferCaches()}render()})}
+function refreshPrices(){return json('../recipe_prices.json').then(d=>{const at=new Date(d.fetched_at_utc);if(Date.now()-at.getTime()>=0&&Date.now()-at.getTime()<24*3600000){state.priceDate=at;state.prices=new Map((d.results||[]).map(r=>[r.store+':'+r.recipe_id,r]));resetOfferCaches()}else{state.priceDate=null;state.prices.clear();resetOfferCaches()}render()}).catch(()=>{if(state.priceDate&&Date.now()-state.priceDate.getTime()>=24*3600000){state.priceDate=null;state.prices.clear();resetOfferCaches()}render()})}
 refreshPrices();setInterval(refreshPrices,10*60*1000);
 json('./official_recipe_candidates.json').then(d=>{
  state.officialCatalog=OfficialRecipeSource.safeCatalog(d);
