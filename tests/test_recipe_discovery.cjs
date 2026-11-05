@@ -1,0 +1,52 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const {JSDOM}=require('jsdom');
+const root=path.resolve(__dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const logic=require('../hellofresh/recipe-logic.js');
+
+test('ingredient-based meal hints never classify incomplete or starch-heavy cards as low-starch',()=>{
+ const recipe=(names,complete=true)=>({table_repair:complete,ingredients_2p:names.map(ingredient=>({ingredient}))});
+ assert.deepEqual(logic.mealHints(recipe(['Kipfilet (g)','Broccoli (g)','Paprika (g)'])),['protein','low_starch']);
+ assert.deepEqual(logic.mealHints(recipe(['Kipfilet (g)','Rijst (g)','Paprika (g)'])),['protein']);
+ assert.deepEqual(logic.mealHints(recipe(['Aardappelen (g)','Paprika (g)'])),[]);
+ assert.deepEqual(logic.mealHints(recipe(['Kippenbouillon (ml)','Broccoli (g)'])),['low_starch']);
+ assert.deepEqual(logic.mealHints(recipe(['Kipfilet (g)','Paprika (g)'],false)),[]);
+ assert.deepEqual(logic.mealHints({...recipe(['Tofu (g)','Spinazie (g)']),image_only_archive:true}),[]);
+});
+
+test('store, price per portion ceiling, descending sort and diet hints work together',async t=>{
+ const dom=new JSDOM(read('hellofresh/index.html'),{url:'https://example.test/Supermarktscanner/hellofresh/',runScripts:'outside-only',pretendToBeVisual:true});
+ t.after(()=>dom.window.close());
+ await new Promise(resolve=>dom.window.addEventListener('load',resolve,{once:true}));
+ const w=dom.window,d=w.document,recipes=JSON.parse(read('recipes_extracted.json')).recipes;
+ const templates=recipes.filter(r=>r.table_repair&&r.ingredients_2p?.length>2).slice(0,2);
+ assert.equal(templates.length,2);
+ const template=JSON.parse(read('recipe_prices.json')).results.find(r=>r.estimate?.eligible).estimate;
+ const rows=templates.map((r,i)=>({...r,source:'HelloFresh',title_extracted:['Kip met broccoli','Tofu met spinazie'][i],ingredients_2p:[{ingredient:i?'Tofu (g)':'Kipfilet (g)'},{ingredient:'Broccoli (g)'},{ingredient:'Paprika (g)'}]}));
+ const prices=rows.map((r,i)=>({recipe_id:r.id,store:'AH',servings:2,estimate:{...template,lines:[],used_total_eur:i?8:4,whole_packages_eur:i?12:7}}));
+ w.fetch=async raw=>{const u=new URL(raw,w.location.href),rel=u.pathname.replace(/^\/Supermarktscanner\//,'');
+  if(rel==='recipes_extracted.json')return {ok:true,json:async()=>({recipes:rows})};
+  if(rel==='recipe_prices.json')return {ok:true,json:async()=>({fetched_at_utc:new Date().toISOString(),results:prices})};
+  if(rel==='hellofresh/scanned_recipe_candidates.json')return {ok:true,json:async()=>({schema_version:1,recipes:[],source_pages_total:0})};
+  if(rel==='plated_release_review_queue.json')return {ok:true,json:async()=>({recipes:[]})};
+  const p=path.join(root,rel);return fs.existsSync(p)?{ok:true,json:async()=>JSON.parse(read(rel))}:{ok:false,status:404};};
+ for(const file of ['hfresh-links.js','recipe-logic.js','recipe-search.js','official-recipes.js','weekdeals-relevance.js','app.js'])w.eval(read('hellofresh/'+file));
+ await new Promise(resolve=>setImmediate(resolve));await new Promise(resolve=>setImmediate(resolve));
+ const change=(id,value)=>{d.getElementById(id).value=value;d.getElementById(id).dispatchEvent(new w.Event('change',{bubbles:true}))};
+ change('source','HelloFresh');d.querySelector('[data-store="AH"]').click();
+ change('cost-basis','used');change('sort','expensive');
+ assert.equal(d.querySelector('.card button[data-id]').dataset.id,rows[1].id);
+ assert.match(d.querySelector('.card .main-cost').textContent,/4,00/);
+ change('sort','cheap');assert.equal(d.querySelector('.card button[data-id]').dataset.id,rows[0].id);
+ change('meal-hint','protein');assert.equal(d.querySelectorAll('.card').length,2);
+ change('meal-hint','low_starch');assert.equal(d.querySelectorAll('.card').length,2);
+ const max=d.getElementById('max-per-person');max.value='3';max.dispatchEvent(new w.Event('input',{bubbles:true}));
+ assert.equal(d.querySelectorAll('.card').length,1);
+ assert.equal(d.querySelector('.card button[data-id]').dataset.id,rows[0].id);
+ assert.match(d.querySelector('.card .main-cost').textContent,/2,00/);
+ max.value='';max.dispatchEvent(new w.Event('input',{bubbles:true}));
+ assert.equal(d.querySelectorAll('.card').length,2);
+});

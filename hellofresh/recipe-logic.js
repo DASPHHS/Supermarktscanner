@@ -190,6 +190,17 @@ function originalPdfUrl(path){
  if(typeof path!=='string'||! /^(?:previews|plated-previews)\/[a-zA-Z0-9_-]+\.pdf$/.test(path))return null;
  return 'https://raw.githubusercontent.com/DASPHHS/Supermarktscanner/main/hellofresh/'+path;
 }
+// Ingredient hints are discovery aids, not calculated nutritional claims.
+function mealHints(recipe){
+ if(!recipe?.table_repair||recipe.image_only_archive)return [];
+ const items=recipe.ingredients_2p?.length?recipe.ingredients_2p:recipe.ingredients_4p;
+ if(!Array.isArray(items)||items.length<2||items.some(i=>!i?.ingredient))return [];
+ const names=norm(items.filter(i=>!/bouillon|stock|broth/i.test(i.ingredient)).map(i=>i.ingredient.replace(/\([^)]*\)/g,' ')).join(' '));
+ const hints=[];
+ if(/\b(kip\w*|kalkoen\w*|zalm\w*|vis\w*|garnal\w*|tonijn|gehakt\w*|rund\w*|biefstuk|varken\w*|tofu|tempeh|kikkererwten|linzen|bonen|ei|eieren)\b/.test(names))hints.push('protein');
+ if(!/\b(aardappel\w*|krieltjes|rijst|risotto|pasta|spaghetti|orzo|noedel\w*|couscous|bulgur|quinoa|brood\w*|wrap\w*|tortilla\w*|naan|bloem|meel|mais|polenta|gnocchi|lasagne|linzen|bonen|kikkererwten)\b/.test(names))hints.push('low_starch');
+ return hints;
+}
 function protein(title,labels=[]){
  const classify=t=>{
   if(/\b(vegetarisch|vegetarische|vega|veggie|plantaardig|plantaardige|vegan|tofu|tempeh|falafel)\b/.test(t))return 'vega';
@@ -201,7 +212,7 @@ function protein(title,labels=[]){
  // Main protein in the title takes precedence over chicken stock in a beef dish.
  return classify(norm(title))||classify(norm(labels.filter(x=>!/(bouillon|stock|broth)/i.test(x)).join(' ')))||'onbekend';
 }
-const api={norm,offerMatches,relevantOfferProduct,validActionLine,appliedActionLines,activeOffer,coverage,verified,completePrice,protein,estimatePrice,estimateFor,selectRecord,rankingPrice,offerPackageAmount,offerRankingTier,estimateWithOfferAlternatives,originalPdfUrl};
+const api={norm,offerMatches,relevantOfferProduct,validActionLine,appliedActionLines,activeOffer,coverage,verified,completePrice,protein,mealHints,estimatePrice,estimateFor,selectRecord,rankingPrice,offerPackageAmount,offerRankingTier,estimateWithOfferAlternatives,originalPdfUrl};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;
 else root.RecipeLogic=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

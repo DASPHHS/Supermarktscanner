@@ -255,7 +255,7 @@ test('every distinct audited source card remains addressable, including repeated
 
 test('live site loads versioned JavaScript and confirms full source-audit coverage',async t=>{
  const html=read('hellofresh/index.html');
- assert.ok(html.includes('app.js?v=20261103-audit-v18'),'browser must load new versioned JS');
+ assert.match(html,/app\.js\?v=20261105-discovery-v1/, 'browser must load new versioned JS');
  const w=await open(t),d=w.document;
  const audit=data('hellofresh/library_source_audit.json');
  const status=d.querySelector('#library-coverage-status');
@@ -271,8 +271,8 @@ test('equal record totals do not hide a mismatched source identity',async t=>{
  const w=await open(t,null,null,null,altered),d=w.document;
  const status=d.querySelector('#library-coverage-status');
  assert.equal(status.dataset.coverage,'incomplete');
- assert.match(status.textContent,/1 bronrecords ontbreken/);
- assert.match(status.textContent,/1 nieuwere of afwijkende records/);
+ assert.match(status.textContent,/1 ontbrekende/);
+ assert.match(status.textContent,/1 afwijkende/);
 });
 test('outdated source audit is disclosed rather than represented as up-to-date',async t=>{
  const audit=data('hellofresh/library_source_audit.json');
@@ -280,7 +280,7 @@ test('outdated source audit is disclosed rather than represented as up-to-date',
  altered.generated_at_utc='2020-01-01T00:00:00Z';
  const w=await open(t,null,null,null,altered),d=w.document;
  const status=d.querySelector('#library-coverage-status');
- assert.equal(status.dataset.coverage,'complete');
+ assert.equal(status.dataset.coverage,'stale');
  assert.equal(status.dataset.auditFreshness,'stale');
- assert.match(status.textContent,/ouder dan 24 uur/);
+ assert.match(status.textContent,/verouderd/);
 });
